@@ -168,11 +168,54 @@ a:hover { color: #036; }
  * Author: 
  */
 
+html { overflow: hidden; }
+
+
+h2 { border-bottom: 1px solid #ddd; margin: 10px 0; padding: 10px 0; font-size: 1.7em; }
+
+
+
+
+#container { margin: 0 50px; overflow: hidden; }
+
+header { margin: 50px 0; text-align: center; }
+
+#main { }
+
+#main ul { list-style: none; margin: 0; padding: 0; }
+#main li { float: left; }
+
+#main section { position: relative; float: left; margin: 0 1%; width: 18%; }
+
+#main h2 { text-align: center; }
+
+
+#main li { font-size: 1.3em; padding-top: 20px; }
+
+#main .pagetimer h2   { border-bottom-color: #aaa; }
+#main .flipthemes h2  { border-bottom-color: #00adee; }
+#main .twitter h2     { border-bottom-color: #3cf; }
+#main .tumblr h2      { border-bottom-color: #2c4762; }
+#main .projects h2    { border-bottom-color: #c00; }
+
+
+.date { display: block; padding-top: 5px; font-size: 0.8em; color: #aaa; text-align: right; text-decoration: none; }
 
 
 
 
 
+footer { position: absolute; bottom: 0; height: 200px; width: 100%;  }
+footer::after {
+  display: block; content: '\0020';
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 100px;
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1)); 
+  background-image: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1)); 
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(255,255,255,0)),color-stop(1, rgba(255,255,255,1))); 
+  background-image: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); 
+  background-image: linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
+}
 
 
 

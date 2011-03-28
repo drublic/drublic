@@ -11,7 +11,7 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
+  <title>Source Access Designz</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -38,10 +38,89 @@
 
   <div id="container">
     <header>
-
+      <hgroup>
+        <a href="/">Source Access Designz</a>
+      </hgroup>
     </header>
+    
     <div id="main" role="main">
+      <section class="flipthemes">
+        <h2>Flipthemes</h2>
+        <a href="http://flipthemes.de/" target="_blank">Flipthemes</a>
+        
+        <div class="feed">
+          &hellip;
+        </div>
+      </section>
+      
+      <section class="pagetimer">
+        <h2>Pagetimer</h2>
+        <a href="http://pagetimer.de/" target="_blank">Pagetimer</a>
+        
+        <div class="feed">
+          <ul>
+          </ul>
+        
+        </div>
+      </section>
+      
+      <section class="twitter">
+        <h2>Twitter</h2>
+        <a href="http://twitter.com/drublic" target="_blank">Twitter</a>
+        
+        <div class="feed">
+          <ul>
+            <?php
+              // Es wird ein Array angelegt, in dem dann die wichtigsten Daten gespeichert werden.
+              $data = 'http://www.twitter.com/status/user_timeline/pagetimer.json?count=10';
+              
+              // Es wird geprŸft ob die Php Funktion simplexml_load_file existiert.
+              if(!function_exists('file_get_contents'))
+              	die ('{ "error" : "Ihre PHP Version unterstŸtzt die Funktion simplexml_load_file leider nicht." }');
+              
+              
+              
+              // Als nŠchstes wird die User Timeline eingelesen oder ein Fehler ausgegeben.
+              if(!@$twitter=file_get_contents($data)) :
+                // Fehlermeldung
+              	print '{ "error" : "Es ist ein Fehler bei der Verbindung zu Twitter aufgetreten." }';
+              else :
+                // Ausgabe des Usernames und der Nachricht.
+                $twitter = json_decode($twitter);
+                
+                foreach ($twitter as $tweet) :
+                  print '<li>';
+                  print '<p>' . $tweet->text . '</p>';
+                  ?>
+                    <a href="http://twitter.com/drublic/status/<?php print $tweet->id; ?>" target="_blank" class="date"><?php print $tweet->created_at; ?></a>
+                  <?php
+                  print '</li>';
+                endforeach;
+              endif;
 
+            ?>
+          </ul>
+
+        </div>
+      </section>
+      
+      <section class="projects">
+        <h2>Latest Projects</h2>
+        <a href="">Latest Projects</a>
+        
+        <div class="feed">
+          
+        </div>
+      </section>
+      
+      <section class="small tumblr">
+        <h2>Tumblr</h2>
+        <a href="http://drublic.tumblr.com/" target="_blank">Tumblr</a>
+        
+        <div class="feed">
+        
+        </div>
+      </section>
     </div>
     <footer>
 
