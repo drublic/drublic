@@ -169,7 +169,6 @@ a:hover { color: #036; }
  */
 
 html {
-  overflow-x: hidden;
   height: 100%;
   background-color: #222;
   background-image: -moz-linear-gradient(top, #222, #000); /* FF3.6 */
@@ -179,6 +178,7 @@ html {
   background-image: linear-gradient(top, #222, #000);
   background-attachment: fixed;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#222222', EndColorStr='#000000'); /* IE6–IE9 */
+  min-width: 700px;
 }
 
 
@@ -202,6 +202,14 @@ a:hover { color: #ccc; text-decoration: none; }
 
 /* Paragraphes */
 p { padding-bottom: 10px; }
+
+
+
+
+/* Forms */
+form { padding: 1em 0; }
+fieldset { padding: .2em 0 0; }
+label { float: left; width: 150px; margin: .5em 0; }
 
 
 
@@ -260,8 +268,6 @@ nav a, nav a:visited { float: left; padding: 3px 5px; color: #555; }
 
 .feed img { width: 100%; }
 
-.close { float: right; position: relative; z-index: 2; text-decoration: none; }
-
 
 /* The projects */
 .projects h4 { position: absolute; bottom: 10px; background: rgba(0,0,0,0.6); padding: 5px 10px; }
@@ -287,14 +293,27 @@ nav a, nav a:visited { float: left; padding: 3px 5px; color: #555; }
 
 
 
-/* Legal */
-.legal {
+/* Imprint */
+.imprint {
   display: none;
   position: relative; top: 0;
   width: 600px;
   margin: 0 auto; padding-bottom: 10em;
   font-size: 1.1em;
 }
+
+
+
+/* Contact */
+.contact {
+  display: none;
+  position: relative; top: 0;
+  width: 600px;
+  margin: 0 auto; padding-bottom: 10em;
+  font-size: 1.1em;
+}
+
+
 
 .col_50 { float: left; width: 50%; }
 

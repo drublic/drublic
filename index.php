@@ -116,10 +116,8 @@
     </div>
     
     <!--! Imprint -->
-    <section class="legal">
-      <a href="#!/close" class="close">&times;</a>
-      
-      <h2>Legal Notice</h2>
+    <section class="imprint">
+      <h2>Imprint</h2>
       
       <div class="clearfix">
         <div class="col_50">
@@ -129,16 +127,14 @@
             35606 Solms<br>
             Germany
           </p>
-          <p>
-            <a href="http://drublic.de">drublic.de</a><br>  
-            <a href="mailto:info@drublic.de">info@drublic.de</a><br>
-            +49 176 44508482<br>
-          </p>
         </div>
         
         <div class="col_50">
-          <h3>Contentswise Responsibility</h3>
-          <p>Hans Christian Reinl</p>
+          <h3>Contact</h3>
+          <p>Hans Christian Reinl<br>
+            <a href="mailto:info@drublic.de">info@drublic.de</a><br>
+            +49 176 44508482<br>
+          </p>
           
           <p>Finanzamt Wetzlar<br>
           Tax ID: 039 860 01625</p>
@@ -147,26 +143,45 @@
       
       
       <h3>Some things&hellip;</h3>
-
-Haftung für Inhalte
-Die Inhalte der Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann Source Access Designz jedoch keine Gewähr übernehmen.
-Weiterhin übernimmt Source Access Designz trotz sorgfältiger inhaltlicher Kontrolle keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-Alle hier präsentierten Inhalte unterliegen dem urheberrechtlichen Schutz.
-
-Datenschutz
-Wir (Source Access Designz) nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Unser Wunsch ist es, dass Sie sich beim Besuch unserer Internetseiten sicher fühlen.
-
-Bei Ihrem Besuch auf unserer Internetseite werden uns grundsätzlich nur anonyme Daten, wie zum Beispiel die Seite, von der aus Sie uns besuchen, Ihr Verbindungsanbieter und die Seiten, die Sie auf unserer Präsenz aufgerufen haben, übermittelt. Wir nutzen diese Informationen ausschließlich zu statistischen Zwecken und zur Verbesserung unseres Service und unserer Internetseite.
-
-Die Erhebung, Verarbeitung und Nutzung personenbezogener Daten ist im Rahmen dieser Internetseite an einigen Stellen - zum Beispiel für die Kontaktaufnahme über das Kontaktfomular - nötig. Diese Daten werden nur auf der Basis Ihrer bewusst gemachten Angaben und nur entsprechend den jeweils geltenden Vorschriften verarbeitet und genutzt. Die Nutzung schließt - soweit zulässig - eine elektronische Speicherung mit ein (vorwiegend im Bezug auf E-Mail-Datenverkehr).
-
-Benutzerstatistiken mit Piwik
-Diese Website benutzt Piwik, einen freien Webanalysedienst, beruhend auf einer freien Programmierung (OpenSource). Piwik verwendet sogenannte "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Ihre Daten werden von unserem Server nicht an Dritte weitergegeben.
-Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browsersoftware verhindern.
-Durch die Nutzung dieser Website erklären Sie sich mit der Verarbeitung der über Sie erhobenen Daten durch unser System und zu dem benannten Zweck einverstanden.
-
-Auf Anforderung teilen wir Ihnen gerne schriftlich entsprechend dem geltenden Recht mit, ob und welche persönlichen Daten über Sie bei uns gespeichert sind. Wenn Sie Fragen hinsichtlich der Verarbeitung Ihrer persönlichen Daten haben, können Sie sich direkt an uns wenden.
+      
+      <p>There is no warranty for integrity, completeness and currentness for this website.<br>
+        Furthermore Hans Christian Reinl and Source Access Designz don't take any liability concerning external links.</p>
+      <p>Please notice the copyright law for each of the presented pages.</p>
+      
+      <p>Please be aware of the fact that we store some of the data while you visit this this page. For doing this we mostly use <a href="http://piwik.org/" target="_blank">Piwik</a>.</p>
     </section>
+    
+    
+    
+    
+    <!--! Contact -->
+    <section class="contact">
+      <h2>Contact me</h2>
+      
+      <div class="clearfix">
+        <form action="contact/send" method="post">
+          <p>Feel free to write me an email. But be aware that there are also other means of communication. If you have questions regarding a project, please contact me through the project's website. I am on <a href="http://twitter.com/#!/drublic" target="_blank">Twitter</a>.</p>
+          
+          <fieldset>
+            <label for="contact-name">Name:</label>
+            <input type="text" name="contact-name" id="contact-name">
+          </fieldset>
+          
+          <fieldset>
+            <label for="contact-mail">E-Mail:</label>
+            <input type="email" name="contact-mail" id="contact-mail">
+          </fieldset>
+          
+          <fieldset>
+            <label for="contact-message">Your Message:</label>
+            <textarea name="contact-message" id="contact-message"></textarea>
+          </fieldset>
+        </form>
+      </div>
+      
+    </section>
+    
+    
     <footer>
 
     </footer>

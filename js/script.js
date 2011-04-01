@@ -13,46 +13,82 @@ $('nav').find('a').each( function () {
 
 // Click one of those
 .click( function () {
-  var i = 0;
+
+  var hash = $(this).attr('href').split(/#!\//)[1];
+
+  // Home
+  if (hash == 'home') {
+    $('.imprint, .contact').fadeOut(function () {
+      var i = 0;
+      ! function slideUpSec () {
+        // Do it for each section
+        if (i < $('#main').find('section').size()) {
+          if (!$('#main').find('section').eq(i).hasClass('imprint'))
+            $('#main').find('section').eq(i).show() .animate({ top: 0 });
+          
+          i++;
+          
+          setTimeout(slideUpSec, 100);
+        }
+        
+      } ();
+    });
+  }
   
-  // Slide 'em down
-  ! function slideDownSec () {
-    
-    // Do it for each section
-    if (i < $('#main').find('section').size()) {
-      if (!$('#main').find('section').eq(i).hasClass('legal'))
-        $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
-          $(this).fadeOut();
-        });
-      
-      i++;
-      
-      setTimeout(slideDownSec, 100);
-    }
-    else {
-      $('.legal').delay(500).fadeIn();
-    }
-  } ();
-});
-
-
-// Click on close
-$('.close').click( function () {
-  $('.legal').fadeOut(function () {
+  
+  // Imprint
+  else if (hash == 'imprint') {
     var i = 0;
-    ! function slideUpSec () {
+    
+    $('.contact').fadeOut();
+    
+    // Slide 'em down
+    ! function slideDownSec () {
+      
       // Do it for each section
       if (i < $('#main').find('section').size()) {
-        if (!$('#main').find('section').eq(i).hasClass('legal'))
-          $('#main').find('section').eq(i).show() .animate({ top: 0 });
+        if (!$('#main').find('section').eq(i).hasClass('imprint'))
+          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
+            $(this).fadeOut();
+          });
         
         i++;
         
-        setTimeout(slideUpSec, 100);
+        setTimeout(slideDownSec, 100);
       }
-      
+      else {
+        $('.imprint').delay(500).fadeIn();
+      }
     } ();
-  });
+  }
+  
+  
+  // Contact
+  else if (hash == 'contact') {
+    var i = 0;
+    
+    $('.imprint').fadeOut();
+    
+    // Slide 'em down
+    ! function slideDownSec () {
+      
+      // Do it for each section
+      if (i < $('#main').find('section').size()) {
+        if (!$('#main').find('section').eq(i).hasClass('contact'))
+          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
+            $(this).fadeOut();
+          });
+        
+        i++;
+        
+        setTimeout(slideDownSec, 100);
+      }
+      else {
+        $('.contact').delay(500).fadeIn();
+      }
+    } ();
+  }
+  
   
 });
 
@@ -156,7 +192,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   ! function calcHeight () {
     // Do it for each section
     if (i < $('#main').find('section').size()) {
-      if (!$('#main').find('section').eq(i).hasClass('legal'))
+      if (!$('#main').find('section').eq(i).hasClass('imprint'))
         $('#main').find('section').eq(i).height($('html').height() - $('#main').offset().top);
       
       i++;
