@@ -40,7 +40,7 @@
     <header>
       <nav>
         <ul>
-          <li><a href="home">Home</a></li>
+          <li class="active"><a href="home">Home</a></li>
           <li><a href="imprint">Imprint</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
@@ -175,6 +175,10 @@
           <fieldset>
             <label for="contact-message">Your Message:</label>
             <textarea name="contact-message" id="contact-message"></textarea>
+          </fieldset>
+          
+          <fieldset>
+            <input type="submit" value="Send the Message">
           </fieldset>
         </form>
       </div>

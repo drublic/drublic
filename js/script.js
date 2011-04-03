@@ -14,6 +14,10 @@ $('nav').find('a').each( function () {
 // Click one of those
 .click( function () {
 
+  // Add Class active
+  $(this).closest('nav').find('.active').removeClass('active');
+  $(this).parent().addClass('active');
+
   var hash = $(this).attr('href').split(/#!\//)[1];
 
   // Home
@@ -202,6 +206,41 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   } ();
 
 
+} ();
+
+
+
+
+// Submit Contact-Form
+! function () {
+  $('.contact').find('form')
+    .attr('action', '#!/' + $('.contact').find('form').attr('action'))
+    .submit( function (e) {
+      e.preventDefault();
+      var param = {};
+      
+      // Itterate through Fields
+      $(this).find('input, textarea').each( function () {
+        $(this).removeClass('invalid');
+        
+        if ($(this).val() != '') param[$(this).attr('name')] = $(this).val();
+        else {
+          param[$(this).attr('name')] = $(this).val();
+          $(this).addClass('invalid');
+        }
+      });
+      
+      $.post('ajax/send.php', param, function (data) {
+        log (data);
+        if (data.error == undefined) {
+          log('Success!');
+        }
+        else {
+          log('Error.');
+        }
+      }, 'json');
+      
+    });
 } ();
 
 

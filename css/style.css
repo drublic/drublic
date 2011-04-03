@@ -211,6 +211,10 @@ form { padding: 1em 0; }
 fieldset { padding: .2em 0 0; }
 label { float: left; width: 150px; margin: .5em 0; }
 
+input:focus, textarea:focus { outline: none; }
+
+.invalid { border-color: #c00; }
+
 
 
 #container { margin: 0; overflow: hidden; }
@@ -233,7 +237,9 @@ hgroup a:hover {
 nav { background: #000; border-bottom: 2px solid #222; overflow: hidden; }
 nav ul { float: right; margin: 0.6em 50px; }
 nav li { display: inline; }
-nav a, nav a:visited { float: left; padding: 3px 5px; color: #555; }
+nav a, nav a:visited { float: left; padding: 3px 5px; color: #555; text-decoration: none; border-bottom: 2px solid #000; }
+nav a:hover { border-bottom: 2px solid #bbb; }
+nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
 
 
 
