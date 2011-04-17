@@ -32,6 +32,10 @@
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-1.7.min.js"></script>
 
+  <!--! Typekit -->
+  <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
 
 <body>
