@@ -88,6 +88,20 @@
         
         <div class="feed">
           <ul>
+            
+            <!--! Carrotshop -->
+            <li>
+              <span class="front">
+                <img src="img/carrotshop.png" alt="">
+                <h4>Google Chrome App - Carrotshop</h4>
+              </span>
+              <span class="back">
+                <p><a href="http://carrotshop.org" target="_blank">Carrotshop.org</a> is a non profit afilliate network with Germany's most popular online stores. If you shop online Carrotshop gets commission and donates it to a climate protection project.</p>
+                <p><a href="https://chrome.google.com/webstore/detail/ddmmkahencnehcofgocnahmleghjlihm" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
+              </span>
+            </li>
+            
+            <!--! JsFiddle -->
             <li>
               <span class="front">
                 <img src="img/jsfiddle.png" alt="">
