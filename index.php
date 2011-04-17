@@ -229,6 +229,18 @@
     <script src="js/libs/dd_belatedpng.js"></script>
     <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
   <![endif]-->
-
+  
+  <!-- Piwik --> 
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.source-access.eu/piwik/" : "http://www.source-access.eu/piwik/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 9);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://www.source-access.eu/piwik/piwik.php?idsite=9" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
 </body>
 </html>
