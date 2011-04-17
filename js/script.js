@@ -256,6 +256,25 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 } ();
 
 
+
+
+
+// If hash changes or is set on refresh
+var hash = '';
+! function hashListener (hash) {
+  
+  // If hash has changed
+  if (hash !== window.location.hash) {
+    hash = window.location.hash;
+    $('nav').find('a[href="' + hash + '"]').trigger('click');
+  }
+  
+  setTimeout( function () {
+    hashListener (hash);
+  }, 100);
+} (hash);
+
+
 } (jQuery, window, document);
 
 
