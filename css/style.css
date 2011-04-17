@@ -122,7 +122,7 @@ button, input, select, textarea { margin: 0; }
 /* Colors for form validity */
 input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid {
-   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+   -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
 }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
@@ -185,6 +185,16 @@ html {
 body { color: #ccc; }
 
 
+/* Messages */
+.js .nojs-active { display: none; }
+.message {
+  position: fixed; top: 0; left: 50%;
+  background: #fff1a8;
+  width: 400px;
+  margin-left: -200px; padding: 10px 20px 8px;
+  text-align: center; font-size: 1.1em; color: #111;
+}
+
 
 /* Headlines */
 h2 { border-bottom: 1px solid #ddd; margin: 10px 0; padding: 10px 0; font-size: 1.7em; font-weight: normal; }
@@ -202,6 +212,20 @@ input, textarea {
      -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+}
+.message {
+     -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+          border-radius: 0 0 5px 5px;
+}
+
+
+
+/* Shadows */
+.message {
+     -moz-box-shadow: 0 0 4px #000;
+  -webkit-box-shadow: 0 0 4px #000;
+          box-shadow: 0 0 4px #000;
 }
 
 
@@ -224,6 +248,8 @@ label { float: left; width: 150px; margin: .5em 0; }
 input, textarea { width: 300px; border: 1px solid #aaa; background: #eee; padding: 5px 10px; font-size: 1.3em; }
 input:focus, textarea:focus { outline: none; border-bottom-color: #fff; background: #ddd; }
 textarea { height: 150px; }
+
+input[disabled], textarea[disabled] { opacity: .5; filter: alpha(opacity=50); }
 
 input[type="submit"] {
   width: auto; float: right;

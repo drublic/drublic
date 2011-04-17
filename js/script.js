@@ -232,19 +232,31 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
       
       $.post('ajax/send.php', param, function (data) {
         log (data);
-        if (data.error == undefined) {
-          log('Success!');
+        if (data.error === undefined) {
+          $('body').append('<div class="message">' + data.msg + '</div>');
+          $('.contact').find('form').find('input, textarea').each( function () {
+            $(this).removeClass('invalid').attr('disabled', true);
+            if ($(this).attr('type') !== 'submit') $(this).val('');
+          });
         }
         else {
-          log('Error.');
+          $('body').append('<div class="message">An error occured! Please resolve this!</div>');
         }
+        
+        setTimeout( function () {
+          if ($('.message').size() > 0)
+            $('.message').fadeOut( function () {
+              $(this).remove();
+            });
+        }, 5000);
+
       }, 'json');
       
     });
 } ();
 
 
-} (jQuery, window, undefined);
+} (jQuery, window, document);
 
 
 
