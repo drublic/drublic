@@ -17,82 +17,6 @@ $('nav').find('a').each( function () {
   // Add Class active
   $(this).closest('nav').find('.active').removeClass('active');
   $(this).parent().addClass('active');
-
-  var hash = $(this).attr('href').split(/#!\//)[1];
-
-  // Home
-  if (hash == 'home') {
-    $('.imprint, .contact').fadeOut(function () {
-      var i = 0;
-      ! function slideUpSec () {
-        // Do it for each section
-        if (i < $('#main').find('section').size()) {
-          if (!$('#main').find('section').eq(i).hasClass('imprint'))
-            $('#main').find('section').eq(i).show() .animate({ top: 0 });
-          
-          i++;
-          
-          setTimeout(slideUpSec, 100);
-        }
-        
-      } ();
-    });
-  }
-  
-  
-  // Imprint
-  else if (hash == 'imprint') {
-    var i = 0;
-    
-    $('.contact').fadeOut();
-    
-    // Slide 'em down
-    ! function slideDownSec () {
-      
-      // Do it for each section
-      if (i < $('#main').find('section').size()) {
-        if (!$('#main').find('section').eq(i).hasClass('imprint'))
-          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
-            $(this).fadeOut();
-          });
-        
-        i++;
-        
-        setTimeout(slideDownSec, 100);
-      }
-      else {
-        $('.imprint').delay(500).fadeIn();
-      }
-    } ();
-  }
-  
-  
-  // Contact
-  else if (hash == 'contact') {
-    var i = 0;
-    
-    $('.imprint').fadeOut();
-    
-    // Slide 'em down
-    ! function slideDownSec () {
-      
-      // Do it for each section
-      if (i < $('#main').find('section').size()) {
-        if (!$('#main').find('section').eq(i).hasClass('contact'))
-          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
-            $(this).fadeOut();
-          });
-        
-        i++;
-        
-        setTimeout(slideDownSec, 100);
-      }
-      else {
-        $('.contact').delay(500).fadeIn();
-      }
-    } ();
-  }
-  
   
 });
 
@@ -159,8 +83,9 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   $('.tumblr .feed ul').html('');
   
   var body = '', output = '';
+    
   $.each( data.posts, function (key, value) {
-    output = '<li style="display: none;">';
+    output += '<li style="display: none;">';
     
     
     // Texts
@@ -272,7 +197,78 @@ var hash = '';
   // If hash has changed
   if (hash !== window.location.hash) {
     hash = window.location.hash;
-    $('nav').find('a[href="' + hash + '"]').trigger('click');
+    
+    
+    
+    // Home
+    if (hash === '#!/home') {
+      $('.imprint, .contact').fadeOut(function () {
+        var i = 0;
+        ! function slideUpSec () {
+          // Do it for each section
+          if (i < $('#main').find('section').size()) {
+            $('#main').find('section').eq(i).show().animate({ top: 0 });
+            i++;
+            
+            setTimeout(slideUpSec, 100);
+          }
+          
+        } ();
+      });
+    }
+    
+    
+    // Imprint
+    else if (hash === '#!/imprint') {
+      var i = 0;
+      
+      $('.contact').fadeOut();
+      
+      // Slide 'em down
+      ! function slideDownSec () {
+        
+        // Do it for each section
+        if (i < $('#main').find('section').size()) {
+          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
+            $(this).fadeOut();
+          });
+          i++;
+          
+          setTimeout(slideDownSec, 100);
+        }
+        else {
+          $('.imprint').delay(500).fadeIn();
+        }
+      } ();
+    }
+    
+    
+    // Contact
+    else if (hash === '#!/contact') {
+      var i = 0;
+      
+      $('.imprint').fadeOut();
+      
+      // Slide 'em down
+      ! function slideDownSec () {
+        
+        // Do it for each section
+        if (i < $('#main').find('section').size()) {
+          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
+            $(this).fadeOut();
+          });          
+          i++;
+          
+          setTimeout(slideDownSec, 100);
+        }
+        else {
+          $('.contact').delay(500).fadeIn();
+        }
+      } ();
+    }
+  
+  
+  
   }
   
   setTimeout( function () {
