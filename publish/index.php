@@ -1,6 +1,6 @@
 <?php
   
-  $env = 'dev';
+  $env = 'production';
   
   function base_url() {
     global $env;
@@ -34,11 +34,10 @@
 
 
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="<?php base_url(); ?>css/style.css?v=2">
-  <link rel="stylesheet" href="<?php base_url(); ?>css/jquery.fancybox-1.3.4.css">
+  <link rel="stylesheet" href="<?php base_url(); ?>css/style-0005.min.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+  <link rel="stylesheet" media="handheld" href="css/handheld.css">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="<?php base_url(); ?>js/libs/modernizr-1.7.min.js"></script>
@@ -225,16 +224,11 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
   <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.0.min.js'>\x3C/script>")</script>
 
 
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="<?php base_url(); ?>js/plugins.js"></script>
-	<script src="<?php base_url(); ?>js/mylibs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-  <script src="<?php base_url(); ?>js/twitter-text.js"></script>
-  <script src="<?php base_url(); ?>js/script.js"></script>
-  <!-- end scripts-->
+  <script src='js/scripts-0005.min.js'></script>
 
 
   <!--[if lt IE 7 ]>

@@ -652,6 +652,7 @@
         <echo message=" - removing unnecessary whitespace"/>
         <echo message=" - removing html comments"/>
         <echo message=" - compressing inline style/script tag contents"/>
+        <arg line="--preserve-php"/>
         <apply executable="java" parallel="false" force="true" dest="./${dir.publish}/" >
             <fileset dir="./${dir.publish}/" includes="${page-files}"/>
             <arg value="-jar"/>
@@ -662,7 +663,7 @@
             <arg line="--compress-css"/>
             <srcfile/>
             <arg value="-o"/>
-            <mapper type="glob" from="*.html" to="../${dir.publish}/*.html"/>
+            <mapper type="glob" from="*.php" to="../${dir.publish}/*.php"/>
             <targetfile/>
         </apply>
     </target>
