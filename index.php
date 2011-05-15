@@ -1,3 +1,12 @@
+<?php
+  
+  $env = 'dev';
+  
+  function base_url() {
+    print ($env = 'dev') ? 'http://localhost:8888/source-access/v2/' : 'http://drublic.de/';
+  }
+
+?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -19,18 +28,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?php base_url(); ?>favicon.ico">
+  <link rel="apple-touch-icon" href="<?php base_url(); ?>apple-touch-icon.png">
 
 
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="<?php base_url(); ?>css/style.css?v=2">
+  <link rel="stylesheet" href="<?php base_url(); ?>css/jquery.fancybox-1.3.4.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-1.7.min.js"></script>
+  <script src="<?php base_url(); ?>js/libs/modernizr-1.7.min.js"></script>
 
   <!--! Typekit -->
   <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
@@ -52,7 +62,7 @@
       </nav>
       
       <hgroup>
-        <a href="/">@drublic</a>
+        <a href="<?php base_url(); ?>">@drublic</a>
       </hgroup>
     </header>
     
@@ -214,14 +224,15 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.0.min.js'>\x3C/script>")</script>
 
 
   <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/plugins.js"></script>
-  <script src="js/twitter-text.js"></script>
-  <script src="js/script.js"></script>
+  <script src="<?php base_url(); ?>js/plugins.js"></script>
+	<script src="<?php base_url(); ?>js/mylibs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="<?php base_url(); ?>js/twitter-text.js"></script>
+  <script src="<?php base_url(); ?>js/script.js"></script>
   <!-- end scripts-->
 
 
@@ -232,15 +243,15 @@
   
   <!-- Piwik --> 
   <script type="text/javascript">
-  var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.source-access.eu/piwik/" : "http://www.source-access.eu/piwik/");
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://drublic.de/piwik/" : "http://drublic.de/piwik/");
   document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
   </script><script type="text/javascript">
   try {
-  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 9);
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
   piwikTracker.trackPageView();
   piwikTracker.enableLinkTracking();
   } catch( err ) {}
-  </script><noscript><p><img src="http://www.source-access.eu/piwik/piwik.php?idsite=9" style="border:0" alt="" /></p></noscript>
+  </script><noscript><p><img src="http://drublic.de/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
   <!-- End Piwik Tracking Code -->
 </body>
 </html>
