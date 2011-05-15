@@ -174,15 +174,21 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
     
     // Photo
     else if (value['photo-url-500'] !== undefined) {
-      output += '<a href="' + value['photo-url-500'] + '" target="_black"><img src="' + value['photo-url-250'] + '" alt=""></a>';
+      output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + value['photo-url-250'] + '" alt=""></a>';
     }
     
     else return;
     output += '<a href="' + value['url-with-slug'] + '" target="_blank" class="date">' + date(value['date']) + '</a></li>';
-    $('.tumblr .feed ul').append(output)
-    
-    $('.tumblr .feed ul').find('li:last').delay(key * 100).animate({ 'opacity': 'toggle' });
   });
+  
+  $('.tumblr .feed ul').append( output );
+  $('.tumblr .fancybox').fancybox({
+    'overlayShow' :	false
+  });
+  $('.tumblr .feed li').each( function( key ) {
+    $(this).delay(key * 100).animate({ 'opacity': 'toggle' });
+  });
+  
 }, 'jsonp');
 
 
@@ -273,6 +279,9 @@ var hash = '';
     hashListener (hash);
   }, 100);
 } (hash);
+
+
+
 
 
 } (jQuery, window, document);
