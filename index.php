@@ -21,9 +21,12 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>@drublic</title>
+  <title>@drublic - State of the Art Webdesign</title>
   <meta name="description" content="">
   <meta name="author" content="">
+
+  <!-- Who did this page -->
+  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt" /> 
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +39,11 @@
   <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="<?php base_url(); ?>css/style.css?v=2">
   <link rel="stylesheet" href="<?php base_url(); ?>css/jquery.fancybox-1.3.4.css">
+  
+  <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
+  <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
+  <link rel="canonical" href="<?php base_url(); ?>">
+  <link rel="index" title="@drublic - State of the Art Webdesign" href="<?php base_url(); ?>">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
