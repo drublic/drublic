@@ -6,13 +6,22 @@
 ! function ($, window, document, undefined) {
 
 
+var isMobile = function () {
+    if ( $( window ).width() < 481 ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+
 // Change Links in Nav
 $('nav').find('a').each( function () {
   $(this).attr('href', '#!/' + $(this).attr('href'))
 })
 
 // Click one of those
-.click( function () {
+.click( function() {
 
   // Add Class active
   $(this).closest('nav').find('.active').removeClass('active');
@@ -41,7 +50,7 @@ function date (date) {
 
 
 // Request latest Blog-Posts from Pagetimer-Blog
-$.get('http://blog.pagetimer.de/api/read/json?num=10&filter=text', function (data) {
+$.get('http://blog.pagetimer.de/api/read/json?num=15&filter=text', function (data) {
   log(data);
   $('.pagetimer .feed ul').html('');
   
@@ -123,6 +132,10 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 
 /* Calculate height of Cols */
 ! function () {
+  if ( isMobile() ) {
+    return;
+  }
+
   var i = 0;
   ! function calcHeight () {
     // Do it for each section
@@ -266,6 +279,14 @@ var hash = '';
         }
       } ();
     }
+    
+    
+    else {
+      var el = '.' + hash.split(/\#\!\//)[1];
+      if ( $( el ).size() > 0 ) {
+        $( 'html, body' ).animate({ 'scrollTop' : $( el ).offset().top });
+      }
+    }
   
   
   
@@ -276,6 +297,34 @@ var hash = '';
   }, 100);
 } (hash);
 
+
+
+
+// Menu for Mobile
+! function () {
+  if ( isMobile() ) {
+    var $that, title,
+        $menu = $( '<ul />', {
+          'class' : "menu",
+          'html' : $menu
+        });
+    
+    $( '#main' ).find( 'section' ).each( function( i ) {
+      $that = $( this );
+      title = $that.find( 'h2 a' ).html();
+      sectionClass = $that.attr( 'class' );
+      
+      $( '<li />', {
+          'id' : 'menu-li-' + i,
+          'html' : '<a href="#!/' + sectionClass + '">' + title + '</a>'
+        }).appendTo( $menu );
+    });
+
+    $menu.prependTo( '#main' );
+  
+  
+  }
+} ();
 
 
 
