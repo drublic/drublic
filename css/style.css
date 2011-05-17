@@ -368,7 +368,8 @@ nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
   font-size: 0.8em;
   background: rgba(0,0,0,0.8);
 }
-.projects li:hover .back { opacity: 1; }
+.projects li:hover .back,
+.projects li:focus .back { opacity: 1; }
 
 
 /* The Date */
@@ -476,15 +477,17 @@ footer {
 
   html { min-width: 0; }
   
+  input, textarea { width: 90%; }
+  
   /* Header */
   hgroup { padding: 20px 0 10px; }
   hgroup a { font-size: 2.5em; }
   
   #main { margin: 0; }
-  #main section { float: none; margin: 0 20px 40px; width: auto; }
+  #main section { float: none; margin: 0 10px 40px; width: auto; }
   
   /* Menu */
-  #main .menu { margin: 20px; border-top: 1px solid #333; }
+  #main .menu { margin: 10px; border-top: 1px solid #333; }
   #main .menu li { padding: 0; }
   #main .menu a {
     display: block; background: #222;
@@ -492,7 +495,9 @@ footer {
     text-decoration: none; text-align: center;
   }
   
-  .contact, .imprint { width: auto; margin: 0 20px; }
+  .contact, .imprint { width: auto; margin: 0 10px; }
+  
+  .scroll-top { position: absolute; top: 13px; right: 10px; font-size: 1.5em; cursor: pointer; display: block; }
   
   footer { display: none; }
 }
