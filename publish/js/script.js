@@ -6,20 +6,73 @@
 ! function ($, window, document, undefined) {
 
 
+var isMobile = function () {
+    if ( $( window ).width() < 481 ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+
 // Change Links in Nav
 $('nav').find('a').each( function () {
   $(this).attr('href', '#!/' + $(this).attr('href'))
-})
-
-// Click one of those
-.click( function () {
-
-  // Add Class active
-  $(this).closest('nav').find('.active').removeClass('active');
-  $(this).parent().addClass('active');
-  
 });
 
+
+
+
+// Mobile
+! function () {
+  if ( isMobile() ) {
+    
+    // Menu for Mobile
+    var $that, title,
+        $menu = $( '<ul />', {
+          'class' : "menu",
+          'html' : $menu
+        });
+    
+    $( '#main' ).find( 'section' ).each( function( i ) {
+      $that = $( this );
+      title = $that.find( 'h2 a' ).html();
+      sectionClass = $that.attr( 'class' );
+      
+      $( '<li />', {
+          'id' : 'menu-li-' + i,
+          'html' : '<a href="#!/' + sectionClass + '">' + title + '</a>'
+        }).appendTo( $menu );
+    });
+
+    $menu.prependTo( '#main' );
+    
+    
+    
+    
+    
+    // Top-Links for Headlines
+    $( '#main' ).find( 'section h2' ).each( function () {
+      $( '<span />', {
+        'class' : 'scroll-top',
+        'html' : '&uarr;'
+      }).insertAfter( $( this ) );
+    });
+    
+    $( '.scroll-top' ).click( function() {
+      $( 'html,body' ).animate({ 'scrollTop' : 0 });
+    });
+    
+    
+    
+    // Latest Projects
+    $( '.projects' ).find( 'li' ).click( function () {
+      $( this ).find( '.back' ).animat({ opacity: 'toggle' });
+    })
+  
+  
+  }
+} ();
 
 
 
@@ -41,7 +94,7 @@ function date (date) {
 
 
 // Request latest Blog-Posts from Pagetimer-Blog
-$.get('http://blog.pagetimer.de/api/read/json?num=10&filter=text', function (data) {
+$.get('http://blog.pagetimer.de/api/read/json?num=15&filter=text', function (data) {
   log(data);
   $('.pagetimer .feed ul').html('');
   
@@ -123,6 +176,10 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 
 /* Calculate height of Cols */
 ! function () {
+  if ( isMobile() ) {
+    return;
+  }
+
   var i = 0;
   ! function calcHeight () {
     // Do it for each section
@@ -192,11 +249,19 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 
 // If hash changes or is set on refresh
 var hash = '';
+$( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
+
 ! function hashListener (hash) {
   
   // If hash has changed
   if (hash !== window.location.hash) {
     hash = window.location.hash;
+    
+    
+    
+    // Add Class active
+    $( 'nav' ).find( '.active' ).removeClass( 'active' );
+    $( 'nav' ).find( 'a[href="' + hash + '"]' ).parent().addClass( 'active' );
     
     
     
@@ -214,6 +279,11 @@ var hash = '';
           }
           
         } ();
+        
+        // Fade in menu for Mobile
+        if ( isMobile() ) {
+          $( '.menu' ).fadeIn();
+        }
       });
     }
     
@@ -240,6 +310,12 @@ var hash = '';
           $('.imprint').delay(500).fadeIn();
         }
       } ();
+      
+      // Fade out menu for Mobile
+      if ( isMobile() ) {
+        $( '.menu' ).fadeOut();
+      }
+
     }
     
     
@@ -265,11 +341,26 @@ var hash = '';
           $('.contact').delay(500).fadeIn();
         }
       } ();
+      
+      // Fade out menu for Mobile
+      if ( isMobile() ) {
+        $( '.menu' ).fadeOut();
+      }
+
+    }
+    
+    
+    else {
+      var el = '.' + hash.split(/\#\!\//)[1];
+      if ( $( el ).size() > 0 ) {
+        $( 'html, body' ).animate({ 'scrollTop' : $( el ).offset().top });
+      }
+      $( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
     }
   
   
-  
   }
+  
   
   setTimeout( function () {
     hashListener (hash);
