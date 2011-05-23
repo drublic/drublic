@@ -53,16 +53,30 @@ $('nav').find('a').each( function () {
     
     // Top-Links for Headlines
     $( '#main' ).find( 'section h2' ).each( function () {
+    
+      // Scroll Up
       $( '<span />', {
         'class' : 'scroll-top',
         'html' : '&uarr;'
-      }).insertAfter( $( this ) );
-    });
-    
-    $( '.scroll-top' ).click( function() {
-      $( 'html,body' ).animate({ 'scrollTop' : 0 });
-    });
-    
+      })
+      .insertAfter( $( this ) )
+      .click( function() {
+        $( 'html,body' ).animate({ 'scrollTop' : 0 });
+      });
+      
+      
+      // Scroll Down
+      $( '<span />', {
+        'class' : 'scroll-next',
+        'html' : '&darr;'
+      })
+      .insertBefore( $( this ) )
+      .click( function() {
+        log (1);
+        log ($( this ).closest( 'section' ).next().offset().top);
+        $( 'html,body' ).animate({ 'scrollTop' : $( this ).closest( 'section' ).next().offset().top })
+      });
+    });    
     
     
     // Latest Projects
