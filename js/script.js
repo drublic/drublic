@@ -171,9 +171,18 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   });
   
   $('.tumblr .feed ul').append( output );
-  $('.tumblr .fancybox').fancybox({
-    'overlayShow' :	false
-  });
+  
+  // Add Fancybox if we're not on a mobile-device
+  if ( !isMobile ) {
+    $( '.tumblr .fancybox' ).fancybox({
+      'overlayShow' :	false
+    });
+  } else {
+    $( '.tumblr .fancybox' ).click( function( e ) {
+      e.preventDefault();
+    })
+  }
+  
   $('.tumblr .feed li').each( function( key ) {
     $(this).delay(key * 100).animate({ 'opacity': 'toggle' });
   });
