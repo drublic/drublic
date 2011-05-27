@@ -52,31 +52,28 @@ $('nav').find('a').each( function () {
     
     
     // Top-Links for Headlines
-    $( '#main' ).find( 'section h2' ).each( function () {
     
-      // Scroll Up
-      $( '<span />', {
-        'class' : 'scroll-top',
-        'html' : '&uarr;'
-      })
-      .insertAfter( $( this ) )
-      .click( function() {
-        $( 'html,body' ).animate({ 'scrollTop' : 0 });
-      });
-      
-      
-      // Scroll Down
-      $( '<span />', {
-        'class' : 'scroll-next',
-        'html' : '&darr;'
-      })
-      .insertBefore( $( this ) )
-      .click( function() {
-        log (1);
-        log ($( this ).closest( 'section' ).next().offset().top);
-        $( 'html,body' ).animate({ 'scrollTop' : $( this ).closest( 'section' ).next().offset().top })
-      });
-    });    
+    // Scroll Down
+    $( '<span />', {
+      'class' : 'scroll-next',
+      'html' : '&darr;'
+    })
+    .insertAfter( $( '#main' ).find( 'section' ).not( ':last-child' ).find( 'h2' ) )
+    .click( function() {
+      log ($( this ).closest( 'section' ).next().offset().top);
+      $( 'html,body' ).animate({ 'scrollTop' : $( this ).closest( 'section' ).next().offset().top })
+    });
+    
+    // Scroll Up
+    $( '<span />', {
+      'class' : 'scroll-top',
+      'html' : '&uarr;'
+    })
+    .insertAfter( $( '#main' ).find( 'section' ).last().find( 'h2' ) )
+    .click( function() {
+      $( 'html,body' ).animate({ 'scrollTop' : 0 });
+    });
+
     
     
     // Latest Projects

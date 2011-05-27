@@ -497,9 +497,7 @@ footer {
   
   .contact, .imprint { width: auto; margin: 0 10px; }
   
-  .scroll-top, .scroll-next { position: absolute; top: 13px; z-index: 200; font-size: 1.5em; cursor: pointer; display: block; }
-  .scroll-next { left: 10px; }
-  .scroll-top { right: 10px; }
+  .scroll-top, .scroll-next { position: absolute; top: 13px; right: 10px; z-index: 200; font-size: 1.5em; cursor: pointer; display: block; }
   
   footer { display: none; }
 }
