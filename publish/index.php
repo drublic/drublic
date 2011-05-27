@@ -37,7 +37,7 @@
 
 
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="<?php base_url(); ?>css/style-0009.min.css">
+  <link rel="stylesheet" href="<?php base_url(); ?>css/style-0011.min.css">
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -236,7 +236,7 @@
   <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
 
 
-  <script src='js/scripts-0009.min.js'></script>
+  <script src='<?php base_url(); ?>js/scripts-0011.min.js'></script>
 
 
   <!--[if lt IE 7 ]>
