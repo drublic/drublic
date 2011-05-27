@@ -368,6 +368,13 @@ $( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
       }
       $( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
     }
+    
+    
+    if ( isMobile() ) {
+      var $active = $( 'nav .active' ).clone();
+      $( 'nav .active' ).remove();
+      $( 'nav li' ).eq( 0 ).after( $active );
+    }
   
   
   }
