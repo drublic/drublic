@@ -47,9 +47,10 @@
   <link rel="apple-touch-icon" href="<?php base_url(); ?>apple-touch-icon.png">
 
 
-  <!-- CSS: implied media="all" -->
+  <!-- styles concatenated CSS: implied media="all" (prefix: <?php base_url(); ?>)-->
   <link rel="stylesheet" href="<?php base_url(); ?>css/style.css?v=2">
   <link rel="stylesheet" href="<?php base_url(); ?>css/jquery.fancybox-1.3.4.css">
+  <!-- end styles -->
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -249,7 +250,7 @@
   <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
 
 
-  <!-- scripts concatenated and minified via ant build script-->
+  <!-- scripts concatenated and minified via ant build script (prefix: <?php base_url(); ?>)-->
   <script src="<?php base_url(); ?>js/plugins.js"></script>
 	<script src="<?php base_url(); ?>js/mylibs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
   <script src="<?php base_url(); ?>js/twitter-text.js"></script>
