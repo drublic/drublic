@@ -233,7 +233,7 @@ input, textarea {
 
 
 /* Transforms & Transitions */
-hgroup a {
+#head a {
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -242,7 +242,7 @@ hgroup a {
 }
 
 
-hgroup a:hover {
+#head a:hover {
      -moz-transform: scale(1.2,1.2) rotate(2deg);
        -o-transform: scale(1.2,1.2) rotate(2deg);
   -webkit-transform: scale(1.2,1.2) rotate(2deg);
@@ -311,8 +311,9 @@ input[type="submit"]:active { background: #346585; text-shadow: #000 0 1px 0; }
 
 /* Header */
 header { text-align: center; }
-hgroup { padding: 50px 0; }
-hgroup a { display: inline-block; font-size: 4em; text-decoration: none; font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
+#head { padding: 50px 0; }
+#head a { display: inline-block; font-size: 4em; text-decoration: none; font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
+#head p { width: 400px; margin: 10px auto; font: italic 1.2em/1.5em Georgia, "Times New Roman", serif; color: #aaa; text-shadow: 1px 1px 0 #444; }
 
 
 /* Small Navigation */
@@ -480,8 +481,9 @@ footer {
   input, textarea { width: 90%; }
   
   /* Header */
-  hgroup { padding: 20px 0 10px; }
-  hgroup a { font-size: 2.5em; }
+  #head { padding: 20px 0 10px; }
+  #head a { font-size: 2.5em; }
+  #head p { width: auto; }
   
   nav ul { float: none; margin: 1em 10px; overflow: hidden; }
   nav li { float: left; display: block; width: 33.333%; }

@@ -157,17 +157,21 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
     
     // Photo
     else if (value['photo-url-500'] !== undefined) {
-      output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + value['photo-url-250'] + '" alt=""></a>';
+      var photo = value['photo-url-250'];
+      if ( $( '.tumblr .feed' ).width() > 300 ) {
+        photo = value['photo-url-500'];
+      }
+      output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + photo + '" alt=""></a>';
+    } else {
+      return;
     }
-    
-    else return;
     output += '<a href="' + value['url-with-slug'] + '" target="_blank" class="date">' + date(value['date']) + '</a></li>';
   });
   
   $('.tumblr .feed ul').append( output );
   
   // Add Fancybox if we're not on a mobile-device
-  if ( !isMobile ) {
+  if ( !isMobile() ) {
     $( '.tumblr .fancybox' ).fancybox({
       'overlayShow' :	false
     });
@@ -242,7 +246,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
           });
         }
         else {
-          $('body').append('<div class="message">An error occured! Please resolve this!</div>');
+          $('body').append('<div class="message">An error occured! Please resolve it!</div>');
         }
         
         setTimeout( function () {
