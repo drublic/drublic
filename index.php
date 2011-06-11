@@ -1,11 +1,22 @@
 <?php
-  
+
   $env = 'dev';
   
-  function base_url() {
+  function base_url( $echo = true ) {
     global $env;
-    print ($env == 'dev') ? 'http://localhost:8888/source-access/v2/' : 'http://drublic.de/';
+    
+    if ( $echo ) {
+      print ($env == 'dev') ? 'http://localhost:8888/source-access/v2/' : 'http://drublic.de/';
+    } else {
+      return ($env == 'dev') ? 'http://localhost:8888/source-access/v2/' : 'http://drublic.de/';
+    }
   }
+  
+  
+  if ( isset( $_GET['q'] ) ) {
+    header( 'location:' . base_url( false ) . '#!/' . $_GET['q'] );
+  }
+  
 
 ?>
 <!doctype html>
@@ -58,21 +69,22 @@
 </head>
 
 <body>
-  <section class="message nojs-active">Hey brah! Please activate JavaScript in order to view this page.</section>
+  <section class="message nojs-active">Hey there! Please activate JavaScript in order to view this page.</section>
 
   <div id="container">
     <header>
       <nav>
         <ul>
-          <li class="active"><a href="home">Home</a></li>
-          <li><a href="imprint">Imprint</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li class="active"><a href="<?php base_url(); ?>home">Home</a></li>
+          <li><a href="<?php base_url(); ?>imprint">Imprint</a></li>
+          <li><a href="<?php base_url(); ?>contact">Contact</a></li>
         </ul>
       </nav>
       
-      <hgroup>
+      <div id="head">
         <a href="<?php base_url(); ?>">@drublic</a>
-      </hgroup>
+        <p>A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter.</p>
+      </div>
     </header>
     
     <div id="main" role="main">

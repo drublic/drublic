@@ -15,12 +15,6 @@ var isMobile = function () {
   };
 
 
-// Change Links in Nav
-$('nav').find('a').each( function () {
-  $(this).attr('href', '#!/' + $(this).attr('href'))
-});
-
-
 
 
 // Mobile
@@ -281,7 +275,7 @@ $( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
     
     // Add Class active
     $( 'nav' ).find( '.active' ).removeClass( 'active' );
-    $( 'nav' ).find( 'a[href="' + hash + '"]' ).parent().addClass( 'active' );
+    $( 'nav' ).find( 'a[href$="' + hash.split(/\#\!\//)[1] + '"]' ).parent().addClass( 'active' );
     
     
     
