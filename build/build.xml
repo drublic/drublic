@@ -571,7 +571,7 @@
             <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg line="--preserve-multi-spaces"/>
             <arg line="--remove-quotes"/>
-            <arg line="--compress-js"/>
+            
             <arg line="--compress-css"/>
             <arg line="--preserve-php"/>
             <srcfile/>
@@ -593,7 +593,7 @@
             <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg value="--preserve-comments"/>
             <arg line="--preserve-multi-spaces"/>
-            <arg line="--compress-js"/>
+            
             <arg line="--compress-css"/>
             <arg line="--preserve-php"/>
             <srcfile/>
@@ -614,7 +614,7 @@
             <arg value="-jar"/>
             <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg line="--remove-quotes"/>
-            <arg line="--compress-js"/>
+            
             <arg line="--compress-css"/>
             <arg line="--preserve-php"/>
             <srcfile/>
