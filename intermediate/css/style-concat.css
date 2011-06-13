@@ -251,18 +251,6 @@ input, textarea {
 }
 
 
-.projects li .front,
-.projects li .back {
-     -moz-transition: all 0.7s ease-out;
-       -o-transition: all 0.7s ease-out;
-  -webkit-transition: all 0.7s ease-out;
-      -ms-transition: all 0.7s ease-out;
-          transition: all 0.7s ease-out;
-}
-
-
-
-
 
 
 
@@ -275,6 +263,10 @@ a:hover { color: #ccc; text-decoration: none; }
 
 /* Paragraphes */
 p { padding-bottom: 10px; }
+
+
+/* Quotes */
+q { font: italic 1em Georgia, "Times New Roman", Times, serif; }
 
 
 
@@ -353,45 +345,31 @@ nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
 .tumblr a, .tumblr a:visited { color: #2c4762; }
 
 .projects h2 { border-bottom-color: #aaa; }
-.projects a, .projects a:visited { color: #aaa; }
+.projects h2 a, .projects h2 a:visited { color: #aaa; }
 
-.feed img { width: 100%; }
+.feed img, .feed embed { width: 100% !important; height: auto !important; }
 
 
 /* The projects */
-.projects h4 { position: absolute; bottom: 10px; background: rgba(0,0,0,0.6); padding: 5px 10px; }
+.projects h4 { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); padding: 5px 10px; font-weight: normal; }
 
 .projects li { position: relative; }
-.projects li .front img { display: block; }
-.projects li:hover .front { opacity: .5; }
-.projects li .back {
-  opacity: 0; position: absolute; top: 20px; bottom: 0; padding: 10px;
-  font-size: 0.8em;
-  background: rgba(0,0,0,0.8);
-}
-.projects li:hover .back,
-.projects li:focus .back { opacity: 1; }
+.projects .front { text-decoration: none; color: #fff; }
+.projects .front img { display: block; }
+.projects .back { display: none; }
 
+#fancybox-content { color: #444;}
+#fancybox-content a, #fancybox-content a:visited { color: #888; }
 
-/* The Date */
-#main .date, #main .date:visited { display: block; padding-top: 5px; font-size: 0.7em; color: #333; text-align: right; text-decoration: none; }
+/* The date */
+#main .date { display: block; padding-top: 5px; font-size: 0.7em; color: #333; text-align: right; text-decoration: none; }
+#main .date:visited { color: #333; }
 
 
 
 
 /* Imprint */
-.imprint {
-  display: none;
-  position: relative; top: 0;
-  width: 600px;
-  margin: 0 auto; padding-bottom: 10em;
-  font-size: 1.1em;
-}
-
-
-
-/* Contact */
-.contact {
+.imprint, .contact {
   display: none;
   position: relative; top: 0;
   width: 600px;
@@ -407,8 +385,8 @@ nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
 
 /* Imprint */
 footer {
-  display: block; content: '\0020';
-  position: fixed; bottom: 0; width: 100%; height: 100px;
+  position: fixed; bottom: 0;
+  width: 100%; height: 100px;
   background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); 
   background-image: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); 
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(0,0,0,0)),color-stop(1, rgba(0,0,0,1))); 

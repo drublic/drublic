@@ -42,7 +42,7 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel=stylesheet href='<?php base_url(); ?>css/fab97cd95eb34423afccb2d069d92fa96ea934c9.css'>
+  <link rel=stylesheet href='<?php base_url(); ?>css/594108bb1b624904d288e89a7e8f3f03e6456b4d.css'>
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -112,33 +112,50 @@
       </section>
       
       <section class="projects">
-        <h2><a href="">Latest Projects</a></h2>
+        <h2><a href="#">Latest Projects</a></h2>
         
         <div class="feed">
           <ul>
             
+            <!--! Gala-Goodies -->
+            <li>
+              <a href="#project-galagoodies" class="front">
+                <img src="img/galagoodies.png" alt="">
+                <h4>WordPress Website - GALA-Goodies</h4>
+              </a>
+              <div id="project-galagoodies" class="back">
+                <h3>WordPress Website - GALA-Goodies</h3>
+                <p><a href="http://gala-goodies.de" target="_blank">GALA Goodies</a> comes out as a insert with <a href="http://www.gala.de/" target="_blank">GALA</a>, a <q>"premium magazine for people and lifestyle"</q> <cite>(<a href="http://www.guj.de/index_en.php4?/en/produkte/zeitschrift/zeitschriftentitel/gala.php4" target="_blank" title="Visit the source">G+J</a>)</cite>.</p>
+                <p><a href="http://gala-goodies.de/goodies/" target="_blank" title="GALA-Goodies website">The website</a> is build to help the GALA-Goodies team in communication with their partners.</p>
+              </div>
+            </li>
+            
+            
             <!--! Carrotshop -->
             <li>
-              <span class="front">
+              <a href="#project-carrotshop" class="front">
                 <img src="img/carrotshop.png" alt="">
                 <h4>Google Chrome App - Carrotshop</h4>
-              </span>
-              <span class="back">
+              </a>
+              <div id="project-carrotshop" class="back">
+                <h3>Google Chrome App - Carrotshop</h3>
                 <p><a href="http://carrotshop.org" target="_blank">Carrotshop.org</a> is a non profit afilliate network with Germany's most popular online stores. If you shop online Carrotshop gets commission and donates it to a climate protection project.</p>
                 <p><a href="https://chrome.google.com/webstore/detail/ddmmkahencnehcofgocnahmleghjlihm" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
-              </span>
+              </div>
             </li>
             
             <!--! JsFiddle -->
             <li>
-              <span class="front">
+              
+              <a href="#project-jsfiddle" class="front">
                 <img src="img/jsfiddle.png" alt="">
                 <h4>Google Chrome App - jsFiddle</h4>
-              </span>
-              <span class="back">
+              </a>
+              <div id="project-jsfiddle" class="back">
+                <h3>Google Chrome App - jsFiddle</h3>
                 <p><a href="http://jsfiddle.net" target="_blank">jsFiddle</a> is a pretty useful social coding tool. This is an app for Google Chrome which works like a bookmark.</p>
                 <p><a href="https://chrome.google.com/webstore/detail/combhimnlhkmpfebbfbccnkgopecnoem" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
-              </span>
+              </div>
             </li>
           
           </ul>
@@ -242,7 +259,7 @@
   <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
 
 
-  <script src='<?php base_url(); ?>js/825f101cf13a299afc1623227f5b7265d7e85e65.js'></script>
+  <script src='<?php base_url(); ?>js/27e1f31304d7a6da04904db6e3638608549442cc.js'></script>
 
 
   <!--[if lt IE 7 ]>
