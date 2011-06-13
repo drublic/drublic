@@ -42,14 +42,9 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="<?php base_url(); ?>favicon.ico">
-  <link rel="apple-touch-icon" href="<?php base_url(); ?>apple-touch-icon.png">
-
-
   <!-- styles concatenated CSS: implied media="all" (prefix: <?php base_url(); ?>)-->
   <link rel="stylesheet" href="<?php base_url(); ?>css/style.css?v=2">
-  <link rel="stylesheet" href="<?php base_url(); ?>css/jquery.fancybox-1.3.4.css">
+  <link rel="stylesheet" href="<?php base_url(); ?>css/fancybox.css?v=2">
   <!-- end styles -->
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
@@ -120,10 +115,23 @@
       </section>
       
       <section class="projects">
-        <h2><a href="">Latest Projects</a></h2>
+        <h2><a href="#">Latest Projects</a></h2>
         
         <div class="feed">
           <ul>
+            
+            <!--! Gala-Goodies -->
+            <li>
+              <span class="front">
+                <img src="img/galagoodies.png" alt="">
+                <h4>WordPress Website - GALA-Goodies</h4>
+              </span>
+              <span class="back">
+                <p><a href="http://gala-goodies.de" target="_blank">GALA Goodies</a> appears as a insert with <a href="http://www.gala.de/" target="_blank">GALA</a>, a <q>"premium magazine for people and lifestyle" (<a href="http://www.guj.de/index_en.php4?/en/produkte/zeitschrift/zeitschriftentitel/gala.php4" target="_blank" title="Visit the source">G+J</a>).</p>
+                <p><a href="http://gala-goodies.de/goodies/" target="_blank" title="GALA-Goodies website">The website</a> is build to help the GALA-Goodies team in communication with their partners.</p>
+              </span>
+            </li>
+            
             
             <!--! Carrotshop -->
             <li>
