@@ -129,13 +129,13 @@ $.get('http://blog.pagetimer.de/api/read/json?num=15&filter=text', function (dat
 
 
 // Request latest Tweets
-$.get('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1', function (data) {
+$.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1', function (data) {
   log(data);
   $('.twitter .feed ul').html('');
 
   $.each( data, function (key, value) {
     $('.twitter .feed ul').append('<li style="display: none;">' + twttr.txt.autoLink(value['text']) + ' ' +
-      '<a href="http://twitter.com/drublic/status/' + value['id'] + '" target="_blank" class="date">' + date(value['created_at']) + '</a></li>');
+      '<a href="http://twitter.com/drublic/status/' + value['id_str'] + '" target="_blank" class="date">' + date(value['created_at']) + '</a></li>');
     
     $('.twitter .feed ul').find('li:last').delay(key * 100).animate({ 'opacity': 'toggle' });
   });
@@ -177,9 +177,12 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
     // Video
     } else if ( value['type'] === "video" ) {
       output += value['video-player'];
+    
+    // Everything else is not displayed
     } else {
       return;
     }
+    
     output += '<a href="' + value['url-with-slug'] + '" target="_blank" class="date">' + date(value['date']) + '</a></li>';
   });
   
@@ -201,6 +204,20 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   });
   
 }, 'jsonp');
+
+
+
+// Show single project
+if ( !isMobile() ) {
+  $( '.projects .front' ).fancybox({
+    'width' : 300,
+    'height' : 'auto',
+    'autoScale' : false,
+    'autoDimensions' : false
+  });
+} else {
+  $( '.projects .front' ).fancybox();
+}
 
 
 
