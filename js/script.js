@@ -18,7 +18,7 @@ var isMobile = function () {
 
 
 // Change Links in Nav
-$('nav').find('a').each( function() {
+$( 'nav a' ).each( function() {
   var newRef = $( this ).attr( 'href' ).replace( $( '#head' ).find( 'a' ).attr( 'href' ), '' );
   $( this ).attr( 'href', '#!/' + newRef );
 });
@@ -27,7 +27,7 @@ $('nav').find('a').each( function() {
 
 
 // Mobile
-! function () {
+function mobile_stuff() {
   if ( isMobile() ) {
     
     // Menu for Mobile
@@ -86,7 +86,8 @@ $('nav').find('a').each( function() {
   
   
   }
-} ();
+}
+mobile_stuff();
 
 
 
@@ -405,6 +406,23 @@ $( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
     hashListener (hash);
   }, 100);
 } (hash);
+
+
+
+
+// Resize Listener
+$( window ).resize( function() {
+  if ( !isMobile() ) {
+    if ( $( '.menu' ).size() > 0 ) {
+      $( '.menu, .scroll-next, .scroll-top' ).remove();
+    }
+  } else {
+    if ( $( '.menu' ).size() < 1 ) {
+      mobile_stuff();
+    }
+  }
+
+});
 
 
 
