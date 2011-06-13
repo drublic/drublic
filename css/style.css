@@ -355,7 +355,7 @@ nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
 .projects h2 { border-bottom-color: #aaa; }
 .projects a, .projects a:visited { color: #aaa; }
 
-.feed img { width: 100%; }
+.feed img, .feed embed { width: 100% !important; height: auto !important; }
 
 
 /* The projects */

@@ -17,6 +17,15 @@ var isMobile = function () {
 
 
 
+// Change Links in Nav
+$('nav').find('a').each( function() {
+  var newRef = $( this ).attr( 'href' ).replace( $( '#head' ).find( 'a' ).attr( 'href' ), '' );
+  $( this ).attr( 'href', '#!/' + newRef );
+});
+
+
+
+
 // Mobile
 ! function () {
   if ( isMobile() ) {
@@ -119,7 +128,7 @@ $.get('http://blog.pagetimer.de/api/read/json?num=15&filter=text', function (dat
 
 
 // Request latest Tweets
-$.get('http://www.twitter.com/status/user_timeline/drublic.json?count=10', function (data) {
+$.get('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1', function (data) {
   log(data);
   $('.twitter .feed ul').html('');
 
@@ -153,15 +162,20 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
       body = value['regular-body'].substr(0, 100);
       output += '<span>' + twttr.txt.autoLink(body) + ' ' +
         '<a href="' + value['url-with-slug'] + '" target="_blank">read more&hellip;</a>';
-    }
-    
+
+
     // Photo
-    else if (value['photo-url-500'] !== undefined) {
+    } else if (value['photo-url-500'] !== undefined) {
       var photo = value['photo-url-250'];
       if ( $( '.tumblr .feed' ).width() > 300 ) {
         photo = value['photo-url-500'];
       }
       output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + photo + '" alt=""></a>';
+
+
+    // Video
+    } else if ( value['type'] === "video" ) {
+      output += value['video-player'];
     } else {
       return;
     }
