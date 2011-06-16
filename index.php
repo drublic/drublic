@@ -84,6 +84,7 @@
     </header>
     
     <div id="main" role="main">
+      <?php /*
       <section class="flipthemes">
         <h2><a href="http://flipthemes.de/" target="_blank">Flipthemes</a></h2>
         
@@ -93,6 +94,7 @@
           </ul>
         </div>
       </section>
+      */ ?>
       
       <section class="pagetimer">
         <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>

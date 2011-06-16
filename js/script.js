@@ -190,9 +190,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   
   // Add Fancybox if we're not on a mobile-device
   if ( !isMobile() ) {
-    $( '.tumblr .fancybox' ).fancybox({
-      'overlayShow' :	false
-    });
+    $( '.tumblr .fancybox' ).fancybox();
   } else {
     $( '.tumblr .fancybox' ).click( function( e ) {
       e.preventDefault();
