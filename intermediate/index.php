@@ -42,7 +42,7 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel=stylesheet href='<?php base_url(); ?>css/594108bb1b624904d288e89a7e8f3f03e6456b4d.css'>
+  <link rel=stylesheet href='<?php base_url(); ?>css/b0ecadac619e1ab9ec7f9529370a8bf3b1642313.css'>
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -81,6 +81,7 @@
     </header>
     
     <div id="main" role="main">
+      <?php /*
       <section class="flipthemes">
         <h2><a href="http://flipthemes.de/" target="_blank">Flipthemes</a></h2>
         
@@ -90,6 +91,7 @@
           </ul>
         </div>
       </section>
+      */ ?>
       
       <section class="pagetimer">
         <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>
@@ -130,6 +132,22 @@
               </div>
             </li>
             
+            <!--! JsFiddle -->
+            <li>
+              
+              <a href="#project-jsfiddle" class="front">
+                <img src="img/jsfiddle.png" alt="">
+                <span class="official"></span>
+                <h4>Google Chrome App - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jsFiddle</h4>
+              </a>
+              <div id="project-jsfiddle" class="back">
+                <h3>Google Chrome App - jsFiddle</h3>
+                <p><a href="http://jsfiddle.net" target="_blank">jsFiddle</a> is a pretty useful social coding tool. This is an app for Google Chrome which works like a bookmark.</p>
+                <p><a href="https://chrome.google.com/webstore/detail/hiigmadmngbpbmacbkfngpkjfmmpagfk" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
+                <p>Since 16th june 2011 it's the official jsFiddle Chrome Bookmark - check <a href="https://twitter.com/js_fiddle/status/81118840553091072" target="_blank">this</a>. You can also <a href="https://github.com/jsfiddle/jsfiddle-chrome-app" target="_blank">contribute</a> at github.</p>
+              </div>
+            </li>
+            
             
             <!--! Carrotshop -->
             <li>
@@ -141,20 +159,6 @@
                 <h3>Google Chrome App - Carrotshop</h3>
                 <p><a href="http://carrotshop.org" target="_blank">Carrotshop.org</a> is a non profit afilliate network with Germany's most popular online stores. If you shop online Carrotshop gets commission and donates it to a climate protection project.</p>
                 <p><a href="https://chrome.google.com/webstore/detail/ddmmkahencnehcofgocnahmleghjlihm" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
-              </div>
-            </li>
-            
-            <!--! JsFiddle -->
-            <li>
-              
-              <a href="#project-jsfiddle" class="front">
-                <img src="img/jsfiddle.png" alt="">
-                <h4>Google Chrome App - jsFiddle</h4>
-              </a>
-              <div id="project-jsfiddle" class="back">
-                <h3>Google Chrome App - jsFiddle</h3>
-                <p><a href="http://jsfiddle.net" target="_blank">jsFiddle</a> is a pretty useful social coding tool. This is an app for Google Chrome which works like a bookmark.</p>
-                <p><a href="https://chrome.google.com/webstore/detail/combhimnlhkmpfebbfbccnkgopecnoem" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
               </div>
             </li>
           
@@ -259,7 +263,7 @@
   <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
 
 
-  <script src='<?php base_url(); ?>js/27e1f31304d7a6da04904db6e3638608549442cc.js'></script>
+  <script src='<?php base_url(); ?>js/409ebac0ac7e00aef606854740a1fc33de150533.js'></script>
 
 
   <!--[if lt IE 7 ]>

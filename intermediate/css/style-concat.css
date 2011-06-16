@@ -233,7 +233,8 @@ input, textarea {
 
 
 /* Transforms & Transitions */
-#head a {
+#head a,
+.projects li h4 {
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -323,12 +324,12 @@ nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
 
 
 #main ul { list-style: none; margin: 0; padding: 0; }
-#main li { width: 100%; font-size: 1.3em; padding-top: 20px; }
+#main li { position: relative; width: 100%; font-size: 1.3em; padding-top: 30px; word-wrap: break-word; }
 
 #main .loader { width: 100%; height: 100px; background: url(../img/loader.gif) no-repeat center center; }
 
 
-#main section { position: relative; float: left; margin: 0 1%; width: 18%; }
+#main section { position: relative; float: left; margin: 0 1.5%; width: 22%; }
 
 #main h2 { position: relative; text-align: center; font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
 
@@ -349,17 +350,22 @@ nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
 
 .feed img, .feed embed { width: 100% !important; height: auto !important; }
 
+.official { position: absolute; bottom: 3px; right: -15px; z-index: 2; width: 64px; height: 64px; background: url(../img/official.png); }
+
 
 /* The projects */
 .projects h4 { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); padding: 5px 10px; font-weight: normal; }
 
 .projects li { position: relative; }
+.projects li:hover h4 { background: rgba(0,0,0,1); }
 .projects .front { text-decoration: none; color: #fff; }
 .projects .front img { display: block; }
 .projects .back { display: none; }
 
 #fancybox-content { color: #444;}
-#fancybox-content a, #fancybox-content a:visited { color: #888; }
+#fancybox-content a,
+#fancybox-content a:visited { color: #888; }
+
 
 /* The date */
 #main .date { display: block; padding-top: 5px; font-size: 0.7em; color: #333; text-align: right; text-decoration: none; }
