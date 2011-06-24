@@ -170,14 +170,7 @@ a:hover { color: #036; }
 
 html {
   height: 100%;
-  background-color: #222;
-  background-image: -moz-linear-gradient(top, #222, #000); /* FF3.6 */
-  background-image: -o-linear-gradient(top, #222, #000); /* Opera 11.10+ */
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #222),color-stop(1, #000)); /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(#222, #000); /* Chrome 10+, Saf5.1+ */
-  background-image: linear-gradient(top, #222, #000);
-  background-attachment: fixed;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#222222', EndColorStr='#000000'); /* IE6–IE9 */
+  background: #222 url(../img/bg.png);
   min-width: 700px;
 }
 
@@ -451,11 +444,11 @@ nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 footer {
   position: fixed; bottom: 0;
   width: 100%; height: 100px;
-  background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); 
-  background-image: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); 
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(0,0,0,0)),color-stop(1, rgba(0,0,0,1))); 
-  background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); 
-  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
+  background-image: -moz-linear-gradient(top, rgba(35,35,35,0), rgba(35,35,35,1)); 
+  background-image: -o-linear-gradient(top, rgba(35,35,35,0), rgba(35,35,35,1));
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(35,35,35,0)),color-stop(1, rgba(35,35,35,,1))); 
+  background-image: -webkit-linear-gradient(rgba(35,35,35,0), rgba(35,35,35,1));
+  background-image: linear-gradient(top, rgba(35,35,35,0), rgba(35,35,35,1));
 }
 
 
