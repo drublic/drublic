@@ -42,7 +42,7 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel=stylesheet href='<?php base_url(); ?>css/b0ecadac619e1ab9ec7f9529370a8bf3b1642313.css'>
+  <link rel=stylesheet href='<?php base_url(); ?>css/894bca2d933d903510af03149049ce27d0196246.css'>
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -77,6 +77,12 @@
       <div id="head">
         <a href="<?php base_url(); ?>">@drublic</a>
         <p>A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter.</p>
+      </div>
+      
+      <div class="location">
+        <div class="needle">
+          <p>I'm located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" target="_blank">Freiburg</a> / Germany.</p>
+        </div>
       </div>
     </header>
     
@@ -138,7 +144,7 @@
               <a href="#project-jsfiddle" class="front">
                 <img src="img/jsfiddle.png" alt="">
                 <span class="official"></span>
-                <h4>Google Chrome App - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jsFiddle</h4>
+                <h4>Google Chrome App - jsFiddle</h4>
               </a>
               <div id="project-jsfiddle" class="back">
                 <h3>Google Chrome App - jsFiddle</h3>
@@ -263,7 +269,7 @@
   <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
 
 
-  <script src='<?php base_url(); ?>js/409ebac0ac7e00aef606854740a1fc33de150533.js'></script>
+  <script src='<?php base_url(); ?>js/12c0b69aff6c95ce59641990a6bf866005e3e4f5.js'></script>
 
 
   <!--[if lt IE 7 ]>
