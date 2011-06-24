@@ -168,7 +168,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
     // Photo
     } else if (value['photo-url-500'] !== undefined) {
       var photo = value['photo-url-250'];
-      if ( $( '.tumblr .feed' ).width() > 300 ) {
+      if ( $( '.tumblr .feed' ).width() > 250 ) {
         photo = value['photo-url-500'];
       }
       output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + photo + '" alt=""></a>';
@@ -216,33 +216,6 @@ if ( !isMobile() ) {
 } else {
   $( '.projects .front' ).fancybox();
 }
-
-
-
-
-
-
-/* Calculate height of Cols */
-! function () {
-  if ( isMobile() ) {
-    return;
-  }
-
-  var i = 0;
-  ! function calcHeight () {
-    // Do it for each section
-    if (i < $('#main').find('section').size()) {
-      if (!$('#main').find('section').eq(i).hasClass('imprint'))
-        $('#main').find('section').eq(i).height($('html').height() - $('#main').offset().top);
-      
-      i++;
-      calcHeight();
-    }
-    
-  } ();
-
-
-} ();
 
 
 

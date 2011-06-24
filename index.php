@@ -147,7 +147,7 @@
               <a href="#project-jsfiddle" class="front">
                 <img src="img/jsfiddle.png" alt="">
                 <span class="official"></span>
-                <h4>Google Chrome App - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jsFiddle</h4>
+                <h4>Google Chrome App - jsFiddle</h4>
               </a>
               <div id="project-jsfiddle" class="back">
                 <h3>Google Chrome App - jsFiddle</h3>

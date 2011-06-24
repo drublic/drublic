@@ -419,8 +419,8 @@ nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 
 
 /* The date */
-#main .date { display: block; padding-top: 5px; font-size: 0.7em; color: #333; text-align: right; text-decoration: none; }
-#main .date:visited { color: #333; }
+#main .date { display: block; padding-top: 5px; font-size: 0.7em; color: #555; text-align: right; text-decoration: none; }
+#main .date:visited { color: #555; }
 
 
 
