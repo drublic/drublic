@@ -81,6 +81,12 @@
         <a href="<?php base_url(); ?>">@drublic</a>
         <p>A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter.</p>
       </div>
+      
+      <div class="location">
+        <div class="needle">
+          <p>I'm located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" target="_blank">Freiburg</a> / Germany.</p>
+        </div>
+      </div>
     </header>
     
     <div id="main" role="main">

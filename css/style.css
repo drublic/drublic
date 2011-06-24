@@ -208,7 +208,8 @@ h4 a { text-decoration: none; }
 
 
 /* Rounded Corners */
-input, textarea {
+input, textarea,
+.location p {
      -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -234,7 +235,9 @@ input, textarea {
 
 /* Transforms & Transitions */
 #head a,
-.projects li h4 {
+.projects li h4,
+.location,
+.location p {
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -309,18 +312,73 @@ header { text-align: center; }
 #head p { width: 400px; margin: 10px auto; font: italic 1.2em/1.5em Georgia, "Times New Roman", serif; color: #aaa; text-shadow: 1px 1px 0 #444; }
 
 
+
+@-webkit-keyframes jumper {
+  0% { top: 156px; }
+  45% { top: 147px; }
+  100% { top: 156px; }
+}
+@-moz-keyframes jumper {
+  0% { top: 156px; }
+  45% { top: 147px; }
+  100% { top: 156px; }
+}
+
+
+
+/* Location and Map */
+.location {
+  position: absolute; top: 0; right: 0;
+  width: 200px; height: 252px;
+  background: url(../img/germany.png);
+  opacity: .5;
+}
+.location:hover { opacity: 1; }
+.location .needle {
+  position: absolute; top: 156px; left: 18px;
+  width: 25px; height: 35px;
+  background: url(../img/needle.png);
+  -webkit-animation: jumper 1s infinite ease-out;
+     -moz-animation: jumper 1s infinite ease-out;
+}
+.location:hover .needle {
+  -webkit-animation: none;
+     -moz-animation: none;
+}
+.location p {
+  display: none;
+  position: absolute; top: -50px; right: -97px;
+  background: #444;
+  background: rgba(70,70,70,.8);
+  padding: 7px 15px;
+  border-top: 1px solid #666;
+  white-space: nowrap;
+  opacity: 0;
+}
+.location:hover p { display: block; }
+.location .needle:hover p { display: block; top: -45px; opacity: 1; }
+.location p:after {
+  display: block; content: '\0020';
+  position: absolute; left: 50%; bottom: -10px;
+  margin-left: -5px;
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: rgba(70,70,70,.8) transparent;
+}
+
+
 /* Small Navigation */
-nav { background: #000; border-bottom: 2px solid #222; overflow: hidden; }
-nav ul { float: right; margin: 0.6em 50px; }
+nav { background: url(../img/bg-dark.png); border-bottom: 2px solid #222; overflow: hidden; }
+nav ul {  position: relative; z-index: 1; float: right; margin: 0.6em 50px; }
 nav li { display: inline; }
-nav a, nav a:visited { float: left; padding: 3px 5px; color: #555; text-decoration: none; border-bottom: 2px solid #000; }
+nav a, nav a:visited { float: left; padding: 3px 5px; color: #777; text-decoration: none; border-bottom: 2px solid #000; }
 nav a:hover { border-bottom: 2px solid #bbb; }
-nav .active a, nav .active a:visited { color: #999; border-bottom-color: #fff; }
+nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 
 
 
 /* Main Content */
-#main { position: relative; margin: 0 50px; overflow: hidden; }
+#main { position: relative; margin: 0 50px; padding-bottom: 50px; overflow: hidden; }
 
 
 #main ul { list-style: none; margin: 0; padding: 0; }
@@ -469,6 +527,12 @@ footer {
   #head a { font-size: 2.5em; }
   #head p { width: auto; }
   
+  
+  .location { opacity: .3; }
+  
+  
+  
+  /* Navigation */
   nav ul { float: none; margin: 1em 10px; overflow: hidden; }
   nav li { float: left; display: block; width: 33.333%; }
   nav li:first-child { text-align: left; }
