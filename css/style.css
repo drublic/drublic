@@ -456,6 +456,21 @@ footer {
 
 
 
+/* Lightbox */
+#fancybox-overlay {
+  background: -webkit-gradient(radial, center center, 0, center center, 141, from(rgba(0,0,0,.5)), to(rgba(0,0,0,.8))) !important; /* old WebKit Syntax */
+  background: -webkit-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* New WebKit syntax */
+  background: -moz-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important;
+  background: -ms-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* IE10+ */
+  background: -o-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* Opera (13?) */
+  background: radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* standard syntax */
+  opacity: 1 !important;
+}
+
+
+
+
+
 
 
 
