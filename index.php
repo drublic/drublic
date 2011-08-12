@@ -262,14 +262,14 @@
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
+  </div>
 
 
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
   <!-- scripts concatenated and minified via ant build script (prefix: <?php base_url(); ?>)-->
