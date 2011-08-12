@@ -91,17 +91,6 @@
     </header>
     
     <div id="main" role="main">
-      <?php /*
-      <section class="flipthemes">
-        <h2><a href="http://flipthemes.de/" target="_blank">Flipthemes</a></h2>
-        
-        <div class="feed">
-          <ul>
-            <li>This stream is empty&hellip;</li>
-          </ul>
-        </div>
-      </section>
-      */ ?>
       
       <section class="pagetimer">
         <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>
