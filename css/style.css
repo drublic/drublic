@@ -190,7 +190,7 @@ body { color: #ccc; }
 
 
 /* Headlines */
-h2 { border-bottom: 1px solid #ddd; margin: 10px 0; padding: 10px 0; font-size: 1.7em; font-weight: normal; }
+h2 { border-bottom: 1px solid #ddd; margin: 10px 0; padding: 10px 0; font-size: 2em; font-weight: normal; }
 h2 a, h2 a:visited { color: #fff; text-decoration: none; }
 h2 a:hover { color: #eee; }
 h3 { font-size: 1.2em; margin: 1em 0 .5em; }
@@ -373,7 +373,7 @@ nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 
 
 /* Main Content */
-#main { position: relative; max-width: 1400px; margin: 0 auto; padding-bottom: 50px; overflow: hidden; }
+#main { position: relative; max-width: 1400px; margin: 0 auto 50px; overflow: hidden; }
 
 
 #main ul { list-style: none; margin: 0; padding: 0; }
