@@ -373,7 +373,7 @@ nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 
 
 /* Main Content */
-#main { position: relative; margin: 0 50px; padding-bottom: 50px; overflow: hidden; }
+#main { position: relative; max-width: 1400px; margin: 0 auto; padding-bottom: 50px; overflow: hidden; }
 
 
 #main ul { list-style: none; margin: 0; padding: 0; }
@@ -446,11 +446,11 @@ nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 footer {
   position: fixed; bottom: 0;
   width: 100%; height: 100px;
-  background-image: -moz-linear-gradient(top, rgba(35,35,35,0), rgba(35,35,35,1)); 
-  background-image: -o-linear-gradient(top, rgba(35,35,35,0), rgba(35,35,35,1));
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(35,35,35,0)),color-stop(1, rgba(35,35,35,,1))); 
-  background-image: -webkit-linear-gradient(rgba(35,35,35,0), rgba(35,35,35,1));
-  background-image: linear-gradient(top, rgba(35,35,35,0), rgba(35,35,35,1));
+  background-image: -moz-linear-gradient(top, rgba(42,41,38,0), rgba(42,41,38,1)); 
+  background-image: -o-linear-gradient(top, rgba(42,41,38,0), rgba(42,41,38,1));
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(42,41,38,0)),color-stop(1, rgba(42,41,38,,1))); 
+  background-image: -webkit-linear-gradient(rgba(42,41,38,0), rgba(42,41,38,1));
+  background-image: linear-gradient(top, rgba(42,41,38,0), rgba(42,41,38,1));
 }
 
 
@@ -460,13 +460,12 @@ footer {
 
 /* Lightbox */
 #fancybox-overlay {
-  background: -webkit-gradient(radial, center center, 0, center center, 141, from(rgba(0,0,0,.5)), to(rgba(0,0,0,.8))) !important; /* old WebKit Syntax */
-  background: -webkit-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* New WebKit syntax */
-  background: -moz-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important;
-  background: -ms-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* IE10+ */
-  background: -o-radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* Opera (13?) */
-  background: radial-gradient(center center, circle contain, rgba(0,0,0,.5), rgba(0,0,0,.8)) !important; /* standard syntax */
-  opacity: 1 !important;
+  background: -webkit-gradient(radial, center center, 0, center center, 141, from(rgba(0,0,0,.7)), to(rgba(0,0,0,1))) !important; /* old WebKit Syntax */
+  background: -webkit-radial-gradient(center center, circle contain, rgba(0,0,0,.7), rgba(0,0,0,1)) !important; /* New WebKit syntax */
+  background: -moz-radial-gradient(center center, circle contain, rgba(0,0,0,.7), rgba(0,0,0,1)) !important;
+  background: -ms-radial-gradient(center center, circle contain, rgba(0,0,0,.7), rgba(0,0,0,1)) !important; /* IE10+ */
+  background: -o-radial-gradient(center center, circle contain, rgba(0,0,0,.7), rgba(0,0,0,1)) !important; /* Opera (13?) */
+  background: radial-gradient(center center, circle contain, rgba(0,0,0,.7), rgba(0,0,0,1)) !important; /* standard syntax */
 }
 
 
