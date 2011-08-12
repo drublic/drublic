@@ -279,12 +279,6 @@
   <script src="<?php base_url(); ?>js/script.js"></script>
   <!-- end scripts-->
 
-
-  <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-  <![endif]-->
-  
   <!-- Piwik --> 
   <script type="text/javascript">
   var pkBaseURL = (("https:" == document.location.protocol) ? "https://drublic.de/piwik/" : "http://drublic.de/piwik/");
