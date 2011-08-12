@@ -140,28 +140,29 @@
                 <p><a href="http://gala-goodies.de/goodies/" target="_blank" title="GALA-Goodies website">The website</a> is build to help the GALA-Goodies team in communication with their partners.</p>
               </div>
             </li>
-            
+
+
             <!--! JsFiddle -->
             <li>
               
               <a href="#project-jsfiddle" class="front">
-                <img src="img/jsfiddle.png" alt="">
+                <img src="img/jsfiddle.jpg" alt="">
                 <span class="official"></span>
                 <h4>Google Chrome App - jsFiddle</h4>
               </a>
               <div id="project-jsfiddle" class="back">
                 <h3>Google Chrome App - jsFiddle</h3>
                 <p><a href="http://jsfiddle.net" target="_blank">jsFiddle</a> is a pretty useful social coding tool. This is an app for Google Chrome which works like a bookmark.</p>
-                <p><a href="https://chrome.google.com/webstore/detail/hiigmadmngbpbmacbkfngpkjfmmpagfk" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
-                <p>Since 16th june 2011 it's the official jsFiddle Chrome Bookmark - check <a href="https://twitter.com/js_fiddle/status/81118840553091072" target="_blank">this</a>. You can also <a href="https://github.com/jsfiddle/jsfiddle-chrome-app" target="_blank">contribute</a> at github.</p>
+                <p><a href="https://chrome.google.com/webstore/detail/hiigmadmngbpbmacbkfngpkjfmmpagfk" title="Visit the Chrome Web Store" target="_blank">Visit Chrome Web Store</a> to view the app and download it. 9.000 others already installed it.</p>
+                <p>Since 16th june 2011 it's the official jsFiddle Chrome Bookmark - check <a href="https://twitter.com/js_fiddle/status/81118840553091072" target="_blank" title="Official callout for the app on twitter">this</a> and <a href="http://blog.jsfiddle.net/post/6567648573/official-launching-app-for-chrome" title="Blogpost in the jsFidde-Blog" target="_blank">this</a>. It's also featured in <a href="http://blog.chromium.org/2011/06/cloud-coding-and-beyond-web-development.html" title="Cloud Coding and Beyond: Web Development Apps in the Chrome Web Store" target="_blank">this blog-post</a> in the official Chromium-blog. You can also <a href="https://github.com/jsfiddle/jsfiddle-chrome-app" target="_blank">contribute</a> at github.</p>
               </div>
             </li>
-            
-            
+
+
             <!--! Carrotshop -->
             <li>
               <a href="#project-carrotshop" class="front">
-                <img src="img/carrotshop.png" alt="">
+                <img src="img/carrotshop.jpg" alt="">
                 <h4>Google Chrome App - Carrotshop</h4>
               </a>
               <div id="project-carrotshop" class="back">
