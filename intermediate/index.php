@@ -42,7 +42,7 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel=stylesheet href='<?php base_url(); ?>css/894bca2d933d903510af03149049ce27d0196246.css'>
+  <link rel=stylesheet href='<?php base_url(); ?>css/30702e5310e7dc7a58d80f79b143b739d914769a.css'>
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -53,7 +53,7 @@
   <link rel="stylesheet" media="handheld" href="css/handheld.css">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="<?php base_url(); ?>js/libs/modernizr-1.7.min.js"></script>
+  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.js"></script>
 
   <!--! Typekit -->
   <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
@@ -68,9 +68,10 @@
     <header>
       <nav>
         <ul>
-          <li class="active"><a href="<?php base_url(); ?>home">Home</a></li>
-          <li><a href="<?php base_url(); ?>imprint">Imprint</a></li>
-          <li><a href="<?php base_url(); ?>contact">Contact</a></li>
+          <li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
+          <li><a href="<?php base_url(); ?>blog" class="hidden" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
+          <li><a href="<?php base_url(); ?>imprint" title="Who does this stuff?">Imprint</a></li>
+          <li><a href="<?php base_url(); ?>contact" title="Contact me if you have any questions">Contact</a></li>
         </ul>
       </nav>
       
@@ -81,23 +82,12 @@
       
       <div class="location">
         <div class="needle">
-          <p>I'm located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" target="_blank">Freiburg</a> / Germany.</p>
+          <p>I'm located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" title="Wanna know more awesome things about Freiburg? Check out the Wikipedia article." target="_blank">Freiburg</a> / Germany.</p>
         </div>
       </div>
     </header>
     
     <div id="main" role="main">
-      <?php /*
-      <section class="flipthemes">
-        <h2><a href="http://flipthemes.de/" target="_blank">Flipthemes</a></h2>
-        
-        <div class="feed">
-          <ul>
-            <li>This stream is empty&hellip;</li>
-          </ul>
-        </div>
-      </section>
-      */ ?>
       
       <section class="pagetimer">
         <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>
@@ -124,7 +114,23 @@
         
         <div class="feed">
           <ul>
-            
+
+
+            <!--! Haufe iDesk2 -->
+            <li class="hidden">
+              <a href="#project-idesk2" class="front">
+                <img src="img/idesk2.jpg" alt="">
+                <h4>WordPress Website - Haufe iDesk<sup>2</sup></h4>
+              </a>
+              <div id="project-idesk2" class="back">
+                <h3>WordPress Website - Haufe iDesk<sup>2</sup></h3>
+                <p><a href="http://idesk2.haufe.de/" title="Haufe iDesk2 product landing page" target="_blank">Haufe iDesk<sup>2</sup></a> is a software offered by the publishing company <a href="http://www.haufe.de/" title="Visit the Haufe-Homepage" target="_blank">Haufe</a> to optimize your working process.</p>
+                <p>In collaboration with <a href="http://gebruederheitz.de/" target="_blank">/gebr&uuml;derheitz</a> a webpage with cutting edge technologies using WordPress, HTML5, CSS3 and some jQuery-goodness has been developed.</p>
+                <p>The customer requested a fully browser-compatible site since the B2B-sector often uses older browsers like Internet Explorer 7. In order to reach this requirement we dealt a lot with HTML5-polyfills and used fallback technologies like YouTube-videos in non-HTML5-supporting browsers for the video-section.</p>
+              </div>
+            </li>
+
+
             <!--! Gala-Goodies -->
             <li>
               <a href="#project-galagoodies" class="front">
@@ -137,28 +143,29 @@
                 <p><a href="http://gala-goodies.de/goodies/" target="_blank" title="GALA-Goodies website">The website</a> is build to help the GALA-Goodies team in communication with their partners.</p>
               </div>
             </li>
-            
+
+
             <!--! JsFiddle -->
             <li>
               
               <a href="#project-jsfiddle" class="front">
-                <img src="img/jsfiddle.png" alt="">
+                <img src="img/jsfiddle.jpg" alt="">
                 <span class="official"></span>
                 <h4>Google Chrome App - jsFiddle</h4>
               </a>
               <div id="project-jsfiddle" class="back">
                 <h3>Google Chrome App - jsFiddle</h3>
                 <p><a href="http://jsfiddle.net" target="_blank">jsFiddle</a> is a pretty useful social coding tool. This is an app for Google Chrome which works like a bookmark.</p>
-                <p><a href="https://chrome.google.com/webstore/detail/hiigmadmngbpbmacbkfngpkjfmmpagfk" target="_blank">Visit</a> Chrome Web Store to view the app and download it.</p>
-                <p>Since 16th june 2011 it's the official jsFiddle Chrome Bookmark - check <a href="https://twitter.com/js_fiddle/status/81118840553091072" target="_blank">this</a>. You can also <a href="https://github.com/jsfiddle/jsfiddle-chrome-app" target="_blank">contribute</a> at github.</p>
+                <p><a href="https://chrome.google.com/webstore/detail/hiigmadmngbpbmacbkfngpkjfmmpagfk" title="Visit the Chrome Web Store" target="_blank">Visit Chrome Web Store</a> to view the app and download it. 9.000 others already installed it.</p>
+                <p>Since 16th june 2011 it's the official jsFiddle Chrome Bookmark - check <a href="https://twitter.com/js_fiddle/status/81118840553091072" target="_blank" title="Official callout for the app on twitter">this</a> and <a href="http://blog.jsfiddle.net/post/6567648573/official-launching-app-for-chrome" title="Blogpost in the jsFidde-Blog" target="_blank">this</a>. It's also featured in <a href="http://blog.chromium.org/2011/06/cloud-coding-and-beyond-web-development.html" title="Cloud Coding and Beyond: Web Development Apps in the Chrome Web Store" target="_blank">this blog-post</a> in the official Chromium-blog. You can also <a href="https://github.com/jsfiddle/jsfiddle-chrome-app" target="_blank">contribute</a> at github.</p>
               </div>
             </li>
-            
-            
+
+
             <!--! Carrotshop -->
             <li>
               <a href="#project-carrotshop" class="front">
-                <img src="img/carrotshop.png" alt="">
+                <img src="img/carrotshop.jpg" alt="">
                 <h4>Google Chrome App - Carrotshop</h4>
               </a>
               <div id="project-carrotshop" class="back">
@@ -259,29 +266,23 @@
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
+  </div>
 
 
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write("<script src='<?php base_url(); ?>js/libs/jquery-1.6.1.min.js'>\x3C/script>")</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
-  <script src='<?php base_url(); ?>js/12c0b69aff6c95ce59641990a6bf866005e3e4f5.js'></script>
+  <script src='<?php base_url(); ?>js/8b906441121d2c75ed5d01b6a36eb9c46fd4a024.js'></script>
 
-
-  <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-  <![endif]-->
-  
   <!-- Piwik --> 
-  <script type="text/javascript">
+  <script>
   var pkBaseURL = (("https:" == document.location.protocol) ? "https://drublic.de/piwik/" : "http://drublic.de/piwik/");
-  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-  </script><script type="text/javascript">
+  document.write('<script src="' + pkBaseURL + 'piwik.js"><\/script>');
+  </script><script>
   try {
   var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
   piwikTracker.trackPageView();
