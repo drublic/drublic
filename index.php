@@ -56,7 +56,7 @@
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="<?php base_url(); ?>js/libs/modernizr-1.7.min.js"></script>
+  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.js"></script>
 
   <!--! Typekit -->
   <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
