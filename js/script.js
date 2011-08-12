@@ -18,10 +18,17 @@ var isMobile = function () {
 
 
 // Change Links in Nav
-$( 'nav a' ).each( function() {
-  var newRef = $( this ).attr( 'href' ).replace( $( '#head' ).find( 'a' ).attr( 'href' ), '' );
-  $( this ).attr( 'href', '#!/' + newRef );
-});
+! function() {
+  var $el, newRef;
+  
+  $( 'nav a' ).each( function() {
+    $el = $( this );
+    if ( $el.attr( 'target' ) != '_blank' ) {
+      newRef = $el.attr( 'href' ).replace( $( '#head' ).find( 'a' ).attr( 'href' ), '' );
+      $el.attr( 'href', '#!/' + newRef );
+    }
+  });
+} ();
 
 
 

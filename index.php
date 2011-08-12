@@ -71,9 +71,10 @@
     <header>
       <nav>
         <ul>
-          <li class="active"><a href="<?php base_url(); ?>home">Home</a></li>
-          <li><a href="<?php base_url(); ?>imprint">Imprint</a></li>
-          <li><a href="<?php base_url(); ?>contact">Contact</a></li>
+          <li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
+          <li><a href="<?php base_url(); ?>blog" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
+          <li><a href="<?php base_url(); ?>imprint" title="Who does this stuff?">Imprint</a></li>
+          <li><a href="<?php base_url(); ?>contact" title="Contact me if you have any questions">Contact</a></li>
         </ul>
       </nav>
       
@@ -84,7 +85,7 @@
       
       <div class="location">
         <div class="needle">
-          <p>I'm located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" target="_blank">Freiburg</a> / Germany.</p>
+          <p>I'm located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" title="Wanna know more awesome things about Freiburg? Check out the Wikipedia article." target="_blank">Freiburg</a> / Germany.</p>
         </div>
       </div>
     </header>

@@ -362,7 +362,7 @@ header { text-align: center; }
 }
 
 
-/* Small Navigation */
+/* Navigation */
 nav { background: url(../img/bg-dark.png); border-bottom: 2px solid #222; overflow: hidden; }
 nav ul {  position: relative; z-index: 1; float: right; margin: 0.6em 50px; }
 nav li { display: inline; }
