@@ -1,9 +1,13 @@
-/* Author: 
+/**
+ *  Author: Hans Christian Reinl
+ *
+ *  Twitter: @drublic
+ *  Mail: info@drublic.de
+ *
+ */
 
-*/
 
-
-! function ($, window, document, undefined) {
+! function( $, window, document, undefined ) {
 
 
 var isMobile = function () {
@@ -232,10 +236,10 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 
 
 
-// Show single project
+// Show single project with Lightbox
 if ( !isMobile() ) {
   $( '.projects .front' ).fancybox({
-    'width' : 300,
+    'width' : 400,
     'height' : 'auto',
     'autoScale' : false,
     'autoDimensions' : false
