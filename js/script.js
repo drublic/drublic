@@ -94,11 +94,31 @@ mobile_stuff();
 
 
 
-/* Date-routine */
-function date (date) {
+/**
+ * Date-routine
+ * Add a routine to render a date
+ *
+ * @param date - Unix-timestamp
+ *
+ */
+function date( date ) {
   date = new Date (date);
-	var date_str  = date.getDate() + '.' + parseInt(date.getMonth() + 1) + '.' + date.getFullYear();
-	    date_str += ' - ' + date.getHours() + ':' + ( (date.getMinutes() <= 9) ? '0' + date.getMinutes() : date.getMinutes() );
+  var date_str  = '';
+
+  // Day
+  date_str += ( parseInt(date.getDate()) <= 9 ) ? '0' + date.getDate() : date.getDate();
+  date_str += '.';
+
+  //Month
+  date_str += ( ( parseInt(date.getMonth()) + 1 ) <= 9) ? '0' + ( parseInt(date.getMonth()) + 1 ) : ( parseInt(date.getMonth()) + 1 );
+  date_str += '.';
+
+  // Year
+  date_str += date.getFullYear();
+  date_str += ' - ';
+  
+  // Time
+  date_str += date.getHours() + ':' + ( (date.getMinutes() <= 9) ? '0' + date.getMinutes() : date.getMinutes() );
   
   return date_str;
 }
@@ -110,7 +130,7 @@ function date (date) {
 
 // Request latest Blog-Posts from Pagetimer-Blog
 $.get('http://blog.pagetimer.de/api/read/json?num=15&filter=text', function (data) {
-  log(data);
+  log( 'Pagetimer-Blog', data );
   $('.pagetimer .feed ul').html('');
   
   var body = '';
