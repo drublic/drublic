@@ -27,17 +27,17 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
+  <link rel="dns-prefetch" href="//ajax.googleapis.com" />
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>@drublic - State of the Art Webdesign</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <!-- Who did this page -->
-  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt" /> 
+  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt"> 
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,6 +49,10 @@
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
+  <meta name="author" content="Hans Christian Reinl">
+  <meta name="application-name" content="@drublic - State of the Art Webdesign">
+
+  
   <link rel="canonical" href="<?php base_url(); ?>">
   <link rel="index" title="@drublic - State of the Art Webdesign" href="<?php base_url(); ?>">
 
@@ -56,11 +60,11 @@
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.js"></script>
+  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.min.js"></script>
 
   <!--! Typekit -->
-  <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="http://use.typekit.com/nls7qda.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 
 </head>
 
@@ -280,11 +284,16 @@
 
 
   <!-- scripts concatenated and minified via ant build script (prefix: <?php base_url(); ?>)-->
-  <script src="<?php base_url(); ?>js/plugins.js"></script>
-	<script src="<?php base_url(); ?>js/mylibs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-  <script src="<?php base_url(); ?>js/twitter-text.js"></script>
-  <script src="<?php base_url(); ?>js/script.js"></script>
+  <script defer src="<?php base_url(); ?>js/plugins.js"></script>
+  <script defer src="<?php base_url(); ?>js/script.js"></script>
   <!-- end scripts-->
+  
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
 
   <!-- Piwik --> 
   <script>
