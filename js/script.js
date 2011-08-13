@@ -202,8 +202,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
       if ( $( '.tumblr .feed' ).width() > 250 ) {
         photo = value['photo-url-500'];
       }
-      output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + photo + '" alt=""></a>';
-
+      output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + photo + '" alt="' + value['photo-caption'] + '" style="opacity: 0;"></a>';
 
     // Video
     } else if ( value['type'] === "video" ) {
@@ -217,7 +216,11 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
     output += '<a href="' + value['url-with-slug'] + '" target="_blank" class="date">' + date(value['date']) + '</a></li>';
   });
   
-  $('.tumblr .feed ul').append( output );
+  $( '.tumblr .feed ul' ).append( output );
+  
+  $( '.tumblr .feed img' ).load( function() {
+    $( this ).animate({ 'opacity' : '1' });
+  });
   
   // Add Fancybox if we're not on a mobile-device
   if ( !isMobile() ) {
@@ -229,7 +232,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
   }
   
   $('.tumblr .feed li').each( function( key ) {
-    $(this).delay(key * 100).animate({ 'opacity': 'toggle' });
+    $( this ).delay( key * 100 ).animate({ 'opacity': 'toggle' });
   });
   
 }, 'jsonp');
