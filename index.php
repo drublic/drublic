@@ -73,6 +73,11 @@
 
   <div id="container">
     <header>
+      <ul class="social-media-links">
+        <li class="github"><a href="https://github.com/drublic" target="_blank">Github</a></li>
+        <li class="twitter"><a href="https://twitter.com/drublic" target="_blank">Twitter</a></li>
+        <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" target="_blank">LastFM</a></li>
+      </ul>
       <nav>
         <ul>
           <li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>

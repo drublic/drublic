@@ -229,8 +229,8 @@ input, textarea,
 /* Transforms & Transitions */
 #head a,
 .projects li h4,
-.location,
-.location p {
+.location, .location p,
+.social-media-links li a {
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -360,6 +360,23 @@ header { text-align: center; }
   border-style: solid;
   border-color: rgba(70,70,70,.8) transparent;
 }
+
+
+/* Social-Media-Links */
+.social-media-links { position: absolute; list-style: none; margin: 7px 0 7px 50px; }
+.social-media-links li { float: left; }
+.social-media-links li a {
+  display: inline; float: left;
+  width: 24px; height: 24px;
+  margin-right: 10px;
+  text-indent: -999em;
+  background: url(../img/sprite.png);
+  opacity: 0.3;
+}
+.social-media-links li a:hover { opacity: 1; }
+
+.social-media-links .twitter a { background-position: -24px 0; }
+.social-media-links .lastfm a { background-position: -24px -24px; }
 
 
 /* Navigation */
