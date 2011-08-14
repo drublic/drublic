@@ -27,25 +27,29 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
+  <link rel="dns-prefetch" href="//ajax.googleapis.com" />
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>@drublic - State of the Art Webdesign</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <!-- Who did this page -->
-  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt" /> 
+  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt"> 
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel=stylesheet href='<?php base_url(); ?>css/30702e5310e7dc7a58d80f79b143b739d914769a.css'>
+  <link rel=stylesheet href='<?php base_url(); ?>css/f98dc7264db39951cbee7b44de21c9868f7e1bf0.css'>
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
+  <meta name="author" content="Hans Christian Reinl">
+  <meta name="application-name" content="@drublic - State of the Art Webdesign">
+
+  
   <link rel="canonical" href="<?php base_url(); ?>">
   <link rel="index" title="@drublic - State of the Art Webdesign" href="<?php base_url(); ?>">
 
@@ -53,11 +57,11 @@
   <link rel="stylesheet" media="handheld" href="css/handheld.css">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.js"></script>
+  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.min.js"></script>
 
   <!--! Typekit -->
-  <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="http://use.typekit.com/nls7qda.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 
 </head>
 
@@ -66,10 +70,16 @@
 
   <div id="container">
     <header>
+      <ul class="social-media-links">
+        <li class="github"><a href="https://github.com/drublic" target="_blank">Github</a></li>
+        <li class="twitter"><a href="https://twitter.com/drublic" target="_blank">Twitter</a></li>
+        <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" target="_blank">LastFM</a></li>
+      </ul>
       <nav>
         <ul>
           <li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
           <li><a href="<?php base_url(); ?>blog" class="hidden" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
+          <li><a href="<?php base_url(); ?>buddies" class="hidden" title="Check out some of my friends' websits">Buddies</a></li>
           <li><a href="<?php base_url(); ?>imprint" title="Who does this stuff?">Imprint</a></li>
           <li><a href="<?php base_url(); ?>contact" title="Contact me if you have any questions">Contact</a></li>
         </ul>
@@ -88,7 +98,6 @@
     </header>
     
     <div id="main" role="main">
-      
       <section class="pagetimer">
         <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>
         
@@ -117,7 +126,7 @@
 
 
             <!--! Haufe iDesk2 -->
-            <li class="hidden">
+            <li>
               <a href="#project-idesk2" class="front">
                 <img src="img/idesk2.jpg" alt="">
                 <h4>WordPress Website - Haufe iDesk<sup>2</sup></h4>
@@ -125,8 +134,8 @@
               <div id="project-idesk2" class="back">
                 <h3>WordPress Website - Haufe iDesk<sup>2</sup></h3>
                 <p><a href="http://idesk2.haufe.de/" title="Haufe iDesk2 product landing page" target="_blank">Haufe iDesk<sup>2</sup></a> is a software offered by the publishing company <a href="http://www.haufe.de/" title="Visit the Haufe-Homepage" target="_blank">Haufe</a> to optimize your working process.</p>
-                <p>In collaboration with <a href="http://gebruederheitz.de/" target="_blank">/gebr&uuml;derheitz</a> a webpage with cutting edge technologies using WordPress, HTML5, CSS3 and some jQuery-goodness has been developed.</p>
-                <p>The customer requested a fully browser-compatible site since the B2B-sector often uses older browsers like Internet Explorer 7. In order to reach this requirement we dealt a lot with HTML5-polyfills and used fallback technologies like YouTube-videos in non-HTML5-supporting browsers for the video-section.</p>
+                <p>At <a href="http://gebruederheitz.de/" target="_blank">/gebr&uuml;derheitz</a> I developed a webpage with cutting edge technologies using WordPress, HTML5, CSS3 and some jQuery-goodness based on a design by <a href="https://twitter.com/#!/dnlhtz" title="Daniels Twitter-account" target="_blank">@dnlhtz</a>.</p>
+                <p>The customer requested a fully browser-compatible site, since the B2B-sector often uses older browsers like Internet Explorer 7. In order to reach this requirement we dealt a lot with HTML5-polyfills and used fallback technologies like YouTube-videos in non-HTML5-supporting browsers for the video-section.</p>
               </div>
             </li>
 
@@ -263,6 +272,13 @@
     </section>
     
     
+    <div class="extra-content">
+      <div id="my-buddies">
+        <h3>Come and check out some websites I like and sites of people I know.</h3>
+      </div>
+    </div>
+    
+    
     <footer>
 
     </footer>
@@ -276,7 +292,14 @@
   <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
-  <script src='<?php base_url(); ?>js/8b906441121d2c75ed5d01b6a36eb9c46fd4a024.js'></script>
+  <script defer src='<?php base_url(); ?>js/84275d3f79520aaf1f88b9e7eb5e13f00374bc86.js'></script>
+  
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
 
   <!-- Piwik --> 
   <script>
