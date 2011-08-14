@@ -610,3 +610,7 @@ footer {
   h2, h3{ page-break-after: avoid; }
 }
 
+
+
+
+@import url('fancybox.css');

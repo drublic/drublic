@@ -42,10 +42,9 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- styles concatenated CSS: implied media="all" (prefix: <?php base_url(); ?>)-->
-  <link rel="stylesheet" href="<?php base_url(); ?>css/style.css?v=2">
-  <link rel="stylesheet" href="<?php base_url(); ?>css/fancybox.css?v=2">
-  <!-- end styles -->
+  <!-- CSS concatenated: implied media="all" (prefix: <?php base_url(); ?>) -->
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <!-- end CSS -->
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -288,10 +287,10 @@
   <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
-  <!-- scripts concatenated and minified via ant build script (prefix: <?php base_url(); ?>)-->
+  <!-- scripts concatenated and minified via ant build script (prefix: <?php base_url(); ?>) -->
   <script defer src="<?php base_url(); ?>js/plugins.js"></script>
   <script defer src="<?php base_url(); ?>js/script.js"></script>
-  <!-- end scripts-->
+  <!-- end scripts -->
   
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
