@@ -129,7 +129,7 @@
 
 
             <!--! Haufe iDesk2 -->
-            <li class="hidden">
+            <li>
               <a href="#project-idesk2" class="front">
                 <img src="img/idesk2.jpg" alt="">
                 <h4>WordPress Website - Haufe iDesk<sup>2</sup></h4>
@@ -137,8 +137,8 @@
               <div id="project-idesk2" class="back">
                 <h3>WordPress Website - Haufe iDesk<sup>2</sup></h3>
                 <p><a href="http://idesk2.haufe.de/" title="Haufe iDesk2 product landing page" target="_blank">Haufe iDesk<sup>2</sup></a> is a software offered by the publishing company <a href="http://www.haufe.de/" title="Visit the Haufe-Homepage" target="_blank">Haufe</a> to optimize your working process.</p>
-                <p>In collaboration with <a href="http://gebruederheitz.de/" target="_blank">/gebr&uuml;derheitz</a> a webpage with cutting edge technologies using WordPress, HTML5, CSS3 and some jQuery-goodness has been developed.</p>
-                <p>The customer requested a fully browser-compatible site since the B2B-sector often uses older browsers like Internet Explorer 7. In order to reach this requirement we dealt a lot with HTML5-polyfills and used fallback technologies like YouTube-videos in non-HTML5-supporting browsers for the video-section.</p>
+                <p>At <a href="http://gebruederheitz.de/" target="_blank">/gebr&uuml;derheitz</a> I developed a webpage with cutting edge technologies using WordPress, HTML5, CSS3 and some jQuery-goodness based on a design by <a href="https://twitter.com/#!/dnlhtz" title="Daniels Twitter-account" target="_blank">@dnlhtz</a>.</p>
+                <p>The customer requested a fully browser-compatible site, since the B2B-sector often uses older browsers like Internet Explorer 7. In order to reach this requirement we dealt a lot with HTML5-polyfills and used fallback technologies like YouTube-videos in non-HTML5-supporting browsers for the video-section.</p>
               </div>
             </li>
 
