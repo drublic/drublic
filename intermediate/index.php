@@ -42,7 +42,7 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel=stylesheet href='<?php base_url(); ?>css/f98dc7264db39951cbee7b44de21c9868f7e1bf0.css'>
+  <link rel=stylesheet href='<?php base_url(); ?>css/bb2b74286e3982f71e759759c2f9500326fcaff2.css'>
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -78,7 +78,7 @@
       <nav>
         <ul>
           <li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
-          <li><a href="<?php base_url(); ?>blog" class="hidden" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
+          <li><a href="<?php base_url(); ?>blog" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
           <li><a href="<?php base_url(); ?>buddies" class="hidden" title="Check out some of my friends' websits">Buddies</a></li>
           <li><a href="<?php base_url(); ?>imprint" title="Who does this stuff?">Imprint</a></li>
           <li><a href="<?php base_url(); ?>contact" title="Contact me if you have any questions">Contact</a></li>
@@ -98,6 +98,7 @@
     </header>
     
     <div id="main" role="main">
+      
       <section class="pagetimer">
         <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>
         
@@ -272,13 +273,6 @@
     </section>
     
     
-    <div class="extra-content">
-      <div id="my-buddies">
-        <h3>Come and check out some websites I like and sites of people I know.</h3>
-      </div>
-    </div>
-    
-    
     <footer>
 
     </footer>
@@ -292,7 +286,7 @@
   <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
-  <script defer src='<?php base_url(); ?>js/84275d3f79520aaf1f88b9e7eb5e13f00374bc86.js'></script>
+  <script defer src='<?php base_url(); ?>js/97ec35a611bd07b860b5fde1611282b906dcdf83.js'></script>
   
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

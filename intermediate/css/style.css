@@ -476,8 +476,6 @@ footer {
 
 
 /* Lightbox */
-.extra-content #my-buddies { display: none; }
-
 #fancybox-overlay {
   background: -webkit-gradient(radial, center center, 0, center center, 141, from(rgba(0,0,0,.7)), to(rgba(0,0,0,1))) !important; /* old WebKit Syntax */
   background: -webkit-radial-gradient(center center, circle contain, rgba(0,0,0,.7), rgba(0,0,0,1)) !important; /* New WebKit syntax */
@@ -546,54 +544,31 @@ footer {
 @media screen and (max-width: 480px) {
 
 
-  html { min-width: 0; }
+  html { min-width: 0; background: #111; }
   
   input, textarea { width: 90%; }
   
   /* Header */
   #head { padding: 20px 0 10px; }
   #head a { font-size: 2.5em; }
-  #head p { width: auto; padding: 0 10px; }
+  #head p { width: auto; }
   
-  .social-media-links { margin-left: 20px; z-index: 200; }
   
   .location { opacity: .3; }
   
   
+  
   /* Navigation */
-  nav { position: relative; z-index: 99; height: 38px; overflow: visible; }
-  nav ul {
-    display: none;
-    position: absolute; right: 0;
-    margin: 50px 20px 0; padding: 5px 0;
-    background: url(../img/bg-dark.png);
-    font-size: 1.1em;
-       -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-            border-radius: 8px;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-       -moz-box-shadow: 0 0 4px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7);
-            box-shadow: 0 0 4px rgba(0,0,0,0.7);
-  }
-  nav ul:before {
-    display: block; content: '\0020';
-    position: absolute; top: -10px; right: 20px;
-    border-width: 0 10px 10px 10px;
-    border-style: solid;
-    border-color: #222 transparent;
-  }
-  nav ul li, nav ul a { float: none; display: block; }
-  nav ul a { padding: 7px 25px; border-bottom: 0; }
-  nav ul a:hover { border-bottom: 0; }
+  nav ul { float: none; margin: 1em 10px; overflow: hidden; }
+  nav li { float: left; display: block; width: 33.333%; }
+  nav li:first-child { text-align: left; }
+  nav li:last-child { text-align: right; }
+  nav a { float: none; display: inline-block; }
   
-  .menu-selector {
-    float: right;
-    padding: 10px 20px; border: 1px solid #333; margin-right: 20px;
-    background: #222;
-    font-size: 1.1em;
-  }
-  
+  nav li:first-child a:before,
+  nav li:last-child a:after { position: relative; bottom: -1px; font: 1.2em Tahoma, sans-serif; }
+  nav li:first-child a:before { content: '\2039\0020'; }
+  nav li:last-child a:after { content: '\0020\203A'; }
   
   #main { margin: 0; }
   #main section { float: none; margin: 0 10px 40px; width: auto; }
