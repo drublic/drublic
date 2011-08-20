@@ -80,7 +80,8 @@
       <nav>
         <ul>
           <li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
-          <li><a href="<?php base_url(); ?>blog" class="hidden" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
+          <li><a href="<?php base_url(); ?>blog" title="Get some cutting edge goodness" target="_blank">Blog</a></li>
+          <li><a href="<?php base_url(); ?>buddies" class="hidden" title="Check out some of my friends' websits">Buddies</a></li>
           <li><a href="<?php base_url(); ?>imprint" title="Who does this stuff?">Imprint</a></li>
           <li><a href="<?php base_url(); ?>contact" title="Contact me if you have any questions">Contact</a></li>
         </ul>
