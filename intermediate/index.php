@@ -38,6 +38,9 @@
 
   <!-- Who did this page -->
   <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt"> 
+  
+  <!-- The Feed -->
+  <link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
