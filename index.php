@@ -104,12 +104,42 @@
     
     <div id="main" role="main">
       
-      <section class="pagetimer">
-        <h2><a href="http://pagetimer.de/" target="_blank">Pagetimer</a></h2>
+      <section class="blog">
+        <h2><a href="http://drublic.de/blog/" target="_blank">Blog</a></h2>
         
         <div class="feed">
           <ul>
-            <div class="loader"></div>
+          <?php
+            // Use cURL to get the RSS feed into a PHP string variable
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, 'http://feeds.feedburner.com/drublic?format=xml');
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $xml = curl_exec($ch);
+            curl_close($ch);
+        
+            $data = simplexml_load_string( $xml );
+        
+            foreach( $data->channel->item as $item ) :
+              if ( $count++ == 5 ) {
+                break;
+              }
+              ?>
+              <li>
+                <h4><a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>" target="_blank"><?php print $item->title; ?></a></h4>
+                <?php
+                  $description = $item->description;
+                  if ( strlen($description) > 140 ) {
+                    $description = substr( trim($description), 0, 140 );
+                    $description = explode( ' ', $description, -1 );
+                    $description = implode( $description, ' ' );
+                  }
+                  print $description;
+                ?>
+          	    <a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>" target="_blank">read more &hellip;</a>
+          	    <a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>" target="_blank" class="date"><?php print date( 'd.m.Y - H:i', strtotime($item->pubDate) ); ?></a>
+              </li>
+            <?php endforeach; ?>
           </ul>
         </div>
       </section>
