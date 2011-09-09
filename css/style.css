@@ -403,8 +403,8 @@ nav .active a, nav .active a:visited { color: #aaa; border-bottom-color: #fff; }
 
 #main h2 { position: relative; text-align: center; font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
 
-.pagetimer h2 { border-bottom-color: #b0c3c9; }
-.pagetimer a, .pagetimer a:visited { color: #b0c3c9; }
+.blog h2 { border-bottom-color: #d1ccb2; }
+.blog a, .blog a:visited { color: #d1ccb2; }
 
 .flipthemes h2 { border-bottom-color: #00adee; }
 .flipthemes a, .flipthemes a:visited { color: #00adee; }
