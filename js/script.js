@@ -136,29 +136,6 @@ function date( date ) {
 
 
 
-
-
-
-// Request latest Blog-Posts from Pagetimer-Blog
-$.get('http://blog.pagetimer.de/api/read/json?num=15&filter=text', function (data) {
-  log( 'Pagetimer-Blog', data );
-  $('.pagetimer .feed ul').html('');
-  
-  var body = '';
-  $.each( data.posts, function (key, value) {
-    body = value['regular-body'].substr(0, 100);
-    
-    $('.pagetimer .feed ul').append('<li style="display: none;"><h4><a href="' + value['url-with-slug'] + '" target="_blank">' + 
-      value['regular-title'] + '</a></h4><span>' + twttr.txt.autoLink(body) + ' ' +
-      '<a href="' + value['url-with-slug'] + '" target="_blank">read more&hellip;</a>' +
-      '<a href="' + value['url-with-slug'] + '" target="_blank" class="date">' + date(value['date']) + '</a></li>');
-    
-    $('.pagetimer .feed ul').find('li:last').delay(key * 100).animate({ 'opacity': 'toggle' });
-  });
-}, 'jsonp');
-
-
-
 // Request latest Tweets
 $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1', function (data) {
   log(data);
