@@ -92,7 +92,7 @@
       
       <div id="head">
         <a href="<?php base_url(); ?>">@drublic</a>
-        <p>A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter.</p>
+        <p>A short description of what I'm doing on the web. Mostly built with Tumblr and Twitter.</p>
       </div>
       
       <div class="location">
