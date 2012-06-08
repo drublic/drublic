@@ -199,36 +199,11 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
     $( this ).animate({ 'opacity' : '1' });
   });
   
-  // Add Fancybox if we're not on a mobile-device
-  if ( !isMobile() ) {
-    $( '.tumblr .fancybox' ).fancybox();
-  } else {
-    $( '.tumblr .fancybox' ).click( function( e ) {
-      e.preventDefault();
-    })
-  }
-  
   $('.tumblr .feed li').each( function( key ) {
     $( this ).delay( key * 100 ).animate({ 'opacity': 'toggle' });
   });
   
 }, 'jsonp');
-
-
-
-// Show single project with Lightbox
-if ( !isMobile() ) {
-  $( '.projects .front' ).fancybox({
-    'width' : 400,
-    'height' : 'auto',
-    'autoScale' : false,
-    'autoDimensions' : false
-  });
-} else {
-  $( '.projects .front' ).fancybox();
-}
-
-
 
 
 // Submit Contact-Form
