@@ -6,9 +6,9 @@
     global $env;
     
     if ( $echo ) {
-      print ($env == 'dev') ? 'http://localhost:8888/source-access/v2/' : 'http://drublic.de/';
+      print ($env == 'dev') ? 'http://localhost/source-access/v2/' : 'http://drublic.de/';
     } else {
-      return ($env == 'dev') ? 'http://localhost:8888/source-access/v2/' : 'http://drublic.de/';
+      return ($env == 'dev') ? 'http://localhost/source-access/v2/' : 'http://drublic.de/';
     }
   }
   
@@ -20,24 +20,18 @@
 
 ?>
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if lt IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <link rel="dns-prefetch" href="//ajax.googleapis.com" />
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <title>@drublic - State of the Art Webdesign</title>
 
   <!-- Who did this page -->
-  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt"> 
+  <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt">
+  <meta name="author" content="Hans Christian Reinl"> 
   
   <!-- The Feed -->
   <link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
@@ -45,29 +39,19 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS concatenated: implied media="all" (prefix: <?php base_url(); ?>) -->
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <!-- CSS concatenat (prefix: <?php base_url(); ?>) -->
+  <link rel="stylesheet" href="css/style.css">
   <!-- end CSS -->
   
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
-  <meta name="author" content="Hans Christian Reinl">
   <meta name="application-name" content="@drublic - State of the Art Webdesign">
 
-  
   <link rel="canonical" href="<?php base_url(); ?>">
   <link rel="index" title="@drublic - State of the Art Webdesign" href="<?php base_url(); ?>">
 
-  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
-
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="<?php base_url(); ?>js/libs/modernizr.custom.28858.min.js"></script>
-
-  <!--! Typekit -->
-  <script src="http://use.typekit.com/nls7qda.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
-
+  <script src="<?php base_url(); ?>js/vendor/modernizr-2.5.3-custom.min.js"></script>
 </head>
 
 <body>
@@ -92,6 +76,7 @@
       
       <div id="head">
         <a href="<?php base_url(); ?>">@drublic</a>
+        <p>Hans Christian Reinl &ndash; Front-end Developer</p>
         <p>A short description of what I'm doing on the web. Mostly built with Tumblr and Twitter.</p>
       </div>
       
@@ -309,6 +294,9 @@
     
     
     <footer>
+      <div id="thanx">
+        <p>@drublic</p>
+      </div>
 
     </footer>
   </div>
@@ -317,13 +305,13 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php base_url(); ?>js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
 
 
   <!-- scripts concatenated and minified via ant build script (prefix: <?php base_url(); ?>) -->
   <script defer src="<?php base_url(); ?>js/plugins.js"></script>
-  <script defer src="<?php base_url(); ?>js/script.js"></script>
+  <script defer src="<?php base_url(); ?>js/main.js"></script>
   <!-- end scripts -->
   
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
