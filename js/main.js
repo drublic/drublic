@@ -7,98 +7,91 @@
  */
 
 
-! function( $, window, document, undefined ) {
+/*global jQuery, log, twttr */
+(function( $, window, document, undefined ) {
 
 
 var isMobile = function () {
-    if ( $( window ).width() < 481 ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+		if ( $( window ).width() < 481 ) {
+			return true;
+		} else {
+			return false;
+		}
+	}();
 
 
 
 
 // Change Links in Nav
-! function() {
-  var $el, newRef;
-  
-  $( 'nav a' ).each( function() {
-    $el = $( this );
-    if ( $el.attr( 'target' ) != '_blank' ) {
-      newRef = $el.attr( 'href' ).replace( $( '#head' ).find( 'a' ).attr( 'href' ), '' );
-      $el.attr( 'href', '#!/' + newRef );
-    }
-  });
-} ();
+(function () {
+	$('#nav').find('a').each( function () {
+		var ref = $(this).attr('href').replace( $('body').data('url'), '' );
+		$(this).attr('href', '#/' + ref);
+	});
+}());
 
 
 
 
 // Mobile
-function mobile_stuff() {
-  if ( isMobile() ) {
-    
-    // Menu for Mobile
-    var $that, title,
-        $menu = $( '<ul />', {
-          'class' : "menu",
-          'html' : $menu
-        });
-    
-    $( '#main' ).find( 'section' ).each( function( i ) {
-      $that = $( this );
-      title = $that.find( 'h2 a' ).html();
-      sectionClass = $that.attr( 'class' );
-      
-      $( '<li />', {
-          'id' : 'menu-li-' + i,
-          'html' : '<a href="#!/' + sectionClass + '">' + title + '</a>'
-        }).appendTo( $menu );
-    });
+function mobile_stuff () {
+		// Menu for Mobile
+		var $that, title, sectionClass,
+			$menu = $( '<ul />', {
+				'class' : "menu",
+				'html' : $menu
+			});
+		
+		$( '#main' ).find( 'section' ).each( function( i ) {
+			$that = $( this );
+			title = $that.find( 'h2 a' ).html();
+			sectionClass = $that.attr( 'class' );
+			
+			$( '<li />', {
+					'id' : 'menu-li-' + i,
+					'html' : '<a href="#!/' + sectionClass + '">' + title + '</a>'
+				}).appendTo( $menu );
+		});
 
-    $menu.prependTo( '#main' );
-    
-    
-    
-    
-    
-    // Top-Links for Headlines
-    
-    // Scroll Down
-    $( '<span />', {
-      'class' : 'scroll-next',
-      'html' : '&darr;'
-    })
-    .insertAfter( $( '#main' ).find( 'section' ).not( ':last-child' ).find( 'h2' ) )
-    .click( function() {
-      log ($( this ).closest( 'section' ).next().offset().top);
-      $( 'html,body' ).animate({ 'scrollTop' : $( this ).closest( 'section' ).next().offset().top })
-    });
-    
-    // Scroll Up
-    $( '<span />', {
-      'class' : 'scroll-top',
-      'html' : '&uarr;'
-    })
-    .insertAfter( $( '#main' ).find( 'section' ).last().find( 'h2' ) )
-    .click( function() {
-      $( 'html,body' ).animate({ 'scrollTop' : 0 });
-    });
+		$menu.prependTo( '#main' );
+		
+		
+		
+		
+		
+		// Top-Links for Headlines
+		
+		// Scroll Down
+		$( '<span />', {
+			'class' : 'scroll-next',
+			'html' : '&darr;'
+		})
+		.insertAfter( $( '#main' ).find( 'section' ).not( ':last-child' ).find( 'h2' ) )
+		.click( function() {
+			$( 'html,body' ).scrollTop($( this ).closest( 'section' ).next().offset().top);
+		});
+		
+		// Scroll Up
+		$( '<span />', {
+			'class' : 'scroll-top',
+			'html' : '&uarr;'
+		})
+		.insertAfter( $( '#main' ).find( 'section' ).last().find( 'h2' ) )
+		.click( function() {
+			$( 'html,body' ).scroll(0);
+		});
 
-    
-    
-    // Latest Projects
-    $( '.projects' ).find( 'li' ).click( function () {
-      $( this ).find( '.back' ).animat({ opacity: 'toggle' });
-    })
-  
-  
-  }
+		
+		
+		// Latest Projects
+		$( '.projects' ).find( 'li' ).click( function () {
+			$( this ).find( '.back' ).animat({ opacity: 'toggle' });
+		});
 }
-mobile_stuff();
+
+if (isMobile) {
+	mobile_stuff();
+}
 
 
 
@@ -112,41 +105,41 @@ mobile_stuff();
  * @param date - Unix-timestamp
  *
  */
-function date( date ) {
-  date = new Date (date);
-  var date_str  = '';
+var date = function (date) {
+	date = new Date (date);
+	var date_str  = '';
 
-  // Day
-  date_str += ( parseInt(date.getDate()) <= 9 ) ? '0' + date.getDate() : date.getDate();
-  date_str += '.';
+	// Day
+	date_str += ( parseInt(date.getDate(), 10) <= 9) ? '0' + date.getDate() : date.getDate();
+	date_str += '.';
 
-  //Month
-  date_str += ( ( parseInt(date.getMonth()) + 1 ) <= 9) ? '0' + ( parseInt(date.getMonth()) + 1 ) : ( parseInt(date.getMonth()) + 1 );
-  date_str += '.';
+	//Month
+	date_str += ( ( parseInt(date.getMonth(), 10) + 1 ) <= 9) ? '0' + ( parseInt(date.getMonth(), 10) + 1 ) : ( parseInt(date.getMonth(), 10) + 1 );
+	date_str += '.';
 
-  // Year
-  date_str += date.getFullYear();
-  date_str += ' - ';
-  
-  // Time
-  date_str += date.getHours() + ':' + ( (date.getMinutes() <= 9) ? '0' + date.getMinutes() : date.getMinutes() );
-  
-  return date_str;
-}
+	// Year
+	date_str += date.getFullYear();
+	date_str += ' - ';
+	
+	// Time
+	date_str += date.getHours() + ':' + ( (date.getMinutes() <= 9) ? '0' + date.getMinutes() : date.getMinutes() );
+	
+	return date_str;
+};
 
 
 
 // Request latest Tweets
 $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1', function (data) {
-  log(data);
-  $('.twitter .feed ul').html('');
+	var $list = $('.row.twitter ul');
+	$list.html('');
 
-  $.each( data, function (key, value) {
-    $('.twitter .feed ul').append('<li style="display: none;">' + twttr.txt.autoLink(value['text']) + ' ' +
-      '<a href="http://twitter.com/drublic/status/' + value['id_str'] + '" target="_blank" class="date">' + date(value['created_at']) + '</a></li>');
-    
-    $('.twitter .feed ul').find('li:last').delay(key * 100).animate({ 'opacity': 'toggle' });
-  });
+	$.each(data, function (key, val) {
+		$list.append('<li style="display: none;">' + twttr.txt.autoLink(val.text) + ' ' +
+			'<a href="http://twitter.com/drublic/status/' + val.id_str + '" class="date">' + date(val.created_at) + '</a></li>');
+		
+		$list.last().delay(key * 100).animate({ 'opacity': 'toggle' });
+	});
 }, 'jsonp');
 
 
@@ -155,246 +148,109 @@ $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic
 
 // Request latest Blog-Posts from Tumblr-Blog
 $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (data) {
-  log(data);
-  $('.tumblr .feed ul').html('');
-  
-  var body = '', output = '';
-    
-  $.each( data.posts, function (key, value) {
-    output += '<li style="display: none;">';
-    
-    
-    // Texts
-    if (value['regular-body'] !== undefined) {
-      output += '<h4><a href="' + value['url-with-slug'] + '" target="_blank">' + value['regular-title'] + '</a></h4>';
-  
-      body = value['regular-body'].substr(0, 100);
-      output += '<span>' + twttr.txt.autoLink(body) + ' ' +
-        '<a href="' + value['url-with-slug'] + '" target="_blank">read more&hellip;</a>';
+	var $list = $('.tumblr .feed ul');
+	$list.html('');
+	
+	var body = '', output = '';
+		
+	$.each( data.posts, function (key, val) {
+		output += '<li style="display: none;">';
+		
+		
+		// Texts
+		if (val['regular-body'] !== undefined) {
+			output += '<h4><a href="' + val['url-with-slug'] + '">' + val['regular-title'] + '</a></h4>';
+	
+			body = val['regular-body'].substr(0, 100);
+			output += '<span>' + twttr.txt.autoLink(body) + ' ' +
+				'<a href="' + val['url-with-slug'] + '">read more&hellip;</a>';
 
 
-    // Photo
-    } else if (value['photo-url-500'] !== undefined) {
-      var photo = value['photo-url-250'];
-      if ( $( '.tumblr .feed' ).width() > 250 ) {
-        photo = value['photo-url-500'];
-      }
-      output += '<a href="' + value['photo-url-500'] + '" rel="group_tumblr" title="' + value['photo-caption'] + '" class="fancybox" target="_black"><img src="' + photo + '" alt="' + value['photo-caption'] + '" style="opacity: 0;"></a>';
+		// Photo
+		} else if (val['photo-url-500'] !== undefined) {
+			var photo = val['photo-url-250'];
+			if ( $( '.tumblr .feed' ).width() > 250 ) {
+				photo = val['photo-url-500'];
+			}
+			output += '<a href="' + val['photo-url-500'] + '" rel="group_tumblr" title="' + val['photo-caption'] + '"><img src="' + photo + '" alt="' + val['photo-caption'] + '" style="opacity: 0;"></a>';
 
-    // Video
-    } else if ( value['type'] === "video" ) {
-      output += value['video-player'];
-    
-    // Everything else is not displayed
-    } else {
-      return;
-    }
-    
-    output += '<a href="' + value['url-with-slug'] + '" target="_blank" class="date">' + date(value['date']) + '</a></li>';
-  });
-  
-  $( '.tumblr .feed ul' ).append( output );
-  
-  $( '.tumblr .feed img' ).load( function() {
-    $( this ).animate({ 'opacity' : '1' });
-  });
-  
-  $('.tumblr .feed li').each( function( key ) {
-    $( this ).delay( key * 100 ).animate({ 'opacity': 'toggle' });
-  });
-  
+		// Video
+		} else if ( val.type === "video" ) {
+			output += val['video-player'];
+		
+		// Everything else is not displayed
+		} else {
+			return;
+		}
+		
+		output += '<a href="' + val['url-with-slug'] + '" class="date">' + date(val.date) + '</a></li>';
+	});
+	
+	$list.append( output );
+	
+	$( '.tumblr .feed img' ).load( function() {
+		$( this ).animate({ 'opacity' : '1' });
+	});
+	
+	$('.tumblr .feed li').each( function( key ) {
+		$( this ).delay( key * 100 ).animate({ 'opacity': 'toggle' });
+	});
+	
 }, 'jsonp');
 
 
-// Submit Contact-Form
-! function () {
-  $('.contact').find('form')
-    .attr('action', '#!/' + $('.contact').find('form').attr('action'))
-    .submit( function (e) {
-      e.preventDefault();
-      var param = {};
-      
-      // Itterate through Fields
-      $(this).find('input, textarea').each( function () {
-        $(this).removeClass('invalid');
-        
-        if ($(this).val() != '') param[$(this).attr('name')] = $(this).val();
-        else {
-          param[$(this).attr('name')] = $(this).val();
-          $(this).addClass('invalid');
-        }
-      });
-      
-      $.post('ajax/send.php', param, function (data) {
-        log (data);
-        if (data.error === undefined) {
-          $('body').append('<div class="message">' + data.msg + '</div>');
-          $('.contact').find('form').find('input, textarea').each( function () {
-            $(this).removeClass('invalid').attr('disabled', true);
-            if ($(this).attr('type') !== 'submit') $(this).val('');
-          });
-        }
-        else {
-          $('body').append('<div class="message">An error occured! Please resolve it!</div>');
-        }
-        
-        setTimeout( function () {
-          if ($('.message').size() > 0)
-            $('.message').fadeOut( function () {
-              $(this).remove();
-            });
-        }, 5000);
-
-      }, 'json');
-      
-    });
-} ();
 
 
+var hashListener = function () {
+	var i,
+		hash = location.hash.replace(/#\//, '');
+	
+	// Add Class active
+	$('#nav').find('.active').removeClass('active');
+	$('#nav').find('a[href$="' + hash + '"]').parent().addClass('active');
+	
+	// Home
+	if (hash === 'home') {
+		$('.imprint, .contact').hide();
+	
+	// Imprint
+	} else if (hash === 'imprint') {
+		i = 0;
+
+		$('.contact').hide();
+		$('.imprint').show();
+
+	// Contact
+	} else if (hash === 'contact') {
+		i = 0;
+		
+		$('.imprint').hide();
+		$('.imprint').show();
+	
+	} else if (hash === 'blog') {
+		location.href = $('body').data('url') + '/' + hash;
+	}
+};
 
 
-
-// If hash changes or is set on refresh
-var hash = '';
-$( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
-
-! function hashListener (hash) {
-  
-  // If hash has changed
-  if (hash !== window.location.hash) {
-    hash = window.location.hash;
-    
-    
-    
-    // Add Class active
-    $( 'nav' ).find( '.active' ).removeClass( 'active' );
-    $( 'nav' ).find( 'a[href$="' + hash.split(/\#\!\//)[1] + '"]' ).parent().addClass( 'active' );
-    
-    
-    
-    // Home
-    if (hash === '#!/home') {
-      $('.imprint, .contact').fadeOut(function () {
-        var i = 0;
-        ! function slideUpSec () {
-          // Do it for each section
-          if (i < $('#main').find('section').size()) {
-            $('#main').find('section').eq(i).show().animate({ top: 0 });
-            i++;
-            
-            setTimeout(slideUpSec, 100);
-          }
-          
-        } ();
-        
-        // Fade in menu for Mobile
-        if ( isMobile() ) {
-          $( '.menu' ).fadeIn();
-        }
-      });
-    }
-    
-    
-    // Imprint
-    else if (hash === '#!/imprint') {
-      var i = 0;
-      
-      $('.contact').fadeOut();
-      
-      // Slide 'em down
-      ! function slideDownSec () {
-        
-        // Do it for each section
-        if (i < $('#main').find('section').size()) {
-          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
-            $(this).fadeOut();
-          });
-          i++;
-          
-          setTimeout(slideDownSec, 100);
-        }
-        else {
-          $('.imprint').delay(500).fadeIn();
-        }
-      } ();
-      
-      // Fade out menu for Mobile
-      if ( isMobile() ) {
-        $( '.menu' ).fadeOut();
-      }
-
-    }
-    
-    
-    // Contact
-    else if (hash === '#!/contact') {
-      var i = 0;
-      
-      $('.imprint').fadeOut();
-      
-      // Slide 'em down
-      ! function slideDownSec () {
-        
-        // Do it for each section
-        if (i < $('#main').find('section').size()) {
-          $('#main').find('section').eq(i).animate({ top: $('#main').height() }, function () {
-            $(this).fadeOut();
-          });          
-          i++;
-          
-          setTimeout(slideDownSec, 100);
-        }
-        else {
-          $('.contact').delay(500).fadeIn();
-        }
-      } ();
-      
-      // Fade out menu for Mobile
-      if ( isMobile() ) {
-        $( '.menu' ).fadeOut();
-      }
-
-    }
-    
-    
-    else {
-      var el = '.' + hash.split(/\#\!\//)[1];
-      if ( $( el ).size() > 0 ) {
-        $( 'html, body' ).animate({ 'scrollTop' : $( el ).offset().top });
-      }
-      $( 'nav' ).find( 'li:first-child' ).addClass( 'active' );
-    }
-    
-    
-    if ( isMobile() ) {
-      var $active = $( 'nav .active' ).clone();
-      $( 'nav .active' ).remove();
-      $( 'nav li' ).eq( 0 ).after( $active );
-    }
-  
-  
-  }
-  
-  
-  setTimeout( function () {
-    hashListener (hash);
-  }, 100);
-} (hash);
+$(window).on('hashchange', function () {
+	hashListener();
+});
 
 
 
 
 // Resize Listener
 $( window ).resize( function() {
-  if ( !isMobile() ) {
-    if ( $( '.menu' ).size() > 0 ) {
-      $( '.menu, .scroll-next, .scroll-top' ).remove();
-    }
-  } else {
-    if ( $( '.menu' ).size() < 1 ) {
-      mobile_stuff();
-    }
-  }
+	if (!isMobile) {
+		if ( $( '.menu' ).size() > 0 ) {
+			$( '.menu, .scroll-next, .scroll-top' ).remove();
+		}
+	} else {
+		if ( $( '.menu' ).size() < 1 ) {
+			mobile_stuff();
+		}
+	}
 
 });
 
@@ -402,7 +258,58 @@ $( window ).resize( function() {
 
 
 
-} (jQuery, window, document);
+// Animations on startup
+(function () {
+	$('.header').addClass('bounceInDown');
+
+	setTimeout( function () {
+		$('.desc').addClass('fadeInLeftBig');
+	}, 500);
+
+
+	var socials = $('.social li'),
+			animateSocials = function (i) {
+				$(socials[i]).addClass('bounceInUp');
+
+				if (socials[i+1] !== undefined) {
+					setTimeout( function () {
+						animateSocials(i + 1);
+					}, 100);
+				}
+			};
+
+	setTimeout( function () {
+		animateSocials(0);
+	}, 1000);
+
+
+	setTimeout( function () {
+		$('.button').addClass('fadeIn');
+	}, 2000);
+
+
+	var rows = $('.row'),
+			animateRows = function (i) {
+				$(rows[i]).addClass('fadeInUp');
+
+				if (rows[i+1] !== undefined) {
+					setTimeout( function () {
+						animateRows(i + 1);
+					}, 500);
+				}
+			};
+
+	setTimeout( function () {
+		animateRows(0);
+	}, 2000);
+
+}());
+
+
+
+
+
+}(jQuery, window, document));
 
 
 

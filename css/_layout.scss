@@ -1,33 +1,7 @@
 
-@mixin gradient($default, $from, $to) {
-  background-color: $default;
-  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-  background-image: -webkit-linear-gradient(top, $from, $to);
-  background-image:    -moz-linear-gradient(top, $from, $to);
-  background-image:     -ms-linear-gradient(top, $from, $to);
-  background-image:      -o-linear-gradient(top, $from, $to);
-  background-image:         linear-gradient(top, $from, $to);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$from', EndColorStr='$to');
-}
-
-
-@mixin transition($what : all, $time : 0.2s, $effect : ease-in-out) {
-     -moz-transition: $what $time $effect;
-  -webkit-transition: $what $time $effect;
-      -ms-transition: $what $time $effect;
-       -o-transition: $what $time $effect;
-          transition: $what $time $effect;
-}
-
-
-
-
-
-
 html {
   height: 100%;
-  background: #d6ac62 url(../img/bg.jpg) no-repeat center center fixed;
-  -moz-background-size: cover;
+  background: #000 url(../img/bg.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -71,6 +45,7 @@ a {
   }
 
   &:hover {
+    color: #fff;
     text-decoration: none;
   }
 }
@@ -85,6 +60,8 @@ p {
 
 // Button
 .button {
+  @extend .animated;
+
   display: inline-block;
   padding: .2em 1em;
   border: 1px solid #65a9d7;
@@ -101,12 +78,18 @@ p {
               0 4px 0 darken(#65a9d7, 40%);
 
   &:hover {
-    color: #ccc;
+    @include gradient(darken(#65a9d7, 5%), darken(#65a9d7, 5%), darken(#3e779d, 5%));
+    border: 1px solid darken(#65a9d7, 5%);
+    border-bottom-color: darken(#65a9d7, 15%);
   }
 
   &:active {
-    background: #346585;
+    position: relative;
+    top: 3px;
+    background: darken(#65a9d7, 30%);
     text-shadow: 0 1px 0 #000;
+    box-shadow: 0 1px 0 darken(#65a9d7, 30%),
+                0 2px 0 darken(#65a9d7, 40%);
   }
 }
 
@@ -116,10 +99,16 @@ p {
 
 // Header
 .header {
+  @extend .animated;
+
   margin: 1em 0 0;
   font-size: 5em;
   font-weight: normal;
   text-shadow: 1px 1px 2px rgba(0,0,0,.7);
+
+  &.bounceInDown {
+    opacity: 1;
+  }
 
   a {
     text-decoration: none;
@@ -183,13 +172,32 @@ p {
 
 
 @-webkit-keyframes jumper {
-  0% { top: 0px; }
-  45% { top: -15px; }
-  70% { top: 0px; }
-  80% { top: -3px; }
-  90% { top: 0px; }
-  100% { top: 0px; }
+  0% {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  45% {
+    padding-top: 15px;
+    margin-top: -15px;
+  }
+  70% {
+    padding-top: 0px;
+    margin-top: 0;
+  }
+  80% {
+    padding-top: 3px;
+    margin-top: -3px;
+  }
+  90% {
+    padding-top: 0px;
+    margin-top: 0;
+  }
+  100% {
+    padding-top: 0px;
+    margin-top: 0;
+  }
 }
+
 @-moz-keyframes jumper {
   0% { top: 0px; }
   45% { top: -15px; }
@@ -210,15 +218,20 @@ p {
   padding: 0;
 
   li {
-    display: inline;
+    @extend .animated;
+    display: inline-block;
+
+    &.bounceInUp {
+      opacity: 1;
+    }
   }
 
   a {
     position: relative;
     display: inline-block;
     width: 48px; height: 48px;
-    background-size: 100% 100%;
-    background: url(../img/github.png);
+    background: url(../img/github.png) no-repeat;
+    background-size: 48px 48px;
 
     margin-left: .5em;
     text-indent: -999em;
@@ -230,27 +243,27 @@ p {
   }
 
   .twitter a {
-    background: url(../img/twitter.png);
+    background-image: url(../img/twitter.png);
   }
 
   .google a {
-    background: url(../img/google_plus.png);
+    background-image: url(../img/google_plus.png);
   }
 
   .email a {
-    background: url(../img/email.png);
+    background-image: url(../img/email.png);
   }
   
   .lastfm a {
-    background: url(../img/lastfm.png);
+    background-image: url(../img/lastfm.png);
   }
   
   .rss a {
-    background: url(../img/feed.png);
+    background-image: url(../img/feed.png);
   }
 
   .zerply a {
-    background: url(../img/zerply.png);
+    background-image: url(../img/zerply.png);
   }
 }
 
@@ -282,14 +295,20 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
 
 
 .about {
-  overflow: hidden;
+  @extend .clearfix;
 }
 
 .desc {
+  @extend .animated;
+
   float: left;
   width: 50%;
   font: italic 1.2em/2em Georgia, "Times New Roman", serif;
   text-shadow: 1px 1px 2px rgba(0,0,0,.7);
+
+ &.fadeInLeftBig {
+  opacity: 1;
+ } 
 }
 
 
@@ -321,6 +340,8 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
 
 
 .row {
+  @extend .animated;
+
   position: relative;
   float: left;
   width: 30%;

@@ -14,7 +14,7 @@
   
   
   if ( isset( $_GET['q'] ) ) {
-    header( 'location:' . base_url( false ) . '#!/' . $_GET['q'] );
+    header( 'location:' . base_url( false ) . '#/' . $_GET['q'] );
   }
   
 
@@ -53,7 +53,7 @@
   <script src="<?php base_url(); ?>js/vendor/modernizr-2.5.3-custom.min.js"></script>
 </head>
 
-<body>
+<body data-url="<?php base_url(); ?>">
 
   <header>
     <h1 class="header" role="banner"><a href="<?php base_url(); ?>" title="drublic's home">Mr. drublic <span>aka. Hans Christian Reinl</span></a></h1>
