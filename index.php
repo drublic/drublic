@@ -1,22 +1,22 @@
 <?php
 
   $env = 'dev';
-  
+
   function base_url( $echo = true ) {
     global $env;
-    
+
     if ( $echo ) {
       print ($env == 'dev') ? 'http://localhost/source-access/v2/' : 'http://drublic.de/';
     } else {
       return ($env == 'dev') ? 'http://localhost/source-access/v2/' : 'http://drublic.de/';
     }
   }
-  
-  
+
+
   if ( isset( $_GET['q'] ) ) {
     header( 'location:' . base_url( false ) . '#/' . $_GET['q'] );
   }
-  
+
 
 ?>
 <!doctype html>
@@ -24,15 +24,15 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <link rel="dns-prefetch" href="//ajax.googleapis.com" />
 
   <title>@drublic - State of the Art Webdesign</title>
 
   <!-- Who did this page -->
   <link type="text/plain" rel="author" href="<?php base_url(); ?>humans.txt">
-  <meta name="author" content="Hans Christian Reinl"> 
-  
+  <meta name="author" content="Hans Christian Reinl">
+
   <!-- The Feed -->
   <link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
 
@@ -40,7 +40,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="<?php base_url(); ?>css/main.css">
-  
+
   <!-- Meta-Tagging -->
   <meta name="description" content="@drublic - A short description of what I'm doing on the web. Mostly build with Tumblr and Twitter. Check out my projects.">
   <meta name="keywords" content="Hans Christian Reinl, Web 2.0, Internet, Webdesign, Freiburg, Wetzlar, Flipthemes">
@@ -56,7 +56,7 @@
 <body data-url="<?php base_url(); ?>">
 
   <header>
-    <h1 class="header" role="banner"><a href="<?php base_url(); ?>" title="drublic's home">Mr. drublic <span>aka. Hans Christian Reinl</span></a></h1>
+    <h1 class="header" role="banner"><a href="<?php base_url(); ?>" title="drublic's home">I am drublic <span>(Hans Christian Reinl)</span></a></h1>
 
     <nav id="nav" role="navigation">
       <a href="#content" class="visuallyhidden">Skip to Content</a>
@@ -69,7 +69,7 @@
     </nav>
 
   </header>
-  
+
   <div id="content" role="main">
 
     <div class="about">
@@ -88,13 +88,13 @@
         <li class="rss"><a href="http://feeds.feedburner.com/drublic" title="The RSS-Feed for my blog">RSS</a></li>
       </ul>
     </div>
-      
+
     <p class="to-blog"><a href="<?php base_url(); ?>blog/" title="My Blog about HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a></p>
-    
+
     <div class="content">
       <section class="row blog">
         <h2><a href="http://drublic.de/blog/">Blog</a></h2>
-        
+
         <div class="feed">
           <ul>
           <?php
@@ -105,9 +105,9 @@
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             $xml = curl_exec($ch);
             curl_close($ch);
-        
+
             $data = simplexml_load_string( $xml );
-        
+
             foreach( $data->channel->item as $item ) :
               if ( $count++ == 5 ) {
                 break;
@@ -131,32 +131,32 @@
           </ul>
         </div>
       </section>
-      
+
       <section class="row twitter">
         <h2><a href="http://twitter.com/drublic">Twitter</a></h2>
-        
+
         <div class="feed">
           <ul></ul>
         </div>
       </section>
-      
-      
+
+
       <section class="row tumblr">
         <h2><a href="http://drublic.tumblr.com/">Tumblr</a></h2>
-        
+
         <div class="feed">
           <ul></ul>
         </div>
       </section>
     </div>
-    
+
 
   </div>
-  
+
   <!--! Imprint -->
   <section class="imprint">
     <h2>Imprint</h2>
-    
+
     <div class="clearfix">
       <div class="col_50">
         <h3>Source Access Designz</h3>
@@ -166,44 +166,44 @@
           Germany
         </p>
       </div>
-      
+
       <div class="col_50">
         <h3>Contact</h3>
         <p>Hans Christian Reinl<br>
           <a href="mailto:info@drublic.de">info@drublic.de</a><br>
           +49 176 44508482<br>
         </p>
-        
+
         <p>Finanzamt Wetzlar<br>
         Tax ID: 039 860 01625</p>
       </div>
     </div>
-    
-    
+
+
     <h3>Some things&hellip;</h3>
-    
+
     <p>There is no warranty for integrity, completeness and currentness for this website.<br>
       Furthermore Hans Christian Reinl and Source Access Designz don't take any liability concerning external links.</p>
     <p>Please notice the copyright law for each of the presented pages.</p>
-    
+
     <p>Please be aware of the fact that we store some of the data while you visit this this page. For doing this we mostly use <a href="http://piwik.org/">Piwik</a>.</p>
   </section>
-  
-  
-  
-  
+
+
+
+
   <!--! Contact -->
   <section class="contact">
     <h2>Contact me</h2>
-    
+
     <div class="clearfix">
       <div id="wufoo-z7x3k7">
         Fill out my <a href="http://drublic.wufoo.com/forms/z7x3k7">online form</a>.
       </div>
       <script>var z7x3k7;(function(d, t) {
       var s = d.createElement(t), options = {
-      'userName':'drublic', 
-      'formHash':'z7x3k7', 
+      'userName':'drublic',
+      'formHash':'z7x3k7',
       'autoResize':true,
       'height':'557',
       'async':true,
@@ -215,10 +215,10 @@
       var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
       })(document, 'script');</script>
     </div>
-    
+
   </section>
-  
-  
+
+
   <footer>
     <a href="#" class="visuallyhidden">go back up to top</a>
   </footer>
@@ -236,8 +236,8 @@
   <script src="<?php base_url(); ?>js/plugins.js"></script>
   <script src="<?php base_url(); ?>js/main.js"></script>
   <!-- end scripts -->
-  
-  <!-- Piwik --> 
+
+  <!-- Piwik -->
   <script>
   var pkBaseURL = (("https:" == document.location.protocol) ? "https://drublic.de/piwik/" : "http://drublic.de/piwik/");
   document.write('<script src="' + pkBaseURL + 'piwik.js"><\/script>');

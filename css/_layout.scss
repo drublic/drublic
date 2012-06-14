@@ -253,11 +253,11 @@ p {
   .email a {
     background-image: url(../img/email.png);
   }
-  
+
   .lastfm a {
     background-image: url(../img/lastfm.png);
   }
-  
+
   .rss a {
     background-image: url(../img/feed.png);
   }
@@ -283,7 +283,7 @@ h2 {
   font-weight: normal;
   text-shadow: 1px 1px 2px rgba(0,0,0,.7);
 
-  a { 
+  a {
     text-decoration: none;
   }
 }
@@ -308,7 +308,7 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
 
  &.fadeInLeftBig {
   opacity: 1;
- } 
+ }
 }
 
 
@@ -353,7 +353,7 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
   h2 {
     border-bottom-color: #d1ccb2;
   }
-  
+
   a {
     color: #d1ccb2;
 
@@ -367,7 +367,7 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
   h2 {
     border-bottom-color: #3cf;
   }
-  
+
   a {
     color: #3cf;
 
@@ -381,7 +381,7 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
   h2 {
     border-bottom-color: #2c4762;
   }
-  
+
   a {
     color: #2c4762;
 
@@ -434,31 +434,31 @@ footer {
 
 
   html { min-width: 0; background: #111; }
-  
+
   input, textarea { width: 90%; }
-  
+
   /* Header */
-  
-  
+
+
   .location { opacity: .3; }
-  
-  
-  
+
+
+
   /* Navigation */
   nav ul { float: none; margin: 1em 10px; overflow: hidden; }
   nav li { float: left; display: block; width: 33.333%; }
   nav li:first-child { text-align: left; }
   nav li:last-child { text-align: right; }
   nav a { float: none; display: inline-block; }
-  
+
   nav li:first-child a:before,
   nav li:last-child a:after { position: relative; bottom: -1px; font: 1.2em Tahoma, sans-serif; }
   nav li:first-child a:before { content: '\2039\0020'; }
   nav li:last-child a:after { content: '\0020\203A'; }
-  
+
   #main { margin: 0; }
   #main section { float: none; margin: 0 10px 40px; width: auto; }
-  
+
   /* Menu */
   #main .menu { margin: 10px; border-top: 1px solid #333; }
   #main .menu li { padding: 0; }
@@ -467,10 +467,10 @@ footer {
     padding: 5px 0; border-bottom: 1px solid #333; margin-bottom: 1px;
     text-decoration: none; text-align: center;
   }
-  
+
   .contact, .imprint { width: auto; margin: 0 10px; }
-  
+
   .scroll-top, .scroll-next { position: absolute; top: 13px; right: 10px; z-index: 200; font-size: 1.5em; cursor: pointer; display: block; }
-  
+
   footer { display: none; }
 }

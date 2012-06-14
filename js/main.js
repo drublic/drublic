@@ -41,12 +41,12 @@ function mobile_stuff () {
 				'class' : "menu",
 				'html' : $menu
 			});
-		
+
 		$( '#main' ).find( 'section' ).each( function( i ) {
 			$that = $( this );
 			title = $that.find( 'h2 a' ).html();
 			sectionClass = $that.attr( 'class' );
-			
+
 			$( '<li />', {
 					'id' : 'menu-li-' + i,
 					'html' : '<a href="#!/' + sectionClass + '">' + title + '</a>'
@@ -54,13 +54,13 @@ function mobile_stuff () {
 		});
 
 		$menu.prependTo( '#main' );
-		
-		
-		
-		
-		
+
+
+
+
+
 		// Top-Links for Headlines
-		
+
 		// Scroll Down
 		$( '<span />', {
 			'class' : 'scroll-next',
@@ -70,7 +70,7 @@ function mobile_stuff () {
 		.click( function() {
 			$( 'html,body' ).scrollTop($( this ).closest( 'section' ).next().offset().top);
 		});
-		
+
 		// Scroll Up
 		$( '<span />', {
 			'class' : 'scroll-top',
@@ -81,8 +81,8 @@ function mobile_stuff () {
 			$( 'html,body' ).scroll(0);
 		});
 
-		
-		
+
+
 		// Latest Projects
 		$( '.projects' ).find( 'li' ).click( function () {
 			$( this ).find( '.back' ).animat({ opacity: 'toggle' });
@@ -120,10 +120,10 @@ var date = function (date) {
 	// Year
 	date_str += date.getFullYear();
 	date_str += ' - ';
-	
+
 	// Time
 	date_str += date.getHours() + ':' + ( (date.getMinutes() <= 9) ? '0' + date.getMinutes() : date.getMinutes() );
-	
+
 	return date_str;
 };
 
@@ -137,7 +137,7 @@ $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic
 	$.each(data, function (key, val) {
 		$list.append('<li style="display: none;">' + twttr.txt.autoLink(val.text) + ' ' +
 			'<a href="http://twitter.com/drublic/status/' + val.id_str + '" class="date">' + date(val.created_at) + '</a></li>');
-		
+
 		$list.last().delay(key * 100).animate({ 'opacity': 'toggle' });
 	});
 }, 'jsonp');
@@ -150,17 +150,17 @@ $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic
 $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (data) {
 	var $list = $('.tumblr .feed ul');
 	$list.html('');
-	
+
 	var body = '', output = '';
-		
+
 	$.each( data.posts, function (key, val) {
 		output += '<li style="display: none;">';
-		
-		
+
+
 		// Texts
 		if (val['regular-body'] !== undefined) {
 			output += '<h4><a href="' + val['url-with-slug'] + '">' + val['regular-title'] + '</a></h4>';
-	
+
 			body = val['regular-body'].substr(0, 100);
 			output += '<span>' + twttr.txt.autoLink(body) + ' ' +
 				'<a href="' + val['url-with-slug'] + '">read more&hellip;</a>';
@@ -177,25 +177,25 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 		// Video
 		} else if ( val.type === "video" ) {
 			output += val['video-player'];
-		
+
 		// Everything else is not displayed
 		} else {
 			return;
 		}
-		
+
 		output += '<a href="' + val['url-with-slug'] + '" class="date">' + date(val.date) + '</a></li>';
 	});
-	
+
 	$list.append( output );
-	
+
 	$( '.tumblr .feed img' ).load( function() {
 		$( this ).animate({ 'opacity' : '1' });
 	});
-	
+
 	$('.tumblr .feed li').each( function( key ) {
 		$( this ).delay( key * 100 ).animate({ 'opacity': 'toggle' });
 	});
-	
+
 }, 'jsonp');
 
 
@@ -204,15 +204,15 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 var hashListener = function () {
 	var i,
 		hash = location.hash.replace(/#\//, '');
-	
+
 	// Add Class active
 	$('#nav').find('.active').removeClass('active');
 	$('#nav').find('a[href$="' + hash + '"]').parent().addClass('active');
-	
+
 	// Home
 	if (hash === 'home') {
 		$('.imprint, .contact').hide();
-	
+
 	// Imprint
 	} else if (hash === 'imprint') {
 		i = 0;
@@ -223,10 +223,10 @@ var hashListener = function () {
 	// Contact
 	} else if (hash === 'contact') {
 		i = 0;
-		
+
 		$('.imprint').hide();
 		$('.imprint').show();
-	
+
 	} else if (hash === 'blog') {
 		location.href = $('body').data('url') + '/' + hash;
 	}
