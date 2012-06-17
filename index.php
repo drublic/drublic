@@ -89,7 +89,10 @@
 			</ul>
 		</div>
 
-		<p class="to-blog"><a href="<?php base_url(); ?>blog/" title="My Blog about HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a></p>
+		<p class="to-blog">
+			<a href="#/" title="Download all my contact-data" class="button button-download">Download my vCard</a>
+			<a href="<?php base_url(); ?>blog/" title="My Blog on HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a>
+		</p>
 
 		<div class="content">
 			<section class="row blog">

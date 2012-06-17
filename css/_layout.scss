@@ -66,11 +66,14 @@ p {
 	padding: .2em 1em;
 	border: 1px solid #65a9d7;
 	border-bottom-color: darken(#65a9d7, 10%);
+	margin: 0 .5em;
 	@include gradient(#65a9d7, #65a9d7, #3e779d);
+
 	text-shadow: rgba(0,0,0,.4) 0 -1px 0;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	text-decoration: none;
+
 	border-radius: .3em;
 	box-shadow: 0 1px 0 darken(#65a9d7, 30%),
 							0 2px 0 darken(#65a9d7, 40%),
@@ -316,6 +319,32 @@ h3 { font-size: 1.2em; margin: 1em 0 .5em; }
 	overflow: hidden;
 	padding: 5em 0 3em;
 	text-align: center;
+
+	a {
+		position: relative;
+		padding-right: 55px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 7px;
+			right: .7em;
+
+			width: 22px;
+			height: 22px;
+
+			background: rgba(255,255,255,.6) url(../img/arrow.svg) no-repeat 60% 50%;
+			background-size: 15px 15px;
+			padding: .3em;
+			border-radius: 50%;
+
+			line-height: 1;
+		}
+
+		&.button-download:after {
+			@include x-transform(rotate(90deg));
+		}
+	}
 }
 
 
