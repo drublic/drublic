@@ -1,0 +1,72 @@
+html {
+	min-width: 0;
+}
+
+input,
+textarea {
+	width: 90%;
+}
+
+
+// Navigation
+nav {
+	ul {
+		float: none;
+		margin: 1em 10px;
+		overflow: hidden;
+	}
+
+	li {
+		float: left;
+		display: block;
+		width: 33.333%;
+	}
+
+	a {
+		float: none;
+		display: inline-block;
+	}
+}
+
+
+// Menu
+.menu {
+	margin: 10px;
+	border-top: 1px solid #333;
+
+	li {
+		padding: 0;
+	}
+
+	a {
+		display: block;
+		padding: 5px 0;
+		border-bottom: 1px solid #333;
+		margin-bottom: 1px;
+		text-decoration: none;
+		text-align: center;
+	}
+
+}
+
+.contact,
+.imprint {
+	width: auto;
+	margin: 0 10px;
+}
+
+.scroll-top,
+.scroll-next {
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	z-index: 200;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+
+
+
+
+
