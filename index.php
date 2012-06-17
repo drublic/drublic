@@ -72,7 +72,7 @@
 
 	<div id="content" role="main">
 
-		<div class="about">
+		<section class="about">
 			<div class="desc">
 				<p>Web developer, front-end nerd, JavaScript hacker, located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" title="Wanna know more awesome things about Freiburg? Check out the Wikipedia article.">Freiburg</a> / Germany.</p>
 				<p>Dealing with HTML5, CSS3, JavaScript and these kinds is my daily business and I love it. Find out <a href="<?php base_url(); ?>blog/about/">more about me</a>.</p>
@@ -80,14 +80,14 @@
 
 			<ul class="social">
 				<li class="google"><a href="https://plus.google.com/u/0/112019818423540363330/posts" title="The G+.">Google+</a></li>
-				<li class="github"><a href="https://github.com/drublic" title="Open-Source-Code!">Github</a></li>
+				<li class="github"><a href="https://github.com/drublic" title="Open-Source-Code at GitHub!">Github</a></li>
 				<li class="twitter"><a href="https://twitter.com/drublic" title="That's where I tweet.">Twitter</a></li>
-				<li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" title="Checkout the music I'm listening to">LastFM</a></li>
-				<li class="zerply"><a href="http://zerply.com/drublic/public" title="My Zerply-profile">Zerply</a></li>
-				<li class="email"><a href="mailto:info@drublic.de" title="Send me a mail">Write a Mail</a></li>
-				<li class="rss"><a href="http://feeds.feedburner.com/drublic" title="The RSS-Feed for my blog">RSS</a></li>
+				<li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" title="Checkout the music I'm listening to.">LastFM</a></li>
+				<li class="zerply"><a href="http://zerply.com/drublic/public" title="My Zerply-profile.">Zerply</a></li>
+				<li class="email"><a href="mailto:info@drublic.de" title="Contact me.">Write a Mail</a></li>
+				<li class="rss"><a href="http://feeds.feedburner.com/drublic" title="The RSS-Feed for smy blog.">RSS</a></li>
 			</ul>
-		</div>
+		</section>
 
 		<p class="to-blog">
 			<a href="<?php base_url(); ?>dl/vCard-drublic.vcf" target="_blank" title="Download all my contact-data" class="button button-download">Download vCard</a>
@@ -111,7 +111,7 @@
 
 						$data = simplexml_load_string( $xml );
 
-						foreach( $data->channel->item as $item ) :
+						foreach( $data->channel->item as $item ) {
 							if ( $count++ == 5 ) {
 								break;
 							}
@@ -130,7 +130,7 @@
 								<a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>">read more &hellip;</a>
 								<a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>" class="date"><?php print date( 'd.m.Y - H:i', strtotime($item->pubDate) ); ?></a>
 							</li>
-						<?php endforeach; ?>
+						<?php } ?>
 					</ul>
 				</div>
 			</section>
@@ -203,20 +203,6 @@
 			<div id="wufoo-z7x3k7">
 				Fill out my <a href="http://drublic.wufoo.com/forms/z7x3k7">online form</a>.
 			</div>
-			<script>var z7x3k7;(function(d, t) {
-			var s = d.createElement(t), options = {
-			'userName':'drublic',
-			'formHash':'z7x3k7',
-			'autoResize':true,
-			'height':'557',
-			'async':true,
-			'header':'show'};
-			s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-			s.onload = s.onreadystatechange = function() {
-			var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-			try { z7x3k7 = new WufooForm();z7x3k7.initialize(options);z7x3k7.display(); } catch (e) {}};
-			var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-			})(document, 'script');</script>
 		</div>
 
 	</section>
@@ -239,6 +225,34 @@
 	<script src="<?php base_url(); ?>js/plugins.js"></script>
 	<script src="<?php base_url(); ?>js/main.js"></script>
 	<!-- end scripts -->
+
+	<!-- Wufoo form -->
+	<script>
+		var z7x3k7;
+		(function(d, t) {
+			var s = d.createElement(t),
+				options = {
+					'userName':'drublic',
+					'formHash':'z7x3k7',
+					'autoResize':true,
+					'height':'557',
+					'async':true,
+					'header':'show'
+				};
+				s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+				s.onload = s.onreadystatechange = function() {
+					var rs = this.readyState;
+					if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+					try {
+						z7x3k7 = new WufooForm();
+						z7x3k7.initialize(options);
+						z7x3k7.display();
+					} catch (e) {}
+				};
+				var scr = d.getElementsByTagName(t)[0],
+				par = scr.parentNode; par.insertBefore(s, scr);
+		})(document, 'script');
+	</script>
 
 	<!-- Piwik -->
 	<script>
