@@ -90,7 +90,7 @@
 		</div>
 
 		<p class="to-blog">
-			<a href="#/" title="Download all my contact-data" class="button button-download">Download my vCard</a>
+			<a href="<?php base_url(); ?>dl/vCard-drublic.vcf" target="_blank" title="Download all my contact-data" class="button button-download">Download vCard</a>
 			<a href="<?php base_url(); ?>blog/" title="My Blog on HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a>
 		</p>
 
@@ -117,7 +117,7 @@
 							}
 							?>
 							<li>
-								<h4><a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>"><?php print $item->title; ?></a></h4>
+								<h3><a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>"><?php print $item->title; ?></a></h3>
 								<?php
 									$description = $item->description;
 									if ( strlen($description) > 140 ) {
