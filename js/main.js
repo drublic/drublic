@@ -135,10 +135,8 @@ $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic
 	$list.html('');
 
 	$.each(data, function (key, val) {
-		$list.append('<li style="display: none;">' + twttr.txt.autoLink(val.text) + ' ' +
+		$list.append('<li>' + twttr.txt.autoLink(val.text) + ' ' +
 			'<a href="http://twitter.com/drublic/status/' + val.id_str + '" class="date">' + date(val.created_at) + '</a></li>');
-
-		$list.last().delay(key * 100).animate({ 'opacity': 'toggle' });
 	});
 }, 'jsonp');
 
@@ -147,7 +145,7 @@ $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic
 
 
 // Request latest Blog-Posts from Tumblr-Blog
-$.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (data) {
+$.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (data) {
 	var $list = $('.tumblr .feed ul');
 	$list.html('');
 
@@ -159,7 +157,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 
 		// Texts
 		if (val['regular-body'] !== undefined) {
-			output += '<h4><a href="' + val['url-with-slug'] + '">' + val['regular-title'] + '</a></h4>';
+			output += '<h3><a href="' + val['url-with-slug'] + '">' + val['regular-title'] + '</a></h3>';
 
 			body = val['regular-body'].substr(0, 100);
 			output += '<span>' + twttr.txt.autoLink(body) + ' ' +
@@ -172,7 +170,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 			if ( $( '.tumblr .feed' ).width() > 250 ) {
 				photo = val['photo-url-500'];
 			}
-			output += '<a href="' + val['photo-url-500'] + '" rel="group_tumblr" title="' + val['photo-caption'] + '"><img src="' + photo + '" alt="' + val['photo-caption'] + '" style="opacity: 0;"></a>';
+			output += '<a href="' + val['photo-url-500'] + '" title="' + date(val.date) + '" title="' + val['photo-caption'] + '"><img src="' + photo + '" alt="' + val['photo-caption'] + '"></a>';
 
 		// Video
 		} else if ( val.type === "video" ) {
@@ -182,8 +180,6 @@ $.get('http://drublic.tumblr.com/api/read/json?num=5&filter=text', function (dat
 		} else {
 			return;
 		}
-
-		output += '<a href="' + val['url-with-slug'] + '" class="date">' + date(val.date) + '</a></li>';
 	});
 
 	$list.append( output );
