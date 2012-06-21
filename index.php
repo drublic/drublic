@@ -220,8 +220,8 @@
 
 	<!-- scripts concatenated and minified via build script -->
 	<script src="<?php base_url(); ?>js/vendor/twitter-text.js"></script>
-	<script src="<?php base_url(); ?>js/plugins.js"></script>
 	<script src="<?php base_url(); ?>js/vendor/jquery.modals.js"></script>
+	<script src="<?php base_url(); ?>js/log.js"></script>
 	<script src="<?php base_url(); ?>js/main.js"></script>
 	<!-- end scripts -->
 
