@@ -1,0 +1,86 @@
+// Background
+.backdrop {
+	@include transition(opacity, .3s);
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 998;
+	background: #000;
+	opacity: 0;
+
+	&.in {
+		opacity: .7;
+	}
+}
+
+
+// Base modal
+.modal {
+	@include transition(all, .2s);
+	@include x-box-sizing;
+
+	position: fixed;
+	top: -1999px;
+	left: 50%;
+	z-index: 999;
+	max-height: 600px;
+	overflow: auto;
+	width: 600px;
+	margin: 0 0 0 -300px;
+	padding: 10px 100px;
+	background: #fff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0,0,0,.3);
+	border-radius: 6px;
+	box-shadow: 0 3px 7px rgba(0,0,0,.3);
+	opacity: 0;
+
+	&.in {
+		top: 100px;
+		opacity: 1;
+	}
+
+	// Navigation
+	.nav {
+		a {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 20px;
+			margin-top: -11px;
+			border-bottom: 0;
+			font-size: 1.8em;
+		}
+
+		.next {
+			left: auto;
+			right: 20px;
+		}
+
+		a[href^="#"] {
+			display: block;
+		}
+	}
+
+	// A button to close this stuff
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		color: #222;
+		font-size: 1.5em;
+
+		&:visited {
+			color: color;
+		}
+	}
+}
+
+
+
+
+
+

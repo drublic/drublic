@@ -30,6 +30,13 @@
 
 
 
+@mixin x-box-sizing ($how: border-box) {
+	-moz-box-sizing: $how;
+		 box-sizing: $how;
+}
+
+
+
 
 /*!
  *

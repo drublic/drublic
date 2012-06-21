@@ -63,8 +63,8 @@
 			<ul>
 				<li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
 				<li><a href="<?php base_url(); ?>blog" title="Get some cutting edge goodness">Blog</a></li>
-				<li><a href="<?php base_url(); ?>imprint" title="Who does this stuff?">Imprint</a></li>
-				<li><a href="<?php base_url(); ?>contact" title="Contact me if you have any questions">Contact</a></li>
+				<li><a href="<?php base_url(); ?>#/imprint" data-target="#imprint" title="Who does this stuff?">Imprint</a></li>
+				<li><a href="<?php base_url(); ?>#/contact" data-target="#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -157,7 +157,7 @@
 	</div>
 
 	<!--! Imprint -->
-	<section class="imprint">
+	<section class="modal imprint" id="imprint">
 		<h2>Imprint</h2>
 
 		<div class="clearfix">
@@ -196,13 +196,11 @@
 
 
 	<!--! Contact -->
-	<section class="contact">
+	<section class="modal contact" id="contact">
 		<h2>Contact me</h2>
 
-		<div class="clearfix">
-			<div id="wufoo-z7x3k7">
-				Fill out my <a href="http://drublic.wufoo.com/forms/z7x3k7">online form</a>.
-			</div>
+		<div id="wufoo-z7x3k7">
+			Fill out my <a href="http://drublic.wufoo.com/forms/z7x3k7">online form</a>.
 		</div>
 
 	</section>
@@ -223,6 +221,7 @@
 	<!-- scripts concatenated and minified via build script -->
 	<script src="<?php base_url(); ?>js/vendor/twitter-text.js"></script>
 	<script src="<?php base_url(); ?>js/plugins.js"></script>
+	<script src="<?php base_url(); ?>js/vendor/jquery.modals.js"></script>
 	<script src="<?php base_url(); ?>js/main.js"></script>
 	<!-- end scripts -->
 
