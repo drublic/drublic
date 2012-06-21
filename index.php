@@ -61,7 +61,7 @@
 		<nav id="nav" role="navigation">
 			<a href="#content" class="visuallyhidden">Skip to Content</a>
 			<ul>
-				<li class="active"><a href="<?php base_url(); ?>home" title="Visit the Homepage">Home</a></li>
+				<li class="active"><a href="<?php base_url(); ?>#/home" title="Visit the Homepage">Home</a></li>
 				<li><a href="<?php base_url(); ?>blog" title="Get some cutting edge goodness">Blog</a></li>
 				<li><a href="<?php base_url(); ?>#/imprint" data-target="#imprint" title="Who does this stuff?">Imprint</a></li>
 				<li><a href="<?php base_url(); ?>#/contact" data-target="#contact" title="Contact me if you have any questions">Contact</a></li>

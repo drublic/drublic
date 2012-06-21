@@ -10,6 +10,8 @@
 /*global jQuery, log, twttr */
 (function( $, window, document, undefined ) {
 
+"use strict";
+
 
 var isMobile = function () {
 		if ( $( window ).width() < 481 ) {
@@ -19,16 +21,6 @@ var isMobile = function () {
 		}
 	}();
 
-
-
-
-// Change Links in Nav
-(function () {
-	$('#nav').find('a').each( function () {
-		var ref = $(this).attr('href').replace( $('body').data('url'), '' );
-		$(this).attr('href', '#/' + ref);
-	});
-}());
 
 
 
@@ -300,6 +292,11 @@ $( window ).resize( function() {
 	}, 2000);
 
 }());
+
+
+
+// Call for modals
+$('.modal').modals();
 
 
 
