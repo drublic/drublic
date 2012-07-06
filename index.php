@@ -73,7 +73,7 @@
 		<section class="about">
 			<div class="desc">
 				<p>Web developer, front-end nerd, JavaScript hacker, located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" title="Wanna know more awesome things about Freiburg? Check out the Wikipedia article.">Freiburg</a> / Germany.</p>
-				<p>Dealing with HTML5, CSS3, JavaScript and these kinds is my daily business and I love it. Find out <a href="<?php base_url(); ?>blog/about/">more about me</a>.</p>
+				<p>Dealing with HTML5, CSS3 and JavaScript is my daily business and I love it. Find out <a href="<?php base_url(); ?>blog/about/">more about me</a>.</p>
 			</div>
 
 			<ul class="social">
