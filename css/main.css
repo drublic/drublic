@@ -1264,7 +1264,12 @@ footer {
       top: 0; } }
 @media screen and (max-width: 510px) {
   body {
-    padding: 0 1em; }
+    padding: 0 1em;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    overflow-scrolling: touch; }
 
   #nav {
     text-align: center; }

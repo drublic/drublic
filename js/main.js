@@ -24,6 +24,9 @@ var isMobile = function () {
 
 if (isMobile) {
 
+	setTimeout( function () {
+		window.scrollTo(0, 0);
+	}, 0);
 }
 
 
