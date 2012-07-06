@@ -83,7 +83,7 @@
 				<li class="github"><a href="https://github.com/drublic" title="Open-Source-Code at GitHub!">Github</a></li>
 				<li class="twitter"><a href="https://twitter.com/drublic" title="That's where I tweet.">Twitter</a></li>
 				<li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" title="Checkout the music I'm listening to.">LastFM</a></li>
-				<li class="zerply"><a href="http://zerply.com/drublic/public" title="My Zerply-profile.">Zerply</a></li>
+				<!-- <li class="zerply"><a href="http://zerply.com/drublic/public" title="My Zerply-profile.">Zerply</a></li> -->
 				<li class="email"><a href="mailto:info@drublic.de" title="Contact me.">Write a Mail</a></li>
 				<li class="rss"><a href="http://feeds.feedburner.com/drublic" title="The RSS-Feed for smy blog.">RSS</a></li>
 			</ul>
