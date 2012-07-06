@@ -1,14 +1,12 @@
 <?php
 
-	$env = 'dev';
-
 	function base_url( $echo = true ) {
 		global $env;
 
 		if ( $echo ) {
-			print ($env == 'dev') ? 'http://localhost/source-access/v2/' : 'http://drublic.de/';
+			print '//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		} else {
-			return ($env == 'dev') ? 'http://localhost/source-access/v2/' : 'http://drublic.de/';
+			return '//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		}
 	}
 
