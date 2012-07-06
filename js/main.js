@@ -7,7 +7,7 @@
  */
 
 
-/*global jQuery, log, twttr */
+/*global jQuery, console, twttr */
 (function( $, window, document, undefined ) {
 
 "use strict";
@@ -189,7 +189,8 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 
 
 
-var hashListener = function () {
+
+$(window).on('hashchange', function () {
 	var i,
 		hash = location.hash.replace(/#\//, '');
 
@@ -197,33 +198,18 @@ var hashListener = function () {
 	$('#nav').find('.active').removeClass('active');
 	$('#nav').find('a[href$="' + hash + '"]').parent().addClass('active');
 
-	// Home
-	if (hash === 'home') {
-		$('.imprint, .contact').hide();
-
-	// Imprint
-	} else if (hash === 'imprint') {
-		i = 0;
-
-		$('.contact').hide();
-		$('.imprint').show();
-
-	// Contact
-	} else if (hash === 'contact') {
-		i = 0;
-
-		$('.imprint').hide();
-		$('.imprint').show();
-
-	} else if (hash === 'blog') {
-		location.href = $('body').data('url') + '/' + hash;
-	}
-};
-
-
-$(window).on('hashchange', function () {
-	hashListener();
+	// Clarify hash
+	$('.backdrop').on('click', function () {
+		window.location.hash = '/home';
+	});
 });
+
+if (window.location.hash) {
+	setTimeout( function () {
+		$(window).trigger('hashchange');
+		$('a[href$="' + window.location.hash + '"]').trigger('click');
+	}, 0);
+}
 
 
 

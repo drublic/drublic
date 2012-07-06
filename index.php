@@ -160,27 +160,20 @@
 	<section class="modal imprint" id="imprint">
 		<h2>Imprint</h2>
 
-		<div class="clearfix">
-			<div class="col_50">
-				<h3>Source Access Designz</h3>
-				<p>
-					Obere Bachstra&szlig;e 15<br>
-					35606 Solms<br>
-					Germany
-				</p>
-			</div>
+		<h3>Source Access Designz</h3>
+		<p>Obere Bachstra&szlig;e 15<br>
+			35606 Solms<br>
+			Germany
+		</p>
 
-			<div class="col_50">
-				<h3>Contact</h3>
-				<p>Hans Christian Reinl<br>
-					<a href="mailto:info@drublic.de">info@drublic.de</a><br>
-					+49 176 44508482<br>
-				</p>
+		<h3>Contact</h3>
+		<p>Hans Christian Reinl<br>
+			<a href="mailto:info@drublic.de">info@drublic.de</a><br>
+			+49 176 44508482<br>
+		</p>
 
-				<p>Finanzamt Wetzlar<br>
-				Tax ID: 039 860 01625</p>
-			</div>
-		</div>
+		<p>Finanzamt Wetzlar<br>
+		Tax ID: 039 860 01625</p>
 
 
 		<h3>Some things&hellip;</h3>
