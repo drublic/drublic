@@ -156,6 +156,10 @@ p {
 			color: #fff;
 			border-bottom: 5px solid #aaa;
 		}
+
+		&.visuallyhidden {
+			padding: 0;
+		}
 	}
 
 	.active {

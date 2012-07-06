@@ -22,67 +22,8 @@ var isMobile = function () {
 	}();
 
 
-
-
-
-// Mobile
-function mobile_stuff () {
-		// Menu for Mobile
-		var $that, title, sectionClass,
-			$menu = $( '<ul />', {
-				'class' : "menu",
-				'html' : $menu
-			});
-
-		$( '#main' ).find( 'section' ).each( function( i ) {
-			$that = $( this );
-			title = $that.find( 'h2 a' ).html();
-			sectionClass = $that.attr( 'class' );
-
-			$( '<li />', {
-					'id' : 'menu-li-' + i,
-					'html' : '<a href="#!/' + sectionClass + '">' + title + '</a>'
-				}).appendTo( $menu );
-		});
-
-		$menu.prependTo( '#main' );
-
-
-
-
-
-		// Top-Links for Headlines
-
-		// Scroll Down
-		$( '<span />', {
-			'class' : 'scroll-next',
-			'html' : '&darr;'
-		})
-		.insertAfter( $( '#main' ).find( 'section' ).not( ':last-child' ).find( 'h2' ) )
-		.click( function() {
-			$( 'html,body' ).scrollTop($( this ).closest( 'section' ).next().offset().top);
-		});
-
-		// Scroll Up
-		$( '<span />', {
-			'class' : 'scroll-top',
-			'html' : '&uarr;'
-		})
-		.insertAfter( $( '#main' ).find( 'section' ).last().find( 'h2' ) )
-		.click( function() {
-			$( 'html,body' ).scroll(0);
-		});
-
-
-
-		// Latest Projects
-		$( '.projects' ).find( 'li' ).click( function () {
-			$( this ).find( '.back' ).animat({ opacity: 'toggle' });
-		});
-}
-
 if (isMobile) {
-	mobile_stuff();
+
 }
 
 
@@ -210,24 +151,6 @@ if (window.location.hash) {
 		$('a[href$="' + window.location.hash + '"]').trigger('click');
 	}, 0);
 }
-
-
-
-
-// Resize Listener
-$( window ).resize( function() {
-	if (!isMobile) {
-		if ( $( '.menu' ).size() > 0 ) {
-			$( '.menu, .scroll-next, .scroll-top' ).remove();
-		}
-	} else {
-		if ( $( '.menu' ).size() < 1 ) {
-			mobile_stuff();
-		}
-	}
-
-});
-
 
 
 
