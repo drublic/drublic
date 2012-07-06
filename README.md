@@ -14,7 +14,7 @@ Everything is unter public domain as stated in the "License"-section but there i
 * The background picture was taken by my good friend Christoph and is under [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 * HTML5 Boilerplate – Public Domain
 * Normalize.css – Public Domain
-* jQuery – [MIT7GPL](http://jquery.org/license)
+* jQuery – [MIT/GPL](http://jquery.org/license)
 * Modernizr – [MIT/BSD](http://modernizr.com/license/)
 
 ## License
