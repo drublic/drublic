@@ -1182,6 +1182,9 @@ h3 {
   .imprint a, .imprint a:visited, .contact a, .contact a:visited {
     color: #333; }
 
+.modal .close {
+  text-decoration: none; }
+
 footer {
   height: 200px; }
 

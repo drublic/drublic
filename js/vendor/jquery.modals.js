@@ -190,6 +190,8 @@
 						navigation.createNav( $(this) );
 					}
 
+					$(this).append(settings.templates.close);
+
 					// Append to container
 					$(this).appendTo( $container );
 				});

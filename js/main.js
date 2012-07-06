@@ -143,9 +143,12 @@ $(window).on('hashchange', function () {
 	$('#nav').find('a[href$="' + hash + '"]').parent().addClass('active');
 
 	// Clarify hash
-	$('.backdrop').on('click', function () {
-		window.location.hash = '/home';
+	$('.backdrop, .close').on('click', function () {
+		setTimeout( function () {
+			window.location.hash = '/home';
+		}, 0);
 	});
+
 });
 
 if (window.location.hash) {
