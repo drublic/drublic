@@ -1,0 +1,26 @@
+{
+	"name": "drublic-vc",
+	"title": "drublic-vc",
+	"description": "",
+	"version": "2.0.0-pre",
+	"homepage": "https://github.com/drublic/vc",
+	"author": {
+		"name": "Hans Christian Reinl",
+		"url": "http://drublic.de"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"bugs": {
+		"url": ""
+	},
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "https://nodeload.github.com/cowboy/grunt/tarball/e8977727186",
+		"grunt-sass": "https://nodeload.github.com/sindresorhus/grunt-sass/tarball/5242bf38b0",
+		"grunt-html": "~0.1.1"
+	},
+	"keywords": []
+}
