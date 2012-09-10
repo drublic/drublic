@@ -11,7 +11,6 @@ If you find a bug or have some feedback, please head over to the [issue-tracker]
 Everything is unter public domain as stated in the "License"-section but there is some stuff I use that is currently licensed differently:
 
 * Social icons is a from a set by @rogie. You can buy them [here](http://www.finegoodsmarket.com/product/basic-social-media-icons), [License](http://www.finegoodsmarket.com/license).
-* The background picture was taken by my good friend Christoph and is under [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 * HTML5 Boilerplate – Public Domain
 * Normalize.css – Public Domain
 * jQuery – [MIT/GPL](http://jquery.org/license)

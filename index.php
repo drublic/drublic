@@ -18,8 +18,7 @@
 
 ?>
 <!doctype html>
-<!--[if lt IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
 
@@ -61,8 +60,8 @@
 			<ul>
 				<li class="active"><a href="<?php base_url(); ?>#/home" title="Visit the Homepage">Home</a></li>
 				<li><a href="<?php base_url(); ?>blog" title="Get some cutting edge goodness">Blog</a></li>
-				<li><a href="<?php base_url(); ?>#/imprint" data-target="#imprint" title="Who does this stuff?">Imprint</a></li>
-				<li><a href="<?php base_url(); ?>#/contact" data-target="#contact" title="Contact me if you have any questions">Contact</a></li>
+				<li><a href="<?php base_url(); ?>/imprint" data-target="#imprint" title="Who does this stuff?">Imprint</a></li>
+				<li><a href="<?php base_url(); ?>/contact" data-target="#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
 		</nav>
 
