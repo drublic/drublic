@@ -8,26 +8,24 @@
 
 
 /*global jQuery, console, twttr */
-(function( $, window, document, undefined ) {
+(function ($) {
 
-"use strict";
+	"use strict";
 
-
-var isMobile = function () {
-		if ( $( window ).width() < 481 ) {
-			return true;
-		} else {
-			return false;
-		}
-	}();
+	var drublic = {};
 
 
-if (isMobile) {
+	drublic.isMobile = function () {
+		return ( $(window).width() < 481 );
+	};
 
-	setTimeout( function () {
-		window.scrollTo(0, 0);
-	}, 0);
-}
+
+	// If on mobile, hide address bar
+	if (drublic.isMobile()) {
+		window.setTimeout( function () {
+			window.scrollTo(0, 0);
+		}, 0);
+	}
 
 
 
@@ -120,7 +118,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 
 	$list.append( output );
 
-	$( '.tumblr .feed img' ).load( function() {
+	$( '.tumblr .feed img' ).load( function () {
 		$( this ).animate({ 'opacity' : '1' });
 	});
 
@@ -134,29 +132,29 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 
 
 
-$(window).on('hashchange', function () {
-	var i,
-		hash = location.hash.replace(/#\//, '');
+	$(window).on('hashchange', function () {
+		var i,
+			hash = location.hash.replace(/#\//, '');
 
-	// Add Class active
-	$('#nav').find('.active').removeClass('active');
-	$('#nav').find('a[href$="' + hash + '"]').parent().addClass('active');
+		// Add Class active
+		$('.nav').find('.active').removeClass('active');
+		$('.nav').find('a[href$="' + hash + '"]').parent().addClass('active');
 
-	// Clarify hash
-	$('.backdrop, .close').on('click', function () {
-		setTimeout( function () {
-			window.location.hash = '/home';
-		}, 0);
+		// Clarify hash
+		$('.backdrop, .close').on('click', function () {
+			window.setTimeout( function () {
+				window.location.hash = '/home';
+			}, 0);
+		});
+
 	});
 
-});
-
-if (window.location.hash) {
-	setTimeout( function () {
-		$(window).trigger('hashchange');
-		$('a[href$="' + window.location.hash + '"]').trigger('click');
-	}, 0);
-}
+	if (window.location.hash) {
+		setTimeout( function () {
+			$(window).trigger('hashchange');
+			$('a[href$="' + window.location.hash + '"]').trigger('click');
+		}, 0);
+	}
 
 
 
@@ -181,12 +179,12 @@ if (window.location.hash) {
 				}
 			};
 
-	setTimeout( function () {
+	window.setTimeout( function () {
 		animateSocials(0);
 	}, 1000);
 
 
-	setTimeout( function () {
+	window.setTimeout( function () {
 		$('.button').addClass('fadeIn');
 	}, 2000);
 
@@ -202,7 +200,7 @@ if (window.location.hash) {
 				}
 			};
 
-	setTimeout( function () {
+	window.setTimeout( function () {
 		animateRows(0);
 	}, 2000);
 
@@ -210,20 +208,9 @@ if (window.location.hash) {
 
 
 
-// Call for modals
-$('.modal').modals();
+	// Call for modals
+	$('.modal').modals();
 
 
 
-
-
-}(jQuery, window, document));
-
-
-
-
-
-
-
-
-
+}(jQuery));
