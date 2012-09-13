@@ -83,7 +83,7 @@ module.exports = function (grunt) {
 			},
 
 			scss: {
-				files: ['scss/main.scss', 'scss/**/_*.scss'],
+				files: ['scss/**/*.scss'],
 				tasks: 'rubysass:dev'
 			},
 
