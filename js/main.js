@@ -7,16 +7,62 @@
  */
 
 
-/*global jQuery, console, twttr */
+/*global jQuery, window, console, twttr */
 (function ($) {
 
 	"use strict";
 
 	var drublic = {};
 
+	drublic.settings = {
+		twitterUrl: "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1",
+		tumblrUrl: "http://drublic.tumblr.com/api/read/json?num=4&filter=text"
+	};
 
+
+	// Check if we are dealing with mobile
 	drublic.isMobile = function () {
 		return ( $(window).width() < 481 );
+	};
+
+
+	// Render date from Unix-timestamp
+	drublic.date = function (timestamp) {
+		var day, month, year, hours, minutes,
+			date = new Date (timestamp);
+
+		// Day
+		if (parseInt(date.getDate(), 10) <= 9) {
+			day = '0' + date.getDate();
+		} else {
+			day = date.getDate();
+		}
+
+		day += day + '.';
+
+		//Month
+		if ( (parseInt(date.getMonth(), 10) + 1 ) <= 9) {
+			month = '0' + ( parseInt(date.getMonth(), 10) + 1 );
+		} else {
+			month = parseInt(date.getMonth(), 10) + 1;
+		}
+
+		month += '.';
+
+		// Year
+		year = date.getFullYear() + ' - ';
+
+		// Hours
+		hours = date.getHours() + ':';
+
+		// Minutes
+		if (date.getMinutes() <= 9) {
+			minutes = '0' + date.getMinutes();
+		} else {
+			minutes = date.getMinutes();
+		}
+
+		return day + month + year + hours + minutes;
 	};
 
 
@@ -31,46 +77,14 @@
 
 
 
-
-/**
- * Date-routine
- * Add a routine to render a date
- *
- * @param date - Unix-timestamp
- *
- */
-var date = function (date) {
-	date = new Date (date);
-	var date_str  = '';
-
-	// Day
-	date_str += ( parseInt(date.getDate(), 10) <= 9) ? '0' + date.getDate() : date.getDate();
-	date_str += '.';
-
-	//Month
-	date_str += ( ( parseInt(date.getMonth(), 10) + 1 ) <= 9) ? '0' + ( parseInt(date.getMonth(), 10) + 1 ) : ( parseInt(date.getMonth(), 10) + 1 );
-	date_str += '.';
-
-	// Year
-	date_str += date.getFullYear();
-	date_str += ' - ';
-
-	// Time
-	date_str += date.getHours() + ':' + ( (date.getMinutes() <= 9) ? '0' + date.getMinutes() : date.getMinutes() );
-
-	return date_str;
-};
-
-
-
 // Request latest Tweets
-$.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic&count=10&include_rts=1', function (data) {
+$.get(drublic.settings.twitterUrl, function (data) {
 	var $list = $('.row.twitter ul');
 	$list.html('');
 
 	$.each(data, function (key, val) {
 		$list.append('<li>' + twttr.txt.autoLink(val.text) + ' ' +
-			'<a href="http://twitter.com/drublic/status/' + val.id_str + '" class="date">' + date(val.created_at) + '</a></li>');
+			'<a href="http://twitter.com/drublic/status/' + val.id_str + '" class="date">' + drublic.date(val.created_at) + '</a></li>');
 	});
 }, 'jsonp');
 
@@ -79,7 +93,7 @@ $.get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=drublic
 
 
 // Request latest Blog-Posts from Tumblr-Blog
-$.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (data) {
+$.get(drublic.settings.tumblrUrl, function (data) {
 	var $list = $('.tumblr .feed ul');
 	$list.html('');
 
@@ -104,7 +118,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 			if ( $( '.tumblr .feed' ).width() > 250 ) {
 				photo = val['photo-url-500'];
 			}
-			output += '<a href="' + val['photo-url-500'] + '" title="' + date(val.date) + '" title="' + val['photo-caption'] + '"><img src="' + photo + '" alt="' + val['photo-caption'] + '"></a>';
+			output += '<a href="' + val['photo-url-500'] + '" title="' + drublic.date(val.date) + '" title="' + val['photo-caption'] + '"><img src="' + photo + '" alt="' + val['photo-caption'] + '"></a>';
 
 		// Video
 		} else if ( val.type === "video" ) {
@@ -133,8 +147,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 
 
 	$(window).on('hashchange', function () {
-		var i,
-			hash = location.hash.replace(/#\//, '');
+		var hash = window.location.hash.replace(/#\//, '');
 
 		// Add Class active
 		$('.nav').find('.active').removeClass('active');
@@ -150,7 +163,7 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 	});
 
 	if (window.location.hash) {
-		setTimeout( function () {
+		window.setTimeout( function () {
 			$(window).trigger('hashchange');
 			$('a[href$="' + window.location.hash + '"]').trigger('click');
 		}, 0);
@@ -159,57 +172,60 @@ $.get('http://drublic.tumblr.com/api/read/json?num=4&filter=text', function (dat
 
 
 
-// Animations on startup
-(function () {
-	$('.header').addClass('bounceInDown');
+	// Animations on startup
+	drublic.initAnimations = function () {
+		$('.header').addClass('bounceInDown');
 
-	setTimeout( function () {
-		$('.desc').addClass('fadeInLeftBig');
-	}, 500);
-
-
-	var socials = $('.social li'),
-			animateSocials = function (i) {
-				$(socials[i]).addClass('bounceInUp');
-
-				if (socials[i+1] !== undefined) {
-					setTimeout( function () {
-						animateSocials(i + 1);
-					}, 100);
-				}
-			};
-
-	window.setTimeout( function () {
-		animateSocials(0);
-	}, 1000);
+		window.setTimeout( function () {
+			$('.desc').addClass('fadeInLeftBig');
+		}, 500);
 
 
-	window.setTimeout( function () {
-		$('.button').addClass('fadeIn');
-	}, 2000);
+		var socials = $('.social li'),
+				animateSocials = function (i) {
+					$(socials[i]).addClass('bounceInUp');
+
+					if (socials[i+1] !== undefined) {
+						window.setTimeout( function () {
+							animateSocials(i + 1);
+						}, 100);
+					}
+				};
+
+		window.setTimeout( function () {
+			animateSocials(0);
+		}, 1000);
 
 
-	var rows = $('.row'),
-			animateRows = function (i) {
-				$(rows[i]).addClass('fadeInUp');
+		window.setTimeout( function () {
+			$('.button').addClass('fadeIn');
+		}, 2000);
 
-				if (rows[i+1] !== undefined) {
-					setTimeout( function () {
-						animateRows(i + 1);
-					}, 500);
-				}
-			};
 
-	window.setTimeout( function () {
-		animateRows(0);
-	}, 2000);
+		var rows = $('.row'),
+				animateRows = function (i) {
+					$(rows[i]).addClass('fadeInUp');
 
-}());
+					if (rows[i+1] !== undefined) {
+						window.setTimeout( function () {
+							animateRows(i + 1);
+						}, 500);
+					}
+				};
+
+		window.setTimeout( function () {
+			animateRows(0);
+		}, 2000);
+
+	};
 
 
 
 	// Call for modals
 	$('.modal').modals();
+
+	// Do Animations
+	drublic.initAnimations();
 
 
 
