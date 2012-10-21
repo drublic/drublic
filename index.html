@@ -14,7 +14,6 @@
 	<link rel="alternate" type="application/rss+xml" title="drublic &mdash; Feed"
 			href="http://feeds.feedburner.com/drublic">
 
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="/css/main.css">
@@ -38,27 +37,30 @@
 
 	<link rel="canonical" href="http://drublic.de">
 	<link rel="index" title="drublic - State of the Art Webdesign -
-		HTML, CSS, JavaScript – Hans Christian Reinl" href="http://drublic.de">
+			HTML, CSS, JavaScript – Hans Christian Reinl"
+			href="http://drublic.de">
 
-	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+	<!-- All JavaScript at the bottom, except for Modernizr -->
 	<script src="/js/vendor/modernizr-2.5.3-custom.min.js"></script>
 </head>
 
 <body data-url="/">
 
-	<header class="hero">
+	<div class="hero">
 
 		<div class="logo" role="banner">
-			/_\
+			<a href="http://drublic.de" title="drublic's home">/_\</a>
 		</div>
+	</div>
 
+	<header>
 		<nav class="nav" role="navigation">
 			<a href="#content" class="visuallyhidden">Skip to Content</a>
 			<ul>
 				<li class="active"><a href="/" title="Visit the Homepage">Home</a></li>
 				<li><a href="/blog" title="Get some cutting edge goodness">Blog</a></li>
-				<li><a href="/imprint" data-target="#imprint" title="Who does this stuff?">Imprint</a></li>
-				<li><a href="/contact" data-target="#contact" title="Contact me if you have any questions">Contact</a></li>
+				<li><a href="#imprint" title="Who does this stuff?">Imprint</a></li>
+				<li><a href="#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -66,9 +68,7 @@
 
 	<div id="content" class="main" role="main">
 
-		<h1 class="header">
-			<a href="http://drublic.de" title="drublic's home">I am drublic <span>(Hans Christian Reinl)</span></a>
-		</h1>
+		<h1 class="header">I am drublic <span>(Hans Christian Reinl)</span></h1>
 
 		<section class="about">
 			<div class="desc">
@@ -87,7 +87,7 @@
 			</ul>
 		</section>
 
-		<p class="to-blog">
+		<p class="outlinks">
 			<a href="/dl/vCard-drublic.vcf" target="_blank" title="Download all my contact-data" class="button button-download">Download vCard</a>
 			<a href="/blog" title="My Blog on HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a>
 		</p>
@@ -151,11 +151,8 @@
 			</section>
 		</div>
 
-
-	</div>
-
 	<!--! Imprint -->
-	<section class="modal imprint" id="imprint">
+	<section class="imprint" id="imprint">
 		<h2>Imprint</h2>
 
 		<h3>Source Access Designz</h3>
@@ -187,7 +184,7 @@
 
 
 	<!--! Contact -->
-	<section class="modal contact" id="contact">
+	<section class="contact" id="contact">
 		<h2>Contact me</h2>
 
 		<div id="wufoo-z7x3k7">
@@ -197,7 +194,12 @@
 	</section>
 
 
+	</div>
+
+
 	<footer>
+		<p>Made in with love. 2012. Freiburg, Germany.</p>
+		<p>&#x2661;</p>
 		<a href="#" class="visuallyhidden">go back up to top</a>
 	</footer>
 
