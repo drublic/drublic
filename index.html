@@ -44,20 +44,20 @@
 	<script src="/js/vendor/modernizr-2.5.3-custom.min.js"></script>
 </head>
 
-<body data-url="/">
+<body>
 
-	<div class="hero">
-
-		<div class="logo" role="banner">
-			<a href="http://drublic.de" title="drublic's home">/_\</a>
+	<header class="site-header">
+		<div class="hero">
+			<div class="site-logo" role="banner">
+				<a href="http://drublic.de" title="drublic's home">∆</a>
+			</div>
 		</div>
-	</div>
 
-	<header>
-		<nav class="nav" role="navigation">
+		<nav class="site-navigation" role="navigation">
 			<a href="#content" class="visuallyhidden">Skip to Content</a>
 			<ul>
 				<li class="active"><a href="/" title="Visit the Homepage">Home</a></li>
+				<li><a href="/blog/about" title="You can find out more about me">About</a></li>
 				<li><a href="/blog" title="Get some cutting edge goodness">Blog</a></li>
 				<li><a href="#imprint" title="Who does this stuff?">Imprint</a></li>
 				<li><a href="#contact" title="Contact me if you have any questions">Contact</a></li>
@@ -68,136 +68,77 @@
 
 	<div id="content" class="main" role="main">
 
-		<h1 class="header">I am drublic <span>(Hans Christian Reinl)</span></h1>
+		<section id="about" class="about">
+			<div class="section-content">
+				<h1 class="site-claim">I am drublic <span>(Hans Christian Reinl)</span></h1>
 
-		<section class="about">
-			<div class="desc">
-				<p>Web developer, front-end nerd, JavaScript hacker, located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" title="Wanna know more awesome things about Freiburg? Check out the Wikipedia article.">Freiburg</a> / Germany.</p>
-				<p>Dealing with HTML5, CSS3 and JavaScript is my daily business and I love it. Find out <a href="/blog/about/">more about me</a>.</p>
+				<div class="desc">
+					<p>Web developer, front-end nerd, JavaScript hacker, located in <a href="http://en.wikipedia.org/wiki/Freiburg_im_Breisgau" title="Wanna know more awesome things about Freiburg? Check out the Wikipedia article.">Freiburg</a> / Germany.</p>
+					<p>Dealing with HTML5, CSS3 and JavaScript is my daily business and I love it. Find out <a href="/blog/about/">more about me</a>.</p>
+				</div>
+
+				<ul class="social">
+					<li class="google"><a href="https://plus.google.com/u/0/112019818423540363330/posts" title="The G+.">Google+</a></li>
+					<li class="github"><a href="https://github.com/drublic" title="Open-Source-Code at GitHub!">Github</a></li>
+					<li class="twitter"><a href="https://twitter.com/drublic" title="That's where I tweet.">Twitter</a></li>
+					<li class="email"><a href="mailto:info@drublic.de" title="Contact me.">Write a Mail</a></li>
+					<li class="rss"><a href="http://feeds.feedburner.com/drublic" title="The RSS-Feed for smy blog.">RSS</a></li>
+				</ul>
+
+
+				<p class="outlinks">
+					<a href="/dl/vCard-drublic.vcf" target="_blank" title="Download all my contact-data" class="button button-download">Download vCard</a>
+					<a href="/blog" title="My Blog on HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a>
+				</p>
 			</div>
-
-			<ul class="social">
-				<li class="google"><a href="https://plus.google.com/u/0/112019818423540363330/posts" title="The G+.">Google+</a></li>
-				<li class="github"><a href="https://github.com/drublic" title="Open-Source-Code at GitHub!">Github</a></li>
-				<li class="twitter"><a href="https://twitter.com/drublic" title="That's where I tweet.">Twitter</a></li>
-				<li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" title="Checkout the music I'm listening to.">LastFM</a></li>
-				<!-- <li class="zerply"><a href="http://zerply.com/drublic/public" title="My Zerply-profile.">Zerply</a></li> -->
-				<li class="email"><a href="mailto:info@drublic.de" title="Contact me.">Write a Mail</a></li>
-				<li class="rss"><a href="http://feeds.feedburner.com/drublic" title="The RSS-Feed for smy blog.">RSS</a></li>
-			</ul>
 		</section>
 
-		<p class="outlinks">
-			<a href="/dl/vCard-drublic.vcf" target="_blank" title="Download all my contact-data" class="button button-download">Download vCard</a>
-			<a href="/blog" title="My Blog on HTML5, CSS and JavaScript - State of the Art Webdesign" class="button">Read my blog</a>
-		</p>
+		<!-- Imprint -->
+		<section class="imprint" id="imprint">
+			<div class="section-content">
+				<h2>Imprint</h2>
 
-		<div class="content">
-			<section class="row blog">
-				<h2><a href="http://drublic.de/blog/">Blog</a></h2>
+				<h3>Source Access Designz</h3>
+				<p>Obere Bachstra&szlig;e 15<br>
+					35606 Solms<br>
+					Germany
+				</p>
 
-				<div class="feed">
-					<ul>
-					<!-- <?php
-						// Use cURL to get the RSS feed into a PHP string variable
-						$ch = curl_init();
-						curl_setopt($ch, CURLOPT_URL, 'http://feeds.feedburner.com/drublic?format=xml');
-						curl_setopt($ch, CURLOPT_HEADER, false);
-						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-						$xml = curl_exec($ch);
-						curl_close($ch);
+				<h3>Contact</h3>
+				<p>Hans Christian Reinl<br>
+					<a href="mailto:info@drublic.de">info@drublic.de</a><br>
+					+49 176 44508482<br>
+				</p>
 
-						$data = simplexml_load_string( $xml );
+				<p>Finanzamt Wetzlar<br>
+				Tax ID: 039 860 01625</p>
 
-						foreach( $data->channel->item as $item ) {
-							if ( $count++ == 5 ) {
-								break;
-							}
-							?>
-							<li>
-								<h3><a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>"><?php print $item->title; ?></a></h3>
-								<?php
-									$description = $item->description;
-									if ( strlen($description) > 140 ) {
-										$description = substr( trim($description), 0, 140 );
-										$description = explode( ' ', $description, -1 );
-										$description = implode( $description, ' ' );
-									}
-									print $description;
-								?>
-								<a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>">read more &hellip;</a>
-								<a href="<?php print $item->link; ?>" title="Permalink to <?php print $item->title; ?>" class="date"><?php print date( 'd.m.Y - H:i', strtotime($item->pubDate) ); ?></a>
-							</li>
-						<?php } ?> -->
-					</ul>
+
+				<h3>Some things&hellip;</h3>
+
+				<p>There is no warranty for integrity, completeness and currentness for this website.<br>
+					Furthermore Hans Christian Reinl and Source Access Designz don't take any liability concerning external links.</p>
+				<p>Please notice the copyright law for each of the presented pages.</p>
+
+				<p>Please be aware of the fact that we store some of the data while you visit this this page. For doing this we mostly use <a href="http://piwik.org/">Piwik</a>.</p>
+			</div>
+		</section>
+
+
+		<!-- Contact -->
+		<section class="contact" id="contact">
+			<div class="section-content">
+				<h2>Contact me</h2>
+
+				<div id="wufoo-z7x3k7">
+					Fill out my <a href="http://drublic.wufoo.com/forms/z7x3k7">online form</a>.
 				</div>
-			</section>
-
-			<section class="row twitter">
-				<h2><a href="http://twitter.com/drublic">Twitter</a></h2>
-
-				<div class="feed">
-					<ul></ul>
-				</div>
-			</section>
-
-
-			<section class="row tumblr">
-				<h2><a href="http://drublic.tumblr.com/">Tumblr</a></h2>
-
-				<div class="feed">
-					<ul></ul>
-				</div>
-			</section>
-		</div>
-
-	<!--! Imprint -->
-	<section class="imprint" id="imprint">
-		<h2>Imprint</h2>
-
-		<h3>Source Access Designz</h3>
-		<p>Obere Bachstra&szlig;e 15<br>
-			35606 Solms<br>
-			Germany
-		</p>
-
-		<h3>Contact</h3>
-		<p>Hans Christian Reinl<br>
-			<a href="mailto:info@drublic.de">info@drublic.de</a><br>
-			+49 176 44508482<br>
-		</p>
-
-		<p>Finanzamt Wetzlar<br>
-		Tax ID: 039 860 01625</p>
-
-
-		<h3>Some things&hellip;</h3>
-
-		<p>There is no warranty for integrity, completeness and currentness for this website.<br>
-			Furthermore Hans Christian Reinl and Source Access Designz don't take any liability concerning external links.</p>
-		<p>Please notice the copyright law for each of the presented pages.</p>
-
-		<p>Please be aware of the fact that we store some of the data while you visit this this page. For doing this we mostly use <a href="http://piwik.org/">Piwik</a>.</p>
-	</section>
-
-
-
-
-	<!--! Contact -->
-	<section class="contact" id="contact">
-		<h2>Contact me</h2>
-
-		<div id="wufoo-z7x3k7">
-			Fill out my <a href="http://drublic.wufoo.com/forms/z7x3k7">online form</a>.
-		</div>
-
-	</section>
-
-
+			</div>
+		</section>
 	</div>
 
 
-	<footer>
+	<footer class="site-footer">
 		<p>Made in with love. 2012. Freiburg, Germany.</p>
 		<p>&#x2661;</p>
 		<a href="#" class="visuallyhidden">go back up to top</a>

@@ -622,11 +622,6 @@ p {
 }
 
 .button {
-  -moz-transition: background 0.2s linear;
-  -webkit-transition: background 0.2s linear;
-  -ms-transition: background 0.2s linear;
-  -o-transition: background 0.2s linear;
-  transition: background 0.2s linear;
   display: inline-block;
   padding: 0 11px;
   text-decoration: none;
@@ -640,37 +635,40 @@ p {
 .button:hover {
   background: #27aae2;
 }
+.button:hover {
+  color: #fff;
+}
 
 .hero {
   background: #27aae2;
   padding: 100px 0;
   text-align: center;
 }
-.hero .logo a {
+
+.site-logo a {
   display: block;
   width: 144px;
   height: 144px;
   background: url(../img/logo.png);
+  font-size: 8em;
+  line-height: 1;
   margin: 0 auto;
+  text-indent: -300px;
+  overflow: hidden;
 }
 
-.nav {
+.site-navigation {
   width: 45em;
   margin: 0 auto;
 }
-.nav ul {
+.site-navigation ul {
   margin: 50px 0 0;
   text-align: center;
 }
-.nav li {
+.site-navigation li {
   display: inline;
 }
-.nav a {
-  -moz-transition: background 0.2s linear;
-  -webkit-transition: background 0.2s linear;
-  -ms-transition: background 0.2s linear;
-  -o-transition: background 0.2s linear;
-  transition: background 0.2s linear;
+.site-navigation a {
   display: inline-block;
   padding: 0 11px;
   text-decoration: none;
@@ -679,28 +677,28 @@ p {
   padding: 10px 20px;
   margin-left: 7px;
 }
-.nav a:visited {
+.site-navigation a:visited {
   color: #fff;
 }
-.nav a:hover {
+.site-navigation a:hover {
   background: #27aae2;
 }
-.nav a:hover {
+.site-navigation a:hover {
   background-color: #27aae2;
 }
-.nav a.visuallyhidden {
+.site-navigation a.visuallyhidden {
   padding: 0;
 }
-.nav .active a {
+.site-navigation .active a {
   background: #27aae2;
 }
 
-.header {
+.site-claim {
   margin: 20px 0 0;
   font-size: 5em;
   font-weight: normal;
 }
-.header span {
+.site-claim span {
   font-size: 0.3em;
 }
 
@@ -708,52 +706,6 @@ p {
   max-width: 45em;
   margin: 0 auto;
   padding: 0 2em;
-}
-
-@-webkit-keyframes jumper {
-  0% {
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  45% {
-    padding-top: 15px;
-    margin-top: -15px;
-  }
-
-  70% {
-    padding-top: 0px;
-    margin-top: 0;
-  }
-
-  80% {
-    padding-top: 3px;
-    margin-top: -3px;
-  }
-
-  90% {
-    padding-top: 0px;
-    margin-top: 0;
-  }
-
-  100% {
-    padding-top: 0px;
-    margin-top: 0;
-  }
-}
-
-@-moz-keyframes jumper {
-  0% {
-    top: 0px;
-  }
-
-  45% {
-    top: -15px;
-  }
-
-  100% {
-    top: 0px;
-  }
 }
 
 .social {
@@ -817,10 +769,8 @@ h3 a {
 }
 
 .desc {
-  font: italic 1.2em/2em Georgia, Times New Roman, serif;
-}
-.desc.fadeInLeftBig {
-  opacity: 1;
+  font-size: 1.2em;
+  line-height: 2em;
 }
 
 .outlinks {
@@ -843,59 +793,29 @@ h3 a {
   word-wrap: break-word;
 }
 
-.blog h2 {
-  border-bottom-color: #d1ccb2;
-}
-.blog a {
-  color: #d1ccb2;
-}
-.blog a:visited {
-  color: #d1ccb2;
-}
-
-.twitter h2 {
-  border-bottom-color: #3cf;
-}
-.twitter a {
-  color: #3cf;
-}
-.twitter a:visited {
-  color: #3cf;
-}
-
-.tumblr h2 {
-  border-bottom-color: #2c4762;
-}
-.tumblr a {
-  color: #2c4762;
-}
-.tumblr a:visited {
-  color: #2c4762;
-}
-
-.feed img,
-.feed embed {
-  width: 100% !important;
-  height: auto !important;
-}
-
-.date {
-  display: block;
-  padding-top: 5px;
-  font-size: .8em;
-  color: #555;
-  text-align: right;
-  text-decoration: none;
-}
-.date:visited {
-  color: #555;
-}
-
 .imprint,
 .contact {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
   color: #222;
-  padding: 20px;
   line-height: 1.3;
+}
+.imprint .section-content,
+.contact .section-content {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 .imprint h2,
 .contact h2 {
@@ -911,11 +831,15 @@ h3 a {
 .contact a:visited {
   color: #333;
 }
+.imprint:target,
+.contact:target {
+  display: block;
+}
 
-footer {
+.site-footer {
   padding: 50px;
 }
-footer p {
+.site-footer p {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
   text-align: center;
