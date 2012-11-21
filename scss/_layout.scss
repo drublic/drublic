@@ -51,9 +51,6 @@ h4 {
 
 h1, h2, h3 {
 	font-weight: normal;
-	-webkit-hyphens: manual;
-	   -moz-hyphens: manual;
-	        hyphens: manual;
 }
 
 
@@ -78,6 +75,10 @@ a {
 // Paragraph
 p {
 	margin: 0;
+}
+
+p + p {
+	margin-top: 1em;
 }
 
 
@@ -188,17 +189,15 @@ p {
 	a {
 		position: relative;
 		display: inline-block;
-		width: 48px; height: 48px;
+		width: 48px;
+		height: 48px;
+
 		background: url(../img/github.png) no-repeat;
 		background-size: 48px 48px;
 
 		margin-left: .5em;
 		text-indent: -999em;
 		text-align: left;
-
-		&:hover {
-			 -webkit-animation: jumper .5s 1;
-		}
 	}
 
 	.twitter a {
@@ -291,9 +290,8 @@ h3 {
 
 
 
-// Imprint & Contact
-.imprint,
-.contact {
+// Imprint
+.imprint {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -318,15 +316,6 @@ h3 {
 		padding: 20px;
 		background: #fff;
 		box-shadow: 0 0 30px rgba(0,0,0,.6);
-	}
-
-	h2 {
-		padding-bottom: .3em;
-		margin: 0 0 .5em;
-	}
-
-	h3 {
-		margin: .6em 0 0;
 	}
 
 	a, a:visited {
