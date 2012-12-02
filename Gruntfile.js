@@ -1,98 +1,60 @@
-/*globals module */
 module.exports = function (grunt) {
+
+	'use strict';
 
 	// Project configuration.
 	grunt.initConfig({
-		pkg: '<json:package.json>',
+		pkg: require('./package'),
 		meta: {
 			banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
 			'<%= grunt.template.today("yyyy-mm-dd") %> */'
 		},
 
-		jshint: {
-			all: ['Gruntfile.js', 'js/main.js'],
-			options: {
-				curly: true,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				newcap: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				boss: true,
-				eqnull: true,
-				browser: true
-			},
-			globals: {
-				jQuery: true,
-				window: true,
-				document: true
-			}
-		},
-
-		htmllint: {
-			all: ['index.html']
-		},
-
 		concat: {
-			deploy: {
-				src: [
-					// Remove jQuery if you don't want to include the local copy in your build
-					'js/vendor/jquery-1.7.2.min.js',
-					'js/plugins/log.js',
-					'js/main.js'
-				],
-				dest: 'public/js/main-<%= pkg.version %>.min.js'
+			index: {
+				src: ['partials/header.html', 'index.html', 'partials/footer.html'],
+				dest: 'dist/index.html'
+			},
+			resume: {
+				src: ['partials/header.html', 'resume.html', 'partials/footer.html'],
+				dest: 'dist/resume/index.html'
 			}
 		},
 
-		rubysass: {
+		sass: {
 			dev: {
 				options: {
 					unixNewlines: true,
 					style: 'expanded'
 				},
 				files: {
-					'css/main.css': 'scss/main.scss'
+					'dist/css/main.css': 'scss/main.scss'
 				}
-			},
-			deploy: {
-				options: {
-					style: 'compressed'
-				},
-				files: {
-					'public/css/main-<%= pkg.version %>.min.css': 'scss/main.scss'
-				}
-
-			}
-		},
-
-		min: {
-			deploy: {
-				src: ['<config_process:meta.banner>', '<config:concat.deploy.dest>'],
-				dest: 'public/js/main-<%= pkg.version %>.min.js'
 			}
 		},
 
 		watch: {
+
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: 'rubysass:dev'
+				tasks: 'sass'
+			},
+
+			concat: {
+				files: [
+					'*.html'
+				],
+				tasks: 'concat'
 			}
 		}
 	});
 
 	// Load some stuff
-	grunt.loadNpmTasks('grunt-sass');
-
-	// A task for development
-	grunt.registerTask('dev', 'rubysass:dev');
-
-	// A task for deployment
-	grunt.registerTask('deploy', 'concat rubysass:deploy min');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task
-	grunt.registerTask('default', 'concat rubysass:dev min');
+	grunt.registerTask('default', ['concat', 'sass']);
 
 };
