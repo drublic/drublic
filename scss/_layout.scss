@@ -1,6 +1,3 @@
-$color: #27aae2;
-
-
 html {
 	height: 100%;
 	background: #fff;
@@ -8,23 +5,8 @@ html {
 
 
 body {
-	color: #000;
+	color: $copy-color;
 	font: 15px/2 Helvetica Neue, Helvetica, sans-serif;
-
-	&:before {
-		content: 'Hey there! Please activate JavaScript in order to view this page.';
-		position: fixed; top: 0; left: 50%;
-		background: #fff1a8;
-		width: 400px;
-		margin-left: -200px; padding: 10px 20px 8px;
-		text-align: center; font-size: 1.1em; color: #111;
-		border-radius: 0 0 5px 5px;
-		box-shadow: 0 0 4px #000;
-
-		.js & {
-			display: none;
-		}
-	}
 }
 
 
@@ -56,11 +38,11 @@ h1, h2, h3 {
 
 // Links
 a {
-	color: #000;
+	color: $copy-color;
 	text-decoration: underline;
 
 	&:visited {
-		color: #000;
+		color: $copy-color;
 	}
 
 	&:hover {
@@ -85,7 +67,7 @@ p + p {
 
 // Button
 .button {
-	@include tag;
+	@extend %tag;
 
 	font-size: 1.3em;
 
@@ -95,22 +77,25 @@ p + p {
 }
 
 
-.hero {
+.site-logo {
 	background: $color;
-	padding: 100px 0;
+	padding: 20px 0;
 	text-align: center;
-}
 
-.site-logo a {
-	display: block;
-	width: 144px;
-	height: 144px;
-	background: url(../img/logo.png);
-	font-size: 8em;
-	line-height: 1;
-	margin: 0 auto;
-	text-indent: -300px;
-	overflow: hidden;
+	a {
+		display: block;
+		width: 225px;
+		height: 225px;
+
+		background: url(../img/logo.svg);
+		background-size: contain;
+
+		font-size: 8em;
+		line-height: 1;
+		margin: 0 auto;
+		text-indent: -400px;
+		overflow: hidden;
+	}
 }
 
 
@@ -130,23 +115,18 @@ p + p {
 	}
 
 	a {
-		@include tag;
+		@extend %tag;
 
 		padding: 10px 20px;
 		margin-left: 7px;
 
 		&:hover {
-			background-color: $color;
+			background: $color;
+			color: #fff;
 		}
 
 		&.visuallyhidden {
 			padding: 0;
-		}
-	}
-
-	.active {
-		a {
-			background: $color;
 		}
 	}
 }
@@ -154,7 +134,7 @@ p + p {
 
 // Header
 .site-claim {
-	margin: 20px 0 0;
+	margin: 0.3em 0 0;
 	font-size: 5em;
 	font-weight: normal;
 
@@ -174,60 +154,6 @@ p + p {
 
 
 
-
-// Social-Media-Links
-.social {
-	list-style: none;
-	margin: 1em;
-	text-align: center;
-	padding: 0;
-
-	li {
-		display: inline;
-	}
-
-	a {
-		position: relative;
-		display: inline-block;
-		width: 48px;
-		height: 48px;
-
-		background: url(../img/github.png) no-repeat;
-		background-size: 48px 48px;
-
-		margin-left: .5em;
-		text-indent: -999em;
-		text-align: left;
-	}
-
-	.twitter a {
-		background-image: url(../img/twitter.png);
-	}
-
-	.google a {
-		background-image: url(../img/google_plus.png);
-	}
-
-	.email a {
-		background-image: url(../img/email.png);
-	}
-
-	.lastfm a {
-		background-image: url(../img/lastfm.png);
-	}
-
-	.rss a {
-		background-image: url(../img/feed.png);
-	}
-
-	.zerply a {
-		background-image: url(../img/zerply.png);
-	}
-}
-
-
-
-
 // Main Content
 
 
@@ -235,7 +161,7 @@ p + p {
 
 // Headlines
 h2 {
-	border-bottom: 2px solid #ddd;
+	border-bottom: 1px solid #111;
 	margin: .5em 0;
 	font-size: 2em;
 	font-weight: normal;
@@ -259,13 +185,7 @@ h3 {
 .desc {
 	font-size: 1.2em;
 	line-height: 2em;
-}
-
-
-.outlinks {
-	overflow: hidden;
-	padding: 5em 0 3em;
-	text-align: center;
+	margin-bottom: 2em;
 }
 
 
@@ -288,11 +208,17 @@ h3 {
 }
 
 
+.hire-me {
+	margin: 3em 0;
+}
 
 
-// Imprint
-.imprint {
+
+// Overlay
+
+%overlay {
 	display: none;
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -309,13 +235,20 @@ h3 {
 		position: absolute;
 		top: 70px;
 		left: 50%;
-		margin-left: -300px;
+		margin-left: -320px;
 
 		width: 600px;
+		max-height: 80%;
+		overflow-x: auto;
 
 		padding: 20px;
+		border-radius: 2px;
 		background: #fff;
 		box-shadow: 0 0 30px rgba(0,0,0,.6);
+	}
+
+	h3 {
+		margin-top: 1em;
 	}
 
 	a, a:visited {
@@ -328,18 +261,84 @@ h3 {
 }
 
 
+.overlay-close {
+	position: absolute;
+	top: 45px;
+	left: 50%;
+	margin-left: 280px;
+
+	background: #fff;
+
+	border-radius: 2px;
+	padding: 2px 8px;
+
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+// Extending overlays
+.imprint,
+.contact {
+	@extend %overlay;
+}
+
+
 
 // Footer
 .site-footer {
-	padding: 50px;
+	max-width: 45em;
+	margin: 0 auto;
+	padding: 50px 0 20px;
+
+	text-align: center;
 
 	p {
 		font-family: Georgia, Times New Roman, serif;
 		font-style: italic;
+	}
+
+	.follow-me {
+		border-top: 1px solid #111;
+		padding: 50px 0;
 		text-align: center;
+	}
+
+}
+
+
+.work {
+	overflow: hidden;
+	margin: 0 -10px;
+
+	> * {
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 }
 
+.work-project {
+	@include x-box-sizing;
+
+	float: left;
+	display: inline;
+	width: 33.333%;
+	padding: 10px;
+	margin: 0;
+
+	> img {
+		display: block;
+		max-width: 100%;
+		height: 120px;
+		background: #f9f9f9;
+		border: 1px solid #ddd;
+		border-radius: 2px;
+		box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	> figcaption {
+		padding: 10px 5px 0;
+	}
+}
 
 
 

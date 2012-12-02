@@ -35,12 +35,14 @@
 		 box-sizing: $how;
 }
 
-@mixin tag {
+%tag {
 	display: inline-block;
 	padding: 0 11px;
 	text-decoration: none;
 	background: #000;
 	color: #fff;
+
+	border-radius: 2px;
 
 	&:visited {
 		color: #fff;

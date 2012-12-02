@@ -9,11 +9,8 @@ module.exports = function (grunt) {
 			'<%= grunt.template.today("yyyy-mm-dd") %> */'
 		},
 
-		lint: {
-			all: ['Gruntfile.js', 'js/main.js']
-		},
-
 		jshint: {
+			all: ['Gruntfile.js', 'js/main.js'],
 			options: {
 				curly: true,
 				eqeqeq: true,
@@ -28,7 +25,9 @@ module.exports = function (grunt) {
 				browser: true
 			},
 			globals: {
-				jQuery: true
+				jQuery: true,
+				window: true,
+				document: true
 			}
 		},
 
@@ -77,35 +76,23 @@ module.exports = function (grunt) {
 		},
 
 		watch: {
-			html: {
-				files: '<config:htmllint.all>',
-				tasks: 'htmllint'
-			},
-
 			scss: {
 				files: ['scss/**/*.scss'],
 				tasks: 'rubysass:dev'
-			},
-
-			js: {
-				files: '<config:lint.all>',
-				tasks: 'lint'
 			}
 		}
 	});
 
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-html');
-
 
 	// A task for development
-	grunt.registerTask('dev', 'lint htmllint rubysass:dev');
+	grunt.registerTask('dev', 'rubysass:dev');
 
 	// A task for deployment
-	grunt.registerTask('deploy', 'lint htmllint concat rubysass:deploy min');
+	grunt.registerTask('deploy', 'concat rubysass:deploy min');
 
 	// Default task
-	grunt.registerTask('default', 'lint htmllint concat rubysass:dev min');
+	grunt.registerTask('default', 'concat rubysass:dev min');
 
 };

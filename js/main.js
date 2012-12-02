@@ -6,21 +6,35 @@
  *
  */
 
+(function () {
 
-/*global jQuery, window, console, twttr */
-(function ($) {
-
-	"use strict";
+	'use strict';
 
 	var drublic = {};
 
 	drublic.settings = {
 	};
 
+	// Hide overlay when ESC is pressed
+	document.addEventListener('keyup', function (event) {
+		var hash = window.location.hash;
+
+		// If hash is not set
+		if (hash === '' || hash === "!") {
+			return;
+		}
+
+		// If key ESC is pressed
+		if (event.keyCode === 27) {
+			window.location.hash = '!';
+		}
+
+	}, false);
+
 
 	// Check if we are dealing with mobile
 	drublic.isMobile = function () {
-		return ( $(window).width() < 481 );
+		return ( window.innerWidth < 481 );
 	};
 
 
@@ -32,29 +46,4 @@
 	}
 
 
-	$(window).on('hashchange', function () {
-		var hash = window.location.hash.replace(/#\//, '');
-
-		// Add Class active
-		$('.nav').find('.active').removeClass('active');
-		$('.nav').find('a[href$="' + hash + '"]').parent().addClass('active');
-
-		// Clarify hash
-		$('.backdrop, .close').on('click', function () {
-			window.setTimeout( function () {
-				window.location.hash = '/home';
-			}, 0);
-		});
-
-	});
-
-	if (window.location.hash) {
-		window.setTimeout( function () {
-			$(window).trigger('hashchange');
-			$('a[href$="' + window.location.hash + '"]').trigger('click');
-		}, 0);
-	}
-
-
-
-}(jQuery));
+}());
