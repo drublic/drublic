@@ -31,8 +31,9 @@
 
 
 @mixin x-box-sizing ($how: border-box) {
-	-moz-box-sizing: $how;
-		 box-sizing: $how;
+	-webkit-box-sizing: $how;
+	   -moz-box-sizing: $how;
+	        box-sizing: $how;
 }
 
 %tag {
@@ -50,5 +51,17 @@
 
 	&:hover {
 		background: $color;
+	}
+}
+
+
+%clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
 	}
 }

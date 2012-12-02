@@ -1,0 +1,154 @@
+// Under 1024px, enable better scroll feeling
+@media screen and (max-width: 68em) {
+	body {
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+// Under ~700px needs some rework
+@media screen and (max-width: 44em) {
+	.site-claim {
+		font-size: 3.5em;
+	}
+
+	.desc {
+		font-size: 1em
+	}
+}
+
+// Under ~560px
+@media screen and (max-width: 35em) {
+	.site-logo {
+		padding: 1em 8em;
+
+		a {
+			max-width: 70%;
+			height: 0;
+			padding-top: 70%;
+		}
+	}
+
+	.site-navigation {
+		> ul {
+			display: none;
+
+			position: absolute;
+			right: 0;
+
+			min-width: 60%;
+			max-width: 100%;
+
+			margin: 2.6em 0 0;
+			padding: 0;
+			background: #111;
+			border-radius: 2px;
+			box-shadow: 0 0 30px rgba(0,0,0,.3);
+		}
+
+		li {
+			display: block;
+
+			> a {
+				display: block;
+				margin-left: 0;
+				background: none;
+			}
+		}
+
+		> .navigation-toggle {
+			display: block;
+
+			position: absolute;
+			right: 0;
+			font-size: 1.2em;
+			border-radius: 0 0 0 2px;
+			background: $color;
+			padding: 3px 15px;
+		}
+	}
+
+	.navigation-target {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+
+		&:target {
+			display: block;
+
+			~ .navigation-toggle {
+				background: #111;
+			}
+
+			~ ul {
+				display: block;
+			}
+		}
+	}
+
+	.work-project {
+		width: 100%;
+		padding: 10px;
+
+		> img {
+			float: left;
+			max-width: 45%;
+			margin-right: 1em
+		}
+
+		> figcaption {
+			padding: 0;
+		}
+	}
+}
+
+// Under 480px
+@media screen and (max-width: 32em) {
+	.site-logo {
+		padding: 0.5em 23%;
+	}
+
+	.site-claim {
+		line-height: 1.4;
+		margin-bottom: 0.5em;
+
+		span {
+			display: block;
+		}
+	}
+
+	.site-footer {
+		padding: 2em 2em 1em;
+
+		.follow-me {
+			padding: 2em 0;
+		}
+	}
+}
+
+// Under 360px
+@media screen and (max-width: 24em) {
+	.site-logo {
+		padding: 0.5em 10%;
+	}
+
+	.site-claim {
+		font-size: 2.8em;
+		margin-top: 0.8em;
+
+		span {
+			font-size: 0.5em;
+		}
+	}
+
+	.main,
+	.site-footer {
+		padding: 0 1em;
+	}
+
+	.work-project img {
+		margin-left: -0.5em;
+	}
+}

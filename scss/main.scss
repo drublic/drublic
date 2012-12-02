@@ -4,12 +4,5 @@
 
 @import "layout";
 
-// Tablets or so
-@import "tablet";
-
-// Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Browser, Android Chrome)
-@media screen and (max-width: 510px) {
-	@import "mobile";
-}
-
-
+// RWD
+@import "rwd";

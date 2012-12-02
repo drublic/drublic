@@ -12,9 +12,6 @@
 
 	var drublic = {};
 
-	drublic.settings = {
-	};
-
 	// Hide overlay when ESC is pressed
 	document.addEventListener('keyup', function (event) {
 		var hash = window.location.hash;
@@ -36,6 +33,15 @@
 	drublic.isMobile = function () {
 		return ( window.innerWidth < 481 );
 	};
+
+	// Check if svg capable
+	drublic.candoSvg = function () {
+		return !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
+	};
+
+	if (!drublic.candoSvg()) {
+		document.documentElement.className += ' no-svg';
+	}
 
 
 	// If on mobile, hide address bar
