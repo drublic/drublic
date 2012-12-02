@@ -22,6 +22,116 @@
 }
 
 /*
+ * Modal as reusable module
+ *
+ * Usage:
+ *    selector {
+ *        @extend %modal;
+ *    }
+ */
+/*
+ * Configuration
+ */
+.imprint,
+.contact {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  color: #222;
+  line-height: 1.3;
+}
+.imprint:target,
+.contact:target {
+  display: block;
+}
+.imprint .modal-inner,
+.contact .modal-inner {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -325px;
+  width: 650px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+.imprint .modal-header,
+.contact .modal-header {
+  border-bottom: 1px solid #dddddd;
+  padding: 0 20px;
+}
+.imprint .modal-header > h2,
+.contact .modal-header > h2 {
+  margin: 0.5em 0;
+}
+.imprint .modal-content,
+.contact .modal-content {
+  max-height: 400px;
+  border-bottom: 1px solid #dddddd;
+  padding: 15px 20px;
+  overflow-y: auto;
+}
+.imprint .modal-footer,
+.contact .modal-footer {
+  border-top: 1px solid white;
+  padding: 0 20px 18px;
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+.imprint .modal-close,
+.contact .modal-close {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: 285px;
+  background: #fff;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+@media screen and (max-width: 690px) {
+  .imprint .modal-inner,
+  .contact .modal-inner {
+    width: auto;
+    left: 20px;
+    right: 20px;
+    margin-left: 0;
+  }
+  .imprint .modal-close,
+  .contact .modal-close {
+    left: auto;
+    right: 33px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 30em) {
+  .imprint .modal-inner,
+  .contact .modal-inner {
+    top: 2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .imprint .modal-content,
+  .contact .modal-content {
+    max-height: none;
+  }
+  .imprint .modal-close,
+  .contact .modal-close {
+    top: 0.2em;
+    right: 1em;
+    font-size: 1.4em;
+  }
+}
+
+/*
  * HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
@@ -598,57 +708,9 @@ h3 a {
   margin: 3em 0;
 }
 
-.imprint,
-.contact {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.8);
-  color: #222;
-  line-height: 1.3;
-}
-.imprint .section-content,
-.contact .section-content {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  margin-left: -320px;
-  width: 600px;
-  max-height: 80%;
-  overflow-x: auto;
-  padding: 20px;
-  border-radius: 2px;
-  background: #fff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-}
-.imprint h3,
-.contact h3 {
-  margin-top: 1em;
-}
-.imprint a,
-.contact a, .imprint a:visited,
-.contact a:visited {
-  color: #333;
-}
-.imprint:target,
-.contact:target {
-  display: block;
-}
-
-.overlay-close {
-  position: absolute;
-  top: 45px;
-  left: 50%;
-  margin-left: 280px;
-  background: #fff;
-  border-radius: 2px;
-  padding: 2px 8px;
-  font-size: 1.2em;
-  text-decoration: none;
+.imprint h2,
+.contact h2 {
+  border-bottom: none;
 }
 
 .site-footer {
