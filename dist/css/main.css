@@ -546,11 +546,12 @@ td {
 html {
   height: 100%;
   background: #fff;
+  border-top: 7px solid #27aae2;
 }
 
 body {
   color: #111111;
-  font: 15px/2 Helvetica Neue, Helvetica, sans-serif;
+  font: 15px/2 Helvetica Neue, sans-serif;
 }
 
 h1 {
@@ -561,14 +562,20 @@ h2 {
   font-size: 2em;
   margin-top: 20px;
 }
+h1 + h2 {
+  margin-top: 0;
+}
 
 h3 {
   font-size: 1.5em;
   margin-top: 18px;
 }
 
-h4  {
-  font-size: 1.2em;
+h4 {
+  font-size: 1em;
+}
+h1 + h4 {
+  margin-top: 0;
 }
 
 h1, h2, h3 {
@@ -590,9 +597,15 @@ a:hover {
 p {
   margin: 0;
 }
-
 p + p {
   margin-top: 1em;
+}
+h2 + p {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 1.1em;
 }
 
 .button {
@@ -602,33 +615,12 @@ p + p {
   color: #fff;
 }
 
-.site-logo {
-  background: #27aae2;
-  padding: 20px 0;
-  text-align: center;
-}
-.site-logo a {
-  display: block;
-  width: 225px;
-  height: 225px;
-  background: url(../img/logo.svg);
-  background-size: contain;
-  font-size: 8em;
-  line-height: 1;
-  margin: 0 auto;
-  text-indent: -400px;
-  overflow: hidden;
-}
-.no-svg .site-logo a {
-  background-image: url(../img/logo.png);
-}
-
 .site-navigation {
   max-width: 45em;
   margin: 0 auto;
 }
 .site-navigation ul {
-  margin: 50px 0 0;
+  margin: 2em 0 0;
   padding: 0 2em;
   text-align: center;
 }
@@ -645,6 +637,23 @@ p + p {
 }
 .site-navigation a.visuallyhidden {
   padding: 0;
+}
+.site-navigation .site-logo {
+  padding: 0;
+  text-align: center;
+}
+.site-navigation .site-logo a {
+  background: #27aae2;
+  width: 2em;
+  height: 2em;
+  padding: 10px;
+  background: url(../img/logo.svg);
+  background-size: contain;
+  text-indent: -100px;
+  overflow: hidden;
+}
+.no-svg .site-navigation .site-logo a {
+  background-image: url(../img/logo.png);
 }
 .site-navigation .navigation-target,
 .site-navigation .navigation-toggle {
@@ -758,6 +767,11 @@ h3 a {
 }
 .work-project > figcaption {
   padding: 10px 5px 0;
+}
+
+.resume-header > h1 {
+  margin: 1em 0 0;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 68em) {
