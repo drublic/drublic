@@ -788,23 +788,15 @@ h3 a {
     font-size: 1em;
   }
 }
-@media screen and (max-width: 35em) {
-  .site-logo {
-    padding: 1em 8em;
-  }
-  .site-logo a {
-    max-width: 70%;
-    height: 0;
-    padding-top: 70%;
-  }
-
+@media screen and (max-width: 38em) {
   .site-navigation > ul {
     display: none;
     position: absolute;
+    top: 3.2em;
     right: 0;
     min-width: 60%;
     max-width: 100%;
-    margin: 2.6em 0 0;
+    margin: 0;
     padding: 0;
     background: #111;
     border-radius: 2px;
@@ -818,9 +810,18 @@ h3 a {
     margin-left: 0;
     background: none;
   }
+  .site-navigation .site-logo a {
+    width: auto;
+    background-repeat: no-repeat;
+    background-color: #27aae2;
+    background-position: center center;
+    text-indent: -999px;
+    border-radius: 2px;
+  }
   .site-navigation > .navigation-toggle {
     display: block;
     position: absolute;
+    top: 7px;
     right: 0;
     font-size: 1.2em;
     border-radius: 0 0 0 2px;
@@ -838,9 +839,6 @@ h3 a {
   }
   .navigation-target:target {
     display: block;
-  }
-  .navigation-target:target ~ .navigation-toggle {
-    background: #111;
   }
   .navigation-target:target ~ ul {
     display: block;
@@ -860,10 +858,6 @@ h3 a {
   }
 }
 @media screen and (max-width: 32em) {
-  .site-logo {
-    padding: 0.5em 23%;
-  }
-
   .site-claim {
     line-height: 1.4;
     margin-bottom: 0.5em;
@@ -880,10 +874,6 @@ h3 a {
   }
 }
 @media screen and (max-width: 24em) {
-  .site-logo {
-    padding: 0.5em 10%;
-  }
-
   .site-claim {
     font-size: 2.8em;
     margin-top: 0.8em;
