@@ -80,7 +80,7 @@
 
 			<a href="#!" class="navigation-target" id="navigation"></a>
 			<ul>
-				<li class="site-logo"><a href="http://drublic.de/" title="Go to the home page">∆</a></li>
+				<li class="site-logo"><a href="<?php print base_url(); ?>" title="Go to the home page">∆</a></li>
 				<li><a href="<?php print base_url(); ?>resume/" title="My official résumé">Résumé</a></li>
 				<li><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li>
 				<li><a href="<?php print base_url(); ?>#work" title="View some of the work I do">Work</a></li>
