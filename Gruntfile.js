@@ -12,12 +12,12 @@ module.exports = function (grunt) {
 
 		concat: {
 			index: {
-				src: ['partials/header.html', 'index.html', 'partials/footer.html'],
-				dest: 'dist/index.html'
+				src: ['partials/header.php', 'partials/index.php', 'partials/footer.php'],
+				dest: 'dist/index.php'
 			},
 			resume: {
-				src: ['partials/header.html', 'resume.html', 'partials/footer.html'],
-				dest: 'dist/resume/index.html'
+				src: ['partials/header.php', 'partials/resume.php', 'partials/footer.php'],
+				dest: 'dist/resume/index.php'
 			}
 		},
 
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 
 			concat: {
 				files: [
-					'*.html'
+					'partials/*.php',
 				],
 				tasks: 'concat'
 			}

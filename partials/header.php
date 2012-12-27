@@ -1,3 +1,14 @@
+<?php
+	$dev = $_SERVER['HTTP_HOST'] == "drublic.de";
+
+	function base_url () {
+		if ($dev) {
+			return "http://drublic.de/";
+		} else {
+			return "http://localhost/vc/dist/";
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +41,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="<?php print base_url(); ?>css/main.css">
 
 	<!-- Meta-Tagging -->
 	<meta name="description" content="drublic - Hans Christian Reinl - Front-end
@@ -50,10 +61,10 @@
 			Flipthemes">
 	<meta name="application-name" content="drublic">
 
-	<link rel="canonical" href="http://drublic.de/">
+	<link rel="canonical" href="<?php print base_url(); ?>">
 	<link rel="index" title="drublic - State of the Art Webdesign -
 			HTML, CSS, JavaScript – Hans Christian Reinl"
-			href="http://drublic.de/">
+			href="<?php print base_url(); ?>">
 
 	<!--[if lt IE9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -70,11 +81,11 @@
 			<a href="#!" class="navigation-target" id="navigation"></a>
 			<ul>
 				<li class="site-logo"><a href="http://drublic.de/" title="Go to the home page">∆</a></li>
-				<li><a href="resume/" title="My official résumé">Résumé</a></li>
-				<li><a href="blog/" title="Get some cutting edge goodness">Blog</a></li>
-				<li><a href="#work" title="View some of the work I do">Work</a></li>
-				<li><a href="#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
-				<li><a href="#contact" title="Contact me if you have any questions">Contact</a></li>
+				<li><a href="<?php print base_url(); ?>resume/" title="My official résumé">Résumé</a></li>
+				<li><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li>
+				<li><a href="<?php print base_url(); ?>#work" title="View some of the work I do">Work</a></li>
+				<li><a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
+				<li><a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
 
 			<a href="#navigation" class="navigation-toggle">☰</a>

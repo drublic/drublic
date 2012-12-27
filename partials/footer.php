@@ -14,7 +14,7 @@
 
 
 	<!-- JavaScript at the bottom for fast page loading -->
-	<script src="js/main.js"></script>
+	<script src="<?php print base_url(); ?>js/main.js"></script>
 
 	<!-- Wufoo form -->
 	<script>
