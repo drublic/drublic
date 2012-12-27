@@ -774,6 +774,48 @@ h3 a {
   line-height: 1.2;
 }
 
+/**
+ * Social Media Links
+ */
+.social-media-links {
+  list-style: none;
+  margin: 1.3em 0 0;
+  padding-left: 0;
+  text-align: center;
+}
+.social-media-links:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+.social-media-links li {
+  display: inline;
+}
+.social-media-links a {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 7px;
+  border-radius: 2px;
+  text-indent: -200px;
+  overflow: hidden;
+  background: #111111 url(../img/github.png);
+  background-size: 32px;
+}
+.social-media-links a:hover {
+  background-color: #27aae2;
+}
+.social-media-links .twitter a {
+  background-image: url(../img/twitter.png);
+}
+.social-media-links .google-plus a {
+  background-image: url(../img/google-plus.png);
+}
+.social-media-links .rss a {
+  background-image: url(../img/feed.png);
+}
+
 @media screen and (max-width: 68em) {
   body {
     -webkit-overflow-scrolling: touch;

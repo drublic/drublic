@@ -1,0 +1,52 @@
+/**
+ * Social Media Links
+ */
+
+$smWidth: 32px;
+
+.social-media-links {
+	list-style: none;
+	margin: 1.3em 0 0;
+	padding-left: 0;
+	text-align: center;
+
+	&:before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	li {
+		display: inline;
+	}
+
+	a {
+		position: relative;
+		display: inline-block;
+
+		width: $smWidth;
+		height: $smWidth;
+
+		margin-right: 7px;
+		border-radius: 2px;
+
+		text-indent: -200px;
+		overflow: hidden;
+		background: #111 url(../img/github.png);
+		background-size: $smWidth;
+
+		&:hover {
+			background-color: $color;
+		}
+	}
+
+	.twitter a {
+		background-image: url(../img/twitter.png);
+	}
+	.google-plus a {
+		background-image: url(../img/google-plus.png);
+	}
+	.rss a {
+		background-image: url(../img/feed.png);;
+	}
+}
