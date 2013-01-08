@@ -123,7 +123,7 @@
 
 		<figure class="work-project">
 			<img src="work/tng.png" alt="The Nitty Gritty">
-			<figcaption><a href="http://workingdraft.de/">The Nitty Gritty</a> is a blog for web developers with a deep technical understanding. With my friend <a href="http://kahlil.co/">Kahlil</a> I maintain it.</figcaption>
+			<figcaption><a href="http://thenittygritty.co/">The Nitty Gritty</a> is a blog for web developers with a deep technical understanding. With my friend <a href="http://kahlil.co/">Kahlil</a> I maintain it.</figcaption>
 		</figure>
 
 		<figure class="work-project">
