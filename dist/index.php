@@ -2,6 +2,8 @@
 	$dev = $_SERVER['HTTP_HOST'] == "drublic.de";
 
 	function base_url () {
+		global $dev;
+
 		if ($dev) {
 			return "http://drublic.de/";
 		} else {
