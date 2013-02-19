@@ -15,12 +15,18 @@
 		font-size: 13px;
 	}
 
+	.site-header,
+	.site-footer {
+		display: none;
+	}
+
 	a[href]:after {
 		content: " (" attr(href) ")";
 	}
 
 	// Don't show links for images, or javascript/internal links
-	a[href^="#"]:after {
+	a[href^="#"]:after,
+	a[href^="mailto:"]:after {
 		content: "";
 	}
 
