@@ -63,10 +63,10 @@
 
 
 <!-- Contact -->
-<section class="contact" id="contact">
+<section class="contact" id="contact" tabindex="-1" role="dialog" aria-labelledby="contact-label" aria-hidden="true">
 	<div class="modal-inner">
-		<header class="modal-header">
-			<h2>Contact</h2>
+		<header>
+			<h2 id="contact-label">Contact</h2>
 		</header>
 
 		<div class="modal-content" id="wufoo-z7x3k7">
@@ -74,15 +74,15 @@
 		</div>
 	</div>
 
-	<a href="#!" class="modal-close" title="Close this modal">&times;</a>
+	<a href="#!" class="modal-close" title="Close this modal" data-dismiss="modal" aria-hidden="true">&times;</a>
 </section>
 
 
 <!-- Imprint -->
-<section class="imprint" id="imprint">
+<section class="imprint" id="imprint" tabindex="-1" role="dialog" aria-labelledby="imprint-label" aria-hidden="true">
 	<div class="modal-inner">
-		<header class="modal-header">
-			<h2>Imprint</h2>
+		<header>
+			<h2 id="imprint-label">Imprint</h2>
 		</header>
 
 		<div class="modal-content">
@@ -112,5 +112,5 @@
 		</div>
 	</div>
 
-	<a href="#!" class="modal-close" title="Close this modal">&times;</a>
+	<a href="#!" class="modal-close" title="Close this modal" data-dismiss="modal" aria-hidden="true">&times;</a>
 </section>

@@ -21,7 +21,14 @@
   clear: both;
 }
 
-/*
+/**
+ * @include x-multiple-backgrounds(
+ *	rgba(0, 0, 0, 0.3),
+ *	url('../img/someImage.png') no-repeat,
+ *	('to bottom', #ddd, #aaa, #ddd)
+ * );
+ */
+/**
  * Modal as reusable module
  *
  * Usage:
@@ -32,68 +39,138 @@
 /*
  * Configuration
  */
+html {
+  overflow-y: scroll;
+}
+
+.has-overlay {
+  height: 100%;
+}
+.has-overlay > body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
 .imprint,
 .contact {
-  display: none;
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
   color: #222;
   line-height: 1.3;
+  display: none\9;
 }
 .imprint:target,
 .contact:target {
-  display: block;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.is-active.imprint,
+.is-active.contact {
+  display: block\9;
 }
 .imprint .modal-inner,
 .contact .modal-inner {
   position: absolute;
   top: 50px;
   left: 50%;
+  z-index: 20;
   margin-left: -325px;
   width: 650px;
+  overflow-x: hidden;
   border-radius: 2px;
   background: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
-.imprint .modal-header,
-.contact .modal-header {
-  border-bottom: 1px solid #dddddd;
-  padding: 0 20px;
+.imprint .modal-inner > img,
+.contact .modal-inner > img,
+.imprint .modal-inner > video,
+.contact .modal-inner > video,
+.imprint .modal-inner > iframe,
+.contact .modal-inner > iframe {
+  width: 100%;
+  height: auto;
 }
-.imprint .modal-header > h2,
-.contact .modal-header > h2 {
+.imprint .modal-inner > img,
+.contact .modal-inner > img {
+  width: auto;
+  max-width: 100%;
+}
+.imprint header,
+.contact header {
+  border-bottom: 1px solid #dddddd;
+  padding: 0 1.2em;
+}
+.imprint header > h2,
+.contact header > h2 {
   margin: 0.5em 0;
 }
 .imprint .modal-content,
 .contact .modal-content {
   max-height: 400px;
+  max-height: 70vh;
   border-bottom: 1px solid #dddddd;
-  padding: 15px 20px;
+  padding: 15px 1.2em;
+  overflow-x: hidden;
   overflow-y: auto;
 }
-.imprint .modal-footer,
-.contact .modal-footer {
+.imprint .modal-content > *,
+.contact .modal-content > * {
+  max-width: 100%;
+}
+.imprint footer,
+.contact footer {
   border-top: 1px solid white;
-  padding: 0 20px 18px;
+  padding: 0 1.2em 18px;
   background: #f0f0f0;
   border-radius: 2px;
 }
 .imprint .modal-close,
 .contact .modal-close {
+  display: block;
+  text-indent: -100px;
+  overflow: hidden;
+}
+.imprint .modal-close:before,
+.contact .modal-close:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AAAAAMwA0QDNTiUx4gAAAABJRU5ErkJggg==");
+}
+.imprint .modal-close:after,
+.contact .modal-close:after {
+  content: '×';
   position: absolute;
   top: 25px;
   left: 50%;
+  z-index: 20;
   margin-left: 285px;
   background: #fff;
   border-radius: 2px;
   padding: 2px 8px;
   font-size: 1.2em;
   text-decoration: none;
+  text-indent: 0;
 }
 @media screen and (max-width: 690px) {
   .imprint .modal-inner,
@@ -109,15 +186,69 @@
     right: 33px;
     margin-left: 0;
   }
+  .imprint .modal-close:after,
+  .contact .modal-close:after {
+    margin-left: 40%;
+  }
 }
 @media screen and (max-width: 30em) {
-  .imprint .modal-inner,
-  .contact .modal-inner {
-    top: 2em;
+  .imprint,
+  .contact {
+    -webkit-transform: translate(0, 400px);
+    -moz-transform: translate(0, 400px);
+    -o-transform: translate(0, 400px);
+    -ms-transform: translate(0, 400px);
+    transform: translate(0, 400px);
+    -webkit-transition: -webkit-transform 0.25s ease-in-out, opacity 1ms 0.25s;
+    -moz-transition: -moz-transform 0.25s ease-in-out, opacity 1ms 0.25s;
+    -o-transition: -o-transform 0.25s ease-in-out, opacity 1ms 0.25s;
+    -ms-transition: -ms-transform 0.25s ease-in-out, opacity 1ms 0.25s;
+    transition: transform 0.25s ease-in-out, opacity 1ms 0.25s;
+    display: block;
+    height: 100%;
+    bottom: auto;
+  }
+  .imprint:target,
+  .contact:target {
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -moz-transform 0.25s ease-in-out;
+    -o-transition: -o-transform 0.25s ease-in-out;
+    -ms-transition: -ms-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+  }
+  .imprint:before,
+  .contact:before {
+    background-color: #27aae2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#27aae2), to(#1c9cd3));
+    background-image: -webkit-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: -moz-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: -ms-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: -o-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: linear-gradient(to bottom, #27aae2, #1c9cd3);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    content: '';
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    overflow-y: auto;
+    z-index: 30;
+    height: 3em;
+    background-color: transparent;
+    /* Chrome Canary 26.0.1386.0 Bug */
+  }
+  .imprint .modal-inner,
+  .contact .modal-inner {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 3em;
+    height: 100%;
+    overflow: auto;
+    box-shadow: none;
   }
   .imprint .modal-content,
   .contact .modal-content {
@@ -125,9 +256,44 @@
   }
   .imprint .modal-close,
   .contact .modal-close {
-    top: 0.2em;
-    right: 1em;
-    font-size: 1.4em;
+    right: auto;
+  }
+  .imprint .modal-close:before,
+  .contact .modal-close:before {
+    display: none;
+  }
+  .imprint .modal-close:after,
+  .contact .modal-close:after {
+    content: 'Close';
+    top: 0.4em;
+    left: 1em;
+    z-index: 40;
+    margin-left: 0;
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+}
+@media screen and (max-height: 46em) and (min-width: 30em) {
+  .imprint .modal-content,
+  .contact .modal-content {
+    max-height: 340px;
+    max-height: 50vh;
+  }
+}
+@media screen and (max-height: 36em) and (min-width: 30em) {
+  .imprint .modal-content,
+  .contact .modal-content {
+    max-height: 265px;
+    max-height: 40vh;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .imprint,
+  .contact {
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
   }
 }
 
@@ -269,7 +435,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -295,7 +461,7 @@ code,
 kbd,
 samp {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
+  _font-family: "courier new", monospace;
   font-size: 1em;
 }
 
@@ -676,8 +842,8 @@ ul {
 }
 
 h2 {
-  border-bottom: 1px solid #111;
-  margin: .5em 0;
+  border-bottom: 1px solid #111111;
+  margin: 0.5em 0;
   font-size: 2em;
   font-weight: normal;
 }
@@ -687,7 +853,7 @@ h2 a {
 
 h3 {
   font-size: 1.2em;
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 h3 a {
   text-decoration: none;
@@ -733,7 +899,7 @@ h3 a {
   font-style: italic;
 }
 .site-footer .follow-me {
-  border-top: 1px solid #111;
+  border-top: 1px solid #111111;
   padding: 50px 0;
   text-align: center;
 }
@@ -761,7 +927,7 @@ h3 a {
   max-width: 100%;
   height: auto;
   background: #f9f9f9;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 2px;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
 }
@@ -939,7 +1105,7 @@ h3 a {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
   }
 
   html {

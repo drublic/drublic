@@ -240,7 +240,7 @@ h3 {
 // Extending overlays
 .imprint,
 .contact {
-	@extend %modal;
+	@extend %modal-fade;
 
 	h2 {
 		border-bottom: none;
