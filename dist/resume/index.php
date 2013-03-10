@@ -194,7 +194,7 @@
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 
-		<p>Made in with love. 2012. Freiburg, Germany. <a href="<?php print base_url(); ?>#imprint" title="Who does this stuff?">Legal</a>.</p>
+		<p>Made with love. 2012. Freiburg, Germany. <a href="<?php print base_url(); ?>#imprint" title="Who does this stuff?">Legal</a>.</p>
 
 		<ul class="social-media-links">
 			<li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
