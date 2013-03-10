@@ -734,7 +734,6 @@ h1 + h2 {
 
 h3 {
   font-size: 1.5em;
-  margin-top: 18px;
 }
 
 h4 {
@@ -854,7 +853,7 @@ h2 a {
 
 h3 {
   font-size: 1.2em;
-  margin: 0 0 0.5em;
+  margin: 1em 0 0.5em;
 }
 h3 a {
   text-decoration: none;
