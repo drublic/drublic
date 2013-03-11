@@ -199,22 +199,22 @@ html {
     -o-transform: translate(0, 400px);
     -ms-transform: translate(0, 400px);
     transform: translate(0, 400px);
-    -webkit-transition: -webkit-transform 0.25s ease-in-out, opacity 1ms 0.25s;
-    -moz-transition: -moz-transform 0.25s ease-in-out, opacity 1ms 0.25s;
-    -o-transition: -o-transform 0.25s ease-in-out, opacity 1ms 0.25s;
-    -ms-transition: -ms-transform 0.25s ease-in-out, opacity 1ms 0.25s;
-    transition: transform 0.25s ease-in-out, opacity 1ms 0.25s;
+    -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
+    -moz-transition: -moz-transform .25s ease-in-out, opacity 1ms .25s;
+    -o-transition: -o-transform .25s ease-in-out, opacity 1ms .25s;
+    -ms-transition: -ms-transform .25s ease-in-out, opacity 1ms .25s;
+    transition: transform .25s ease-in-out, opacity 1ms .25s;
     display: block;
     height: 100%;
     bottom: auto;
   }
   .imprint:target,
   .contact:target {
-    -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    -moz-transition: -moz-transform 0.25s ease-in-out;
-    -o-transition: -o-transform 0.25s ease-in-out;
-    -ms-transition: -ms-transform 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    -moz-transition: -moz-transform .25s ease-in-out;
+    -o-transition: -o-transform .25s ease-in-out;
+    -ms-transition: -ms-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
   }
   .imprint:before,
   .contact:before {
@@ -435,7 +435,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -461,7 +461,7 @@ code,
 kbd,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
@@ -842,8 +842,8 @@ ul {
 }
 
 h2 {
-  border-bottom: 1px solid #111111;
-  margin: 0.5em 0;
+  border-bottom: 1px solid #111;
+  margin: .5em 0;
   font-size: 2em;
   font-weight: normal;
 }
@@ -853,7 +853,7 @@ h2 a {
 
 h3 {
   font-size: 1.2em;
-  margin: 1em 0 0.5em;
+  margin: 1em 0 .5em;
 }
 h3 a {
   text-decoration: none;
@@ -899,7 +899,7 @@ h3 a {
   font-style: italic;
 }
 .site-footer .follow-me {
-  border-top: 1px solid #111111;
+  border-top: 1px solid #111;
   padding: 50px 0;
   text-align: center;
 }
@@ -927,7 +927,7 @@ h3 a {
   max-width: 100%;
   height: auto;
   background: #f9f9f9;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-radius: 2px;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
 }
@@ -1105,7 +1105,7 @@ h3 a {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
   }
 
   html {
