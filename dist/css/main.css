@@ -10,7 +10,7 @@
   color: #fff;
 }
 .button:hover, .site-navigation a:hover {
-  background: #27aae2;
+  background-color: #27aae2;
 }
 
 .work:before, .work:after {
@@ -798,7 +798,7 @@ ul {
   margin-left: 7px;
 }
 .site-navigation a:hover {
-  background: #27aae2;
+  background-color: #27aae2;
   color: #fff;
 }
 .site-navigation a.visuallyhidden {
@@ -1031,10 +1031,13 @@ h3 a {
     position: absolute;
     top: 7px;
     right: 0;
-    font-size: 1.2em;
+    width: 32px;
+    height: 32px;
     border-radius: 0 0 0 2px;
-    background: #27aae2;
-    padding: 3px 15px;
+    background: #27aae2 url(../img/navigation.svg) no-repeat 50% 50%;
+    padding: 4px 4px 4px 5px;
+    text-indent: -200px;
+    overflow: hidden;
   }
 
   .navigation-target {

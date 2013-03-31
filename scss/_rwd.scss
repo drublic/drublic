@@ -61,10 +61,15 @@
 			position: absolute;
 			top: 7px;
 			right: 0;
-			font-size: 1.2em;
+
+			width: 32px;
+			height: 32px;
+
 			border-radius: 0 0 0 2px;
-			background: $color;
-			padding: 3px 15px;
+			background: $color url(../img/navigation.svg) no-repeat 50% 50%;
+			padding: 4px 4px 4px 5px;
+			text-indent: -200px;
+			overflow: hidden;
 		}
 	}
 
