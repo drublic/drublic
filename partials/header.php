@@ -68,7 +68,7 @@
 			HTML, CSS, JavaScript – Hans Christian Reinl"
 			href="<?php print base_url(); ?>">
 
-	<!--[if lt IE9]>
+	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 

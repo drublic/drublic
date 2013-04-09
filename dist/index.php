@@ -7,7 +7,7 @@
 		if ($dev) {
 			return "http://drublic.de/";
 		} else {
-			return "http://192.168.178.94/vc/dist/";
+			return "http://localhost/vc/dist/";
 		}
 	}
 ?>
