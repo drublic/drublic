@@ -30,7 +30,7 @@
 		<p>I contribute to Open Source Software with a lot of smart people.</p>
 
 		<ul>
-			<li>Core developer of <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, a solid front-end template to start projects with. It is <a href="https://github.com/h5bp/html5-boilerplate/wiki/sites">wildly used worldwide</a>.</li>
+			<li>Core developer of <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, a solid front-end template to start projects with. It is <a href="https://github.com/h5bp/html5-boilerplate/wiki/sites">widely used worldwide</a>.</li>
 			<li>Co-host of the weekly web-development and web-news podcast <a href="http://workingdraft.de/">Working Draft</a>.</li>
 			<li>Contributions to the core of the enterprise content management system <a href="http://typo3.org/">TYPO3 CMS</a>.</li>
 			<li>Developed <a href="https://github.com/drublic/init">init</a>, an extension to HTML5 Boilerpalte with more structure for SCSS files and JavaScript, built upon Grunt.js.</li>
