@@ -5,19 +5,15 @@ module.exports = function (grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: require('./package'),
-		meta: {
-			banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-			'<%= grunt.template.today("yyyy-mm-dd") %> */'
-		},
 
-		concat: {
-			index: {
-				src: ['partials/header.php', 'partials/index.php', 'partials/footer.php'],
-				dest: 'dist/index.php'
-			},
-			resume: {
-				src: ['partials/header.php', 'partials/resume.php', 'partials/footer.php'],
-				dest: 'dist/resume/index.php'
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'dist/js/main.js'
+			],
+
+			options: {
+				jshintrc: '.jshintrc'
 			}
 		},
 
@@ -40,16 +36,18 @@ module.exports = function (grunt) {
 				tasks: 'sass'
 			},
 
-			concat: {
+			js: {
 				files: [
-					'partials/*.php',
+					'Gruntfile.js',
+					'dist/js/main.js'
 				],
-				tasks: 'concat'
+				tasks: 'jshint'
 			}
 		}
 	});
 
 	// Load some stuff
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
