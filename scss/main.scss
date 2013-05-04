@@ -1,7 +1,12 @@
 @import "variables";
-@import "mixins";
+
+
+// Include helpers
+@import "helpers/mixins";
+@import "helpers/normalize";
+@import "helpers/h5bp";
+
 @import "modal";
-@import "common";
 
 @import "layout";
 @import "social-media-links";
