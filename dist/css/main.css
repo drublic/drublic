@@ -922,6 +922,7 @@ h3 a {
   padding: 10px;
   margin: 0;
 }
+.work-project > a > img,
 .work-project > img {
   display: block;
   max-width: 100%;
@@ -933,6 +934,38 @@ h3 a {
 }
 .work-project > figcaption {
   padding: 10px 5px 0;
+}
+
+.work-content {
+  -webkit-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-top: 16px;
+  margin-top: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: #eee;
+}
+.work-content > span {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  border-width: 0 15px 15px 15px;
+  border-style: solid;
+  border-color: #eeeeee transparent;
+}
+.work-project:target .work-content {
+  height: 300px;
+}
+.work-content .content-wrap {
+  padding: 16px;
+  padding: 1rem;
+  max-width: 45em;
+  margin: 0 auto;
 }
 
 .resume-header > h1 {

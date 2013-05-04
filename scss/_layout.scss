@@ -291,6 +291,7 @@ h3 {
 	padding: 10px;
 	margin: 0;
 
+	> a > img,
 	> img {
 		display: block;
 		max-width: 100%;
@@ -303,6 +304,39 @@ h3 {
 
 	> figcaption {
 		padding: 10px 5px 0;
+	}
+}
+
+.work-content {
+	@include x-transition(height 0.5s);
+	@include x-box-shadow(inset 0 0 5px rgba(0,0,0,0.3));
+	@include x-rem(margin-top, 1);
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0;
+
+	background: #eee;
+
+	> span {
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		border-width: 0 15px 15px 15px;
+		border-style: solid;
+		border-color: #eee transparent;
+	}
+
+	.work-project:target & {
+		height: 300px;
+	}
+
+	.content-wrap {
+		@include x-rem(padding, 1);
+
+		max-width: 45em;
+		margin: 0 auto;
 	}
 }
 

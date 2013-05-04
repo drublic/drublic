@@ -5,9 +5,9 @@
 		global $dev;
 
 		if ($dev) {
-			return "http://drublic.de/";
+			return "//drublic.de/";
 		} else {
-			return "http://192.168.178.94/vc/dist/";
+			return "//localhost/vc/dist/";
 		}
 	}
 ?>
@@ -111,10 +111,16 @@
 	<section class="work" id="work">
 		<h2>Work I do</h2>
 
-		<figure class="work-project">
-			<img src="work/html5bp.png" alt="HTML5 Boilerplate">
-			<figcaption>I am a member of the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> developer&#8217;s team. It is the web&#8217;s most popular front-end template.</figcaption>
-		</figure>
+		<div class="work-project" id="work-h5bp">
+			<a href="#work-h5bp" title="HTML5 Boilerplate"><img src="work/html5bp.png" alt="HTML5 Boilerplate"></a>
+
+			<div class="work-content">
+				<span class="arrow"></span>
+				<div class="content-wrap">
+					<p>I am a member of the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> developer&#8217;s team. It is the web&#8217;s most popular front-end template.
+				</div>
+			</div>
+		</div>
 
 		<figure class="work-project">
 			<img src="work/wd.png" alt="Working Draft">
