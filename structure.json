@@ -8,5 +8,10 @@
 		"title": "Résumé",
 		"action": "resume",
 		"content": "content/resume.html"
+	},
+	{
+		"title": "Error",
+		"action": "error",
+		"content": "content/error.html"
 	}
 ]
