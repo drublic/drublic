@@ -99,7 +99,6 @@
 			$title = $page->title;
 		}
 
-
 		if ($print) {
 			print $title;
 		} else {
@@ -123,14 +122,14 @@
 
 
 	// Function to get all posts
-	function get_posts () {
+	function get_posts ($page, $postcount) {
 		include('../lib/markdown.php');
 		include('../lib/post.php');
 		include('../lib/posts.php');
 
-		$posts = new Posts;
+		$posts = new Posts($page, $postcount);
 
-		return $posts->posts;
+		return $posts->paginated_posts;
 	}
 
 

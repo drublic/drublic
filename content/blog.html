@@ -1,6 +1,10 @@
+<?php
+	$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+	$posts = get_posts($page, 10);
+?>
 <div id="main" class="main" role="main">
 	<?php
-		foreach (get_posts() as $post) {
+		foreach ($posts as $post) {
 	?>
 
 		<article class="blog-post">
