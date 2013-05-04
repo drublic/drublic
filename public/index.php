@@ -11,9 +11,10 @@
 
 	// Generate base url
 	function base_url ($print = true) {
+		global $environment;
 
 		if ($environment == 'dev') {
-			$base = '//192.168.178.94/vc/dist/';
+			$base = '//192.168.178.94/vc/public/';
 		} else {
 			$base = '//drublic.de/';
 		}

@@ -3,5 +3,10 @@
 		"title": "Homepage",
 		"action": "index",
 		"content": "content/index.html"
+	},
+	{
+		"title": "Résumé",
+		"action": "resume",
+		"content": "content/resume.html"
 	}
 ]

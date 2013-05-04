@@ -6,8 +6,8 @@ html {
 
 
 body {
+	font: 16px/1.5 Helvetica Neue, sans-serif;
 	color: $copy-color;
-	font: 15px/1.7 Helvetica Neue, sans-serif;
 }
 
 
@@ -107,6 +107,13 @@ ul {
 
 	li {
 		display: inline;
+
+		&.is-active {
+			a {
+				background-color: $color;
+				color: #fff;
+			}
+		}
 	}
 
 	a {
@@ -170,7 +177,7 @@ ul {
 
 
 .main {
-	max-width: 45em;
+	max-width: 50em;
 	margin: 0 auto;
 	padding: 0 2em;
 }
@@ -251,9 +258,9 @@ h3 {
 
 // Footer
 .site-footer {
-	max-width: 45em;
+	max-width: 50em;
 	margin: 0 auto;
-	padding: 50px 2em 20px;
+	@include x-rem(padding, 3 2 1);
 
 	text-align: center;
 
@@ -273,22 +280,21 @@ h3 {
 
 .work {
 	@extend %clearfix;
-
-	margin: 0 -10px;
+	@include x-rem(margin, 0 -0.75);
 
 	> * {
-		margin-left: 10px;
-		margin-right: 10px;
+		@include x-rem(margin-left, 0.75);
+		@include x-rem(margin-right, 0.75);
 	}
 }
 
 .work-project {
 	@include x-box-sizing;
+	@include x-rem(padding, 0.75);
 
 	float: left;
 	display: inline;
 	width: 33.333%;
-	padding: 10px;
 	margin: 0;
 
 	> img {
@@ -302,7 +308,7 @@ h3 {
 	}
 
 	> figcaption {
-		padding: 10px 5px 0;
+		@include x-rem(padding, 0.75 0.5 0);
 	}
 }
 

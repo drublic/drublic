@@ -716,8 +716,8 @@ html {
 }
 
 body {
+  font: 16px/1.5 Helvetica Neue, sans-serif;
   color: #222222;
-  font: 15px/1.7 Helvetica Neue, sans-serif;
 }
 
 h1 {
@@ -793,6 +793,10 @@ ul {
 .site-navigation li {
   display: inline;
 }
+.site-navigation li.is-active a {
+  background-color: #27aae2;
+  color: #fff;
+}
 .site-navigation a {
   padding: 10px 20px;
   margin-left: 7px;
@@ -836,7 +840,7 @@ ul {
 }
 
 .main {
-  max-width: 45em;
+  max-width: 50em;
   margin: 0 auto;
   padding: 0 2em;
 }
@@ -889,9 +893,10 @@ h3 a {
 }
 
 .site-footer {
-  max-width: 45em;
+  max-width: 50em;
   margin: 0 auto;
-  padding: 50px 2em 20px;
+  padding: 48px 32px 16px;
+  padding: 3rem 2rem 1rem;
   text-align: center;
 }
 .site-footer p {
@@ -905,21 +910,25 @@ h3 a {
 }
 
 .work {
-  margin: 0 -10px;
+  margin: 0 -12px;
+  margin: 0 -0.75rem;
 }
 .work > * {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 12px;
+  margin-left: 0.75rem;
+  margin-right: 12px;
+  margin-right: 0.75rem;
 }
 
 .work-project {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 12px;
+  padding: 0.75rem;
   float: left;
   display: inline;
   width: 33.333%;
-  padding: 10px;
   margin: 0;
 }
 .work-project > img {
@@ -932,7 +941,8 @@ h3 a {
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
 }
 .work-project > figcaption {
-  padding: 10px 5px 0;
+  padding: 12px 8px 0;
+  padding: 0.75rem 0.5rem 0;
 }
 
 .resume-header > h1 {
