@@ -13,7 +13,7 @@
  * @version 1.0
  */
 
-(function () {
+(function (global) {
 
 	'use strict';
 
@@ -42,10 +42,30 @@
 		if (event.keyCode === 27) {
 			window.location.hash = '!';
 
+			if (modal.lastActive) {
+				return false;
+			}
+
 			// Unfocus
 			modal.removeFocus();
 		}
 	}, false);
+
+	// Conveniance function to trigger event
+	modal._dispatchEvent = function (event, modal) {
+		var eventTigger;
+
+		if (!document.createEvent) {
+			return;
+		}
+
+		eventTigger = document.createEvent('Event');
+
+		eventTigger.initEvent(event, true, true);
+		eventTigger.customData = { 'modal': modal };
+
+		document.dispatchEvent(eventTigger);
+	};
 
 
 	// When showing overlay, prevent background from scrolling
@@ -71,6 +91,9 @@
 
 				// Set the focus to the modal
 				modal.setFocus(hash);
+
+				// Fire an event
+				modal._dispatchEvent('cssmodal:show', modal.activeElement);
 			}
 		} else {
 			document.documentElement.className = document.documentElement.className.replace(' has-overlay', '');
@@ -78,6 +101,11 @@
 			// If activeElement is already defined, delete it
 			if (modal.activeElement) {
 				modal.activeElement.className = modal.activeElement.className.replace(' is-active', '');
+
+				// Fire an event
+				modal._dispatchEvent('cssmodal:hide', modal.activeElement);
+
+				// Reset active element
 				modal.activeElement = null;
 
 				// Unfocus
@@ -88,12 +116,14 @@
 
 
 	/*
-	 * Accessability
+	 * Accessibility
 	 */
 
 	// Focus modal
 	modal.setFocus = function (hash) {
-		if (modal.activeElement && !modal.activeElement.contains(hash)) {
+		if (modal.activeElement &&
+				typeof modal.activeElement.contains === 'function' &&
+				!modal.activeElement.contains(hash)) {
 
 			// Set element with last focus
 			modal.lastActive = document.activeElement;
@@ -110,6 +140,16 @@
 		}
 	};
 
+
+	global.CSSModal = modal;
+
+}(window));
+
+
+
+(function () {
+
+	'use strict';
 
 	// Check if we are dealing with mobile
 	var isMobile = function () {

@@ -65,7 +65,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 999;
   opacity: 0;
   color: #222;
   line-height: 1.3;
@@ -95,6 +95,7 @@ html {
   overflow-x: hidden;
   border-radius: 2px;
   background: #fff;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 .imprint .modal-inner > img,
@@ -105,6 +106,7 @@ html {
 .contact .modal-inner > iframe {
   width: 100%;
   height: auto;
+  min-height: 300px;
 }
 .imprint .modal-inner > img,
 .contact .modal-inner > img {
@@ -195,10 +197,8 @@ html {
   .imprint,
   .contact {
     -webkit-transform: translate(0, 400px);
-    -moz-transform: translate(0, 400px);
-    -o-transform: translate(0, 400px);
-    -ms-transform: translate(0, 400px);
-    transform: translate(0, 400px);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
     -webkit-transition: -webkit-transform 0.25s ease-in-out, opacity 1ms 0.25s;
     -moz-transition: -moz-transform 0.25s ease-in-out, opacity 1ms 0.25s;
     -o-transition: -o-transform 0.25s ease-in-out, opacity 1ms 0.25s;
@@ -222,11 +222,8 @@ html {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#27aae2), to(#1c9cd3));
     background-image: -webkit-linear-gradient(top, #27aae2, #1c9cd3);
     background-image: -moz-linear-gradient(top, #27aae2, #1c9cd3);
-    background-image: -ms-linear-gradient(top, #27aae2, #1c9cd3);
     background-image: -o-linear-gradient(top, #27aae2, #1c9cd3);
     background-image: linear-gradient(to bottom, #27aae2, #1c9cd3);
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     content: '';
     position: fixed;
     top: 0;
@@ -234,8 +231,8 @@ html {
     right: 0;
     z-index: 30;
     height: 3em;
-    background-color: transparent;
-    /* Chrome Canary 26.0.1386.0 Bug */
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   }
   .imprint .modal-inner,
   .contact .modal-inner {
@@ -247,7 +244,8 @@ html {
     right: 0;
     padding-top: 3em;
     height: 100%;
-    overflow: auto;
+    overflow: scroll;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .imprint .modal-content,
@@ -257,6 +255,7 @@ html {
   .imprint .modal-close,
   .contact .modal-close {
     right: auto;
+    text-decoration: none;
   }
   .imprint .modal-close:before,
   .contact .modal-close:before {
