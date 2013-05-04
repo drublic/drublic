@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'dist/js/main.js'
+				'public/js/main.js'
 			],
 
 			options: {
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 					style: 'expanded'
 				},
 				files: {
-					'dist/css/main.css': 'scss/main.scss'
+					'public/css/main.css': 'scss/main.scss'
 				}
 			}
 		},
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
 			js: {
 				files: [
 					'Gruntfile.js',
-					'dist/js/main.js'
+					'public/js/main.js'
 				],
 				tasks: 'jshint'
 			}
