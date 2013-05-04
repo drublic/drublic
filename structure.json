@@ -10,6 +10,11 @@
 		"content": "content/resume.html"
 	},
 	{
+		"title": "Blog",
+		"action": "blog",
+		"content": "content/blog.html"
+	},
+	{
 		"title": "Error",
 		"action": "error",
 		"content": "content/error.html"

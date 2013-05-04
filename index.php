@@ -1,2 +1,2 @@
 <?php
-	header('location: dist');
+	header('location: public');

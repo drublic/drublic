@@ -122,6 +122,18 @@
 	}
 
 
+	// Function to get all posts
+	function get_posts () {
+		include('../lib/markdown.php');
+		include('../lib/post.php');
+		include('../lib/posts.php');
+
+		$posts = new Posts;
+
+		return $posts->posts;
+	}
+
+
 	// Build page
 
 	include('../templates/header.html');
