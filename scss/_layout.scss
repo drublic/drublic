@@ -1,5 +1,4 @@
 html {
-	height: 100%;
 	background: #fff;
 	border-top: 7px solid $color;
 }
@@ -95,12 +94,14 @@ ul {
 
 // Navigation
 .site-navigation {
-	max-width: 45em;
+	@include x-rem(max-width, 40);
+
 	margin: 0 auto;
 	line-height: 2;
 
 	ul {
-		margin: 2em 0 0;
+		@include x-rem(margin, 3 0 2);
+
 		padding: 0 2em;
 		text-align: center;
 	}
@@ -177,7 +178,7 @@ ul {
 
 
 .main {
-	max-width: 50em;
+	@include x-rem(max-width, 45);
 	margin: 0 auto;
 	padding: 0 2em;
 }
@@ -258,10 +259,10 @@ h3 {
 
 // Footer
 .site-footer {
-	max-width: 50em;
-	margin: 0 auto;
 	@include x-rem(padding, 3 2 1);
+	@include x-rem(max-width, 45);
 
+	margin: 0 auto;
 	text-align: center;
 
 	p {
@@ -270,9 +271,9 @@ h3 {
 	}
 
 	.follow-me {
+		@include x-rem(padding, 3 0);
+
 		border-top: 1px solid #111;
-		padding: 50px 0;
-		text-align: center;
 	}
 
 }
@@ -297,7 +298,7 @@ h3 {
 	width: 33.333%;
 	margin: 0;
 
-	> img {
+	img {
 		display: block;
 		max-width: 100%;
 		height: auto;
