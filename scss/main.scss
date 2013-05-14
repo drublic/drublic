@@ -7,10 +7,11 @@
 @import "helpers/mixins";
 @import "helpers/h5bp";
 
-@import "modal";
+@import "../components/css-modal/modal";
+@import "module/work";
+@import "module/social-media-links";
 
 @import "layout";
-@import "social-media-links";
 
 // RWD
 @import "rwd";

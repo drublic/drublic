@@ -23,11 +23,11 @@ html {
 }
 
 .has-overlay {
-	height: 100%;
+	overflow: hidden;
 
 	> body {
 		height: 100%;
-		overflow-y: hidden;
+		overflow-y: scroll;
 	}
 }
 
@@ -309,4 +309,8 @@ html {
 
 
 	@extend %modal;
+}
+
+.semantic-content {
+	@extend %modal-fade;
 }

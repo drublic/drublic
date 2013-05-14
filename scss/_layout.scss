@@ -279,40 +279,6 @@ h3 {
 }
 
 
-.work {
-	@extend %clearfix;
-	@include x-rem(margin, 0 -0.75);
-
-	> * {
-		@include x-rem(margin-left, 0.75);
-		@include x-rem(margin-right, 0.75);
-	}
-}
-
-.work-project {
-	@include x-box-sizing;
-	@include x-rem(padding, 0.75);
-
-	float: left;
-	display: inline;
-	width: 33.333%;
-	margin: 0;
-
-	img {
-		display: block;
-		max-width: 100%;
-		height: auto;
-		background: #f9f9f9;
-		border: 1px solid #ddd;
-		border-radius: 2px;
-		box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
-	}
-
-	> figcaption {
-		@include x-rem(padding, 0.75 0.5 0);
-	}
-}
-
 
 // Resume
 .resume-header {
