@@ -1,7 +1,8 @@
 ## Redirects
-Redirect 301 /movie http://www.alinox.com/swissply-movie/
-Redirect 301 /movie/ http://www.alinox.com/swissply-movie/
-
+Redirect permanent /@  https://twitter.com/drublic
+Redirect permanent /~  https://github.com/drublic
+Redirect permanent /+  https://plus.google.com/112019818423540363330/posts
+Redirect permanent /f  https://www.facebook.com/hans.reinl
 
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
