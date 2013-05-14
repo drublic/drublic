@@ -1,39 +1,24 @@
-.button, .site-navigation a {
-  display: inline-block;
-  padding: 0 11px;
-  text-decoration: none;
-  background: #000;
-  color: #fff;
-  border-radius: 2px;
-}
-.button:visited, .site-navigation a:visited {
-  color: #fff;
-}
-.button:hover, .site-navigation a:hover {
-  background-color: #27aae2;
-}
-
-.work:before, .work:after {
-  content: '';
-  display: table;
-}
-.work:after {
-  clear: both;
-}
-
 /**
  * @include x-multiple-backgrounds(
  *	rgba(0, 0, 0, 0.3),
- *	url('../img/someImage.png') no-repeat,
- *	('to bottom', #ddd, #aaa, #ddd)
+ *	url('img/someImage-1.png'),
+ *	url('../img/someImage-2.png') no-repeat,
+ *	(linear-gradient, to bottom, #aaa, #ddd)
  * );
  */
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   Normalize.scss settings
+   ========================================================================== */
+/**
+ * Includes legacy browser support IE6/7
+ *
+ * Set to false if you want to drop support for IE6 and IE7
+ */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
+/*
+ * Corrects `block` display not defined in IE 8/9.
  */
 article,
 aside,
@@ -51,7 +36,7 @@ summary {
 }
 
 /**
- * Correct `inline-block` display not defined in IE 8/9.
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
 audio,
 canvas,
@@ -60,7 +45,7 @@ video {
 }
 
 /**
- * Prevent modern browsers from displaying `audio` without controls.
+ * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
 audio:not([controls]) {
@@ -86,6 +71,8 @@ audio:not([controls]) {
  * 3. Set default font family to sans-serif.
  * 4. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
+ * 5.Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
  */
 html {
   background: #fff;
@@ -113,15 +100,13 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/**
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
 a:focus {
   outline: thin dotted;
 }
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0;
 }
 
@@ -129,6 +114,7 @@ a:hover {
    Typography
    ========================================================================== */
 /**
+ * Addresses font sizes and margins set differently in IE 6/7.
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
@@ -169,13 +155,16 @@ hr {
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Addresses styling not present in IE 8/9.
  */
 mark {
   background: #ff0;
   color: #000;
 }
 
+/**
+ * Addresses margins set differently in IE 6/7.
+ */
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
@@ -195,7 +184,7 @@ pre {
 }
 
 /**
- * Set consistent quote types.
+ *  Set consistent quote types.
  */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
@@ -231,7 +220,8 @@ sub {
    Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * 1. Remove border when inside `a` element in IE 8/9.
+ * 2. Improves image quality when scaled in IE 7.
  */
 img {
   border: 0;
@@ -269,6 +259,8 @@ fieldset {
 /**
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
  */
 legend {
   border: 0;
@@ -281,6 +273,7 @@ legend {
  * 1. Correct font family not being inherited in all browsers.
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
  */
 button,
 input,
@@ -320,6 +313,8 @@ select {
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
  */
 button,
 html input[type="button"],
@@ -342,6 +337,8 @@ html input[disabled] {
 /**
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
  */
 input[type="checkbox"],
 input[type="radio"] {
@@ -403,6 +400,29 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.button, .site-navigation a {
+  display: inline-block;
+  padding: 0 11px;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
+}
+.button:visited, .site-navigation a:visited {
+  color: #fff;
+}
+.button:hover, .site-navigation a:hover {
+  background-color: #27aae2;
+}
+
+.work:before, .work:after {
+  content: '';
+  display: table;
+}
+.work:after {
+  clear: both;
 }
 
 /*

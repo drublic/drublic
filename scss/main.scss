@@ -2,8 +2,9 @@
 
 
 // Include helpers
+@import "../components/sass-mixins/mixins";
+@import "../components/normalize.scss/normalize";
 @import "helpers/mixins";
-@import "helpers/normalize";
 @import "helpers/h5bp";
 
 @import "modal";
