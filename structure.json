@@ -5,9 +5,14 @@
 		"content": "content/index.html"
 	},
 	{
-		"title": "Résumé",
+		"title": "About",
 		"action": "resume",
 		"content": "content/resume.html"
+	},
+	{
+		"title": "Information page",
+		"action": "info",
+		"content": "content/about-info.html"
 	},
 	{
 		"title": "Blog",

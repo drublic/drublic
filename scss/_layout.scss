@@ -259,11 +259,14 @@ h3 {
 
 // Footer
 .site-footer {
-	@include x-rem(padding, 3 2 1);
+	@include x-box-sizing;
+	@include x-rem(margin, 2 auto 0);
+	@include x-rem(padding, 4 2 3);
 	@include x-rem(max-width, 45);
 
-	margin: 0 auto;
 	text-align: center;
+
+	border-top: 1px solid #111;
 
 	p {
 		font-family: Georgia, Times New Roman, serif;
@@ -271,9 +274,13 @@ h3 {
 	}
 
 	.follow-me {
-		@include x-rem(padding, 3 0);
+		@include x-rem(padding, 2 0 2);
+	}
 
-		border-top: 1px solid #111;
+	.le-me {
+		@include x-rem(width, 13);
+
+		border-radius: 50%;
 	}
 
 }
