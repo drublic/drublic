@@ -28,16 +28,12 @@ $smWidth: 32px;
 		height: $smWidth;
 
 		margin-right: 7px;
-		border-radius: 2px;
+		border-radius: 50%;
 
 		text-indent: -200px;
 		overflow: hidden;
 		background: #111 url(../img/github.png);
 		background-size: $smWidth;
-
-		&:hover {
-			background-color: $color;
-		}
 	}
 
 	.twitter a {
@@ -48,5 +44,8 @@ $smWidth: 32px;
 	}
 	.rss a {
 		background-image: url(../img/feed.png);;
+	}
+	.github a {
+		background-color: transparent;
 	}
 }
