@@ -10,7 +10,10 @@
 
 		public function __construct ($page, $postcount) {
 			$this->__set('page', $page);
-			$this->__set('postcount', $postcount);
+
+			if ($postcount) {
+				$this->__set('postcount', $postcount);
+			}
 
 			$this->get_all_posts();
 			$this->filter_posts();
@@ -69,7 +72,7 @@
 
 		protected function filter_posts () {
 			$start = ($this->page - 1) * ($this->postcount - 1);
-			$end = $start + $this->pagecount;
+			$end = $start + $this->postcount;
 
 			for ($i = $start; $i <= $end; $i++) {
 				$this->paginated_posts[] = new Post($this->posts[$i]);
