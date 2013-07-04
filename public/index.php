@@ -14,7 +14,7 @@
 		global $environment;
 
 		if ($environment == 'dev') {
-			$base = '//192.168.178.94/vc/public/';
+			$base = '//localhost/vc/public/';
 		} else {
 			$base = '//drublic.de/';
 		}
@@ -123,7 +123,7 @@
 
 	// Function to get all posts
 	function get_posts ($page, $postcount) {
-		include('../lib/markdown.php');
+
 		include('../lib/post.php');
 		include('../lib/posts.php');
 
