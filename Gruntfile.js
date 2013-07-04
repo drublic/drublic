@@ -2,6 +2,8 @@ module.exports = function (grunt) {
 
 	'use strict';
 
+	var posts = require('./posts');
+
 	// Project configuration.
 	grunt.initConfig({
 		pkg: require('./package'),
@@ -29,6 +31,15 @@ module.exports = function (grunt) {
 			}
 		},
 
+		pages: {
+			posts: {
+				src: 'posts_',
+				dest: 'content',
+				layout: 'templates/post.ejs',
+				url: 'blog/:permalink/article'
+			}
+		},
+
 		watch: {
 
 			scss: {
@@ -49,7 +60,7 @@ module.exports = function (grunt) {
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-pages');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task
