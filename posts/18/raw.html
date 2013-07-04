@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<!--
+             _            _     _ _
+          __| |_ __ _   _| |__ | (_) ___
+         / _` | '__| | | | '_ \| | |/ __|
+        | (_| | |  | |_| | |_) | | | (__
+         \__,_|_|   \__,_|_.__/|_|_|\___|
+
+        Feel free to view and copy my source-code if you want to.
+        Contact me if you have questions and check out the GitHub- Repo:
+        https://github.com/drublic/drublic-blog
+
+        This is under MIT licence, so take it!
+
+        Thanks for visiting,
+        Hans
+
+	-->
+
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+			 Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>About The CSS Hierarchies Module Level 3 | drublic</title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="http://drublic.de/blog/wp-content/themes/drublic/css/style-3f1.css">
+
+	<!-- Feed -->
+	<link rel="pingback" href="http://drublic.de/blog/xmlrpc.php">
+	<link rel="alternate" type="application/rss+xml" title="drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
+
+	<!-- All JavaScript at the bottom, except for Modernizr. -->
+	<script src="http://drublic.de/blog/wp-content/themes/drublic/js/vendor/modernizr.custom.65404.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="drublic &raquo; Feed" href="http://drublic.de/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="drublic &raquo; Comments Feed" href="http://drublic.de/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="drublic &raquo; About The CSS Hierarchies Module Level 3 Comments Feed" href="http://drublic.de/blog/the-css-hierarchies-module-level-3/feed/" />
+<meta name="generator" content="WordPress 3.5.2" />
+<link rel='shortlink' href='http://drublic.de/blog/?p=771' />
+
+<!-- All in One SEO Pack 1.6.15.3 by Michael Torbert of Semper Fi Web Design[764,821] -->
+<meta name="description" content="There is a draft for the CSS Hierarchies Module Level 3 which introduces nesting for rules in CSS. This is what preprocessors do. CSS is about to adopt this." />
+<meta name="keywords" content="css3, hierarchy, hierarchies, nesting, nest, specification, css, preprocessor, preprocessors, editor's draft, draft, rules, selector,css,preprocessors,research,specification" />
+<link rel="canonical" href="http://drublic.de/blog/the-css-hierarchies-module-level-3/" />
+<!-- /all in one seo pack -->
+
+<link rel="stylesheet" href="http://drublic.de/blog/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+</head>
+
+<body class="single single-post postid-771 single-format-standard">
+
+	<div id="container">
+		<header id="header">
+			<div id="logo">
+				<a href="http://drublic.de/blog/" class="icon">&#x25B5;</a>
+				<a href="http://drublic.de/blog/" title="drublic" rel="home">/drublic<span class="visuallyhidden"> - A Cutting Edge Webdesign Blog – Hans Christian Reinl</span></a>
+			</div>
+
+			<nav id="nav">
+				<div class="visuallyhidden"><a href="#main">Skip to content</a></div>
+				<div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-956"><a href="http://drublic.de/blog/about/">About</a></li>
+<li id="menu-item-1226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1226"><a href="http://drublic.de/#work">Work</a></li>
+<li id="menu-item-1225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1225"><a href="http://drublic.de/#hire-me">Hire Me</a></li>
+<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="http://drublic.de/blog/contact/">Contact</a></li>
+</ul></div>
+				<div id="search">
+					<a href="#/search" title="Try searching&hellip;" class="search-icon">Search</a>
+
+					<form action="http://drublic.de/blog/" method="post">
+						<label for="s">Search the articles</label>
+						<input type="search" id="s" name="s">
+						<input type="submit" id="submit-search" name="submit-search" value="Search">
+					</form>
+				</div>
+			</nav>
+
+			<ul class="social-media-links">
+				<li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li><li
+					class="github"><a href="https://github.com/drublic">Github</a></li><li
+					class="twitter"><a href="https://twitter.com/drublic">Twitter</a></li><li
+					class="google-plus"><a href="https://plus.google.com/112019818423540363330?rel=author">Google+</a></li>
+			</ul>
+		</header>
+
+		<div id="main" role="main">
+
+			<div class="bling-bling">
+				<div id="bsap_1286691" class="bsarocks bsap_f9595f19d8c79ead2bfaf64d7b4f4b6e"></div>
+				<a href="http://adpacks.com" class="link">via Ad Packs</a>
+			</div>
+
+
+
+	<article id="post-771" class="post-771 post type-post status-publish format-standard hentry category-css category-css-wds category-research tag-css tag-css3 tag-preprocessors tag-research tag-specification">
+		<header>
+							<h1><a href="http://drublic.de/blog/the-css-hierarchies-module-level-3/" title="Permalink to About The CSS Hierarchies Module Level 3" rel="entry-title">About The CSS Hierarchies Module Level 3</a></h1>
+			
+			<time datetime="2012-02-17T15:52:23+00:00" rel="updated">Friday, February 17th, 2012</time>
+
+			<span class="author">
+				by
+				<a href="http://drublic.de/blog/author/admin/" title="View all posts by Hans Christian" rel="author">Hans Christian</a>
+			</span>
+
+			
+			<span class="categories"><a href="http://drublic.de/blog/category/css/" title="View all posts in CSS" rel="category tag">CSS</a> <a href="http://drublic.de/blog/category/css-wds/" title="View all posts in CSS WDs" rel="category tag">CSS WDs</a> <a href="http://drublic.de/blog/category/research/" title="View all posts in Research" rel="category tag">Research</a></span>
+		</header>
+
+		
+		
+							<div class="message">
+				<h3>Hey there&hellip;</h3>
+				<p>This post is 495 days old. It was written on 17.02.2012. Please make sure to be careful with the information provided and check a more recent source on this topic.</p>
+			</div>
+		
+		<p>Since the beginning of February there were some proposals for the CSS3 specification. These proposals are not yet part of the specification and will likely be changed until they get adopted by the <a title="The CSS Working Group Wiki" href="http://wiki.csswg.org/">CSSWG</a>. One of these drafts is the <a title="The CSS Hierarchies Module Level 3" href="http://dev.w3.org/csswg/css3-hierarchies/"><strong>CSS Hierarchies Module Level 3</strong></a>.</p>
+<h2>So what&#8217;s the Hierarchies Module? And why &#8220;Level 3&#8243;?</h2>
+<p>The Hierarchies Module is not exactly new. It exists since the very first steps of CSS and was first released in Dezember 1996 with CSS1. The <a title="Cascading Style Sheets, Level 1" href="http://www.w3.org/TR/2008/REC-CSS1-20080411/">CSS1 specification</a> is still up, so check it out if you want to.</p>
+<p>When you write CSS you always use selectors to target the element you want to style. This works pretty much straight-forward: The right-most simple selector is the one which get the declarations assigned that are defined in the ruleset.<br />
+These selectors define a certain hierarchy in your stylesheet.<br />
+<strong>Note:</strong> Please make sure to read Tab Atkins&#8217; <a title="CSS Spec Terms, for Future Reference" href="http://www.xanthir.com/blog/b4E50">Reference for CSS Spec Terms</a>.</p>
+<h3>An example</h3>
+<p>Today you would target some links in a navigation like this:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul li a <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> <span style="color: #cc00cc;">#000</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p>If you&#8217;re smart and your markup allows you to do so, you may write:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> a <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> <span style="color: #cc00cc;">#000</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p>The li-elements need to be inlined as you want a horizontal navigation:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul li <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">display</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">inline</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p>Furthermore the navigation should be aligned on the right and all the links centered:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #000000; font-weight: bold;">right</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span>
+<span style="color: #cc00cc;">#nav</span> ul li <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">center</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p>This leaves us with a lot of repetition for the selectors.</p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #000000; font-weight: bold;">right</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span>
+<span style="color: #cc00cc;">#nav</span> ul li <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">center</span><span style="color: #00AA00;">;</span> <span style="color: #000000; font-weight: bold;">display</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">inline</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span>
+<span style="color: #cc00cc;">#nav</span> ul li a <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> <span style="color: #cc00cc;">#000</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p>With the Level 3 proposal by <a title="Tab Atkins on Twitter" href="https://twitter.com/#!/tabatkins">Tab Atkins Jr</a> and <a title="Shane's Google+ profile-page" href="https://plus.google.com/101031566089926386443/posts">Shane Stephens</a> (working for Google) this is about to get a little bit easier. The existing system will be extended with some new functionality. This is why it&#8217;s called Level 3. (Also it will likely be part of CSS <strong>3</strong> – and not 4 or 10 or something.)</p>
+<h2>What&#8217;s new in there?</h2>
+<p>Lately you saw the rise of CSS Preprocessors. Everyone <a title="Lea Verou - On CSS preprocessors" href="http://lea.verou.me/2011/03/on-css-preprocessors/">has</a> <a title="Chris Coyier - Musings on Preprocessing" href="http://css-tricks.com/musings-on-preprocessing/">an opinion</a> <a title="Andy Clark - LESS" href="http://www.stuffandnonsense.co.uk/blog/about/less">on this</a>. The thing why so many developers use them is that they help to organize the CSS-code you are writing.<br />
+Preprocessors have brought up another idea of CSS hierarchies. And with the <strong>CSS Hierarchies Module Level 3</strong> this has been adopted.</p>
+<p>The specification draft allows you to nest your rules and use the <code>&amp;</code>-character to reference a parent selector in a certain rule.</p>
+<p>Here&#8217;s the example from above with the new hierarchy:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul <span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #000000; font-weight: bold;">right</span><span style="color: #00AA00;">;</span>
+    &amp; li <span style="color: #00AA00;">&#123;</span>
+        <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">center</span><span style="color: #00AA00;">;</span>
+        <span style="color: #000000; font-weight: bold;">display</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">inline</span><span style="color: #00AA00;">;</span>
+        &amp; a <span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> <span style="color: #cc00cc;">#000</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span>
+    <span style="color: #00AA00;">&#125;</span>
+<span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p>As you can see there are no repetitions for the selectors as you can reference them by just writing <code>&amp;</code> and nest them properly.</p>
+<h2>How can we use this today and when will it be ready for the &#8220;real world&#8221;?</h2>
+<p>As you may guess this is not implemented in any browser yet.</p>
+<p>As this spec is written by two Google-guys it&#8217;s likely that this will be implemented in Chrome in the near future. At the moment this is not working with Chrome 19 (Canary) or WebKit Nightly.<br />
+I&#8217;ve made <a title="Testing the CSS Hierarchies Module Level 3" href="http://dabblet.com/gist/1854033">this Dabblet</a> to check if the module is supported in a browser or not. caniuse.com does not provide any data for the Hierarchies Module yet.<br />
+<strong>Aside</strong>: Check my <a title="The Dabbles App for Google Chrome" href="http://drublic.de/blog/dabblet-chrome-app/">Dabblet Chrome App</a> to view all your latest dabblets if you&#8217;re a Chrome user.</p>
+<p>Tab Atkins proposed another style for nesting. To reference the parent selector you use <code>@this</code> instead of the <code>&amp;</code>-character. Peter Beverloo<a title="CSS Variables and mixins, Interactive Validation and pre-rendering" href="http://peter.sh/2011/01/css-variables-and-mixins-interactive-validation-and-prerendering/"> wrote about this</a> a year ago. Also Tab Atkins <a title="CSSOM, Vars, Mixins, Nesting, and Modules" href="http://www.xanthir.com/blog/b49w0">has an article</a> about his further plans. This variant was not implement either and is replaced with the new draft for the specification. Anyway <a title="Using CSS nesting with @this" href="http://dabblet.com/gist/1853580">you could view</a> the dabblet I&#8217;ve made for this propose.</p>
+<h3>Preprocessors</h3>
+<p>As mentioned above CSS preprocessors offer the chance to use something like hierarchies in there own way. Here are two examples:</p>
+<p><strong>SCSS (aka. SASS)</strong></p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul <span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">text-align</span><span style="color: #00AA00;">:</span> <span style="color: #000000; font-weight: bold;">right</span><span style="color: #00AA00;">;</span>
+    li <span style="color: #00AA00;">&#123;</span>
+        <span style="color: #000000; font-weight: bold;">display</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">inline</span><span style="color: #00AA00;">;</span>
+        a <span style="color: #00AA00;">&#123;</span>
+            <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> <span style="color: #cc00cc;">#000</span><span style="color: #00AA00;">;</span>
+            &amp;<span style="color: #3333ff;">:hover </span><span style="color: #00AA00;">&#123;</span> <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">gray</span><span style="color: #00AA00;">;</span> <span style="color: #00AA00;">&#125;</span>
+        <span style="color: #00AA00;">&#125;</span>
+    <span style="color: #00AA00;">&#125;</span>
+<span style="color: #00AA00;">&#125;</span></pre></div></div>
+
+<p><strong>Stylus</strong></p>
+
+<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #cc00cc;">#nav</span> ul
+    <span style="color: #000000; font-weight: bold;">text-align</span> <span style="color: #000000; font-weight: bold;">right</span>
+    li
+        <span style="color: #000000; font-weight: bold;">display</span> <span style="color: #993333;">inline</span>
+        a
+            <span style="color: #000000; font-weight: bold;">color</span> <span style="color: #cc00cc;">#000</span>
+            &amp;<span style="color: #3333ff;">:hover
+                </span><span style="color: #000000; font-weight: bold;">color</span> grey</pre></div></div>
+
+<p>As you can see there is a difference in how preprocessors treat the <code>&amp;</code>-character as a reference: In the CSS specification draft <code>&amp;</code> is obligatory in every nested rule you write to reference the parent selector. Preprocessors need them only if there is a pseudo-class or -element or a combinator (such as <code>~</code> or <code>&gt;</code>) used for a specific selector.</p>
+<p>As I stated in the introduction it may happen that the specification will be changed until it becomes final or is adopted by the CSS Working Group. I recommend you follow the discussions about this topic in order to stay up to date.<br />
+When this specification will be implemented by one of the browser vendors it&#8217;s just a matter of weeks until it will be adopted by the others I guess.</p>
+<p>But, as the draft states, this is not yet part of CSS:</p>
+<blockquote><p>This document is purely an Editor&#8217;s Draft. It has not yet been adopted by the Working Group, and should not be considered to be part of CSS.</p>
+<p>~ <a title="Status" href="http://dev.w3.org/csswg/css3-hierarchies/#status">CSS Hierarchies Module &#8211; Status</a></p></blockquote>
+<h2>Opinion</h2>
+<p>Personally I hope that referencing the parent selector with <code>&amp;</code> will not be in the final specification as it is now. It&#8217;s not needed as the rules are nested anyway and preprocessors nowadays treat them better.</p>
+<p>Anyway the new nesting is pretty useful as it reduces the redundancy of writing selectors in CSS. In connection with other upcoming specifications like the <a title="CSS Variables Module Level 1" href="http://dev.w3.org/csswg/css-variables/">CSS Variables Module Level 1</a> this is what is needed and will be helpful for every web-developer once it will be implemented in browsers.</p>
+				<p class="tags"><a href="http://drublic.de/blog/tag/css/" rel="tag">CSS</a> <a href="http://drublic.de/blog/tag/css3/" rel="tag">CSS3</a> <a href="http://drublic.de/blog/tag/preprocessors/" rel="tag">Preprocessors</a> <a href="http://drublic.de/blog/tag/research/" rel="tag">Research</a> <a href="http://drublic.de/blog/tag/specification/" rel="tag">Specification</a></p>
+
+		<div class="share-post">
+			<script type="text/x-handlebars-template" id="share-post">
+				<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://drublic.de/blog/the-css-hierarchies-module-level-3/" data-text="About The CSS Hierarchies Module Level 3" data-count="horizontal" data-via="drublic" data-related="drublic">Tweet</a>
+
+				<g:plusone size="medium"></g:plusone>
+			</script>
+		</div>
+	</article>
+	<hr>
+
+	
+<section id="comments">
+
+  
+  	<div class="comment even thread-even depth-1" id="comment-259">
+		<div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/3869e93ce6b2a22e37cf13281d9e6f75?s=64&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D64&amp;r=G' class='avatar avatar-64 photo' height='64' width='64' /></div>
+
+		<p class="author"><cite><a href='http://lea.verou.me' rel='external nofollow' class='url'>Lea Verou</a></cite></p>
+
+		<time><a href="http://drublic.de/blog/the-css-hierarchies-module-level-3/#comment-259">Friday, February 17th, 2012 - 4:28 pm</a></time>
+    
+		
+		<p>Hi there,</p>
+
+<p>Nice article.</p>
+
+<p>Regarding your dabblet, please make it like a regular test: Green on success, red if failure. You could probably craft it in such a way that the entire screen is green or red, no text or anything.
+Then you could even submit it to the W3C for that module&#8217;s testsuite. It&#8217;s trivial, but it&#8217;s something, so it may help, dunno.</p>
+
+		<div class="reply"><a class='comment-reply-link' href='/blog/the-css-hierarchies-module-level-3/?replytocom=259#respond' onclick='return addComment.moveForm("comment-259", "259", "respond", "771")'>Reply</a></div>
+	</div>
+	<hr>
+	  <ul class='children'>
+	<div class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="comment-260">
+		<div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/f85c23d330024f1fc38e67d74d771ac9?s=64&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D64&amp;r=G' class='avatar avatar-64 photo' height='64' width='64' /></div>
+
+		<p class="author"><cite><a href='http://drublic.de' rel='external nofollow' class='url'>Hans Christian</a></cite></p>
+
+		<time><a href="http://drublic.de/blog/the-css-hierarchies-module-level-3/#comment-260">Friday, February 17th, 2012 - 4:38 pm</a></time>
+    
+		
+		<p>Lea,
+thanks for your feedback.</p>
+
+<p>That&#8217;s true representing a &#8220;success&#8221;-state with yellow isn&#8217;t what you call common. I&#8217;ve changed both examples according to your suggestion. <a href="http://dabblet.com/gist/1854033" rel="nofollow">Here&#8217;s</a> the one for the CSS Hierarchies Module.</p>
+
+<p>Where is the right place to submit such a test? On the mailing-list? I&#8217;ve no experience with this. :)</p>
+
+		<div class="reply"><a class='comment-reply-link' href='/blog/the-css-hierarchies-module-level-3/?replytocom=260#respond' onclick='return addComment.moveForm("comment-260", "260", "respond", "771")'>Reply</a></div>
+	</div>
+	<hr>
+	  </li>
+</ul>
+</li>
+	<div class="comment even thread-odd thread-alt depth-1" id="comment-261">
+		<div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/3869e93ce6b2a22e37cf13281d9e6f75?s=64&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D64&amp;r=G' class='avatar avatar-64 photo' height='64' width='64' /></div>
+
+		<p class="author"><cite><a href='http://lea.verou.me' rel='external nofollow' class='url'>Lea Verou</a></cite></p>
+
+		<time><a href="http://drublic.de/blog/the-css-hierarchies-module-level-3/#comment-261">Friday, February 17th, 2012 - 4:43 pm</a></time>
+    
+		
+		<p>There&#8217;s another mailing list for this, public-css-testsuite IIRC.</p>
+
+<p>I&#8217;m not sure what the policy is for modules at such an early stage, but you could give it a shot, what&#8217;s the worst that could happen? ;)</p>
+
+<p>Also, I think their tests need a special format in their markup, you can read about it here (along with more details): <a href="http://wiki.csswg.org/test" rel="nofollow">http://wiki.csswg.org/test</a> Or maybe you could just submit it and have someone else adapt it?</p>
+
+<p>(I&#8217;ve personally haven&#8217;t contributed any tests yet, so take any advice from me with a grain of salt)</p>
+
+		<div class="reply"><a class='comment-reply-link' href='/blog/the-css-hierarchies-module-level-3/?replytocom=261#respond' onclick='return addComment.moveForm("comment-261", "261", "respond", "771")'>Reply</a></div>
+	</div>
+	<hr>
+	  </li>
+	<div class="pingback">
+		<p>Pingback: <a href='http://drublic.de/blog/about-css-variables/' rel='external nofollow' class='url'>About CSS Variables | @drublic</a></p>
+  </div>
+	  </li>
+	<div class="pingback">
+		<p>Pingback: <a href='http://drublic.de/blog/my-coding-style-and-guidelines/' rel='external nofollow' class='url'>My Coding Style and Guidelines | @drublic</a></p>
+  </div>
+	  </li>
+  
+  
+								<div id="respond">
+				<h3 id="reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/the-css-hierarchies-module-level-3/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://drublic.de/blog/wp-comments-post.php" method="post" id="commentform">
+																			<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small><br><a href="http://daringfireball.net/projects/markdown/">Markdown-Goodies</a> available.							<fieldset><label for="author">Name<span class="required">*</span></label> <input id="author" name="author" type="text" value=""></fieldset>
+<fieldset><label for="email">E-Mail<span class="required">*</span></label> <input id="email" name="email" type="email" value=""></fieldset>
+<fieldset><label for="url">Website</label><input id="url" name="url" type="text" value=""></fieldset>
+												<fieldset><label for="comment">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></fieldset>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='771' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7858f3e2f0" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+						
+</section>
+<hr>
+
+	<nav id="post-nav">
+		<div class="prev"><a href="http://drublic.de/blog/dabblet-chrome-app/" rel="prev"><span class="meta-nav">&larr;</span> Dabblet Chrome App</a></div>
+		<div class="next"><a href="http://drublic.de/blog/about-css-variables/" rel="next">About CSS Variables <span class="meta-nav">&rarr;</span></a></div>
+		<div class="clearfix"></div>
+	</nav>
+
+
+		</div>
+
+
+		<footer class="footer">
+			
+
+<div class="widget_text">			<div class="textwidget"><div class="author-image"><img src="http://drublic.de/blog/wp-content/uploads/2013/06/hans-christian-reinl-square.jpg" width="220" height="220" alt="A photo of me."></div>
+
+<h3>Hi there, I'm Hans Christian.</h3>
+<p>I'm a front-end web-developer, dealing with HTML5, CSS3, JavaScript and these kinds daily. Sometimes I want to share some new thoughts. That's what this blog is for.</p>
+<p>More about me on <a href="http://drublic.de/blog/about/" title="Read more about me.">the about page</a>.</p>
+<p><small>Picture by <a href="http://nitzsche.info/en.start.php">Stefan Nitzsche</a>.</small></p></div>
+		</div>
+
+
+			<div class="follow-me">
+				<a href="https://twitter.com/drublic" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @drublic</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script>window.jQuery || document.write('<script src="http://drublic.de/blog/wp-content/themes/drublic/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+    
+	<!-- scripts concatenated and minified via ant build script-->
+	<script defer src="http://drublic.de/blog/wp-content/themes/drublic/js/plugins.js"></script>
+	<script defer src="http://drublic.de/blog/wp-content/themes/drublic/js/main.js"></script>
+	<!-- end scripts-->
+
+	<!-- AdPacks.com Ad Code -->
+	<script type="text/javascript">
+		(function(){
+			var bsa = document.createElement('script');
+				bsa.type = 'text/javascript';
+				bsa.async = true;
+				bsa.src = '//s3.buysellads.com/ac/bsa.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
+		}());
+	</script>
+	<!-- End AdPacks.com Ad Code -->
+
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-41497561-1');ga('send','pageview');
+	</script>
+
+	<!-- Piwik -->
+	<script>
+		var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.drublic.de/" : "http://piwik.drublic.de/");
+		document.write('<script src="' + pkBaseURL + 'piwik.js"><\/script>');
+	</script><script>
+		try {
+			var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+	</script><noscript><p><img src="http://piwik.drublic.de/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+	<!-- End Piwik Tracking Code -->
+
+</body>
+</html>
