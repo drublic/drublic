@@ -1,4 +1,7 @@
 <?php
+	date_default_timezone_set('Europe/Berlin');
+
+
 	$page_action = trim($_GET['file'], '/');
 
 	$environment = ($_SERVER['HTTP_HOST'] == 'drublic.de') ? 'production' : 'dev';
