@@ -60,16 +60,19 @@ var readSubDir = function (directory) {
 		}
 
 		files.forEach(function (file) {
+			var contents = fs.readFileSync(path + directory + '/' + file).toString();
+
+			if (file === 'article.md') {
+				movePost(directory, contents);
+			}
+
 			if (file !== 'meta.json') {
 				return false;
 			}
 
-			var contents = fs.readFileSync(path + directory + '/' + file).toString();
 			var meta = JSON.parse(contents);
 
 			filterMeta(meta);
-
-			movePost(directory, contents);
 		});
 
 		postsCount++;
