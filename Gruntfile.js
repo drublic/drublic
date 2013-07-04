@@ -2,8 +2,6 @@ module.exports = function (grunt) {
 
 	'use strict';
 
-	var posts = require('./posts');
-
 	// Project configuration.
 	grunt.initConfig({
 		pkg: require('./package'),
@@ -33,7 +31,7 @@ module.exports = function (grunt) {
 
 		pages: {
 			posts: {
-				src: 'posts_',
+				src: 'blog_posts',
 				dest: 'content',
 				layout: 'templates/post.ejs',
 				url: 'blog/:permalink/article'
