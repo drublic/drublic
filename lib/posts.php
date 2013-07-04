@@ -38,7 +38,7 @@
 		}
 
 		protected function sort_by_date () {
-			$posts = $this->$posts;
+			$posts = $this->posts;
 
 			$dates = array();
 			$unsortedPosts = array();
