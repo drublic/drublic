@@ -42,6 +42,16 @@ var filterMeta = function (meta) {
 };
 
 
+// Move post to new location
+var movePost = function (directory, contents) {
+	fs.writeFile('../blog_posts/' + directory + '.html',contents, function (err) {
+		if (err) {
+			throw new Error(err);
+		}
+	});
+};
+
+
 // Read meta files
 var readSubDir = function (directory) {
 	fs.readdir(path + directory, function (err, files) {
@@ -58,6 +68,8 @@ var readSubDir = function (directory) {
 			var meta = JSON.parse(contents);
 
 			filterMeta(meta);
+
+			movePost(directory, contents);
 		});
 
 		postsCount++;
