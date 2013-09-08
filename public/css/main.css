@@ -1010,7 +1010,8 @@ ul {
   text-align: center;
 }
 .site-navigation li {
-  display: inline;
+  display: inline-block;
+  vertical-align: top;
 }
 .site-navigation li.is-active a {
   background-color: #27aae2;
