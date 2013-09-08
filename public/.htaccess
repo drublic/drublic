@@ -405,6 +405,7 @@ FileETag None
 
 
 <IfModule mod_rewrite.c>
+  RewriteRule ^blog/(.*)$ - [L]
   RewriteRule ^img/(.*)$ - [L]
   RewriteRule ^work/(.*)$ - [L]
   RewriteRule ^css/(.*)$ - [L]
