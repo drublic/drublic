@@ -5,8 +5,6 @@
   "ignore": [],
   "dependencies": {
     "normalize-scss": "~2.1.2",
-    "jquery": "1.10.2",
-    "modernizr": "2.6.2",
     "css-modal": "~1.0.0",
     "sass-mixins": "~0.4.0"
   },
