@@ -1,0 +1,108 @@
+<article class="post">
+	<header class="post-header">
+		<h1><a href="http://drublic.de/blog/the-difference-between-push-and-pull/" title="Permalink to Push and Pull with Server-sent Event and WebSocket" rel="entry-title">Push and Pull with Server-sent Event and WebSocket</a></h1>
+		<time datetime="Sat Aug 20 2011 02:00:00 GMT+0200 (CEST)" rel="updated">Sat Aug 20 2011 02:00:00 GMT+0200 (CEST)</time>
+
+		<span class="author">
+			by
+			<a href="" title="Visit website" rel="author">Hans Christian</a>
+		</span>
+
+		<span class="categories">HTML5, JavaScript</span>
+		<span class="tags">HTML5, pull, push, server-sent event, websocket api</span>
+	</header>
+
+	<pre><code><div class="highlight"><pre>                <span class="o">&lt;</span><span class="nx">figure</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;aligncenter&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">width</span><span class="o">=</span><span class="s2">&quot;600&quot;</span> <span class="nx">height</span><span class="o">=</span><span class="s2">&quot;316&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://drublic.de/blog/wp-content/uploads/2011/06/push-and-pull-600x316.png&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;attachment-medium wp-post-image&quot;</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&quot;Push and Pull&quot;</span> <span class="o">/&gt;</span>            <span class="o">&lt;</span><span class="err">/figure&gt;</span>
+
+                        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;message&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="nx">Hey</span> <span class="nx">there</span><span class="err">…</span><span class="o">&lt;</span><span class="err">/h3&gt;</span>
+            <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">post</span> <span class="nx">is</span> <span class="mi">676</span> <span class="nx">days</span> <span class="nx">old</span><span class="p">.</span> <span class="nx">It</span> <span class="nx">was</span> <span class="nx">written</span> <span class="nx">on</span> <span class="mf">20.08</span><span class="p">.</span><span class="mi">2011</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">make</span> <span class="nx">sure</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">careful</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">information</span> <span class="nx">provided</span> <span class="nx">and</span> <span class="nx">check</span> <span class="nx">a</span> <span class="nx">more</span> <span class="nx">recent</span> <span class="nx">source</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">topic</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">You</span> <span class="k">do</span> <span class="nx">know</span> <span class="nx">the</span> <span class="nx">nice</span> <span class="nx">message</span> <span class="nx">which</span> <span class="nx">is</span> <span class="nx">submitted</span> <span class="nx">to</span> <span class="nx">your</span> <span class="nx">smartphone</span> <span class="nx">when</span> <span class="nx">someone</span> <span class="nx">mentions</span> <span class="nx">you</span> <span class="nx">on</span> <span class="nx">Twitter</span><span class="o">?&lt;</span><span class="err">/p&gt;</span>
+</pre></div>
+</code></pre>
+<p>iOS gets these messages via push. This means the server tells the app something like “Hey look, there’s something new on your Twitter-account”.<br />
+On Android this is done with push, too. It was introduced in version 2.1.0 in mid of July. Before this release they requested all Tweets via “pull”: The app asks the server “Yo server, somethin’ new here?”.</p>
+<h2>Draw-backs?</h2>
+<p>So where’s the difference besides the obvious?</p>
+<ul>
+<li>with pull the app has to connect to the server in a certain time-interval</li>
+<li>this means heigh power drain</li>
+<li>it may take some time until you receive a message via pull<em></li>
+<li>push may hold an open connection to the server: more data is send</li>
+</ul>
+<p><small></em> Site note: I noticed that it also may take some time until a new message is delivered with push technology on iOS or Android (for Twitter-App). If anyone knows more on this issue please share your thoughts.</small></p>
+<h2>The way we do it today</h2>
+<p>If you’re coding an online app you have something where you’re displaying new messages or so. The known&nbsp;approach&nbsp;is to return asynchronously to the server via JavaScript and evaluate the answer. Something like this:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="javascript" style="font-family: monospace;">$.<span style="color: #660066;">getJSON</span><span style="color: #009900;">(</span> <span style="color: #3366CC;">&#39;messages.php&#39;</span> <span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">(</span> data <span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+  <span style="color: #006600; font-style: italic;">// If there is a message</span>
+  <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">(</span> data.<span style="color: #660066;">length</span> <span style="color: #339933;">&amp;</span>gt<span style="color: #339933;">;</span> <span style="color: #CC0000;">0</span> <span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+    $.<span style="color: #660066;">each</span><span style="color: #009900;">(</span> data<span style="color: #009900;">[</span><span style="color: #3366CC;">&#39;msg&#39;</span><span style="color: #009900;">]</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+      <span style="color: #006600; font-style: italic;">// Do some fancy stuff with messages…</span>
+    <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+  <span style="color: #009900;">}</span>
+<span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></pre></div></div>
+
+<p>This is “pull”. It is not enough to request the answer of this file once, because this would evaluate the data only once. This is why there has to be a kind of timed event which fires the request in an interval.</p>
+<p>This is what it could like with an intervall of 1 minute:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="javascript" style="font-family: monospace;"><span style="color: #339933;">!</span> <span style="color: #003366; font-weight: bold;">function</span> pull_request<span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+  $.<span style="color: #660066;">getJSON</span><span style="color: #009900;">(</span> <span style="color: #3366CC;">&#39;messages.php&#39;</span> <span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">(</span> data <span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+    <span style="color: #006600; font-style: italic;">// If there is a message</span>
+    <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">(</span> data.<span style="color: #660066;">length</span> <span style="color: #339933;">&amp;</span>gt<span style="color: #339933;">;</span> <span style="color: #CC0000;">0</span> <span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+      $.<span style="color: #660066;">each</span><span style="color: #009900;">(</span> data<span style="color: #009900;">[</span><span style="color: #3366CC;">&#39;msg&#39;</span><span style="color: #009900;">]</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+        <span style="color: #006600; font-style: italic;">// Do some fancy stuff with messages…</span>
+      <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">}</span>
+  <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+  window.<span style="color: #660066;">setTimeout</span><span style="color: #009900;">(</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+    pull_request<span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+  <span style="color: #009900;">}</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1000</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">60</span> <span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></pre></div></div>
+
+<p>As you can see, there is an <a title="Ben Alman » Immediately-Invoked Function Expression (IIFE)" href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="_blank">IIFE</a> surrounding the code. I am doing this in order to call the timeout recursively. For more information please read <a title="Ben Alman » Immediately-Invoked Function Expression (IIFE)" href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="_blank">Ben Almans article</a> on this issue.</p>
+<h2>What else is possible</h2>
+<p>This will work totally fine. Let’s take a look at other possible ways.</p>
+<p>The <a title="Push technology" href="http://en.wikipedia.org/wiki/Push_technology" target="_blank">Wikipedia article</a> about push sais:</p>
+<blockquote><p>Push technology, or server push, describes a style of Internet-based communication where the request for a given transaction is initiated by the publisher or central server.</p></blockquote>
+<p>With HTML5 the <a title="Web Hypertext Application Technology Working Group" href="http://www.whatwg.org/" target="_blank">WHATWG</a> introduces <a title="The WebSocket API" href="http://dev.w3.org/html5/websockets/" target="_blank">The WebSocket API</a>.</p>
+<h3>WebSocket API</h3>
+<p>The WebSocket API enables websites and apps to communicate with a server. A polyfill for browsers that do not support WebSocket and as a framework you should definitely check out <a title="Socket.IO: the cross-browser WebSocket for realtime apps" href="http://socket.io/" target="_blank">Socket.IO</a>.</p>
+<p>There were some <a title="The WebSocket Protocol Specification" href="http://dev.w3.org/html5/websockets/" target="_blank">definitions of this API in the spec</a> that had some security problems and so browser vendors implemented some stuff that is outdated by now. There is a kinda <a title="The WebSocket protocol - draft-ietf-hybi-thewebsocketprotocol-10" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10" target="_blank">“last call” specification</a> for this API which are already implemented in <a title="Blogpost about WebSocket support in Chrome" href="http://blog.chromium.org/2011/08/new-websocket-protocol-secure-and.html" target="_blank">Chrome dev channel</a> (version 14) and <a title="Mozilla docs for WebSocket API" href="https://developer.mozilla.org/en/WebSockets">Firefox 7</a>. The API is available with a current version of Webkit so it should be in Safari soon.</p>
+<h3>Server-Sent Events</h3>
+<p>Furthermore there is the <a title="Server-Sent Events" href="http://dev.w3.org/html5/eventsource/" target="_blank">Server-Sent Event</a> which is dedicated to fulfill push notifications. The event is already supported in stable versions of Safari, Chrome, Firefox and Opera. See <a title="When can I use… Server-Sent Event" href="http://caniuse.com/#feat=eventsource" target="_blank">When Can I Use…</a> for more information.</p>
+<p>The Server-Sent Event is a DOM event and can be accessed via <code>new EventSource( file );</code> in JavaScript, while <code>file</code> is a server-file which publishes the notification. With the <code>onmessage</code>-event it is possible to listen to the changes of notifications.</p>
+
+<div class="wp_syntax"><div class="code"><pre class="javascript" style="font-family: monospace;"><span style="color: #003366; font-weight: bold;">var</span> source <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> EventSource<span style="color: #009900;">(</span> <span style="color: #3366CC;">&#39;messages.cgi&#39;</span> <span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+source.<span style="color: #660066;">onmessage</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">(</span> e <span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+  <span style="color: #006600; font-style: italic;">// do something with the notification, e.g. log it in the console.</span>
+  console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span> e.<span style="color: #660066;">data</span> <span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span></pre></div></div>
+
+<p><h2>Conclusion</h2></p>
+<p><p>With the given technologies it is possible to send notifications via push to the client-site. There are polyfills for “older” browsers (like pulling data). It is possible to use these tools today.</p></p>
+<p><p>If you have any experience with the topic of pushing data, please share your thoughts and ideas in the comments.<br />
+Thanks for reading though.</p></p>
+<p><p>I am going to develop a web-app with a friend of mine. We are using <a title="Evented I/O for V8 JavaScript." href="http://nodejs.org/" target="_blank">node.js</a> for the server part. I am pretty exited to deal with it. We will definitely need something like a push event. We’ll see what will be best.</p></p>
+<p><p>Read more and follow-up info:</p></p>
+<ul>
+<li>Follow Ian Hickson on <a title="Ian Hickson on Twitter" href="https://twitter.com/#!/hixie" target="_blank">Twitter</a> or <a title="Ian Hickson on Google+" href="https://plus.google.com/107429617152575897589/" target="_blank">Google+</a>. He is the editor of the spec for Server-sent Events and The WebSocket API.</li>
+<li>You should checkout the <a title="HTML5 Cross Browser Polyfills - GitHub" href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" target="_blank">Modernizr Polyfill Wiki</a> to get some information on polyfills for older browsers with WebSockets aso.</li>
+</ul>
+
+
+
+
+
+	<div class="share-post">
+		<script type="text/x-handlebars-template" id="share-post">
+			<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://drublic.de/blog/the-difference-between-push-and-pull/" data-text="Push and Pull with Server-sent Event and WebSocket" data-count="horizontal" data-via="drublic" data-related="drublic">Tweet</a>
+
+			<g:plusone size="medium"></g:plusone>
+		</script>
+	</div>
+</article>

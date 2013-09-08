@@ -1,0 +1,47 @@
+<article class="post">
+	<header class="post-header">
+		<h1><a href="http://drublic.de/blog/restrict-textareas-resize-css3/" title="Permalink to Resize Elements with CSS3" rel="entry-title">Resize Elements with CSS3</a></h1>
+		<time datetime="Mon Oct 17 2011 02:00:00 GMT+0200 (CEST)" rel="updated">Mon Oct 17 2011 02:00:00 GMT+0200 (CEST)</time>
+
+		<span class="author">
+			by
+			<a href="" title="Visit website" rel="author">Hans Christian</a>
+		</span>
+
+		<span class="categories">CSS, Research</span>
+		<span class="tags">CSS3, property, resize</span>
+	</header>
+
+	<pre><code><div class="highlight"><pre>                <span class="o">&lt;</span><span class="nx">textarea</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;textarea&quot;</span> <span class="nx">style</span><span class="o">=</span><span class="s2">&quot;width: 100%; font-size: 3em; line-height: 2.5em; margin-bottom: 20px; text-align: center; height: 110px;&quot;</span><span class="o">&gt;</span><span class="nx">Resize</span> <span class="nx">me</span><span class="o">!&lt;</span><span class="err">/textarea&gt;</span>
+
+
+                        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;message&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="nx">Hey</span> <span class="nx">there</span><span class="err">…</span><span class="o">&lt;</span><span class="err">/h3&gt;</span>
+            <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">post</span> <span class="nx">is</span> <span class="mi">618</span> <span class="nx">days</span> <span class="nx">old</span><span class="p">.</span> <span class="nx">It</span> <span class="nx">was</span> <span class="nx">written</span> <span class="nx">on</span> <span class="mf">17.10</span><span class="p">.</span><span class="mi">2011</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">make</span> <span class="nx">sure</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">careful</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">information</span> <span class="nx">provided</span> <span class="nx">and</span> <span class="nx">check</span> <span class="nx">a</span> <span class="nx">more</span> <span class="nx">recent</span> <span class="nx">source</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">topic</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">The</span> <span class="nx">CSS3</span><span class="o">-</span><span class="nx">spec</span> <span class="nx">is</span> <span class="nx">full</span> <span class="nx">of</span> <span class="nx">wonderful</span> <span class="nx">things</span><span class="p">.</span> <span class="nx">Sometimes</span> <span class="nx">things</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">not</span> <span class="nx">so</span> <span class="nx">desperately</span> <span class="nx">needed</span> <span class="nx">as</span> <span class="nx">others</span> <span class="nx">but</span> <span class="nx">anyway</span><span class="err">…</span> <span class="nx">good</span> <span class="nx">to</span> <span class="nx">have</span> <span class="nx">them</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</pre></div>
+</code></pre>
+<p>One of these more or less needed properties might be <code>resize</code>. It is part of the <a title="CSS3 Specification: User Interface Module" href="http://www.w3.org/TR/css3-ui/" target="_blank">CSS3 Basic User Interface Module</a>. What is really useful with <code>resize</code> is the ability to restrict the resizing of <code>textarea</code> for example. But it is possible to resize every element you’d like to as <a title="A demo of resize for a div" href="http://jsfiddle.net/simurai/baBN9/" target="_blank">this demo</a> by <a title="@simurai on Twitter" href="http://twitter.com/simurai" target="_blank">Simurai</a> shows.</p>
+<p>There are four values for <code>resize</code> that are kinda logical:</p>
+<ul>
+<li><code>none</code>: no resizing at all</li>
+<li><code>horizontal</code>: resizing only horizontal</li>
+<li><code>vertical</code>: resizing only… vertical</li>
+<li><code>both</code>: yeah, well… pretty obvious, right?!</li>
+</ul>
+<p><a title="Robert's talk" href="http://robertnyman.com/" target="_blank">Robert Nyman</a> created <a title="Demo: CSS3 resizing" href="http://robertnyman.com/css3/resize/resize.html" target="_blank">this demo</a> using the <code>resize</code>-property. You should also check out <a title="The CSS3 resize property" href="http://www.impressivewebs.com/css3-resize/" target="_blank">Louis’ article</a> that’s pretty great. And: the <a title="resize on MDN" href="https://developer.mozilla.org/en/CSS/resize" target="_blank">MDN docs</a> about <code>resize</code>. You can also read more about this topic at <a href="http://stackoverflow.com/questions/1837926/css3-resize-in-webkit-safari" target="_blank">Stackoverflow</a>.</p>
+
+
+
+
+
+	<div class="share-post">
+		<script type="text/x-handlebars-template" id="share-post">
+			<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://drublic.de/blog/restrict-textareas-resize-css3/" data-text="Resize Elements with CSS3" data-count="horizontal" data-via="drublic" data-related="drublic">Tweet</a>
+
+			<g:plusone size="medium"></g:plusone>
+		</script>
+	</div>
+</article>
