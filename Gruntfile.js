@@ -38,6 +38,13 @@ module.exports = function (grunt) {
 			}
 		},
 
+		copy: {
+			cssmodal: {
+				src: 'components/css-modal/modal.js',
+				dest: 'public/js/modal.js',
+			}
+		},
+
 		watch: {
 
 			scss: {
@@ -58,6 +65,7 @@ module.exports = function (grunt) {
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-pages');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
