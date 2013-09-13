@@ -1,6 +1,5 @@
 {
   "name": "css-modal",
-  "version": "1.0.4",
   "main": [
     "modal.scss",
     "modal.js"
@@ -9,7 +8,6 @@
   "ignore": [
     "download",
     "node_modules",
-    "site",
     "tests",
     ".editorconfig",
     ".gitignore",
@@ -19,12 +17,13 @@
     "package.json"
   ],
   "homepage": "https://github.com/drublic/css-modal",
-  "_release": "1.0.4",
+  "_release": "v1.1.0alpha",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.0.4",
-    "commit": "60d57e7e5db8fddcfaa9fa1d2ff934a9792d8842"
+    "type": "tag",
+    "tag": "v1.1.0alpha",
+    "commit": "31c4a64411d36e3125b3f5cbff9ad822c1f1f2e3"
   },
   "_source": "git://github.com/drublic/css-modal.git",
-  "_target": "~1.0.0"
+  "_target": "v1.1.0alpha",
+  "_originalSource": "css-modal"
 }

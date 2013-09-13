@@ -22,5 +22,6 @@
     "commit": "61f1a3a83699676dfc4ba50c45b8181c0f7030d4"
   },
   "_source": "git://github.com/appleboy/normalize.scss.git",
-  "_target": "~2.1.2"
+  "_target": "~2.1.2",
+  "_originalSource": "normalize-scss"
 }

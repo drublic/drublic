@@ -5,8 +5,8 @@
   "ignore": [],
   "dependencies": {
     "normalize-scss": "~2.1.2",
-    "css-modal": "~1.0.0",
-    "sass-mixins": "~0.4.0"
+    "css-modal": "v1.1.0alpha",
+    "sass-mixins": "~0.4.1"
   },
   "devDependencies": {}
 }
