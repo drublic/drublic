@@ -901,15 +901,12 @@ textarea {
  * http://drublic.github.com/css-modal
  *
  * @author Hans Christian Reinl - @drublic
- * @version 1.1.0
+ * @version 1.1.0alpha
  */
 /*
  * Configuration
  */
 html {
-  overflow-y: scroll;
-}
-html > body {
   overflow-y: scroll;
 }
 

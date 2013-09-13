@@ -3,7 +3,7 @@
  * http://drublic.github.com/css-modal
  *
  * @author Hans Christian Reinl - @drublic
- * @version 1.1.0
+ * @version 1.1.0alpha
  */
 
 /*
@@ -24,10 +24,6 @@ $modal-mobile-header: #27aae2;
 // Prevent overflow on HTML element
 html {
 	overflow-y: scroll;
-
-	> body {
-		overflow-y: scroll;
-	}
 }
 
 .has-overlay {
