@@ -856,7 +856,7 @@ textarea {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-.hidden {
+.hidden, .site-navigation .site-logo img {
   display: none !important;
   visibility: hidden;
 }
@@ -915,6 +915,7 @@ html {
 }
 .has-overlay > body {
   height: 100%;
+  overflow-y: scroll;
 }
 @media screen and (max-width: 30em) {
   .has-overlay {
@@ -1523,7 +1524,7 @@ ul {
   width: 2em;
   height: 2em;
   padding: 10px;
-  background: url(../img/logo.svg);
+  background: url(../logo.svg);
   background-size: contain;
   text-indent: -100px;
   overflow: hidden;

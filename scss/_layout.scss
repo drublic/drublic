@@ -140,7 +140,7 @@ ul {
 			height: 2em;
 			padding: 10px;
 
-			background: url(../img/logo.svg);
+			background: url(../logo.svg);
 			background-size: contain;
 
 			text-indent: -100px;
@@ -149,6 +149,10 @@ ul {
 			.no-svg & {
 				background-image: url(../img/logo.png);
 			}
+		}
+
+		img {
+			@extend .hidden;
 		}
 	}
 
