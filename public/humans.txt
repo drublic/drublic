@@ -4,14 +4,14 @@
 	Hans Christian Reinl
 	Site: drublic.de
 	Twitter: @drublic
-	Location: Freiburg, Germany
+	Location: Cologne, Germany
 
 # THANKS
 	I would also like to thank the community that made HTML5 Boilerplate what it is today.
 
 # SITE
 	Standards: HTML5, CSS3
-	Components: Normalize.css, Modernizr, jQuery
+	Components: Normalize.css, Modernizr
 	Software: Sublime Text 2 (Programming)
 
 
