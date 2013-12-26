@@ -80,7 +80,7 @@ Options -MultiViews
 # You can customize what Apache returns to the client in case of an error (see
 # http://httpd.apache.org/docs/current/mod/core.html#errordocument), e.g.:
 
-ErrorDocument 404 /404.html
+# ErrorDocument 404 /404.html
 
 
 # ##############################################################################
@@ -98,7 +98,7 @@ ErrorDocument 404 /404.html
     Header set X-UA-Compatible "IE=edge"
     # `mod_headers` can't match based on the content-type, however, we only
     # want to send this header for HTML pages and not for the other resources
-    <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+    <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|opus|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
         Header unset X-UA-Compatible
     </FilesMatch>
 </IfModule>
@@ -128,7 +128,7 @@ ErrorDocument 404 /404.html
 
   # Audio
     AddType audio/mp4                                   m4a f4a f4b
-    AddType audio/ogg                                   oga ogg
+    AddType audio/ogg                                   oga ogg opus
 
   # JavaScript
     # Normalize to standard type (it's sniffed in IE anyways):
@@ -247,27 +247,26 @@ AddDefaultCharset utf-8
 
 # <IfModule mod_rewrite.c>
 #    RewriteCond %{HTTPS} !=on
-#    RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-#    RewriteCond %{HTTP_HOST} !=localhost [NC]
-#    RewriteCond %{HTTP_HOST} !=127.0.0.1
+#    RewriteCond %{HTTP_HOST} !^www\. [NC]
+#    RewriteCond %{SERVER_ADDR} !=127.0.0.1
+#    RewriteCond %{SERVER_ADDR} !=::1
 #    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
 #
 <IfModule mod_rewrite.c>
-  RewriteRule ^blog/(.*)$ - [L]
-  RewriteRule ^img/(.*)$ - [L]
-  RewriteRule ^work/(.*)$ - [L]
-  RewriteRule ^css/(.*)$ - [L]
-  RewriteRule ^js/(.*)$ - [L]
-  RewriteRule ^index.php$ - [L]
-  RewriteRule ^favicon.ico$ - [L]
-  RewriteRule ^apple-touch-icon-precomposed.png$ - [L]
-  RewriteRule ^humans.txt$ - [L]
-  RewriteRule ^logo.svg$ - [L]
-  RewriteRule ^robots.txt$ - [L]
-  RewriteRule ^(.*)$ index.php?file=$1
+    RewriteRule ^blog/(.*)$ - [L]
+    RewriteRule ^img/(.*)$ - [L]
+    RewriteRule ^work/(.*)$ - [L]
+    RewriteRule ^css/(.*)$ - [L]
+    RewriteRule ^js/(.*)$ - [L]
+    RewriteRule ^index.php$ - [L]
+    RewriteRule ^favicon.ico$ - [L]
+    RewriteRule ^apple-touch-icon-precomposed.png$ - [L]
+    RewriteRule ^humans.txt$ - [L]
+    RewriteRule ^logo.svg$ - [L]
+    RewriteRule ^robots.txt$ - [L]
+    RewriteRule ^(.*)$ index.php?file=$1
 </IfModule>
-
 
 
 # ##############################################################################
@@ -305,8 +304,8 @@ AddDefaultCharset utf-8
 # https://www.owasp.org/index.php/Clickjacking
 
 # <IfModule mod_headers.c>
-#     Header set X-Frame-Options "SAMEORIGIN"
-#     <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+#     Header set X-Frame-Options "DENY"
+#     <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|opus|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
 #        Header unset X-Frame-Options
 #     </FilesMatch>
 # </IfModule>
@@ -330,7 +329,7 @@ AddDefaultCharset utf-8
 
 # <IfModule mod_headers.c>
 #    Header set Content-Security-Policy "script-src 'self'; object-src 'self'"
-#    <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+#    <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|opus|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
 #        Header unset Content-Security-Policy
 #    </FilesMatch>
 # </IfModule>
@@ -435,7 +434,7 @@ AddDefaultCharset utf-8
 # <IfModule mod_headers.c>
 #     #                           (1)     (2)
 #     Header set X-XSS-Protection "1; mode=block"
-#     <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+#     <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|opus|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
 #         Header unset X-XSS-Protection
 #     </FilesMatch>
 # </IfModule>
@@ -628,7 +627,7 @@ FileETag None
 
 # <IfModule mod_rewrite.c>
 #    RewriteCond %{REQUEST_FILENAME} !-f
-#    RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
+#    RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpe?g|gif)$ $1.$3 [L]
 # </IfModule>
 
 # ------------------------------------------------------------------------------
