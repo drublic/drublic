@@ -30,4 +30,18 @@
 		document.documentElement.className += ' no-svg';
 	}
 
+
+	var header = document.querySelector('.site-header');
+	var headroom  = new Headroom(header, {
+		tolerance: 5,
+		offset: 50,
+		classes: {
+			initial: '_',
+			pinned: 'slide-down',
+			unpinned: 'slide-up'
+		}
+	});
+
+	headroom.init();
+
 }());

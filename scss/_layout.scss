@@ -1,6 +1,5 @@
 html {
 	background: #fff;
-	border-top: 7px solid $color;
 	font: 16px/1.5 Helvetica Neue, sans-serif;
 	color: $copy-color;
 }
@@ -95,9 +94,9 @@ ul {
 	line-height: 2;
 
 	ul {
-		@include x-rem(margin, 3 0 2);
+		@include x-rem(padding, 2 2 1);
 
-		padding: 0 2em;
+		margin: 0;
 		text-align: center;
 	}
 
@@ -165,6 +164,19 @@ ul {
 }
 
 // Header
+.site-header {
+	@include x-transform(translateZ(0));
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	left: 0;
+	background: #fff;
+	background: rgba(#fff, 0.8);
+	border-top: 7px solid $color;
+	border-bottom: 1px solid #eee;
+}
+
 .site-claim {
 	margin: 0.3em 0 0;
 	font-size: 5em;
@@ -179,8 +191,9 @@ ul {
 
 .main {
 	@include x-rem(max-width, 45);
+	@include x-rem(padding, 7 2 3);
+
 	margin: 0 auto;
-	padding: 0 2em;
 }
 
 
@@ -291,4 +304,110 @@ h3 {
 		margin: 1em 0 0;
 		line-height: 1.2;
 	}
+}
+
+
+.site-header {
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	-o-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
+@-webkit-keyframes slide-down {
+	0% {
+		-webkit-transform: translateY(-100%)
+	}
+
+	100% {
+		-webkit-transform: translateY(0)
+	}
+}
+
+@-moz-keyframes slide-down {
+	0% {
+		-moz-transform: translateY(-100%)
+	}
+
+	100% {
+		-moz-transform: translateY(0)
+	}
+}
+
+@-o-keyframes slide-down {
+	0% {
+		-o-transform: translateY(-100%)
+	}
+
+	100% {
+		-o-transform: translateY(0)
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(-100%)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+.site-header.slide-down {
+	-webkit-animation-name: slide-down;
+	-moz-animation-name: slide-down;
+	-o-animation-name: slide-down;
+	animation-name: slide-down;
+}
+
+@-webkit-keyframes slide-up {
+	0% {
+		-webkit-transform: translateY(0)
+	}
+
+	100% {
+		-webkit-transform: translateY(-100%)
+	}
+}
+
+@-moz-keyframes slide-up {
+	0% {
+		-moz-transform: translateY(0)
+	}
+
+	100% {
+		-moz-transform: translateY(-100%)
+	}
+}
+
+@-o-keyframes slide-up {
+	0% {
+		-o-transform: translateY(0)
+	}
+
+	100% {
+		-o-transform: translateY(-100%)
+	}
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(0)
+	}
+
+	100% {
+		transform: translateY(-100%)
+	}
+}
+
+.site-header.slide-up {
+	-webkit-animation-name: slide-up;
+	-moz-animation-name: slide-up;
+	-o-animation-name: slide-up;
+	animation-name: slide-up
 }
