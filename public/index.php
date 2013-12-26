@@ -135,8 +135,19 @@
 		return $posts->paginated_posts;
 	}
 
+	// send Header if necessary
+	function set_headers () {
+		$page = get_page_properties();
+
+		// Send 404 if empty
+		if (empty($page)) {
+			header('HTTP/1.0 404 Not Found');
+		}
+	}
+
 
 	// Build page
+	set_headers();
 
 	include('../templates/header.html');
 	include(get_file_path());
