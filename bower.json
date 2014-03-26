@@ -6,7 +6,7 @@
   "dependencies": {
     "normalize-scss": "~2.1.2",
     "css-modal": "v1.1.0alpha",
-    "sass-mixins": "~0.4.1"
+    "sass-mixins": "0.8.0"
   },
   "devDependencies": {}
 }
