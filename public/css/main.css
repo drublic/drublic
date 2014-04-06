@@ -1646,12 +1646,35 @@ ul {
 }
 
 .site-claim {
-  margin: 0.3em 0 0;
-  font-size: 5em;
+  max-width: 960px;
+  max-width: 60rem;
+  padding: 160px 32px 0;
+  padding: 10rem 2rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-claim h1 {
+  margin: 0.3em 0;
   font-weight: normal;
 }
 .site-claim span {
-  font-size: 0.3em;
+  font-family: 'Playfair Display SC', serif;
+  font-style: italic;
+  font-size: 1.2em;
+  padding: 0 0.1em;
+}
+.site-claim p {
+  font-size: 1.2em;
+}
+.site-claim .le-me {
+  margin-top: 4em;
+}
+
+.desc {
+  max-width: 720px;
+  max-width: 45rem;
+  line-height: 1.7em;
+  margin: 6em auto 0;
 }
 
 .main {
@@ -1662,9 +1685,14 @@ ul {
   margin: 0 auto;
 }
 
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 h2 {
   border-bottom: 1px solid #111;
   margin: .5em 0;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
   font-weight: normal;
 }
@@ -1678,12 +1706,6 @@ h3 {
 }
 h3 a {
   text-decoration: none;
-}
-
-.desc {
-  font-size: 1.2em;
-  line-height: 2em;
-  margin-bottom: 2em;
 }
 
 .content {
@@ -1730,7 +1752,8 @@ h3 a {
   padding: 32px 0 32px;
   padding: 2rem 0 2rem;
 }
-.site-footer .le-me {
+
+.le-me {
   width: 208px;
   width: 13rem;
   border-radius: 50%;
@@ -1843,15 +1866,6 @@ h3 a {
     -webkit-overflow-scrolling: touch;
   }
 }
-@media screen and (max-width: 44em) {
-  .site-claim {
-    font-size: 3.5em;
-  }
-
-  .desc {
-    font-size: 1em;
-  }
-}
 @media screen and (max-width: 38em) {
   .site-navigation > ul {
     display: none;
@@ -1911,6 +1925,18 @@ h3 a {
     display: block;
   }
 
+  .site-claim {
+    padding-top: 3rem;
+  }
+
+  .desc {
+    margin-top: 2rem;
+  }
+
+  .main {
+    padding-top: 3rem;
+  }
+
   .work-project {
     width: 100%;
     padding: 10px;
@@ -1925,12 +1951,16 @@ h3 a {
   }
 }
 @media screen and (max-width: 32em) {
-  .site-claim {
-    line-height: 1.4;
-    margin-bottom: 0.5em;
+  h1 {
+    font-size: 2em;
   }
-  .site-claim span {
-    display: block;
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .site-claim .desc p {
+    font-size: 1em;
   }
 
   .site-footer {
@@ -1941,14 +1971,6 @@ h3 a {
   }
 }
 @media screen and (max-width: 24em) {
-  .site-claim {
-    font-size: 2.8em;
-    margin-top: 0.8em;
-  }
-  .site-claim span {
-    font-size: 0.5em;
-  }
-
   .main,
   .site-footer {
     padding: 0 1em 1em;
