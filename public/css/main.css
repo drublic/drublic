@@ -824,7 +824,8 @@ th {
   padding: 0;
 }
 
-.button, .site-navigation a {
+.button,
+.button-large, .site-navigation a {
   display: inline-block;
   padding: 0 11px;
   text-decoration: none;
@@ -832,10 +833,12 @@ th {
   color: #fff;
   border-radius: 2px;
 }
-.button:visited, .site-navigation a:visited {
+.button:visited,
+.button-large:visited, .site-navigation a:visited {
   color: #fff;
 }
-.button:hover, .site-navigation a:hover {
+.button:hover,
+.button-large:hover, .site-navigation a:hover {
   background-color: #27aae2;
 }
 
@@ -1568,11 +1571,19 @@ ul {
   padding-left: 1.1em;
 }
 
-.button {
+.button,
+.button-large {
   font-size: 1.3em;
 }
-.button:hover {
+.button:hover,
+.button-large:hover {
   color: #fff;
+}
+
+.button-large {
+  font-size: 1.5em;
+  padding: 0.2em 1em;
+  margin-top: 1em;
 }
 
 .site-navigation {
