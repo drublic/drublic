@@ -1,14 +1,14 @@
 {
   "name": "css-modal",
+  "version": "1.1.8",
   "main": [
     "modal.scss",
     "modal.js"
   ],
   "author": "Hans Christian Reinl",
   "ignore": [
-    "download",
     "node_modules",
-    "tests",
+    "test",
     ".editorconfig",
     ".gitignore",
     ".jshintrc",
@@ -17,13 +17,13 @@
     "package.json"
   ],
   "homepage": "https://github.com/drublic/css-modal",
-  "_release": "v1.1.0alpha",
+  "_release": "1.1.8",
   "_resolution": {
-    "type": "tag",
-    "tag": "v1.1.0alpha",
-    "commit": "31c4a64411d36e3125b3f5cbff9ad822c1f1f2e3"
+    "type": "version",
+    "tag": "v1.1.8",
+    "commit": "619e7d1328038a0660a2d718a0937d1a85939855"
   },
   "_source": "git://github.com/drublic/css-modal.git",
-  "_target": "v1.1.0alpha",
+  "_target": "1.1.8",
   "_originalSource": "css-modal"
 }

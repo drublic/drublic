@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.8.0 - 2014-03-06 *//**
+/*! sass-mixins - v0.9.0 - 2014-07-02 *//**
  * @description
  * Generates keyframe animations
  *
@@ -69,6 +69,30 @@
 
 /**
  * @description
+ * Generates `background-size` output for a given element.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/background-img-opts
+ * @link spec http://www.w3.org/TR/css3-background/
+ *
+ * @param value
+ * @returns
+ *   -webkit-background-size: $args;
+ *           background-size: $args;
+ *
+ * @example
+ *   .selector {
+ *     @include x-background-size(100% auto);
+ *   }
+ */
+@mixin x-background-size ($values...) {
+    -webkit-background-size: $values; // For Android 2.x
+            background-size: $values;
+}
+
+/**
+ * @description
  * Generates cross-browser-compatible `border-radius` for a given element
  *
  * @author drublic
@@ -110,7 +134,7 @@
  *     @include x-box-shadow(5px 5px 10px 5px #aaa);
  *   }
  */
-@mixin x-box-shadow ($values) {
+@mixin x-box-shadow ($values...) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;
 }
@@ -229,6 +253,208 @@
 	}
 }
 
+/**
+ * @description
+ * Generates `calc` function which allows mathematical expressions for a given property
+ *
+ * @author romamatusevich
+ *
+ * @link spec http://www.w3.org/TR/css3-values/#calc
+ * @link caniuse http://caniuse.com/calc
+ *
+ * @param property
+ * @param expression
+ *
+ * @returns
+ *    <property>: -webkit-calc(<expression>);
+ *    <property>: calc(<expression>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-calc(width, "600px - 2em");
+ *   }
+ */
+@mixin x-calc ($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+/**
+ * @description
+ * Generates flexbox properties for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
+ * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * @link spec http://www.w3.org/TR/css3-flexbox/
+ */
+
+/**
+ * @returns
+ *   display: -webkit-box;
+ *   display: -moz-box;
+ *   display: -ms-flexbox;
+ *   display: -webkit-flex;
+ *   display: flex;
+ *
+ * @example
+ *   .selector {
+ *     @include x-display-flex;
+ *   }
+ */
+@mixin x-display-flex {
+	display: -webkit-box;  // Chrome 20-, iOS 6-, Safari 3.1  -6
+	display: -moz-box;     // FF 19-
+	display: -webkit-flex; // Chrome 21 - 28
+	display: -ms-flexbox;  // IE 10
+	display: flex;         // FF 20+, Chrome 29+, Opera 12.1, 17+
+}
+
+/**
+ * @param values
+ * @returns
+ *   -webkit-box-flex: <values>;
+ *      -moz-box-flex: <values>;
+ *       -webkit-flex: <values>;
+ *           -ms-flex: <values>;
+ *               flex: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex(1 1 auto);
+ *   }
+ */
+@mixin x-flex ($values...) {
+	-webkit-box-flex: $values; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	   -moz-box-flex: $values; // FF 19-
+	    -webkit-flex: $values; // Chrome 21 - 28
+	        -ms-flex: $values; // IE 10
+	            flex: $values; // FF 20+, Chrome 29+, Opera 12.1, 17+
+}
+
+/**
+ * @param value
+ * @returns
+ *   -webkit-box-ordinal-group: <value>;
+ *      -moz-box-ordinal-group: <value>;
+ *              -ms-flex-order: <value>;
+ *               -webkit-order: <value>;
+ *                       order: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-order(1);
+ *   }
+ */
+@mixin x-order ($value) {
+	-webkit-box-ordinal-group: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	   -moz-box-ordinal-group: $value; // FF 19-
+	           -ms-flex-order: $value; // IE 10
+	            -webkit-order: $value; // Chrome 21 - 28
+	                    order: $value; // FF 20+, Chrome 29+, Opera 12.1, 17+
+}
+
+/**
+ * @param value
+ * @returns
+ *    -webkit-flex-wrap: <value>;
+ *        -ms-flex-wrap: <value>;
+ *            flex-wrap: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex-wrap(wrap);
+ *   }
+ */
+@mixin x-flex-wrap ($value) {
+	// IE 10
+	@if $value == nowrap {
+		-ms-flex-wrap: none;
+	} @else {
+		-ms-flex-wrap: $value;
+	}
+	-webkit-flex-wrap: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
+}
+
+/**
+ * @param value
+ * @returns
+ *   -webkit-align-content: <value>;
+ *      -moz-align-content: <value>;
+ *      -ms-flex-line-pack: <value>;
+ *           align-content: <value>;
+ * @example
+ *   .selector {
+ *     @include x-align-content(center);
+ *   }
+ */
+ @mixin x-align-content ($value) {
+ 	// IE 10
+ 	@if $value == flex-start {
+ 		-ms-flex-line-pack: start;
+ 	} @else if $value == flex-end {
+ 		-ms-flex-line-pack: end;
+ 	} @else if $value == space-between {
+ 		-ms-flex-line-pack: justify;
+ 	} @else if $value == space-around {
+ 		-ms-flex-line-pack: distribute;
+ 	} @else {
+ 		-ms-flex-line-pack: $value;
+ 	}
+	-webkit-align-content: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	   -moz-align-content: $value; // FF 19-
+	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
+ }
+
+/**
+ * @param value
+ * @returns
+ *	  -webkit-box-direction: <value>;
+ *		 -moz-box-direction: <value>;
+ *       -webkit-box-orient: <value>;
+ *		    -moz-box-orient: <value>;
+ *   -webkit-flex-direction: <value>;
+ *      -moz-flex-direction: <value>;
+ *       -ms-flex-direction: <value>;
+ *           flex-direction: <value>;
+ * @example
+ *   .selector {
+ *     @include x-flex-direction(row-reverse);
+ *   }
+ */
+ @mixin x-flex-direction ($value) {
+	@if $value == row {
+		-webkit-box-direction: normal;
+		   -moz-box-direction: normal;
+		   -webkit-box-orient: horizontal;
+		      -moz-box-orient: horizontal;
+	} @elseif $value == row-reverse {
+		-webkit-box-direction: reverse;
+		   -moz-box-direction: reverse;
+		   -webkit-box-orient: horizontal;
+		      -moz-box-orient: horizontal;
+	} @elseif $value == column {
+		-webkit-box-direction: normal;
+		   -moz-box-direction: normal;
+		   -webkit-box-orient: vertical;
+		      -moz-box-orient: vertical;
+	} @elseif $value == column-reverse {
+		-webkit-box-direction: reverse;
+		   -moz-box-direction: reverse;
+		   -webkit-box-orient: vertical;
+		      -moz-box-orient: vertical;
+	}
+
+ 	-webkit-flex-direction: $value;
+ 	   -moz-flex-direction: $value;
+ 	    -ms-flex-direction: $value;
+ 	        flex-direction: $value;
+ }
+
+/* ToDo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
+
 // Helper for old syntax in linear-gradients
 
 // Return the corrected angle or position for a css gradient
@@ -252,27 +478,27 @@
 	$veryold-direction: $direction;
 
 	// New Syntax has to be evaluated to old one
-	@if $direction == "to bottom" {
-		$old-direction: "top";
-	} @else if $direction == "to right" {
-		$old-direction: "left";
-	} @else if $direction == "to top" {
-		$old-direction: "bottom";
-	} @else if $direction == "to left" {
-		$old-direction: "right";
+	@if $direction == 'to bottom' {
+		$old-direction: 'top';
+	} @else if $direction == 'to right' {
+		$old-direction: 'left';
+	} @else if $direction == 'to top' {
+		$old-direction: 'bottom';
+	} @else if $direction == 'to left' {
+		$old-direction: 'right';
 	} @else {
 		$old-direction: angle($direction);
 	}
 
 	// And also for very old syntax
-	@if $direction == "to bottom" {
-		$veryold-direction: "left top, left bottom";
-	} @else if $direction == "to right" {
-		$veryold-direction: "top left, bottom right";
-	} @else if $direction == "to top" {
-		$veryold-direction: "left bottom, left top";
-	} @else if $direction == "to left" {
-		$veryold-direction: "top right, bottom left";
+	@if $direction == 'to bottom' {
+		$veryold-direction: 'left top, left bottom';
+	} @else if $direction == 'to right' {
+		$veryold-direction: 'top left, bottom right';
+	} @else if $direction == 'to top' {
+		$veryold-direction: 'left bottom, left top';
+	} @else if $direction == 'to left' {
+		$veryold-direction: 'top right, bottom left';
 	} @else {
 		$veryold-direction: angle($direction);
 	}
@@ -312,7 +538,7 @@
  * Note: By default this linear-gradient-mixin encourages people to use the
  * latest CSS-syntax for gradients.
  */
-@mixin x-linear-gradient ($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
+@mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
 
@@ -595,30 +821,48 @@
 
 /**
  * @description
- * This mixin will enable using the CSS3 value `rem`, which lets you define
- * property-sizes based on the root-element's font-size.
+ * This mixin enables you to use the CSS3 value `rem`, which lets you define
+ * property sizes based on the root element's font-size.
  *
  * @author drublic
  *
  * @link caniuse http://caniuse.com/rem
  * @link spec http://www.w3.org/TR/css3-values/#relative0
  *
- * @param property
- * @param values
- * @param default-font-size int optional
- * @returns
- *   <property>: (<value> * <default-font-size>)px;
- *   <property>: <value>;
- *
- * @example
- *   .selector {
- *     @include x-rem(font-size, 1.3);
- *   }
- *
  * Note: Depending on the font-size of the root-element `rem` calculates a
- * property of a current element. The fallback solution excepts a
+ * property of a current element. The fallback solution accepts a
  * `default-font-size`-argument which is 16px by default.
  */
+
+ /*
+  * Returns a number without unit. E.g. 30px -> 30
+  * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+  * 
+  * @param value {String}
+  * @returns
+  *   <Number>
+  */
+ @function strip-unit($value) {
+     @return $value / ($value * 0 + 1);
+ }
+
+ /*
+  * Outputs properties that use rem with a px fallback.
+  * It also takes px values and converts them to rem.
+  *
+  * @param property
+  * @param values
+  * @param default-font-size int optional
+  * @returns
+  *   <property>: <parsed value>px;
+  *   <property>: <parsed value>rem;
+  *
+  * @example
+  *   .selector {
+  *     @include x-rem(font-size, 1.3);
+  *     @include x-rem(padding, 20px);
+  *   }
+  */
 @mixin x-rem ($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px
@@ -628,15 +872,23 @@
 	// Iterate over entries
 	@each $value in $values {
 
-		// If the value is zero, return 0
+		// If the value is zero or of a type that doesn’t need conversion, return the value untouched
 		@if ( $value == 0 ) or type_of($value) == string or type_of($value) == color or type_of($value) == bool {
 			$px-values: append($px-values, $value);
 			$rem-values: append($rem-values, $value);
 
-		// If the value is not zero, convert it from px to rem
+		// Otherwise convert it properly
 		} @else {
-			$px-values: append($px-values, ($value * $main-font-size) );
-			$rem-values: append($rem-values, #{$value}rem);
+			$unit: unit($value);
+
+			@if $unit == 'px' {
+				$px-values: append($px-values, #{strip-unit($value)}px );
+				$rem-values: append($rem-values, (strip-unit($value) / strip-unit($main-font-size) * 1rem));
+			} @else {
+				$px-values: append($px-values, ($value * $main-font-size) );
+				$rem-values: append($rem-values, #{$value}rem);
+			}
+
 		}
 	}
 
@@ -716,7 +968,7 @@
  *     @include x-transition(background 0.3s ease-in);
  *   }
  */
-@mixin x-transition ($values) {
+@mixin x-transition ($values...) {
 	-webkit-transition: $values;
 	        transition: $values;
 }

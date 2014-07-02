@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! sass-mixins - v0.8.0 - 2014-03-06 */
+/*! sass-mixins - v0.9.0 - 2014-07-02 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -45,6 +45,25 @@
  * @example
  *   .selector {
  *     @include x-appearance(button);
+ *   }
+ */
+/**
+ * @description
+ * Generates `background-size` output for a given element.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/background-img-opts
+ * @link spec http://www.w3.org/TR/css3-background/
+ *
+ * @param value
+ * @returns
+ *   -webkit-background-size: $args;
+ *           background-size: $args;
+ *
+ * @example
+ *   .selector {
+ *     @include x-background-size(100% auto);
  *   }
  */
 /**
@@ -158,6 +177,119 @@
  *     x-breakpoints(mobile,  320px) { width: 100%; }
  *   }
  */
+/**
+ * @description
+ * Generates `calc` function which allows mathematical expressions for a given property
+ *
+ * @author romamatusevich
+ *
+ * @link spec http://www.w3.org/TR/css3-values/#calc
+ * @link caniuse http://caniuse.com/calc
+ *
+ * @param property
+ * @param expression
+ *
+ * @returns
+ *    <property>: -webkit-calc(<expression>);
+ *    <property>: calc(<expression>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-calc(width, "600px - 2em");
+ *   }
+ */
+/**
+ * @description
+ * Generates flexbox properties for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
+ * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * @link spec http://www.w3.org/TR/css3-flexbox/
+ */
+/**
+ * @returns
+ *   display: -webkit-box;
+ *   display: -moz-box;
+ *   display: -ms-flexbox;
+ *   display: -webkit-flex;
+ *   display: flex;
+ *
+ * @example
+ *   .selector {
+ *     @include x-display-flex;
+ *   }
+ */
+/**
+ * @param values
+ * @returns
+ *   -webkit-box-flex: <values>;
+ *      -moz-box-flex: <values>;
+ *       -webkit-flex: <values>;
+ *           -ms-flex: <values>;
+ *               flex: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex(1 1 auto);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *   -webkit-box-ordinal-group: <value>;
+ *      -moz-box-ordinal-group: <value>;
+ *              -ms-flex-order: <value>;
+ *               -webkit-order: <value>;
+ *                       order: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-order(1);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *    -webkit-flex-wrap: <value>;
+ *        -ms-flex-wrap: <value>;
+ *            flex-wrap: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex-wrap(wrap);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *   -webkit-align-content: <value>;
+ *      -moz-align-content: <value>;
+ *      -ms-flex-line-pack: <value>;
+ *           align-content: <value>;
+ * @example
+ *   .selector {
+ *     @include x-align-content(center);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *	  -webkit-box-direction: <value>;
+ *		 -moz-box-direction: <value>;
+ *       -webkit-box-orient: <value>;
+ *		    -moz-box-orient: <value>;
+ *   -webkit-flex-direction: <value>;
+ *      -moz-flex-direction: <value>;
+ *       -ms-flex-direction: <value>;
+ *           flex-direction: <value>;
+ * @example
+ *   .selector {
+ *     @include x-flex-direction(row-reverse);
+ *   }
+ */
+/* ToDo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
 /**
  * @description
  * Generates a linear gradient for a given element with a fallback color.
@@ -308,29 +440,42 @@
  */
 /**
  * @description
- * This mixin will enable using the CSS3 value `rem`, which lets you define
- * property-sizes based on the root-element's font-size.
+ * This mixin enables you to use the CSS3 value `rem`, which lets you define
+ * property sizes based on the root element's font-size.
  *
  * @author drublic
  *
  * @link caniuse http://caniuse.com/rem
  * @link spec http://www.w3.org/TR/css3-values/#relative0
  *
+ * Note: Depending on the font-size of the root-element `rem` calculates a
+ * property of a current element. The fallback solution accepts a
+ * `default-font-size`-argument which is 16px by default.
+ */
+/*
+ * Returns a number without unit. E.g. 30px -> 30
+ * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+ * 
+ * @param value {String}
+ * @returns
+ *   <Number>
+ */
+/*
+ * Outputs properties that use rem with a px fallback.
+ * It also takes px values and converts them to rem.
+ *
  * @param property
  * @param values
  * @param default-font-size int optional
  * @returns
- *   <property>: (<value> * <default-font-size>)px;
- *   <property>: <value>;
+ *   <property>: <parsed value>px;
+ *   <property>: <parsed value>rem;
  *
  * @example
  *   .selector {
  *     @include x-rem(font-size, 1.3);
+ *     @include x-rem(padding, 20px);
  *   }
- *
- * Note: Depending on the font-size of the root-element `rem` calculates a
- * property of a current element. The fallback solution excepts a
- * `default-font-size`-argument which is 16px by default.
  */
 /**
  * @description
@@ -1005,10 +1150,12 @@ textarea {
  * http://drublic.github.com/css-modal
  *
  * @author Hans Christian Reinl - @drublic
- * @version 1.1.0alpha
  */
-/*
- * Configuration
+/**
+ * CSS Modal Configuration
+ * http://drublic.github.com/css-modal
+ *
+ * @author Hans Christian Reinl - @drublic
  */
 html {
   overflow-y: scroll;
@@ -1022,9 +1169,6 @@ html {
   overflow-y: scroll;
 }
 @media screen and (max-width: 30em) {
-  .has-overlay {
-    height: 100%;
-  }
   .has-overlay > body {
     overflow: hidden;
     height: 100%;
@@ -1050,8 +1194,6 @@ html {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  color: #222222;
-  line-height: 1.3;
   display: none\9;
 }
 .imprint:target,
@@ -1069,6 +1211,8 @@ html {
 .is-active.imprint,
 .is-active.contact, .is-active.modal--show {
   display: block\9;
+  height: 100% \9;
+  width: 100% \9;
 }
 .imprint:target,
 .contact:target, .modal--show:target, .is-active.imprint,
@@ -1085,10 +1229,12 @@ html {
   width: 650px;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  border-radius: 2px;
-  background: white;
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+@media \0screen\,screen\9 {
+  .imprint .modal-inner,
+  .contact .modal-inner, .modal--show .modal-inner {
+    background: transparent;
+  }
 }
 .imprint .modal-inner > img,
 .contact .modal-inner > img, .modal--show .modal-inner > img,
@@ -1107,23 +1253,20 @@ html {
   width: auto;
   max-width: 100%;
 }
-.imprint header,
-.contact header, .modal--show header {
-  border-bottom: 1px solid #dddddd;
-  padding: 0 1.2em;
-}
-.imprint header > h2,
-.contact header > h2, .modal--show header > h2 {
-  margin: 0.5em 0;
-}
 .imprint .modal-content,
 .contact .modal-content, .modal--show .modal-content {
+  position: relative;
   max-height: 400px;
-  max-height: 70vh;
-  border-bottom: 1px solid #dddddd;
-  padding: 15px 1.2em;
+  max-height: 80vh;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media \0screen\,screen\9 {
+  .imprint .modal-content,
+  .contact .modal-content, .modal--show .modal-content {
+    overflow: visible;
+  }
 }
 .imprint .modal-content > *,
 .contact .modal-content > *, .modal--show .modal-content > * {
@@ -1142,8 +1285,12 @@ html {
   height: 1px;
   clip: rect(0 0 0 0);
   margin: -1px;
-  text-indent: -100px;
   overflow: hidden;
+}
+.imprint .modal-close:focus:after,
+.contact .modal-close:focus:after, .modal--show .modal-close:focus:after {
+  outline: 1px dotted;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 .imprint .modal-close:before,
 .contact .modal-close:before, .modal--show .modal-close:before {
@@ -1154,22 +1301,15 @@ html {
   right: 0;
   bottom: 0;
   z-index: 10;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAEUlEQVQoz2NgeEYAjioYSQoAzOTmAXhPhyoAAAAASUVORK5CYII=");
 }
 .imprint .modal-close:after,
 .contact .modal-close:after, .modal--show .modal-close:after {
   content: '\00d7';
   position: absolute;
   top: 25px;
-  left: 50%;
+  right: 50%;
   z-index: 20;
-  margin-left: 285px;
-  background: white;
-  border-radius: 2px;
-  padding: 2px 8px;
-  font-size: 1.2em;
-  text-decoration: none;
-  text-indent: 0;
+  margin-right: -325px;
 }
 @media screen and (max-width: 690px) {
   .imprint .modal-inner,
@@ -1179,15 +1319,10 @@ html {
     right: 20px;
     margin-left: 0;
   }
-  .imprint .modal-close,
-  .contact .modal-close, .modal--show .modal-close {
-    left: auto;
-    right: 33px;
-    margin-left: 0;
-  }
   .imprint .modal-close:after,
   .contact .modal-close:after, .modal--show .modal-close:after {
-    margin-left: 40%;
+    margin-right: 0 !important;
+    right: 20px;
   }
 }
 @media screen and (max-width: 30em) {
@@ -1196,41 +1331,27 @@ html {
     -webkit-transform: translate(0, 400px);
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-    -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
-    -moz-transition: -moz-transform .25s ease-in-out, opacity 1ms .25s;
-    -o-transition: -o-transform .25s ease-in-out, opacity 1ms .25s;
-    -ms-transition: -ms-transform .25s ease-in-out, opacity 1ms .25s;
-    transition: transform .25s ease-in-out, opacity 1ms .25s;
+    -webkit-transition: opacity 1ms .25s;
+    -moz-transition: opacity 1ms .25s;
+    -o-transition: opacity 1ms .25s;
+    -ms-transition: opacity 1ms .25s;
+    transition: opacity 1ms .25s;
     display: block;
     bottom: auto;
   }
   .imprint:target,
   .contact:target, .modal--show:target, .is-active.imprint,
   .is-active.contact, .is-active.modal--show {
-    -webkit-transition: -webkit-transform .25s ease-in-out;
-    -moz-transition: -moz-transform .25s ease-in-out;
-    -o-transition: -o-transform .25s ease-in-out;
-    -ms-transition: -ms-transform .25s ease-in-out;
-    transition: transform .25s ease-in-out;
     height: 100%;
   }
   .imprint:before,
   .contact:before, .modal--show:before {
-    background-color: #27aae2;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#27aae2), to(#1c9cd3));
-    background-image: -webkit-linear-gradient(top, #27aae2, #1c9cd3);
-    background-image: -moz-linear-gradient(top, #27aae2, #1c9cd3);
-    background-image: -o-linear-gradient(top, #27aae2, #1c9cd3);
-    background-image: linear-gradient(to bottom, #27aae2, #1c9cd3);
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 30;
-    height: 3em;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   }
   .imprint .modal-inner,
   .contact .modal-inner, .modal--show .modal-inner {
@@ -1240,20 +1361,21 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    padding-top: 3em;
     height: 100%;
     overflow: auto;
-    -webkit-box-shadow: none;
-    box-shadow: none;
   }
   .imprint .modal-content,
   .contact .modal-content, .modal--show .modal-content {
     max-height: none;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
   }
   .imprint .modal-close,
   .contact .modal-close, .modal--show .modal-close {
     right: auto;
-    text-decoration: none;
   }
   .imprint .modal-close:before,
   .contact .modal-close:before, .modal--show .modal-close:before {
@@ -1261,13 +1383,11 @@ html {
   }
   .imprint .modal-close:after,
   .contact .modal-close:after, .modal--show .modal-close:after {
-    content: attr(data-close);
-    top: 0.4em;
-    left: 1em;
+    top: 5px !important;
+    right: 5px;
+    left: auto;
     z-index: 40;
     margin-left: 0;
-    font-size: 1em;
-    padding: 0.5em 1em;
   }
 }
 @media screen and (max-height: 46em) and (min-width: 30em) {
@@ -1432,6 +1552,103 @@ html {
   }
 }
 /**
+ * CSS Modal Themes
+ * http://drublic.github.com/css-modal
+ *
+ * @author Hans Christian Reinl - @drublic
+ */
+/*
+ * Global Theme Styles
+ */
+.imprint,
+.contact, .modal--show {
+  color: #222222;
+  line-height: 1.3;
+}
+.imprint .modal-inner,
+.contact .modal-inner, .modal--show .modal-inner {
+  border-radius: 2px;
+  background: white;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  max-width: 100%;
+  -webkit-transition: max-width 0.25s linear, margin-left 0.125s linear;
+  transition: max-width 0.25s linear, margin-left 0.125s linear;
+}
+.imprint header,
+.contact header, .modal--show header {
+  border-bottom: 1px solid #dddddd;
+  padding: 0 1.2em;
+}
+.imprint header > h2,
+.contact header > h2, .modal--show header > h2 {
+  margin: 0.5em 0;
+}
+.imprint .modal-content,
+.contact .modal-content, .modal--show .modal-content {
+  border-bottom: 1px solid #dddddd;
+  padding: 15px 1.2em;
+}
+.imprint footer,
+.contact footer, .modal--show footer {
+  border-top: 1px solid white;
+  padding: 0 1.2em 18px;
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+.imprint .modal-close,
+.contact .modal-close, .modal--show .modal-close {
+  text-indent: -100px;
+}
+.imprint .modal-close:before,
+.contact .modal-close:before, .modal--show .modal-close:before {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAEUlEQVQoz2NgeEYAjioYSQoAzOTmAXhPhyoAAAAASUVORK5CYII=");
+}
+.imprint .modal-close:after,
+.contact .modal-close:after, .modal--show .modal-close:after {
+  content: '\00d7';
+  background: white;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-indent: 0;
+}
+@media screen and (max-width: 30em) {
+  .imprint:before,
+  .contact:before, .modal--show:before {
+    background-color: #27aae2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#27aae2), to(#1c9cd3));
+    background-image: -webkit-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: -moz-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: -o-linear-gradient(top, #27aae2, #1c9cd3);
+    background-image: linear-gradient(to bottom, #27aae2, #1c9cd3);
+    height: 3em;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+  .imprint .modal-inner,
+  .contact .modal-inner, .modal--show .modal-inner {
+    padding-top: 3em;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .imprint .modal-close,
+  .contact .modal-close, .modal--show .modal-close {
+    text-decoration: none;
+  }
+  .imprint .modal-close:after,
+  .contact .modal-close:after, .modal--show .modal-close:after {
+    content: attr(data-close);
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+}
+
+/*
+ * Plain Screen Theme Styles
+ */
+/**
  * Work
  */
 .work {
@@ -1583,7 +1800,7 @@ ul {
 .button-large {
   font-size: 1.5em;
   padding: 0.2em 1em;
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .site-navigation {

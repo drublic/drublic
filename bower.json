@@ -1,12 +1,9 @@
 {
   "name": "drublic-vc",
   "version": "2.0.0",
-  "main": "",
-  "ignore": [],
   "dependencies": {
     "normalize-scss": "3.0.1",
-    "css-modal": "v1.1.0alpha",
-    "sass-mixins": "0.8.0"
-  },
-  "devDependencies": {}
+    "css-modal": "1.1.8",
+    "sass-mixins": "0.10.0"
+  }
 }
