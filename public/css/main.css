@@ -972,7 +972,9 @@ th {
 .button,
 .button-large, .site-navigation a {
   display: inline-block;
-  padding: 0 11px;
+  padding: 0 0.8em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
   text-decoration: none;
   background: #000;
   color: #fff;
@@ -1651,40 +1653,120 @@ html {
 /**
  * Work
  */
-.work {
-  margin: 0 -12px;
-  margin: 0 -0.75rem;
-}
-.work > * {
-  margin-left: 12px;
-  margin-left: 0.75rem;
-  margin-right: 12px;
-  margin-right: 0.75rem;
-}
-
 .work-project {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 12px;
-  padding: 0.75rem;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
   float: left;
-  display: inline;
-  width: 33.333%;
-  margin: 0;
+  overflow: hidden;
+  width: 31.333%;
+  margin: 1%;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #fff;
 }
 .work-project img {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
   display: block;
   width: 100%;
-  height: auto;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
 }
-.work-project > figcaption {
-  padding: 12px 8px 0;
-  padding: 0.75rem 0.5rem 0;
+.work-project figcaption {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2em;
+  text-align: left;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.work-project figcaption:before, .work-project figcaption:after {
+  pointer-events: none;
+}
+.work-project figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.work-project h3,
+.work-project p {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.work-project p {
+  bottom: 0;
+  padding: 20px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  color: #222222;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+.work-project h3 {
+  top: 20px;
+  margin: 0 20px;
+  padding: 10px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  text-align: right;
+  text-transform: uppercase;
+  word-spacing: -0.15em;
+  font-weight: 300;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+.work-project h3:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  content: '';
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+}
+.work-project h3 span {
+  font-weight: 800;
+}
+.work-project h3:after,
+.work-project p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+.work-project:hover h3 {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.work-project:hover h3:after,
+.work-project:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.work--light {
+  color: #222222;
+}
+.work--light h3:after {
+  background: #222222;
+}
+.work--light p {
+  background: #222222;
+  background: rgba(34, 34, 34, 0.9);
+  color: #fff;
 }
 
 /**
@@ -1763,11 +1845,11 @@ h1, h2, h3 {
 }
 
 a {
-  color: #222222;
+  color: inherit;
   text-decoration: underline;
 }
 a:visited {
-  color: #222222;
+  color: inherit;
 }
 a:hover {
   color: #27aae2;
@@ -1857,10 +1939,8 @@ ul {
 }
 
 .site-header {
-  -moz-transform: translateZ(0);
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
   transform: translateZ(0);
   position: fixed;
   z-index: 10;
@@ -1906,23 +1986,24 @@ ul {
 }
 
 .main {
-  max-width: 720px;
-  max-width: 45rem;
+  max-width: 1280px;
+  max-width: 80rem;
   padding: 112px 32px 48px;
   padding: 7rem 2rem 3rem;
   margin: 0 auto;
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
 }
 
 h2 {
   border-bottom: 1px solid #111;
   margin: .5em 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 2em;
-  font-weight: normal;
+  font-weight: 300;
 }
 h2 a {
   text-decoration: none;
@@ -1951,7 +2032,9 @@ h3 a {
 }
 
 .hire-me {
-  margin: 3em 0;
+  max-width: 720px;
+  max-width: 45rem;
+  margin: 3em auto;
 }
 
 .imprint h2,
@@ -1971,10 +2054,6 @@ h3 a {
   max-width: 45rem;
   text-align: center;
   border-top: 1px solid #111;
-}
-.site-footer p {
-  font-family: Georgia, Times New Roman, serif;
-  font-style: italic;
 }
 .site-footer .follow-me {
   padding: 32px 0 32px;

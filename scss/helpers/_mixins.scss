@@ -1,44 +1,8 @@
-
-@mixin gradient($default, $from, $to) {
-	background-color: $default;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-	background-image: -webkit-linear-gradient(top, $from, $to);
-	background-image:    -moz-linear-gradient(top, $from, $to);
-	background-image:     -ms-linear-gradient(top, $from, $to);
-	background-image:      -o-linear-gradient(top, $from, $to);
-	background-image:         linear-gradient(top, $from, $to);
-						filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$from', EndColorStr='$to');
-}
-
-
-@mixin transition($what: all, $time: .2s, $effect: ease-in-out) {
-	   -moz-transition: $what $time $effect;
-	-webkit-transition: $what $time $effect;
-		-ms-transition: $what $time $effect;
-		 -o-transition: $what $time $effect;
-			transition: $what $time $effect;
-}
-
-
-@mixin x-transform($what) {
-	   -moz-transform: $what;
-	-webkit-transform: $what;
-		-ms-transform: $what;
-		 -o-transform: $what;
-			transform: $what;
-}
-
-
-
-@mixin x-box-sizing ($how: border-box) {
-	-webkit-box-sizing: $how;
-	   -moz-box-sizing: $how;
-	        box-sizing: $how;
-}
-
 %tag {
 	display: inline-block;
-	padding: 0 11px;
+	padding: 0 0.8em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
 	text-decoration: none;
 	background: #000;
 	color: #fff;

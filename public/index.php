@@ -17,7 +17,7 @@
 		global $environment;
 
 		if ($environment == 'dev') {
-			$base = '//localhost/vc/public/';
+			$base = '//localhost/drublic/vc/public/';
 		} else {
 			$base = '//drublic.de/';
 		}

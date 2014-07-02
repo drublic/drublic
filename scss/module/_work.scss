@@ -4,34 +4,134 @@
 
 .work {
 	@extend %clearfix;
-	@include x-rem(margin, 0 -0.75);
-
-	> * {
-		@include x-rem(margin-left, 0.75);
-		@include x-rem(margin-right, 0.75);
-	}
 }
 
 .work-project {
 	@include x-box-sizing;
-	@include x-rem(padding, 0.75);
+	@include x-border-radius(2px);
 
+	position: relative;
+	z-index: 1;
 	float: left;
-	display: inline;
-	width: 33.333%;
-	margin: 0;
+	overflow: hidden;
+	width: 31.333%;
+	margin: 1%;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #fff;
 
 	img {
+		@include x-border-radius(2px);
+		position: relative;
 		display: block;
 		width: 100%;
-		height: auto;
-		background: #f9f9f9;
-		border: 1px solid #ddd;
-		border-radius: 2px;
-		box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
 	}
 
-	> figcaption {
-		@include x-rem(padding, 0.75 0.5 0);
+	figcaption {
+		@include x-box-sizing;
+
+		padding: 2em;
+		text-align: left;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		&:before,
+		&:after {
+			pointer-events: none;
+		}
+	}
+
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	h3,
+	p {
+		position: absolute;
+		right: 0;
+		left: 0;
+	}
+
+	p {
+		bottom: 0;
+		padding: 20px;
+		background: #fff;
+		background: rgba(#fff, 0.9);
+		line-height: 1.5;
+		color: $copy-color;
+		-webkit-transform: translate3d(0,100%,0);
+		transform: translate3d(0,100%,0);
+	}
+
+	h3 {
+		top: 20px;
+		margin: 0 20px;
+		padding: 10px 0;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.5em;
+		text-align: right;
+		text-transform: uppercase;
+		word-spacing: -0.15em;
+		font-weight: 300;
+
+		-webkit-transition: -webkit-transform 0.35s;
+		transition: transform 0.35s;
+		-webkit-transform: translate3d(0,20px,0);
+		transform: translate3d(0,20px,0);
+
+		&:after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: #fff;
+			content: '';
+			-webkit-transform: translate3d(0,40px,0);
+			transform: translate3d(0,40px,0);
+		}
+
+		span {
+			font-weight: 800;
+		}
+	}
+
+	h3:after,
+	p {
+		opacity: 0;
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+	}
+
+	&:hover {
+		h3 {
+			-webkit-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		h3:after,
+		p {
+			opacity: 1;
+			-webkit-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+	}
+}
+
+.work--light {
+	color: $copy-color;
+
+	h3:after {
+		background: $copy-color;
+	}
+
+	p {
+		background: $copy-color;
+		background: rgba($copy-color, 0.9);
+		color: #fff;
 	}
 }
