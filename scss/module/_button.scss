@@ -1,0 +1,17 @@
+// Button
+.button,
+.button-large {
+	@extend %tag;
+
+	font-size: 1.3em;
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.button-large {
+	font-size: 1.5em;
+	padding: 0.2em 1em;
+	margin-top: 2em;
+}

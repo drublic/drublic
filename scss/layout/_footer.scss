@@ -1,0 +1,40 @@
+
+// Footer
+.site-footer {
+	@include x-box-sizing;
+	@include x-rem(margin, 2 auto 0);
+	@include x-rem(padding, 4 2 3);
+	@include x-rem(max-width, 45);
+
+	text-align: center;
+
+	border-top: 1px solid #111;
+
+	.follow-me {
+		@include x-rem(padding, 2 0 2);
+	}
+}
+
+.le-me {
+	@include x-rem(width, 13);
+
+	border-radius: 50%;
+}
+
+// Under 480px
+@media screen and (max-width: 32em) {
+	.site-footer {
+		padding: 2em 2em 1em;
+
+		.follow-me {
+			padding: 2em 0;
+		}
+	}
+}
+
+// Under 360px
+@media screen and (max-width: 24em) {
+	.site-footer {
+		padding: 1em;
+	}
+}

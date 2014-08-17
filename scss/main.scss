@@ -1,20 +1,24 @@
-@import "variables";
+@import 'variables';
 
 
 // Include helpers
-@import "../components/sass-mixins/mixins";
-@import "../components/normalize-scss/normalize";
-@import "helpers/mixins";
-@import "helpers/h5bp";
+@import '../components/sass-mixins/mixins';
+@import '../components/normalize-scss/normalize';
+@import 'helpers/h5bp';
 
-@import "../components/css-modal/modal";
-@import "module/work";
-@import "module/social-media-links";
+@import '../components/css-modal/modal';
+@import 'module/tag';
+@import 'module/work';
+@import 'module/social-media-links';
+@import 'module/button';
 
-@import "layout";
+@import 'typography';
+@import 'layout';
+@import 'layout/header';
+@import 'layout/footer';
 
 // RWD
-@import "rwd";
+@import 'rwd';
 
 // Print
-@import "print";
+@import 'print';
