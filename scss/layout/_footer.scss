@@ -19,11 +19,16 @@
 	border-radius: 50%;
 }
 
+.footer__follow {
+	margin-bottom: 0.5em;
+}
+
 // Under 480px
 @media screen and (max-width: 32em) {
 	.footer {
 		padding: 2em 2em 1em;
 	}
+
 	.footer__follow {
 		padding: 2em 0;
 	}

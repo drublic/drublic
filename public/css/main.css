@@ -1976,6 +1976,9 @@ body {
   line-height: 1.2;
 }
 
+/**
+ * Header
+ */
 .header {
   padding: 32px;
   padding: 2rem;
@@ -2111,6 +2114,10 @@ body {
   width: 208px;
   width: 13rem;
   border-radius: 50%;
+}
+
+.footer__follow {
+  margin-bottom: 0.5em;
 }
 
 @media screen and (max-width: 32em) {

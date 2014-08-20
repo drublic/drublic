@@ -255,6 +255,7 @@ AddDefaultCharset utf-8
 #
 <IfModule mod_rewrite.c>
     RewriteRule ^blog/(.*)$ - [L]
+    RewriteRule ^components/(.*)$ - [L]
     RewriteRule ^img/(.*)$ - [L]
     RewriteRule ^work/(.*)$ - [L]
     RewriteRule ^css/(.*)$ - [L]

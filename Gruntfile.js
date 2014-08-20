@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'public/js/main.js'
+				'public/js/**/*.js'
 			],
 
 			options: {
@@ -46,7 +46,6 @@ module.exports = function (grunt) {
 		},
 
 		watch: {
-
 			scss: {
 				files: ['scss/**/*.scss'],
 				tasks: 'sass'
@@ -55,7 +54,7 @@ module.exports = function (grunt) {
 			js: {
 				files: [
 					'Gruntfile.js',
-					'public/js/main.js'
+					'public/js/**/*.js'
 				],
 				tasks: 'jshint'
 			}
