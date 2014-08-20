@@ -6,41 +6,27 @@ body {
 	-webkit-overflow-scrolling: touch;
 }
 
-// Header
-.site-claim {
+// About me
+.claim {
 	@include x-rem(max-width, 60);
-	@include x-rem(padding, 2);
+	@include x-rem(padding, 0 2);
 
 	margin: 0 auto;
 	text-align: center;
-
-	h1 {
-		margin: 0.3em 0;
-		font-weight: normal;
-	}
-
-	span {
-		font-family: 'Playfair Display SC', serif;
-		font-style: italic;
-		font-size: 1.2em;
-		padding: 0 0.1em;
-	}
-
-	p {
-		font-size: 1.2em;
-	}
-
-	.le-me {
-		margin-top: 4em;
-	}
 }
 
-// About me
-.desc {
+.claim__desc {
 	@include x-rem(max-width, 45);
 
 	line-height: 1.7em;
-	margin: 6em auto 0;
+	margin: 0 auto;
+}
+
+.claim__me {
+	@include x-rem(height, 13);
+	@include x-rem(margin, 3 0);
+
+	border-radius: 50%;
 }
 
 

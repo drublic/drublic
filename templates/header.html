@@ -35,7 +35,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="<?php print base_url(); ?>css/main.css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display+SC:400italic|Raleway:300,800">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300,800">
 
 	<!-- Meta-Tagging -->
 	<meta name="keywords" content="Hans Christian Reinl,
@@ -64,23 +64,23 @@
 
 <body>
 
-	<header class="site-header" role="banner">
-		<nav class="site-navigation" role="navigation">
+	<header class="header" role="banner">
+		<h1 role="banner">Front-End Development and Architecture</h1>
+		<p>Hans Christian Reinl &ndash; @drublic</p>
+
+		<nav class="header__navigation" role="navigation">
 			<a href="#content" class="visuallyhidden">Skip to Content</a>
 
-			<a href="#!" class="navigation-target" id="navigation"></a>
+			<a href="#!" class="heade__navigation__target" id="navigation"></a>
 			<ul>
-				<li class="site-logo" itemscope itemtype="http://schema.org/Organization">
-					<a href="<?php print base_url(); ?>" title="Go to the home page" itemprop="url">∆</a>
-					<img src="<?php print base_url(); ?>logo.svg" itemprop="logo">
-				</li>
+				<li<?php set_navigation_item_active('index'); ?>><a href="<?php print base_url(); ?>" title="@drublic - Front-End Architecture">Home</a></li>
 				<li<?php set_navigation_item_active('resume'); ?>><a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a></li>
 				<li<?php set_navigation_item_active('blog'); ?>><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li>
-				<li><a href="<?php print base_url(); ?>#work" title="View some of the work I do">Work</a></li>
+				<li><a href="<?php print base_url(); ?>#work" title="View some of the work I do">Portfolio</a></li>
 				<li><a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
 				<li><a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
 
-			<a href="#navigation" class="navigation-toggle">☰</a>
+			<a href="#navigation" class="heade__navigation__toggle">☰</a>
 		</nav>
 	</header>
