@@ -2035,8 +2035,8 @@ body {
 .header__navigation a.visuallyhidden {
   padding: 0;
 }
-.header__navigation .heade__navigation__target,
-.header__navigation .heade__navigation__toggle {
+.header__navigation .header__navigation__target,
+.header__navigation .header__navigation__toggle {
   display: none;
 }
 
