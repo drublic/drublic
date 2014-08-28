@@ -26,11 +26,13 @@
 // Under 480px
 @media screen and (max-width: 32em) {
 	.footer {
-		padding: 2em 2em 1em;
+		margin: 2rem;
+		padding: 2rem 0 0;
 	}
 
+	.footer__me,
 	.footer__follow {
-		padding: 2em 0;
+		padding: 1em 0;
 	}
 }
 

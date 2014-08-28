@@ -15,8 +15,12 @@
 		font-size: 13px;
 	}
 
-	.site-header,
-	.site-footer {
+	.header {
+		padding: 0;
+	}
+
+	.header__navigation,
+	.footer {
 		display: none;
 	}
 
