@@ -8,8 +8,8 @@
 	text-align: center;
 
 	background: $color;
-	background-image: -webkit-linear-gradient(50deg, darken($color, 5), #d08aff);
-	background: linear-gradient(50deg, darken($color, 5), #d08aff);
+	background: -webkit-linear-gradient($color, lighten($color, 20));
+	background: linear-gradient($color, lighten($color, 20));
 
 	h1 {
 		margin: 0.3em 0;

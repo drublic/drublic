@@ -1,27 +1,32 @@
 [
-	{
-		"title": "Homepage",
-		"action": "index",
-		"content": "content/index.html"
-	},
-	{
-		"title": "About",
-		"action": "resume",
-		"content": "content/resume.html"
-	},
-	{
-		"title": "Information page",
-		"action": "info",
-		"content": "content/about-info.html"
-	},
-	{
-		"title": "Blog",
-		"action": "blog",
-		"content": "content/blog.html"
-	},
-	{
-		"title": "Error",
-		"action": "error",
-		"content": "content/error.html"
-	}
+  {
+    "title": "Homepage",
+    "action": "index",
+    "content": "content/index.html"
+  },
+  {
+    "title": "About",
+    "action": "resume",
+    "content": "content/resume.html"
+  },
+  {
+    "title": "Information page",
+    "action": "info",
+    "content": "content/about-info.html"
+  },
+  {
+    "title": "Portfolio",
+    "action": "portfolio",
+    "content": "content/portfolio.html"
+  },
+  {
+    "title": "Blog",
+    "action": "blog",
+    "content": "content/blog.html"
+  },
+  {
+    "title": "Error",
+    "action": "error",
+    "content": "content/error.html"
+  }
 ]
