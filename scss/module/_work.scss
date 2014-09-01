@@ -3,6 +3,7 @@
  */
 
 .work {
+	margin: 0 -1%;
 
 	&:before,
 	&:after {
@@ -20,7 +21,13 @@
 	}
 }
 
-.work-project {
+.work__more {
+	clear: both;
+	padding-top: 2em;
+	text-align: center;
+}
+
+.work--project {
 	@include x-box-sizing;
 
 	position: relative;

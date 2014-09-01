@@ -32,14 +32,14 @@ body {
 
 
 .main {
-	@include x-rem(max-width, 80);
+	@include x-rem(max-width, 45);
 	@include x-rem(padding, 3 2);
 
 	margin: 0 auto;
 }
 
-.main--resume {
-	@include x-rem(max-width, 45);
+.main--portfolio {
+	@include x-rem(max-width, 80);
 }
 
 
