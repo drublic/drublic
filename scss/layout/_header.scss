@@ -23,13 +23,13 @@
 
 // Navigation
 .header__navigation {
-	@include x-rem(max-width, 45);
+	@include x-rem(max-width, 50);
 
 	margin: 2em auto;
 	line-height: 2;
 
 	ul {
-		@include x-rem(padding, 2 2 1);
+		@include x-rem(padding, 2 1 1);
 
 		margin: 0;
 		text-align: center;
@@ -95,8 +95,7 @@
 	}
 }
 
-// Under ~560px
-@media screen and (max-width: 38em) {
+@media screen and (max-width: 50em) {
 	.header h1 {
 		margin-top: 0;
 		padding-top: 1em;
@@ -131,7 +130,6 @@
 				color: $color;
 			}
 		}
-
 
 		a {
 			display: block;

@@ -2006,14 +2006,14 @@ body {
 }
 
 .header__navigation {
-  max-width: 720px;
-  max-width: 45rem;
+  max-width: 800px;
+  max-width: 50rem;
   margin: 2em auto;
   line-height: 2;
 }
 .header__navigation ul {
-  padding: 32px 32px 16px;
-  padding: 2rem 2rem 1rem;
+  padding: 32px 16px 16px;
+  padding: 2rem 1rem 1rem;
   margin: 0;
   text-align: center;
 }
@@ -2064,7 +2064,7 @@ body {
   color: #fff;
 }
 
-@media screen and (max-width: 38em) {
+@media screen and (max-width: 50em) {
   .header h1 {
     margin-top: 0;
     padding-top: 1em;
