@@ -21,7 +21,8 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					unixNewlines: true,
-					style: 'expanded'
+					style: 'expanded',
+					loadPath: './scss/'
 				},
 				files: {
 					'public/css/main.css': 'scss/main.scss'
