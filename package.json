@@ -16,10 +16,12 @@
     "grunt": "0.4.x",
     "grunt-contrib-jshint": "0.10.0",
     "grunt-contrib-watch": "0.6.1",
-    "grunt-contrib-sass": "0.7.4",
-    "grunt-contrib-copy": "0.5.0",
-    "grunt-pages": "~0.11.2",
-    "request": "~2.40.0",
+    "grunt-contrib-sass": "0.8.1",
+    "grunt-contrib-copy": "0.6.0",
+    "request": "~2.44.0",
     "jquery": "~2.1.1"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.4"
   }
 }

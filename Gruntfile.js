@@ -30,15 +30,6 @@ module.exports = function (grunt) {
 			}
 		},
 
-		pages: {
-			posts: {
-				src: 'blog_posts',
-				dest: 'content',
-				layout: 'templates/post.ejs',
-				url: 'blog/:permalink/article'
-			}
-		},
-
 		copy: {
 			cssmodal: {
 				src: 'components/css-modal/modal.js',
