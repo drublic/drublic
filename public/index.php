@@ -41,7 +41,7 @@
 
 		// Load error page when action does not exist
 		if (empty($page)) {
-			$file = 'content/error.html';
+			$file = 'templates/error.html';
 		} else {
 			$file = $page->content;
 		}
@@ -64,7 +64,7 @@
 
 	// Convenience function to provide strucure data
 	function read_structure () {
-		$file = file_get_contents(dirname(__FILE__) . '/../structure.json');
+		$file = file_get_contents(dirname(__FILE__) . '/../pages.json');
 		return json_decode($file);
 	}
 

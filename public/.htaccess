@@ -312,8 +312,8 @@ AddDefaultCharset utf-8
     # Rewrite secure requests properly in order to prevent SSL certificate warnings.
     # E.g.: prevent `https://www.example.com` when your certificate only allows
     # `https://secure.example.com`.
-    RewriteCond %{SERVER_PORT} !^443
-    RewriteRule ^ https://drublic.de%{REQUEST_URI} [R=301,L]
+    # RewriteCond %{SERVER_PORT} !^443
+    # RewriteRule ^ https://drublic.de%{REQUEST_URI} [R=301,L]
 
     # Rewrite to index.php
     RewriteCond %{REQUEST_FILENAME} !-f

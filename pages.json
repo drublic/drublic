@@ -2,31 +2,31 @@
   {
     "title": "Homepage",
     "action": "index",
-    "content": "content/index.html"
+    "content": "templates/index.html"
   },
   {
     "title": "About",
     "action": "resume",
-    "content": "content/resume.html"
+    "content": "templates/resume.html"
   },
   {
     "title": "Information page",
     "action": "info",
-    "content": "content/about-info.html"
+    "content": "templates/about-info.html"
   },
   {
     "title": "Portfolio",
     "action": "portfolio",
-    "content": "content/portfolio.html"
+    "content": "templates/portfolio.html"
   },
   {
     "title": "Blog",
     "action": "blog",
-    "content": "content/blog.html"
+    "content": "templates/blog.html"
   },
   {
     "title": "Error",
     "action": "error",
-    "content": "content/error.html"
+    "content": "templates/error.html"
   }
 ]

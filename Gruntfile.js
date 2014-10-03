@@ -1,66 +1,103 @@
+/**
+ * General Grunt setup
+ */
+'use strict';
+
+var xtend = require('xtend');
+var loadGruntConfig = require('./grunt/load-grunt-config');
+
+/*
+ * Call Grunt configuration
+ */
 module.exports = function (grunt) {
 
-	'use strict';
+  // Measure time of grunt tasks
+  require('time-grunt')(grunt);
 
-	// Project configuration.
-	grunt.initConfig({
-		pkg: require('./package'),
+  /**
+   * Configuration: All data from package.json, grunt/options and
+   * grunt/plugins
+   */
+  var config = xtend({
+      pkg: require('./package')
+    },
+    loadGruntConfig('grunt/options'),
+    loadGruntConfig('grunt/plugins')
+  );
 
-		jshint: {
-			all: [
-				'Gruntfile.js',
-				'public/js/**/*.js'
-			],
+  // Load project configuration
+  grunt.initConfig(config);
 
-			options: {
-				jshintrc: '.jshintrc'
-			}
-		},
+  // Load all npm tasks through jit-grunt (all tasks from node_modules)
+  require('jit-grunt')(grunt);
 
-		sass: {
-			dev: {
-				options: {
-					unixNewlines: true,
-					style: 'expanded',
-					loadPath: './scss/'
-				},
-				files: {
-					'public/css/main.css': 'scss/main.scss'
-				}
-			}
-		},
+  // Load your own tasks
+  grunt.task.loadTasks('./grunt/tasks');
 
-		copy: {
-			cssmodal: {
-				src: 'components/css-modal/modal.js',
-				dest: 'public/js/modal.js',
-			}
-		},
+  /**
+   * A task to generate pages
+   */
+  // Tasks for generating static pages
+  grunt.registerTask('pages:dev', [
+    'concat',
+    'replace:dev',
+    'clean:temp'
+  ]);
 
-		watch: {
-			scss: {
-				files: ['scss/**/*.scss'],
-				tasks: 'sass'
-			},
+  grunt.registerTask('pages:build', [
+    'concat',
+    'replace:build',
+    'clean:temp'
+  ]);
 
-			js: {
-				files: [
-					'Gruntfile.js',
-					'public/js/**/*.js'
-				],
-				tasks: 'jshint'
-			}
-		}
-	});
+  /**
+   * A task for development
+   */
+  grunt.registerTask('serve', ['connect:serve', 'watch']);
 
-	// Load some stuff
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-pages');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('dev', [
+    'jshint',
+    'sass:dev',
+    'imagemin',
+    'copy',
+    'pages:dev'
+  ]);
 
-	// Default task
-	grunt.registerTask('default', ['sass', 'copy']);
+  // Default task
+  grunt.registerTask('default', ['dev']);
+
+  /**
+   * A task for building your pages
+   */
+  grunt.registerTask('build', [
+    'jshint',
+    'modernizr',
+    'sass:build',
+    'imagemin',
+    'copy',
+    'karma:unit',
+    'pages:build'
+  ]);
+
+  /**
+   * Testing
+   */
+  // A task for testing development code
+  grunt.registerTask('test', [
+    'karma:unit'
+  ]);
+
+  // A task for testing production code
+  grunt.registerTask('test:build', [
+    'karma:prod'
+  ]);
+
+  /**
+   * Travis CI task
+   */
+  grunt.registerTask('travis', [
+    'jshint',
+    'karma:unit'
+  ]);
 
 };
