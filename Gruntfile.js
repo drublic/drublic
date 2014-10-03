@@ -71,7 +71,6 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('build', [
     'jshint',
-    'modernizr',
     'sass:build',
     'imagemin',
     'copy',

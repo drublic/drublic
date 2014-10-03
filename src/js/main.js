@@ -7,26 +7,26 @@
  */
 (function () {
 
-	'use strict';
+  'use strict';
 
-	// Check if we are dealing with mobile
-	var isMobile = function () {
-		return ( window.innerWidth < 481 );
-	};
+  // Check if we are dealing with mobile
+  var isMobile = function () {
+    return ( window.innerWidth < 481 );
+  };
 
-	// If on mobile, hide address bar
-	if (isMobile()) {
-		window.setTimeout( function () {
-			window.scrollTo(0, 0);
-		}, 0);
-	}
+  // If on mobile, hide address bar
+  if (isMobile()) {
+    window.setTimeout( function () {
+      window.scrollTo(0, 0);
+    }, 0);
+  }
 
-	// Check if svg capable
-	var candoSvg = function () {
-		return !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
-	};
+  // Check if svg capable
+  var candoSvg = function () {
+    return !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
+  };
 
-	if (!candoSvg()) {
-		document.documentElement.className += ' no-svg';
-	}
+  if (!candoSvg()) {
+    document.documentElement.className += ' no-svg';
+  }
 }());
