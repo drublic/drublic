@@ -299,26 +299,26 @@ AddDefaultCharset utf-8
     # Options +SymLinksIfOwnerMatch
 
     # (4)
-    # RewriteBase /
+    RewriteBase /
 
     # (5)
     # RewriteOptions <options>
     #
 
-    RewriteRule ^blog/(.*)$ - [L]
-    RewriteRule ^components/(.*)$ - [L]
-    RewriteRule ^css/(.*)$ - [L]
-    RewriteRule ^headshot/(.*)$ - [L]
-    RewriteRule ^img/(.*)$ - [L]
-    RewriteRule ^js/(.*)$ - [L]
-    RewriteRule ^work/(.*)$ - [L]
-    RewriteRule ^index.php$ - [L]
-    RewriteRule ^favicon.ico$ - [L]
-    RewriteRule ^apple-touch-icon-precomposed.png$ - [L]
-    RewriteRule ^humans.txt$ - [L]
-    RewriteRule ^logo.svg$ - [L]
-    RewriteRule ^robots.txt$ - [L]
-    RewriteRule ^(.*)$ index.php?file=$1
+    # ------------------------------------------------------------------------------
+    # | Secure Sockets Layer (SSL)                                                 |
+    # ------------------------------------------------------------------------------
+
+    # Rewrite secure requests properly in order to prevent SSL certificate warnings.
+    # E.g.: prevent `https://www.example.com` when your certificate only allows
+    # `https://secure.example.com`.
+    RewriteCond %{SERVER_PORT} !^443
+    RewriteRule ^ https://drublic.de%{REQUEST_URI} [R=301,L]
+
+    # Rewrite to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^?]*)$ /index.php?file=$1 [NC,L,QSA]
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -559,19 +559,6 @@ AddDefaultCharset utf-8
 #         Header unset X-XSS-Protection
 #     </FilesMatch>
 # </IfModule>
-
-# ------------------------------------------------------------------------------
-# | Secure Sockets Layer (SSL)                                                 |
-# ------------------------------------------------------------------------------
-
-# Rewrite secure requests properly in order to prevent SSL certificate warnings.
-# E.g.: prevent `https://www.example.com` when your certificate only allows
-# `https://secure.example.com`.
-
-<IfModule mod_rewrite.c>
-    RewriteCond %{SERVER_PORT} !^443
-    RewriteRule ^ https://drublic.de%{REQUEST_URI} [R=301,L]
-</IfModule>
 
 # ------------------------------------------------------------------------------
 # | HTTP Strict Transport Security (HSTS)                                      |
