@@ -18,12 +18,18 @@
 		<a href="#" class="visuallyhidden">go back up to top</a>
 	</footer>
 
-
 	<?php if ($environment == 'dev') { ?>
 		<script src="<?php print base_url(); ?>dist/_/core.js"></script>
 	<?php } else { ?>
 		<script src="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.js"></script>
 	<?php } ?>
+
+	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: { families: ['Raleway:300,800'] }
+		});
+	</script>
 
 	<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
