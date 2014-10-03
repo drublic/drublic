@@ -47,8 +47,8 @@
 		}
 
 		// If file exists
-		if (file_exists('../' . $file)) {
-			return '../' . $file;
+		if (file_exists('../src/' . $file)) {
+			return '../src/' . $file;
 		}
 	}
 
@@ -123,18 +123,6 @@
 		}
 	}
 
-
-	// Function to get all posts
-	function get_posts ($page, $postcount) {
-
-		include('../lib/post.php');
-		include('../lib/posts.php');
-
-		$posts = new Posts($page, $postcount);
-
-		return $posts->paginated_posts;
-	}
-
 	// send Header if necessary
 	function set_headers () {
 		$page = get_page_properties();
@@ -149,6 +137,6 @@
 	// Build page
 	set_headers();
 
-	include('../templates/header.html');
+	include('../src/templates/header.html');
 	include(get_file_path());
-	include('../templates/footer.html');
+	include('../src/templates/footer.html');
