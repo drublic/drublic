@@ -18,7 +18,12 @@
 		<a href="#" class="visuallyhidden">go back up to top</a>
 	</footer>
 
-	<script src="<?php print base_url(); ?>dist/core.js"></script>
+
+	<?php if ($environment == 'dev') { ?>
+		<script src="<?php print base_url(); ?>dist/_/core.js"></script>
+	<?php } else { ?>
+		<script src="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.js"></script>
+	<?php } ?>
 
 	<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];

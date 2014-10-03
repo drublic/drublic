@@ -60,7 +60,7 @@ module.exports = function (grunt) {
     'sass:dev',
     'imagemin',
     'copy',
-    'pages:dev'
+    'concat:js'
   ]);
 
   // Default task
@@ -74,8 +74,7 @@ module.exports = function (grunt) {
     'sass:build',
     'imagemin',
     'copy',
-    'karma:unit',
-    'pages:build'
+    'concat:jsmin'
   ]);
 
   /**

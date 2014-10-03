@@ -38,7 +38,7 @@ module.exports = {
       'src/scss/**/*.scss'
     ],
     src: 'src/scss/main.scss',
-    devDest: 'public/dist/core.css',
+    devDest: 'public/dist/_/core.css',
     dest: 'public/dist/<%= pkg.version %>/c.css'
   },
 
@@ -88,7 +88,18 @@ module.exports = {
         'src/js/main.js',
         'src/js/track.js'
       ],
-      dest: 'public/dist/core.js'
+      dest: 'public/dist/_/core.js'
+    },
+    jsmin: {
+      src: [
+        'src/components/jquery/dist/jquery.min.js',
+        'src/components/css-modal/modal.js',
+        'src/components/raf.js/raf.min.js',
+        'src/components/hongkong/hongkong.js',
+        'src/js/main.js',
+        'src/js/track.js'
+      ],
+      dest: 'public/dist/<%= pkg.version %>/c.js'
     }
   }
 };

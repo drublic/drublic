@@ -14,7 +14,9 @@
 	<link rel="dns-prefetch" href="https://syndication.twitter.com">
 
 	<title>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
-	<meta name="description" content="Front-end Development &amp; Architecture, Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Workin Draft - CSS, JavaScript, HTML5">
+	<meta name="description" content="Front-end Development &amp; Architecture,
+			Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft -
+			CSS, JavaScript, HTML5">
 
 	<link rel="canonical" href="http:<?php print base_url() . '' . ($page_action === 'index' ? '' : $page_action); ?>">
 
@@ -28,13 +30,16 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="<?php print base_url(); ?>dist/core.css">
+	<?php if ($environment == 'dev') { ?>
+		<link rel="stylesheet" href="<?php print base_url(); ?>dist/_/core.css">
+	<?php } else { ?>
+		<link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
+	<?php } ?>
+
 	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 	<script>
 		WebFont.load({
-			google: {
-				families: ['Raleway:300,800']
-			}
+			google: { families: ['Raleway:300,800'] }
 		});
 	</script>
 
@@ -50,7 +55,8 @@
 			INIT,
 			HTML5 Boilerplate,
 			Working Draft,
-			Webdesign">
+			Cologne,
+			Köln">
 	<meta name="application-name" content="drublic">
 
 	<link rel="canonical" href="<?php print base_url(); ?>">

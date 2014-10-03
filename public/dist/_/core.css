@@ -1809,17 +1809,17 @@ html {
   border-radius: 50%;
   text-indent: -200px;
   overflow: hidden;
-  background: #111111 url(../img/github.png);
+  background: #111111 url(../../img/github.png);
   background-size: 32px;
 }
 .social-media-links .twitter a {
-  background-image: url(../img/twitter.png);
+  background-image: url(../../img/twitter.png);
 }
 .social-media-links .google-plus a {
-  background-image: url(../img/google-plus.png);
+  background-image: url(../../img/google-plus.png);
 }
 .social-media-links .rss a {
-  background-image: url(../img/feed.png);
+  background-image: url(../../img/feed.png);
 }
 .social-media-links .github a {
   background-color: transparent;
@@ -2053,7 +2053,7 @@ body {
   width: 2em;
   height: 2em;
   border-width: 0;
-  background: url(../img/navigation.svg) no-repeat 50% 50%;
+  background: no-repeat 50% 50% url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="19"><rect y="1" fill="#fff" width="26" height="3"/><rect y="8" fill="#fff" width="26" height="3"/><rect y="15" fill="#fff" width="26" height="3"/></svg>');
   padding: 0.25em;
   margin: 0;
   text-indent: -200px;
@@ -2255,4 +2255,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=core.css.map */

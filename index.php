@@ -1,2 +1,2 @@
 <?php
-	header('location: public');
+  header('location: public');
