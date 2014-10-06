@@ -24,6 +24,7 @@
 
     if ($print) {
       print $base;
+
       return;
     }
 
@@ -47,8 +48,14 @@
     }
 
     // If file exists
-    if (file_exists('../src/' . $file)) {
-      return '../src/' . $file;
+    if ($environment == 'dev') {
+      if (file_exists('../src/' . $file)) {
+        return '../src/' . $file;
+      }
+    } else {
+      if (file_exists('../public/' . $file)) {
+        return '../public/' . $file;
+      }
     }
   }
 
@@ -121,7 +128,7 @@
 
     if ($action == $page_action) {
       if ($print) {
-        print ' class="is-active"';
+        print 'is-active';
       } else {
         return true;
       }

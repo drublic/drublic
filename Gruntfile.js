@@ -74,7 +74,8 @@ module.exports = function (grunt) {
     'sass:build',
     'imagemin',
     'copy',
-    'concat:jsmin'
+    'concat:jsmin',
+    'htmlmin'
   ]);
 
   /**

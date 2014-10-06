@@ -101,5 +101,12 @@ module.exports = {
       ],
       dest: 'public/dist/<%= pkg.version %>/c.js'
     }
-  }
+  },
+
+  htmlmin: [{
+    expand: true,
+    cwd: 'src/templates/',
+    src: ['**/*.html'],
+    dest: 'public/templates/'
+  }]
 };
