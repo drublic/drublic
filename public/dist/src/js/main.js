@@ -29,4 +29,11 @@
   if (!candoSvg()) {
     document.documentElement.className += ' no-svg';
   }
+
+  /**
+   * Menu
+   */
+  $(document).on('click', '.navigation__toggle', function () {
+    $('.navigation').toggleClass('navigation--visible');
+  });
 }());

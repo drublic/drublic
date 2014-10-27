@@ -1,8 +1,13 @@
 <?php
   date_default_timezone_set('Europe/Berlin');
 
+  $_file = '';
 
-  $page_action = trim($_GET['file'], '/');
+  if (isset($_GET['file'])) {
+    $_file = $_GET['file'];
+  }
+
+  $page_action = trim($_file, '/');
 
   $environment = ($_SERVER['HTTP_HOST'] == 'drublic.de') ? 'production' : 'dev';
 
@@ -35,7 +40,7 @@
   // Return the current file path
   // @return string file path
   function get_file_path () {
-    global $page_action;
+    global $page_action, $environment;
 
     // Get properties of current page
     $page = get_page_properties();
