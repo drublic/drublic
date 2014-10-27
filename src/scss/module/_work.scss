@@ -170,3 +170,11 @@
 		color: #fff;
 	}
 }
+
+@media screen and (max-width: 32em) {
+	.work--project {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
