@@ -1,6 +1,19 @@
 <?php
   date_default_timezone_set('Europe/Berlin');
 
+  // Set security header
+  function isSSL(){
+      if ($_SERVER['https'] == 1) { // Apache
+        return TRUE;
+      } elseif ($_SERVER['https'] == 'on') { // IIS
+        return TRUE;
+      } elseif ($_SERVER['SERVER_PORT'] == 443) { // others
+        return TRUE;
+      }
+
+      return FALSE; // just using http
+  }
+
   $_file = '';
 
   if (isset($_GET['file'])) {
