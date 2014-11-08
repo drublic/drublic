@@ -14,6 +14,10 @@
       return FALSE; // just using http
   }
 
+  if (isSSL()) {
+    header('strict-transport-security: max-age=64000');
+  }
+
   $_file = '';
 
   if (isset($_GET['file'])) {
