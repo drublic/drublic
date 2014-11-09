@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<link rel="dns-prefetch" href="//ajax.googleapis.com/">
-	<link rel="dns-prefetch" href="//fonts.googleapis.com/">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com/">
-	<link rel="dns-prefetch" href="//www.google-analytics.com/">
-	<link rel="dns-prefetch" href="//platform.twitter.com/">
-	<link rel="dns-prefetch" href="//www.woofoo.com/">
-	<link rel="dns-prefetch" href="//drublic.woofoo.com/">
-	<link rel="dns-prefetch" href="//twitter.com/">
-	<link rel="dns-prefetch" href="https://syndication.twitter.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com/">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com/">
+  <link rel="dns-prefetch" href="//www.google-analytics.com/">
+  <link rel="dns-prefetch" href="//platform.twitter.com/">
+  <link rel="dns-prefetch" href="//www.woofoo.com/">
+  <link rel="dns-prefetch" href="//drublic.woofoo.com/">
+  <link rel="dns-prefetch" href="//twitter.com/">
+  <link rel="dns-prefetch" href="https://syndication.twitter.com">
 
-	<title>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
-	<meta name="description" content="Front-end Development &amp; Architecture,
-			Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft -
-			CSS, JavaScript, HTML5">
+  <title>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
+  <meta name="description" content="Front-end Development &amp; Architecture,
+      Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft -
+      CSS, JavaScript, HTML5">
 
-	<link rel="canonical" href="http:<?php print base_url() . '' . ($page_action === 'index' ? '' : $page_action); ?>">
+  <link rel="canonical" href="http:<?php print base_url() . '' . ($page_action === 'index' ? '' : $page_action); ?>">
 
-	<!-- Who did this page -->
-	<link type="text/plain" rel="author" href="/humans.txt">
-	<meta name="author" content="Hans Christian Reinl">
+  <!-- Who did this page -->
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <meta name="author" content="Hans Christian Reinl">
 
-	<!-- The Feed -->
-	<link rel="alternate" type="application/rss+xml" title="drublic"
-			href="//feeds.feedburner.com/drublic">
+  <!-- The Feed -->
+  <link rel="alternate" type="application/rss+xml" title="drublic"
+      href="//feeds.feedburner.com/drublic">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php if ($environment == 'dev') { ?>
-		<link rel="stylesheet" href="<?php print base_url(); ?>dist/_/core.css">
-	<?php } else { ?>
-		<link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
-	<?php } ?>
+  <?php if ($environment == 'dev') { ?>
+    <link rel="stylesheet" href="<?php print base_url(); ?>dist/_/core.css">
+  <?php } else { ?>
+    <link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
+  <?php } ?>
 
-	<!-- Meta-Tagging -->
-	<meta name="keywords" content="Hans Christian Reinl,
-			CSS,
-			JavaScript,
-			HTML5,
-			drublic,
-			Front-end,
-			Development,
-			Architecture,
-			INIT,
-			HTML5 Boilerplate,
-			Working Draft,
-			Cologne,
-			Köln">
-	<meta name="application-name" content="drublic">
+  <!-- Meta-Tagging -->
+  <meta name="keywords" content="Hans Christian Reinl,
+      CSS,
+      JavaScript,
+      HTML5,
+      drublic,
+      Front-end,
+      Development,
+      Architecture,
+      INIT,
+      HTML5 Boilerplate,
+      Working Draft,
+      Cologne,
+      Köln">
+  <meta name="application-name" content="drublic">
 
-	<link rel="canonical" href="<?php print base_url(); ?>">
-	<link rel="index" title="drublic - State of the Art Webdesign -
-			HTML, CSS, JavaScript – Hans Christian Reinl"
-			href="<?php print base_url(); ?>">
+  <link rel="canonical" href="<?php print base_url(); ?>">
+  <link rel="index" title="drublic - State of the Art Webdesign -
+      HTML, CSS, JavaScript – Hans Christian Reinl"
+      href="<?php print base_url(); ?>">
 
-	<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 
 <body>
 
-	<header class="header" role="banner">
-		<div data-parallax-top>
-			<h1 role="banner" >Front-End Development and Architecture</h1>
-			<p>Hans Christian Reinl &ndash; @drublic</p>
+  <header class="header" role="banner">
+    <div data-parallax-top>
+      <h1 role="banner" >Front-End Development and Architecture</h1>
+      <p>Hans Christian Reinl &ndash; @drublic</p>
 
-			<nav class="navigation" role="navigation">
-				<a href="#content" class="visuallyhidden">Skip to Content</a>
+      <nav class="navigation" role="navigation">
+        <a href="#content" class="visuallyhidden">Skip to Content</a>
 
-				<ul id="navigation">
-					<li class="<?php set_navigation_item_active('index'); ?>"><a href="<?php print base_url(); ?>" title="@drublic - Front-End Architecture">Home</a></li>
-					<li class="<?php set_navigation_item_active('resume'); ?>"><a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a></li>
-					<li class="<?php set_navigation_item_active('blog'); ?>"><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li>
-					<li class="<?php set_navigation_item_active('portfolio'); ?>"><a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a></li>
-					<li><a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
-					<li><a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a></li>
-				</ul>
-			</nav>
+        <ul id="navigation">
+          <li class="<?php set_navigation_item_active('index'); ?>"><a href="<?php print base_url(); ?>" title="@drublic - Front-End Architecture">Home</a></li>
+          <li class="<?php set_navigation_item_active('resume'); ?>"><a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a></li>
+          <li class="<?php set_navigation_item_active('blog'); ?>"><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li>
+          <li class="<?php set_navigation_item_active('portfolio'); ?>"><a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a></li>
+          <li><a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
+          <li><a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a></li>
+        </ul>
+      </nav>
 
-			<button class="navigation__toggle">Menu<span></span></button>
-		</div>
-	</header>
+      <button class="navigation__toggle">Menu<span></span></button>
+    </div>
+  </header>
