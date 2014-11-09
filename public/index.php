@@ -3,9 +3,8 @@
 
   // Set security header
   function isSSL(){
-      if ($_SERVER['https'] == 1) { // Apache
-        return TRUE;
-      } elseif ($_SERVER['https'] == 'on') { // IIS
+      if (isset($_SERVER['https']) &&
+          ($_SERVER['https'] == 1 || $_SERVER['https'] == 'on')) {
         return TRUE;
       } elseif ($_SERVER['SERVER_PORT'] == 443) { // others
         return TRUE;
