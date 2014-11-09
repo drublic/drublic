@@ -1,22 +1,6 @@
 <?php
   date_default_timezone_set('Europe/Berlin');
 
-  // Set security header
-  function isSSL(){
-      if (isset($_SERVER['https']) &&
-          ($_SERVER['https'] == 1 || $_SERVER['https'] == 'on')) {
-        return TRUE;
-      } elseif ($_SERVER['SERVER_PORT'] == 443) { // others
-        return TRUE;
-      }
-
-      return FALSE; // just using http
-  }
-
-  if (isSSL()) {
-    header('strict-transport-security: max-age=64000');
-  }
-
   $_file = '';
 
   if (isset($_GET['file'])) {
@@ -31,7 +15,6 @@
   if (empty($page_action)) {
     $page_action = 'index';
   }
-
 
   // Generate base url
   function base_url ($print = true) {
@@ -159,6 +142,22 @@
   // send Header if necessary
   function set_headers () {
     $page = get_page_properties();
+
+    // Set security header
+    function isSSL(){
+        if (isset($_SERVER['https']) &&
+            ($_SERVER['https'] == 1 || $_SERVER['https'] == 'on')) {
+          return TRUE;
+        } elseif ($_SERVER['SERVER_PORT'] == 443) { // others
+          return TRUE;
+        }
+
+        return FALSE; // just using http
+    }
+
+    if (isSSL()) {
+      header('strict-transport-security: max-age=64000');
+    }
 
     // Send 404 if empty
     if (empty($page)) {
