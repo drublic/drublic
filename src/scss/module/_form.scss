@@ -94,6 +94,7 @@ input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
+input[name*="form-"]:focus,
 select:focus,
 textarea:focus {
   outline: 0;
@@ -226,7 +227,7 @@ select:valid + .form__validity:after {
   input[type="search"],
   input[type="tel"],
   input[type="color"],
-  input[name="form-name"],
+  input[name*="form-"],
   select,
   textarea {
     float: none;
