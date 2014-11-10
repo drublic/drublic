@@ -1942,7 +1942,7 @@ input[type="number"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-input[name="form-name"],
+input[name*="form-"],
 select,
 textarea {
   display: inline-block;
@@ -2072,6 +2072,44 @@ select:valid + .form__validity:after {
   display: none;
 }
 
+/**
+ * Small screen
+ */
+@media screen and (max-width: 30em) {
+  label {
+    float: none;
+    display: block;
+    width: 100%;
+    padding: 0.5em 0;
+    text-align: left;
+  }
+
+  .form__validity {
+    top: 2.75em;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="week"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  input[name="form-name"],
+  select,
+  textarea {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
 html {
   font: 16px/1.5 Helvetica Neue, sans-serif;
   color: #222222;
