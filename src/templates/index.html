@@ -80,10 +80,12 @@
     </header>
 
     <div class="modal-content">
-      <form name="form" autocomplete="off" method="post" action="">
+      <form class="form" name="form" autocomplete="off" method="post" action="#contact">
 
         <p>Please contact me if you have any question or want me to work for you.</p>
         <p>You can also just send me an email to <a href="mailto:info@drublic">info@drublic.de</a>.</p>
+
+        <p class="form__nojs">Please activate JavaScript to send a contact request.</p>
 
         <fieldset>
           <label for="form-name">Name</label>
@@ -110,7 +112,7 @@
         </fieldset>
 
         <fieldset>
-          <input id="form-save" name="form-save" type="submit" class="button--primary" value="Submit">
+          <input class="form__save button--primary" name="form-save" type="submit" value="Submit">
           <p class="form__message">Please fill out all required files.</p>
         </fieldset>
 
@@ -126,28 +128,39 @@
   <a href="#!" class="modal-close" title="Close this modal" data-dismiss="modal">&times;</a>
 </section>
 
-<section class="contact" id="contact-thanks" tabindex="-1" role="dialog" aria-labelledby="contact-thanks" aria-hidden="true">
+<section class="contact" id="contact/thanks" tabindex="-1" role="dialog" aria-labelledby="contact-thanks" aria-hidden="true">
   <div class="modal-inner">
     <header>
       <h2 id="contact-thanks-label">Thank you for contacting me</h2>
     </header>
 
     <div class="modal-content">
-      <p>I will be in touch very soon. Meanwhile please enjoy this GIF.</p>
+      <div class="contact--thanks__error">
+        <p>There has been an error while sending the form. Sorry.</p>
+        <p>Please <a href="#contact">go back</a> and check the data you provided.</p>
+        <p class="centered">
+          <a href="#contact" class="button contact--thanks__back"
+              title="Please go back and check the data">Go back&hellip;</a>
+        </p>
+      </div>
 
-      <video src="img/thanks.mp4" class="contact--thanks__gif" autoplay loop>
-        <p>Phil from Modern Family saying Thank You!</p>
-      </video>
+      <div class="contact--thanks__success">
+        <p>I will be in touch very soon. Meanwhile please enjoy this GIF.</p>
 
-      <h3 class="centered">Check out more</h3>
+        <video src="img/thanks.mp4" class="contact--thanks__gif" autoplay loop>
+          <p>Phil from Modern Family saying Thank You!</p>
+        </video>
 
-      <p class="centered">
-        <a href="<?php print base_url(); ?>portfolio/" class="button"
-            title="View some of the work I do">View my work</a>
-        or
-        <a href="//github.com/drublic" class="button"
-            title="Open Source work I am involved in">Visit my GitHub portfolio</a>
-      </p>
+        <h3 class="centered">Check out more</h3>
+
+        <p class="centered">
+          <a href="<?php print base_url(); ?>portfolio/" class="button"
+              title="View some of the work I do">View my work</a>
+          or
+          <a href="//github.com/drublic" class="button"
+              title="Open Source work I am involved in">Visit my GitHub portfolio</a>
+        </p>
+      </div>
     </div>
 
     <footer>

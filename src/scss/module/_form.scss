@@ -143,8 +143,18 @@ select:valid + .form__validity:after {
   content: '\02713';
 }
 
-input[type="submit"] {
+/**
+ * Submit
+ */
+.form__save {
+  @include x-transition(0.2s ease-in-out);
+
   float: right;
+}
+
+.form__save[disabled] {
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 /* Error */
@@ -153,6 +163,20 @@ input[type="submit"] {
   float: left;
   margin: 1.7em 1em 0 25%;
   color: #b94a48;
+}
+
+/**
+ * No JS
+ */
+.form__nojs {
+  padding: 1em;
+  color: #b94a48;
+  border: 1px solid #ee5f5b;
+  border-radius: 2px;
+}
+
+.form__nojs--hidden {
+  display: none;
 }
 
 /**
@@ -165,4 +189,8 @@ input[type="submit"] {
 
 .contact--thanks__follow {
   margin: 1em 0 0;
+}
+
+.contact--thanks__error {
+  display: none;
 }

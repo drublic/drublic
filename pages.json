@@ -28,5 +28,9 @@
     "title": "Error",
     "action": "error",
     "content": "templates/error.html"
+  },
+  {
+    "title": "Contact Form",
+    "action": "form"
   }
 ]

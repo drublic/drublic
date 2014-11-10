@@ -169,6 +169,13 @@
   // Build page
   set_headers();
 
+  // For forms, check stuff correctly
+
+  if ($page_action == 'form') {
+    require('../lib/form.php');
+  }
+
+  // Content
   include('../src/templates/header.html');
   include(get_file_path());
   include('../src/templates/footer.html');
