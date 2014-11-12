@@ -2546,7 +2546,7 @@ body {
     padding: 0;
   }
 
-  .header__navigation,
+  .navigation,
   .footer {
     display: none;
   }
