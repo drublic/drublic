@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "normalize-scss": "3.0.1",
-    "sass-mixins": "0.10.0"
+    "sass-mixins": "0.11.0"
   }
 }

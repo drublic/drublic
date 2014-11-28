@@ -7,19 +7,12 @@
 @import 'helpers/h5bp';
 
 @import '../components/css-modal/modal';
-@import 'module/tag';
 @import 'module/work';
-@import 'module/social-media-links';
+@import 'module/social';
 @import 'module/button';
 @import 'module/form';
 
 @import 'typography';
-@import 'layout';
+@import 'layout/layout';
 @import 'layout/header';
 @import 'layout/footer';
-
-// RWD
-@import 'rwd';
-
-// Print
-@import 'print';

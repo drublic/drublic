@@ -2,17 +2,13 @@
   <footer class="footer">
     <img src="<?php print base_url(); ?>img/me.jpg" alt="Hans Christian Reinl" class="footer__me">
 
-    <div class="footer__follow">
-      <a href="//twitter.com/drublic" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @drublic</a>
-    </div>
-
     <p>Made with love. <?php print date('Y'); ?>. Cologne, Germany. <a href="<?php print base_url(); ?>#imprint" title="Who does this stuff?">Legal</a>.</p>
 
-    <ul class="social-media-links">
-      <li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
-      <li class="github"><a href="//github.com/drublic">Github</a></li>
-      <li class="twitter"><a href="//twitter.com/drublic">Twitter</a></li>
-      <li class="google-plus"><a href="//plus.google.com/112019818423540363330?rel=author">Google+</a></li>
+    <ul class="social">
+      <li class="social__link social__link--rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
+      <li class="social__link social__link--github"><a href="//github.com/drublic">Github</a></li>
+      <li class="social__link social__link--twitter"><a href="//twitter.com/drublic">Twitter</a></li>
+      <li class="social__link social__link--google"><a href="//plus.google.com/112019818423540363330?rel=author">Google+</a></li>
     </ul>
 
     <a href="#" class="visuallyhidden">go back up to top</a>
@@ -29,13 +25,6 @@
     WebFont.load({
       google: { families: ['Raleway:300,800'] }
     });
-  </script>
-
-  <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
-    js.src="//platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
   </script>
 </body>
 </html>

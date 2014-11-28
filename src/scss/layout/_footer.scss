@@ -2,43 +2,36 @@
  * Footer
  */
 .footer {
-	@include x-box-sizing;
-	@include x-rem(margin, 2 auto 0);
-	@include x-rem(padding, 4 2 3);
-	@include x-rem(max-width, 45);
+  @include x-box-sizing;
+  @include x-rem(margin, 2 auto 0);
+  @include x-rem(padding, 4 2 3);
+  @include x-rem(max-width, 45);
 
-	text-align: center;
+  text-align: center;
 
-	border-top: 1px solid #111;
+  border-top: 1px solid #ddd;
 }
 
 .footer__me {
-	@include x-rem(padding, 2 0);
-	@include x-rem(width, 13);
+  @include x-rem(padding, 2 0);
+  @include x-rem(width, 13);
 
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
-.footer__follow {
-	margin-bottom: 0.5em;
+@media screen and (max-width: 48em) {
+  .footer {
+    margin: 2rem;
+    padding: 2rem 0 0;
+  }
+
+  .footer__me {
+    padding: 1em 0;
+  }
 }
 
-// Under 480px
-@media screen and (max-width: 32em) {
-	.footer {
-		margin: 2rem;
-		padding: 2rem 0 0;
-	}
-
-	.footer__me,
-	.footer__follow {
-		padding: 1em 0;
-	}
-}
-
-// Under 360px
 @media screen and (max-width: 24em) {
-	.footer {
-		padding: 1em;
-	}
+  .footer {
+    padding: 1em;
+  }
 }

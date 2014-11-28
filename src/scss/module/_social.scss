@@ -1,0 +1,48 @@
+/**
+ * Social Media Links
+ *
+ * @define social
+ */
+.social {
+  list-style: none;
+  margin: 1.3em 0 0;
+  padding-left: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.social li {
+  display: inline;
+}
+
+.social__link > a {
+  position: relative;
+  display: inline-block;
+
+  width: 32px;
+  height: 32px;
+
+  margin-right: 7px;
+  border-radius: 50%;
+
+  text-indent: -200px;
+  overflow: hidden;
+  background: #111 url(../../img/github.png);
+  background-size: 32px 32px;
+}
+
+.social__link--twitter > a {
+  background-image: url(../../img/twitter.png);
+}
+
+.social__link--google > a {
+  background-image: url(../../img/google-plus.png);
+}
+
+.social__link--rss > a {
+  background-image: url(../../img/feed.png);;
+}
+
+.social__link--github > a {
+  background-color: transparent;
+}
