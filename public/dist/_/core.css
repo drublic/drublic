@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/*! sass-mixins - v0.9.0 - 2014-07-02 */
-                                       /**
+/*! sass-mixins - v0.11.0 - 2014-10-20 */
+                                        /**
 * @description
 * Generates keyframe animations
 *
@@ -595,7 +595,8 @@ body {
    ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 article,
@@ -607,6 +608,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -651,7 +653,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -1152,7 +1154,6 @@ html {
 @media screen and (max-width: 30em) {
   .has-overlay > body {
     overflow: hidden;
-    height: 100%;
   }
 }
 
@@ -1423,102 +1424,28 @@ html {
   }
 }
 
-@-webkit-keyframes scaleDown {
-  to {
-    opacity: 0;
-    -webkit-transform: scale(0.8);
-  }
-}
-@-moz-keyframes scaleDown {
-  to {
-    opacity: 0;
-    -moz-transform: scale(0.8);
-  }
-}
-@keyframes scaleDown {
-  to {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-}
+/**
+ * All animations for CSS Modal
+ *
+ * Available:
+ * - %modal--transition-fade (fade)
+ * - %modal--transition-zoomIn (zooms in)
+ * - %modal--transition-plainScreen (hides background)
+ *
+ * Usage:
+ *
+ * .selector {
+ * 		@extend %modal--transition-fade;
+ * }
+ *
+ */
 @media screen and (min-width: 30em) {
   .imprint,
   .contact {
-    -webkit-transition: opacity 0.4s;
-    -o-transition: opacity 0.4s;
     transition: opacity 0.4s;
   }
 }
 
-@-webkit-keyframes shaky {
-  0% {
-    -webkit-transform: translateY(-100%);
-  }
-  60% {
-    -webkit-transform: translateX(5%) translateY(5%) rotate(-2deg);
-  }
-  80% {
-    -webkit-transform: translateX(5%) translateY(5%) rotate(2deg);
-  }
-  50%, 70%, 90% {
-    -webkit-transform: translateX(0%) translateY(0%);
-  }
-}
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-100%);
-  }
-  60% {
-    -webkit-transform: translateY(5%);
-  }
-  85% {
-    -webkit-transform: translateY(0%);
-  }
-}
-@-moz-keyframes bounce {
-  0% {
-    -moz-transform: translateY(-100%);
-  }
-  60% {
-    -moz-transform: translateY(5%);
-  }
-  85% {
-    -moz-transform: translateY(0%);
-  }
-}
-@-o-keyframes bounce {
-  0% {
-    -o-transform: translateY(-100%);
-  }
-  60% {
-    -o-transform: translateY(5%);
-  }
-  85% {
-    -o-transform: translateY(0%);
-  }
-}
-@-ms-keyframes bounce {
-  0% {
-    -ms-transform: translateY(-100%);
-  }
-  60% {
-    -ms-transform: translateY(5%);
-  }
-  85% {
-    -ms-transform: translateY(0%);
-  }
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(-100%);
-  }
-  60% {
-    transform: translateY(5%);
-  }
-  85% {
-    transform: translateY(0%);
-  }
-}
 /**
  * CSS Modal Themes
  * http://drublic.github.com/css-modal
@@ -1615,6 +1542,9 @@ html {
 
 /*
  * Plain Screen Theme Styles
+ */
+/**
+ * Apply the desired modal behavior to your container selector
  */
 /**
  * Work
@@ -2117,13 +2047,15 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 48px;
+  font-size: 3rem;
 }
 
 h2 {
+  font-size: 32px;
+  font-size: 2rem;
   border-bottom: 1px solid #ddd;
   margin: 1em 0 0.5em;
-  font-size: 2em;
 }
 
 h1 + h2 {
@@ -2135,12 +2067,14 @@ h2 a, h3 a {
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   margin: 1em 0 .5em;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 h1 + h4 {
@@ -2183,11 +2117,11 @@ ul {
 /* Under 480px */
 @media screen and (max-width: 32em) {
   h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 /**
