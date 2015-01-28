@@ -95,4 +95,7 @@
 
     return false;
   });
+
+  // Parallax Scrolling
+   $.hongkong();
 }());
