@@ -1,6 +1,6 @@
 {
   "name": "hongkong",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/drublic/hongkong",
   "authors": [
     "Hans Christian Reinl <info@drublic.de>"
@@ -24,14 +24,13 @@
   "devDependencies": {
     "normalize.css": "3.0.1"
   },
-  "_release": "0.2.0",
+  "_release": "0.3.1",
   "_resolution": {
     "type": "version",
-    "tag": "0.2.0",
-    "commit": "65ab9858ce56e4cc23cdffea3516aca6f6dd7849"
+    "tag": "0.3.1",
+    "commit": "25ec1c0bc497c31b7b8b3358d55784feb1e6dc72"
   },
   "_source": "git://github.com/drublic/hongkong.git",
-  "_target": "~0.2.0",
-  "_originalSource": "hongkong",
-  "_direct": true
+  "_target": "~0.3.1",
+  "_originalSource": "hongkong"
 }
