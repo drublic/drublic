@@ -1,6 +1,6 @@
 {
   "name": "drublic-vc",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "dependencies": {
     "css-modal": "1.3.0",
     "jquery": "~2.1.3",
