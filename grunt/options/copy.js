@@ -16,7 +16,7 @@ module.exports = {
   production: {
     files: [{
       expand: true,
-      cwd: 'src/components/jquery/dist/',
+      cwd: 'node_modules/jquery/dist/',
       src: 'jquery.min.map',
       dest: config.destDir + '<%= pkg.version %>/',
       flatten: true

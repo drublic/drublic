@@ -13,8 +13,6 @@ module.exports = {
 
   destDir: 'public/dist/',
 
-  requirejs: '../../bower_components/requirejs/require',
-
   // All files that should be checked with JSHint
   jsHintFiles: [
     'Gruntfile.js',
@@ -81,10 +79,10 @@ module.exports = {
   concat: {
     js: {
       src: [
-        'src/components/jquery/dist/jquery.min.js',
-        'src/components/css-modal/modal.js',
-        'src/components/raf.js/raf.min.js',
-        'src/components/hongkong/hongkong.js',
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/css-modal/modal.js',
+        'node_modules/raf.js/raf.min.js',
+        'node_modules/hongkong/hongkong.js',
         'src/js/main.js',
         'src/js/track.js'
       ],
@@ -92,10 +90,10 @@ module.exports = {
     },
     jsmin: {
       src: [
-        'src/components/jquery/dist/jquery.min.js',
-        'src/components/css-modal/modal.js',
-        'src/components/raf.js/raf.min.js',
-        'src/components/hongkong/hongkong.js',
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/css-modal/modal.js',
+        'node_modules/raf.js/raf.min.js',
+        'node_modules/hongkong/hongkong.js',
         'src/js/main.js',
         'src/js/track.js'
       ],
