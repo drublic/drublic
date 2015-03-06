@@ -45,6 +45,11 @@ body {
   max-width: 80rem;
 }
 
+.section__cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
 /* Under ~560px */
 @media screen and (max-width: 38em) {
   .main {
