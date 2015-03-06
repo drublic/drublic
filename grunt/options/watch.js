@@ -7,8 +7,8 @@ var config = require('../config');
 
 module.exports = {
   scss: {
-    files: config.sass.files,
-    tasks: 'sass:dev',
+    files: config.css.files,
+    tasks: 'pleeease:dev',
     atBegin: true
   },
 

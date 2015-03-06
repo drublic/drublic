@@ -1,101 +1,33 @@
-/**
- *  Author: Hans Christian Reinl
- *
- *  Twitter: @drublic
- *  Mail: info@drublic.de
- *
- */
 (function () {
 
   'use strict';
 
-  // Check if we are dealing with mobile
-  var isMobile = function () {
-    return ( window.innerWidth < 481 );
-  };
+  // Google Universal Analytics
 
-  // If on mobile, hide address bar
-  if (isMobile()) {
-    window.setTimeout( function () {
-      window.scrollTo(0, 0);
-    }, 0);
-  }
+  // More information about the Google Universal Analytics:
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/
+  // http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics
 
-  // Check if svg capable
-  var candoSvg = function () {
-    return !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
-  };
+  /* jshint ignore:start */
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  /* jshint ignore:end */
 
-  if (!candoSvg()) {
-    document.documentElement.className += ' no-svg';
-  }
+  // Create tracker object
+  ga('create', 'UA-41497561-1');
 
-  /**
-   * Menu
-   */
-  $(document).on('click', '.navigation__toggle', function () {
-    $('.navigation').toggleClass('navigation--visible');
+  // Send a page view
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/pages
+  ga('send', 'pageview');
+
+  // Track events
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+  $(document).on('click', '[data-ga-category]', function (event) {
+    var $target = $(event.currentTarget);
+    var action = $target.attr('data-ga-action') || undefined;     // required
+    var category = $target.attr('data-ga-category') || undefined; // required
+    var label = $target.attr('data-ga-label') || undefined;
+    var value = parseInt($target.attr('data-ga-value'), 10) || undefined;
+
+    ga('send', 'event', category, action, label, value);
   });
-
-  /**
-   * Form
-   */
-  $('.form__nojs').addClass('form__nojs--hidden');
-
-  var resetForm = function ($form) {
-    $form[0].reset();
-  };
-
-  var errorForm = function ($form, data) {
-    $('.contact--thanks__error').show();
-    $('.contact--thanks__success').hide();
-
-    $form.find('.form__message').show();
-
-    $('.form__save')
-      .attr('disabled', false)
-      .val('Submit again');
-
-    $.each(data.FieldErrors, function (element) {
-      console.log(element.ErrorText);
-    });
-
-    // Normalize Thanks page
-    $(document).on('click', '.contact--thanks__back', function () {
-      $('.contact--thanks__error').hide();
-      $('.contact--thanks__success').show();
-    });
-  };
-
-  $('.form').submit(function () {
-    var $form = $(this);
-    var formData = $form.serializeArray();
-    var success = true;
-
-    $('.form__save')
-      .attr('disabled', true)
-      .val('Sending...');
-
-    $.post('?file=form', formData, function (data) {
-      if (data.success === 1) {
-        resetForm($form);
-      } else if (data.ErrorText) {
-        errorForm($form, data);
-        success = false;
-      }
-    }, 'json');
-
-    setTimeout(function () {
-
-      // Prevent thanks page from being shown if form is already submitted
-      if (success) {
-        window.location.hash = 'contact/thanks';
-      }
-    }, 500);
-
-    return false;
-  });
-
-  // Parallax Scrolling
-   $.hongkong();
 }());

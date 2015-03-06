@@ -53,11 +53,9 @@ module.exports = function (grunt) {
   /**
    * A task for development
    */
-  grunt.registerTask('serve', ['connect:serve', 'watch']);
-
   grunt.registerTask('dev', [
     'jshint',
-    'sass:dev',
+    'pleeease:dev',
     'imagemin',
     'copy',
     'concat:js'
@@ -71,7 +69,7 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('build', [
     'jshint',
-    'sass:build',
+    'pleeease:build',
     'imagemin',
     'copy',
     'concat:jsmin',
@@ -79,24 +77,10 @@ module.exports = function (grunt) {
   ]);
 
   /**
-   * Testing
-   */
-  // A task for testing development code
-  grunt.registerTask('test', [
-    'karma:unit'
-  ]);
-
-  // A task for testing production code
-  grunt.registerTask('test:build', [
-    'karma:prod'
-  ]);
-
-  /**
    * Travis CI task
    */
   grunt.registerTask('travis', [
-    'jshint',
-    'karma:unit'
+    'jshint'
   ]);
 
 };

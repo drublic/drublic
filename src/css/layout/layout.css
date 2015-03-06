@@ -1,0 +1,132 @@
+/**
+ * General layouting
+ */
+html {
+  background: #fff;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/**
+ * About me
+ */
+.claim {
+  max-width: 60rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.claim__desc {
+  max-width: 45rem;
+
+  line-height: 1.7em;
+  margin: 0 auto;
+}
+
+.claim__me {
+  height: 13rem;
+  margin: 3rem 0;
+  border-radius: 50%;
+}
+
+/**
+ * Main section
+ */
+.main {
+  max-width: 45rem;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+}
+
+.main--portfolio {
+  max-width: 80rem;
+}
+
+/* Under ~560px */
+@media screen and (max-width: 38em) {
+  .main {
+    padding-top: 3rem;
+  }
+}
+
+
+/* Under 360px */
+@media screen and (max-width: 24em) {
+  .main {
+    padding: 0 1em 1em;
+  }
+}
+
+/**
+ * Overlays
+ */
+.imprint h2,
+.contact h2 {
+  border-bottom: none;
+}
+
+
+/**
+ * Resume
+ */
+.resume-header > h1 {
+  margin: 1em 0 0;
+  line-height: 1.2;
+}
+
+
+/**
+ * Print styles
+ */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+  }
+
+  html {
+    border-top: 0;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .navigation,
+  .footer {
+    display: none;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  a[href^="#"]:after,
+  a[href^="mailto:"]:after {
+    content: "";
+  }
+
+  @page {
+    margin: 1.2cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

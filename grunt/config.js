@@ -30,20 +30,14 @@ module.exports = {
     dest: 'public/dist/<%= pkg.version %>/c.js'
   },
 
-  // Sass files
-  sass: {
+  // CSS files
+  css: {
     files: [
-      'src/scss/**/*.scss'
+      'src/css/**/*.css'
     ],
-    src: 'src/scss/main.scss',
+    src: 'src/css/main.css',
     devDest: 'public/dist/_/core.css',
     dest: 'public/dist/<%= pkg.version %>/c.css'
-  },
-
-  // Modernizr files
-  modernizr: {
-    src: 'bower_components/modernizr/modernizr.js',
-    dest: 'public/dist/<%= pkg.version %>/m.js'
   },
 
   // Images
@@ -55,25 +49,6 @@ module.exports = {
   tests: {
     src: 'test/specs/**/*spec.js',
     config: 'test/test-main.js'
-  },
-
-  // Versioned references
-  replace: {
-    build: {
-      src: 'temp/**/*.html',
-      dest: 'dist/',
-      maincss: '<%= pkg.version %>/main.min.css',
-      modernizr: '<%= pkg.version %>/modernizr.min.js',
-      mainjs: '<script src="<%= pkg.version %>/main.min.js"></script>'
-    },
-
-    dev: {
-      src: 'temp/**/*.html',
-      dest: 'src/',
-      maincss: 'css/main.css',
-      modernizr: '../bower_components/modernizr/modernizr.js',
-      mainjs: '<script data-main="js/config" src="../bower_components/requirejs/require.js"></script>'
-    }
   },
 
   concat: {
