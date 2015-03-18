@@ -50,23 +50,37 @@
 <body>
 
   <header class="header" role="banner">
-    <div data-parallax-top>
-      <h1 role="banner" >Front-End Development and Architecture</h1>
-      <p>Hans Christian Reinl &ndash; @drublic</p>
+    <a href="<?php print base_url(); ?>" title="drublic - HTML, CSS and JavaScript" role="banner" class="header__logo">
+      drublic: Front-End Development and Architecture
+    </a>
 
-      <nav class="navigation" role="navigation">
-        <a href="#content" class="visuallyhidden">Skip to Content</a>
+    <h1>Front-End Development and Architecture</h1>
+    <p>Hans Christian Reinl &ndash; @drublic</p>
 
-        <ul id="navigation">
-          <li class="<?php set_navigation_item_active('index'); ?>"><a href="<?php print base_url(); ?>" title="@drublic - Front-End Architecture">Home</a></li>
-          <li class="<?php set_navigation_item_active('resume'); ?>"><a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a></li>
-          <li class="<?php set_navigation_item_active('blog'); ?>"><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li>
-          <li class="<?php set_navigation_item_active('portfolio'); ?>"><a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a></li>
-          <li><a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
-          <li><a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="navigation" role="navigation">
+      <a href="#content" class="visuallyhidden">Skip to Content</a>
 
-      <button class="navigation__toggle">Menu<span></span></button>
-    </div>
+      <ul id="navigation">
+        <li class="<?php set_navigation_item_active('index'); ?>">
+          <a href="<?php print base_url(); ?>" title="drublic - Front-End Architecture">Home</a>
+        </li>
+        <li class="<?php set_navigation_item_active('resume'); ?>">
+          <a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a>
+        </li>
+        <li class="<?php set_navigation_item_active('blog'); ?>">
+          <a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a>
+        </li>
+        <li class="<?php set_navigation_item_active('portfolio'); ?>">
+          <a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a>
+        </li>
+        <li>
+          <a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a>
+        </li>
+        <li>
+          <a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="navigation__toggle">Menu<span></span></button>
   </header>

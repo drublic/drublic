@@ -81,7 +81,7 @@ h2 {
 .work__clients li {
   display: inline-block;
   max-width: 180px;
-  margin: 0 1em;
+  margin: 1rem;
 }
 
 .work__clients a {

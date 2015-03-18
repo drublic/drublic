@@ -11,8 +11,24 @@
   background: linear-gradient(var(--color), var(--color-dark));
 }
 
+.header__logo {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: url(/img/logo.svg);
+  background-size: 100% 100%;
+  text-indent: -99em;
+  overflow: hidden;
+}
+
+.header__logo--dark {
+  background-image: url(/img/logo-dark.svg);
+}
+
 .header h1 {
-  margin: 0.3em 0;
+  margin: 3rem 0 0;
 }
 
 .header p {
@@ -71,9 +87,13 @@
 }
 
 @media screen and (max-width: 50em) {
-  .header,
-  .header > div {
-    position: relative;
+  .header__logo {
+    position: absolute;
+    top: 0.3rem;
+    left: 1rem;
+    margin-top: 0;
+    width: 3rem;
+    height: 3rem;
   }
 
   .header h1 {
@@ -122,8 +142,8 @@
   .navigation__toggle {
     display: block;
     position: absolute;
-    top: -1.5em;
-    right: 0;
+    top: 0;
+    right: 1rem;
     background: none;
     border: 0;
     padding: 1em 2.5em 1em 0.5em;
