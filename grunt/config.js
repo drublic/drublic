@@ -57,7 +57,6 @@ module.exports = {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/css-modal/modal.js',
         'node_modules/raf.js/raf.min.js',
-        'node_modules/hongkong/hongkong.js',
         'src/js/main.js',
         'src/js/track.js'
       ],
@@ -68,7 +67,6 @@ module.exports = {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/css-modal/modal.js',
         'node_modules/raf.js/raf.min.js',
-        'node_modules/hongkong/hongkong.js',
         'src/js/main.js',
         'src/js/track.js'
       ],
