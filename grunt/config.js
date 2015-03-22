@@ -56,7 +56,7 @@ module.exports = {
       src: [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/css-modal/modal.js',
-        'node_modules/raf.js/raf.min.js',
+        'src/js/form.js',
         'src/js/main.js',
         'src/js/track.js'
       ],
@@ -66,7 +66,7 @@ module.exports = {
       src: [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/css-modal/modal.js',
-        'node_modules/raf.js/raf.min.js',
+        'src/js/form.js',
         'src/js/main.js',
         'src/js/track.js'
       ],

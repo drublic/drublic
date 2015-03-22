@@ -1,0 +1,13 @@
+/**
+ * Fade in contexts
+ */
+.js [data-fx-fade] {
+  opacity: 0;
+  transform: translateY(1em);
+  transition: 0.5s ease-out;
+}
+
+.js [data-fx-fade="in"] {
+  transform: translateY(0);
+  opacity: 1;
+}
