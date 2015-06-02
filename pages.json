@@ -25,6 +25,11 @@
     "content": "templates/blog.html"
   },
   {
+    "title": "Blog",
+    "action": "blog-post",
+    "content": "templates/post.html"
+  },
+  {
     "title": "Error",
     "action": "error",
     "content": "templates/error.html"

@@ -63,24 +63,17 @@
     }
   }
 
+  function getJsonContents ($filename) {
+    $file = file_get_contents($filename);
 
-  // Convenience function to provide package data (like version)
-  function read_package () {
-    $file = file_get_contents(dirname(__FILE__) . '/../package.json');
     return json_decode($file);
   }
 
   // Set package
-  $package = read_package();
-
-  // Convenience function to provide strucure data
-  function read_structure () {
-    $file = file_get_contents(dirname(__FILE__) . '/../pages.json');
-    return json_decode($file);
-  }
+  $package = getJsonContents(dirname(__FILE__) . '/../package.json');
 
   // Set stucture
-  $structure = read_structure();
+  $structure = getJsonContents(dirname(__FILE__) . '/../pages.json');
 
   // Convenience function to return page properies for action
   // @param $action
@@ -88,9 +81,15 @@
   function get_page_properties () {
     global $structure, $page_action;
 
+    $actions = explode('/', $page_action);
+
+    if ($actions[0] == 'blog' && isset($actions[1])) {
+      $actions[0] = 'blog-post';
+    }
+
     // Check if action is allowed
     for ($i = 0; $i < count($structure); $i++) {
-      if ($structure[$i]->action == $page_action) {
+      if ($structure[$i]->action == $actions[0]) {
         return $structure[$i];
       }
     }

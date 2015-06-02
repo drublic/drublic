@@ -22,5 +22,15 @@ module.exports = {
       livereload: true
     },
     files: ['src/css/**/*']
+  },
+
+  html: {
+    files: ['src/templates/**'],
+    tasks: ['htmlmin']
+  },
+
+  posts: {
+    files: ['src/posts/**'],
+    tasks: ['copy:posts']
   }
 };

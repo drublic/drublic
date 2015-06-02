@@ -21,5 +21,14 @@ module.exports = {
       dest: config.destDir + '<%= pkg.version %>/',
       flatten: true
     }]
+  },
+
+  posts: {
+    files: [{
+      expand: true,
+      cwd: 'src/posts/',
+      src: ['**/*'],
+      dest: 'public/posts/'
+    }]
   }
 };

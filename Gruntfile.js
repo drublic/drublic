@@ -35,22 +35,6 @@ module.exports = function (grunt) {
   grunt.task.loadTasks('./grunt/tasks');
 
   /**
-   * A task to generate pages
-   */
-  // Tasks for generating static pages
-  grunt.registerTask('pages:dev', [
-    'concat',
-    'replace:dev',
-    'clean:temp'
-  ]);
-
-  grunt.registerTask('pages:build', [
-    'concat',
-    'replace:build',
-    'clean:temp'
-  ]);
-
-  /**
    * A task for development
    */
   grunt.registerTask('dev', [
