@@ -1,30 +1,42 @@
 <?php
   include ('../lib/post.php');
 
+  use \Michelf\Markdown;
+
   $posts = get_posts();
 ?>
 <main id="main" class="main" role="main">
   <?php for ($i = 0; $i < count($posts); $i++) : ?>
     <?php $post = $posts[$i]; ?>
-    <?php if ($i <= 10) : ?>
-      <article data-fx-fade>
-        <header>
+    <?php if ($i < 5) : ?>
+      <article class="posts__post" data-fx-fade>
+        <header class="posts__post__header">
           <h2>
-            <a href="<?php print $post['url']; ?>">
+            <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/">
               <?php print $post['data']->title; ?>
             </a>
           </h2>
-          <p><time><?php print $post['data']->date; ?></time></p>
+          <time class="posts__date"><?php print $post['data']->date; ?></time>
         </header>
 
-        <?php print get_abstract($post['data']->abstract); ?>
+        <?php print Markdown::defaultTransform($post['data']->abstract); ?>
       </article>
     <?php else : ?>
-      <h2>
+      <?php if ($i == 5) : ?>
+        <ul class="posts__list">
+      <?php endif; ?>
+      <li>
         <a href="<?php print $post['url']; ?>">
           <?php print $post['data']->title; ?>
+
+          <time class="posts__date">
+            <?php print $post['data']->date; ?>
+          </time>
         </a>
-      </h2>
+      </li>
+      <?php if ($i - 1 == count($posts)) : ?>
+        </ul>
+      <?php endif; ?>
     <?php endif; ?>
   <?php endfor; ?>
 </main>

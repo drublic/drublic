@@ -4,6 +4,53 @@ Redirect permanent /~  https://github.com/drublic
 Redirect permanent /+  https://plus.google.com/+HansChristianReinl/posts
 Redirect permanent /f  https://www.facebook.com/hans.reinl
 
+Redirect permanent /blog/learnings-from-using-sass-in-large-scale-projects/      https://drublic.de/archive/learnings-from-using-sass-in-large-scale-projects/
+Redirect permanent /blog/init-boilerplate-framework-front-end-projects/      https://drublic.de/archive/init-boilerplate-framework-front-end-projects/
+Redirect permanent /blog/add-main-element-modernizr/       https://drublic.de/archive/add-main-element-modernizr/
+Redirect permanent /blog/accessible-dialogs-modals/      https://drublic.de/archive/accessible-dialogs-modals/
+Redirect permanent /blog/introducing-css-modal/      https://drublic.de/archive/introducing-css-modal/
+Redirect permanent /blog/printing-the-web/       https://drublic.de/archive/printing-the-web/
+Redirect permanent /blog/speaking-engagements-net-awards-freelancing/      https://drublic.de/archive/speaking-engagements-net-awards-freelancing/
+Redirect permanent /blog/takeoff-conference-talking-about-good-code/       https://drublic.de/archive/takeoff-conference-talking-about-good-code/
+Redirect permanent /blog/rem-fallback-sass-less/       https://drublic.de/archive/rem-fallback-sass-less/
+Redirect permanent /blog/working-draft-100/      https://drublic.de/archive/working-draft-100/
+Redirect permanent /blog/the-nitty-gritty-new-resource-for-web-devs/       https://drublic.de/archive/the-nitty-gritty-new-resource-for-web-devs/
+Redirect permanent /blog/conference-test-the-web-forward/      https://drublic.de/archive/conference-test-the-web-forward/
+Redirect permanent /blog/writing-awesome-code/       https://drublic.de/archive/writing-awesome-code/
+Redirect permanent /blog/yeoman/       https://drublic.de/archive/yeoman/
+Redirect permanent /blog/html5bp-v4-0-0/       https://drublic.de/archive/html5bp-v4-0-0/
+Redirect permanent /blog/building-advanced-initial-boilerpalte/      https://drublic.de/archive/building-advanced-initial-boilerpalte/
+Redirect permanent /blog/principles-of-writing-consistent-idiomatic-css/       https://drublic.de/archive/principles-of-writing-consistent-idiomatic-css/
+Redirect permanent /blog/sass-vs-less/       https://drublic.de/archive/sass-vs-less/
+Redirect permanent /blog/my-coding-style-and-guidelines/       https://drublic.de/archive/my-coding-style-and-guidelines/
+Redirect permanent /blog/twitter-recess-css-cleaning-tool-build-on-less/       https://drublic.de/archive/twitter-recess-css-cleaning-tool-build-on-less/
+Redirect permanent /blog/about-css-variables/      https://drublic.de/archive/about-css-variables/
+Redirect permanent /blog/the-css-hierarchies-module-level-3/       https://drublic.de/archive/the-css-hierarchies-module-level-3/
+Redirect permanent /blog/dabblet-chrome-app/       https://drublic.de/archive/dabblet-chrome-app/
+Redirect permanent /blog/about-gits-cherry-picking/      https://drublic.de/archive/about-gits-cherry-picking/
+Redirect permanent /blog/effects-for-the-web/      https://drublic.de/archive/effects-for-the-web/
+Redirect permanent /blog/is-mothereffin-jquery-up/       https://drublic.de/archive/is-mothereffin-jquery-up/
+Redirect permanent /blog/responsive-media/       https://drublic.de/archive/responsive-media/
+Redirect permanent /blog/a-travel-through-time-and-back/       https://drublic.de/archive/a-travel-through-time-and-back/
+Redirect permanent /blog/lea-verous-animatable/      https://drublic.de/archive/lea-verous-animatable/
+Redirect permanent /blog/how-to-build-accordion-using-css-and-jquery/      https://drublic.de/archive/how-to-build-accordion-using-css-and-jquery/
+Redirect permanent /blog/restrict-textareas-resize-css3/       https://drublic.de/archive/restrict-textareas-resize-css3/
+Redirect permanent /blog/wo-sind-meine-abgerundeten-ecken/       https://drublic.de/archive/wo-sind-meine-abgerundeten-ecken/
+Redirect permanent /blog/where-are-my-rounded-corners/       https://drublic.de/archive/where-are-my-rounded-corners/
+Redirect permanent /blog/css3-rotate-images-on-click/      https://drublic.de/archive/css3-rotate-images-on-click/
+Redirect permanent /blog/touch-icons-for-android-devices-y-u-no-working/       https://drublic.de/archive/touch-icons-for-android-devices-y-u-no-working/
+Redirect permanent /blog/text-shadow-in-internet-explorer/       https://drublic.de/archive/text-shadow-in-internet-explorer/
+Redirect permanent /blog/html5-boilerplate-favicons-psd-template/      https://drublic.de/archive/html5-boilerplate-favicons-psd-template/
+Redirect permanent /blog/pseudo-classes-in-print-styles-for-references-in-links/       https://drublic.de/archive/pseudo-classes-in-print-styles-for-references-in-links/
+Redirect permanent /blog/style-syntax-in-comments/       https://drublic.de/archive/style-syntax-in-comments/
+Redirect permanent /blog/offer-files-as-download-with-adownload/       https://drublic.de/archive/offer-files-as-download-with-adownload/
+Redirect permanent /blog/mobile-design-is-not-only-responsive/       https://drublic.de/archive/mobile-design-is-not-only-responsive/
+Redirect permanent /blog/css3-auto-hyphenation-for-text-elements/      https://drublic.de/archive/css3-auto-hyphenation-for-text-elements/
+Redirect permanent /blog/the-difference-between-push-and-pull/       https://drublic.de/archive/the-difference-between-push-and-pull/
+Redirect permanent /blog/this-is-what-its-all-about/       https://drublic.de/archive/this-is-what-its-all-about/
+
+## Blog
+
 # Apache Server Configs v2.8.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 

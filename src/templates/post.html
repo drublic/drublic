@@ -1,9 +1,10 @@
 <?php
-  include ('../lib/post.php');
+  include('../lib/post.php');
+
+  use \Michelf\Markdown;
 
   $post = get_post();
 ?>
-
 <main id="content" class="main" role="main" data-fx-fade>
   <article class="post">
     <header class="post__header">
@@ -13,11 +14,7 @@
       </time>
     </header>
 
-    <?php echo $post['entry'] ?>
-
-    <div class="post__share">
-      <a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php print base_url(); ?>/blog/<?php echo $post['url'] ?>/" data-text="<?php echo $post['data']->title ?>" data-count="horizontal" data-via="drublic" data-related="drublic">Tweet</a>
-    </div>
+    <?php echo Markdown::defaultTransform($post['entry']); ?>
   </article>
 
   <ul class="post__navigation">
@@ -30,3 +27,5 @@
     </li>
   </ul>
 </main>
+
+<script async src="//platform.twitter.com/widgets.js"></script>

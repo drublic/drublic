@@ -1,0 +1,41 @@
+.posts__post {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.posts__post:after {
+  content: '\2693';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2rem;
+  font-family: serif;
+  text-align: center;
+  color: var(--color);
+  opacity: 0.3;
+}
+
+.posts__post__header {
+  margin-bottom: 3rem;
+}
+
+.posts__list {
+  margin-top: 4rem;
+}
+
+.posts__list li {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.posts__list a {
+  display: block;
+  text-decoration: none;
+}
+
+.posts__date {
+  float: right;
+  color: #aaa;
+  font-size: 0.9rem;
+}

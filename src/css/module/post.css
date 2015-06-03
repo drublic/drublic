@@ -1,5 +1,6 @@
 .post {
   border-bottom: 1px solid #ddd;
+  padding-bottom: 2rem;
 }
 
 .post__header {
@@ -20,16 +21,14 @@
   margin-top: 1rem;
 }
 
-.post__share {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  text-align: center;
-}
-
 .post__navigation {
   list-style: none;
   padding: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.twitter-tweet {
+  margin: 1rem auto !important;
 }
