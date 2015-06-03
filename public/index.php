@@ -129,7 +129,9 @@
   function set_navigation_item_active ($action, $print = true) {
     global $page_action;
 
-    if ($action == explode('/', $page_action)[0]) {
+    $actions = explode('/', $page_action);
+
+    if ($action == $actions[0]) {
       if ($print) {
         print 'is-active';
       } else {

@@ -2,7 +2,7 @@
 
   require_once('../lib/Markdown/Markdown.inc.php');
 
-  function get_posts ($current_post) {
+  function get_posts ($current_post = false) {
     $path = './posts';
     $files = array();
     $entries = array();
@@ -20,7 +20,7 @@
         array_shift($url);
         $url = implode('-', $url);
 
-        if (isset($current_post)) {
+        if (isset($current_post) && $current_post) {
           if ($url == $current_post) {
             $entries[] = array(
               'post' => $file,
@@ -55,7 +55,9 @@
     return $actions[1];
   }
 
-  function get_post ($current_post) {
+  function get_post () {
     $postname = get_current_postname();
-    return get_posts($postname)[0];
+    $postname = get_posts($postname);
+
+    return $postname[0];
   }
