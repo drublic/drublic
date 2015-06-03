@@ -1,0 +1,9 @@
+{
+  "url": "about-css-variables",
+  "title": "About CSS Variables",
+  "date": "Sunday, March 18th, 2012",
+  "abstract": "<p>Please read about the updated syntax of CSS variables in the first and second update of this post. Since a little bit more than a month (as of the time of writing) there is a Editor&#8217;s Draft for a CSS Variables Module by Google (Tab Atkins and Luke Macpherson) and Daniel Glazman. Just a few days ago the Working Draft was updated. The first draft was written in 2008 by Daniel Glazman but was not added to the official specification. The new WD extends this proposal by Glazman. Disclaimer: This article is part of a small series about the latest",
+  "meta-title": "",
+  "meta-description": "Since March there is an Editor's Draft for variables in CSS3 - the CSS Variables Module Level 1.",
+  "link": false
+}

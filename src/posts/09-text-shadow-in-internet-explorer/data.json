@@ -1,0 +1,9 @@
+{
+  "url": "text-shadow-in-internet-explorer",
+  "title": "Text-Shadow in Internet Explorer",
+  "date": "Wednesday, September 14th, 2011",
+  "abstract": "<p>This mothereffin shit is worth a blog-post. Even if it&#8217;s just a short one. At this very moment I&#8217;m celebrating the fact that Internet Explorer 10 now supports text-shadows kinda excessively! Finally! Even Internet Explorer made it! Yayyyy! For more details on this, please go and check out the Internet Explorer 10 Guide for Developers. Microsoft developers explain the usage of text-shadow here. But I guess it should be pretty clear how to use them as other browsers support them like forever. Thanks goes out to Louis Lazaris for his tweet about it. Also @IE tweeted about this. There are also",
+  "meta-title": "",
+  "meta-description": "Microsoft now finally supports CSS text-shadow with Internet Explorer 10 Platform Preview.",
+  "link": false
+}

@@ -1,0 +1,9 @@
+{
+  "url": "html5bp-v4-0-0",
+  "title": "HTML5 Boilerplate &#8211; v4.0.0",
+  "date": "Wednesday, August 29th, 2012",
+  "abstract": "<p>HTML5 Boilerplate is out with the new version 4.0.0. There were some significant changes since the last version that are listed up in the changelog (also see below). Most of them because of the excellent work by Nicolas Gallagher &#8211; thanks for leading HTML5 Boilerplate with such great effort. What&#8217;s new? This was done throughout the last seven months of development and resolving bugs: Add documentation in a separate folder &#8211; everything that is directly concerned with the project was moved from the wiki Switch from Public Domain to MIT license Separate Normalize.css from the rest of the CSS Improve",
+  "meta-title": "",
+  "meta-description": "The HTML5 Boilerplate is out with the new version 4.0.0. Also Mobile Boilerplate has a new version and the HTML5 Boilerplate's website is redesigned.",
+  "link": false
+}

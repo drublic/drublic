@@ -1,0 +1,9 @@
+{
+  "url": "accessible-dialogs-modals",
+  "title": "A Few More Words on Accessible Dialogs/Modals",
+  "date": "Monday, July 1st, 2013",
+  "abstract": "<p>tl;dr: It&#8217;s necessary to keep the focus within a dialog while tabbing through it. The function below is the easiest way to implement this behavior in JavaScript. When I created CSS Modal I wanted it to be accessible for screen readers and people that only use the keyboard for navigation. Nicholas Zakas has a great post that helped me a lot with making CSS Modal accessible without too much work. This posts explains a bit about aria roles, how to use tabindex and how you set focus to the element initially and bringing it back where it was before when",
+  "meta-title": "",
+  "meta-description": "It's necessary to keep the focus within a dialog/modal while tabbing through it. The function developed is an easy way to implement this behavior in JavaScript.",
+  "link": false
+}

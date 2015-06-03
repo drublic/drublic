@@ -1,0 +1,9 @@
+{
+  "url": "the-difference-between-push-and-pull",
+  "title": "The Difference between Push and Pull",
+  "date": "Saturday, August 20th, 2011",
+  "abstract": "<p>You do know the nice message which is submitted to your smartphone when someone mentions you on Twitter? iOS gets these messages via push. This means the server tells the app something like &#8220;Hey look, there&#8217;s something new on your Twitter-account&#8221;. On Android this is done with push, too. It was introduced in version 2.1.0 in mid of July. Before this release they requested all Tweets via &#8220;pull&#8221;: The app asks the server &#8220;Yo server, somethin&#8217; new here?&#8221;. Draw-backs? So where&#8217;s the difference besides the obvious? with pull the app has to connect to the server in a certain time-interval",
+  "meta-title": "Push and Pull with Server-sent Event and WebSocket",
+  "meta-description": "How to use push and pull notifications with JavaScript and HTML5 WebSocket and Server-sent Event.",
+  "link": false
+}

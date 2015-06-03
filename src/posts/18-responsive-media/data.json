@@ -1,0 +1,9 @@
+{
+  "url": "responsive-media",
+  "title": "Responsive Media",
+  "date": "Saturday, November 19th, 2011",
+  "abstract": "<p>There is a big discussion going on at the moment covering the actual point of how to deal with images and media et al. on mobile-phones and other devices as there are some things that don&#8217;t work as on a desktop computer: Bandwidth Screen size Performance / Velocity The question is how to deliver responsive images on a mobile website. You maybe use something like img { max-width: 100%; height: auto; } in your responsive design to prevent images from being bigger then the screen of a mobile device. In most of the cases this shrinks images in its displayed",
+  "meta-title": "Responsive Media, Responsive Images in HTML5",
+  "meta-description": "How can we deal with images and media when it comes to responsive design? Some thoughts and proposals that could improve the way to deliver media.",
+  "link": false
+}

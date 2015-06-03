@@ -1,0 +1,9 @@
+{
+  "url": "pseudo-classes-in-print-styles-for-references-in-links",
+  "title": "Pseudo-Elements in Print-Styles for References in Links",
+  "date": "Thursday, September 8th, 2011",
+  "abstract": "<p>This morning @t3node asked me about something CSS-related. This was kinda new for me because he never did this before I guess… He showed me a website he had printed and asked me to explain him, how it is possible to show links in printed websites with their reference printed next to it. He was kinda upset why not every frontend-developer includes this in his/her stylesheet when it comes to designing a new website. I wanted to explain everything that&#8217;s related to this topic that I&#8217;ve ever heard of but he asked me to write this blogpost as he is not pretty used to CSS",
+  "meta-title": "",
+  "meta-description": "How to include references of links in printed versions of websites with CSS pseudo-elements and generated content.",
+  "link": false
+}
