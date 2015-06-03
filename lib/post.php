@@ -1,30 +1,40 @@
 <?php
+
+  require_once('../lib/Markdown/Markdown.inc.php');
+
   function get_posts ($current_post) {
     $path = './posts';
+    $files = array();
     $entries = array();
 
     if ($handle = opendir($path)) {
       while (false !== ($entry = readdir($handle))) {
-        if ($entry != '.' && $entry != '..') {
+        if ($entry != '.' && $entry != '..' &&  $entry != '.DS_Store') {
+          $files[] = $entry;
+        }
+      }
+      rsort($files);
 
-          $url = explode('-', $entry);
-          array_shift($url);
-          $url = implode('-', $url);
+      foreach ($files as $file) {
+        $url = explode('-', $file);
+        array_shift($url);
+        $url = implode('-', $url);
 
-          if (isset($current_post)) {
-            if ($url == $current_post) {
-              $entries[] = array(
-                'post' => $entry,
-                'url' => $url,
-                'data' => getJsonContents($path . '/' . $entry . '/data.json'),
-                'entry' => file_get_contents($path . '/' . $entry . '/article.md')
-              );
-            }
-          } else {
+        if (isset($current_post)) {
+          if ($url == $current_post) {
             $entries[] = array(
-              'post' => $entry,
+              'post' => $file,
               'url' => $url,
-              'data' => getJsonContents($path . '/' . $entry . '/data.json')
+              'data' => getJsonContents($path . '/' . $file . '/data.json'),
+              'entry' => file_get_contents($path . '/' . $file . '/article.md')
+            );
+          }
+        } else {
+          if (is_dir($path . '/' . $file)) {
+            $entries[] = array(
+              'post' => $file,
+              'url' => $url,
+              'data' => getJsonContents($path . '/' . $file . '/data.json')
             );
           }
         }
@@ -48,10 +58,4 @@
   function get_post ($current_post) {
     $postname = get_current_postname();
     return get_posts($postname)[0];
-  }
-
-  function get_abstract ($entry) {
-    $abstract = substr(strip_tags($entry, '<h2><h3><p><a>'), 0, 540);
-
-    return $abstract;
   }
