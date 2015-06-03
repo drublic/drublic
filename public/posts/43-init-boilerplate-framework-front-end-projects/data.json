@@ -1,0 +1,9 @@
+{
+  "url": "init-boilerplate-framework-front-end-projects",
+  "title": "Introducing INIT – A Boilerplate Framework for Front-End Projects",
+  "date": "Wednesday, November 20th, 2013",
+  "abstract": "<p>INIT is based upon HTML5 Boilerplate and adds more structure for SCSS files, JavaScripts, includes build tasks and a whole lot more. Today we released INIT, a front-end framework based on Grunt, Bower, Karma and a lot more tools as version 1.0. This marks a special day for Anselm and me, as we worked for a long period to get this project to where it is today. Over at TNG I wrote a bit about why we need frameworks like these and what the challenges with current tools are: Generally we start a lot of our projects in kind of",
+  "meta-title": "Introducing INIT – A Boilerplate Framework for Front-End Projects",
+  "meta-description": "INIT is based upon HTML5 Boilerplate and adds more structure for SCSS files, JavaScripts, includes build tasks and a whole lot more.",
+  "link": false
+}

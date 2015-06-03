@@ -1,0 +1,9 @@
+{
+  "url": "add-main-element-modernizr",
+  "title": "Add the &lt;main&gt;-Element to Modernizr 2.6.2",
+  "date": "Thursday, July 11th, 2013",
+  "abstract": "<p>We don&#8217;t need this anymore With Modernizr v2.7.0 we don&#8217;t need this work around anymore. Please update to this version if you use &lt;main&gt;. tl;dr: You can add the new main-element to Modernizr 2.6.2 by using HTML5 Shiv&#8217;s window.html5 option to add your own elements to the shiv. Since I use some bleeding edge stuff in HTML and CSS in actual projects for clients I ran into one particular issue a couple of times lately and I thought I share a little workaround with you. Modernizr&#8217;s current state Modernizr includes HTML5 Shiv to make HTML5 elements like header, figure and",
+  "meta-title": "",
+  "meta-description": "You can add the new main-element to Modernizr 2.6.2 by using HTML5 Shiv's window.html5 options to add your own elements to the shiv.",
+  "link": false
+}
