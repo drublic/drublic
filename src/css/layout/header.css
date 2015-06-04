@@ -9,22 +9,9 @@
 
   background: var(--color);
   background: linear-gradient(var(--color), var(--color-dark));
-}
 
-.header__logo {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  width: 4.5rem;
-  height: 4.5rem;
-  background: url(/img/logo.svg);
-  background-size: 100% 100%;
-  text-indent: -99em;
-  overflow: hidden;
-}
-
-.header__logo--dark {
-  background-image: url(/img/logo-dark.svg);
+  position: relative;
+  z-index: 2;
 }
 
 .header h1 {
