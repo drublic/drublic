@@ -45,7 +45,7 @@
 
     setTimeout(function () {
       $element.attr('data-fx-fade', 'in');
-    }, 200 * index);
+    }, 150 * index);
   });
 
 }(jQuery));
