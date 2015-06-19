@@ -39,10 +39,6 @@
   background-image: url(/img/google-plus.png);
 }
 
-.social__link--rss > a {
-  background-image: url(/img/feed.png);
-}
-
 .social__link--github > a {
   background-color: transparent;
 }

@@ -8,7 +8,7 @@
   text-align: center;
 
   background: var(--color);
-  background: linear-gradient(var(--color), var(--color-dark));
+  border-bottom: 1px solid var(--border-color);
 
   position: relative;
   z-index: 2;

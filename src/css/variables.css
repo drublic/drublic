@@ -1,6 +1,8 @@
 :root {
   --color: rgb(59, 89, 106);
-  --color-dark: rgb(99, 143, 168);
+  --color-dark: color( var(--color) blackness(+10%) );
+  --border-color: color( var(--color) lightness(+50%) );
 
   --copy-color: #222;
+  --copy-light: #bbb;
 }

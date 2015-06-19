@@ -9,23 +9,13 @@
 
   text-align: center;
 
-  border-top: 1px solid #ddd;
-}
-
-.footer__me {
-  padding: 2rem 0;
-  width: 13rem;
-  border-radius: 50%;
+  border-top: 1px solid var(--border-color);
 }
 
 @media screen and (max-width: 48em) {
   .footer {
     margin: 2rem;
     padding: 2rem 0 0;
-  }
-
-  .footer__me {
-    padding: 1em 0;
   }
 }
 

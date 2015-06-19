@@ -36,6 +36,7 @@
 
 .posts__date {
   float: right;
-  color: #aaa;
+  color: var(--copy-light);
   font-size: 0.9rem;
+  padding-top: 2px;
 }

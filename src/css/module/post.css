@@ -1,10 +1,10 @@
 .post {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 2rem;
 }
 
 .post__header {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 5rem;
 }
 
