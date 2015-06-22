@@ -29,6 +29,11 @@
   text-align: center;
 }
 
+.post__footer {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
 .twitter-tweet {
   margin: 1rem auto !important;
 }

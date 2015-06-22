@@ -6,15 +6,26 @@
   $post = get_post();
 ?>
 <main id="content" class="main" role="main" data-fx-fade>
-  <article class="post">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post__header">
-      <h1><a href="<?php print base_url(); ?>blog/<?php echo $post['url'] ?>/" title="Permalink to <?php echo $post['data']->title ?>" rel="entry-title"><?php echo $post['data']->title ?></a></h1>
-      <time class="post__header__date" datetime="<?php echo $post['data']->date ?>" rel="updated">
-        <?php echo $post['data']->date ?>
+      <h1 itemprop="name">
+        <a href="<?php print base_url(); ?>blog/<?php echo $post['url']; ?>/" title="Permalink to <?php echo $post['data']->title ?>" itemprop="url" rel="entry-title">
+          <?php echo $post['data']->title ?>
+        </a>
+      </h1>
+      <time class="post__header__date" datetime="<?php echo $post['data']->date; ?>" rel="updated" itemprop="datePublished">
+        <?php echo $post['data']->date; ?>
       </time>
+      <meta itemprop="description" content="<?php echo $post['data']->abstract; ?>">
     </header>
 
-    <?php echo Markdown::defaultTransform($post['entry']); ?>
+    <div itemprop="articleBody">
+      <?php echo Markdown::defaultTransform($post['entry']); ?>
+    </div>
+
+    <footer class="post__footer">
+      <p>Post by <span itemprop="author">Hans Christian Reinl</span>.</p>
+    </footer>
   </article>
 
   <ul class="post__navigation">
