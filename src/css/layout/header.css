@@ -25,6 +25,11 @@
   height: 10rem;
   background: var(--highlight);
   text-indent: -999em;
+  transition: 0.2s;
+}
+
+.header__logo:hover {
+  top: -0.5rem;
 }
 
 .header__logo:before {
