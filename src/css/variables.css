@@ -3,6 +3,8 @@
   --color-dark: color( var(--color) blackness(+10%) );
   --border-color: color( var(--color) lightness(+50%) );
 
+  --highlight: #f8fa00;
+
   --copy-color: #222;
   --copy-light: #bbb;
 }
