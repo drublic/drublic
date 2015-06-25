@@ -93,6 +93,7 @@
   margin-right: 7px;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  transition: 0.15s;
 }
 
 .navigation a:visited {

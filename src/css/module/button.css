@@ -15,6 +15,7 @@
   color: #111;
   font-size: 1em;
   border-radius: 2px;
+  transition: 0.15s;
 }
 
 .button:visited,
