@@ -43,6 +43,13 @@
       closedir($handle);
     }
 
+    // Hide hidden entries
+    foreach ($entries as $key => $entry) {
+      if (isset($entry['data']->hidden) && $entry['data']->hidden == true && !isset($_REQUEST['preview'])) {
+        array_splice($entries, $key, 1);
+      }
+    }
+
     return $entries;
   }
 
