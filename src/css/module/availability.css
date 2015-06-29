@@ -1,0 +1,56 @@
+/**
+ * Availability table
+ */
+.availability {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.availability__item {
+  position: relative;
+  color: var(--color);
+  padding: 0.4rem 0.2rem;
+  transition: color 0.1s;
+}
+
+.availability__item:hover {
+  color: #fff;
+}
+
+.availability__item:hover:after {
+  height: 100%;
+}
+
+.availability__item:after {
+  content: '';
+  position: absolute;
+  left: 0.1rem;
+  right: 0.1rem;
+  bottom: 0;
+  height: 2px;
+  transition: height 0.1s;
+}
+
+.availability__item--blocked:after {
+  background: #f44336;
+}
+
+.availability__item--free:after {
+  background: #4caf50;
+}
+
+.availability__item--partial:after {
+  background: #ffeb3b;
+}
+
+.availability__item span {
+  position: relative;
+  z-index: 1;
+}
+
+@media all and (max-width: 40rem) {
+  .availability__item:nth-child(n+6) {
+    display: none;
+  }
+}

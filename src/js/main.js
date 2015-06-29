@@ -60,4 +60,27 @@
     $window.on('scroll', revealOnScroll).trigger('scroll');
   }());
 
+  /**
+   * Availability table
+   */
+  (function (availability) {
+    var html = '';
+    var states = ['free', 'partial', 'blocked'];
+    var i = 0;
+
+    $.each(availability, function (key, value) {
+      var state;
+
+      if (i >= 10) {
+        return;
+      }
+
+      state = 'availability__item--' + states[value];
+
+      html += '<td class="availability__item ' + state + '"><span>' + key + '</span></td>';
+      i = i + 1;
+    });
+
+    $('[data-availability]').html(html);
+  }(window.__availability));
 }(jQuery));
