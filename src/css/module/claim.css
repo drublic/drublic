@@ -1,0 +1,17 @@
+/**
+ * About me
+ */
+.claim {
+  margin: 2rem auto;
+}
+
+.claim__desc {
+  line-height: 1.7em;
+}
+
+.claim__me {
+  float: left;
+  height: 13rem;
+  margin-right: 3rem;
+  border-radius: 50%;
+}
