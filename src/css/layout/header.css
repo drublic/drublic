@@ -224,6 +224,39 @@
   }
 }
 
+@media screen and (max-width: 44em) {
+  .header__inner {
+    padding-left: 8rem;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .header__inner {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .header__logo {
+    width: 4rem;
+    height: 3.5rem;
+    left: 0;
+  }
+
+  .header__logo:before {
+    display: none;
+  }
+
+  .header__logo:after {
+    top: 0.25rem;
+    left: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .header__logo:hover {
+    top: 0;
+  }
+}
+
 
 /**
  * Visible
