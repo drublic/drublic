@@ -68,6 +68,10 @@
     var states = ['free', 'partial', 'blocked'];
     var i = 0;
 
+    if (!availability) {
+      return;
+    }
+
     $.each(availability, function (key, value) {
       var state;
 
@@ -83,4 +87,19 @@
 
     $('[data-availability]').html(html);
   }(window.__availability));
+
+  /**
+   * Pattern in head
+   */
+  var $header = $('.header');
+
+  var pattern = new Trianglify({
+    width: $header.width(),
+    height: $header.height(),
+    'cell_size': 40,
+    variance: '1',
+    'x_colors': 'YlGnBu'
+  });
+
+  $header.find('.header__background').append(pattern.svg());
 }(jQuery));

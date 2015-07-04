@@ -9,7 +9,7 @@
 
 .availability__item {
   position: relative;
-  color: var(--color);
+  color: var(--copy-color);
   padding: 0.4rem 0.2rem;
   transition: color 0.1s;
 }

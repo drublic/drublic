@@ -4,6 +4,14 @@
 'use strict';
 
 var pkg = require('../package');
+var jsSrc = [
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/css-modal/modal.js',
+  'node_modules/trianglify/dist/trianglify.min.js',
+  'src/js/form.js',
+  'src/js/main.js',
+  'src/js/track.js'
+];
 
 module.exports = {
 
@@ -53,23 +61,11 @@ module.exports = {
 
   concat: {
     js: {
-      src: [
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/css-modal/modal.js',
-        'src/js/form.js',
-        'src/js/main.js',
-        'src/js/track.js'
-      ],
+      src: jsSrc,
       dest: 'public/dist/_/core.js'
     },
     jsmin: {
-      src: [
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/css-modal/modal.js',
-        'src/js/form.js',
-        'src/js/main.js',
-        'src/js/track.js'
-      ],
+      src: jsSrc,
       dest: 'public/dist/<%= pkg.version %>/c.js'
     }
   },

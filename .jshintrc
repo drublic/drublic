@@ -20,6 +20,7 @@
 
   "globals": {
     "WebFont": true,
-    "ga": true
+    "ga": true,
+    "Trianglify": false
   }
 }
