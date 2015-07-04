@@ -27,6 +27,11 @@ h2 {
   text-align: center;
 }
 
+.work__projects {
+  margin-left: -1%;
+  margin-right: -1%;
+}
+
 .work--project {
   box-sizing: border-box;
 
@@ -72,8 +77,6 @@ h2 {
 .work__clients__title {
   clear: both;
   padding: 2em 0 0.5em;
-  margin-left: 1%;
-  margin-right: 1%;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
 }
