@@ -54,6 +54,8 @@
       // Prevent thanks page from being shown if form is already submitted
       if (success) {
         window.location.hash = 'contact/thanks';
+
+        $('.contact').find('video')[0].play();
       }
     }, 500);
 
