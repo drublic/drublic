@@ -36,7 +36,7 @@ h2 a, h3 a {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   margin: 1em 0 .5em;
 }
@@ -91,4 +91,21 @@ ul {
   h2 {
     font-size: 1.5rem;
   }
+}
+
+/**
+ * Code
+ */
+pre {
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 0.25rem solid var(--border-color);
+}
+
+/**
+ * More config
+ */
+.typography--light {
+  color: var(--color-light);
 }

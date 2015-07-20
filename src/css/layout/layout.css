@@ -9,6 +9,12 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+hr {
+  border-top: 2px solid var(--border-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /**
  * Main section
  */
@@ -123,5 +129,30 @@ body {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+
+
+
+/**
+ * Scroller
+ */
+.layout__scroll-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border: 0;
+  background: none;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.layout__scroll-top.is-hidden {
+  opacity: 0;
+}
+
+@media screen and (max-width: 34em) {
+  .layout__scroll-top {
+    display: none;
   }
 }

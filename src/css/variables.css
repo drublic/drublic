@@ -1,10 +1,10 @@
 :root {
   --color: #316EAE;
   --color-dark: color( var(--color) blackness(+10%) );
+  --color-light: color( var(--color) saturation(-30%) lightness(+30%) );
   --border-color: color( var(--color) lightness(+50%) );
 
   --highlight: var(--color);
 
   --copy-color: #222;
-  --copy-light: #bbb;
 }

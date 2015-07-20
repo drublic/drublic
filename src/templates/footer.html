@@ -11,6 +11,12 @@
     <a href="#" class="visuallyhidden">go back up to top</a>
   </footer>
 
+  <button class="layout__scroll-top is-hidden" data-scroll-top>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
+      <path d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"/>
+    </svg>
+  </button>
+
   <?php if ($environment == 'dev') { ?>
     <script src="<?php print base_url(); ?>dist/_/core.js"></script>
   <?php } else { ?>
