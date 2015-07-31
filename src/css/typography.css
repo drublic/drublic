@@ -103,9 +103,46 @@ pre {
   border-left: 0.25rem solid var(--border-color);
 }
 
+code {
+  background: var(--border-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
 /**
  * More config
  */
 .typography--light {
   color: var(--color-light);
+}
+
+/**
+ * Quotes
+ */
+blockquote {
+  position: relative;
+  padding-left: 3rem;
+  margin: 2rem;
+}
+
+blockquote::before {
+  content: '”';
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 5rem;
+  font-family: Georgia, serif;
+  line-height: 0.9;
+  color: var(--color-light);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+blockquote:hover::before {
+  opacity: 1;
 }
