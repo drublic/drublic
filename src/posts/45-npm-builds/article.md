@@ -75,7 +75,7 @@ this purpose.
 Now let’s add a script for these tools in a `package.json` file and install all
 dependencies.
 
-<script src="https://gist.github.com/drublic/78ae510eca47e8d19fe7.js"></script>
+<script src="https://gist.github.com/drublic/78ae510eca47e8d19fe7.js" async></script>
 
 ### ES6 Transpiler & Dependency Management
 
@@ -94,7 +94,7 @@ transforms it to AMD or CommonJS (default).
 
 Let’s combine it with what we already did.
 
-<script src="https://gist.github.com/drublic/fd702768bfd553df5ab4.js"></script>
+<script src="https://gist.github.com/drublic/fd702768bfd553df5ab4.js" async></script>
 
 ### JS Uglification
 
@@ -130,7 +130,7 @@ following configuration supports the last 2 browser versions (eg. IE11 and
 IE10). Thus there is no need for certain fallbacks.
 Furthermore this configuration is made for a LESS project.
 
-<script src="https://gist.github.com/drublic/26f5b1e3c0dfd7471d53.js"></script>
+<script src="https://gist.github.com/drublic/26f5b1e3c0dfd7471d53.js" async></script>
 
 ### File Watcher
 
@@ -169,7 +169,7 @@ This runs a JS and a CSS watcher in parallel.
 
 Let's have a look at the current `package.json` file.
 
-<script src="https://gist.github.com/drublic/a5de4de6bc7798e1163a.js"></script>
+<script src="https://gist.github.com/drublic/a5de4de6bc7798e1163a.js" async></script>
 
 Now we can compile some of these tasks together to create some development and
 build tasks.
@@ -208,7 +208,7 @@ Here is our final `package.json`.
 </svg> Please remember to use configuration files for JSCS, JSHint and
 Pleeease.
 
-<script src="https://gist.github.com/drublic/6942fe7594641db13eb9.js"></script>
+<script src="https://gist.github.com/drublic/6942fe7594641db13eb9.js" async></script>
 
 ## Disadvantages
 
