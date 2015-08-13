@@ -103,7 +103,7 @@ JS minification and uglification.
 
 For instance you can run
 
-    uglifyjs --compress --mangle -- dist/index.js -o dist/index.min.js
+    uglifyjs --compress --mangle -o dist/index.min.js -- dist/index.js
 
 to minify the file we generated with Babel.
 

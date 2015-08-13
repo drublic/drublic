@@ -1,7 +1,6 @@
 .icon {
   width: 1.5rem;
   height: 1.5rem;
-  margin-left: 0.5rem;
   margin-right: 0.5rem;
   vertical-align: bottom;
   fill: var(--copy-color);
@@ -9,4 +8,8 @@
 
 .icon--warning {
   fill: #FFD600;
+}
+
+.icon--info {
+  fill: var(--color);
 }

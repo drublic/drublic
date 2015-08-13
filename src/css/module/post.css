@@ -3,6 +3,11 @@
   padding-bottom: 2rem;
 }
 
+.post__intro {
+  font-size: 1.25em;
+  margin-bottom: 2rem;
+}
+
 .post__header {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 5rem;
