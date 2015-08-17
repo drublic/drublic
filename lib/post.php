@@ -26,7 +26,7 @@
               'post' => $file,
               'url' => $url,
               'data' => getJsonContents($path . '/' . $file . '/data.json'),
-              'entry' => file_get_contents($path . '/' . $file . '/article.md')
+              'entry' => file_get_contents('./posts/' . $file . '/article.md')
             );
           }
         } else {
