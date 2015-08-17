@@ -176,6 +176,12 @@
     require('../lib/form.php');
   }
 
+  if ($page_action == 'feed') {
+    include(get_file_path());
+
+    return;
+  }
+
   // Content
   include('../src/templates/header.html');
   include(get_file_path());

@@ -2,7 +2,7 @@
 
   require_once('../lib/Markdown/Markdown.inc.php');
 
-  function get_posts ($current_post = false) {
+  function get_posts ($current_post = false, $get_full = false) {
     $path = './posts';
     $files = array();
     $entries = array();
@@ -20,8 +20,8 @@
         array_shift($url);
         $url = implode('-', $url);
 
-        if (isset($current_post) && $current_post) {
-          if ($url == $current_post) {
+        if ((isset($current_post) && $current_post) || (isset($get_full) && $get_full)) {
+          if ($url == $current_post || $get_full) {
             $entries[] = array(
               'post' => $file,
               'url' => $url,
@@ -67,4 +67,10 @@
     $postname = get_posts($postname);
 
     return $postname[0];
+  }
+
+  function get_date ($date, $format = 'Y-m-d') {
+    $timestamp = strtotime($date);
+
+    return date($format, $timestamp);
   }

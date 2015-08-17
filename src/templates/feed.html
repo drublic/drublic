@@ -1,0 +1,44 @@
+<?php
+  header('Content-Type: application/atom+xml');
+
+  include ('../lib/post.php');
+
+  use \Michelf\Markdown;
+
+  $posts = get_posts(false, true);
+?><?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>drublic - Front-end Architecture - Hans Christian Reinl</title>
+  <link href="<?php print base_url(); ?>/feed" rel="self"/>
+  <link href="<?php print base_url(); ?>"/>
+  <id><?php print base_url(); ?></id>
+  <author>
+    <name>Hans Christian Reinl</name>
+    <email>info@drublic.de</email>
+  </author>
+
+  <?php for ($i = 0; $i < count($posts); $i++) : ?>
+    <?php $post = $posts[$i]; ?>
+
+    <entry>
+      <title><?php print $post['data']->title; ?></title>
+      <link href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/"/>
+      <updated><?php print get_date($post['data']->date); ?>T12:00:00+02:00</updated>
+      <id><?php print base_url(); ?>blog/<?php print $post['url']; ?>/</id>
+      <content type="html">
+        <?php
+          $entry = Markdown::defaultTransform($post['entry']);
+
+          if (trim($entry)) {
+            print htmlentities(Markdown::defaultTransform($entry));
+          } else {
+          ?>
+            Please read the article on my blog.
+          <?php
+          }
+        ?>
+      </content>
+    </entry>
+
+  <?php endfor; ?>
+</feed>

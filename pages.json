@@ -37,5 +37,9 @@
   {
     "title": "Contact Form",
     "action": "form"
+  }, {
+    "title": "Feed",
+    "action": "feed",
+    "content": "templates/feed.html"
   }
 ]
