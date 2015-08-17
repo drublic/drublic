@@ -39,7 +39,7 @@
     "action": "form"
   }, {
     "title": "Feed",
-    "action": "feed",
+    "action": "feed.xml",
     "content": "templates/feed.html"
   }
 ]

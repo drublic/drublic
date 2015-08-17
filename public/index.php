@@ -176,10 +176,12 @@
     require('../lib/form.php');
   }
 
-  if ($page_action == 'feed') {
+  if ($page_action == 'feed.xml') {
+    header('Content-Type: application/xml; charset=utf-8');
+
     include(get_file_path());
 
-    return;
+    die();
   }
 
   // Content

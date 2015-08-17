@@ -3,7 +3,7 @@
   require_once('../lib/Markdown/Markdown.inc.php');
 
   function get_posts ($current_post = false, $get_full = false) {
-    $path = './posts';
+    $path = getcwd() . '/posts';
     $files = array();
     $entries = array();
 
