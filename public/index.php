@@ -21,9 +21,9 @@
     global $environment;
 
     if ($environment == 'dev') {
-      $base = '//drublic.local/';
+      $base = 'http://drublic.local/';
     } else {
-      $base = '//drublic.de/';
+      $base = 'https://drublic.de/';
     }
 
     if ($print) {

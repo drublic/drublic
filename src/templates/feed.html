@@ -4,8 +4,9 @@
   use \Michelf\Markdown;
 
   $posts = get_posts(false, true);
-?><?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+
+  print '<?xml version="1.0" encoding="utf-8"?>';
+?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>drublic - Front-end Architecture - Hans Christian Reinl</title>
   <link href="<?php print base_url(); ?>feed" rel="self"/>
   <link href="<?php print base_url(); ?>"/>
