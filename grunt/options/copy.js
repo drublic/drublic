@@ -30,5 +30,14 @@ module.exports = {
       src: ['**/*'],
       dest: 'public/posts/'
     }]
+  },
+
+  feed: {
+    files: [{
+      expand: true,
+      cwd: 'src/templates/',
+      src: ['**/*.xml'],
+      dest: 'public/templates/'
+    }]
   }
 };

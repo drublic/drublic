@@ -40,6 +40,6 @@
   }, {
     "title": "Feed",
     "action": "feed.xml",
-    "content": "templates/feed.html"
+    "content": "templates/feed.xml"
   }
 ]

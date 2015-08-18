@@ -26,7 +26,7 @@ module.exports = {
 
   html: {
     files: ['src/templates/**'],
-    tasks: ['htmlmin']
+    tasks: ['htmlmin', 'copy:feed']
   },
 
   posts: {
