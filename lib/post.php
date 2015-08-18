@@ -2,6 +2,16 @@
 
   require_once('../lib/Markdown/Markdown.inc.php');
 
+  function get_post_file ($filepath) {
+    $contents = '';
+
+    if (file_exists($filepath)) {
+      $contents = file_get_contents($filepath);
+    }
+
+    return $contents;
+  }
+
   function get_posts ($current_post = false, $get_full = false) {
     $path = getcwd() . '/posts';
     $files = array();
@@ -26,7 +36,7 @@
               'post' => $file,
               'url' => $url,
               'data' => getJsonContents($path . '/' . $file . '/data.json'),
-              'entry' => file_get_contents('./posts/' . $file . '/article.md')
+              'entry' => get_post_file($path . '/' . $file . '/article.md')
             );
           }
         } else {
