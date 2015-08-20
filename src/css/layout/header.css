@@ -5,7 +5,6 @@
   position: relative;
   color: #fff;
   background: linear-gradient(to bottom right, #daf1b4, var(--color));
-  border-bottom: 1px solid var(--border-color);
 }
 
 .header__inner {

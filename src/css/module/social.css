@@ -41,4 +41,5 @@
 
 .social__link--github > a {
   background-color: transparent;
+  border-bottom: 0;
 }

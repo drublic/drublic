@@ -20,6 +20,10 @@
   margin-bottom: 3rem;
 }
 
+.posts__post__header a:hover {
+  border-bottom: 0;
+}
+
 .posts__list {
   position: relative;
   list-style: none;
@@ -47,6 +51,10 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border-color);
+}
+
+.posts__list a:hover {
+  border-bottom-color: var(--border-color);
 }
 
 .posts__date {

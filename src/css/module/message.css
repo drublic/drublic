@@ -1,0 +1,17 @@
+/**
+ * Messages
+ */
+.message {
+  background: color(#ffd600 lightness(+20%));
+}
+
+.message__content {
+  margin: 0 auto;
+  max-width: var(--width);
+  padding: 1.5rem 2rem;
+}
+
+.message__divider {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

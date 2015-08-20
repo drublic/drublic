@@ -18,7 +18,7 @@
 }
 
 .post__header a {
-  text-decoration: none;
+  border-bottom: 0;
 }
 
 .post__header__date {
