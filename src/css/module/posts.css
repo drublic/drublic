@@ -32,6 +32,10 @@
   border-top: 1px solid var(--border-color);
 }
 
+.posts__list--bound {
+  margin-top: 1rem;
+}
+
 .posts__list:after {
   content: '\2693';
   position: absolute;
@@ -44,6 +48,9 @@
   opacity: 0.3;
 }
 
+.posts__list--no-divider:after {
+  display: none;
+}
 
 .posts__list a {
   display: block;
@@ -70,4 +77,11 @@
 .gist {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+/**
+ * Crosslinks
+ */
+.post__crosslinks {
+  margin-top: 3rem;
 }

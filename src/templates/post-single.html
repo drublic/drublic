@@ -26,6 +26,28 @@
     </footer>
   </article>
 
+  <div class="post__crosslinks">
+    <h3>Latest publications</h3>
+    <?php
+      $posts = get_posts();
+      $posts = array_splice($posts, 0, 5);
+    ?>
+    <ul class="posts__list posts__list--bound posts__list--no-divider">
+      <?php for ($i = 0; $i < count($posts); $i++) : ?>
+        <?php $post = $posts[$i]; ?>
+        <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/" itemprop="url">
+            <span itemprop="title"><?php print $post['data']->title; ?></span>
+
+            <time class="posts__date" itemprop="datePublished">
+              <?php print $post['data']->date; ?>
+            </time>
+          </a>
+        </li>
+      <?php endfor; ?>
+    </ul>
+  </div>
+
   <ul class="post__navigation">
     <li>
       <a href="<?php print base_url(); ?>blog/" title="Back to blog overview">
