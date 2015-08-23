@@ -210,6 +210,16 @@ Pleeease.
 
 <script src="https://gist.github.com/drublic/6942fe7594641db13eb9.js"></script>
 
+### Windows Users
+
+According to [this tweet](https://twitter.com/seesee/status/635128333626421248)
+by [@seesee](https://twitter.com/seesee) you need some small adjustments for
+Windows to get parallelshell running:
+
+  "parallelshell \"npm run watch:js\" \"npm run watch:css\""
+
+Basically just use `"` instead of `'`.
+
 ## Disadvantages
 
 Apart from all the good a workflow with npm brings it also has some
