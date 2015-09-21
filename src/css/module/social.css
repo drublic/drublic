@@ -23,20 +23,20 @@
   height: 32px;
 
   margin-right: 7px;
-  border-radius: 50%;
 
   text-indent: -200px;
   overflow: hidden;
-  background: #111 url(/img/github.png);
+  background: url(/img/github.svg);
   background-size: 32px 32px;
+  border-bottom: 0;
 }
 
 .social__link--twitter > a {
-  background-image: url(/img/twitter.png);
+  background-image: url(/img/twitter.svg);
 }
 
 .social__link--google > a {
-  background-image: url(/img/google-plus.png);
+  background-image: url(/img/google-plus.svg);
 }
 
 .social__link--github > a {
