@@ -20,8 +20,12 @@
   margin-bottom: 3rem;
 }
 
+.posts__post__header a {
+  display: block;
+}
+
 .posts__post__header a:hover {
-  border-bottom: 0;
+  border-bottom-color: transparent;
 }
 
 .posts__list {

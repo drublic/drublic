@@ -1,0 +1,32 @@
+/**
+ * Testimonials
+ *
+ * @define testimonial
+ */
+.testimonials {
+  background: #f8fafb;
+}
+
+.testimonial__wrapper {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+
+.testimonial__wrapper::before {
+  font-size: 10rem;
+}
+
+.testimonial__quote {
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.testimonial__footer {
+  margin-top: 1rem;
+  text-align: center;
+}

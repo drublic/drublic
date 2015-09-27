@@ -18,6 +18,7 @@
 }
 
 .post__header a {
+  display: block;
   border-bottom: 0;
 }
 

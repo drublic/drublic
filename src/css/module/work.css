@@ -1,11 +1,6 @@
 /**
  * Work
  */
-
-.work {
-  margin: 0 -1%;
-}
-
 .work:before,
 .work:after {
   content: '';
@@ -14,11 +9,6 @@
 
 .work:after {
   clear: both;
-}
-
-h2 {
-  margin-left: 1%;
-  margin-right: 1%;
 }
 
 .work__more {
@@ -83,8 +73,8 @@ h2 {
 
 .work__clients li {
   display: inline-block;
-  max-width: 100px;
-  margin: 1rem;
+  max-width: 90px;
+  margin: 0.75rem;
 }
 
 .work__clients a {
