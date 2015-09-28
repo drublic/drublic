@@ -105,22 +105,22 @@
     </ul>
   </section>
 
-  <!-- Testimonials
-  <section class="testimonials" id="testimonials" data-fx-fade>
-    <article class="testimonial container">
-      <blockquote class="testimonial__wrapper">
-        <p class="testimonial__quote">As my fellow HTML5 Doctor, Oli Studholme has showed, people seldom quote exactly
-        – so sacrosanctity of the quoted text isn’t a useful ideal – and in print etc,
-        citations almost always appear as part of the quotation – it’s highly conventional.</p>
-        <footer class="testimonial__footer">
-          <cite>
-            <a href="http://www.brucelawson.co.uk/2013/on-citing-quotations-again/">Anselm Hannemann</a> &mdash; Front-End Developer at
-            <a href="http://www.brucelawson.co.uk/2013/on-citing-quotations-again/">Your Mom</a>
-          </cite>
-        </footer>
-      </blockquote>
-    </article>
-  </section> -->
+  <!-- Testimonials -->
+  <?php if ($config['testimonials'] === true) : ?>
+    <section class="testimonials" id="testimonials" data-fx-fade>
+      <article class="testimonial container">
+        <blockquote class="testimonial__wrapper">
+          <p class="testimonial__quote">Hans lead our frontend team with innovative and visionary frontend development while keeping a strict focus on agreed goals. He is a driving part of the next era of web development and thus an invaluable partner for the projects he participates in.</p>
+          <footer class="testimonial__footer">
+            <cite>
+              Oliver Schwarz &mdash; Enterprise Architect IT at
+              <a href="http://www.vaillant-group.com/">Vaillant Group</a>
+            </cite>
+          </footer>
+        </blockquote>
+      </article>
+    </section>
+  <?php endif; ?>
 
   <!-- Hire Me -->
   <section class="container hire-me" id="hire-me" data-fx-fade>

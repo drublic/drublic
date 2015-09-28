@@ -1,6 +1,8 @@
 <?php
   date_default_timezone_set('Europe/Berlin');
 
+  include('../src/config.php');
+
   $_file = '';
 
   if (isset($_GET['file'])) {
