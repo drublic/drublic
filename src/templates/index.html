@@ -107,18 +107,34 @@
 
   <!-- Testimonials -->
   <?php if ($config['testimonials'] === true) : ?>
-    <section class="testimonials" id="testimonials" data-fx-fade>
-      <article class="testimonial container">
-        <blockquote class="testimonial__wrapper">
-          <p class="testimonial__quote">Hans lead our frontend team with innovative and visionary frontend development while keeping a strict focus on agreed goals. He is a driving part of the next era of web development and thus an invaluable partner for the projects he participates in.</p>
-          <footer class="testimonial__footer">
-            <cite>
-              Oliver Schwarz &mdash; Enterprise Architect IT at
-              <a href="http://www.vaillant-group.com/">Vaillant Group</a>
-            </cite>
-          </footer>
-        </blockquote>
-      </article>
+    <section class="testimonials js-testimonial-wrapper" id="testimonials" data-fx-fade>
+      <div class="testimonials__container container">
+        <article class="testimonial js-testimonial">
+          <blockquote class="testimonial__wrapper">
+            <p class="testimonial__quote">Hans lead our frontend team with innovative and visionary frontend development while keeping a strict focus on agreed goals. He is a driving part of the next era of web development and thus an invaluable partner for the projects he participates in.</p>
+            <footer class="testimonial__footer">
+              <cite>
+                Oliver Schwarz &mdash; Enterprise Architect IT at
+                <a href="http://www.vaillant-group.com/">Vaillant Group</a>
+              </cite>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="testimonial js-testimonial">
+          <blockquote class="testimonial__wrapper">
+            <p class="testimonial__quote">Working with Hans is a joy. His incredible expertise in JavaScript, together with his ability to scale things while keeping the code maintainable is key to a successful project. I worked with Hans on several projects now and the outcome was always better than what the client expected it, even in a short timeframe.</p>
+            <footer class="testimonial__footer">
+              <cite>
+                <a href="https://helloanselm.com/">Anselm Hannemann</a>
+                &mdash;
+                Co-organizier of <a href="http://nightlybuild.io/">NightlyBuild Conference</a>,
+                Co-host at <a href="http://workingdraft.de/">Working Draft</a>, <a href="https://wdrl.info/">WDRL</a>
+              </cite>
+            </footer>
+          </blockquote>
+        </article>
+      </div>
     </section>
   <?php endif; ?>
 

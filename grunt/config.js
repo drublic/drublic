@@ -14,6 +14,7 @@ var jsSrc = [
   'src/js/header.js',
   'src/js/main.js',
   'src/js/scroll-top.js',
+  'src/js/testimonial.js',
   'src/js/track.js'
 ];
 
