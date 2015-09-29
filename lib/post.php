@@ -1,5 +1,4 @@
 <?php
-
   require_once('../lib/Markdown/Markdown.inc.php');
 
   function get_post_file ($filepath) {
@@ -13,6 +12,8 @@
   }
 
   function get_posts ($current_post = false, $get_full = false) {
+    global $config;
+
     $path = getcwd() . '/posts';
     $files = array();
     $entries = array();
@@ -55,7 +56,7 @@
 
     // Hide hidden entries
     foreach ($entries as $key => $entry) {
-      if (isset($entry['data']->hidden) && $entry['data']->hidden == true && !isset($_REQUEST['preview'])) {
+      if (isset($entry['data']->hidden) && $entry['data']->hidden == true && $config['preview'] === false) {
         array_splice($entries, $key, 1);
       }
     }

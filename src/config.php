@@ -1,5 +1,6 @@
 <?php
   $defaults = array(
+    'preview' => false,
     'testimonials' => false
   );
 
