@@ -1,18 +1,27 @@
 <?php
   require_once('../lib/Markdown/Markdown.inc.php');
 
+  use \Michelf\Markdown;
+
+  $parser = new Markdown;
+  $parser->url_filter_func = function ($url) {
+    return get_current_postpath() . $url;
+  };
+
   function get_post_file ($filepath) {
+    global $parser;
+
     $contents = '';
 
     if (file_exists($filepath)) {
       $contents = file_get_contents($filepath);
     }
 
-    return $contents;
+    return $parser->transform($contents);
   }
 
-  function get_posts ($current_post = false, $get_full = false) {
-    global $config;
+  function get_posts ($current_post = false, $get_full = false, $single = false) {
+    global $config, $parser;
 
     $path = getcwd() . '/posts';
     $files = array();
@@ -31,7 +40,7 @@
         array_shift($url);
         $url = implode('-', $url);
 
-        if ((isset($current_post) && $current_post) || (isset($get_full) && $get_full)) {
+        if (((isset($current_post) && $current_post) || (isset($get_full) && $get_full)) && $single === false) {
           if ($url == $current_post || $get_full) {
             $entries[] = array(
               'post' => $file,
@@ -42,11 +51,14 @@
           }
         } else {
           if (is_dir($path . '/' . $file)) {
-            $entries[] = array(
-              'post' => $file,
-              'url' => $url,
-              'data' => getJsonContents($path . '/' . $file . '/data.json')
-            );
+            if (($single && $url == $current_post) || $single === false) {
+              $entries[] = array(
+                'post' => $file,
+                'url' => $url,
+                'data' => getJsonContents($path . '/' . $file . '/data.json'),
+                'path' => '/' . $file . '/'
+              );
+            }
           }
         }
       }
@@ -71,6 +83,17 @@
     $actions = explode('/', $page_action);
 
     return $actions[1];
+  }
+
+  function get_current_postpath () {
+    global $page_action;
+
+    $actions = explode('/', $page_action);
+
+    $postname = get_current_postname();
+    $postname = get_posts($postname, false, true);
+
+    return base_url(false) . 'posts' . $postname[0]['path'];
   }
 
   function get_post () {

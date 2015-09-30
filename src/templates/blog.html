@@ -1,8 +1,6 @@
 <?php
   include ('../lib/post.php');
 
-  use \Michelf\Markdown;
-
   $posts = get_posts();
 ?>
 
@@ -22,7 +20,7 @@
           <time class="posts__date" itemprop="datePublished"><?php print $post['data']->date; ?></time>
         </header>
 
-        <?php print Markdown::defaultTransform($post['data']->abstract); ?>
+        <?php print $parser->defaultTransform($post['data']->abstract); ?>
       </article>
     <?php else : ?>
       <?php if ($i == 5) : ?>
