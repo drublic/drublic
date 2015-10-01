@@ -804,6 +804,10 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
   };
 
   var setIntervalIfVisible = function () {
+    if ($wrapper.length === 0) {
+      return;
+    }
+
     var scrollPosition = window.scrollY;
     var offsetTop = $wrapper.offset().top - $(window).height();
     var offsetBottom = $wrapper.offset().top + $wrapper.outerHeight();

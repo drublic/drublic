@@ -60,6 +60,10 @@
   };
 
   var setIntervalIfVisible = function () {
+    if ($wrapper.length === 0) {
+      return;
+    }
+
     var scrollPosition = window.scrollY;
     var offsetTop = $wrapper.offset().top - $(window).height();
     var offsetBottom = $wrapper.offset().top + $wrapper.outerHeight();
