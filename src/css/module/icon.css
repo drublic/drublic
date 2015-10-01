@@ -13,3 +13,7 @@
 .icon--info {
   fill: var(--color);
 }
+
+.icon--left {
+  float: left;
+}

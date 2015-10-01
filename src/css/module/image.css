@@ -1,0 +1,48 @@
+.image img {
+  max-width: 100%;
+}
+
+.image--right {
+  float: right;
+  max-width: 50%;
+  margin: 1rem -10% 1.5rem 2rem;
+}
+
+.image--left {
+  float: left;
+  max-width: 50%;
+  margin: 1rem 2rem 1.5rem -10%;
+}
+
+.image__caption {
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--copy-color-light);
+  font-style: italic;
+}
+
+.image__caption__copywrite {
+  display: block;
+  text-align: right;
+  color: var(--copy-light);
+}
+
+.image__caption__copywrite::before {
+  content: '\00a9\a0';
+}
+
+@media screen and (max-width: 32em) {
+  .image--left,
+  .image--right {
+    float:none;
+    margin: 0 -1em;
+    width: auto;
+  }
+
+  .image--left img,
+  .image--right img {
+    max-width: 100%;
+    height: auto;
+  }
+}

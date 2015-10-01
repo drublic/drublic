@@ -7,6 +7,7 @@
   --highlight: var(--color);
 
   --copy-color: #222;
+  --copy-color-light: #444;
   --copy-light: #bbb;
 
   --width: 45rem;

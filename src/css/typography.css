@@ -76,8 +76,9 @@ p {
   margin: 0;
 }
 
-p + p {
-  margin-top: 1em;
+p + p,
+.image + p {
+  margin-top: 1.5em;
 }
 
 h2 + p {
