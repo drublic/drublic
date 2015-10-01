@@ -1,9 +1,9 @@
 <?php
-  require_once('../lib/Markdown/Markdown.inc.php');
+  require_once('../lib/Markdown/MarkdownExtra.inc.php');
 
-  use \Michelf\Markdown;
+  use \Michelf\MarkdownExtra;
 
-  $parser = new Markdown;
+  $parser = new MarkdownExtra;
   $parser->url_filter_func = function ($url) {
     return get_current_postpath() . $url;
   };
