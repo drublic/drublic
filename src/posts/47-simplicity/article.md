@@ -7,7 +7,7 @@
   today?
 </p>
 
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon--warning">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon--warning icon--left">
   <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z">
 </svg> Disclaimer: This article was first published in
 [Screen Guide Magazine](http://screengui.de/) in No. 26 in German as the
@@ -52,6 +52,15 @@ back to use Vanilla CSS to generate their web apps. This is because CSS can do
 more than it used to and it will get more functionality in the near future. In
 the end this is the success of developers and users of preprocessors which
 engage in the discussion about the specification.
+
+<figure class="image image--left" markdown="1">
+  ![](pleeease.png)
+
+<figcaption class="image__caption" markdown="1">
+  [Pleeease](http://pleeease.io/) is a CSS post-processor
+  <span class="image__caption__copywrite">Screenshot</span>
+</figcaption>
+</figure>
 
 But how we include these new features in today’s code? We add another tool to
 our workflow to reduce complexity. For example [Pleeease](http://pleeease.io/)
