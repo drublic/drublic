@@ -2,6 +2,10 @@
   max-width: 100%;
 }
 
+.image--block {
+  margin: 1rem -10% 1.5rem -10%;
+}
+
 .image--right {
   float: right;
   max-width: 50%;
@@ -22,6 +26,10 @@
   font-style: italic;
 }
 
+.image__caption--no-border {
+  border-bottom: 0;
+}
+
 .image__caption__copywrite {
   display: block;
   text-align: right;
@@ -30,6 +38,14 @@
 
 .image__caption__copywrite::before {
   content: '\00a9\a0';
+}
+
+
+@media screen and (max-width: 64rem) {
+  .image--block {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 32em) {
