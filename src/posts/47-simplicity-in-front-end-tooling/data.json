@@ -1,0 +1,9 @@
+{
+  "title": "Simplicity in Front-End Tooling",
+  "date": "05.10.2015",
+  "abstract": "We tend to solve a lot of front-end problems by delegating them to existing programs. We use libraries and tools which we don’t understand completely - and our code base grows and grows. But lately this trend seems to change and we slowly re-consider what we can do best: develop front-end code. What can we expect from this new trend and how can we use them in out daily business today?",
+  "meta-title": "Simplicity in Front-End Tooling",
+  "meta-description": "Front-End tooling is getting compicated. It should be simpler. Pleeease and other tools can help. A statement.",
+  "link": false,
+  "hidden": true
+}
