@@ -7,6 +7,14 @@
   today?
 </p>
 
+<figure class="image image--block" markdown="1">
+  ![](tooling.jpg)
+
+<figcaption class="image__caption image__caption--no-border" markdown="1">
+  <span class="image__caption__copywrite">[Barn Images](https://unsplash.com/barnimages)</span>
+</figcaption>
+</figure>
+
 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon--warning icon--left">
   <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z">
 </svg> Disclaimer: This article was first published in
