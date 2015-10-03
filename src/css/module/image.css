@@ -41,19 +41,28 @@
 }
 
 
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 64em) {
   .image--block {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .image--left {
+    margin-left: -1rem;
+  }
+
+  .image--right {
+    margin-right: -1rem;
   }
 }
 
 @media screen and (max-width: 32em) {
   .image--left,
   .image--right {
-    float:none;
-    margin: 0 -1em;
-    width: auto;
+    float: none;
+    max-width: none;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .image--left img,
