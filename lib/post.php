@@ -5,6 +5,10 @@
 
   $parser = new MarkdownExtra;
   $parser->url_filter_func = function ($url) {
+    if (substr($url, 0, 7) === 'http://' || substr($url, 0, 8) === 'https://') {
+      return $url;
+    }
+
     return get_current_postpath() . $url;
   };
 
