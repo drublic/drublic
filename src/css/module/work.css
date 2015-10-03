@@ -87,20 +87,39 @@
 }
 
 .work__element {
-  margin: 2em 0;
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
   overflow: hidden;
 }
 
-.work__element > a {
-  float: left;
-  display: inline;
-  width: 33%;
-  margin-right: 1em;
+.work__element:last-child {
   border-bottom: 0;
 }
 
-.work__element > a img {
+.work__element__image {
+  float: left;
+  width: 33%;
+  border-bottom: 0;
+}
+
+.work__element__image img {
   max-width: 100%;
+}
+
+.work__element__content {
+  margin-left: 33%;
+  padding-left: 2rem;
+}
+
+.work__element__date {
+  color: var(--copy-light);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.work__element h3 {
+  margin-top: 0;
 }
 
 @media screen and (max-width: 32em) {
