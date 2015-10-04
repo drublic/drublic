@@ -1,7 +1,7 @@
 <?php
   $defaults = array(
     'preview' => false,
-    'testimonials' => false
+    'testimonials' => true
   );
 
   $settings = array();
