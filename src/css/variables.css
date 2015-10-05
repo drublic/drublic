@@ -3,6 +3,8 @@
   --color-dark: color( var(--color) blackness(+10%) );
   --color-light: color( var(--color) saturation(-30%) lightness(+30%) );
   --border-color: color( var(--color) lightness(+50%) );
+  --color--background--light: #f5f5f5;
+  --color--background--dark: color( var(--color--background--light) blackness(+10%) );
 
   --highlight: var(--color);
 

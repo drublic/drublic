@@ -47,3 +47,19 @@
 .button--primary:hover {
   border-color: #111;
 }
+
+.button--light {
+  font-size: 0.9rem;
+  background: var(--color--background--light);
+  border-color: var(--color--background--light);
+}
+
+.button--light:hover {
+  background: var(--color--background--dark);
+  border-color: var(--color--background--dark);
+  color: var(--copy-color);
+}
+
+.button--right {
+  float: right;
+}
