@@ -3,19 +3,19 @@
 }
 
 .image--block {
-  margin: 1rem -10% 1.5rem -10%;
+  margin: 1rem -4rem 1.5rem;
 }
 
 .image--right {
   float: right;
   max-width: 50%;
-  margin: 1rem -10% 1.5rem 2rem;
+  margin: 1rem -4rem 1.5rem 2rem;
 }
 
 .image--left {
   float: left;
   max-width: 50%;
-  margin: 1rem 2rem 1.5rem -10%;
+  margin: 1rem 2rem 1.5rem -4rem;
 }
 
 .image__caption {
@@ -24,6 +24,11 @@
   font-size: 0.9rem;
   color: var(--copy-color-light);
   font-style: italic;
+}
+
+.image--block .image__caption {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .image__caption--no-border {
