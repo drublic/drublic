@@ -100,6 +100,17 @@
     return base_url(false) . 'posts' . $postname[0]['path'];
   }
 
+  function get_current_posttitle () {
+    global $page_action;
+
+    $actions = explode('/', $page_action);
+
+    $postname = get_current_postname();
+    $postname = get_posts($postname, false, true);
+
+    return $postname[0]['data']->title;
+  }
+
   function get_post () {
     $postname = get_current_postname();
     $postname = get_posts($postname);

@@ -8,7 +8,16 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com/">
   <link rel="dns-prefetch" href="//www.google-analytics.com/">
 
-  <title>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
+  <title><?php
+    $tree = explode('/', $page_action);
+    if (isset($tree[1]) && $tree[0] === 'blog') {
+      include_once('../lib/post.php');
+
+      echo get_current_posttitle() . ' | Blog | ';
+    } else if ($page_action !== 'index') {
+      echo get_page_properties()->title . ' | ';
+    }
+  ?>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
   <meta name="description" content="Front-end Development &amp; Architecture,
       Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft -
       CSS, JavaScript, HTML5">
@@ -42,7 +51,7 @@
 </head>
 
 <body>
-
+<?php var_dump(); ?>
   <header class="header">
     <div class="header__inner">
       <a href="<?php print base_url(); ?>" class="header__logo" role="banner">@drublic</a>
