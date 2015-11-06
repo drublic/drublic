@@ -8,7 +8,6 @@ var jsSrc = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/css-modal/modal.js',
   'node_modules/trianglify/dist/trianglify.min.js',
-  'src/js/availability.js',
   'src/js/effects.js',
   'src/js/form.js',
   'src/js/header.js',
