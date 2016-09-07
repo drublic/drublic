@@ -33,7 +33,26 @@
   /**
    * Menu
    */
-  $(document).on('click', '.navigation__toggle', function () {
-    $('.navigation').toggleClass('navigation--visible');
+  $(document).on('click', '.js-navigation-toggle', function (event) {
+    event.preventDefault();
+
+    const $element = $(this);
+    const href = $element.attr('href');
+
+    $element
+      .attr('href', $element.attr('data-link'))
+      .attr('data-link', href);
+
+    $('.js-navigation').toggleClass('navigation--visible');
+
+    window.location.hash = href;
   });
+
+  $(window).on('scroll', function () {
+    $('.navigation__toggle').toggleClass('navigation__toggle--active', window.scrollY > 342);
+  });
+
+  if (window.location.hash === '#menu') {
+    $('.js-navigation-toggle').trigger('click');
+  }
 }(jQuery));

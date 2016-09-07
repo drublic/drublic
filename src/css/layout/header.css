@@ -1,129 +1,159 @@
 /**
  * Header
  */
+:root {
+  --header-color: #1b3b5d;
+}
+
 .header {
-  position: relative;
+  background: var(--header-color);
   color: #fff;
-  background: linear-gradient(to bottom right, #daf1b4, var(--color));
 }
 
 .header__inner {
-  position: relative;
-  z-index: 2;
-
   max-width: 53rem;
   margin: 0 auto;
-  padding: 1rem 2rem 1rem 10rem;
+  padding: 2rem 2rem 4rem;
+  text-align: center;
 }
 
 .header__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6rem;
-  height: 10rem;
-  background: var(--highlight);
-  text-indent: -999em;
-  transition: 0.2s;
-}
-
-.header__logo:hover {
-  top: -0.5rem;
-}
-
-.header__logo:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -3rem;
-  width: 0;
-  height: 0;
-  border-top: 3rem solid var(--highlight);
-  border-right: 6rem solid transparent;
-}
-
-.header__logo:after {
-  content: '';
-  position: absolute;
-  top: 4rem;
-  left: 0.5rem;
-  right: 0.5rem;
-  width: 5rem;
-  height: 5rem;
+  display: block;
+  width: 8rem;
+  height: 8rem;
   background: url(/img/logo.svg);
   background-size: 100% auto;
+  text-indent: -999em;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header h1 {
-  margin: 4rem 0 0;
+  margin: 2rem 0 0;
 }
 
 .header p {
   font-size: 1.2em;
 }
 
-.header__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.header__background svg {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 /* Navigation */
 .navigation {
-  max-width: 50rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 230px;
+  background: var(--header-color);
   line-height: 2;
+  transition: 0.2s;
+  transform: translate3d(230px, 0, 0);
+  text-align: left;
+  overflow: auto;
 }
 
-.navigation ul {
-  margin: 0;
-  padding: 3rem 0;
+.no-js .navigation:target,
+.navigation--visible {
+  transform: translate3d(0, 0, 0);
 }
 
-.navigation li {
-  display: inline-block;
+.navigation__menu {
+  padding: 5rem 0 3em;
+}
+
+.navigation__menu li {
+  display: block;
   vertical-align: top;
 }
 
-.navigation li.is-active a {
+.navigation__menu li.is-active a {
   background-color: #fff;
   color: var(--color);
 }
 
-.navigation a {
-  border-radius: 2px;
-  border: 1px solid #fff;
+.navigation__menu a {
+  display: block;
   color: #fff;
-  display: inline-block;
-  margin-right: 7px;
-  padding: 0.5em 1.5em;
+  padding: 0.75em 3em;
   text-decoration: none;
   transition: 0.15s;
+  border-bottom: 0;
 }
 
-.navigation a:visited {
+.navigation__menu a:visited {
   color: #fff;
 }
 
-.navigation a:hover {
+.navigation__menu a:hover {
   background-color: #fff;
   color: var(--color);
 }
 
-.navigation a.visuallyhidden {
+.navigation__menu a.visuallyhidden {
   padding: 0;
 }
 
 .navigation__toggle {
-  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: 0;
+  text-indent: -99rem;
+  width: 35px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.navigation__toggle span,
+.navigation__toggle span::before,
+.navigation__toggle span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-indent: 0;
+  height: 3px;
+  background: #fff;
+  transition: 800ms;
+}
+
+.navigation__toggle span::before {
+  top: 13px;
+  left: 5px;
+  transition: 200ms;
+}
+
+.navigation__toggle span::after {
+  top: 26px;
+  transition: 400ms;
+}
+
+.navigation__toggle:hover span::before {
+  transform: translate(-5px, 0);
+}
+
+.navigation__toggle--active span,
+.navigation__toggle--active span::before,
+.navigation__toggle--active span::after {
+  background: var(--header-color);
+}
+
+.navigation--visible + .navigation__toggle--active span,
+.navigation--visible + .navigation__toggle--active span::before,
+.navigation--visible + .navigation__toggle--active span::after {
+  background: #fff;
+}
+
+/**
+ * Legal notice
+ */
+.header .navigation__legal {
+  padding: 1rem 1rem 1rem 3rem;
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 54em) {
@@ -268,33 +298,4 @@
   .header__logo:hover {
     top: 0;
   }
-}
-
-
-/**
- * Visible
- */
-.navigation--visible {
-  display: block;
-}
-
-.navigation--visible + .navigation__toggle {
-  text-indent: -99em;
-}
-
-.navigation--visible + .navigation__toggle span {
-  background-color: transparent;
-}
-
-.navigation--visible + .navigation__toggle span:before,
-.navigation--visible + .navigation__toggle span:after {
-  top: 0;
-}
-
-.navigation--visible + .navigation__toggle span:before {
-  transform: rotate(45deg);
-}
-
-.navigation--visible + .navigation__toggle span:after {
-  transform: rotate(-45deg);
 }

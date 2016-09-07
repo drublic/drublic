@@ -13,6 +13,11 @@
         data-ga-category="Contact"
         data-ga-action="Hire"
         data-ga-label="Hire me">Hire me!</a>
+
+      <a href="<?php print base_url(); ?>resume/" class="button" aria-role="button"
+        data-ga-category="Resume"
+        data-ga-action="Resume"
+        data-ga-label="Hire me">Resume</a>
     </p>
   </section>
 
@@ -21,26 +26,17 @@
     <h2>Work I do</h2>
 
     <div class="work__projects">
-      <figure class="work--project" data-fx-fade>
-        <a href="http://html5boilerplate.com/"><img src="<?php print base_url(); ?>img/work/html5bp.png" alt="HTML5 Boilerplate"></a>
-        <figcaption>
-          <h3>HTML5 <span>Boilerplate</span></h3>
-        </figcaption>
-      </figure>
+      <div class="work--project" data-fx-fade>
+        <a href="https://nightlybuild.io/"><img src="<?php print base_url(); ?>img/work/nightlybuild.png" alt="HTML5 Boilerplate"></a>
+      </div>
 
-      <figure class="work--project" data-fx-fade>
+      <div class="work--project" data-fx-fade>
         <a href="http://use-init.com/"><img src="<?php print base_url(); ?>img/work/init.png" alt="INIT"></a>
-        <figcaption>
-          <h3>INIT</h3>
-        </figcaption>
-      </figure>
+      </div>
 
-      <figure class="work--project" data-fx-fade>
+      <div class="work--project" data-fx-fade>
         <a href="http://www.kms-blackspace.com/"><img src="<?php print base_url(); ?>img/work/kms.png" alt="KMS Blackspace"></a>
-        <figcaption>
-          <h3>KMS <span>Blackspace</span></h3>
-        </figcaption>
-      </figure>
+      </div>
     </div>
 
     <p class="work__more" data-fx-fade>
@@ -102,6 +98,12 @@
         </li>
       <?php endfor; ?>
     </ul>
+
+    <p class="text--centered text--padded">
+      <a href="<?php print base_url(); ?>blog/" class="button" aria-role="button">
+        Read more on my Blog
+      </a>
+    </p>
 
     <h3>On other websites</h3>
     <ul>

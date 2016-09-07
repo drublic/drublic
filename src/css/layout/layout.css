@@ -33,6 +33,48 @@ hr {
   text-align: center;
 }
 
+.section__caption {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+.section--fullsize {
+  position: relative;
+  background-size: 100% auto;
+  background-position: center center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section--ratio {
+  overflow: hidden;
+}
+
+.section--ratio::after {
+  content: '';
+  float: left;
+  padding-top: 37.5%;
+  width: 0;
+}
+
+/**
+ * Text styles
+ */
+
+.text--centered {
+  text-align: center;
+}
+
+.text--small {
+  font-size: 0.8rem;
+}
+
+.text--padded {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 40em) {
   .main {
     padding-top: 0;
