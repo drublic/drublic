@@ -1,24 +1,26 @@
 <main id="content" class="main" role="main">
-  <section class="container claim" data-fx-fade>
-    <img src="<?php print base_url(); ?>img/me.jpg" alt="A picture of Hans Christian Reinl" class="claim__me">
+  <section class="claim" data-fx-fade>
+    <div class="container">
+      <img src="<?php print base_url(); ?>img/me.jpg" alt="A picture of Hans Christian Reinl" class="claim__me">
 
-    <div class="claim__desc">
-      <p>Web developer, front-end nerd, JavaScript hacker, located in Cologne.</p>
-      <p>Dealing with HTML5, CSS and JavaScript is my daily business and I love it. Find out <a href="<?php print base_url(); ?>resume/">more about me</a>, <a href="<?php print base_url(); ?>portfolio/">my work</a> and <a href="#hire-me" title="Hire me in need">hire me if you are in need</a>.</p>
+      <div class="claim__desc">
+        <p>Web developer, front-end nerd, JavaScript hacker, located in Cologne.</p>
+        <p>Dealing with HTML5, CSS and JavaScript is my daily business and I love it. Find out <a href="<?php print base_url(); ?>resume/">more about me</a>, <a href="<?php print base_url(); ?>portfolio/">my work</a> and <a href="#hire-me" title="Hire me in need">hire me if you are in need</a>.</p>
+      </div>
+
+      <p>
+        <a href="#contact" class="button--large" aria-role="button"
+          title="I am a Front-End Architect, hire me!"
+          data-ga-category="Contact"
+          data-ga-action="Hire"
+          data-ga-label="Hire me">Hire me!</a>
+
+        <a href="<?php print base_url(); ?>resume/" class="button" aria-role="button"
+          data-ga-category="Resume"
+          data-ga-action="Resume"
+          data-ga-label="Hire me">Resume</a>
+      </p>
     </div>
-
-    <p>
-      <a href="#contact" class="button--large" aria-role="button"
-        title="I am a Front-End Architect, hire me!"
-        data-ga-category="Contact"
-        data-ga-action="Hire"
-        data-ga-label="Hire me">Hire me!</a>
-
-      <a href="<?php print base_url(); ?>resume/" class="button" aria-role="button"
-        data-ga-category="Resume"
-        data-ga-action="Resume"
-        data-ga-label="Hire me">Resume</a>
-    </p>
   </section>
 
   <!-- Projects -->

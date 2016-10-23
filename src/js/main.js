@@ -55,4 +55,7 @@
   if (window.location.hash === '#menu') {
     $('.js-navigation-toggle').trigger('click');
   }
+
+  // Call hongkong
+  $.hongkong();
 }(jQuery));

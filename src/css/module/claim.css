@@ -2,7 +2,8 @@
  * About me
  */
 .claim {
-  margin-top: 2rem;
+  background: #fff;
+  padding-top: 4rem;
 }
 
 .claim__desc {

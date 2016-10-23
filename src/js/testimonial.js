@@ -10,28 +10,6 @@
   var interval;
   var playState = true;
 
-  var init = function () {
-    var maxHeight = 0;
-
-    $testimonials.each(function () {
-      var height = $(this).outerHeight(true);
-
-      if (height > maxHeight) {
-        maxHeight = height;
-      }
-    });
-
-    $wrapper.height(maxHeight);
-
-    if ($testimonials.filter('.is-active').length === 0) {
-      $testimonials.first().addClass('is-active');
-    }
-
-    setIntervalIfVisible();
-    events();
-    generateNavigation();
-  };
-
   var events = function () {
     $wrapper
       .on('mouseover', function () {
@@ -40,6 +18,11 @@
       .on('mouseout', function () {
         playState = true;
       });
+  };
+
+  var setNavigationItemActive = function (index) {
+    $navigation.find('.is-active').removeClass('is-active');
+    $navigation.find('[data-index="' + index + '"]').addClass('is-active');
   };
 
   var activateNext = function ($next) {
@@ -108,9 +91,26 @@
     $navigation.on('click', 'a', setNextItem);
   };
 
-  var setNavigationItemActive = function (index) {
-    $navigation.find('.is-active').removeClass('is-active');
-    $navigation.find('[data-index="' + index + '"]').addClass('is-active');
+  var init = function () {
+    var maxHeight = 0;
+
+    $testimonials.each(function () {
+      var height = $(this).outerHeight(true);
+
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    });
+
+    $wrapper.height(maxHeight);
+
+    if ($testimonials.filter('.is-active').length === 0) {
+      $testimonials.first().addClass('is-active');
+    }
+
+    setIntervalIfVisible();
+    events();
+    generateNavigation();
   };
 
   $(window)
