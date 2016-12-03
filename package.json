@@ -9,7 +9,7 @@
     "url": "git@github.com:drublic/vc.git"
   },
   "scripts": {
-    "postinstall": "grunt build"
+    "postinstall": "./node_modules/.bin/grunt build"
   },
   "bugs": {
     "url": "https://github.com/use-init/init/issues"
