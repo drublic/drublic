@@ -6,6 +6,12 @@
 
   $_file = '';
 
+  $allowedHosts = array(
+    'http://drublic.local/',
+    'http://drublic.herokuapp.com/',
+    'https://drublic.de/'
+  );
+
   if (isset($_GET['file'])) {
     $_file = $_GET['file'];
   }
@@ -19,14 +25,20 @@
     $page_action = 'index';
   }
 
+  function get_host () {
+    return $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/';
+  }
+
   // Generate base url
   function base_url ($print = true) {
     global $environment;
+    global $allowedHosts;
 
-    if ($environment == 'dev') {
-      $base = 'http://drublic.local/';
-    } else {
-      $base = 'https://drublic.de/';
+    $hostname = get_host();
+    $index = array_search($hostname, $allowedHosts);
+
+    if ($index > -1) {
+      $base = $allowedHosts[$index];
     }
 
     if ($print) {
