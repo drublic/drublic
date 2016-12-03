@@ -18,8 +18,6 @@
 
   $page_action = trim($_file, '/');
 
-  $environment = ($_SERVER['HTTP_HOST'] == 'drublic.de') ? 'production' : 'dev';
-
   // When no file is requested, use index method
   if (empty($page_action)) {
     $page_action = 'index';
@@ -28,6 +26,8 @@
   function get_host () {
     return $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/';
   }
+
+  $environment = (get_host() == $allowedHosts[0]) ? 'dev' : 'production';
 
   // Generate base url
   function base_url ($print = true) {
