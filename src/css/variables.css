@@ -1,10 +1,10 @@
 :root {
   --color: #316EAE;
-  --color-dark: color( var(--color) blackness(+10%) );
-  --color-light: color( var(--color) saturation(-30%) lightness(+30%) );
-  --border-color: color( var(--color) lightness(+50%) );
+  --color-dark: #1b3b5d;
+  --color-light: #769fca;
+  --border-color: #dce3ea;
   --color--background--light: #f5f5f5;
-  --color--background--dark: color( var(--color--background--light) blackness(+10%) );
+  --color--background--dark: #eee;
 
   --highlight: var(--color);
 

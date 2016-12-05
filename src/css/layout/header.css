@@ -2,7 +2,7 @@
  * Header
  */
 :root {
-  --header-color: #1b3b5d;
+  --header-color: var(--color-dark);
 }
 
 .header {
