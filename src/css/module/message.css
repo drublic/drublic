@@ -2,7 +2,7 @@
  * Messages
  */
 .message {
-  background: color(#ffd600 lightness(+20%));
+  background: #ffd600;
 }
 
 .message__content {
