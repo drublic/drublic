@@ -79,9 +79,13 @@
   }
 
   function getJsonContents ($filename) {
-    $file = file_get_contents($filename);
+    if (file_exists($filename)) {
+      $file = file_get_contents($filename);
 
-    return json_decode($file);
+      return json_decode($file);
+    }
+
+    return json_decode('');
   }
 
   // Set package

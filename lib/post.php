@@ -115,7 +115,11 @@
     $postname = get_current_postname();
     $postname = get_posts($postname);
 
-    return $postname[0];
+    if (count($postname) != 0) {
+      return $postname[0];
+    }
+
+    return '';
   }
 
   function get_date ($date, $format = 'Y-m-d') {
