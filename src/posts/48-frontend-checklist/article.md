@@ -34,8 +34,8 @@ If you want to know more about about what is going wrong with your website and h
 * CDN is used for content pages
 * Cookie-Less Domain is used for static files
 * DNS prefetching is used
-  * <link rel="preload" as="script"> (CSS, JS and fonts)
-  * <link rel="dns-prefetch"> (for Domain, which provides static resources, eg.: Images, and Tracking Tools)
+  * `<link rel="preload" as="script">` (CSS, JS and fonts)
+  * `<link rel="dns-prefetch">` (for Domain, which provides static resources, eg.: Images, and Tracking Tools)
 
 ### Resources
 
