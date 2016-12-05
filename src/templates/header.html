@@ -20,7 +20,7 @@
   ?>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
   <meta name="description" content="Front-end Development &amp; Architecture,
       Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft -
-      CSS, JavaScript, HTML5">
+      CSS, JavaScript - Scrum">
 
   <link rel="canonical" href="<?php print base_url() . '' . ($page_action === 'index' ? '' : $page_action); ?>">
   <link rel="alternate" type="application/rss+xml" title="drublic (Feed)" href="<?php print base_url(); ?>feed.xml">
@@ -31,11 +31,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <?php if ($environment == 'dev') { ?>
-    <link rel="stylesheet" href="<?php print base_url(); ?>dist/_/core.css">
-  <?php } else { ?>
-    <link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
-  <?php } ?>
+  <link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
 
   <meta name="application-name" content="drublic">
 

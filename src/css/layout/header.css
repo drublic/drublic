@@ -169,3 +169,14 @@
     left: 0;
   }
 }
+
+@media print {
+  .header__logo {
+    display: none;
+  }
+
+  .header__inner {
+    max-width: none;
+    padding: 0;
+  }
+}

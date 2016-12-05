@@ -90,3 +90,13 @@
 .post__crosslinks {
   margin-top: 3rem;
 }
+
+/**
+ * Print style sheets
+ */
+@media print {
+  .post__crosslinks,
+  .post__navigation {
+    display: none;
+  }
+}

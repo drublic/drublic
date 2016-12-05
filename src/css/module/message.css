@@ -15,3 +15,9 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+@media print {
+  .message {
+    display: none;
+  }
+}
