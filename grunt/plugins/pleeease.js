@@ -39,7 +39,7 @@ module.exports = {
         customProperties: true,
         colors: true
       },
-      sourcemaps: true
+      sourcemaps: false
     },
 
     files: helper.cssProd
