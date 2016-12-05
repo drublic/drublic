@@ -9,8 +9,10 @@
     "url": "git@github.com:drublic/vc.git"
   },
   "scripts": {
-    "postinstall": "grunt build && npm run css",
-    "css": "node ./scripts/css.js"
+    "postinstall": "grunt build && npm run build",
+    "css": "node ./scripts/css.js",
+    "copy": "cp ./src/img/work/*.svg public/img/work/",
+    "build": "npm run css && npm run copy"
   },
   "bugs": {
     "url": "https://github.com/use-init/init/issues"
