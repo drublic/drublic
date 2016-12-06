@@ -24,7 +24,7 @@
   }
 
   function get_host () {
-    return $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/';
+    return ($_SERVER['HTTPS'] == 'on' ? 'https' : 'http') . '://' . $_SERVER['SERVER_NAME'] . '/';
   }
 
   $environment = (get_host() == $allowedHosts[0]) ? 'dev' : 'production';
