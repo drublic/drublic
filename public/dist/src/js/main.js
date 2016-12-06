@@ -57,5 +57,7 @@
   }
 
   // Call hongkong
-  $.hongkong();
+  if ($.hongkong) {
+    $.hongkong();
+  }
 }(jQuery));
