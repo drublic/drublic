@@ -59,7 +59,7 @@ If you want to know more about about what is going wrong with your website and h
 * SVG files are minized
 * SVG files are used where possible
 * Only fonts that are used are loaded
-* Browser cache is used wird genutzt
+* Browser cache is used
 * ETags is not used
 * Expires, cache-control and max-age headers for static resources is set to 1 year
 
@@ -89,7 +89,7 @@ Usually I measure the main pages of a project here.
 
 * CPU usage
 * Memory usage
-* GPU Auslastung
+* GPU usage
 
 ## Cross-Browser
 
