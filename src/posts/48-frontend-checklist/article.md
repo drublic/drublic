@@ -91,7 +91,7 @@ Usually I measure the main pages of a project here.
 * Memory usage
 * GPU Auslastung
 
-## Cross-Browser Unterstützung
+## Cross-Browser
 
 * Website is loading on all current desktop browsers (Safari, Firefox, Chrome, IE11, EDGE)
 * Website is loading on all current mobile browser (Chrome for Android, iOS Safari)
