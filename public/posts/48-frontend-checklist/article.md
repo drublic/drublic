@@ -82,7 +82,7 @@ Usually I measure the main pages of a project here.
 * Scripts are loaded in the footer
 * Scripts are loaded with `defer`-attribute
 * Scripts are loaded in the header after styles are loaded
-* Scrollen is possible with 60fps
+* Scrolling is possible with 60fps
 * No usage of document.write
 
 ## Device performance
@@ -124,7 +124,7 @@ Usually I measure the main pages of a project here.
 * No 404-errors
 * No 500-errors
 * Canonical Tags are used if applicable
-* Ratio Code:Inhalt is around 25% for shop pages and 50% for content pages
+* Ratio Code:Content is around 25% for shop pages and 50% for content pages
 
 ## Accessibility
 
