@@ -126,7 +126,7 @@ Usually I measure the main pages of a project here.
 * Canonical Tags are used if applicable
 * Ratio Code:Inhalt is around 25% for shop pages and 50% for content pages
 
-## Zugänglichkeit
+## Accessibility
 
 * Color Contrast is good (WCAG 2.0)
 * WAI-ARIA roles are used
