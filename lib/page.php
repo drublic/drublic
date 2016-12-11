@@ -4,6 +4,8 @@
 
   include('../src/config.php');
 
+  include_once('post.php');
+
   $_file = '';
 
   $allowedHosts = array(
@@ -24,7 +26,13 @@
   }
 
   function get_host () {
-    return ($_SERVER['HTTPS'] == 'on' ? 'https' : 'http') . '://' . $_SERVER['SERVER_NAME'] . '/';
+    $host = '://' . $_SERVER['SERVER_NAME'] . '/';
+
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+      return 'https' . $host;
+    }
+
+    return 'http' . $host;
   }
 
   $environment = (get_host() == $allowedHosts[0]) ? 'dev' : 'production';
@@ -161,18 +169,18 @@
 
   // send Header if necessary
   function set_headers () {
-    $page = get_page_properties();
+    global $page_action;
 
     // Set security header
     function isSSL(){
-        if (isset($_SERVER['https']) &&
-            ($_SERVER['https'] == 1 || $_SERVER['https'] == 'on')) {
-          return TRUE;
-        } elseif ($_SERVER['SERVER_PORT'] == 443) { // others
-          return TRUE;
-        }
+      if (isset($_SERVER['https']) &&
+          ($_SERVER['https'] == 1 || $_SERVER['https'] == 'on')) {
+        return TRUE;
+      } elseif ($_SERVER['SERVER_PORT'] == 443) { // others
+        return TRUE;
+      }
 
-        return FALSE; // just using http
+      return FALSE; // just using http
     }
 
     if (isSSL()) {
@@ -180,7 +188,9 @@
     }
 
     // Send 404 if empty
-    if (empty($page)) {
+    $page = get_page_properties($page_action);
+    $post = get_post();
+    if (empty($page) || ($page->action == 'blog-post' && $post == '')) {
       header('HTTP/1.0 404 Not Found');
     }
   }

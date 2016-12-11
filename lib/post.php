@@ -27,7 +27,7 @@
   function get_posts ($current_post = false, $get_full = false, $single = false) {
     global $config, $parser;
 
-    $path = getcwd() . '/posts';
+    $path = getcwd() . '/../src/posts';
     $files = array();
     $entries = array();
 
@@ -86,7 +86,11 @@
 
     $actions = explode('/', $page_action);
 
-    return $actions[1];
+    if (isset($actions[1])) {
+      return $actions[1];
+    }
+
+    return $actions[0];
   }
 
   function get_current_postpath () {
@@ -97,7 +101,11 @@
     $postname = get_current_postname();
     $postname = get_posts($postname, false, true);
 
-    return base_url(false) . 'posts' . $postname[0]['path'];
+    if (isset($postname[0])) {
+      return base_url(false) . 'posts' . $postname[0]['path'];
+    } else {
+      return base_url(false) . 'posts';
+    }
   }
 
   function get_current_posttitle () {
@@ -108,7 +116,11 @@
     $postname = get_current_postname();
     $postname = get_posts($postname, false, true);
 
-    return $postname[0]['data']->title;
+    if (isset($postname[0])) {
+      return $postname[0]['data']->title;
+    }
+
+    return 'Page Not Found';
   }
 
   function get_post () {
