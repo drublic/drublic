@@ -47,7 +47,7 @@ module.exports = {
       'src/css/**/*.css'
     ],
     src: 'src/css/main.css',
-    devDest: 'public/dist/_/core.css',
+    devDest: 'public/dist/<%= pkg.version %>/c.css',
     dest: 'public/dist/<%= pkg.version %>/c.css'
   },
 
