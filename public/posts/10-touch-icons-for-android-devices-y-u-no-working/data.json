@@ -1,9 +1,0 @@
-{
-  "url": "touch-icons-for-android-devices-y-u-no-working",
-  "title": "Touch-Icons for Android-Devices: Y U No Working?",
-  "date": "Friday, September 23rd, 2011",
-  "abstract": "<p>Sven asked me some stuff about the HTML5 Boilerplate Favicon PSD-Template while he was using it for a project. He discovered one problem I was not aware of and I don&#8217;t know how to work around: Android does not use one of the apple-touch-icons as a bookmark or as a shortcut on the home-screen in Android 2.3. I do not know of any other usage of the icons in prior versions of Android. But this article by Rob Flaherty stats that it is working for Android 2.1 and 2.2 with some minor changes. He also set up this demo-page. Feel free",
-  "meta-title": "",
-  "meta-description": "Android does not use one of the apple-touch-icons as a bookmark or as a shortcut on the home-screen in Android 2.3. Why is this?",
-  "link": false
-}

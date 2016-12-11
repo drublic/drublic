@@ -23,15 +23,6 @@ module.exports = {
     }]
   },
 
-  posts: {
-    files: [{
-      expand: true,
-      cwd: 'src/posts/',
-      src: ['**/*'],
-      dest: 'public/posts/'
-    }]
-  },
-
   feed: {
     files: [{
       expand: true,

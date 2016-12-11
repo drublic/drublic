@@ -1,9 +1,0 @@
-{
-  "url": "twitter-recess-css-cleaning-tool-build-on-less",
-  "title": "RECESS – A CSS cleaning tool build on top of LESS",
-  "date": "Tuesday, April 17th, 2012",
-  "abstract": "<p>Developed at Twitter to support our internal styleguide, RECESS is a simple, attractive code quality tool for CSS built on top of LESS. Incorporate it into your development process as a linter, or integrate it directly into your build system as a compiler, RECESS will keep your source looking clean and super managable. As I think reading the source is essential for developers to become good at what they do viewing this source in readable style is essential too. RECESS is a tool which helps you developing good-looking CSS with LESS. It is developed at Twitter and has now been",
-  "meta-title": "",
-  "meta-description": "Twitter's RECESS is a tool which helps you developing good-looking CSS with LESS. It is developed at Twitter and has now been open-sourced. RECESS is a Node.js module.",
-  "link": false
-}

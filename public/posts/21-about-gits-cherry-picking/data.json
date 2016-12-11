@@ -1,9 +1,0 @@
-{
-  "url": "about-gits-cherry-picking",
-  "title": "About Git&#8217;s Cherry-Picking",
-  "date": "Friday, January 6th, 2012",
-  "abstract": "<p>At /gebrüderheitz we use Git as a version control system as we think this is the best to work together on a level which is easy to learn and work with. Before we used Git we’ve used SVN but this is by far not as flexible as Git. There are enough posts gathering the difference between Git and SVN so I will not cover any of these. When working in a team it’s important to keep your different stages of development in sync and control somehow: There is a front-end development going on which is in deep connection with the",
-  "meta-title": "",
-  "meta-description": "A short explanation on how to use Git's cherry picking in your projects to keep your code clean and organized.",
-  "link": false
-}

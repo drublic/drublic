@@ -1,9 +1,0 @@
-{
-  "url": "the-css-hierarchies-module-level-3",
-  "title": "About The CSS Hierarchies Module Level 3",
-  "date": "Friday, February 17th, 2012",
-  "abstract": "<p>Since the beginning of February there were some proposals for the CSS3 specification. These proposals are not yet part of the specification and will likely be changed until they get adopted by the CSSWG. One of these drafts is the CSS Hierarchies Module Level 3. So what&#8217;s the Hierarchies Module? And why &#8220;Level 3&#8243;? The Hierarchies Module is not exactly new. It exists since the very first steps of CSS and was first released in Dezember 1996 with CSS1. The CSS1 specification is still up, so check it out if you want to. When you write CSS you always use selectors to target",
-  "meta-title": "",
-  "meta-description": "There is a draft for the CSS Hierarchies Module Level 3 which introduces nesting for rules in CSS. This is what preprocessors do. CSS is about to adopt this.",
-  "link": false
-}

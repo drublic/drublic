@@ -1,9 +1,0 @@
-{
-  "url": "yeoman",
-  "title": "Yeoman – Level-up Your Daily Workflow",
-  "date": "Friday, September 14th, 2012",
-  "abstract": "<p>After Yeoman was announced in the end of June while it was still in private beta developers were looking forward to use it soon. It was introduced as a tool that helps developers building web-apps while not having to care too much about the general boilerplate-coding to build a solid base for every project and to help performing tasks to bring your project into production. Now that Yeoman is available for everyone as Open Source the question how to use it in daily projects arises. I&#8217;ll try to give you a short overview on what you can expect from it",
-  "meta-title": "Yeoman – Level-up Your Daily Workflow – Tool using Grunt.js",
-  "meta-description": "Yeoman is here to help you saving a lot of time developing and deploying your web pages and apps. Find out why you should use Yeoman in your daily workflow.",
-  "link": false
-}

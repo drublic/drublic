@@ -1,9 +1,0 @@
-{
-  "url": "a-travel-through-time-and-back",
-  "title": "A Travel Through Time &#8211; and Back",
-  "date": "Friday, November 4th, 2011",
-  "abstract": "<p>Somehow… &lt;time&gt; Disappeared As you might have heard the &lt;time&gt;-element was removed from the HTML5 specification last saturday by Ian &#8220;Hixie&#8221; Hickson, the editor of the spec. Hixie decided to remove &lt;time&gt; and replace it by the more general &lt;data&gt;-element. A question that came up: Why got&lt;time&gt; removed and why did nobody stop Hixie? Well: There</p",
-  "meta-title": "",
-  "meta-description": "There was a hugh discussion about the removal of the HTML5 time-element and replacement by the data from the specification. The W3C HTML WG solved this issue.",
-  "link": false
-}

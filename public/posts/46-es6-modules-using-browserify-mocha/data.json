@@ -1,9 +1,0 @@
-{
-  "title": "Testing ES6 Modules with Mocha using Babel with Browserify",
-  "date": "17.08.2015",
-  "abstract": "<p>When writing JavaScript applications or websites a lot of developers write unit tests to ensure the code does what it is supposed to do. The hottest code uses ES6 and transpiles to ES5 with Babel. Mocha is pretty popular as a testing framework these days. Bringing these tools together can be cumbersome. Here is how you do it.</p>",
-  "meta-title": "Testing ES6 Modules with Mocha using Babel with Browserify",
-  "meta-description": "",
-  "link": false,
-  "hidden": false
-}

@@ -1,9 +1,0 @@
-{
-  "url": "sass-vs-less",
-  "title": "SASS vs. LESS",
-  "date": "Thursday, May 17th, 2012",
-  "abstract": "<p>&#8220;Which CSS preprocessor language should I choose?&#8221; is a hot topic lately. I&#8217;ve been asked in person several times and an online debate has been popping up every few days it seems. It&#8217;s nice that the conversation has largely turned from whether or not preprocessing is a good idea to which one language is best. Let&#8217;s do this thing. Really short answer: SASS Slightly longer answer: SASS is better on a whole bunch of different fronts, but if you are already happy in LESS, that&#8217;s cool, at least you are doing yourself a favor by preprocessing. Chris Coyier finds an",
-  "meta-title": "",
-  "meta-description": "Chris Coyier writes about the differences between LESS and SASS and compares the CSS-preprocessors.",
-  "link": false
-}
