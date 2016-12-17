@@ -2,7 +2,7 @@
 
   'use strict';
 
-  var ga = window.ga
+  var ga = window.ga;
 
   // Track events
   // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
