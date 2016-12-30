@@ -30,5 +30,14 @@ module.exports = {
       src: ['**/*.xml'],
       dest: 'public/templates/'
     }]
-  }
+  },
+
+  posts: {
+    files: [{
+      expand: true,
+      cwd: 'src/posts/',
+      src: ['**/*.{png,jpg,jpeg,svg}'],
+      dest: 'public/posts/'
+    }]
+  },
 };
