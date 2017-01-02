@@ -1,7 +1,7 @@
 {
   "title": "Solving npm scripts problems in JavaScript projects",
   "date": "02.01.2017",
-  "abstract": "In the past I have written about how I use npm scripts for my build tooling. With this article I want to write about some problems I had and how I solved them. The problems I want to talk about further:<br><ul><li>Concurrency</li><li>Extensive build configuration</li><li>Build environments</li></ul>.",
+  "abstract": "In the past I have written about how I use npm scripts for my build tooling. With this article I want to write about some problems I had and how I solved them. The problems I want to talk about further:<br><ul><li>Concurrency</li><li>Extensive build configuration</li><li>Build environments</li></ul>",
   "meta-title": "Solving npm scripts problems in JavaScript projects",
   "meta-description": "How to solve three common problems with npm scripts: Concurrency, extensive build configuration, build environments",
   "link": false,
