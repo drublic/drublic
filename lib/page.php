@@ -10,7 +10,7 @@
 
   $allowedHosts = array(
     'http://drublic.local/',
-    'http://drublic.herokuapp.com/',
+    'https://drublic.herokuapp.com/',
     'https://drublic.de/'
   );
 
