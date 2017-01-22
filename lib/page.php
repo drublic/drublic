@@ -25,9 +25,14 @@
   }
 
   function get_host () {
-    $host = '://' . $_SERVER['SERVER_NAME'] . '/';
+    $domain = $_SERVER['SERVER_NAME'];
+    if (!$domain) {
+      $domain = $_SERVER['HTTP_HOST'];
+    }
 
-    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+    $host = '://' . $domain . '/';
+
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' || isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
       return 'https' . $host;
     }
 
@@ -43,6 +48,7 @@
 
     $hostname = get_host();
     $index = array_search($hostname, $allowedHosts);
+    $base = '';
 
     if ($index > -1) {
       $base = $allowedHosts[$index];
