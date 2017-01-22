@@ -6,14 +6,21 @@
 <main id="content" class="main container" role="main" data-fx-fade>
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post__header">
-      <h1 itemprop="name">
+      <h1 itemprop="name" itemprop="headline">
         <a href="<?php print base_url(); ?>blog/<?php echo $post['url']; ?>/" title="Permalink to <?php echo $post['data']->title ?>" itemprop="url" rel="entry-title">
           <?php echo $post['data']->title ?>
         </a>
       </h1>
-      <time class="post__header__date" datetime="<?php echo $post['data']->date; ?>" rel="updated" itemprop="datePublished">
+
+      <?php
+        $date = explode('.', $post['data']->date);
+        $date = array_reverse($date);
+        $date = implode('-', $date);
+      ?>
+      <time class="post__header__date" datetime="<?php echo $date ?>" rel="updated">
         <?php echo $post['data']->date; ?>
       </time>
+      <meta itemprop="datePublished" content="<?php echo $date; ?>">
       <meta itemprop="description" content="<?php echo $post['data']->abstract; ?>">
     </header>
 
@@ -35,11 +42,11 @@
     <ul class="posts__list posts__list--bound posts__list--no-divider">
       <?php for ($i = 0; $i < count($posts); $i++) : ?>
         <?php $post = $posts[$i]; ?>
-        <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/" itemprop="url">
-            <span itemprop="title"><?php print $post['data']->title; ?></span>
+        <li>
+          <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/">
+            <?php print $post['data']->title; ?>
 
-            <time class="posts__date" itemprop="datePublished">
+            <time class="posts__date">
               <?php print $post['data']->date; ?>
             </time>
           </a>
