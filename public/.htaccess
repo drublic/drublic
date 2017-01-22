@@ -1,4 +1,7 @@
 ## Redirects
+Redirect permanent http://drublic.herokuapp.com/ https://drublic.de/
+Redirect permanent https://drublic.herokuapp.com/ https://drublic.de/
+
 Redirect permanent /@  https://twitter.com/drublic
 Redirect permanent /~  https://github.com/drublic
 Redirect permanent /+  https://plus.google.com/+HansChristianReinl/posts
