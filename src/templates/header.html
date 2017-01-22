@@ -1,59 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
-  <link rel="dns-prefetch" href="//ajax.googleapis.com/">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com/">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com/">
-  <link rel="dns-prefetch" href="//www.google-analytics.com/">
-
-  <title><?php
-    $tree = explode('/', $page_action);
-    if (isset($tree[1]) && $tree[0] === 'blog') {
-      include_once('../lib/post.php');
-
-      echo get_current_posttitle() . ' | Blog | ';
-    } else if ($page_action !== 'index') {
-      echo get_page_properties()->title . ' | ';
-    }
-  ?>drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne</title>
-  <meta name="description" content="Front-end Development &amp; Architecture,
-      Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft -
-      CSS, JavaScript - Scrum">
-
-  <link rel="canonical" href="<?php print base_url() . '' . ($page_action === 'index' ? '' : $page_action); ?>">
-  <link rel="alternate" type="application/rss+xml" title="drublic (Feed)" href="<?php print base_url(); ?>feed.xml">
-
-  <!-- Who did this page -->
-  <link type="text/plain" rel="author" href="/humans.txt">
-  <meta name="author" content="Hans Christian Reinl">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
-
-  <meta name="application-name" content="drublic">
-
-  <link rel="canonical" href="<?php print base_url(); ?>">
-  <link rel="index" title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript – Hans Christian Reinl"
-      href="<?php print base_url(); ?>">
-
-  <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <script>document.documentElement.className += ' js';</script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-41497561-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+  <?php include('head.html'); ?>
 </head>
 
 <body>
@@ -65,48 +13,6 @@
       <p>Hans Christian Reinl &ndash; @drublic</p>
     </div>
 
-    <nav class="navigation js-navigation" id="menu" role="navigation">
-      <a href="#content" class="visuallyhidden">Skip to Content</a>
+    <?php include('navigation.html'); ?>
 
-      <ul id="navigation" class="navigation__menu">
-        <li class="<?php set_navigation_item_active('index'); ?>">
-          <a href="<?php print base_url(); ?>" title="drublic - Front-End Architecture">Home</a>
-        </li>
-        <li class="<?php set_navigation_item_active('resume'); ?>">
-          <a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a>
-        </li>
-        <li class="<?php set_navigation_item_active('blog'); ?>">
-          <a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a>
-        </li>
-        <li class="<?php set_navigation_item_active('portfolio'); ?>">
-          <a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a>
-        </li>
-        <li>
-          <a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a>
-        </li>
-        <li>
-          <a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a>
-        </li>
-      </ul>
-
-
-      <p class="navigation__legal">Made with love. <?php print date('Y'); ?>. Cologne, Germany. <a href="<?php print base_url(); ?>#imprint" title="Who does this stuff?">Legal/Impressum</a>.</p>
-
-      <ul class="social">
-        <li class="social__link social__link--github">
-          <a href="//github.com/drublic" title="GitHub/drublic">GitHub</a>
-        </li>
-        <li class="social__link social__link--twitter">
-          <a href="//twitter.com/drublic" title="Twitter: @drublic">Twitter</a>
-        </li>
-        <li class="social__link social__link--google">
-          <a href="//plus.google.com/112019818423540363330?rel=author" title="Google+">Google+</a>
-        </li>
-      </ul>
-    </nav>
-
-    <a href="#menu" class="navigation__toggle js-navigation-toggle"
-        data-link="#!">Show Menu<span></span></a>
-
-    <div class="header__background"></div>
   </header>

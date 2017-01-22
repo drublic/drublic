@@ -5,7 +5,7 @@
  *  Mail: info@drublic.de
  *
  */
-(function ($) {
+(function () {
 
   'use strict';
 
@@ -29,35 +29,4 @@
   if (!candoSvg()) {
     document.documentElement.className += ' no-svg';
   }
-
-  /**
-   * Menu
-   */
-  $(document).on('click', '.js-navigation-toggle', function (event) {
-    event.preventDefault();
-
-    const $element = $(this);
-    const href = $element.attr('href');
-
-    $element
-      .attr('href', $element.attr('data-link'))
-      .attr('data-link', href);
-
-    $('.js-navigation').toggleClass('navigation--visible');
-
-    window.location.hash = href;
-  });
-
-  $(window).on('scroll', function () {
-    $('.navigation__toggle').toggleClass('navigation__toggle--active', window.scrollY > 342);
-  });
-
-  if (window.location.hash === '#menu') {
-    $('.js-navigation-toggle').trigger('click');
-  }
-
-  // Call hongkong
-  if ($.hongkong) {
-    $.hongkong();
-  }
-}(jQuery));
+}());

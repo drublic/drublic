@@ -20,6 +20,7 @@
 @import 'src/css/module/icon';
 @import 'src/css/module/image';
 @import 'src/css/module/testimonials';
+@import 'src/css/module/navigation';
 
 @import 'src/css/layout/header';
 @import 'src/css/layout/footer';
