@@ -1,0 +1,9 @@
+{
+  "title": "⚡ Transmit content from any Contentful type to Algolia indexes",
+  "date": "26.01.2017",
+  "abstract": "I've written a transmitter which collects data from [Contentful](https://www.contentful.com/) and indexes it in [Algolia](https://www.algolia.com/). It is written in Node.js and really simple.<br> The application syncs content between Contentful and Algolia. You can configure the service to run with Drafts (Preview API) from Contentful and put it in different indexes in Algolia.",
+  "meta-title": "",
+  "meta-description": "A Node.js transmitter which collects data from Contentful and indexes it in Algolia.",
+  "link": false,
+  "hidden": false
+}
