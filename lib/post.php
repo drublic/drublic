@@ -37,6 +37,7 @@
           $files[] = $entry;
         }
       }
+
       rsort($files);
 
       foreach ($files as $file) {
