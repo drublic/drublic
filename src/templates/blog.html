@@ -10,14 +10,14 @@
   <?php for ($i = 0; $i < count($posts); $i++) : ?>
     <?php $post = $posts[$i]; ?>
     <?php if ($i < 5) : ?>
-      <article class="posts__post" data-fx-fade itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      <article class="posts__post" data-fx-fade>
         <header class="posts__post__header">
           <h2 itemprop="title">
-            <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/" itemprop="url">
+            <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/">
               <?php print $post['data']->title; ?>
             </a>
           </h2>
-          <time class="posts__date" itemprop="datePublished"><?php print $post['data']->date; ?></time>
+          <time class="posts__date"><?php print $post['data']->date; ?></time>
         </header>
 
         <?php print $parser->defaultTransform($post['data']->abstract); ?>
@@ -30,11 +30,11 @@
       <?php if ($i == 5) : ?>
         <ul class="posts__list">
       <?php endif; ?>
-      <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/" itemprop="url">
+      <li>
+        <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/">
           <span itemprop="title"><?php print $post['data']->title; ?></span>
 
-          <time class="posts__date" itemprop="datePublished">
+          <time class="posts__date">
             <?php print $post['data']->date; ?>
           </time>
         </a>

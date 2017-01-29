@@ -37,6 +37,18 @@
   border-top: 1px solid var(--border-color);
 }
 
+.posts__list--item {
+  display: block;
+  border-bottom-color: var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.posts__list--item::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .posts__list--bound {
   margin-top: 1rem;
 }
