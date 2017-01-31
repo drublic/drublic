@@ -1,7 +1,7 @@
 Lately I have been using [Heroku](https://heroku.com/) for all projects I needed to deploy.
 I like Heroku for being easy to use and fast to set up.
 
-Here are 5 steps how to quickly set up your application on Heroku.
+Here are 6 steps how to quickly set up your application on Heroku.
 
 ## 1. Create a new Heroku Application
 
@@ -71,7 +71,25 @@ Or for an Apache Server serving your PHP app:
 Place the `Procfile` in your application’s root directory and add the according command.
 You can [read more about the Procfile in the docs](https://devcenter.heroku.com/articles/procfile).
 
-## 5. Push to Heroku
+## 5. Set up the correct Port
+
+In order for the application to work it is necessary to subscribe to a specific port with your webserver which is provided by Heroku. It is stored in the environment variable `PORT`.
+
+So in case you are using Node's `http` module you can do this as follows in your `server.js` file:
+
+    // Use the environment variable or use a given port
+    const PORT = process.env.PORT || 8080;
+
+    // Create a server, uses `handleRequest` which is function that takes
+    // care of providing requested data
+    const server = http.createServer(handleRequest);
+
+    // Start the server
+    server.listen(PORT, () => {
+      console.log('Server listening on: http://localhost:%s', PORT);
+    });
+
+## 6. Push to Heroku
 
 Now you can easily push to Heroku running the following command.
 
