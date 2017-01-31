@@ -4,6 +4,7 @@
 
     $tree = explode('/', $page_action);
     $title = 'drublic &mdash; Front-end Architecture - Hans Christian Reinl, Cologne';
+    $short_title = 'drublic &mdash; Front-end Architecture';
 
     $description = 'Front-end Development &amp; Architecture, Hans Christian Reinl - Projects: INIT, HTML5 Boilerplate, Working Draft - CSS, JavaScript - Scrum';
 
@@ -14,12 +15,14 @@
 
       if (isset($post['data'])) {
         if (isset($post['data']->{'meta-title'}) && $post['data']->{'meta-title'} != '') {
-          $title = $post['data']->{'meta-title'} . ' | Blog';
+          $title = $post['data']->{'meta-title'} . ' | Blog | ' . $short_title;
+        } else if (isset($post['data']->{'title'}) && $post['data']->{'title'} != '') {
+          $title = $post['data']->{'title'} . ' | Blog | ' . $short_title;
         } else {
           $title = 'Blog | ' . $title;
         }
 
-        $description = $post['data']->{'meta-description'} . ' | ';
+        $description = $post['data']->{'meta-description'};
       }
     } else if ($page_action != 'index') {
       $title = get_page_properties()->title . ' | ' . $title;
