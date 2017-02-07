@@ -1,7 +1,4 @@
 ## Redirects
-Redirect permanent http://drublic.herokuapp.com/ https://drublic.de/
-Redirect permanent https://drublic.herokuapp.com/ https://drublic.de/
-
 Redirect permanent /@  https://twitter.com/drublic
 Redirect permanent /~  https://github.com/drublic
 Redirect permanent /+  https://plus.google.com/+HansChristianReinl/posts
@@ -399,6 +396,10 @@ AddDefaultCharset utf-8
     RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
     RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+
+    # Redirects
+    RewriteCond %{HTTP_HOST} ^drublic.herokuapp.com$
+    RewriteRule (.*)$ https://drublic.de/$1 [R=301,L]
 </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
