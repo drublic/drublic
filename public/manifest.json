@@ -3,9 +3,9 @@
   "name": "drublic – Front-end Architecture",
   "icons": [
     {
-      "src":"logo.svg",
-      "sizes": "192x192",
-      "type": "image/svg"
+      "src":"/img/logo.png",
+      "sizes": "225x225",
+      "type": "image/png"
     }
   ],
   "start_url": "/?utm_source=homescreen",
