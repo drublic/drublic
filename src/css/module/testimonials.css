@@ -4,6 +4,7 @@
  * @define testimonial
  */
 .testimonials {
+  position: relative;
   background: #f8fafb;
   padding-bottom: 3rem;
 }
