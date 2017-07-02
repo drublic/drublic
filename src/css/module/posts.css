@@ -1,11 +1,11 @@
 .posts__post {
+  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-  overflow: hidden;
 }
 
-.posts__post:after {
+.posts__post::after {
   content: '\2693';
   position: absolute;
   left: 0;
@@ -86,6 +86,10 @@
   color: var(--copy-light);
   font-size: 0.9rem;
   padding-top: 2px;
+}
+
+.posts__post__readmore {
+  margin-top: 1rem;
 }
 
 /**

@@ -22,9 +22,11 @@
 
         <?php print $parser->defaultTransform($post['data']->abstract); ?>
 
-        <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/" class="button button--light button--right">
-          Read more
-        </a>
+        <div class="posts__post__readmore clearfix">
+          <a href="<?php print base_url(); ?>blog/<?php print $post['url']; ?>/" class="button button--light button--right">
+            Read more
+          </a>
+        </div>
       </article>
     <?php else : ?>
       <?php if ($i == 5) : ?>

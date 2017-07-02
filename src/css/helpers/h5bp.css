@@ -185,3 +185,13 @@ textarea {
 .centered {
   text-align: center;
 }
+
+/**
+ * Clearfix
+ */
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
