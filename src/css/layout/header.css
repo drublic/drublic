@@ -14,23 +14,23 @@
   max-width: 53rem;
   margin: 0 auto;
   padding: 2rem 2rem 4rem;
-  text-align: center;
 }
 
 .header__logo {
-  display: block;
+  float: left;
   width: 8rem;
   height: 8rem;
   background: url(/img/logo.svg);
   background-size: 100% auto;
   text-indent: -999em;
   border: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 2rem;
 }
 
-.header h1 {
-  margin: 2rem 0 0;
+.header__title {
+  margin: 1.5rem 0 0;
+  line-height: 1;
+  padding-bottom: 0.5rem;
 }
 
 .header p {
@@ -45,17 +45,13 @@
   font-size: 0.75rem;
 }
 
-@media screen and (max-width: 54em) {
+@media screen and (max-width: 36em) {
   .header__inner {
     padding-bottom: 2rem;
   }
-}
 
-@media screen and (max-width: 35em) {
   .header__logo {
-    width: 4rem;
-    height: 3.5rem;
-    left: 0;
+    display: none;
   }
 }
 
