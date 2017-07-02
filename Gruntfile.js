@@ -39,7 +39,6 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('dev', [
     'jshint',
-    'pleeease:dev',
     'imagemin',
     'copy',
     'concat:js'
@@ -53,7 +52,6 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('build', [
     'jshint',
-    'pleeease:build',
     'imagemin',
     'copy',
     'concat:jsmin',

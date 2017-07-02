@@ -11,7 +11,8 @@ const atImport = require('postcss-import');
 const customProperties = require('postcss-custom-properties');
 
 const srcPath = `src/css/main.css`;
-const destPath = `public/dist/${pkg.version}/c.css`;
+const destDir = `public/dist/${pkg.version}/`;
+const destPath = `${destDir}c.css`;
 
 const processors = [
   atImport,
@@ -20,6 +21,10 @@ const processors = [
 ];
 
 const css = fs.readFileSync(srcPath, 'utf8');
+
+if (!fs.existsSync(destDir)) {
+  fs.mkdirSync(destDir, '0777', true);
+}
 
 postcss(processors)
   .process(css, {
