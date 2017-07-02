@@ -10,9 +10,8 @@ const nano = require('cssnano');
 const atImport = require('postcss-import');
 const customProperties = require('postcss-custom-properties');
 
-const srcPath = `public/dist/${pkg.version}/`;
-const destPath = `public/dist/${pkg.version}/`;
-const filename = 'c.css';
+const srcPath = `src/css/main.css`;
+const destPath = `public/dist/${pkg.version}/c.css`;
 
 const processors = [
   atImport,
@@ -20,17 +19,17 @@ const processors = [
   autoprefixer
 ];
 
-const css = fs.readFileSync(srcPath + filename, 'utf8');
+const css = fs.readFileSync(srcPath, 'utf8');
 
 postcss(processors)
   .process(css, {
-    from: srcPath + filename,
-    to: destPath + filename
+    from: srcPath,
+    to: destPath
   })
   .then((result) => {
-    fs.writeFileSync(destPath + filename, result.css);
+    fs.writeFileSync(destPath, result.css);
 
     if (result.map) {
-      fs.writeFileSync(destPath + filename + '.map', result.map);
+      fs.writeFileSync(destPath + '.map', result.map);
     }
   });

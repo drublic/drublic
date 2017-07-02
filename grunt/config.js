@@ -40,16 +40,6 @@ module.exports = {
     dest: 'public/dist/<%= pkg.version %>/c.js'
   },
 
-  // CSS files
-  css: {
-    files: [
-      'src/css/**/*.css'
-    ],
-    src: 'src/css/main.css',
-    devDest: 'public/dist/<%= pkg.version %>/c.css',
-    dest: 'public/dist/<%= pkg.version %>/c.css'
-  },
-
   // Images
   img: {
     src: 'src/img/',
