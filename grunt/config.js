@@ -11,6 +11,7 @@ var jsSrc = [
   'src/js/zoom.js',
   'src/js/effects.js',
   'src/js/form.js',
+  'src/js/toc.js',
   'src/js/main.js',
   'src/js/scroll-top.js',
   'src/js/testimonial.js',
