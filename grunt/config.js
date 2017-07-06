@@ -7,6 +7,8 @@ var pkg = require('../package');
 var jsSrc = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/css-modal/modal.js',
+  'src/js/transition.js',
+  'src/js/zoom.js',
   'src/js/effects.js',
   'src/js/form.js',
   'src/js/main.js',
@@ -28,6 +30,7 @@ module.exports = {
     'Gruntfile.js',
     'src/**/*.js',
     '!src/components/**/*.js',
+    '!src/js/transtion.js',
     'test/*.js',
     'test/specs/**/*.js'
   ],

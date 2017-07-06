@@ -18,6 +18,11 @@
   margin: 1rem 2rem 1.5rem -4rem;
 }
 
+.image--large,
+.image--large {
+  max-width: 66.66%;
+}
+
 .image__caption {
   border-bottom: 1px solid var(--border-color);
   padding: 0.75rem 1rem;
@@ -43,6 +48,11 @@
 
 .image__caption__copywrite::before {
   content: '\00a9\a0';
+}
+
+.image--has-frame {
+  box-shadow: 0 0 0 1px var(--border-color);
+  padding-bottom: 1px;
 }
 
 

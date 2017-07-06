@@ -21,6 +21,7 @@
 @import 'module/image.css';
 @import 'module/testimonials.css';
 @import 'module/navigation.css';
+@import 'module/zoom.css';
 
 @import 'layout/header.css';
 @import 'layout/footer.css';
