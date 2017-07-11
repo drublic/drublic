@@ -15,6 +15,11 @@
   cursor: -webkit-zoom-out;
   cursor: -moz-zoom-out;
 }
+
+.zoom-img .image__caption {
+  opacity: 0;
+}
+
 .zoom-overlay {
   z-index: 420;
   background: #fff;
