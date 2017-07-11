@@ -30,6 +30,11 @@
     "content": "templates/post.html"
   },
   {
+    "title": "What I want to do",
+    "action": "what-i-want-to-do",
+    "content": "templates/what-i-want-to-do.html"
+  },
+  {
     "title": "Error",
     "action": "error",
     "content": "templates/error.html"
