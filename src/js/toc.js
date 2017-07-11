@@ -1,4 +1,6 @@
 (function ($) {
+  'use strict';
+
   var getLink = function (item) {
     return '<a href="#' + item.url + '">' + item.title + '</a>';
   };
@@ -17,7 +19,7 @@
       list += '</li>';
     });
 
-    list += '</ul>'
+    list += '</ul>';
 
     return list;
   };
