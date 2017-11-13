@@ -5,6 +5,7 @@
   line-height: 2;
   transition: 0.2s;
   text-align: left;
+  background: var(--navigation-background);
 }
 
 .navigation__menu {
@@ -20,17 +21,16 @@
 }
 
 .navigation__menu li.is-active a {
-  background-color: #fff;
-  color: var(--color);
+  border-bottom-color: var(--secondary-color);
 }
 
 .navigation__menu a {
   display: block;
   color: #fff;
-  padding: 0.75em 2em;
+  padding: 1.25em 2em 1em;
   text-decoration: none;
   transition: 0.15s;
-  border-bottom: 0;
+  border-bottom: 4px solid var(--navigation-background);
   font-size: 1rem;
 }
 
@@ -39,8 +39,9 @@
 }
 
 .navigation__menu a:hover {
-  background-color: #fff;
-  color: var(--color);
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
 }
 
 .navigation__menu a.visuallyhidden {

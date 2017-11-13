@@ -5,7 +5,7 @@
  */
 .testimonials {
   position: relative;
-  background: #f8fafb;
+  background: var(--color--background--light);
   padding-bottom: 3rem;
 }
 

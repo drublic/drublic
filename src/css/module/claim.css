@@ -13,6 +13,8 @@
 .claim__me {
   float: left;
   height: 13rem;
+  margin-top: 1rem;
   margin-right: 3rem;
+  margin-bottom: 1rem;
   border-radius: 50%;
 }
