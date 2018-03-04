@@ -61,7 +61,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="<?php print base_url(); ?>dist/<?php print get_version(); ?>/c.css">
+<style>
+  <?php
+    $file = dirname(__FILE__) . '/../../public/dist/' . get_version() . '/c.css';
+    include($file);
+  ?>
+</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700">
 
 <meta name="application-name" content="drublic">

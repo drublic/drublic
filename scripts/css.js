@@ -26,6 +26,10 @@ if (!fs.existsSync(destDir)) {
   fs.mkdirSync(destDir, '0777', true);
 }
 
+if (process.env.NODE_ENV === 'production') {
+  processors.push(nano);
+}
+
 postcss(processors)
   .process(css, {
     from: srcPath,
