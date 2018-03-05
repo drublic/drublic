@@ -1,25 +1,20 @@
 /**
  * Scroll top element
  */
-import jQuery from 'jquery'
+import $ from 'jquery'
+var $window = $(window);
 
-(function ($) {
-  'use strict';
+var onScroll = function () {
+  var scrolled = $window.scrollTop();
+  var windowHeight = $window.height();
 
-  var $window = $(window);
+  $('[data-scroll-top]').toggleClass('is-hidden', scrolled < windowHeight);
+};
 
-  var onScroll = function () {
-    var scrolled = $window.scrollTop();
-    var windowHeight = $window.height();
+$window.on('scroll', onScroll);
 
-    $('[data-scroll-top]').toggleClass('is-hidden', scrolled < windowHeight);
-  };
-
-  $window.on('scroll', onScroll);
-
-  $(document).on('click', '[data-scroll-top]', function () {
-    $('html, body').animate({
-      'scrollTop': 0
-    }, 400);
-  });
-}(jQuery));
+$(document).on('click', '[data-scroll-top]', function () {
+  $('html, body').animate({
+    'scrollTop': 0
+  }, 400);
+});
