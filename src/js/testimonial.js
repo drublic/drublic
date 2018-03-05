@@ -1,6 +1,8 @@
 /**
  * Slider for testimonial section
  */
+import jQuery from 'jquery'
+
 (function ($) {
   'use strict';
 

@@ -1,6 +1,8 @@
 /**
  * Scroll top element
  */
+import jQuery from 'jquery'
+
 (function ($) {
   'use strict';
 
