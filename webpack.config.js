@@ -6,7 +6,7 @@ module.exports = {
   mode: 'production',
   entry: {
     main: [
-      path.resolve(__dirname, 'node_modules/jquery/dist/jquery.min.js'),
+      path.resolve(__dirname, 'node_modules/jquery/dist/jquery.js'),
       path.resolve(__dirname, 'node_modules/css-modal/modal.js'),
       path.resolve(__dirname, 'src/js/transition.js'),
       path.resolve(__dirname, 'src/js/zoom.js'),
