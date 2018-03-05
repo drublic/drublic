@@ -35,6 +35,7 @@
   ],
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-loader": "^7.1.3",
     "cpx": "^1.5.0",
     "css-modal": "^1.3.0",
     "cssnano": "^3.8.1",
