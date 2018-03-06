@@ -9,7 +9,7 @@ This is about if they have a specific style of writing code, what is the opinion
 This behaviour can be broken down into three levels that I have experienced so far.
 
 ## 1. Follow no rule, get it out
-The the beginning of a programmers career one doesn't think about test driven development, coding guidelines, coding style. Just get that damn thing out of the door.
+In the beginning of a programmer’s career one does not think about test driven development, coding guidelines, coding style. Just get that damn thing out of the door. Finish the project.
 
 ## 2. Follow one specific rule
 With more experience you develop your own subset of given rules that you like to stick to. You want your co-works to adept them, to stick to given patterns and guidelines. You have a distinct opinion about whether to use tabs or spaces in your code.
@@ -19,7 +19,7 @@ The more projects you see, the more you don't care about specific rules. You kno
 It's not important if you use spaces or tabs. At least you should have a common sense about it throughout your team.
 
 ## 4. … I don't know what will come
-Well, I do not know the next state to advance to. I think I am at stage three at the moment. Are you more experienced? What will be next for me?
+I do not know the next state to advance to. I think I am at stage three at the moment. Are you more experienced? What will be next for me?
 
 <p class="image__caption" markdown="1">
   &copy; Photo by [EJ Yao](https://unsplash.com/photos/D46mXLsQRJw) on
