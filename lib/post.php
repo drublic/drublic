@@ -57,25 +57,22 @@
         } else {
           if (is_dir($path . '/' . $file)) {
             if (($single && $url == $current_post) || $single === false) {
-              $entries[] = array(
-                'post' => $file,
-                'url' => $url,
-                'data' => getJsonContents($path . '/' . $file . '/data.json'),
-                'path' => '/' . $file . '/'
-              );
+              $data = getJsonContents($path . '/' . $file . '/data.json');
+
+              if ((!isset($data->hidden) || $data->hidden == false) || $config['preview'] == true) {
+                $entries[] = array(
+                  'post' => $file,
+                  'url' => $url,
+                  'data' => $data,
+                  'path' => '/' . $file . '/'
+                );
+              }
             }
           }
         }
       }
 
       closedir($handle);
-    }
-
-    // Hide hidden entries
-    foreach ($entries as $key => $entry) {
-      if (isset($entry['data']->hidden) && $entry['data']->hidden == true && $config['preview'] === false) {
-        array_splice($entries, $key, 1);
-      }
     }
 
     return $entries;
