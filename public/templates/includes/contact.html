@@ -1,1 +1,110 @@
-<section class="contact modal--fade" id=contact tabindex=-1 role=dialog aria-labelledby=contact-label aria-hidden=true><div class=modal-inner><header><h2 id=contact-label>Contact</h2></header><div class=modal-content><form class=form name=form autocomplete=off method=post action=#contact><p>Please contact me if you have any question or want me to work for you.</p><p>You can also just send me an email to <a href=mailto:info@drublic.de>info@drublic.de</a>.</p><p class=form__nojs>Please activate JavaScript to send a contact request.</p><fieldset><label for=form-name>Name</label><input id=form-name name=form-name value="" maxlength=255 required> <span class=form__validity title="This field is required.">This field is required.</span></fieldset><fieldset><label for=form-email>Email address</label><input id=form-email name=form-email type=email value="" maxlength=255 required> <span class=form__validity title="This field is required.">This field is required.</span></fieldset><fieldset><label for=form-website>Website</label><input id=form-website name=form-website type=url value="" maxlength=255> <span class=form__validity title="Please add http:// to your URL.">Please add http:// to your URL.</span></fieldset><fieldset><label for=form-message>Message</label><textarea id=form-message name=form-message spellcheck=true rows=10 cols=50 required></textarea><span class=form__validity title="This field is required.">This field is required.</span></fieldset><fieldset><input class="form__save button--primary" name=save type=submit value=Submit><p class=form__message>Please fill out all required files.</p></fieldset><div class=hidden><label for=comment>Do Not Fill This Out</label><textarea name=comment id=comment></textarea><input type=url name=url></div></form></div></div><a href=#! class=modal-close title="Close this modal" data-close=Close data-dismiss=modal>&times;</a></section><section class="contact modal--fade" id=contact/thanks tabindex=-1 role=dialog aria-labelledby=contact-thanks aria-hidden=true><div class=modal-inner><header><h2 id=contact-thanks-label>Thank you for contacting me</h2></header><div class=modal-content><div class=contact--thanks__error><p>There has been an error while sending the form. Sorry.</p><p>Please <a href=#contact>go back</a> and check the data you provided.</p><p class=centered><a href=#contact class="button contact--thanks__back" title="Please go back and check the data">Go back&hellip;</a></p></div><div class=contact--thanks__success><p>I will be in touch very soon. Meanwhile please enjoy this GIF.</p><video src=img/thanks.mp4 class=contact--thanks__gif loop><p>Phil from Modern Family saying Thank You!</p></video><h3 class=centered>Check out more</h3><p class=centered><a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">View my work</a> or <a href=//github.com/drublic title="Open Source work I am involved in">Visit my GitHub portfolio</a></p></div></div><footer><p class="centered contact--thanks__follow"><a href=//twitter.com/drublic class=twitter-follow-button data-show-count=false data-size=large>Follow @drublic</a></p></footer></div><a href=#! class=modal-close title="Close this modal" data-close=Close data-dismiss=modal>&times;</a></section>
+<!-- Contact -->
+<section class="contact modal--fade"
+    id="contact"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="contact-label"
+    aria-hidden="true">
+  <div class="modal-inner">
+    <header>
+      <h2 id="contact-label">Contact</h2>
+    </header>
+
+    <div class="modal-content">
+      <form class="form" name="form" autocomplete="off" method="post" action="#contact">
+
+        <p>Please contact me if you have any question or want me to work for you.</p>
+        <p>You can also just send me an email to <a href="mailto:info@drublic.de">info@drublic.de</a>.</p>
+
+        <p class="form__nojs">Please activate JavaScript to send a contact request.</p>
+
+        <fieldset>
+          <label for="form-name">Name</label>
+          <input id="form-name" name="form-name" type="text" value="" maxlength="255" required="">
+          <span class="form__validity" title="This field is required.">This field is required.</span>
+        </fieldset>
+
+        <fieldset>
+          <label for="form-email">Email address</label>
+          <input id="form-email" name="form-email" type="email" value="" maxlength="255" required="">
+          <span class="form__validity" title="This field is required.">This field is required.</span>
+        </fieldset>
+
+        <fieldset>
+          <label for="form-website">Website</label>
+          <input id="form-website" name="form-website" type="url" value="" maxlength="255">
+          <span class="form__validity" title="Please add http:// to your URL.">Please add http:// to your URL.</span>
+        </fieldset>
+
+        <fieldset>
+          <label for="form-message">Message</label>
+          <textarea id="form-message" name="form-message" spellcheck="true" rows="10" cols="50" required=""></textarea>
+          <span class="form__validity" title="This field is required.">This field is required.</span>
+        </fieldset>
+
+        <fieldset>
+          <input class="form__save button button--primary" name="save" type="submit" value="Submit">
+          <p class="form__message">Please fill out all required files.</p>
+        </fieldset>
+
+        <div class="hidden">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment"></textarea>
+          <input type="url" name="url">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">&times;</a>
+</section>
+
+<section class="contact modal--fade"
+    id="contact/thanks"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="contact-thanks"
+    aria-hidden="true">
+  <div class="modal-inner">
+    <header>
+      <h2 id="contact-thanks-label">Thank you for contacting me</h2>
+    </header>
+
+    <div class="modal-content">
+      <div class="contact--thanks__error">
+        <p>There has been an error while sending the form. Sorry.</p>
+        <p>Please <a href="#contact">go back</a> and check the data you provided.</p>
+        <p class="centered">
+          <a href="#contact" class="button contact--thanks__back"
+              title="Please go back and check the data">Go back&hellip;</a>
+        </p>
+      </div>
+
+      <div class="contact--thanks__success">
+        <p>I will be in touch very soon. Meanwhile please enjoy this GIF.</p>
+
+        <video src="img/thanks.mp4" class="contact--thanks__gif" loop>
+          <p>Phil from Modern Family saying Thank You!</p>
+        </video>
+
+        <h3 class="centered">Check out more</h3>
+
+        <p class="centered">
+          <a href="<?php print base_url(); ?>portfolio/"
+              title="View some of the work I do">View my work</a> or
+          <a href="//github.com/drublic"
+              title="Open Source work I am involved in">Visit my GitHub portfolio</a>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p class="centered contact--thanks__follow">
+        <a href="//twitter.com/drublic" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @drublic</a>
+      </p>
+    </footer>
+  </div>
+
+  <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">&times;</a>
+</section>
+

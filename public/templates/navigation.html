@@ -1,1 +1,24 @@
-<nav class="navigation js-navigation" id=menu role=navigation><a href=#content class=visuallyhidden>Skip to Content</a><ul id=navigation class=navigation__menu><li class=<?php set_navigation_item_active('index'); ?>><a href=<?php print base_url(); ?> title="drublic - Front-End Architecture">Home</a></li><li class=<?php set_navigation_item_active('resume'); ?>><a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a></li><li class=<?php set_navigation_item_active('blog'); ?>><a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a></li><li class="<?php set_navigation_item_active('portfolio'); ?> navigation__menu__hidden-mobile"><a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a></li><li class=navigation__menu__hidden-mobile><a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li><li class=navigation__menu__hidden-mobile><a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a></li></ul></nav>
+<nav class="navigation js-navigation" id="menu" role="navigation">
+  <a href="#content" class="visuallyhidden">Skip to Content</a>
+
+  <ul id="navigation" class="navigation__menu">
+    <li class="<?php set_navigation_item_active('index'); ?>">
+      <a href="<?php print base_url(); ?>" title="drublic - Front-End Architecture">Home</a>
+    </li>
+    <li class="<?php set_navigation_item_active('resume'); ?>">
+      <a href="<?php print base_url(); ?>resume/" title="Read more about me">About</a>
+    </li>
+    <li class="<?php set_navigation_item_active('blog'); ?>">
+      <a href="<?php print base_url(); ?>blog/" title="Get some cutting edge goodness">Blog</a>
+    </li>
+    <li class="<?php set_navigation_item_active('portfolio'); ?> navigation__menu__hidden-mobile">
+      <a href="<?php print base_url(); ?>portfolio/" title="View some of the work I do">Portfolio</a>
+    </li>
+    <li class="navigation__menu__hidden-mobile">
+      <a href="<?php print base_url(); ?>#hire-me" title="I do client work and propably would love to work with you">Hire me</a>
+    </li>
+    <li class="navigation__menu__hidden-mobile">
+      <a href="<?php print base_url(); ?>#contact" title="Contact me if you have any questions">Contact</a>
+    </li>
+  </ul>
+</nav>

@@ -13,9 +13,9 @@
     "css": "node ./scripts/css.js",
     "copy:images": "cpx 'src/img/**/*' public/img/",
     "copy:js": "cpx 'src/js/**/*' public/dist/",
-    "copy:feed": "cpx 'src/templates/**/*.xml' public/templates/",
+    "copy:templates": "cpx 'src/templates/**' public/templates/",
     "copy:posts": "cpx 'src/posts/**/*.{png,jpg,jpeg,svg}' public/posts/",
-    "copy": "yarn copy:images; yarn copy:js; yarn copy:js; yarn copy:feed; yarn copy:posts",
+    "copy": "yarn copy:images; yarn copy:js; yarn copy:js; yarn copy:templates; yarn copy:posts",
     "js": "webpack",
     "build": "yarn css; yarn js; yarn copy"
   },
