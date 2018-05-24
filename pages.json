@@ -8,6 +8,10 @@
     "title": "About",
     "action": "resume",
     "content": "templates/resume.html"
+  }, {
+    "title": "Privacy",
+    "action": "privacy",
+    "content": "templates/privacy.html"
   },
   {
     "title": "Information page",
