@@ -15,7 +15,10 @@ export default () => {
       const posts: any[] = await getPosts();
 
       return res
-        .set("Content-Type", "application/xml; charset=utf-8")
+        .set({
+          "Content-Type": "application/xml; charset=utf-8",
+          "Cache-Control": `max-age=${60 * 60 * 24}`,
+        })
         .render("feed", {
           layout: false,
           ...templateData,

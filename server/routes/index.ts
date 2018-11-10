@@ -10,7 +10,7 @@ let posts: any[];
 
 const withPosts = (templateData: TemplateDataInterface) => ({
   ...templateData,
-  posts
+  posts,
 });
 
 const getPageController = (page: PageInterface): void => {
@@ -47,12 +47,20 @@ const getPageController = (page: PageInterface): void => {
         });
       }
       if (page.action === "/") {
-        return res.render(page.content, withPosts(templateData))
+        return res
+          .set({
+            "Cache-Control": `max-age=${60 * 60 * 24}`,
+          })
+          .render(page.content, withPosts(templateData));
       }
 
       // Normal page render
       try {
-        return res.render(page.content, templateData);
+        return res
+          .set({
+            "Cache-Control": `max-age=${60 * 60 * 24}`,
+          })
+          .render(page.content, templateData);
       } catch (error) {
         return renderError(res, templateData);
       }
