@@ -8,7 +8,7 @@
 </p>
 
 <figure class="image image--block" markdown="1">
-  ![](tooling.jpg)
+  ![](/assets/tooling.jpg)
 
 <figcaption class="image__caption image__caption--no-border" markdown="1">
   By cleaning up your front-end tool stack and it becomes easier to use it.
@@ -69,7 +69,7 @@ the end this is the success of developers and users of pre-processors which
 engage in the discussion about the specification.
 
 <figure class="image image--left" markdown="1">
-  ![](pleeease.png)
+  ![](/assets/pleeease.png)
 
 <figcaption class="image__caption" markdown="1">
   [Pleeease](http://pleeease.io/) is a CSS post-processor

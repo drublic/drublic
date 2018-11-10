@@ -1,23 +1,20 @@
 /**
  * Scroll top element
  */
-(function ($) {
-  'use strict';
+import $ from 'jquery'
+var $window = $(window);
 
-  var $window = $(window);
+var onScroll = function () {
+  var scrolled = $window.scrollTop();
+  var windowHeight = $window.height();
 
-  var onScroll = function () {
-    var scrolled = $window.scrollTop();
-    var windowHeight = $window.height();
+  $('[data-scroll-top]').toggleClass('is-hidden', scrolled < windowHeight);
+};
 
-    $('[data-scroll-top]').toggleClass('is-hidden', scrolled < windowHeight);
-  };
+$window.on('scroll', onScroll);
 
-  $window.on('scroll', onScroll);
-
-  $(document).on('click', '[data-scroll-top]', function () {
-    $('html, body').animate({
-      'scrollTop': 0
-    }, 400);
-  });
-}(jQuery));
+$(document).on('click', '[data-scroll-top]', function () {
+  $('html, body').animate({
+    'scrollTop': 0
+  }, 400);
+});

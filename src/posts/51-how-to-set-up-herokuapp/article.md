@@ -10,13 +10,13 @@ To start with a new application, let's register or log into Heroku.
 After that you can easily create a new application from your Dashboard or visit [dashboard.heroku.com/new](https://dashboard.heroku.com/new).
 
 <figure class="image image--block" markdown="1">
-  ![](create.png)
+  ![](/assets/create.png)
 </figure>
 
 Now let's add the name and region of the application that you want to publish. I will call my application `drublic-test`.
 
 <figure class="image image--block" markdown="1">
-  ![](add.png)
+  ![](/assets/add.png)
 </figure>
 
 Apart from that we should create a `package.json` file within our application in order to identify as Node.js application.
@@ -26,7 +26,7 @@ Apart from that we should create a `package.json` file within our application in
 After this we need to set up our application and a Git repository. The easiest way to deploy to Heroku is using GitHub: Each push can be automatically built and deployed. Continuous deployment for the win 🎉.
 
 <figure class="image image--block" markdown="1">
-  ![](done.png)
+  ![](/assets/done.png)
 </figure>
 
 If you don’t want to use GitHub you can create a new remote repository and push to this repo to trigger a build and deployment.

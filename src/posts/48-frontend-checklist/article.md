@@ -23,7 +23,7 @@ If you want to know more about about what is going wrong with your website and h
   </a>
 </p>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">👆I&#39;ve published a checklist for front-end related website reviews.<a href="https://t.co/0P8SA1zbzF">https://t.co/0P8SA1zbzF</a></p>&mdash; Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/status/806052812857688065">December 6, 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">👆I&#39;ve published a checklist for front-end related website reviews.<a href="https://t.co/0P8SA1zbzF">https://t.co/0P8SA1zbzF</a></p>– Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/status/806052812857688065">December 6, 2016</a></blockquote>
 
 ## Update: 29. January 2017
 

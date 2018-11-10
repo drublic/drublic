@@ -1,0 +1,26 @@
+{{> blog-message}}
+
+<main id="main" class="main container" role="main"
+  itemscope itemtype="http://schema.org/Blog"
+>
+
+
+  {{#each (slice posts 0 5)}}
+    {{> article-teaser
+      title=this.title
+      slug=this.slug
+      abstract=this.abstract
+      date=this.date
+    }}
+  {{/each}}
+
+  <ul class="posts__list">
+    {{#each (slice posts 5 -1)}}
+      {{> article-teaser--small
+        title=this.title
+        slug=this.slug
+        date=this.date
+      }}
+    {{/each}}
+  </ul>
+</main>

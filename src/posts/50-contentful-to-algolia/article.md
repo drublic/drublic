@@ -4,7 +4,7 @@
 
 A couple of days ago I asked the community if there would be any interest of an Contentful-to-Algolia transmitter.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I&#39;ve written an indexer for bringing <a href="https://twitter.com/contentful">@contentful</a> data to <a href="https://twitter.com/algolia">@algolia</a>. Would that be of any interest for anyone?</p>&mdash; Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/status/819500423505711105">January 12, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I&#39;ve written an indexer for bringing <a href="https://twitter.com/contentful">@contentful</a> data to <a href="https://twitter.com/algolia">@algolia</a>. Would that be of any interest for anyone?</p>– Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/status/819500423505711105">January 12, 2017</a></blockquote>
 
 Reactions were coming in so I did the step and sliced out a module of my transmitter application.
 
@@ -71,4 +71,4 @@ If you use either of the two tools, I would be glad to receive some feedback abo
 
 If you are using it in your project please let me know.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">⚡️ Transmit content from any <a href="https://twitter.com/contentful">@contentful</a> type to <a href="https://twitter.com/algolia">@algolia</a> indexes - I&#39;ve published my JS module for Node.<a href="https://t.co/TLJBB10RAx">https://t.co/TLJBB10RAx</a></p>&mdash; Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/status/820901928423059457">January 16, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">⚡️ Transmit content from any <a href="https://twitter.com/contentful">@contentful</a> type to <a href="https://twitter.com/algolia">@algolia</a> indexes - I&#39;ve published my JS module for Node.<a href="https://t.co/TLJBB10RAx">https://t.co/TLJBB10RAx</a></p>– Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/status/820901928423059457">January 16, 2017</a></blockquote>

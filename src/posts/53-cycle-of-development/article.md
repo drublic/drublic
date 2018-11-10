@@ -1,5 +1,5 @@
 <figure class="image image--block" markdown="1">
-  ![](header.jpg)
+  ![](/assets/header.jpg)
 </figure>
 
 For 10 years now I do software development, mostly frontend related work but lately more and more backend. In my day to day job I recognized a pattern of how developers feel about writing code.

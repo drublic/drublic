@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{title}}</title>
+  <link href="{{baseUrl}}/feed" rel="self"/>
+  <link href="{{baseUrl}}/"/>
+  <id>{{baseUrl}}</id>
+  <author>
+    <name>Hans Christian Reinl</name>
+    <email>info@drublic.de</email>
+  </author>
+
+  {{#each posts}}
+    <entry>
+      <title>{{this.title}}</title>
+      <link href="{{baseUrl}}/blog/{{this.slug}}/"/>
+      <updated>{{this.date}}T12:00:00+02:00</updated>
+      <id>{{baseUrl}}/blog/{{this.slug}}/</id>
+      <content><![CDATA[
+        {{#if abstract}}
+          {{{abstract}}}
+        {{else}}
+          Please read the article on my blog.
+        {{/if}}
+      ]]></content>
+    </entry>
+  {{/each}}
+</feed>

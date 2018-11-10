@@ -1,24 +1,22 @@
 /**
  * Fade in elements on scroll
  */
-(function ($) {
-  'use strict';
+import $ from 'jquery'
 
-  var $window = $(window);
+var $window = $(window);
 
-  var revealOnScroll = function () {
-    var scrolled = $window.scrollTop();
-    var windowHeight = $window.height();
+var revealOnScroll = function () {
+  var scrolled = $window.scrollTop();
+  var windowHeight = $window.height();
 
-    $('[data-fx-fade]').each(function () {
-      var $element = $(this);
-      var offsetTop = $element.offset().top;
+  $('[data-fx-fade]').each(function () {
+    var $element = $(this);
+    var offsetTop = $element.offset().top;
 
-      if (scrolled + windowHeight > offsetTop) {
-        $element.attr('data-fx-fade', 'in');
-      }
-    });
-  };
+    if (scrolled + windowHeight > offsetTop) {
+      $element.attr('data-fx-fade', 'in');
+    }
+  });
+};
 
-  $window.on('scroll', revealOnScroll).trigger('scroll');
-}(jQuery));
+$window.on('scroll', revealOnScroll).trigger('scroll');

@@ -4,7 +4,7 @@ With this article I want to write about some problems I had and how I solved the
 
 
 <figure class="image image--block" markdown="1">
-  ![](problems.jpg)
+  ![](/assets/problems.jpg)
 
 <figcaption class="image__caption image__caption--no-border" markdown="1">
   <span class="image__caption__copywrite">https://unsplash.com/photos/FOsina4f7qM</span>
@@ -27,7 +27,7 @@ The goal of setting up my build structure is:
 ## npm vs. yarn
 
 <figure class="image image--left" markdown="1">
-  ![](yarn.svg)
+  ![](/assets/yarn.svg)
 
 <figcaption class="image__caption" markdown="1">
   [yarn](https://yarnpkg.com/): Fast, reliable, and secure dependency management.

@@ -19,10 +19,6 @@ var errorForm = function ($form, data) {
     .attr('disabled', false)
     .val('Submit again');
 
-  $.each(data.FieldErrors, function (element) {
-    console.log(element.ErrorText);
-  });
-
   // Normalize Thanks page
   $(document).on('click', '.contact--thanks__back', function () {
     $('.contact--thanks__error').hide();
@@ -39,10 +35,10 @@ $('.form').submit(function () {
     .attr('disabled', true)
     .val('Sending...');
 
-  $.post('?file=form', formData, function (data) {
-    if (data.success === 1) {
+  $.post('/api/contact', formData, function (data) {
+    if (data.success === true) {
       resetForm($form);
-    } else if (data.ErrorText) {
+    } else {
       errorForm($form, data);
       success = false;
     }

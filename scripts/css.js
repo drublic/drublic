@@ -17,17 +17,14 @@ const destPath = `${destDir}c.css`;
 const processors = [
   atImport,
   customProperties,
-  autoprefixer
+  autoprefixer,
+  nano
 ];
 
 const css = fs.readFileSync(srcPath, 'utf8');
 
 if (!fs.existsSync(destDir)) {
   fs.mkdirSync(destDir, '0777', true);
-}
-
-if (process.env.NODE_ENV === 'production') {
-  processors.push(nano);
 }
 
 postcss(processors)

@@ -3,7 +3,7 @@
 </p>
 
 <figure class="image image--block" markdown="1">
-  ![](keys.jpg)
+  ![](/assets/keys.jpg)
 </figure>
 
 The more projects I saw, the more I discovered patterns of not being productivity. And with that I don't mean the time you spend at the coffee machine, talking to your team mates or play table tennis to get a short break from all the things floating around your head. But what patterns than?

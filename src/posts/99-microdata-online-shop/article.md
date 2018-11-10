@@ -43,7 +43,7 @@ Schema.org claims that over 10 million sites use Structured Data on web pages.
 ## Structured Data on a Product Page
 
 <figure class="image image--has-frame image--left" markdown="1" data-action="zoom">
-  ![](page.png)
+  ![](/assets/page.png)
 </figure>
 
 So, let us examn a product page. I just took some sneaker that I like from Zalando. You can find a screenshot of the product on the left. As you can see the page is quite big. Most of the product data is visible and the user can identify it easily: product title, image(s), color, description, price, product rating.
@@ -65,7 +65,7 @@ I've got a basic example for you here.
 Products are often rated by users. This is how it looks on the example page:
 
 <figure class="image image--has-frame image--block" markdown="1" data-action="zoom">
-  ![](page-rating.png)
+  ![](/assets/page-rating.png)
 </figure>
 
 Google provides this rating in their search result list, if you implement Structured Data for it.
@@ -118,7 +118,7 @@ With [a breadcrumb list](https://schema.org/BreadcrumbList) it get’s easy to s
 Interesing here is the itemprop "position" which is responsible for the order of appearing links. Compare to this image.
 
 <figure class="image image--has-frame image--block" markdown="1">
-  ![](breadcrumb.png)
+  ![](/assets/breadcrumb.png)
 </figure>
 
 You can find a [code example here](https://github.com/drublic/structured-data/blob/master/breadcrumbList.html).
@@ -126,7 +126,7 @@ You can find a [code example here](https://github.com/drublic/structured-data/bl
 ## Testing
 
 <figure class="image image--large image--left" markdown="1" data-action="zoom">
-  ![](structured-data--error.png)
+  ![](/assets/structured-data--error.png)
 
 <figcaption class="image__caption" markdown="1">
   Always test. Here is a warning Google’s structured testing tool provides

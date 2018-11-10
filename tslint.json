@@ -1,0 +1,3 @@
+{
+  "extends": "./node_modules/@warhol/tsconfig/tslint.json"
+}
