@@ -2,14 +2,14 @@
   "name": "drublic",
   "title": "drublic",
   "description": "",
-  "version": "7.5.0",
+  "version": "8.0.0",
   "homepage": "https://drublic.de/",
   "repository": {
     "type": "git",
     "url": "git@github.com:drublic/vc.git"
   },
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/server/index.js",
     "start:dev": "nodemon server/index.ts",
     "ts:build": "rm -rf dist/ && tsc -p tsconfig.json",
     "css": "node ./scripts/css.js",

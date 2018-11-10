@@ -38,7 +38,7 @@ $('.form').submit(function () {
   $.post('/api/contact', formData, function (data) {
     if (data.success === true) {
       resetForm($form);
-    } else if (data.error) {
+    } else {
       errorForm($form, data);
       success = false;
     }

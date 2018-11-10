@@ -4,7 +4,7 @@ import * as pkg from "../../package.json";
 
 const printFile = (fileName: any): string => {
   const { version } = (pkg as any);
-  const filePath = path.resolve(__dirname, "../../public/dist/", version, fileName);
+  const filePath = path.resolve(process.cwd(), "public/dist/", version, fileName);
 
   try {
     const content: string = fs.readFileSync(filePath, "utf-8");
