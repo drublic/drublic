@@ -46,7 +46,7 @@ export const getTemplateData = (page?: PageInterface): TemplateDataInterface => 
     baseUrl: getData("baseUrl", page),
     currentUrl: getData("currentUrl", page),
     title: getData("title", page),
-    description: getData("getDescription", page),
+    description: getData("description", page),
     year: new Date().getFullYear(),
     isDev: process.env.NODE_ENV !== "production",
   };
