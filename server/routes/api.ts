@@ -54,6 +54,7 @@ Message: ${data.message}${data.website ? `\n\nWebsite: ${data.website}` : ""}
         return res.json(response).end();
 
       } catch (error) {
+        console.error(process.env)
         console.error(error, error.trace);
 
         return res.json({ success: false }).end();
