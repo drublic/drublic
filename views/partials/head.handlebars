@@ -34,8 +34,18 @@
 
 <style>{{{printFile "c.css"}}}</style>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<link
+  rel="preload"
+  href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700"
+  as="style"
+  onload="this.rel='stylesheet'"
+>
+<link
+  rel="preload"
+  href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
+  as="style"
+  onload="this.rel='stylesheet'"
+>
 
 <meta name="application-name" content="drublic">
 <meta name="theme-color" content="#316eae">
@@ -67,6 +77,6 @@
   });
 </script>
 
-<script src="{{baseUrl}}/dist/{{version}}/c.js" async></script>
+<script async src="{{baseUrl}}/dist/{{version}}/c.js"></script>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
