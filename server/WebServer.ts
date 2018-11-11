@@ -15,8 +15,6 @@ import feedRouter from "./routes/feed";
 import healthRoutes from "./routes/health";
 import indexRoutes from "./routes/index";
 
-import requireSslMiddleware from "./middlewares/requireSsl";
-
 import templateHelpers from "./templateHelpers";
 
 class WebServer extends EventEmitter {
@@ -41,8 +39,6 @@ class WebServer extends EventEmitter {
 
     app.engine("handlebars", this.createHandlebars().engine);
     app.set("view engine", "handlebars");
-
-    app.use(requireSslMiddleware);
 
     app.use(helmet());
     app.use(cors());
