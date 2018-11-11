@@ -64,8 +64,8 @@ const getPageController = (page: PageInterface): void => {
       } catch (error) {
         return renderError(res, templateData);
       }
-    }
-  )
+    },
+  );
 };
 
 export default async () => {

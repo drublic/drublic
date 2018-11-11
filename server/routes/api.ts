@@ -49,12 +49,14 @@ Message: ${data.message}${data.website ? `\n\nWebsite: ${data.website}` : ""}
         const response = await new Promise((resolve, reject) => {
           request
             .then((result: any) => resolve({ success: true }))
-            .catch((err: any) => reject({ success: false }));
+            .catch((err: any) => reject(err));
         });
         return res.json(response).end();
 
       } catch (error) {
-        return res.json(error).end();
+        console.error(error, error.trace);
+
+        return res.json({ success: false }).end();
       }
 
     },
