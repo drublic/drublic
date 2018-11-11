@@ -47,7 +47,6 @@ const getPageController = (page: PageInterface): void => {
         });
       }
       if (page.action === "/") {
-        console.log(templateData)
         return res
           .set({
             "Cache-Control": `max-age=${60 * 60 * 24}`,
