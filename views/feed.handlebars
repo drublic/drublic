@@ -11,9 +11,9 @@
   {{#each posts}}
     <entry>
       <title>{{this.title}}</title>
-      <link href="{{baseUrl}}/blog/{{this.slug}}/"/>
+      <link href="{{@root/baseUrl}}/blog/{{this.slug}}/"/>
       <updated>{{this.date}}T12:00:00+02:00</updated>
-      <id>{{baseUrl}}/blog/{{this.slug}}/</id>
+      <id>{{@root/baseUrl}}/blog/{{this.slug}}/</id>
       <content><![CDATA[
         {{#if abstract}}
           {{{abstract}}}
