@@ -28,6 +28,9 @@
     "name": "Hans Christian Reinl",
     "url": "http://drublic.de"
   },
+  "engines": {
+    "node": "10"
+  },
   "license": "MIT",
   "cacheDirectories": [
     "node_modules"
