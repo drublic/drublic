@@ -13,7 +13,7 @@
     "start:dev": "nodemon server/index.ts",
     "ts:build": "rm -rf dist/ && tsc -p tsconfig.json",
     "css": "node ./scripts/css.js",
-    "copy:images": "copyfiles 'src/img/**/*.{png,jpg,jpeg,svg}' --exclude 'src/img/' public/img/",
+    "copy:images": "copyfiles --exclude 'src/img/' 'src/img/**/*.{png,jpg,jpeg,svg}' public/img/",
     "copy:js": "copyfiles 'src/js/**/*' --exclude 'src/js/' public/dist/",
     "copy:assets": "copyfiles -f 'src/posts/**/*.{png,jpg,jpeg,svg}' --exclude 'src/posts/' public/assets/",
     "copy": "yarn copy:images; yarn copy:js; yarn copy:assets",
