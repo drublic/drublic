@@ -37,6 +37,10 @@
   border-top: 1px solid var(--border-color);
 }
 
+.posts__list--no-top {
+  margin-top: 0;
+}
+
 .posts__list--item {
   display: block;
   border-bottom-color: var(--border-color);

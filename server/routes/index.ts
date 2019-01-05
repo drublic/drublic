@@ -2,15 +2,20 @@ import { Request, Response, Router } from "express";
 import { PAGES, PageInterface } from "../../pages";
 import { getTemplateData, TemplateDataInterface } from "../data";
 import getPosts from "../lib/getPosts";
+import getWdPosts from "../lib/getWdPosts";
 import getPost from "../lib/getPost";
 import renderError from "../lib/renderError";
 
 const indexRoutes: Router = Router();
 let posts: any[];
+let wdPosts: any[];
 
-const withPosts = (templateData: TemplateDataInterface) => ({
-  ...templateData,
+const getPostsData = () => ({
   posts,
+});
+
+const getWdPostsData = () => ({
+  wdPosts,
 });
 
 const getPageController = (page: PageInterface): void => {
@@ -42,16 +47,23 @@ const getPageController = (page: PageInterface): void => {
         }
 
         return res.render(page.content, {
-          ...withPosts(templateData),
+          ...getPostsData(),
           post,
         });
       }
+
       if (page.action === "/") {
+        const data = {
+          ...templateData,
+          ...getPostsData(),
+          ...getWdPostsData(),
+        };
+
         return res
           .set({
             "Cache-Control": `max-age=${60 * 60 * 24}`,
           })
-          .render(page.content, withPosts(templateData));
+          .render(page.content, data);
       }
 
       // Normal page render
@@ -70,6 +82,7 @@ const getPageController = (page: PageInterface): void => {
 
 export default async () => {
   posts = await getPosts();
+  wdPosts = await getWdPosts();
 
   PAGES.forEach(getPageController);
 
