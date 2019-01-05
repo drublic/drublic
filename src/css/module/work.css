@@ -57,10 +57,14 @@
 }
 
 .work__clients {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   list-style: none;
   margin: 0;
   margin-left: -5rem;
   margin-right: -5rem;
+  margin-bottom: 5rem;
   padding: 0;
   text-align: center;
 }
@@ -72,10 +76,15 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.work__clients li {
-  display: inline-block;
+.work__clients__client {
+  display: flex;
+  align-items: center;
   max-width: 9rem;
   margin: 0.75rem;
+}
+
+.work__clients__client--large {
+  max-width: 12rem;
 }
 
 .work__clients a {
