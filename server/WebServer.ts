@@ -51,9 +51,9 @@ class WebServer extends EventEmitter {
     app.use(apiRoutes());
     app.use(serveStatic("public", {
       cacheControl: true,
-      maxAge: "1d",
+      maxAge: "365d",
       setHeaders: (res: any) => {
-        res.setHeader("Cache-Control", `public, max-age=${60 * 60 * 24}`);
+        res.setHeader("Cache-Control", `public, max-age=${60 * 60 * 24 * 365}`);
       },
     }));
 
