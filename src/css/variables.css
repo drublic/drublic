@@ -10,13 +10,13 @@
   --secondary-color: #ffc400;
   --secondary-color--hover: #c79400;
 
-  --navigation-background: var(--color-light);
+  --navigation-background: #607D8B;
 
   --highlight: var(--color);
 
   --copy-color: #222;
   --copy-color-light: #444;
-  --copy-light: #bbb;
+  --copy-light: #aaa;
 
   --width: 45rem;
 }
