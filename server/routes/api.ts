@@ -25,7 +25,9 @@ export default () => {
       const mailjetClient = (mailjet as any)
         .connect(MJ_APIKEY_PUBLIC, MJ_APIKEY_PRIVATE);
       const request = mailjetClient
-        .post("send", { version: "v3.1" })
+        .post("send", {
+          version: "v3.1",
+        })
         .request({
           Messages: [{
             From: {
@@ -54,7 +56,7 @@ Message: ${data.message}${data.website ? `\n\nWebsite: ${data.website}` : ""}
         return res.json(response).end();
 
       } catch (error) {
-        console.error(process.env)
+        console.error(process.env);
         console.error(error, error.trace);
 
         return res.json({ success: false }).end();
