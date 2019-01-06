@@ -47,6 +47,7 @@ const getPageController = (page: PageInterface): void => {
         }
 
         return res.render(page.content, {
+          ...templateData,
           ...getPostsData(),
           post,
         });
