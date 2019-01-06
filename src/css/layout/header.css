@@ -5,32 +5,35 @@
   --header-color: var(--color-dark);
 }
 
-.header {
-  background: var(--header-color);
-  color: #fff;
-}
-
 .header__inner {
-  max-width: 53rem;
+  max-width: var(--width);
   margin: 0 auto;
-  padding: 2rem 2rem 4rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .header__logo {
   float: left;
   width: 8rem;
   height: 8rem;
-  background: url('data:image/svg+xml;charset=UTF-8,<svg width="130" height="130" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.5 109.063l51.543-88.212L116.5 109.15l-103-.086zm16.5-9.2l35.07-59.726L100 99.794l-70 .07z" fill="%23fff"/></svg>');
-  background-size: 100% auto;
   text-indent: -999em;
   border: 0;
   margin-right: 2rem;
 }
 
 .header__title {
-  margin: 1.5rem 0 0;
+  display: inline-block;
+  margin: 4rem 0 2rem;
+}
+
+.header__title__line {
+  display: inline;
   line-height: 1;
-  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.25rem;
+  background: var(--header-color);
+  color: #fff;
 }
 
 .header p {

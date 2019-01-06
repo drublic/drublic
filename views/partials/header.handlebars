@@ -1,11 +1,29 @@
 <header class="header">
-  <div class="header__inner">
-    <a href="{{baseUrl}}/" class="header__logo" role="banner">@drublic</a>
 
-    <h1 class="header__title">Development and Architecture</h1>
-    <p>Hans Christian Reinl &ndash; @drublic</p>
+  <div class="header__inner">
+    {{> navigation}}
+
+    <a href="{{baseUrl}}/" role="banner" class="header__title">
+      <h1 class="header__title__line">Hans Christian Reinl</h1>
+    </a>
+
+
+    <p>Development and Architecture &ndash; @drublic</p>
   </div>
 
-  {{> navigation}}
-
 </header>
+
+{{!-- <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        stroke-linejoin="round"
+        stroke-miterlimit="1.414"
+        class="header__logo"
+      >
+        <path
+          d="M13.5 109.063l51.543-88.212L116.5 109.15l-103-.086zm16.5-9.2l35.07-59.726L100 99.794l-70 .07z"
+          fill="var(--header-color)"
+        />
+      </svg>
+       --}}
