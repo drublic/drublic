@@ -64,7 +64,6 @@
   margin: 0;
   margin-left: -5rem;
   margin-right: -5rem;
-  margin-bottom: 5rem;
   padding: 0;
   text-align: center;
 }
@@ -130,6 +129,11 @@
 
 .work__element h3 {
   margin-top: 0;
+}
+
+.work__for {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 64rem) {
