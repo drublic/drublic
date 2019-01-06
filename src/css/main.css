@@ -22,6 +22,7 @@
 @import './module/testimonials.css';
 @import './module/navigation.css';
 @import './module/zoom.css';
+@import './module/oss.css';
 
 @import './layout/header.css';
 @import './layout/footer.css';
