@@ -6,15 +6,13 @@
 }
 
 .posts__post::after {
-  content: '\2693';
+  content: '⚡️';
   position: absolute;
   left: 0;
   right: 0;
   bottom: -2rem;
   font-family: serif;
   text-align: center;
-  color: var(--color);
-  opacity: 0.3;
 }
 
 .posts__post__header {
@@ -58,15 +56,13 @@
 }
 
 .posts__list::after {
-  content: '\2693';
+  content: '⚡️';
   position: absolute;
   left: 0;
   right: 0;
   bottom: -4rem;
   font-family: serif;
   text-align: center;
-  color: var(--color);
-  opacity: 0.3;
 }
 
 .posts__list--no-divider::after {
