@@ -8,7 +8,7 @@ const getWdPosts = async (): Promise<any> => {
   return feed.items.splice(0, 5).map((item: any) => ({
     title: item.title,
     url: item.link,
-    date: format(item.isoDate, "DD.MM.YYYY"),
+    date: format(new Date(item.isoDate), "dd.MM.yyyy"),
   }));
 };
 
