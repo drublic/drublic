@@ -1,6 +1,6 @@
 {
   "title": "Migrating from JavaScript to TypeScript in a Real World React Project",
-  "date": "02.09.2019",
+  "date": "07.09.2019",
   "abstract": "This article covers the way me and the team I am working with migrate a React application from JavaScript to TypeScript over the last couple of months and onwards. The goal is to help developers with the same idea to get a hold on where to start. Here is how to find the right starting point.",
   "meta-title": "Migrating from JavaScript to TypeScript in a Real World React Project",
   "meta-description": "This article covers the way me and the team I am working with migrated a React application from JavaScript to TypeScript over the last couple of months. The goal is to help developers with the same idea to get a hold on where to start.",
