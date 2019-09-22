@@ -67,10 +67,20 @@ These are the things you should consider before putting state or life-cycle beha
 
 When you come to the conclusion it is viable for you to put state into the Presentation Component itself, do so. In any other case use a HOC to prevent mixing logic and state.
 
+### Summary of the advantages
+
+* Clear separation of concerns for your code
+* Easy to test API of the Presentation Component
+* Unit testing for Hooks becomes easy
+
 ### The Downside of using Conceptual Components
 
-Sure, using this architectural pattern does not come for free. Writing HOCs for your logic bring a little extra code you need to write. And with this comes another problem: You need to write two separate components which can pollute your Component Tree. But I think it's worth the additional effort in favor of the advantages the pattern of Conceptual Components brings with it.
+Sure, using this architectural pattern does not come for free.
+Writing HOCs that encapsulate the component’s logic brings extra code into your project. And with this comes another problem: You need to write two separate React Components which pollutes your Component Tree. This can become a positive feature though when debugging since it error stacks become more precise. 
+I think it's worth the additional effort in favor of the advantages the pattern of Conceptual Components brings with it.
 
 ## Conclusion
 
 Lately I have used the concept of Conceptual Components in my daily work. It makes reading code easy for me and removes the cluttered components that include a lot of code.
+
+I am interested in your view on this topic. How do you solve the problem of complex components that hold a lot of code?
