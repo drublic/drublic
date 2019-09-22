@@ -21,8 +21,8 @@ A lot of advocacy around the topic of Hooks is as follows: You can use state wit
 Lately I have seen a lot of developers doing exactly this: They put their local state into the Presentation Component and any lifecycle method is handled within this one component. For a long time I was on the same track but now for me this is not a good idea in most cases.
 
 > The disadvantage to hooks is that if you use them incorrectly, you could spread logic that could be self-contained in one place across all the components in your app, opening up lots of opportunities to forget things or to spread duplicated bugs into a thousand places in your app instead of just one.
-
-From Eric Elliott, [Do React Hooks Replace Higher Order Components (HOCs)?](https://medium.com/javascript-scene/do-react-hooks-replace-higher-order-components-hocs-7ae4a08b7b58)
+ 
+– From Eric Elliott, [Do React Hooks Replace Higher Order Components (HOCs)?](https://medium.com/javascript-scene/do-react-hooks-replace-higher-order-components-hocs-7ae4a08b7b58)
 
 An additional though to Eric's words is that you mix up your logic of the component with the presentation itself. With this it becomes more complicated to understand and to test components. Especially if your components hold a lot of logic.
 
@@ -38,7 +38,17 @@ This component contains some state and a life-cycle behavior.
 
 <script src="https://gist.github.com/drublic/cf1e4ad38693f99a803d931b332b26e9.js"></script>
 
-Now we can separte out both the state and the life-cycle behavior into a Higher-Order Component. Apart from that it is possible to use [Custom Hooks](https://reactjs.org/docs/hooks-custom.html) for the life-cycle behavior itself which represents the logic of the component.
+Now we can separte out both the state and the life-cycle behavior into a Higher-Order Component.
+
+Apart from that it is possible to use [Custom Hooks](https://reactjs.org/docs/hooks-custom.html) for the life-cycle behavior itself which represents the logic of the component.
+
+The React Team advocates the usage of Custom Hooks if you want to share functionality between components:
+
+> When we want to share logic between two JavaScript functions, we extract it to a third function.
+
+– From [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html#extracting-a-custom-hook)
+
+In my opinion it is also a valid use case for modularizing code since it helps to decouple logic and makes the code better testable.
 
 Let’s look at the files:
 
