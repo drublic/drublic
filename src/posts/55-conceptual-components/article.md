@@ -1,5 +1,5 @@
 <div class="post__intro" markdown="1">
-  In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural proposal to give Hooks a straight forward way to use them in order to prevent developers from falling for the taps Hooks do have.
+  In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural proposal to give Hooks a straight forward way to use them in order to prevent developers from falling for the traps Hooks do have.
 </div>
 
 <figure class="image image--block" markdown="1">
