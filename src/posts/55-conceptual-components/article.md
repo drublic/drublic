@@ -1,17 +1,16 @@
 <div class="post__intro" markdown="1">
-  In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural proposal to give Hooks a straight forward way to use them in order to prevent developers from falling for the traps Hooks do have.
+  In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural proposal to give hooks a straight forward way to use them in order to prevent developers from falling for the traps hooks do have.
 </div>
 
 <figure class="image image--block" markdown="1">
   ![](/assets/conceptual-components-title.png)
 </figure>
 
-
-This article and architecture concept might be for you if you had one of the thoughts yourself:
+This article might be for you if you had one of the thoughts yourself 🤔:
 
 > * My components become quite large and hard to maintain.
-> * I don’t know where to find this logic which handles my component’s behavior.
-> * How do I test this complex component and can be sure it works?
+> * I don’t know where to find some logic which handles my component’s behavior.
+> * How do I test a complex component and can be sure it works?
 
 ## Higher-Order Components
 
@@ -22,10 +21,12 @@ I want to add some more thought to this.
 
 ### Use-Cases for Higher-Order Components
 
-The main reason for me to use Higher-Order Components is that they help you to separate the business logic or controlling logic from the presentation. This pattern enforces [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) and helps to implement the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
+The main reason for me to use Higher-Order Components is that they help to separate the business logic or controlling logic from the presentation. This pattern enforces [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) and helps to implement the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
-A lot of advocacy around the topic of Hooks is as follows: You can use state within your Function-Component, so you don't need to use a HOC for that. Same goes for lifecycle logic and hooks based on `useEffect` and others.
-Lately I have seen a lot of developers doing exactly this: They put their local state into the Presentation Component and any lifecycle method is handled within this one component. For a long time I was on the same track but now for me this is not a good idea in most cases.
+A lot of advocacy around the topic of hooks is as follows: You can use state within your Function-Component, so you don't need to use a HOC for that. Same goes for lifecycle logic and hooks based on `useEffect` and others.
+Lately I have seen a lot of developers doing exactly this: They put their local state into the Presentation Component and any lifecycle method is handled within this one component.
+
+For a long time I was on the same track. Working more and more with hooks I came to the conclusion: This is not a good idea in most cases.
 
 > The disadvantage to hooks is that if you use them incorrectly, you could spread logic that could be self-contained in one place across all the components in your app, opening up lots of opportunities to forget things or to spread duplicated bugs into a thousand places in your app instead of just one.
 
@@ -37,11 +38,11 @@ So here is a proposal to use Higher-Order Components to tackle these problems:
 
 ## Using HOCs to structure Complex Components
 
-Using Higher Order Components to decouple logic from pure presentation of a component is quite simple. Just remove all the code that is related to handling state and the lifecycle of the component and put it into a separate component, the HOC.
+Using Higher-Order Components to decouple logic from pure presentation of a component is quite simple. Just remove all the code that is related to handling state and the lifecycle of the component and put it into a separate component, the HOC.
 
 Let's look at a minimalistic example.
 
-This component contains some state and a life-cycle behavior.
+This component contains some state and life-cycle behavior.
 
 <script src="https://gist.github.com/drublic/cf1e4ad38693f99a803d931b332b26e9.js"></script>
 
@@ -55,7 +56,7 @@ The React Team advocates the usage of Custom Hooks if you want to share function
 
 – From [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html#extracting-a-custom-hook)
 
-In my opinion it is also a valid use case for modularizing code since it helps to decouple logic and makes the code better testable.
+In my opinion it is also a valid use case for modularizing code since it helps to decouple logic and helps with the testabilty of your code.
 
 Let’s look at the files:
 
@@ -65,7 +66,7 @@ As you can see, the code is more spread out into separate distinct components wh
 
 ### Testing
 
-You can now test Custom Hooks using [react-hooks-testing-library 🐏](https://github.com/testing-library/react-hooks-testing-library) integrated in components which is fantastic.
+You can now test Custom Hooks integrated in real components using [react-hooks-testing-library 🐏](https://github.com/testing-library/react-hooks-testing-library) which is fantastic.
 
 In my experience testing hooks is complex. If you use Enzyme you need to `mount` components to make hooks testable. And even then it is still hard to test all branches of a hook. [Adam Witalewski writes about how you can test hooks with Enzyme](https://itnext.io/testing-components-built-using-react-hooks-with-jest-enzyme-edb87d703756).
 
@@ -89,6 +90,8 @@ This is basically the architecture of that I call __Conceptual Components__.
 
 Conceptual Components describe the way of how you structure a component in order to make the complexity of the component’s logic and presentation easier to understand.
 
+Conceptual Components focus on writing code that is easy to understand for developers.
+
 ### When to use Conceptual Components
 
 These are the things you should consider before putting state or life-cycle behavior into a Presentation Component:
@@ -98,19 +101,19 @@ These are the things you should consider before putting state or life-cycle beha
   * Can you reuse the logic in different places where it is needed?
 * Is the component easily and completely testable?
 
-When you come to the conclusion it is viable for you to put state into the Presentation Component itself, do so. In any other case use a HOC to prevent mixing logic and state.
+When you come to the conclusion it is viable for you to put state into the Presentation Component itself, do so. In any other case use Conceptual Components to prevent mixing logic and state.
 
 ### Summary of the advantages
 
 * Clear separation of concerns for your code
-* Easy to test API of the Presentation Component
+* "Easy to test"-API of the Presentation Component
 * Unit testing for Hooks becomes easy
 
 ### The Downside of using Conceptual Components
 
 Sure, using this architectural pattern does not come for free.
 
-Writing HOCs that encapsulate the component’s logic brings extra code into your project. And with this comes another problem: You need to write two separate React Components which pollutes your Component Tree. This can become a positive feature though when debugging since it error stacks become more precise.
+Writing HOCs that encapsulate the component’s logic brings extra code into your project. And with this comes another problem: You need to write two separate React Components which pollutes your Component Tree. This can become a positive feature though when debugging since error stacks become more precise.
 
 I think it's worth the additional effort in favor of the advantages the pattern of Conceptual Components brings with it.
 
@@ -118,4 +121,4 @@ I think it's worth the additional effort in favor of the advantages the pattern 
 
 Lately I have used the concept of Conceptual Components in my daily work. It makes reading code easy for me and removes the cluttered components that include a lot of code.
 
-I am interested in your view on this topic. How do you solve the problem of complex components that hold a lot of code?
+I am interested in your view on this topic. How do you solve the problem of complex components that hold a lot of code? What do you think of Conceptual Components?
