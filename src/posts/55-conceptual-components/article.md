@@ -8,12 +8,14 @@ This article and architecture concept might be for you if you had one of the tho
 > * I don’t know where to find this logic which handles my component’s behavior.
 > * How do I test this complex component and can be sure it works?
 
+## Higher-Order Components
+
 A couple of days ago I came across [this article from Albert Chu](https://medium.com/@albertchu539/higher-order-components-in-a-react-hooks-world-69fe1f0b0791) describing the advantages of Higher-Order Components (HOCs) and how they are useful in a project with React Hooks.
 Albert describes the use cases for HOCs and outlines how you can use them to structure your components.
 
 I want to add some more thought to this.
 
-## Use-Cases for Higher Order Components
+### Use-Cases for Higher-Order Components
 
 The main reason for me to use Higher-Order Components is that they help you to separate the business logic or controlling logic from the presentation. This pattern enforces [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) and helps to implement the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -21,7 +23,7 @@ A lot of advocacy around the topic of Hooks is as follows: You can use state wit
 Lately I have seen a lot of developers doing exactly this: They put their local state into the Presentation Component and any lifecycle method is handled within this one component. For a long time I was on the same track but now for me this is not a good idea in most cases.
 
 > The disadvantage to hooks is that if you use them incorrectly, you could spread logic that could be self-contained in one place across all the components in your app, opening up lots of opportunities to forget things or to spread duplicated bugs into a thousand places in your app instead of just one.
- 
+
 – From Eric Elliott, [Do React Hooks Replace Higher Order Components (HOCs)?](https://medium.com/javascript-scene/do-react-hooks-replace-higher-order-components-hocs-7ae4a08b7b58)
 
 An additional though to Eric's words is that you mix up your logic of the component with the presentation itself. With this it becomes more complicated to understand and to test components. Especially if your components hold a lot of logic.
@@ -58,7 +60,7 @@ As you can see, the code is more spread out into separate distinct components wh
 
 ### Testing
 
-You can now test Custom Hooks using [react-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library) integrated in components which is fantastic.
+You can now test Custom Hooks using [react-hooks-testing-library 🐏](https://github.com/testing-library/react-hooks-testing-library) integrated in components which is fantastic.
 
 In my experience testing hooks is complex. If you use Enzyme you need to `mount` components to make hooks testable. And even then it is still hard to test all branches of a hook. [Adam Witalewski writes about how you can test hooks with Enzyme](https://itnext.io/testing-components-built-using-react-hooks-with-jest-enzyme-edb87d703756).
 
@@ -66,15 +68,19 @@ To tackle this problem here is a proposal for writing a Custom Hook:
 
 <script src="https://gist.github.com/drublic/e7736ac2773708e0190c7722d0012c88.js"></script>
 
-⚠️ __Disclaimer:__ This method is just a workaround. If you can I would advice to test the integration of hooks into components.
+<div class="message" markdown="1">
+<div class="message__content" markdown="1">
+__Disclaimer:__ This method is just a workaround. If you can I would advice to test the integration of hooks into components.
+</div>
+</div>
 
 ## Conceptual Components
 
-<figure class="image image--right" markdown="1">
+<figure class="image image--block" markdown="1">
   ![](/assets/conceptual-components-architecture.svg)
 </figure>
 
-This is basically the architecture of what I call __Conceptual Components__.
+This is basically the architecture of that I call __Conceptual Components__.
 
 Conceptual Components describe the way of how you structure a component in order to make the complexity of the component’s logic and presentation easier to understand.
 
@@ -98,7 +104,9 @@ When you come to the conclusion it is viable for you to put state into the Prese
 ### The Downside of using Conceptual Components
 
 Sure, using this architectural pattern does not come for free.
-Writing HOCs that encapsulate the component’s logic brings extra code into your project. And with this comes another problem: You need to write two separate React Components which pollutes your Component Tree. This can become a positive feature though when debugging since it error stacks become more precise. 
+
+Writing HOCs that encapsulate the component’s logic brings extra code into your project. And with this comes another problem: You need to write two separate React Components which pollutes your Component Tree. This can become a positive feature though when debugging since it error stacks become more precise.
+
 I think it's worth the additional effort in favor of the advantages the pattern of Conceptual Components brings with it.
 
 ## Conclusion
