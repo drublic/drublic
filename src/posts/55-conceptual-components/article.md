@@ -2,6 +2,11 @@
   In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural proposal to give Hooks a straight forward way to use them in order to prevent developers from falling for the taps Hooks do have.
 </div>
 
+<figure class="image image--block" markdown="1">
+  ![](/assets/conceptual-components-title.png)
+</figure>
+
+
 This article and architecture concept might be for you if you had one of the thoughts yourself:
 
 > * My components become quite large and hard to maintain.
