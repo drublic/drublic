@@ -56,6 +56,18 @@ Let’s look at the files:
 
 As you can see, the code is more spread out into separate distinct components which supports the Separation of Concerns approach of writing code.
 
+### Testing
+
+You can now test Custom Hooks using [react-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library) integrated in components which is fantastic.
+
+In my experience testing hooks is complex. If you use Enzyme you need to `mount` components to make hooks testable. And even then it is still hard to test all branches of a hook. [Adam Witalewski writes about how you can test hooks with Enzyme](https://itnext.io/testing-components-built-using-react-hooks-with-jest-enzyme-edb87d703756).
+
+To tackle this problem here is a proposal for writing a Custom Hook:
+
+<script src="https://gist.github.com/drublic/e7736ac2773708e0190c7722d0012c88.js"></script>
+
+⚠️ __Disclaimer:__ This method is just a workaround. If you can I would advice to test the integration of hooks into components.
+
 ## Conceptual Components
 
 <figure class="image image--right" markdown="1">
