@@ -122,3 +122,5 @@ I think it's worth the additional effort in favor of the advantages the pattern 
 Lately I have used the concept of Conceptual Components in my daily work. It makes reading code easy for me and removes the cluttered components that include a lot of code.
 
 I am interested in your view on this topic. How do you solve the problem of complex components that hold a lot of code? What do you think of Conceptual Components?
+
+_Thanks to [Peter Kröner](https://www.peterkroener.de) for providing feedback on this post._
