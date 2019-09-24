@@ -1,9 +1,9 @@
 {
   "title": "Structuring Complex Components with Conceptual Components",
-  "date": "25.09.2019",
-  "abstract": "In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural proposal to give Hooks a straight forward way to use them in order to prevent developers from falling for the traps Hooks do have.",
+  "date": "24.09.2019",
+  "abstract": "In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural pattern to give hooks a straight forward way to use them in order to prevent developers from falling for the traps hooks do have.",
   "meta-title": "Structuring Complex Components with Conceptual Components",
-  "meta-description": "",
+  "meta-description": "A way to use Higher-Order Components with React Hooks to structure complex components. This can be described as an architectural pattern to give hooks a way to make them usable.",
   "link": false,
   "hidden": false
 }
