@@ -1,4 +1,5 @@
-.image img {
+.image img,
+.image iframe {
   max-width: 100%;
 }
 
