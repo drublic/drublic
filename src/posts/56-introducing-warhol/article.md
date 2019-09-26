@@ -1,4 +1,4 @@
-Over the couse of the last month together with [Peter](https://twitter.com/sir_pepe) I worked on a tool we call [Warhol](https://warhol.io).
+Over the course of the last month together with [Peter](https://twitter.com/sir_pepe) I worked on a tool we call [Warhol](https://warhol.io).
 
 Warhol turns pattern libraries into test suites. It helps you to enforce a unified look and feel for your web project, no matter how large and complicated the project may be.
 Warhol learns from the examples in a pattern library and supports you in implementing a truly consistent user experience.
