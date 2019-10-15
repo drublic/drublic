@@ -57,6 +57,20 @@ class WebServer extends EventEmitter {
       },
     }));
 
+
+    // Archive
+    app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+      if (req.path.startsWith("/archive")) {
+        const url = req.path.split("archive");
+
+        return res
+          .status(301)
+          .redirect(`http://archive.drublic.com/${url[1]}`);
+      }
+
+      next();
+    });
+
     // Catch all
     app.use(catchAllRoutes());
 
