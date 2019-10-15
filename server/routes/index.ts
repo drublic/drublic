@@ -42,7 +42,7 @@ const getPageController = (page: PageInterface): void => {
 
           if (post.redirect) {
             return res.status(301)
-              .redirect(`https://archive.drublic.de/blog/${post.redirect}`);
+              .redirect(`http://archive.drublic.com/blog/${post.redirect}`);
           }
         }
 
