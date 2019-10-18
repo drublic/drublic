@@ -1,7 +1,7 @@
 {
   "url": "restrict-textareas-resize-css3",
   "title": "Resize Elements with CSS3",
-  "date": "Monday, October 17th, 2011",
+  "date": "17.10.2011",
   "abstract": "<p>The CSS3-spec is full of wonderful things. Sometimes things that are not so desperately needed as others but anyway… good to have them. One of these more or less needed properties might be resize. It is part of the CSS3 Basic User Interface Module. What is really useful with resize is the ability to restrict the resizing of textarea for example. But it is possible to resize every element you&#8217;d like to as this demo by Simurai shows. There are four values for resize that are kinda logical: none: no resizing at all horizontal: resizing only horizontal vertical: resizing only…",
   "meta-title": "",
   "meta-description": "The CSS3-spec is full of wonderful things one of these is `resize`. What is really useful with resize is the ability to restrict the resizing of elements",

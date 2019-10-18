@@ -1,7 +1,7 @@
 {
   "url": "learnings-from-using-sass-in-large-scale-projects",
   "title": "Learnings from using Sass in large scale projects",
-  "date": "April 22nd, 2015",
+  "date": "22.04.2015",
   "abstract": "Different projects I have worked on used Sass as the pre-compiler of their choice. This post shares some learnings we had while using Sass. There are a couple of great articles on how to use Sass in large scale projects — this one is more of a retrospective. I hope it helps you solving problems if you ever run into them. I wrote about some of my recent projects and the learnings I had.</p>",
   "meta-title": "",
   "meta-description": "",

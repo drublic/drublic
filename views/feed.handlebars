@@ -12,7 +12,7 @@
     <entry>
       <title>{{this.title}}</title>
       <link href="{{@root/baseUrl}}/blog/{{this.slug}}/"/>
-      <updated>{{this.date}}T12:00:00+02:00</updated>
+      <updated>{{formatDate this.date "yyyy-MM-dd"}}</updated>
       <id>{{@root/baseUrl}}/blog/{{this.slug}}/</id>
       <content><![CDATA[
         {{#if abstract}}

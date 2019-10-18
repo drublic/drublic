@@ -1,7 +1,7 @@
 {
   "url": "introducing-css-modal",
   "title": "Introducing CSS Modal",
-  "date": "May 6th, 2013",
+  "date": "06.05.2013",
   "abstract": "In the last couple of months I&#8217;ve worked on several projects that needed an overlay with some content on it. Some front-end frameworks as for example Bootstrap refer to them as modals. You can find a lot of implementations that do exactly what I search for but they all have one major drawback: They rely on JavaScript. Yes, sure, everyone has JavaScript enabled these days but why use a technique that you don&#8217;t necessarily need for a given problem? Also most implementations have drawbacks when it comes to mobile devices and responsive web design in general or accessibility. Apart from",
   "meta-title": "CSS Modal - Modals built out of pure CSS",
   "meta-description": "CSS Modal is a project that builds modals and lightboxes out of pure CSS with a little bit of JavaScript. Fully accessible, mobile-friendly, fast and small.",
