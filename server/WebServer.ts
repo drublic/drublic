@@ -75,14 +75,7 @@ class WebServer extends EventEmitter {
     app.use(catchAllRoutes());
 
     this.server = await (new Promise((resolve, reject) => {
-      const server: any = app.listen(this.config.port, (error: Error) => {
-
-        if (error) {
-          return reject(error);
-        }
-
-        resolve(server);
-      });
+      const server: any = app.listen(this.config.port, () => resolve(server));
     }));
 
     return app;
