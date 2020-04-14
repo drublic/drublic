@@ -57,8 +57,8 @@
     "@types/body-parser": "^1.17.1",
     "@types/compression": "^1.0.1",
     "@types/cors": "^2.8.6",
-    "@types/express-handlebars": "^3.1.0",
     "@types/express": "4.16.1",
+    "@types/express-handlebars": "^3.1.0",
     "@types/fs-extra": "^8.0.1",
     "@types/helmet": "^0.0.45",
     "@types/node": "^13.1.4",
@@ -68,14 +68,14 @@
     "babel-loader": "^8",
     "cssnano": "^4.1.10",
     "nodemon": "^2.0.2",
+    "postcss": "^7.0.26",
     "postcss-custom-properties": "^9.0.2",
     "postcss-import": "^12.0.1",
-    "postcss": "^7.0.26",
     "ts-lint": "^4.5.1",
     "ts-node": "^8.5.4",
     "tslint": "^5.20.1",
     "typescript": "^3.7.4",
-    "webpack-cli": "^3.3.10",
-    "webpack": "^4.41.5"
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
