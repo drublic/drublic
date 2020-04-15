@@ -22,7 +22,7 @@ const getPageController = (page: PageInterface): void => {
   indexRoutes.get(
     page.action,
     async (req: Request, res: Response): Promise<void> => {
-      const templateData: TemplateDataInterface = getTemplateData(page);
+      let templateData: TemplateDataInterface = getTemplateData(page);
 
       if (!page.content) {
         return renderError(res, templateData);
@@ -36,6 +36,8 @@ const getPageController = (page: PageInterface): void => {
           : null;
 
         if (post) {
+          templateData = getTemplateData(page, post);
+
           if (post.error) {
             return renderError(res, templateData);
           }

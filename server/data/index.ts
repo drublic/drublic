@@ -30,23 +30,22 @@ const getData = (attribute: string, page: PageInterface = defaultPage): any => {
       return getBaseUrl();
     case "currentUrl":
       return getCurrentUrl(page);
-    case "title":
-      return getTitle(page);
-    case "description":
-      return getDescription(page);
     default:
       break;
   }
   return;
 };
 
-export const getTemplateData = (page?: PageInterface): TemplateDataInterface => {
+export const getTemplateData = (
+  page?: PageInterface,
+  post?: any,
+): TemplateDataInterface => {
   return {
     version: getData("version", page),
     baseUrl: getData("baseUrl", page),
     currentUrl: getData("currentUrl", page),
-    title: getData("title", page),
-    description: getData("description", page),
+    title: getTitle(page, post),
+    description: getDescription(page, post),
     year: new Date().getFullYear(),
     isDev: process.env.NODE_ENV !== "production",
   };
