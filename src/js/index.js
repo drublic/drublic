@@ -1,4 +1,3 @@
-import 'css-modal'
 import './transition.js'
 import './zoom.js'
 import './form.js'

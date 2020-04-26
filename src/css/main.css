@@ -1,7 +1,6 @@
 @import './variables.css';
 
 @import '../../node_modules/normalize.css/normalize.css';
-@import '../../node_modules/css-modal/build/modal';
 @import './helpers/h5bp.css';
 
 @import './typography.css';

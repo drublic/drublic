@@ -17,6 +17,10 @@ export const PAGES: PageInterface[] = [{
   action: "/privacy",
   content: "privacy",
 }, {
+  title: "Legal",
+  action: "/Legal",
+  content: "legal",
+}, {
   title: "Information page",
   action: "/info",
   content: "about-info",
@@ -36,6 +40,10 @@ export const PAGES: PageInterface[] = [{
   title: "What I want to do",
   action: "/what-i-want-to-do",
   content: "what-i-want-to-do",
+}, {
+  title: "Podcasting",
+  action: "/podcasting",
+  content: "podcasting",
 }, {
   title: "Error",
   action: "/404",
