@@ -1,7 +1,11 @@
 <li>
-  <a href="{{baseUrl}}/blog/{{slug}}/">
-    <span itemprop="title">{{{title}}}</span>
+  <a href="{{#if url}}{{url}}{{else}}{{baseUrl}}/blog/{{slug}}/{{/if}}">
+    <span>{{{title}}}</span>
 
     <time class="posts__date">{{date}}</time>
+
+    {{#if description}}
+      <span class="posts__description">{{{description}}}</span>
+    {{/if}}
   </a>
 </li>

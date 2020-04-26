@@ -22,7 +22,8 @@ const getPageController = (page: PageInterface): void => {
   indexRoutes.get(
     page.action,
     async (req: Request, res: Response): Promise<void> => {
-      let templateData: TemplateDataInterface = getTemplateData(page);
+      const templateData: TemplateDataInterface = getTemplateData(page);
+      let data: Record<string, any> = templateData;
 
       if (!page.content) {
         return renderError(res, templateData);
@@ -36,7 +37,7 @@ const getPageController = (page: PageInterface): void => {
           : null;
 
         if (post) {
-          templateData = getTemplateData(page, post);
+          data = getTemplateData(page, post);
 
           if (post.error) {
             return renderError(res, templateData);
@@ -48,25 +49,27 @@ const getPageController = (page: PageInterface): void => {
           }
         }
 
-        return res.render(page.content, {
+        data = {
           ...templateData,
           ...getPostsData(),
           post,
-        });
+        };
       }
 
       if (page.action === "/") {
-        const data = {
+        data = {
           ...templateData,
           ...getPostsData(),
           ...getWdPostsData(),
         };
+      }
 
-        return res
-          .set({
-            "Cache-Control": `max-age=${60 * 60 * 24}`,
-          })
-          .render(page.content, data);
+
+      if (page.action === "/podcasting") {
+        data = {
+          ...templateData,
+          ...getWdPostsData(),
+        };
       }
 
       // Normal page render
@@ -75,7 +78,7 @@ const getPageController = (page: PageInterface): void => {
           .set({
             "Cache-Control": `max-age=${60 * 60 * 24}`,
           })
-          .render(page.content, templateData);
+          .render(page.content, data);
       } catch (error) {
         return renderError(res, templateData);
       }

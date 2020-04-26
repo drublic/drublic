@@ -37,13 +37,21 @@
         title=this.title
         url=this.url
         date=this.date
+        description=""
       }}
     {{/each}}
+    <li>
+      {{> article-teaser--small
+        title="and more…"
+        url="https://workingdraft.de/"
+        description=""
+      }}
+    </li>
   </ul>
 
   <p class="text--centered text--padded">
-    <a href="https://workingdraft.de/" class="button">
-      More Episodes from Workding Draft
+    <a href="{{baseUrl}}/podcasting" class="button">
+      More about my Podcasting
     </a>
   </p>
 
@@ -53,19 +61,22 @@
     {{> article-teaser--small
       title="CSS Naming Conventions: Less Rules, more Fun on Medium.com"
       url="https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b"
-      date="June 19th, 2014"
+      date="19.06.2014"
+      description=""
     }}
 
     {{> article-teaser--small
       title="A counter statement: Putting the CSS in the head on Medium.com"
       url="https://medium.com/programming-ideas-tutorial-and-experience/f98103d09ce1"
-      date="February 03rd, 2014"
+      date="03.02.2014"
+      description=""
     }}
 
     {{> article-teaser--small
       title="Shared Grunt Configuration for The Nitty Gritty"
       url="https://thenittygritty.co/shared-grunt-configuration"
-      date="December 09th, 2013"
+      date="09.06.2013"
+      description=""
     }}
   </ul>
 </section>

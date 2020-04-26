@@ -3,6 +3,7 @@
  */
 html {
   background: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,6 +46,14 @@ hr {
   background-position: center center;
   margin-left: 1rem;
   margin-right: 1rem;
+  max-width: 85rem;
+}
+
+@media (min-width: 87em) {
+  .section--fullsize {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .section--ratio {

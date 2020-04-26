@@ -1,0 +1,72 @@
+<main id="content" class="main" role="main">
+
+  <section class="container">
+    <h2>Podcasting</h2>
+
+    <p>Podcasting became a passion for me which I am happy to do since 2012. The <a href="https://workingdraft.de/">Working
+        Draft podcast</a> is my home and I am happy to host it with my knowledgable co-hosts.</p>
+  </section>
+
+
+  <div class="section--fullsize section--ratio" style="background-image: url({{baseUrl}}/img/podcasting.jpg);">
+  </div>
+
+  <section class="container" id="podcasting-equipment">
+    <h3>Equipment for Recording</h3>
+
+    <p>From time to time I get asked which equipment I use for recording Working Draft. Here is pretty simple list.</p>
+    <ul>
+      <li>Microphone: Auna MIC-900B with a Standard Boom</li>
+      <li>Headphones: OneOdio DJ Headphones</li>
+    </ul>
+
+    <p>For Working Draft's recording and post-production we use a couple of services and tools:</p>
+
+    <ul>
+      <li>Recording and Virtual Studio: Zencastr</li>
+      <li>Virtual Studio: Google Meet as an alternative to Zencastr</li>
+      <li>Local recording: Quick Time Player</li>
+      <li>Post-Production: A specialist :)</li>
+      <li>Post-Post-Production: Auphonic</li>
+    </ul>
+  </section>
+
+  <section class="container" id="podcasting-latest">
+    <h3>
+      <img
+        src="{{baseUrl}}/img/wd.svg"
+        alt="Working Draft Logo"
+        class="oss--wd-logo"
+      >
+
+      Latest Episodes
+    </h3>
+
+     <ul class="posts__list posts__list--no-divider posts__list--no-top">
+      {{#each wdPosts}}
+        {{> article-teaser--small
+          title=this.title
+          url=this.url
+          date=this.date
+          description=this.description
+        }}
+      {{/each}}
+      <li>
+        {{> article-teaser--small
+          title="and more…"
+          url="https://workingdraft.de/"
+          description=""
+        }}
+      </li>
+    </ul>
+  </section>
+
+  <section class="container" id="podcasting-latest">
+    <h3>Working Draft: A Special Episode</h3>
+
+    <figure class="image image--block">
+      <iframe width="784" height="441" src="https://www.youtube.com/embed/1Mz3JpGbjlk" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </figure>
+  </section>
+</main>

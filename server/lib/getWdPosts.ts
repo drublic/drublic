@@ -10,6 +10,7 @@ const getWdPosts = async (): Promise<any> => {
       title: item.title,
       url: item.link,
       date: format(new Date(item.isoDate), "dd.MM.yyyy"),
+      description: item.content,
     }));
   } catch (error) {
     return [];
