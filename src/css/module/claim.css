@@ -3,11 +3,12 @@
  */
 .claim {
   background: #fff;
-  padding-top: 4rem;
+  text-align: center;
 }
 
 .claim__desc {
   line-height: 1.7em;
+  font-size: 1.5rem;
 }
 
 .claim__me {

@@ -35,8 +35,8 @@
   background-image: url(/img/twitter.svg);
 }
 
-.social__link--google > a {
-  background-image: url(/img/google-plus.svg);
+.social__link--linkedin > a {
+  background-image: url(/img/linkedin.svg);
 }
 
 .social__link--github > a {
