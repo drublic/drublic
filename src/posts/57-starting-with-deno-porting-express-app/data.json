@@ -1,0 +1,9 @@
+{
+  "title": "Starting with Deno - porting an existing Express application",
+  "date": "20.05.2020",
+  "abstract": "Yesterday I decided to take a look at [Deno](https://deno.land/) and how to get startet with it. Deno v1 [was released roughly a week ago](https://deno.land/v1) so I though I give it a try and have a look in how far I can make use of it in the near future. Here is how I port an existing Express application to Deno.",
+  "meta-title": "Starting with Deno - porting an existing Express application",
+  "meta-description": "Here is how I port an existing Express application to Deno.",
+  "link": false,
+  "hidden": false
+}
