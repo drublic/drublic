@@ -132,6 +132,37 @@ pre code {
   padding: 0;
 }
 
+.typography--diff {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 0.25rem solid var(--border-color);
+  font-family: monospace;
+}
+
+.typography--diff-delete {
+  background-color: #ffeef0;
+  padding-left: 1.5rem;
+}
+
+.typography--diff-delete::before {
+  content: "- ";
+}
+
+.typography--diff-add {
+  background-color: #e6ffed;
+  padding-left: 1.5rem;
+}
+
+.typography--diff-add::before {
+  content: "+ ";
+}
+
+.typography--diff code {
+  background: none;
+  padding: 0;
+}
+
 /**
  * More config
  */
