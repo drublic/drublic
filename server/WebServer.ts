@@ -1,11 +1,11 @@
-import * as bodyParser from "body-parser";
+import bodyParser from "body-parser";
 import { EventEmitter } from "events";
-import * as compression from "compression";
-import * as cors from "cors";
-import * as exphbs from "express-handlebars";
-import * as express from "express";
-import * as helmet from "helmet";
-import * as serveStatic from "serve-static";
+import compression from "compression";
+import cors from "cors";
+import exphbs from "express-handlebars";
+import express from "express";
+import helmet from "helmet";
+import serveStatic from "serve-static";
 
 import WebServerConfig from "./WebServerConfig";
 
@@ -20,21 +20,21 @@ import templateHelpers from "./templateHelpers";
 class WebServer extends EventEmitter {
   private server?: any;
 
-  constructor (private config: WebServerConfig) {
+  constructor(private config: WebServerConfig) {
     super();
 
     this.config = config;
     this.server = null;
   }
 
-  private createHandlebars (): Exphbs {
+  private createHandlebars(): Exphbs {
     return exphbs.create({
       defaultLayout: "main",
       helpers: templateHelpers,
     });
   }
 
-  public async start (): Promise<express.Application> {
+  public async start(): Promise<express.Application> {
     const app: express.Application = express();
 
     app.engine("handlebars", this.createHandlebars().engine);
@@ -49,39 +49,49 @@ class WebServer extends EventEmitter {
     app.use(await indexRoutes());
     app.use(feedRouter());
     app.use(apiRoutes());
-    app.use(serveStatic("public", {
-      cacheControl: true,
-      maxAge: "365d",
-      setHeaders: (res: any) => {
-        res.setHeader("Cache-Control", `public, max-age=${60 * 60 * 24 * 365}`);
-      },
-    }));
-
+    app.use(
+      serveStatic("public", {
+        cacheControl: true,
+        maxAge: "365d",
+        setHeaders: (res: any) => {
+          res.setHeader(
+            "Cache-Control",
+            `public, max-age=${60 * 60 * 24 * 365}`
+          );
+        },
+      })
+    );
 
     // Archive
-    app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
-      if (req.path.startsWith("/archive")) {
-        const url = req.path.split("archive");
+    app.use(
+      (
+        req: express.Request,
+        res: express.Response,
+        next: express.NextFunction
+      ) => {
+        if (req.path.startsWith("/archive")) {
+          const url = req.path.split("archive");
 
-        return res
-          .status(301)
-          .redirect(`http://archive.drublic.com/${url[1]}`);
+          return res
+            .status(301)
+            .redirect(`http://archive.drublic.com/${url[1]}`);
+        }
+
+        next();
       }
-
-      next();
-    });
+    );
 
     // Catch all
     app.use(catchAllRoutes());
 
-    this.server = await (new Promise((resolve, reject) => {
+    this.server = await new Promise((resolve, reject) => {
       const server: any = app.listen(this.config.port, () => resolve(server));
-    }));
+    });
 
     return app;
   }
 
-  public close (): void {
+  public close(): void {
     if (this.server) {
       this.server.close();
     }
