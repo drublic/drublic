@@ -3,7 +3,7 @@
  */
 .work:before,
 .work:after {
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -18,8 +18,7 @@
 }
 
 .work__projects {
-  margin-left: -1%;
-  margin-right: 1%;
+  overflow: hidden;
 }
 
 .work--project {
@@ -29,12 +28,16 @@
   z-index: 1;
   float: left;
   overflow: hidden;
-  width: 31.333%;
-  margin: 1%;
+  width: calc(100% / 3 - 1rem);
+  margin: 0.5rem;
 }
 
 .work--project img {
   width: 100%;
+}
+.work--project a {
+  display: block;
+  border-bottom: 0;
 }
 
 .work--project p {

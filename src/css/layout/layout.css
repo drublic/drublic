@@ -21,7 +21,7 @@ hr {
  */
 .container {
   max-width: var(--width);
-  padding: 2rem;
+  padding: 2rem 0;
   margin: 0 auto;
 }
 
@@ -42,11 +42,20 @@ hr {
 
 .section--fullsize {
   position: relative;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center center;
-  margin-left: 1rem;
-  margin-right: 1rem;
   max-width: 85rem;
+}
+
+@media (min-width: 32em) {
+  .container {
+    padding: 2rem;
+  }
+
+  .section--fullsize {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 @media (min-width: 87em) {
@@ -61,10 +70,16 @@ hr {
 }
 
 .section--ratio::after {
-  content: '';
+  content: "";
   float: left;
-  padding-top: 37.5%;
+  padding-top: 56.75%;
   width: 0;
+}
+
+@media (min-width: 32em) {
+  .section--ratio::after {
+    padding-top: 37.5%;
+  }
 }
 
 /**
@@ -104,7 +119,6 @@ hr {
   }
 }
 
-
 /* Under 360px */
 @media screen and (max-width: 24em) {
   .main {
@@ -120,14 +134,12 @@ hr {
   border-bottom: none;
 }
 
-
 /**
  * Resume
  */
 .resume-header > h1 {
   line-height: 1.2;
 }
-
 
 /**
  * Print styles
@@ -181,8 +193,6 @@ hr {
     page-break-after: avoid;
   }
 }
-
-
 
 /**
  * Scroller

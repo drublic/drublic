@@ -8,7 +8,7 @@
 .header__inner {
   max-width: var(--width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -23,7 +23,7 @@
 
 .header__title {
   display: inline-block;
-  margin: 4rem 0 2rem;
+  margin: 2rem 0;
 }
 
 .header__title__line {
@@ -40,6 +40,12 @@
   font-size: 1.2em;
 }
 
+@media (min-width: 32em) {
+  .header__title {
+    margin: 4rem 0 2rem;
+  }
+}
+
 /**
  * Legal notice
  */
@@ -48,13 +54,19 @@
   font-size: 0.75rem;
 }
 
-@media screen and (max-width: 36em) {
+@media (max-width: 36em) {
   .header__inner {
     padding-bottom: 2rem;
   }
 
   .header__logo {
     display: none;
+  }
+}
+
+@media (min-width: 32em) {
+  .header__inner {
+    padding: 2rem;
   }
 }
 
