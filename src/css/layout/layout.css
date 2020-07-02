@@ -139,6 +139,7 @@ hr {
  */
 .resume-header > h1 {
   line-height: 1.2;
+  margin-bottom: 0.25rem;
 }
 
 /**
