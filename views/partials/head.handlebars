@@ -9,12 +9,7 @@
 
 <meta name="description" content="{{description}}">
 
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  title="drublic (Feed)"
-  href="{{baseUrl}}/feed.xml"
->
+<link rel="alternate" type="application/rss+xml" title="drublic (Feed)" href="{{baseUrl}}/feed.xml">
 
 <meta name="twitter:site" content="@drublic">
 {{#if post.meta-title}}
@@ -43,32 +38,30 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>{{{printFile "c.css"}}}</style>
+<style>
+{{{printFile "c.css"}}}
+</style>
 
-<link
-  rel="preload"
-  href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
-  as="style"
-  onload="this.rel='stylesheet'"
->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" as="style"
+  onload="this.rel='stylesheet'">
 
 <meta name="application-name" content="drublic">
 <meta name="theme-color" content="#316eae">
 <link rel="manifest" href="{{baseUrl}}/manifest.json">
 <link rel="shortcut icon" href="{{baseUrl}}/favicon.png">
 
-<link
-  rel="index"
-  href="{{baseUrl}}"
+<link rel="index" href="{{baseUrl}}"
   title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript – Hans Christian Reinl">
 
 <script async>document.documentElement.className += ' js';</script>
 
 <script async>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-41497561-1', 'auto');
   ga('set', 'anonymizeIp', true);
