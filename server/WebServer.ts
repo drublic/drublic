@@ -1,7 +1,6 @@
 import bodyParser from "body-parser";
 import { EventEmitter } from "events";
 import compression from "compression";
-import cors from "cors";
 import exphbs from "express-handlebars";
 import express from "express";
 import helmet from "helmet";
@@ -40,8 +39,11 @@ class WebServer extends EventEmitter {
     app.engine("handlebars", this.createHandlebars().engine);
     app.set("view engine", "handlebars");
 
-    app.use(helmet());
-    app.use(cors());
+    app.use(
+      helmet({
+        contentSecurityPolicy: false,
+      })
+    );
     app.use(compression());
     app.use(bodyParser.urlencoded({ extended: false }));
 
