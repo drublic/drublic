@@ -23,7 +23,7 @@
 
 .header__title {
   display: inline-block;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
 }
 
 .header__title__line {
@@ -42,7 +42,7 @@
 
 @media (min-width: 32em) {
   .header__title {
-    margin: 4rem 0 2rem;
+    margin: 4rem 0 1rem;
   }
 }
 
