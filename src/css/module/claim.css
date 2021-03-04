@@ -7,8 +7,15 @@
 }
 
 .claim__desc {
-  line-height: 1.7em;
-  font-size: 1.5rem;
+  line-height: 1.5em;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 32em) {
+  .claim__desc {
+    line-height: 1.7em;
+    font-size: 1.5rem;
+  }
 }
 
 .claim__me {

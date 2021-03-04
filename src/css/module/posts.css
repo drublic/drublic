@@ -71,6 +71,7 @@
 
 .posts__list a {
   display: flex;
+  flex-wrap: wrap;
   text-decoration: none;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
