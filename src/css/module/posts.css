@@ -6,7 +6,7 @@
 }
 
 .posts__post::after {
-  content: '⚡️';
+  content: "⚡️";
   position: absolute;
   left: 0;
   right: 0;
@@ -46,7 +46,7 @@
 }
 
 .posts__list--item::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -56,7 +56,7 @@
 }
 
 .posts__list::after {
-  content: '⚡️';
+  content: "⚡️";
   position: absolute;
   left: 0;
   right: 0;
@@ -70,7 +70,7 @@
 }
 
 .posts__list a {
-  display: block;
+  display: flex;
   text-decoration: none;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -81,8 +81,12 @@
   border-bottom-color: var(--border-color);
 }
 
+.posts__teaser-title {
+  flex: 1 0 30%;
+  margin-right: 1rem;
+}
+
 .posts__date {
-  float: right;
   color: var(--copy-light);
   font-size: 0.9rem;
   padding-top: 2px;

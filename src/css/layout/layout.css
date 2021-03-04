@@ -99,16 +99,6 @@ hr {
   padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 40em) {
-  .main {
-    padding-top: 0;
-  }
-
-  .claim {
-    padding: 0;
-  }
-}
-
 @media screen and (max-width: 35em) {
   .claim {
     text-align: center;
@@ -119,11 +109,8 @@ hr {
   }
 }
 
-/* Under 360px */
-@media screen and (max-width: 24em) {
-  .main {
-    padding: 0 1em 1em;
-  }
+.main {
+  padding: 0 1em 1em;
 }
 
 /**
@@ -137,6 +124,10 @@ hr {
 /**
  * Resume
  */
+.resume-header {
+  overflow: hidden;
+}
+
 .resume-header > h1 {
   line-height: 1.2;
   margin-bottom: 0.25rem;
