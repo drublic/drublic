@@ -1,78 +1,25 @@
 {
-  "name": "drublic",
-  "title": "drublic",
-  "description": "",
-  "version": "8.8.1",
-  "homepage": "https://drublic.de/",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:drublic/vc.git"
-  },
+  "name": "vcard",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node dist/server/index.js",
-    "start:dev": "nodemon server/index.ts",
-    "ts:build": "rm -rf dist/ && tsc -p tsconfig.json",
-    "css": "node ./scripts/css.js",
-    "copy:images": "copyfiles --up 2 'src/img/**/*.{png,jpg,jpeg,svg,mp4}' public/img/",
-    "copy:js": "copyfiles --up 2 'src/js/**/*' public/dist/",
-    "copy:assets": "copyfiles -f --up 2 'src/posts/**/*.{png,jpg,jpeg,svg,mp4}' public/assets/",
-    "copy": "yarn copy:images; yarn copy:js; yarn copy:assets",
-    "js": "webpack",
-    "build": "yarn css; yarn js; yarn copy; yarn ts:build",
-    "postinstall": "yarn build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "bugs": {
-    "url": "https://github.com/use-init/init/issues"
-  },
-  "author": {
-    "name": "Hans Christian Reinl",
-    "url": "http://drublic.de"
-  },
-  "engines": {
-    "node": ">=12"
-  },
-  "license": "MIT",
-  "cacheDirectories": [
-    "node_modules"
-  ],
   "dependencies": {
-    "@types/xml2js": "^0.4.8",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "copyfiles": "^2.4.1",
-    "date-fns": "^2.21.3",
-    "express": "4.17.1",
-    "express-handlebars": "^5.3.2",
-    "fs-extra": "^10.0.0",
-    "helmet": "^4.6.0",
-    "jquery": "^3.6.0",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.22.1",
+    "next": "10.2.3",
     "normalize.css": "^8.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "rss-parser": "^3.12.0",
-    "showdown": "^1.9.1"
+    "showdown": "^1.9.1",
+    "swr": "^0.5.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
-    "@types/body-parser": "^1.19.0",
-    "@types/compression": "^1.7.0",
-    "@types/express": "4.17.11",
-    "@types/express-handlebars": "^3.1.0",
-    "@types/fs-extra": "^9.0.11",
-    "@types/helmet": "^0.0.48",
-    "@types/node": "^14.14.31",
-    "@types/showdown": "^1.9.3",
-    "@warhol/tsconfig": "^2.0.0",
-    "autoprefixer": "^10.2.5",
-    "babel-loader": "^8",
-    "cssnano": "^5.0.2",
-    "nodemon": "^2.0.7",
-    "postcss": "^8.2.15",
-    "postcss-custom-properties": "^11.0.0",
-    "postcss-import": "^14.0.2",
-    "ts-lint": "^4.5.1",
-    "ts-node": "^9.1.1",
-    "tslint": "^6.1.2",
-    "typescript": "^4.2.4",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "@types/react": "^17.0.8",
+    "typescript": "^4.3.2"
   }
 }

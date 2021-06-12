@@ -1,0 +1,480 @@
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>drublic – Software Architecture - Hans Christian Reinl, Cologne</title>
+  <link href="https://drublic.de/blog/"/>
+  <atom:link href="https://drublic.de/feed" rel="self" type="application/rss+xml"/>
+  <language>en</language>
+  <lastBuildDate>Invalid Date</lastBuildDate>
+  <author>
+    <name>Hans Christian Reinl</name>
+    <email>info@drublic.de</email>
+  </author>
+
+  
+<item>
+  <guid>https://drublic.de/blog/migrating-/</guid>
+  <title>Introducing Warhol</title>
+  <link>https://drublic.de/blog/migrating-/</link>
+  <description><![CDATA[<p>Warhol turns pattern libraries into test suites. It helps you to enforce a unified look and feel for your web project, no matter how large and complicated the project may be. Warhol learns from the examples in a pattern library and supports you in implementing a truly consistent user experience.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/starting-with-deno-porting-express-app/</guid>
+  <title>Starting with Deno - porting an existing Express application</title>
+  <link>https://drublic.de/blog/starting-with-deno-porting-express-app/</link>
+  <description><![CDATA[<p>Yesterday I decided to take a look at <a href="https://deno.land/">Deno</a> and how to get startet with it. Deno v1 <a href="https://deno.land/v1">was released roughly a week ago</a> so I though I give it a try and have a look in how far I can make use of it in the near future. Here is how I port an existing Express application to Deno.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/introducing-warhol/</guid>
+  <title>Introducing Warhol</title>
+  <link>https://drublic.de/blog/introducing-warhol/</link>
+  <description><![CDATA[<p>Warhol turns pattern libraries into test suites. It helps you to enforce a unified look and feel for your web project, no matter how large and complicated the project may be. Warhol learns from the examples in a pattern library and supports you in implementing a truly consistent user experience.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/conceptual-components/</guid>
+  <title>Structuring Complex Components with Conceptual Components</title>
+  <link>https://drublic.de/blog/conceptual-components/</link>
+  <description><![CDATA[<p>In this post I want to show a way to use Higher-Order Components with React Hooks in order to structure complex components. This method can be described as an architectural pattern to give hooks a straight forward way to use them in order to prevent developers from falling for the traps hooks do have.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/from-js-to-typescript/</guid>
+  <title>Migrating from JavaScript to TypeScript in a Real World React Project</title>
+  <link>https://drublic.de/blog/from-js-to-typescript/</link>
+  <description><![CDATA[<p>This article covers the way me and the team I am working with migrate a React application from JavaScript to TypeScript over the last couple of months and onwards. The goal is to help developers with the same idea to get a hold on where to start. Here is how to find the right starting point.</p>]]></description>
+  <pubDate>Mon, 08 Jul 2019 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/cycle-of-development/</guid>
+  <title>The change of a developer’s advance</title>
+  <link>https://drublic.de/blog/cycle-of-development/</link>
+  <description><![CDATA[<p>The state of how developers write code changes with the experience they gain. I tried to describe the phases that I have experienced within the last couple of years and tried to generalize them.</p>]]></description>
+  <pubDate>Sat, 02 Jun 2018 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/i-got-the-keys-communication/</guid>
+  <title>I got the keys: Communication</title>
+  <link>https://drublic.de/blog/i-got-the-keys-communication/</link>
+  <description><![CDATA[<p>When I was working in a small agency, years ago, in Germany's warmest city, Freiburg, my boss introduced the team to agile working methods that he had read a book about. We had a whiteboard with some columns on them named To Do, Doing, Done. Some stickies were on these columns. We had a fast-lane which was filled with tasks all the time. I felt I was doing quite some work when fulfilling the tasks and moving a pile of them from one column to the next. Anyway, projects didn't finish on time. The feeling of being productive vanished as soon as we felt we were delivering late. Was there a problem in productivity?</p>]]></description>
+  <pubDate>Thu, 07 Dec 2017 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/how-to-set-up-herokuapp/</guid>
+  <title>How to set up a Node.js app on Heroku in 6 steps</title>
+  <link>https://drublic.de/blog/how-to-set-up-herokuapp/</link>
+  <description><![CDATA[<p>With Heroku you can easily setup deployment and hosting of your application in the cloud. Here are 6 steps how to quickly set up your Node.js application on Heroku.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/contentful-to-algolia/</guid>
+  <title>⚡ Transmit content from any Contentful type to Algolia indexes</title>
+  <link>https://drublic.de/blog/contentful-to-algolia/</link>
+  <description><![CDATA[<p>I've written a transmitter which collects data from <a href="https://www.contentful.com/">Contentful</a> and indexes it in <a href="https://www.algolia.com/">Algolia</a>. It is written in Node.js and really simple.<br> The application syncs content between Contentful and Algolia. You can configure the service to run with Drafts (Preview API) from Contentful and put it in different indexes in Algolia.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/solving-npm-scripts-problems/</guid>
+  <title>Solving npm scripts problems in JavaScript projects</title>
+  <link>https://drublic.de/blog/solving-npm-scripts-problems/</link>
+  <description><![CDATA[<p>In the past I have written about how I use npm scripts for my build tooling. With this article I want to write about some problems I had and how I solved them. The problems I want to talk about further:<br><ul><li>Concurrency</li><li>Extensive build configuration</li><li>Build environments</li></ul></p>]]></description>
+  <pubDate>Tue, 31 Jan 2017 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/frontend-checklist/</guid>
+  <title>A Checklist for Website Reviews</title>
+  <link>https://drublic.de/blog/frontend-checklist/</link>
+  <description><![CDATA[<p>When ever I do a front-end review for webpages I start compiling a new checklist of things that I need to take into account for the review. Now I tried to collect some of the most important questions to check for and release them publically.</p>]]></description>
+  <pubDate>Wed, 11 May 2016 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/simplicity-in-front-end-tooling/</guid>
+  <title>Simplicity in Front-End Tooling</title>
+  <link>https://drublic.de/blog/simplicity-in-front-end-tooling/</link>
+  <description><![CDATA[<p>We tend to solve a lot of problems related to the front-end by delegating them to existing programs. We use libraries and tools which we don’t understand completely - our code base grows and grows. But lately this trend seems to change and we slowly re-consider what we can do best: develop front-end code. What can we expect from this new trend and how can we use them in out daily business today?</p>]]></description>
+  <pubDate>Sat, 09 May 2015 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/es6-modules-using-browserify-mocha/</guid>
+  <title>Testing ES6 Modules with Mocha using Babel with Browserify</title>
+  <link>https://drublic.de/blog/es6-modules-using-browserify-mocha/</link>
+  <description><![CDATA[<p>When writing JavaScript applications or websites a lot of developers write unit tests to ensure the code does what it is supposed to do. The hottest code uses ES6 and transpiles to ES5 with Babel. Mocha is pretty popular as a testing framework these days. Bringing these tools together can be cumbersome. Here is how you do it.</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/npm-builds/</guid>
+  <title>Using npm as a build system for your next project</title>
+  <link>https://drublic.de/blog/npm-builds/</link>
+  <description><![CDATA[<p>npm is a Node.js’ dependency management system. It provides a <code>script</code> object in a project’s <code>package.json</code> configuration which can hold several CLI scripts. It is possible to run those via your command line. This way it is possible to replace your current build system. This article covers more about how you replace different tasks of a typical front-end build workflow.</p>]]></description>
+  <pubDate>Tue, 07 Apr 2015 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/learnings-from-using-sass-in-large-scale-projects/</guid>
+  <title>Learnings from using Sass in large scale projects</title>
+  <link>https://drublic.de/blog/learnings-from-using-sass-in-large-scale-projects/</link>
+  <description><![CDATA[<p>Different projects I have worked on used Sass as the pre-compiler of their choice. This post shares some learnings we had while using Sass. There are a couple of great articles on how to use Sass in large scale projects — this one is more of a retrospective. I hope it helps you solving problems if you ever run into them. I wrote about some of my recent projects and the learnings I had.</p></p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/init-boilerplate-framework-front-end-projects/</guid>
+  <title>Introducing INIT – A Boilerplate Framework for Front-End Projects</title>
+  <link>https://drublic.de/blog/init-boilerplate-framework-front-end-projects/</link>
+  <description><![CDATA[<p>INIT is based upon HTML5 Boilerplate and adds more structure for SCSS files, JavaScripts, includes build tasks and a whole lot more. Today we released INIT, a front-end framework based on Grunt, Bower, Karma and a lot more tools as version 1.0. This marks a special day for Anselm and me, as we worked for a long period to get this project to where it is today. Over at TNG I wrote a bit about why we need frameworks like these and what the challenges with current tools are: Generally we start a lot of our projects in kind of</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/add-main-element-modernizr/</guid>
+  <title>Add the &lt;main&gt;-Element to Modernizr 2.6.2</title>
+  <link>https://drublic.de/blog/add-main-element-modernizr/</link>
+  <description><![CDATA[<p>We don&#8217;t need this anymore With Modernizr v2.7.0 we don&#8217;t need this work around anymore. Please update to this version if you use &lt;main&gt;. tl;dr: You can add the new main-element to Modernizr 2.6.2 by using HTML5 Shiv&#8217;s window.html5 option to add your own elements to the shiv. Since I use some bleeding edge stuff in HTML and CSS in actual projects for clients I ran into one particular issue a couple of times lately and I thought I share a little workaround with you. Modernizr&#8217;s current state Modernizr includes HTML5 Shiv to make HTML5 elements like header, figure and</p>]]></description>
+  <pubDate>Wed, 06 Nov 2013 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/accessible-dialogs-modals/</guid>
+  <title>A Few More Words on Accessible Dialogs/Modals</title>
+  <link>https://drublic.de/blog/accessible-dialogs-modals/</link>
+  <description><![CDATA[<p>tl;dr: It&#8217;s necessary to keep the focus within a dialog while tabbing through it. The function below is the easiest way to implement this behavior in JavaScript. When I created CSS Modal I wanted it to be accessible for screen readers and people that only use the keyboard for navigation. Nicholas Zakas has a great post that helped me a lot with making CSS Modal accessible without too much work. This posts explains a bit about aria roles, how to use tabindex and how you set focus to the element initially and bringing it back where it was before when</p>]]></description>
+  <pubDate>Sun, 06 Jan 2013 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/introducing-css-modal/</guid>
+  <title>Introducing CSS Modal</title>
+  <link>https://drublic.de/blog/introducing-css-modal/</link>
+  <description><![CDATA[<p>In the last couple of months I&#8217;ve worked on several projects that needed an overlay with some content on it. Some front-end frameworks as for example Bootstrap refer to them as modals. You can find a lot of implementations that do exactly what I search for but they all have one major drawback: They rely on JavaScript. Yes, sure, everyone has JavaScript enabled these days but why use a technique that you don&#8217;t necessarily need for a given problem? Also most implementations have drawbacks when it comes to mobile devices and responsive web design in general or accessibility. Apart from</p>]]></description>
+  <pubDate>Tue, 04 Jun 2013 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/printing-the-web/</guid>
+  <title>Printing The Web</title>
+  <link>https://drublic.de/blog/printing-the-web/</link>
+  <description><![CDATA[<p>While it is possible to consume nearly all means of content on your smartphone or tablet it seems like the dream of a paperless office comes true for a lot of web developers. But digital natives are not the only ones who are on the web. There are still some people that like to print web sites on paper. Once you are aware of that you might want to include a dedicated print stylesheet into web sites you build. Here is some advice on what you can do to get the best out of your page. Disclaimer: This article was</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/speaking-engagements-net-awards-freelancing/</guid>
+  <title>Speaking Engagements, the .net-Awards and Freelancing</title>
+  <link>https://drublic.de/blog/speaking-engagements-net-awards-freelancing/</link>
+  <description><![CDATA[<p><p>Here is a quick overview of my current status and why there are little updates in the blog. Also some great news. Talking at Conferences As you know, if you follow along my stuff, I spoke about coding guidelines at TalkOff Conference in Lille, France in January this year. The conference was organized very well and I had a lot of fun. Besides that I met a lot of great people. Thanks again for the invitation. You can find the slides here. I am also very happy to be invited to UX Munich where I will speak about style guides</p>]]></description>
+  <pubDate>Fri, 02 Aug 2013 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/takeoff-conference-talking-about-good-code/</guid>
+  <title>TakeOff Conference: Talking About Good Code</title>
+  <link>https://drublic.de/blog/takeoff-conference-talking-about-good-code/</link>
+  <description><![CDATA[<p><p>Yesterday (17. January 2013) I was talking at TakeOff Conference in Lille, France. I actually extended my talk from the Fronteer&#8217;s Jam Session &#8220;Writing Awesome Code&#8221; with lots of new stuff. So check out the slides. There will be a video with the actual talk that is not online yet. I will post it here when it is. See slides Just a few words concerning the conference: The organizers are doing a great job here and the speakers are really good. If you&#8217;re not here, you are missing out on something :)&lt;/p</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/rem-fallback-sass-less/</guid>
+  <title>The REM Fallback with Sass or LESS</title>
+  <link>https://drublic.de/blog/rem-fallback-sass-less/</link>
+  <description><![CDATA[<p><p>Since a while now word has spread to use the CSS unit rem for font-sizes and values in CSS. Here I want to explain how you can use a fallback in Sass or LESS to get rem working in all browsers. View Gist with mixins Why rem? Let&#8217;s look into what rem means. We know of the em unit which is relative to the font-size of the parent element it is defined on. This means if one of the parents in the DOM-tree changes its font-size, the font-size of the child element changes too. In contrast the rem unit is</p>]]></description>
+  <pubDate>Thu, 31 Jan 2013 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/working-draft-100/</guid>
+  <title>Working Draft Revision 100</title>
+  <link>https://drublic.de/blog/working-draft-100/</link>
+  <description><![CDATA[<p><p>It&#8217;s been over two years now – with our podcast Working Draft we have done 100 revisions. Congratulations to ourselves! We recorded revision 100 on Monday and had a very special guest: Paul Irish. That&#8217;s why we recorded in English this time. The final podcast is now live and can be downloaded. Check it out and let us know what you think. Listen to WD Revision 100 Here are the topics we talked about: BountySource let’s you define an amount up for grabs to anyone willing to solve your issue with an open source project. 5 APIs to change the</p>]]></description>
+  <pubDate>Tue, 11 Dec 2012 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/the-nitty-gritty-new-resource-for-web-devs/</guid>
+  <title>New Resource for Web Devs: The Nitty Gritty</title>
+  <link>https://drublic.de/blog/the-nitty-gritty-new-resource-for-web-devs/</link>
+  <description><![CDATA[<p><p>Yesterday Kahlil Lechelt and I launched The Nitty Gritty, a new blog and resource for web developers about the cutting edge in HTML, CSS, JavaScript and web technology in general. Visit The Nitty Gritty About the idea of The Nitty Gritty Kahlil writes: For a few years now, I&#8217;ve been watching my friends in the web development community write highly informative and well researched articles on their personal blogs, or as contributing authors writing articles for the blogs of their friends and colleagues. We met at Smashing Conference back in September this year and talked about the idea of The</p>]]></description>
+  <pubDate>Wed, 11 Apr 2012 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/conference-test-the-web-forward/</guid>
+  <title>Conferencing and Test The Web Forward</title>
+  <link>https://drublic.de/blog/conference-test-the-web-forward/</link>
+  <description><![CDATA[<p><p>Within the last weeks I had the pleasure to attend some of the most valuable conferences in our business and meet awesome people to chat with. Finally I want to share some of my experiences and invite you what&#8217;s coming next. Smashing Conference Back in the end of September I attended Smashing Conference, set up by Smashing Magazine and Marc Thiele with some high quality speakers in beautiful Freiburg, Germany, the city where I&#8217;m currently living. Focusing on web design and development the smashing way this conference had a variety of topics from the latest secrets of CSS, on the</p>]]></description>
+  <pubDate>Tue, 09 Oct 2012 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/writing-awesome-code/</guid>
+  <title>Writing Awesome Code – Fronteers Jam Session 2012</title>
+  <link>https://drublic.de/blog/writing-awesome-code/</link>
+  <description><![CDATA[<p><p>Here is how and why you should write awesome code in your team. I gave a 10 minute talk on that topic at Fronteers Conference at the Jam Session and here are the slides. There will be a video available online in a few weeks I think.&lt;/p</p>]]></description>
+  <pubDate>Wed, 09 May 2012 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/yeoman/</guid>
+  <title>Yeoman – Level-up Your Daily Workflow</title>
+  <link>https://drublic.de/blog/yeoman/</link>
+  <description><![CDATA[<p><p>After Yeoman was announced in the end of June while it was still in private beta developers were looking forward to use it soon. It was introduced as a tool that helps developers building web-apps while not having to care too much about the general boilerplate-coding to build a solid base for every project and to help performing tasks to bring your project into production. Now that Yeoman is available for everyone as Open Source the question how to use it in daily projects arises. I&#8217;ll try to give you a short overview on what you can expect from it</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/html5bp-v4-0-0/</guid>
+  <title>HTML5 Boilerplate &#8211; v4.0.0</title>
+  <link>https://drublic.de/blog/html5bp-v4-0-0/</link>
+  <description><![CDATA[<p><p>HTML5 Boilerplate is out with the new version 4.0.0. There were some significant changes since the last version that are listed up in the changelog (also see below). Most of them because of the excellent work by Nicolas Gallagher &#8211; thanks for leading HTML5 Boilerplate with such great effort. What&#8217;s new? This was done throughout the last seven months of development and resolving bugs: Add documentation in a separate folder &#8211; everything that is directly concerned with the project was moved from the wiki Switch from Public Domain to MIT license Separate Normalize.css from the rest of the CSS Improve</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/building-advanced-initial-boilerpalte/</guid>
+  <title>An Approach on Building an Advanced Initial Boilerplate</title>
+  <link>https://drublic.de/blog/building-advanced-initial-boilerpalte/</link>
+  <description><![CDATA[<p><p>Since some time I found myself defining a good starting point for a new project over and over again. While I use HTML5 Boilerplate in nearly all of my projects it&#8217;s not enough as an initial package. Since I&#8217;m using SASS (in its dialect SCSS) and have some other things I define over and over again I decided to set up a package that lets me start easily and includes a lot of tools that are necessary for my projects. This is an introduction to init, the starting point for projects that require a bit more than just HTML5 Boilerplate.</p>]]></description>
+  <pubDate>Sat, 06 Oct 2012 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/principles-of-writing-consistent-idiomatic-css/</guid>
+  <title>Principles of writing consistent, idiomatic CSS</title>
+  <link>https://drublic.de/blog/principles-of-writing-consistent-idiomatic-css/</link>
+  <description><![CDATA[<p><p>Nicolas lists up his principles of writing CSS-code. A very good summery of what should be everybody&#8217;s guidelines. This goes deeper then what I wrote about my HTML and CSS Coding Guidelines and it tries to help people collaborating on styles. You should read this awesome piece of work!&lt;/p</p>]]></description>
+  <pubDate>Sun, 05 Aug 2012 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/sass-vs-less/</guid>
+  <title>SASS vs. LESS</title>
+  <link>https://drublic.de/blog/sass-vs-less/</link>
+  <description><![CDATA[<p><p>&#8220;Which CSS preprocessor language should I choose?&#8221; is a hot topic lately. I&#8217;ve been asked in person several times and an online debate has been popping up every few days it seems. It&#8217;s nice that the conversation has largely turned from whether or not preprocessing is a good idea to which one language is best. Let&#8217;s do this thing. Really short answer: SASS Slightly longer answer: SASS is better on a whole bunch of different fronts, but if you are already happy in LESS, that&#8217;s cool, at least you are doing yourself a favor by preprocessing. Chris Coyier finds an</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/my-coding-style-and-guidelines/</guid>
+  <title>My Coding Style and Guidelines</title>
+  <link>https://drublic.de/blog/my-coding-style-and-guidelines/</link>
+  <description><![CDATA[<p><p>After Harry Roberts published his HTML/CSS coding style I&#8217;ve decided to follow his call and write down how I like to code and what my guidelines for HTML and CSS coding are. This article is only a way to describe what I like to do – but it is by far not a recommendation or something. I have not really tried to “canalize” the coding style I do before but it is about time to do so and to write it down. Please let me know if you think that there are ways to do certain things better or in</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/twitter-recess-css-cleaning-tool-build-on-less/</guid>
+  <title>RECESS – A CSS cleaning tool build on top of LESS</title>
+  <link>https://drublic.de/blog/twitter-recess-css-cleaning-tool-build-on-less/</link>
+  <description><![CDATA[<p><p>Developed at Twitter to support our internal styleguide, RECESS is a simple, attractive code quality tool for CSS built on top of LESS. Incorporate it into your development process as a linter, or integrate it directly into your build system as a compiler, RECESS will keep your source looking clean and super managable. As I think reading the source is essential for developers to become good at what they do viewing this source in readable style is essential too. RECESS is a tool which helps you developing good-looking CSS with LESS. It is developed at Twitter and has now been</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/about-css-variables/</guid>
+  <title>About CSS Variables</title>
+  <link>https://drublic.de/blog/about-css-variables/</link>
+  <description><![CDATA[<p><p>Please read about the updated syntax of CSS variables in the first and second update of this post. Since a little bit more than a month (as of the time of writing) there is a Editor&#8217;s Draft for a CSS Variables Module by Google (Tab Atkins and Luke Macpherson) and Daniel Glazman. Just a few days ago the Working Draft was updated. The first draft was written in 2008 by Daniel Glazman but was not added to the official specification. The new WD extends this proposal by Glazman. Disclaimer: This article is part of a small series about the latest</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/the-css-hierarchies-module-level-3/</guid>
+  <title>About The CSS Hierarchies Module Level 3</title>
+  <link>https://drublic.de/blog/the-css-hierarchies-module-level-3/</link>
+  <description><![CDATA[<p><p>Since the beginning of February there were some proposals for the CSS3 specification. These proposals are not yet part of the specification and will likely be changed until they get adopted by the CSSWG. One of these drafts is the CSS Hierarchies Module Level 3. So what&#8217;s the Hierarchies Module? And why &#8220;Level 3&#8243;? The Hierarchies Module is not exactly new. It exists since the very first steps of CSS and was first released in Dezember 1996 with CSS1. The CSS1 specification is still up, so check it out if you want to. When you write CSS you always use selectors to target</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/dabblet-chrome-app/</guid>
+  <title>Dabblet Chrome App</title>
+  <link>https://drublic.de/blog/dabblet-chrome-app/</link>
+  <description><![CDATA[<p><p>I think all of you know Lea Verou&#8217;s dabblet. dabblet is an interactive playground for quickly testing snippets of CSS and HTML code. It uses -prefix-free, so that you won&#8217;t have to add any prefixes in your CSS code. You can save your work in Github gists, embed it in other websites and share it with others. ~ About dabblet Some time ago I made this tiny Google Chrome App for jsFiddle which is in case just a bookmarklet with a bigger icon. I did this for dabblet, too but extended the app to something more: It displays all your dabblets</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/about-gits-cherry-picking/</guid>
+  <title>About Git&#8217;s Cherry-Picking</title>
+  <link>https://drublic.de/blog/about-gits-cherry-picking/</link>
+  <description><![CDATA[<p><p>At /gebrüderheitz we use Git as a version control system as we think this is the best to work together on a level which is easy to learn and work with. Before we used Git we’ve used SVN but this is by far not as flexible as Git. There are enough posts gathering the difference between Git and SVN so I will not cover any of these. When working in a team it’s important to keep your different stages of development in sync and control somehow: There is a front-end development going on which is in deep connection with the</p>]]></description>
+  <pubDate>Thu, 31 May 2012 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/effects-for-the-web/</guid>
+  <title>Effects for the Web!</title>
+  <link>https://drublic.de/blog/effects-for-the-web/</link>
+  <description><![CDATA[<p><p>Christian &#8220;Schepp&#8221; Schaefer shows how to use the new filter-properties for CSS3 and combine them with methods implemented by most modern browsers. This article was first published in German on December 19th 2011.&lt;/p</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/is-mothereffin-jquery-up/</guid>
+  <title>Is Mothereffin&#8217; jQuery Up?</title>
+  <link>https://drublic.de/blog/is-mothereffin-jquery-up/</link>
+  <description><![CDATA[<p><p>Some weeks ago I made a pull request for HTML5Boilerplate which should update jQuery to the latest version available on the Google CDN. How ever I copied the old version of minified jQuery because the uncompressed version was available but the minified wasn&#8217;t. Stupid thing! That&#8217;s why I created Is Mothereffin&#8217; jQuery up? The service checks three major CDNs for the availability of the latest jQuery version. View Is Mothereffin&#8217; jQuery up? How to Check if the File is up I had some difficulties to find the right method how to detect if a file is already available with JavaScript.</p>]]></description>
+  <pubDate>Mon, 11 Jul 2011 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/responsive-media/</guid>
+  <title>Responsive Media</title>
+  <link>https://drublic.de/blog/responsive-media/</link>
+  <description><![CDATA[<p><p>There is a big discussion going on at the moment covering the actual point of how to deal with images and media et al. on mobile-phones and other devices as there are some things that don&#8217;t work as on a desktop computer: Bandwidth Screen size Performance / Velocity The question is how to deliver responsive images on a mobile website. You maybe use something like img { max-width: 100%; height: auto; } in your responsive design to prevent images from being bigger then the screen of a mobile device. In most of the cases this shrinks images in its displayed</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/a-travel-through-time-and-back/</guid>
+  <title>A Travel Through Time &#8211; and Back</title>
+  <link>https://drublic.de/blog/a-travel-through-time-and-back/</link>
+  <description><![CDATA[<p><p>Somehow… &lt;time&gt; Disappeared As you might have heard the &lt;time&gt;-element was removed from the HTML5 specification last saturday by Ian &#8220;Hixie&#8221; Hickson, the editor of the spec. Hixie decided to remove &lt;time&gt; and replace it by the more general &lt;data&gt;-element. A question that came up: Why got&lt;time&gt; removed and why did nobody stop Hixie? Well: There&lt;/p</p>]]></description>
+  <pubDate>Sun, 10 Apr 2011 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/lea-verous-animatable/</guid>
+  <title>Lea Verou&#8217;s Animatable</title>
+  <link>https://drublic.de/blog/lea-verous-animatable/</link>
+  <description><![CDATA[<p><p>Lea Verou publishes some really great stuff. Her latest work is Animatable. A tool to showcase the variety of things you can do with CSS3 animations. And it&#8217;s awesome. Some weeks ago I had this article about rotating images like I use in the footer of this page. There is an animation in Lea&#8217;s demos that makes use of the same properties. You will find some nice cutting edge CSS3-techniques in the demos so make sure to check out the source-code on GitHub. You can also contribute and check in a pull request if you want to. Edit: And by</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/how-to-build-accordion-using-css-and-jquery/</guid>
+  <title>How to Build an Accordion-Menu using CSS and a bit of jQuery</title>
+  <link>https://drublic.de/blog/how-to-build-accordion-using-css-and-jquery/</link>
+  <description><![CDATA[<p><p>We&#8217;re doing a project these days where we use an accordion-menu to show some content. I want to share with you how I did this using jQuery and CSS. This is pretty easy and I want to encourage you not to use any plugin or so but to write the code yourself and learn a bit more about how to use CSS and jQuery and save some microseconds on your loading type. The HTML This is kinda straightforward I think. We don&#8217;t need a wrapper for the accordion-menu. Check it: &lt;section id=&quot;experts&quot; class=&quot;accordion-item&quot;&gt; &lt;h1&gt;&lt;a href=&quot;#experts&quot;&gt;Experts&lt;/a&gt;&lt;/h1&gt; &lt;div class=&quot;content&quot;&gt;&lt;/div&gt; &lt;/section&gt; This is</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/restrict-textareas-resize-css3/</guid>
+  <title>Resize Elements with CSS3</title>
+  <link>https://drublic.de/blog/restrict-textareas-resize-css3/</link>
+  <description><![CDATA[<p><p>The CSS3-spec is full of wonderful things. Sometimes things that are not so desperately needed as others but anyway… good to have them. One of these more or less needed properties might be resize. It is part of the CSS3 Basic User Interface Module. What is really useful with resize is the ability to restrict the resizing of textarea for example. But it is possible to resize every element you&#8217;d like to as this demo by Simurai shows. There are four values for resize that are kinda logical: none: no resizing at all horizontal: resizing only horizontal vertical: resizing only…</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/wo-sind-meine-abgerundeten-ecken/</guid>
+  <title>Wo sind meine abgerundeten Ecken?</title>
+  <link>https://drublic.de/blog/wo-sind-meine-abgerundeten-ecken/</link>
+  <description><![CDATA[<p><p>Sorry for this german post. For more information on this topic please check out the post “Where Are My Rounded Corners?”. Thanks to Daniel and Steffen at /gebrüderheitz. Manchmal sind unsere Kunden verwirrt, wenn sie sich ihre neue Website im Browser anschauen und sie anders aussieht, als das Design, dass sie freigegeben hatten. In diesem Merkblatt erklären wir, warum es viele Vorteile gibt, diese Unterschiede zu akzeptieren und dass diese Vorteile die Nachteile überwiegen. Lange Zeit haben wir die Gestaltung von Websites so gehandhabt, als ob es Printmedien seien. Hier findet nun ein Umdenken statt, denn das Internet unterscheidet sich</p>]]></description>
+  <pubDate>Sun, 09 Oct 2011 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/where-are-my-rounded-corners/</guid>
+  <title>&#8220;Where Are My Rounded Corners?&#8221; &#8211; German Translation</title>
+  <link>https://drublic.de/blog/where-are-my-rounded-corners/</link>
+  <description><![CDATA[<p><p>Some weeks ago Paul Irish published his article about TAFEE (Tiered, Adaptive Front-end Experiences) and shares Paul Boag&#8217;s booklet called &#8220;Where are my rounded corners?&#8221; which tries to describe why it is better to design for the future and modern browsers and not spending too much time trying to get the website&#8217;s design working in older browsers (namely Internet Explorer 7 and 8). The booklet was originally published in Paul Boag&#8217;s blog. Paul describes why he did this this: One of the biggest areas of confusion among our clients is progressive enhancement. They wonder why the beautiful design they signed off</p>]]></description>
+  <pubDate>Sun, 09 Oct 2011 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/css3-rotate-images-on-click/</guid>
+  <title>CSS3: Rotate Images on Click</title>
+  <link>https://drublic.de/blog/css3-rotate-images-on-click/</link>
+  <description><![CDATA[<p><p>With CSS3 be get some great new functions to use that are now accessible pretty easy. These are not only rounded corners or shadows but also transitions and full animations that let you do things that were only possible with JavaScript some time ago. In the footer of this website I use CSS3 3D-transitions for rotating two images. There is a front- and a back-site for that image. Through animation on click it looks like these images are rotating. I&#8217;m not the first one using this technique. I got inspired by Google+. They are using it for rotation of the</p>]]></description>
+  <pubDate>Wed, 09 Feb 2011 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/touch-icons-for-android-devices-y-u-no-working/</guid>
+  <title>Touch-Icons for Android-Devices: Y U No Working?</title>
+  <link>https://drublic.de/blog/touch-icons-for-android-devices-y-u-no-working/</link>
+  <description><![CDATA[<p><p>Sven asked me some stuff about the HTML5 Boilerplate Favicon PSD-Template while he was using it for a project. He discovered one problem I was not aware of and I don&#8217;t know how to work around: Android does not use one of the apple-touch-icons as a bookmark or as a shortcut on the home-screen in Android 2.3. I do not know of any other usage of the icons in prior versions of Android. But this article by Rob Flaherty stats that it is working for Android 2.1 and 2.2 with some minor changes. He also set up this demo-page. Feel free</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/text-shadow-in-internet-explorer/</guid>
+  <title>Text-Shadow in Internet Explorer</title>
+  <link>https://drublic.de/blog/text-shadow-in-internet-explorer/</link>
+  <description><![CDATA[<p><p>This mothereffin shit is worth a blog-post. Even if it&#8217;s just a short one. At this very moment I&#8217;m celebrating the fact that Internet Explorer 10 now supports text-shadows kinda excessively! Finally! Even Internet Explorer made it! Yayyyy! For more details on this, please go and check out the Internet Explorer 10 Guide for Developers. Microsoft developers explain the usage of text-shadow here. But I guess it should be pretty clear how to use them as other browsers support them like forever. Thanks goes out to Louis Lazaris for his tweet about it. Also @IE tweeted about this. There are also</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/html5-boilerplate-favicons-psd-template/</guid>
+  <title>HTML5 Boilerplate Favicon PSD-Template</title>
+  <link>https://drublic.de/blog/html5-boilerplate-favicons-psd-template/</link>
+  <description><![CDATA[<p><p>No longer maintained Version 3.1 – Update 25.11.2012 Add current 16x16px favicon. Version 3.0 – Update 25.05.2012 And again Daniel updated the template with some great things. It now features the &#8220;new&#8221; HTML5 Boilerplate icons, you get a better overview of what icons are present and how the output of images is. Apart from that Daniel made a bug-fix for the 144&times;144px touch icon where the PNG wasn&#8217;t saved by default. Version 2.0 – Update 21.03.2012 Daniel has updated the favicon template with a 144&times;144px touch icon. This icon is needed for the high-resolution iPad Retina displays which are built</p>]]></description>
+  <pubDate>Thu, 08 Dec 2011 23:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/pseudo-classes-in-print-styles-for-references-in-links/</guid>
+  <title>Pseudo-Elements in Print-Styles for References in Links</title>
+  <link>https://drublic.de/blog/pseudo-classes-in-print-styles-for-references-in-links/</link>
+  <description><![CDATA[<p><p>This morning @t3node asked me about something CSS-related. This was kinda new for me because he never did this before I guess… He showed me a website he had printed and asked me to explain him, how it is possible to show links in printed websites with their reference printed next to it. He was kinda upset why not every frontend-developer includes this in his/her stylesheet when it comes to designing a new website. I wanted to explain everything that&#8217;s related to this topic that I&#8217;ve ever heard of but he asked me to write this blogpost as he is not pretty used to CSS</p>]]></description>
+  <pubDate>Mon, 08 Aug 2011 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/style-syntax-in-comments/</guid>
+  <title>Add Style-Syntax in Comments with `, _ and *</title>
+  <link>https://drublic.de/blog/style-syntax-in-comments/</link>
+  <description><![CDATA[<p><p>You may be familiar with the syntax of writing code-Tags like <code>some code here</code>. This is what is used by Github for example. At Daring Fireball they wrote up the syntax. Not only for code-Tags but for various features that are connected to style and semantics. In the comments of this blog it is possible to use some of the rules to add some markup to them. For instance when you write: Some fancy text with <strong>styled <em>markup</em></strong> and <code>code</code>. It will be transfered to Some fancy text with &lt;strong&gt;styled &lt;em&gt;markup&lt;/em&gt;&lt;/strong&gt; and &lt;code&gt;code&lt;/code&gt;. I really like to use these tags</p>]]></description>
+  <pubDate>Fri, 08 Apr 2011 22:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/offer-files-as-download-with-adownload/</guid>
+  <title>Offer Files as Download with a@download</title>
+  <link>https://drublic.de/blog/offer-files-as-download-with-adownload/</link>
+  <description><![CDATA[<p><p>So the spec introduces a new attribute on a-tags (so called &#8220;links&#8221; &#8211; this may be new to you ;-)) called download (short: a@download &#8211; this technique of connecting attributes with tags is written up and documented by Mathias Bynens). When you link to a file like an image or a PDF-document it will be displayed within the browser normally. The download-attribute in links prevents this behavior and offers the file as a download in your browser. Definition The spec allows the attribute for having a value. This value can be a string which defines the name of the downloaded file. As a default</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/mobile-design-is-not-only-responsive/</guid>
+  <title>Mobile Design is not only Responsive</title>
+  <link>https://drublic.de/blog/mobile-design-is-not-only-responsive/</link>
+  <description><![CDATA[<p><p>When I read this article by Henrik Eneroth about redesigning Safari&#8217;s interface I thought we as webdesigners somehow do this with websites and web-apps. While Apple misses to add different behavior for different browser-sizes it&#8217;s a kind of standard to build a website with a special mobile version that looks not like the website on a desktop computer but fulfills the need of someone who visits the mobile version of the website. In Vitaly Friedman&#8217;s (Smasing Magazine) presentation &#8220;Webdesigntrends 2011&#8243; I recognized this nice photo. Vitaly states that someone who visits your page with a mobile device may need other</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/css3-auto-hyphenation-for-text-elements/</guid>
+  <title>CSS3: Auto Hyphenation for Text-Elements</title>
+  <link>https://drublic.de/blog/css3-auto-hyphenation-for-text-elements/</link>
+  <description><![CDATA[<p><p>In browsers we do not have the ability to automatically hyphenate continuous text. This is an issue when you are using text-align: justify; for instance because the text may look really bad. I want to write about this topic because of the discussion that came up at the HTML5 Boilerpates issue-list and this blogpost at Fontdeck Blog. The specification says: Hyphenation means splitting words to improve the layout of paragraphs. CSS3 Properties CSS3 adds six properties to the list of useful thing. These are: The most important one is hyphens. More to this one later. You can add dictionary-files with hyphenate-resource</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/the-difference-between-push-and-pull/</guid>
+  <title>The Difference between Push and Pull</title>
+  <link>https://drublic.de/blog/the-difference-between-push-and-pull/</link>
+  <description><![CDATA[<p><p>You do know the nice message which is submitted to your smartphone when someone mentions you on Twitter? iOS gets these messages via push. This means the server tells the app something like &#8220;Hey look, there&#8217;s something new on your Twitter-account&#8221;. On Android this is done with push, too. It was introduced in version 2.1.0 in mid of July. Before this release they requested all Tweets via &#8220;pull&#8221;: The app asks the server &#8220;Yo server, somethin&#8217; new here?&#8221;. Draw-backs? So where&#8217;s the difference besides the obvious? with pull the app has to connect to the server in a certain time-interval</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+<item>
+  <guid>https://drublic.de/blog/this-is-what-its-all-about/</guid>
+  <title>This is what it&#8217;s all about!</title>
+  <link>https://drublic.de/blog/this-is-what-its-all-about/</link>
+  <description><![CDATA[<p><p>Sometimes I need some space to share my thoughts. Sometimes this means its just a very short post and sometimes it will be a little bit more. Some kind of tutorial or what ever. Actually I&#8217;m a front-end developer located in Freiburg, Germany. Maybe you&#8217;ve head of this city: Smashing Magazine is based here, too. I&#8217;m currently working as a freelancer at /gebrüderheitz with people like Daniel and Steffen. I&#8217;m also engaged in some projects: I do some fancy stuff with Christian (we do Pagetimer), with Daniel I&#8217;m developing WordPress-Themes for Themeforest under the name Flipthemes (you should checkout this</p>]]></description>
+  <pubDate>Invalid Date</pubDate>
+</item>
+
+  </channel>
+</rss>
