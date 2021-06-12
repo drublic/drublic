@@ -1,20 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { FunctionComponent } from "react";
-import useSWR from "swr";
+import React from "react";
 import ArticleTeaserSmall from "./ArticleTeaserSmall";
-import fetcher from "../utils/fetcher";
 
-const IndexArticles: FunctionComponent = () => {
-  const { data: posts, error: postsError } = useSWR(
-    "/api/posts?limit=5",
-    fetcher
-  );
-  const { data: wdPosts, error: wdPostsError } = useSWR(
-    "/api/wd-posts",
-    fetcher
-  );
-
+const IndexArticles = ({ posts, wdPosts }) => {
   return (
     <section className="container oss" id="oss">
       <h2>Articles</h2>
@@ -22,8 +11,8 @@ const IndexArticles: FunctionComponent = () => {
       <h3>From The Blog</h3>
 
       <ul className="posts__list posts__list--no-divider posts__list--no-top">
-        {posts?.map(({ title, url, date, slug }) => (
-          <ArticleTeaserSmall title={title} url={url} date={date} />
+        {posts?.splice(0, 5).map(({ title, url, date, slug }) => (
+          <ArticleTeaserSmall title={title} date={date} slug={slug} />
         ))}
       </ul>
 

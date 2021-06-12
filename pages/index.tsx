@@ -2,8 +2,10 @@ import Link from "next/link";
 import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
+import { getPosts } from "./api/posts";
+import { getWdPosts } from "./api/wd-posts";
 
-const Index = () => {
+const Index = ({ posts, wdPosts }) => {
   return (
     <Layout>
       <main id="content" className="main" role="main">
@@ -50,7 +52,7 @@ const Index = () => {
           </div>
         </section>
 
-        <IndexArticles />
+        <IndexArticles posts={posts} wdPosts={wdPosts} />
 
         {/* Projects */}
         <section className="container work" id="work">
@@ -89,6 +91,18 @@ const Index = () => {
       </main>
     </Layout>
   );
+};
+
+export const getServerSideProps = async () => {
+  const posts = await getPosts();
+  const wdPosts = await getWdPosts();
+
+  return {
+    props: {
+      posts,
+      wdPosts,
+    },
+  };
 };
 
 export default Index;

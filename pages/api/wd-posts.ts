@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 const Parser = require("rss-parser");
 
-const getWdPosts = async (): Promise<any> => {
+export const getWdPosts = async (): Promise<any> => {
   const parser = new Parser();
   try {
     const feed: any = await parser.parseURL("https://workingdraft.de/feed/");

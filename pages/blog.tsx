@@ -1,14 +1,11 @@
 import React from "react";
-import useSWR from "swr";
 import ArticleTeaserSmall from "../lib/components/ArticleTeaserSmall";
 import ArticleTeaser from "../lib/components/ArticleTeaser";
 import BlogMessage from "../lib/components/BlogMessage";
 import Layout from "../lib/components/Layout";
-import fetcher from "../lib/utils/fetcher";
+import { getPosts } from "./api/posts";
 
-const Blog = () => {
-  const { data: posts, error: postsError } = useSWR("/api/posts", fetcher);
-
+const Blog = ({ posts }) => {
   return (
     <Layout>
       <BlogMessage />
@@ -43,6 +40,16 @@ const Blog = () => {
       </main>
     </Layout>
   );
+};
+
+export const getServerSideProps = async () => {
+  const posts = await getPosts();
+
+  return {
+    props: {
+      posts,
+    },
+  };
 };
 
 export default Blog;
