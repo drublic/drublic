@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
 
-export const POSTS_DIR = path.join(process.cwd(), "content/posts");
+export const POSTS_DIR = path.join(__dirname, "../../../content/posts");
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {

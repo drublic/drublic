@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import { getPosts } from "./api/posts";
 
 const template = (content: string, lastBuildDate: Date) => `
@@ -47,6 +48,7 @@ export const getServerSideProps = async (context) => {
 
   const feed = template(renderPosts(posts), new Date(posts[0].date));
 
+  const filePath = path.join(__dirname, "../public/feed.xml");
   fs.writeFileSync("./public/feed.xml", feed);
 
   return {
