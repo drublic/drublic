@@ -10,11 +10,12 @@ export const POSTS_DIR =
   process.env.NODE_ENV === "production"
     ? path.join(PROJECT_ROOT, "./public/content")
     : path.join(__dirname, "../../../public/content");
-
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
   try {
+    console.log(await fs.promises.readdir(POSTS_DIR));
+
     const directory: any[] = await fs.promises.readdir(POSTS_DIR);
 
     return directory
