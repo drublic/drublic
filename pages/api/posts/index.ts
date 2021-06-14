@@ -21,7 +21,7 @@ const getFolders = async (): Promise<string[]> => {
       .sort()
       .reverse();
   } catch (error) {
-    console.log(await fs.promises.readdir("/_src"));
+    console.log(await fs.promises.readdir(__dirname));
 
     console.error(`cannot load POST_DIR <${POSTS_DIR}>`, error);
   }
