@@ -14,8 +14,6 @@ const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
   try {
-    console.log(await fs.promises.readdir(POSTS_DIR));
-
     const directory: any[] = await fs.promises.readdir(POSTS_DIR);
 
     return directory
@@ -23,6 +21,8 @@ const getFolders = async (): Promise<string[]> => {
       .sort()
       .reverse();
   } catch (error) {
+    console.log(await fs.promises.readdir(PROJECT_ROOT));
+
     console.error(`cannot load POST_DIR <${POSTS_DIR}>`, error);
   }
 };
