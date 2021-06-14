@@ -21,9 +21,13 @@ const getFolders = async (): Promise<string[]> => {
       .sort()
       .reverse();
   } catch (error) {
-    console.log(await fs.promises.readdir(path.join(__dirname, "..")));
-    console.log(await fs.promises.readdir(path.join(__dirname, "../..")));
-    console.log(await fs.promises.readdir(path.join(__dirname, "../../..")));
+    console.log(await fs.promises.readdir(path.join(__dirname, "../../../..")));
+    console.log(
+      await fs.promises.readdir(path.join(__dirname, "../../../../.."))
+    );
+    console.log(
+      await fs.promises.readdir(path.join(__dirname, "../../../../../.."))
+    );
 
     console.error(`cannot load POST_DIR <${POSTS_DIR}>`, error);
   }
