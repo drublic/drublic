@@ -1,6 +1,6 @@
 {
   "functions": {
-    "pages/api/posts/*.js": {
+    "pages/api/posts/*.ts": {
       "includeFiles": "content/**"
     }
   }
