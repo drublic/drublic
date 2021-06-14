@@ -2,10 +2,7 @@ import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
 
-export const POSTS_DIR =
-  process.env.NODE_ENV === "production"
-    ? path.join(__dirname, "../../../pages/api/posts/content")
-    : path.join(process.cwd(), "./pages/api/posts/content");
+export const POSTS_DIR = path.join(__dirname, "../../../content");
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
@@ -44,7 +41,7 @@ const getPost = async (postPath: string): Promise<any> => {
 export const getPosts = async (hasPreview: boolean = false): Promise<any> => {
   const folders = await getFolders();
 
-  const postsPromises = folders.map((folder) => getPost(folder));
+  const postsPromises = folders?.map((folder) => getPost(folder));
   const posts = await Promise.all(postsPromises);
   const filteredPosts = posts.filter((post) => post !== null);
 

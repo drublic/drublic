@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/posts/index.js": {
+      "includeFiles": "content/**"
+    },
+    "api/posts/[id].js": {
+      "includeFiles": "content/**"
+    }
+  }
+}
