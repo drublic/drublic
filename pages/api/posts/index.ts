@@ -9,12 +9,16 @@ export const POSTS_DIR =
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
-  const directory: any[] = await fs.promises.readdir(POSTS_DIR);
+  try {
+    const directory: any[] = await fs.promises.readdir(POSTS_DIR);
 
-  return directory
-    .filter((folder) => !folder.startsWith("."))
-    .sort()
-    .reverse();
+    return directory
+      .filter((folder) => !folder.startsWith("."))
+      .sort()
+      .reverse();
+  } catch (error) {
+    console.error(`cannot load POST_DIR <${POSTS_DIR}>`, error);
+  }
 };
 
 const getPost = async (postPath: string): Promise<any> => {
@@ -31,7 +35,7 @@ const getPost = async (postPath: string): Promise<any> => {
       abstract: converter.makeHtml(post.abstract),
     };
   } catch (error) {
-    console.error(error);
+    console.error(`cannot load post data <${postDataPath}>`, error);
   }
 
   return null;
