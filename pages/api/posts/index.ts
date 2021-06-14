@@ -1,8 +1,12 @@
 import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
+import getConfig from "next/config";
 
-export const POSTS_DIR = path.join(__dirname, "../../../content");
+const { serverRuntimeConfig } = getConfig();
+const { PROJECT_ROOT } = serverRuntimeConfig;
+
+export const POSTS_DIR = path.join(PROJECT_ROOT, "./content");
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
