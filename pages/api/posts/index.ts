@@ -1,14 +1,10 @@
 import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
-import getConfig from "next/config";
-
-const { serverRuntimeConfig } = getConfig();
-const { PROJECT_ROOT } = serverRuntimeConfig;
 
 export const POSTS_DIR =
   process.env.NODE_ENV === "production"
-    ? path.join(PROJECT_ROOT, "./public/content")
+    ? path.join(__dirname, "content")
     : path.join(__dirname, "../../../public/content");
 const converter: showdown.Converter = new showdown.Converter();
 
@@ -21,10 +17,6 @@ const getFolders = async (): Promise<string[]> => {
       .sort()
       .reverse();
   } catch (error) {
-    console.log(
-      await fs.promises.readdir(path.join(serverRuntimeConfig.PROJECT_ROOT))
-    );
-
     console.error(`cannot load POST_DIR <${POSTS_DIR}>`, error);
   }
 };
