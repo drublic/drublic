@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prebuild": "cp -r content .next/server/chunks"
   },
   "dependencies": {
     "classnames": "^2.3.1",
