@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "prebuild": "cp -r content .next/server/chunks"
+    "build": "next build && cp -r content .next/server/chunks",
+    "start": "next start"
   },
   "dependencies": {
     "classnames": "^2.3.1",
