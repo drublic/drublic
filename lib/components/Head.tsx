@@ -41,11 +41,6 @@ const Head = ({ title, description }) => (
       href="/"
       title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript – Hans Christian Reinl"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
-    />
   </>
 );
 

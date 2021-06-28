@@ -19,14 +19,6 @@ const Layout = ({
       <div
         dangerouslySetInnerHTML={{
           __html: `
-          <script async>document.documentElement.className += ' js';</script>`,
-        }}
-      />
-
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-          <!-- Global site tag (gtag.js) - Google Analytics -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45228510-1"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
@@ -35,13 +27,6 @@ const Layout = ({
 
             gtag('config', 'UA-45228510-1');
           </script>`,
-        }}
-      />
-
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-          <script async src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>`,
         }}
       />
 

@@ -11,8 +11,13 @@ const IndexArticles = ({ posts, wdPosts }) => {
       <h3>From The Blog</h3>
 
       <ul className="posts__list posts__list--no-divider posts__list--no-top">
-        {posts?.splice(0, 5).map(({ title, url, date, slug }) => (
-          <ArticleTeaserSmall title={title} date={date} slug={slug} />
+        {posts?.splice(0, 5).map(({ title, date, slug }) => (
+          <ArticleTeaserSmall
+            key={slug}
+            title={title}
+            date={date}
+            slug={slug}
+          />
         ))}
       </ul>
 
@@ -33,23 +38,22 @@ const IndexArticles = ({ posts, wdPosts }) => {
         </span>
         Working Draft Podcast
       </h3>
-
       <ul className="posts__list posts__list--no-divider posts__list--no-top">
         {wdPosts?.map(({ title, url, date }) => (
           <ArticleTeaserSmall
+            key={url}
             title={title}
             url={url}
             date={date}
             description={undefined}
           />
         ))}
-        <li>
-          <ArticleTeaserSmall
-            title="and more…"
-            url="https://workingdraft.de/"
-            description=""
-          />
-        </li>
+
+        <ArticleTeaserSmall
+          title="and more…"
+          url="https://workingdraft.de/"
+          description=""
+        />
       </ul>
 
       <p className="text--centered text--padded">

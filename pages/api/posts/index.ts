@@ -5,7 +5,7 @@ import * as showdown from "showdown";
 export const POSTS_DIR =
   process.env.NODE_ENV === "production"
     ? path.join(__dirname, "content")
-    : path.join(__dirname, "../../../public/content");
+    : path.join(__dirname, "../../../content");
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
