@@ -11,7 +11,7 @@ const IndexArticles = ({ posts, wdPosts }) => {
       <h3>From The Blog</h3>
 
       <ul className="posts__list posts__list--no-divider posts__list--no-top">
-        {posts?.splice(0, 5).map(({ title, date, slug }) => (
+        {posts?.slice(0, 5).map(({ title, date, slug }) => (
           <ArticleTeaserSmall
             key={slug}
             title={title}

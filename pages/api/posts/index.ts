@@ -41,12 +41,22 @@ const getPost = async (postPath: string): Promise<any> => {
   return null;
 };
 
+const getDate = (date: string) => {
+  const splitted = date.split(".");
+
+  return new Date(`${splitted[1]}/${splitted[0]}/${splitted[2]}`);
+};
+
 export const getPosts = async (hasPreview: boolean = false): Promise<any> => {
   const folders = await getFolders();
 
   const postsPromises = folders?.map((folder) => getPost(folder)) ?? [];
   const posts = await Promise.all(postsPromises);
-  const filteredPosts = posts.filter((post) => post !== null);
+  const filteredPosts = posts
+    .filter((post) => post !== null)
+    .sort((a, b) =>
+      getDate(a.date).getTime() < getDate(b.date).getTime() ? 1 : -1
+    );
 
   if (hasPreview) {
     return filteredPosts;
