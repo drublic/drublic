@@ -7,7 +7,7 @@ import { getPosts } from "./api/posts";
 
 const Blog = ({ posts }) => {
   return (
-    <Layout>
+    <Layout title="Blog">
       <BlogMessage />
 
       <main

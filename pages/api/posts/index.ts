@@ -5,7 +5,7 @@ import * as showdown from "showdown";
 export const POSTS_DIR =
   process.env.NODE_ENV === "production"
     ? path.join(__dirname, "content")
-    : path.join(__dirname, "../../../content");
+    : path.join(__dirname, "../../content");
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
@@ -17,7 +17,7 @@ const getFolders = async (): Promise<string[]> => {
       .sort()
       .reverse();
   } catch (error) {
-    console.error(`cannot load POST_DIR <${POSTS_DIR}>`, error);
+    console.error(`cannot load POSTS_DIR <${POSTS_DIR}>`, error);
   }
 };
 
