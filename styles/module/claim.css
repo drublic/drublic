@@ -2,7 +2,6 @@
  * About me
  */
 .claim {
-  background: #fff;
   text-align: center;
 }
 
@@ -16,6 +15,10 @@
     line-height: 1.7em;
     font-size: 1.5rem;
   }
+}
+
+.claim-container {
+  display: flex;
 }
 
 .claim__me {

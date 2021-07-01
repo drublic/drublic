@@ -6,13 +6,20 @@
 }
 
 .posts__post::after {
-  content: "⚡️";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2rem;
-  font-family: serif;
-  text-align: center;
+  content: "";
+  display: block;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+  height: 0.25rem;
+  background-image: linear-gradient(
+    161.81deg,
+    var(--secondary-color--hover) 25%,
+    var(--secondary-color) 75%
+  );
+  background-color: var(--secondary-color);
+  border-radius: 2px;
 }
 
 .posts__post__header {

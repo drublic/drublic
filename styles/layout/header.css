@@ -1,9 +1,6 @@
 /**
  * Header
  */
-:root {
-  --header-color: var(--color-dark);
-}
 
 .header__inner {
   max-width: var(--width);
@@ -22,28 +19,57 @@
 }
 
 .header__title {
+  position: relative;
   display: inline-block;
-  margin: 2rem 0 1rem;
+  border: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+}
+
+.header__title::before,
+.header__title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    161.81deg,
+    var(--secondary-color--hover) 25%,
+    var(--secondary-color) 75%
+  );
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+.header__title::after {
+  top: 0;
+  background: #fff;
+  top: 0.25rem;
+  left: 0.25rem;
+  right: 0.25rem;
+  bottom: 0.25rem;
+  transition: 0.25s;
+}
+
+.header__title:hover::after {
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
 }
 
 .header__title__line {
   display: inline;
   line-height: 1;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.25rem;
-  background: var(--header-color);
-  color: #fff;
+  color: var(--text-color);
 }
 
 .header p {
   font-size: 1.2em;
-}
-
-@media (min-width: 32em) {
-  .header__title {
-    margin: 4rem 0 1rem;
-  }
 }
 
 /**

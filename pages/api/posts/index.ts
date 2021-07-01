@@ -41,7 +41,7 @@ const getPost = async (postPath: string): Promise<any> => {
   return null;
 };
 
-const getDate = (date: string) => {
+export const getDate = (date: string) => {
   const splitted = date.split(".");
 
   return new Date(`${splitted[1]}/${splitted[0]}/${splitted[2]}`);

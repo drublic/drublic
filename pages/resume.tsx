@@ -6,57 +6,51 @@ const Resume = () => (
   <Layout>
     <main id="main" role="main">
       <div className="main container">
-        <div className="claim__me">
-          <Image
-            src="/img/me.jpg"
-            alt="A picture of Hans Christian Reinl"
-            width={750}
-            height={750}
-          />
+        <div className="claim-container">
+          <div className="claim__me">
+            <Image
+              src="/img/me.jpg"
+              alt="A picture of Hans Christian Reinl"
+              width={750}
+              height={750}
+            />
+          </div>
+
+          <header className="resume-header">
+            <h2>Hans Christian Reinl</h2>
+            <h4>
+              Director Technology &amp; Product for FYEO <br />
+              at ProSiebenSat.1 Digital
+            </h4>
+
+            <address>
+              Cologne, Germany
+              <br />
+              <a href="https://drublic.de/">drublic.de</a> &ndash;{" "}
+              <a href="mailto:info@drublic.de">info@drublic.de</a>
+              <br />
+              <a href="https://twitter.com/drublic">Twitter</a> &ndash;{" "}
+              <a href="https://github.com/drublic">GitHub</a>
+            </address>
+          </header>
         </div>
-
-        <header className="resume-header">
-          <h1>Hans Christian Reinl</h1>
-          <h4>
-            Director Technology &amp; Product for FYEO <br />
-            at ProSiebenSat.1 Digital
-          </h4>
-
-          <address>
-            50825 Cologne, Germany
-            <br />
-            <a href="https://drublic.de/">drublic.de</a>
-            <br />
-            <a href="mailto:info@drublic.de">info@drublic.de</a>
-            <br />
-            <a href="https://twitter.com/drublic">Twitter</a> &ndash;
-            <a href="https://github.com/drublic">GitHub</a>
-          </address>
-        </header>
 
         <section>
           <h2>About</h2>
 
           <p>
-            I work as Director Technology &amp; Product on{" "}
-            <a href="https://www.fyeo.de/">FYEO</a> for
-            <a href="https://www.prosiebensat1.com/">
-              ProSiebenSat.1 Media SE
-            </a>{" "}
-            and am located in Cologne, Germany.
+            I am a Software Architect and Certified Scrum Master working as
+            Director Technology &amp; Product on{" "}
+            <a href="https://www.fyeo.de/">FYEO</a> for{" "}
+            <a href="https://www.prosiebensat1.com/">ProSiebenSat.1 Media SE</a>{" "}
+            located in Cologne, Germany.
             <br />
             Agile development and Scrum have influenced my work since 2012. I
             have more than ten years of experience in developing scalable
-            web-applications using cutting edge technologies including modern
-            JavaScript and TypeScript (front-end and backend).
-            <br />I love creating solid systems in a high-performance
-            environment.
-          </p>
-
-          <p>
-            My passion for JavaScript and CSS is as strong as my belief in agile
-            methodologies, especially Scrum. Building teams and enabling
-            co-workers to excellerate is what drives my daily work.
+            web-applications using cutting edge technologies. I love creating
+            solid systems in a high-performance environment. My passion is to
+            build teams that strive for excellence. Enabling team members to
+            excellerate is what drives my daily work.
           </p>
         </section>
 
@@ -65,7 +59,7 @@ const Resume = () => (
 
           <p>
             In the past I worked on projects for a lot of different clients. You
-            can find more about my list of clients on
+            can find more about my list of clients on{" "}
             <a href="/portfolio">my portfolio</a>.
           </p>
 

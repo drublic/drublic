@@ -1,5 +1,5 @@
 :root {
-   --text-color: #111;
+  --text-color: #111;
 
   --color: #546e7a;
   --color-dark: #29434e;
@@ -7,10 +7,10 @@
   --border-color: #dce3ea;
   --color--background--light: #e2f1f8;
   --color--background--dark: #eee;
-  --secondary-color: #ffc400;
-  --secondary-color--hover: #c79400;
+  --secondary-color: #6236ff;
+  --secondary-color--hover: #f474ff;
 
-  --navigation-background: #607D8B;
+  --navigation-background: #607d8b;
 
   --highlight: var(--color);
 

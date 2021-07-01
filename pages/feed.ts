@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { getPosts } from "./api/posts";
+import { getDate, getPosts } from "./api/posts";
 
 export const PUBLIC_DIR =
   process.env.NODE_ENV === "production"
@@ -34,7 +34,7 @@ const renderPosts = (posts: any[]) =>
   <title>${title}</title>
   <link>https://drublic.de/blog/${slug}/</link>
   <description><![CDATA[${abstract}]]></description>
-  <pubDate>${date && new Date(date).toUTCString()}</pubDate>
+  <pubDate>${getDate(date).toUTCString()}</pubDate>
 </item>
 `
     )
@@ -51,7 +51,7 @@ export const getServerSideProps = async (context) => {
 
   const posts: any[] = await getPosts();
 
-  const feed = template(renderPosts(posts), new Date(posts[0].date));
+  const feed = template(renderPosts(posts), getDate(posts[0].date));
 
   const filePath = path.join(PUBLIC_DIR, "feed.xml");
   fs.writeFileSync(filePath, feed);

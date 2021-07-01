@@ -2,7 +2,7 @@
  * General layouting
  */
 html {
-  background: #fff;
+  background: rgb(255, 255, 255);
   scroll-behavior: smooth;
 }
 
@@ -128,9 +128,14 @@ hr {
   overflow: hidden;
 }
 
-.resume-header > h1 {
+.resume-header > h2 {
   line-height: 1.2;
   margin-bottom: 0.25rem;
+  border-bottom: 0;
+}
+
+.resume-header > address {
+  font-style: normal;
 }
 
 /**
@@ -220,12 +225,30 @@ hr {
   color: var(--copy-color);
 }
 
+.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-okagree,
+.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-reject,
+.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-changep {
+  padding: 0.5rem 2.5rem;
+  line-height: 2;
+  font-size: 1em;
+  border-radius: 2rem;
+  transition: 0.15s;
+  font-weight: normal;
+}
+
 .cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-okagree {
-  background-color: var(--color-dark);
+  background-image: linear-gradient(
+    161.81deg,
+    var(--secondary-color--hover) 25%,
+    var(--secondary-color) 75%
+  );
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 
 .cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-reject {
   background-color: var(--color-light);
+  color: #fff;
 }
 
 .cookieconsent-com---nb.cookieconsent-com---nb-headline .cc-nb-main-container {
