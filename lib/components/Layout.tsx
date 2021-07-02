@@ -1,20 +1,17 @@
 import React from "react";
-import NextHead from "next/head";
 import Head from "./Head";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cookiescript from "./Cookiescript";
 
 const Layout = ({
-  title = "drublic – Software Architecture - Hans Christian Reinl, Cologne",
-  description = "Software Development &amp;amp; Architecture, Hans Christian Reinl - Projects: HTML5 Boilerplate, Working Draft - Node.js, React, CSS, JavaScript - Scrum",
+  title = "drublic – Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
+  description = `Engineering Management & Software Architecture, Hans Christian Reinl - Working Draft, Node.js, React, CSS, JavaScript & Agile`,
   children,
 }) => {
   return (
     <>
-      <NextHead>
-        <Head title={title} description={description} />
-      </NextHead>
+      <Head title={title} description={description} />
 
       <div
         dangerouslySetInnerHTML={{

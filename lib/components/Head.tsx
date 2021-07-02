@@ -1,7 +1,8 @@
 import React from "react";
+import NextHead from "next/head";
 
 const Head = ({ title, description }) => (
-  <>
+  <NextHead>
     <meta charSet="utf-8" />
 
     <title>{title}</title>
@@ -41,7 +42,7 @@ const Head = ({ title, description }) => (
       href="/"
       title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript – Hans Christian Reinl"
     />
-  </>
+  </NextHead>
 );
 
 export default Head;
