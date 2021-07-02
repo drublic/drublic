@@ -80,13 +80,11 @@ const Podcasting = () => {
               />
             ))}
 
-            <li>
-              <ArticleTeaserSmall
-                title="and more…"
-                url="https://workingdraft.de/"
-                description=""
-              />
-            </li>
+            <ArticleTeaserSmall
+              title="and more…"
+              url="https://workingdraft.de/"
+              description=""
+            />
           </ul>
         </section>
 

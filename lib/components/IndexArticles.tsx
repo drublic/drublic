@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import useSWR from "swr";
+import fetcher from "../utils/fetcher";
 import ArticleTeaserSmall from "./ArticleTeaserSmall";
 
-const IndexArticles = ({ posts, wdPosts }) => {
+const IndexArticles = ({ posts }) => {
+  const { data: wdPosts, error: wdPostsError } = useSWR(
+    "/api/wd-posts",
+    fetcher
+  );
+
   return (
     <section className="container oss" id="oss">
       <h2>Articles</h2>

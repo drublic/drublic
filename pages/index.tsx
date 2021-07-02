@@ -3,9 +3,8 @@ import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
 import { getPosts } from "./api/posts";
-import { getWdPosts } from "./api/wd-posts";
 
-const Index = ({ posts, wdPosts }) => {
+const Index = ({ posts }) => {
   return (
     <Layout>
       <main id="content" className="main" role="main">
@@ -52,7 +51,7 @@ const Index = ({ posts, wdPosts }) => {
           </div>
         </section>
 
-        <IndexArticles posts={posts} wdPosts={wdPosts} />
+        <IndexArticles posts={posts} />
 
         {/* Projects */}
         <section className="container work" id="work">
@@ -95,12 +94,10 @@ const Index = ({ posts, wdPosts }) => {
 
 export const getServerSideProps = async () => {
   const posts = await getPosts();
-  const wdPosts = await getWdPosts();
 
   return {
     props: {
       posts,
-      wdPosts,
     },
   };
 };

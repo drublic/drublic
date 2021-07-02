@@ -17,8 +17,14 @@ export const getWdPosts = async (): Promise<any> => {
   }
 };
 
-export default async (req, res) => {
-  const posts = await getWdPosts();
+let postsStore = [];
 
-  res.status(200).json(posts);
+export default async (req, res) => {
+  if (postsStore.length === 0) {
+    const posts = await getWdPosts();
+
+    postsStore = posts;
+  }
+
+  res.status(200).json(postsStore);
 };
