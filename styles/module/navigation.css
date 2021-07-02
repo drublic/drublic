@@ -23,7 +23,7 @@
   position: relative;
   display: block;
   color: var(--text-color);
-  padding: 0.75em 1em;
+  padding: 0.5rem 0.75rem;
   text-decoration: none;
   transition: 0.15s;
   font-size: 1rem;
@@ -61,7 +61,7 @@
 
 @media (min-width: 32em) {
   .navigation__menu a {
-    padding: 1.25em 2em 1em;
+    padding: 1.25rem 2rem 1rem;
   }
 }
 
