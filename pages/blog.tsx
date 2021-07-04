@@ -42,8 +42,8 @@ const Blog = ({ posts }) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  const posts = await getPosts();
+export const getServerSideProps = async ({ query }) => {
+  const posts = await getPosts(!!query.preview);
 
   return {
     props: {

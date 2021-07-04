@@ -66,7 +66,8 @@ export const getPosts = async (hasPreview: boolean = false): Promise<any> => {
 };
 
 export default async (req, res) => {
-  const posts = await getPosts();
+  const hasPreview = !!req.query.preview;
+  const posts = await getPosts(hasPreview);
 
   if (req.query.limit) {
     return res.status(200).json(posts.slice(0, req.query.limit));
