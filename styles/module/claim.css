@@ -10,27 +10,35 @@
   font-size: 1.25rem;
 }
 
-@media (min-width: 32em) {
-  .claim__desc {
-    line-height: 1.7em;
-    font-size: 1.5rem;
-  }
-}
-
-.claim-container {
-  display: flex;
-}
-
 .claim__me {
-  float: left;
-  width: 15rem;
-  height: 15rem;
+  float: right;
+  width: 7.5rem;
+  height: 7.5rem;
   margin-top: 1rem;
-  margin-right: 3rem;
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .claim__me img {
   display: block;
   border-radius: 50%;
+}
+
+@media (min-width: 32em) {
+  .claim-container {
+    display: flex;
+  }
+
+  .claim__desc {
+    line-height: 1.7em;
+    font-size: 1.5rem;
+  }
+
+  .claim__me {
+    float: right;
+    width: 15rem;
+    height: 15rem;
+    margin-left: 0;
+    margin-right: 3rem;
+  }
 }

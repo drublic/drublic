@@ -1,4 +1,7 @@
 .oss--wd-logo {
+  display: inline-block;
   width: 2rem;
-  margin-right: 0.5rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+  vertical-align: bottom;
 }
