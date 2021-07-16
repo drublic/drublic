@@ -15,7 +15,7 @@ const Podcasting = () => {
     <Layout title="Podcasting">
       <main id="content" className="main" role="main">
         <section className="container">
-          <h2>Podcasting</h2>
+          <h1>Podcasting</h1>
 
           <p>
             Podcasting became a passion for me which I am happy to do since
@@ -31,7 +31,7 @@ const Podcasting = () => {
         ></div>
 
         <section className="container" id="podcasting-equipment">
-          <h3>Equipment for Recording</h3>
+          <h2>Equipment for Recording</h2>
 
           <p>
             From time to time I get asked which equipment I use for recording
@@ -57,6 +57,8 @@ const Podcasting = () => {
         </section>
 
         <section className="container" id="podcasting-latest">
+          <h2>Working Draft</h2>
+
           <h3>
             <span className="oss--wd-logo">
               <Image
@@ -86,10 +88,8 @@ const Podcasting = () => {
               description=""
             />
           </ul>
-        </section>
 
-        <section className="container" id="podcasting-latest">
-          <h3>Working Draft: A Special Episode</h3>
+          <h3>A Special Episode</h3>
 
           <figure className="image image--block">
             <iframe

@@ -93,6 +93,11 @@ h2 + p {
   margin-top: 0;
 }
 
+b,
+strong {
+  font-weight: 700;
+}
+
 /* Lists */
 ul {
   padding-left: 1.1em;

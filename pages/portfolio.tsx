@@ -7,8 +7,8 @@ import Projects from "../lib/components/portfolio/Projects";
 
 const Legal = () => (
   <Layout title="Imprint">
-    <main id="content" className="main container" role="main">
-      <section className="work" id="work">
+    <main id="content" className="main" role="main">
+      <section className="work container" id="work">
         <h1>Work I do</h1>
 
         <h2>Clients</h2>

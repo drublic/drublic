@@ -25,6 +25,10 @@ hr {
   margin: 0 auto;
 }
 
+.container > h1:first-child {
+  margin-top: 0;
+}
+
 .main--portfolio {
   max-width: 80rem;
 }
@@ -102,7 +106,6 @@ hr {
 .main {
   padding: 0 1em 1em;
 }
-
 /**
  * Overlays
  */

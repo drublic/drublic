@@ -26,11 +26,8 @@ const Resume = () => (
             <address>
               Cologne, Germany
               <br />
-              <a href="https://drublic.de/">drublic.de</a> &ndash;{" "}
+              <a href="https://drublic.de/">drublic.de</a> &bull;{" "}
               <a href="mailto:info@drublic.de">info@drublic.de</a>
-              <br />
-              <a href="https://twitter.com/drublic">Twitter</a> &ndash;{" "}
-              <a href="https://github.com/drublic">GitHub</a>
             </address>
           </header>
         </div>
@@ -44,7 +41,8 @@ const Resume = () => (
             <a href="https://www.fyeo.de/">FYEO</a> for{" "}
             <a href="https://www.prosiebensat1.com/">ProSiebenSat.1 Media SE</a>{" "}
             located in Cologne, Germany.
-            <br />
+          </p>
+          <p>
             Agile development and Scrum have influenced my work since 2012. I
             have more than ten years of experience in developing scalable
             web-applications using cutting edge technologies. I love creating
@@ -58,44 +56,60 @@ const Resume = () => (
           <h2>Work</h2>
 
           <p>
-            In the past I worked on projects for a lot of different clients. You
-            can find more about my list of clients on{" "}
-            <a href="/portfolio">my portfolio</a>.
+            In the past I worked on projects for clients such as{" "}
+            <a href="https://www.axa.de/">AXA</a>,{" "}
+            <a href="https://www.rewe-digital.com/">REWE digital</a>,{" "}
+            <a href="https://www.vaillant-group.com/">
+              Vaillant Group Business Services
+            </a>
+            , fashion retailer{" "}
+            <a href="https://www.fashionette.de/">Fashionette</a> and others.
+            More on <a href="/portfolio">my portfolio</a>.
           </p>
 
-          <h3>
-            Director Technology &amp; Product for FYEO at ProSiebenSat.1 Digital
-          </h3>
-          <p>January 2021 – now</p>
+          <h3>ProSiebenSat.1 Digital GmbH</h3>
 
-          <h3>Director Technology for FYEO at ProSiebenSat.1 Digital</h3>
-          <p>July 2020 – December 2020</p>
+          <p>
+            <b>Director Technology &amp; Product for FYEO</b>, January 2021 –
+            now
+            <br />
+            <b>Director Technology for FYEO</b>, July 2020 – December 2020
+          </p>
 
-          <h3>Freelance Software Developer and Architect</h3>
+          <h3>Freelance Software Architect &amp; Engineer</h3>
 
           <p>April 2013 – July 2020</p>
 
           <ul>
-            <li>Consulting for middle and large-scale web projects</li>
             <li>
-              Analyses and improvement of new and existing software
+              Consulting for middle and large-scale web projects in the
+              front-end section
+            </li>
+            <li>
+              Analysis and improvement of new and existing software
               architectures
             </li>
             <li>
               Workshops for agencies to coach their developers and designers
             </li>
-            <li>Scrum Master and technical project lead</li>
+            <li>
+              Working on client projects using, configuring and developing for
+              FirstSpirit, TYPO3 CMS, Magento and Hybris
+            </li>
+            <li>Scrum Master and project manager</li>
           </ul>
 
           <h3>Other</h3>
 
           <p>
+            January 2019 – July 2021: Software Developer and Co-Founder at ​
+            <a href="https://warhol.io/">Warhol</a>
+            <br />
+            November 2011 – April 2014: Software developer and Co-Founder at
+            colored.by
+            <br />
             April 2010 – April 2013: Lead Frontend developer at /gebrüderheitz,
             Freiburg
-            <br /> November 2011 – April 2014: Software developer and Co-Founder
-            at colored.by
-            <br />
-            January 2019 – present: Software Developer and Co-Founder at ​Warhol
           </p>
         </section>
       </div>
@@ -122,7 +136,7 @@ const Resume = () => (
             Cologne from 2014 to 2017.
           </p>
 
-          <h2>Speaking</h2>
+          {/* <h2>Speaking</h2>
           <p>
             I am very happy to be invited to any conference in our scene and
             beyond.
@@ -182,12 +196,12 @@ const Resume = () => (
               &bull;
               <a href="//www.youtube.com/watch?v=Rg_AW_FPWsY">Video</a>
             </li>
-            {/* <li><a href="//fronteers.nl/congres/2012">Fronteers</a> 2012 Jam Session; Amsterdam, Netherlands – <a href="//slides.drublic.de/awesome-code/">Writing Awesome Code</a> &bull; <a href="//vimeo.com/51856235">Vimeo</a></li> */}
-          </ul>
+            <li><a href="//fronteers.nl/congres/2012">Fronteers</a> 2012 Jam Session; Amsterdam, Netherlands – <a href="//slides.drublic.de/awesome-code/">Writing Awesome Code</a> &bull; <a href="//vimeo.com/51856235">Vimeo</a></li>
+          </ul> */}
         </section>
 
         <section>
-          <h2>Writings</h2>
+          {/* <h2>Writings</h2>
           <p>
             I wrote some articles on the interwebz and offline. Here is a list.
             Hopefully more to come.
@@ -269,25 +283,24 @@ const Resume = () => (
             Please
             <a href="/#hire-me">send me a mail</a> if you want me to write for
             you.
-          </p>
+          </p> */}
 
-          <h2>Other</h2>
+          <h2>Noteworthy</h2>
 
           <ul>
             <li>
+              Several speaking engagements at conferences in Europe (including
+              Front-Trends in Warsaw and Frontend Conference in Zürich)
+            </li>
+            <li>
               Nomination as Young Developer Of The Year /
-              <a href="//www.thenetawards.com/">.net-Awards 2013.</a>
+              <a href="https://www.thenetawards.com/">.net-Awards 2013</a>
             </li>
             <li>Certified Scrum Master</li>
             <li>
-              Co-Organizer of
-              <a href="//www.nightlybuild.io/">NightlyBuild.io</a> - a
-              Web-developer conference in Cologne.
-            </li>
-            <li>
-              Former Co-Organizer of
-              <a href="//devsmeetup.de/">DevsMeetup</a> in Freiburg, Germany - a
-              monthly Developer Usergroup.
+              Former Core Developer of HTML5 Boilerplate: Ongoing maintenance of{" "}
+              <a href="https://html5boilerplate.com/">HTML5 Boilerplate</a>, a
+              solid front-end template to start projects with
             </li>
           </ul>
         </section>
@@ -301,66 +314,6 @@ const Resume = () => (
           &copy;
           <a href="https://twitter.com/stn1978">Stefan Nitzsche</a>
         </p>
-      </div>
-
-      <div className="main container">
-        <section>
-          <h2>Core Skills</h2>
-
-          <p>
-            As a Frontend developer I worked on a lot of things over the years.
-            Here are some skills I consider myself good at.
-          </p>
-
-          <ul>
-            <li>
-              Architecture
-              <ul>
-                <li>Component based development</li>
-                <li>Micro-Service Oriented Architecture</li>
-                <li>
-                  Implementing Coding conventions and guidelines within teams
-                </li>
-                <li>
-                  Building Pattern Libraries for better collaboration across
-                  teams
-                </li>
-                <li>
-                  Automation: Continuous Integration, build tools, regression
-                  &amp; end-to-end testing
-                </li>
-              </ul>
-            </li>
-            <li>
-              Development
-              <ul>
-                <li>JavaScript: TypeScript, React.js, Redux</li>
-                <li>
-                  Node.js: Deep knowledge of the platform, Express, TypeORM,
-                  Sequelize
-                </li>
-                <li>Using TypeScript on the client- and server-side</li>
-                <li>Working with Apache Kafka</li>
-                <li>
-                  Experience in Responsive ( web design | development | images |
-                  UX )
-                </li>
-                <li>Accessibility and "SEO"</li>
-              </ul>
-            </li>
-            <li>
-              Working agile
-              <ul>
-                <li>
-                  Setup and development of Scrum teams, experience with Scrum at
-                  Scale
-                </li>
-                <li>Coaching for teams and change management</li>
-                <li>Strong communication skills</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
       </div>
     </main>
   </Layout>
