@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { FunctionComponent } from "react";
+import Head from "next/head";
 import ArticleTeaserSmall from "../components/ArticleTeaserSmall";
 import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
@@ -19,15 +20,17 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
       title={`${post["meta-title"]} | Blog | drublic – Software Architecture`}
       description={post.metaDescription}
     >
-      <meta name="twitter:title" content={post["meta-title"]} />
-      <meta name="twitter:description" content={post["meta-description"]} />
+      <Head>
+        <meta name="twitter:title" content={post["meta-title"]} />
+        <meta name="twitter:description" content={post["meta-description"]} />
 
-      {post.image && (
-        <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={post.image} />
-        </>
-      )}
+        {post.image && (
+          <>
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content={post.image} />
+          </>
+        )}
+      </Head>
 
       <BlogMessage />
 
