@@ -16,14 +16,14 @@ const Layout = ({
       <div
         dangerouslySetInnerHTML={{
           __html: `
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45228510-1"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41497561-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-            gtag('config', 'UA-45228510-1');
-          </script>`,
+              gtag('config', 'UA-41497561-1');
+            </script>`,
         }}
       />
 
