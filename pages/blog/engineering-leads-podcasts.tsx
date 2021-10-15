@@ -1,6 +1,6 @@
 import React from "react";
 import useSWR from "swr";
-import Post from "../../lib/blog/post";
+import Post from "../../lib/blog/Post";
 import fetcher from "../../lib/utils/fetcher";
 
 const data = [
