@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp -r content .next/server/chunks",
+    "copy:assets": "cp -r content/**/*.{png,jpeg,jpg} public/assets",
+    "copy:articles": "cp -r content .next/server/chunks",
+    "build": "next build && yarn copy:articles && yarn copy:assets",
     "start": "next start"
   },
   "dependencies": {
