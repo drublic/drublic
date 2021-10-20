@@ -18,16 +18,16 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
   return (
     <Layout
       title={`${post["meta-title"]} | Blog | drublic – Software Architecture`}
-      description={post.metaDescription}
+      description={post["meta-description"]}
     >
       <Head>
-        <meta name="twitter:title" content={post["meta-title"]} />
-        <meta name="twitter:description" content={post["meta-description"]} />
+        <meta name="article:author" content="Hans Christian Reinl" />
 
         {post.image && (
           <>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={post.image} />
+            <meta name="og:image" content={post.image} />
           </>
         )}
       </Head>

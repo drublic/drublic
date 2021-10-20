@@ -27,6 +27,10 @@ const Head = ({ title, description }) => (
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="/img/logo.png" />
 
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content={description} />
+    <meta name="og:image" content="/img/logo.png" />
+
     <link type="text/plain" rel="author" href="/humans.txt" />
     <meta name="author" content="Hans Christian Reinl" />
 
