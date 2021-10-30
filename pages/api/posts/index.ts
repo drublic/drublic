@@ -4,12 +4,9 @@ import * as showdown from "showdown";
 
 export const POSTS_DIR =
   process.env.NODE_ENV === "production"
-    ? path.join(__dirname, "../_next/chunks/content")
+    ? path.join(__dirname, "../chunks/content")
     : path.join(process.cwd(), "./content");
-console.log({
-  __dirname,
-  POSTS_DIR: path.join(__dirname, "../_next/chunks/content"),
-});
+
 const converter: showdown.Converter = new showdown.Converter();
 
 const getFolders = async (): Promise<string[]> => {
