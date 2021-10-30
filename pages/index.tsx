@@ -25,8 +25,7 @@ const Index = ({ posts }) => {
               </p>
               <p>
                 Currently I work for{" "}
-                <a href="https://www.prosiebensat1.com/">ProSiebenSat.1</a> on{" "}
-                <a href="https://www.fyeo.de/">FYEO</a>.
+                <a href="https://www.prosiebensat1.com/">ProSiebenSat.1</a>.
               </p>
             </div>
 

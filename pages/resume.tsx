@@ -20,8 +20,8 @@ const Resume = () => (
           <header className="resume-header">
             <h2>Hans Christian Reinl</h2>
             <h4>
-              Director Technology &amp; Product for FYEO <br />
-              at ProSiebenSat.1 Digital
+              Vice President Engineering <br />
+              at Seven.One Entertainment Group
             </h4>
 
             <address>
@@ -37,10 +37,11 @@ const Resume = () => (
           <h2>About</h2>
 
           <p>
-            I am a Software Architect and Certified Scrum Master working as
-            Director Technology &amp; Product on{" "}
-            <a href="https://www.fyeo.de/">FYEO</a> for{" "}
-            <a href="https://www.prosiebensat1.com/">ProSiebenSat.1 Media SE</a>{" "}
+            I am a Software Architect and Certified Scrum Master working as Vice
+            President Engineering for{" "}
+            <a href="https://www.prosiebensat1.com/">
+              Seven.One Entertainment Group
+            </a>{" "}
             located in Cologne, Germany.
           </p>
           <p>
@@ -68,13 +69,16 @@ const Resume = () => (
             More on <a href="/portfolio">my portfolio</a>.
           </p>
 
-          <h3>ProSiebenSat.1 Digital GmbH</h3>
+          <h3>Seven.One Entertainment Group GmbH</h3>
 
           <p>
-            <b>Director Technology &amp; Product for FYEO</b>, January 2021 –
-            now
+            <b>Vice President Engineering, Consumer Products</b>, October 2021 –
+            current
             <br />
-            <b>Director Technology for FYEO</b>, July 2020 – December 2020
+            <b>Director Technology &amp; Product, FYEO</b>, January – October
+            2021
+            <br />
+            <b>Director Technology, FYEO</b>, July 2020 – December 2020
           </p>
 
           <h3>Freelance Software Architect &amp; Engineer</h3>
