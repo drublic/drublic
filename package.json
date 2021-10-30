@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "copy:assets": "cp -r content/**/*.{png,jpeg,jpg} public/assets",
-    "copy:articles": "cp -r content .next/server/chunks",
+    "copy:articles": "cp -r content .next/static/chunks",
     "build": "next build && yarn copy:articles && yarn copy:assets",
     "start": "next start"
   },
