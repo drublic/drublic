@@ -4,8 +4,8 @@ import * as showdown from "showdown";
 
 export const POSTS_DIR =
   process.env.NODE_ENV === "production"
-    ? path.join(__dirname, "../chunks/content")
-    : path.join(process.cwd(), "./content");
+    ? path.join(process.cwd(), ".next/server/chunks/content")
+    : path.join(process.cwd(), "content");
 
 const converter: showdown.Converter = new showdown.Converter();
 
