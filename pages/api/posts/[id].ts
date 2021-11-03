@@ -4,10 +4,16 @@ import * as showdown from "showdown";
 import { POSTS_DIR, getPosts } from ".";
 
 const converter: showdown.Converter = new showdown.Converter();
-const getFullPost = async (posts: any[], slug: string): Promise<any> => {
+export const getFullPost = async (posts: any[], slug: string): Promise<any> => {
   const postData = posts.find((post) => post.slug === slug);
 
   if (!postData) {
+    return {
+      error: true,
+    };
+  }
+
+  if (postData.url) {
     return {
       error: true,
     };

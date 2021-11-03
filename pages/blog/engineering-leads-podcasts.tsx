@@ -1,7 +1,11 @@
 import React from "react";
-import useSWR from "swr";
+import useSWR, { SWRConfig } from "swr";
 import Post from "../../lib/blog/Post";
 import fetcher from "../../lib/utils/fetcher";
+import { getPosts } from "../api/posts";
+import { getFullPost } from "../api/posts/[id]";
+
+const SLUG = "engineering-leads-podcasts";
 
 const data = [
   {
@@ -91,12 +95,9 @@ const template = ({ link, image, title, author, comment, spotify, apple }) => `
     </li>
     `;
 
-const BlogPost = () => {
+const BlogPost = ({ fallback }) => {
   const { data: posts, error: postsError } = useSWR("/api/posts", fetcher);
-  const { data: post, error } = useSWR(
-    `/api/posts/engineering-leads-podcasts`,
-    fetcher
-  );
+  const { data: post, error } = useSWR(`/api/posts/${SLUG}`, fetcher);
 
   if (!post) {
     return null;
@@ -105,24 +106,25 @@ const BlogPost = () => {
   const renderedData = data.map(template);
 
   return (
-    <Post post={post} posts={posts}>
-      <div className="post__intro">
+    <SWRConfig value={{ fallback }}>
+      <Post post={post} posts={posts}>
+        <div className="post__intro">
+          <p>
+            In the last years my career took a turn into the direcation of
+            technical management. While I listen to a lot of podcasts on a daily
+            basis I started to collect a list of podcasts that help me stear
+            through my work.
+          </p>
+        </div>
+
         <p>
-          In the last years my career took a turn into the direcation of
-          technical management. While I listen to a lot of podcasts on a daily
-          basis I started to collect a list of podcasts that help me stear
-          through my work.
+          Here is a list of podcasts for engineering managers, tech leaders and
+          software architects.
         </p>
-      </div>
 
-      <p>
-        Here is a list of podcasts for engineering managers, tech leaders and
-        software architects.
-      </p>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
 .article58-list {
   list-style: none;
   padding-left: 0;
@@ -156,20 +158,34 @@ const BlogPost = () => {
 .article58-title {
   margin-bottom: 0.5rem;
 }`,
-        }}
-      />
+          }}
+        />
 
-      <ul
-        className="article58-list"
-        dangerouslySetInnerHTML={{ __html: renderedData.join("") }}
-      ></ul>
+        <ul
+          className="article58-list"
+          dangerouslySetInnerHTML={{ __html: renderedData.join("") }}
+        ></ul>
 
-      <p>
-        Any good additions that you have on your list? Please share it with me
-        via <a href="https://twitter.com/drublic">@drublic on Twitter</a>.
-      </p>
-    </Post>
+        <p>
+          Any good additions that you have on your list? Please share it with me
+          via <a href="https://twitter.com/drublic">@drublic on Twitter</a>.
+        </p>
+      </Post>
+    </SWRConfig>
   );
+};
+
+export const getStaticProps = async ({ params }) => {
+  const posts = await getPosts();
+
+  return {
+    props: {
+      fallback: {
+        [`/api/posts`]: posts,
+        [`/api/posts/${SLUG}`]: await getFullPost(posts, SLUG),
+      },
+    },
+  };
 };
 
 export default BlogPost;

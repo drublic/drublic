@@ -1,10 +1,14 @@
 import { useRouter } from "next/router";
 import React from "react";
-import useSWR from "swr";
+import useSWR, { SWRConfig } from "swr";
 import Post from "../../lib/blog/Post";
 import fetcher from "../../lib/utils/fetcher";
+import { getPosts } from "../api/posts";
+import { getFullPost } from "../api/posts/[id]";
 
-const BlogPost = () => {
+const existingPages = ["engineering-leads-podcasts"];
+
+const Article = () => {
   const router = useRouter();
 
   const { data: posts, error: postsError } = useSWR("/api/posts", fetcher);
@@ -26,6 +30,38 @@ const BlogPost = () => {
       <div dangerouslySetInnerHTML={{ __html: post.entry }}></div>
     </Post>
   );
+};
+
+const BlogPost = ({ fallback }) => {
+  return (
+    <SWRConfig value={{ fallback }}>
+      <Article />
+    </SWRConfig>
+  );
+};
+
+export const getStaticProps = async ({ params }) => {
+  const posts = await getPosts();
+
+  return {
+    props: {
+      fallback: {
+        [`/api/posts`]: posts,
+        [`/api/posts/${params.id}`]: await getFullPost(posts, params.id),
+      },
+    },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const posts = await getPosts();
+
+  return {
+    paths: posts
+      .filter(({ slug }) => !existingPages.includes(slug))
+      .map(({ slug }) => ({ params: { id: slug } })),
+    fallback: false,
+  };
 };
 
 export default BlogPost;
