@@ -26,6 +26,10 @@
   margin-bottom: 3rem;
 }
 
+.posts__post__header h2 {
+  margin-top: 0;
+}
+
 .posts__post__header a {
   display: block;
 }
