@@ -11,6 +11,7 @@
   border: none;
   color: var(--text-color);
   transition: 0.15s;
+  font-size: 1.125rem;
 }
 
 .button::before {

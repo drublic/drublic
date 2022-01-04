@@ -12,16 +12,9 @@ const Index = ({ posts }) => {
           <div className="container">
             <div className="claim__desc">
               <p>
-                Dealing with complex distributed mirco-service based
-                architectures is my daily business and I love it. Find out{" "}
-                <Link href="/resume">
-                  <a>more about me</a>
-                </Link>{" "}
-                and{" "}
-                <Link href="/portfolio">
-                  <a>my work</a>
-                </Link>
-                .
+                Working with and developing teams is what I am really passionate
+                about. Dealing with complex distributed mirco-service based
+                architectures is my daily business. And I love it.
               </p>
               <p>
                 Currently I work for{" "}
@@ -30,10 +23,6 @@ const Index = ({ posts }) => {
             </div>
 
             <p>
-              {/* <a href="#hire-me" className="button button--primary button--margin-right"
-                title="I am a Software Architect, hire me!" data-ga-category="Contact" data-ga-action="Hire"
-                data-ga-label="Hire me">Hire me</a> */}
-
               <Link href="/resume">
                 <a
                   className="button"
@@ -54,18 +43,10 @@ const Index = ({ posts }) => {
 
         {/* Projects */}
         <section className="container work" id="work">
-          <h2>I have worked for…</h2>
+          <h2>Companies I worked for</h2>
 
           <div className="work__for">
             <Clients />
-
-            <p className="work__more">
-              <Link href="/portfolio">
-                <a className="button" title="View some of the work I do">
-                  My Portfolio
-                </a>
-              </Link>
-            </p>
           </div>
         </section>
 

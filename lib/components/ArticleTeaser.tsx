@@ -9,7 +9,7 @@ const ArticleTeaser = ({ title, slug, date, abstract }) => (
           <a>{title}</a>
         </Link>
       </h2>
-      <time className="posts__date">{date}</time>
+      <time className="posts__date">Published on {date}</time>
     </header>
 
     <div dangerouslySetInnerHTML={{ __html: abstract }} />

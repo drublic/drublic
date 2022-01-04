@@ -53,7 +53,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
               </Link>
             </h1>
 
-            <time className="post__header__date">{post.date}</time>
+            <time className="post__header__date">Published on {post.date}</time>
 
             <meta itemProp="datePublished" content={post.date} />
             <meta itemProp="description" content={post.abstract} />
