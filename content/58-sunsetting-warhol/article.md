@@ -5,3 +5,5 @@
 > If you have a lot of time and a lot of money at your hands (or preferably both) and want to have a try at making the idea behind Warhol work, we encourage you to do so! Even now we still believe that Warhol's basic concept (comparing CSS instead of pixels) holds a lot of promise - it's just not us who will be delivering on that promise.
 >
 > So long, and thanks for all the fish!
+
+More information [here](https://warhol.io/blog/so-long-and-thanks-for-all-the-fish).
