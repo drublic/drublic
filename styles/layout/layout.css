@@ -204,19 +204,19 @@ hr {
 }
 
 /* Cookue Message */
-.cookieconsent-com---nb.cookieconsent-com---palette-light .cc-nb-title {
+.cookieconsent-com---nb.termsfeed-com---palette-light .cc-nb-title {
   font-size: 2.7rem;
   font-weight: normal;
 }
 
-.cookieconsent-com---palette-light .cc-nb-main-container {
+.termsfeed-com---palette-light .cc-nb-main-container {
   font: 16px Roboto Slab, serif;
   color: var(--copy-color);
 }
 
-.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-okagree,
-.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-reject,
-.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-changep {
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-okagree,
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject,
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-changep {
   padding: 0.5rem 2.5rem;
   line-height: 2;
   font-size: 1em;
@@ -225,7 +225,7 @@ hr {
   font-weight: normal;
 }
 
-.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-okagree {
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-okagree {
   background-image: linear-gradient(
     161.81deg,
     var(--secondary-color--hover) 25%,
@@ -235,7 +235,7 @@ hr {
   color: #fff;
 }
 
-.cookieconsent-com---palette-light .cc-nb-main-container .cc-nb-reject {
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject {
   background-color: var(--color-light);
   color: #fff;
 }
