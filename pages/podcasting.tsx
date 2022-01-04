@@ -59,6 +59,15 @@ const Podcasting = () => {
         <section className="container" id="podcasting-latest">
           <h2>Working Draft</h2>
 
+          <iframe
+            src="https://open.spotify.com/embed/show/78iH7cIFzu1ejoB6aQUsIh?utm_source=generator&amp;theme=0"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+
           <h3>
             <span className="oss--wd-logo">
               <Image
@@ -93,8 +102,8 @@ const Podcasting = () => {
 
           <figure className="image image--block">
             <iframe
-              width="784"
-              height="441"
+              width="928"
+              height="552"
               src="https://www.youtube.com/embed/1Mz3JpGbjlk"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

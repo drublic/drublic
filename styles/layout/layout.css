@@ -51,6 +51,10 @@ hr {
   max-width: 85rem;
 }
 
+.section--topped {
+  margin-top: 2rem !important;
+}
+
 @media (min-width: 32em) {
   .container {
     padding: 2rem;
