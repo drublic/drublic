@@ -75,11 +75,3 @@
 .header p {
   font-size: 1.2em;
 }
-
-/**
- * Legal notice
- */
-.header .navigation__legal {
-  padding: 1rem 1rem 1rem 3rem;
-  font-size: 0.75rem;
-}
