@@ -7,9 +7,11 @@ const Header = () => (
     <div className="header__inner">
       <Link href="/">
         <a role="banner" className="header__title">
-          <h1 className="header__title__line">Hans Christian Reinl</h1>
+          <h1 className="header__title__line">Hans Reinl</h1>
         </a>
       </Link>
+
+      <div className="header__spacer" />
 
       <Navigation />
     </div>

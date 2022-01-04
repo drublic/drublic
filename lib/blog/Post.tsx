@@ -32,8 +32,6 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
         )}
       </Head>
 
-      <BlogMessage />
-
       <main id="content" className="main container" role="main">
         <article
           className="post"
@@ -53,20 +51,21 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
               </Link>
             </h1>
 
-            <time className="post__header__date">Published on {post.date}</time>
+            <div className="post__header__date">
+              <time>Published on {post.date}</time> by{" "}
+              <span itemProp="author">Hans Reinl</span>
+            </div>
 
             <meta itemProp="datePublished" content={post.date} />
             <meta itemProp="description" content={post.abstract} />
           </header>
 
           <div itemProp="articleBody">{children}</div>
-
-          <footer className="post__footer">
-            <p>
-              Post by <span itemProp="author">Hans Christian Reinl</span>.
-            </p>
-          </footer>
         </article>
+      </main>
+
+      <aside className="container">
+        <BlogMessage />
 
         <div className="post__crosslinks">
           <h3>Latest publications</h3>
@@ -100,7 +99,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
             </Link>
           </li>
         </ul>
-      </main>
+      </aside>
 
       <script async src="//platform.twitter.com/widgets.js"></script>
     </Layout>

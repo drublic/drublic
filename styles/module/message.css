@@ -3,6 +3,8 @@
  */
 .message {
   background: #fff64f;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .message__content {

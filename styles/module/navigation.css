@@ -5,10 +5,10 @@
   line-height: 2;
   transition: 0.2s;
   text-align: left;
+  margin-top: 1.5rem;
 }
 
 .navigation__menu {
-  padding: 0;
   margin: 0;
   font-size: 0;
   text-align: center;
@@ -16,14 +16,13 @@
 
 .navigation__menu li {
   display: inline-block;
-  vertical-align: top;
 }
 
 .navigation__menu a {
   position: relative;
   display: block;
   color: var(--text-color);
-  padding: 0.5rem 0.75rem;
+  padding: 1.25rem 1rem 1rem;
   text-decoration: none;
   transition: 0.15s;
   font-size: 1rem;
@@ -59,9 +58,13 @@
   padding: 0;
 }
 
-@media (min-width: 32em) {
+@media (min-width: 48em) {
+  .navigation__menu {
+    display: flex;
+  }
+
   .navigation__menu a {
-    padding: 1.25rem 2rem 1rem;
+    padding: 1.25rem 1.5rem 1rem;
   }
 }
 

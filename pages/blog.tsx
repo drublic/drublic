@@ -8,8 +8,6 @@ import { getPosts } from "./api/posts";
 const Blog = ({ posts }) => {
   return (
     <Layout title="Blog">
-      <BlogMessage />
-
       <main
         id="main"
         className="main container"
@@ -17,7 +15,19 @@ const Blog = ({ posts }) => {
         itemScope
         itemType="http://schema.org/Blog"
       >
-        {posts?.slice(0, 5).map(({ title, slug, date, abstract }) => (
+        {posts?.slice(0, 1).map(({ title, slug, date, abstract }) => (
+          <ArticleTeaser
+            key={slug}
+            title={title}
+            date={date}
+            slug={slug}
+            abstract={abstract}
+          />
+        ))}
+
+        <BlogMessage />
+
+        {posts?.slice(1, 5).map(({ title, slug, date, abstract }) => (
           <ArticleTeaser
             key={slug}
             title={title}
