@@ -12,6 +12,17 @@ const Head = ({ title, description }) => (
     <link rel="dns-prefetch" href="//fonts.gstatic.com/" />
     <link rel="dns-prefetch" href="//www.google-analytics.com/" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossOrigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="description" content={description} />
 
     <link
@@ -44,7 +55,7 @@ const Head = ({ title, description }) => (
     <link
       rel="index"
       href="/"
-      title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript – Hans Christian Reinl"
+      title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript - Hans Christian Reinl"
     />
   </NextHead>
 );

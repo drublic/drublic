@@ -50,7 +50,7 @@ const Navigation = () => {
             <a title="Get some cutting edge goodness">Blog</a>
           </Link>
         </li>
-        <li
+        {/* <li
           className={classNames("navigation__menu__hidden-mobile", {
             "is-active": router.asPath === "/portfolio",
           })}
@@ -58,7 +58,7 @@ const Navigation = () => {
           <Link href="/portfolio">
             <a title="View some of the work I do">Portfolio</a>
           </Link>
-        </li>
+        </li> */}
 
         {/* <li className="navigation__menu__hidden-mobile">
       <a href="/#hire-me" title="I do client work and propably would love to work with you">Hire me</a>
