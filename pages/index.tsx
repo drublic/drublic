@@ -42,7 +42,6 @@ const Index = ({ posts }) => {
 
         <IndexArticles posts={posts} />
 
-        {/* Projects */}
         <section className="container work" id="work">
           <h2>Companies I worked for</h2>
 
@@ -50,24 +49,6 @@ const Index = ({ posts }) => {
             <Clients />
           </div>
         </section>
-
-        {/* Hire Me */}
-        {/* <section className="container hire-me" id="hire-me">
-          <h2>Hire Me</h2>
-
-          <p>I do work for businesses, agencies and other clients that value great front-end work.</p>
-          <p>Work that I like to do includes consulting and educational work (workshops et cetera) as well as projects that
-            have a focus on JavaScript application development or a deep need of scalability and consistency throughout a
-            website. <a href="/portfolio/">Review the projects I am involved in</a> to get an overview of my
-            skills.</p>
-          <p>If you would like me to deliver a talk on your conference <a href="/portfolio/">please see my
-              projects</a> and decide whether I am a good choice for yourself.</p>
-
-          <p>Contact me via e-mail if you think I am a fit for your project:
-            <a href="mailto:info@drublic.de" title="I am a Software Architect, hire me!" data-ga-category="Contact"
-              data-ga-action="Hire" data-ga-label="Contact me">info@drublic.de</a>.
-          </p>
-        </section> */}
       </main>
     </Layout>
   );

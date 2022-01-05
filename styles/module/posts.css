@@ -66,16 +66,6 @@
   margin-top: 1rem;
 }
 
-.posts__list::after {
-  content: "⚡️";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4rem;
-  font-family: serif;
-  text-align: center;
-}
-
 .posts__list--no-divider::after {
   display: none;
 }

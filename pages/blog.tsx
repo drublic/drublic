@@ -47,6 +47,31 @@ const Blog = ({ posts }) => {
             />
           ))}
         </ul>
+
+        <h3>On other websites</h3>
+
+        <ul className="posts__list posts__list--no-divider posts__list--no-top">
+          <ArticleTeaserSmall
+            title="CSS Naming Conventions: Less Rules, more Fun on Medium.com"
+            url="https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b"
+            date="19.06.2014"
+            description=""
+          />
+
+          <ArticleTeaserSmall
+            title="A counter statement: Putting the CSS in the head on Medium.com"
+            url="https://medium.com/programming-ideas-tutorial-and-experience/f98103d09ce1"
+            date="03.02.2014"
+            description=""
+          />
+
+          <ArticleTeaserSmall
+            title="Shared Grunt Configuration for The Nitty Gritty"
+            url="https://thenittygritty.co/shared-grunt-configuration"
+            date="09.06.2013"
+            description=""
+          />
+        </ul>
       </main>
     </Layout>
   );
