@@ -1,8 +1,7 @@
 {
-  "url": "css3-rotate-images-on-click",
   "title": "CSS3: Rotate Images on Click",
   "date": "02.10.2011",
-  "abstract": "<p>With CSS3 be get some great new functions to use that are now accessible pretty easy. These are not only rounded corners or shadows but also transitions and full animations that let you do things that were only possible with JavaScript some time ago. In the footer of this website I use CSS3 3D-transitions for rotating two images. There is a front- and a back-site for that image. Through animation on click it looks like these images are rotating. I&#8217;m not the first one using this technique. I got inspired by Google+. They are using it for rotation of the",
+  "abstract": "With CSS3 be get some great new functions to use that are now accessible pretty easy. These are not only rounded corners or shadows but also transitions and full animations that let you do things that were only possible with JavaScript some time ago. In the footer of this website I use CSS3 3D-transitions for rotating two images. There is a front- and a back-site for that image. Through animation on click it looks like these images are rotating. I&#8217;m not the first one using this technique. I got inspired by Google+. They are using it for rotation of the",
   "meta-title": "",
   "meta-description": "A short tutorial for the use of CSS3 3D-transforms for rotating two images. Letting two images through animation on click look like they are rotating.",
   "link": false

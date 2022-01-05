@@ -1,8 +1,7 @@
 {
-  "url": "is-mothereffin-jquery-up",
-  "title": "Is Mothereffin&#8217; jQuery Up?",
+  "title": "Is Mothereffin' jQuery Up?",
   "date": "07.12.2011",
-  "abstract": "<p>Some weeks ago I made a pull request for HTML5Boilerplate which should update jQuery to the latest version available on the Google CDN. How ever I copied the old version of minified jQuery because the uncompressed version was available but the minified wasn&#8217;t. Stupid thing! That&#8217;s why I created Is Mothereffin&#8217; jQuery up? The service checks three major CDNs for the availability of the latest jQuery version. View Is Mothereffin&#8217; jQuery up? How to Check if the File is up I had some difficulties to find the right method how to detect if a file is already available with JavaScript.",
+  "abstract": "Some weeks ago I made a pull request for HTML5Boilerplate which should update jQuery to the latest version available on the Google CDN. How ever I copied the old version of minified jQuery because the uncompressed version was available but the minified wasn't. Stupid thing! That's why I created Is Mothereffin' jQuery up? The service checks three major CDNs for the availability of the latest jQuery version. View Is Mothereffin' jQuery up? How to Check if the File is up I had some difficulties to find the right method how to detect if a file is already available with JavaScript.",
   "meta-title": "",
   "meta-description": "\"Is Mothereffin' jQuery up\" is a Tool I created to check if the latest version of jQuery is already up on the Content Delivery Networks.",
   "link": false

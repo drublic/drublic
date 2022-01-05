@@ -1,8 +1,7 @@
 {
-  "url": "offer-files-as-download-with-adownload",
   "title": "Offer Files as Download with a@download",
   "date": "28.08.2011",
-  "abstract": "<p>So the spec introduces a new attribute on a-tags (so called &#8220;links&#8221; &#8211; this may be new to you ;-)) called download (short: a@download &#8211; this technique of connecting attributes with tags is written up and documented by Mathias Bynens). When you link to a file like an image or a PDF-document it will be displayed within the browser normally. The download-attribute in links prevents this behavior and offers the file as a download in your browser. Definition The spec allows the attribute for having a value. This value can be a string which defines the name of the downloaded file. As a default",
+  "abstract": "So the spec introduces a new attribute on a-tags (so called &#8220;links&#8221; &#8211; this may be new to you ;-)) called download (short: a@download &#8211; this technique of connecting attributes with tags is written up and documented by Mathias Bynens). When you link to a file like an image or a PDF-document it will be displayed within the browser normally. The download-attribute in links prevents this behavior and offers the file as a download in your browser. Definition The spec allows the attribute for having a value. This value can be a string which defines the name of the downloaded file. As a default",
   "meta-title": "HTML5 a@download - Download Files directly in your Browser",
   "meta-description": "The spec introduces a new attribute on a-tags called \"download\". When you link to a file like an image it will be displayed within the browser. \"download\" prevents this.",
   "link": false

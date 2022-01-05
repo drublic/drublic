@@ -1,8 +1,7 @@
 {
-  "url": "style-syntax-in-comments",
   "title": "Add Style-Syntax in Comments with `, _ and *",
   "date": "04.09.2011",
-  "abstract": "<p>You may be familiar with the syntax of writing code-Tags like `some code here`. This is what is used by Github for example. At Daring Fireball they wrote up the syntax. Not only for code-Tags but for various features that are connected to style and semantics. In the comments of this blog it is possible to use some of the rules to add some markup to them. For instance when you write: Some fancy text with **styled _markup_** and `code`. It will be transfered to Some fancy text with &lt;strong&gt;styled &lt;em&gt;markup&lt;/em&gt;&lt;/strong&gt; and &lt;code&gt;code&lt;/code&gt;. I really like to use these tags",
+  "abstract": "You may be familiar with the syntax of writing code-Tags like `some code here`. This is what is used by Github for example. At Daring Fireball they wrote up the syntax. Not only for code-Tags but for various features that are connected to style and semantics. In the comments of this blog it is possible to use some of the rules to add some markup to them. For instance when you write: Some fancy text with **styled _markup_** and `code`. It will be transfered to Some fancy text with &lt;strong&gt;styled &lt;em&gt;markup&lt;/em&gt;&lt;/strong&gt; and &lt;code&gt;code&lt;/code&gt;. I really like to use these tags",
   "meta-title": "",
   "meta-description": "Style WordPress comments with some special-chars instead of HTML.",
   "link": false

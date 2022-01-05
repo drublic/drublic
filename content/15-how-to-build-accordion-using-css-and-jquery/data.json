@@ -1,8 +1,7 @@
 {
-  "url": "how-to-build-accordion-using-css-and-jquery",
   "title": "How to Build an Accordion-Menu using CSS and a bit of jQuery",
   "date": "23.10.2011",
-  "abstract": "<p>We&#8217;re doing a project these days where we use an accordion-menu to show some content. I want to share with you how I did this using jQuery and CSS. This is pretty easy and I want to encourage you not to use any plugin or so but to write the code yourself and learn a bit more about how to use CSS and jQuery and save some microseconds on your loading type. The HTML This is kinda straightforward I think. We don&#8217;t need a wrapper for the accordion-menu. Check it: &lt;section id=&quot;experts&quot; class=&quot;accordion-item&quot;&gt; &lt;h1&gt;&lt;a href=&quot;#experts&quot;&gt;Experts&lt;/a&gt;&lt;/h1&gt; &lt;div class=&quot;content&quot;&gt;&lt;/div&gt; &lt;/section&gt; This is",
+  "abstract": "We're doing a project these days where we use an accordion-menu to show some content. I want to share with you how I did this using jQuery and CSS. This is pretty easy and I want to encourage you not to use any plugin or so but to write the code yourself and learn a bit more about how to use CSS and jQuery and save some microseconds on your loading type. The HTML This is kinda straightforward I think. We don't need a wrapper for the accordion-menu. Check it: &lt;section id=&quot;experts&quot; class=&quot;accordion-item&quot;&gt; &lt;h1&gt;&lt;a href=&quot;#experts&quot;&gt;Experts&lt;/a&gt;&lt;/h1&gt; &lt;div class=&quot;content&quot;&gt;&lt;/div&gt; &lt;/section&gt; This is",
   "meta-title": "",
   "meta-description": "",
   "link": false

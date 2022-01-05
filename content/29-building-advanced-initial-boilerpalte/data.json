@@ -1,10 +1,8 @@
 {
-  "url": "building-advanced-initial-boilerpalte",
   "title": "An Approach on Building an Advanced Initial Boilerplate",
   "date": "10.07.2012",
-  "abstract": "<p>Since some time I found myself defining a good starting point for a new project over and over again. While I use HTML5 Boilerplate in nearly all of my projects it&#8217;s not enough as an initial package. Since I&#8217;m using SASS (in its dialect SCSS) and have some other things I define over and over again I decided to set up a package that lets me start easily and includes a lot of tools that are necessary for my projects. This is an introduction to init, the starting point for projects that require a bit more than just HTML5 Boilerplate.",
+  "abstract": "Since some time I found myself defining a good starting point for a new project over and over again. While I use HTML5 Boilerplate in nearly all of my projects it&#8217;s not enough as an initial package. Since I&#8217;m using SASS (in its dialect SCSS) and have some other things I define over and over again I decided to set up a package that lets me start easily and includes a lot of tools that are necessary for my projects. This is an introduction to init, the starting point for projects that require a bit more than just HTML5 Boilerplate.",
   "meta-title": "",
   "meta-description": "An advanced boilerplate for all medium sized projects using HTML5 Boilerplate, Grunt.js and other tools that are used a lot in front-end development.",
   "link": false
 }
-

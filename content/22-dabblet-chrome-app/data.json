@@ -1,8 +1,7 @@
 {
-  "url": "dabblet-chrome-app",
   "title": "Dabblet Chrome App",
   "date": "29.01.2012",
-  "abstract": "<p>I think all of you know Lea Verou&#8217;s dabblet. dabblet is an interactive playground for quickly testing snippets of CSS and HTML code. It uses -prefix-free, so that you won&#8217;t have to add any prefixes in your CSS code. You can save your work in Github gists, embed it in other websites and share it with others. ~ About dabblet Some time ago I made this tiny Google Chrome App for jsFiddle which is in case just a bookmarklet with a bigger icon. I did this for dabblet, too but extended the app to something more: It displays all your dabblets",
+  "abstract": "I think all of you know Lea Verou&#8217;s dabblet. dabblet is an interactive playground for quickly testing snippets of CSS and HTML code. It uses -prefix-free, so that you won&#8217;t have to add any prefixes in your CSS code. You can save your work in Github gists, embed it in other websites and share it with others. ~ About dabblet Some time ago I made this tiny Google Chrome App for jsFiddle which is in case just a bookmarklet with a bigger icon. I did this for dabblet, too but extended the app to something more: It displays all your dabblets",
   "meta-title": "",
   "meta-description": "A Google Chrome App which displays all your dabblets.",
   "link": false
