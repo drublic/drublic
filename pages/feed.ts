@@ -1,11 +1,4 @@
-import fs from "fs";
-import path from "path";
 import { getDate, getPosts } from "./api/posts";
-
-export const PUBLIC_DIR =
-  process.env.NODE_ENV === "production"
-    ? path.join(__dirname, "public")
-    : path.join(__dirname, "../../../public");
 
 const template = (content: string, lastBuildDate: Date) =>
   `
@@ -60,14 +53,12 @@ export const getServerSideProps = async (context) => {
 
   const feed = template(renderPosts(posts), getDate(posts[0].date));
 
-  const filePath = path.join(PUBLIC_DIR, "feed.xml");
-  fs.writeFileSync(filePath, feed);
+  res.setHeader("Content-Type", "text/xml");
+  res.write(feed);
+  res.end();
 
   return {
-    redirect: {
-      destination: "/feed.xml",
-      permanent: false,
-    },
+    props: {},
   };
 };
 
