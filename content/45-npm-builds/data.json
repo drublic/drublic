@@ -1,7 +1,7 @@
 {
   "title": "Using npm as a build system for your next project",
   "date": "04.08.2015",
-  "abstract": "<p>npm is a Node.js’ dependency management system. It provides a <code>script</code> object in a project’s <code>package.json</code> configuration which can hold several CLI scripts. It is possible to run those via your command line. This way it is possible to replace your current build system. This article covers more about how you replace different tasks of a typical front-end build workflow.</p>",
+  "abstract": "npm is a Node.js’ dependency management system. It provides a <code>script</code> object in a project’s <code>package.json</code> configuration which can hold several CLI scripts. It is possible to run those via your command line. This way it is possible to replace your current build system. This article covers more about how you replace different tasks of a typical front-end build workflow.",
   "meta-title": "npm as a task-based build system for front-end projects",
   "meta-description": "How to use npm as a task-based build system for front-end projects by using different CLIs and npm’s scripts for JavaScript and CSS.",
   "link": false,

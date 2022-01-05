@@ -7,35 +7,42 @@ export const PUBLIC_DIR =
     ? path.join(__dirname, "public")
     : path.join(__dirname, "../../../public");
 
-const template = (content: string, lastBuildDate: Date) => `
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <title>drublic – Software Architecture - Hans Christian Reinl, Cologne</title>
+const template = (content: string, lastBuildDate: Date) =>
+  `
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>drublic - Engineering Management &amp; Software Architecture - Hans Christian Reinl, Cologne</title>
   <link href="https://drublic.de/blog/"/>
-  <atom:link href="https://drublic.de/feed" rel="self" type="application/rss+xml"/>
-  <language>en</language>
-  <lastBuildDate>${lastBuildDate?.toUTCString()}</lastBuildDate>
+  <link href="https://drublic.de/feed/" rel="self" />
+  <updated>${lastBuildDate?.toISOString()}</updated>
+  <id>https://drublic.de/blog/</id>
+
   <author>
     <name>Hans Christian Reinl</name>
     <email>info@drublic.de</email>
   </author>
 
   ${content}
-  </channel>
-</rss>
-`;
+</feed>
+`.trim();
 
 const renderPosts = (posts: any[]) =>
   posts
     .map(
       ({ title, slug, date, abstract }) => `
-<item>
-  <guid>https://drublic.de/blog/${slug}/</guid>
-  <title>${title}</title>
-  <link>https://drublic.de/blog/${slug}/</link>
-  <description><![CDATA[${abstract}]]></description>
-  <pubDate>${getDate(date).toUTCString()}</pubDate>
-</item>
+<entry>
+  <id>https://drublic.de/blog/${slug}/</id>
+  <title>${title.replace(
+    /[\u00A0-\u9999<>\&]/g,
+    (i) => "&#" + i.charCodeAt(0) + ";"
+  )}</title>
+  <link href="https://drublic.de/blog/${slug}/" />
+  <content type="html">${abstract.replace(
+    /[\u00A0-\u9999<>\&]/g,
+    (i) => "&#" + i.charCodeAt(0) + ";"
+  )}></content>
+  <updated>${getDate(date).toISOString()}</updated>
+</entry>
 `
     )
     .join("");

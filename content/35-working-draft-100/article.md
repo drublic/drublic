@@ -1,10 +1,10 @@
 It’s been over two years now – with our podcast Working Draft we have done 100 revisions. Congratulations to ourselves!
 
-We recorded revision 100 on Monday and had a very special guest: Paul Irish. That’s why we recorded in English this time. The <a href="http://workingdraft.de/100/">final podcast</a> is now live and can be downloaded. Check it out and let us know what you think.</p>
+We recorded revision 100 on Monday and had a very special guest: Paul Irish. That’s why we recorded in English this time. The <a href="http://workingdraft.de/100/">final podcast</a> is now live and can be downloaded. Check it out and let us know what you think.
 
-<a href="http://workingdraft.de/100/" title="Listen to Working Draft Revision 100" class="button">Listen to WD Revision 100</a></p>
+<a href="http://workingdraft.de/100/" title="Listen to Working Draft Revision 100" class="button">Listen to WD Revision 100</a>
 
-Here are the topics we talked about:</p>
+Here are the topics we talked about:
 
 
 * <a href="https://www.bountysource.com/">BountySource</a> let’s you define an amount up for grabs to anyone willing to solve your issue with an open source project.

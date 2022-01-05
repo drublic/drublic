@@ -17,7 +17,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
 
   return (
     <Layout
-      title={`${post["meta-title"]} | Blog | drublic – Software Architecture`}
+      title={`${post["meta-title"]} | Blog`}
       description={post["meta-description"]}
     >
       <Head>

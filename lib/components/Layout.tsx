@@ -5,13 +5,16 @@ import Footer from "./Footer";
 import Cookiescript from "./Cookiescript";
 
 const Layout = ({
-  title = "drublic – Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
+  title = "drublic - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
   description = `Engineering Management & Software Architecture, Hans Christian Reinl - Working Draft, Node.js, React, CSS, JavaScript & Agile`,
   children,
 }) => {
   return (
     <>
-      <Head title={title} description={description} />
+      <Head
+        title={`${title} - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne `}
+        description={description}
+      />
 
       <div
         dangerouslySetInnerHTML={{
