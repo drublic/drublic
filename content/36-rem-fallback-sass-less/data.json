@@ -1,5 +1,4 @@
 {
-  "url": "rem-fallback-sass-less",
   "title": "The REM Fallback with Sass or LESS",
   "date": "02.01.2013",
   "abstract": "<p>Since a while now word has spread to use the CSS unit rem for font-sizes and values in CSS. Here I want to explain how you can use a fallback in Sass or LESS to get rem working in all browsers. View Gist with mixins Why rem? Let&#8217;s look into what rem means. We know of the em unit which is relative to the font-size of the parent element it is defined on. This means if one of the parents in the DOM-tree changes its font-size, the font-size of the child element changes too. In contrast the rem unit is",
