@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import useSWR from "swr";
 import fetcher from "../utils/fetcher";
+import ArticleTeaser from "./ArticleTeaser";
 import ArticleTeaserSmall from "./ArticleTeaserSmall";
 
 const IndexArticles = ({ posts }) => {
@@ -13,12 +14,21 @@ const IndexArticles = ({ posts }) => {
 
   return (
     <section className="container oss" id="oss">
-      <h2>Articles</h2>
+      <h2>From the Blog</h2>
 
-      <h3>From The Blog</h3>
+      {posts?.slice(0, 1).map(({ title, slug, date, abstract }) => (
+        <ArticleTeaser
+          key={slug}
+          title={title}
+          date={date}
+          slug={slug}
+          abstract={abstract}
+          variant="small"
+        />
+      ))}
 
       <ul className="posts__list posts__list--no-divider posts__list--no-top">
-        {posts?.slice(0, 5).map(({ title, date, slug }) => (
+        {posts?.slice(1, 7).map(({ title, date, slug }) => (
           <ArticleTeaserSmall
             key={slug}
             title={title}
@@ -34,17 +44,19 @@ const IndexArticles = ({ posts }) => {
         </Link>
       </p>
 
-      <h3>
+      <h2>
         <span className="oss--wd-logo">
           <Image
             src="/img/wd.svg"
             alt="Working Draft Logo"
-            width={32}
-            height={32}
+            width={64}
+            height={64}
           />
         </span>
         Working Draft Podcast
-      </h3>
+      </h2>
+
+      <p>Listen to the latest episode of the Working Draft podcast.</p>
 
       <iframe
         src="https://open.spotify.com/embed/show/78iH7cIFzu1ejoB6aQUsIh?utm_source=generator&amp;theme=0"
