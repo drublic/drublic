@@ -4,7 +4,7 @@
 }
 
 .image--block {
-  margin: 1rem -4rem 1.5rem;
+  margin: 1rem -5rem 1.5rem;
 }
 
 .image--right {
@@ -48,14 +48,13 @@
 }
 
 .image__caption__copywrite::before {
-  content: '\00a9\a0';
+  content: "\00a9\a0";
 }
 
 .image--has-frame {
   box-shadow: 0 0 0 1px var(--border-color);
   padding-bottom: 1px;
 }
-
 
 @media screen and (max-width: 64em) {
   .image--block {
