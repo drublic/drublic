@@ -3,17 +3,6 @@ import Link from "next/link";
 const Footer = () => (
   <>
     <footer className="footer">
-      <p>
-        Made with love. {new Date().getFullYear()}. Cologne, Germany.{" "}
-        <Link href="/legal">
-          <a title="Who does this stuff?">Legal/Impressum</a>
-        </Link>{" "}
-        &bull;{" "}
-        <Link href="/privacy">
-          <a title="Privacy Protection Page">Privacy</a>
-        </Link>
-      </p>
-
       <ul className="social">
         <li className="social__link social__link--github">
           <a href="https://github.com/drublic" title="GitHub/drublic">
@@ -31,6 +20,17 @@ const Footer = () => (
           </a>
         </li>
       </ul>
+
+      <p>Made with love. {new Date().getFullYear()}. Cologne, Germany. </p>
+      <p>
+        <Link href="/legal">
+          <a title="Who does this stuff?">Legal/Impressum</a>
+        </Link>{" "}
+        &bull;{" "}
+        <Link href="/privacy">
+          <a title="Privacy Protection Page">Privacy</a>
+        </Link>
+      </p>
 
       <a href="#" className="visuallyhidden">
         go back up to top
