@@ -1,7 +1,15 @@
 .oss--wd-logo {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  margin-right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
   vertical-align: bottom;
+}
+
+@media (min-width: 48em) {
+  .oss--wd-logo {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+  }
 }

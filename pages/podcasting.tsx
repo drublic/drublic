@@ -13,8 +13,8 @@ const Podcasting = () => {
 
   return (
     <Layout title="Podcasting">
-      <main id="content" className="main" role="main">
-        <section className="container">
+      <main id="content" role="main">
+        <section className="container main">
           <h1>Podcasting</h1>
 
           <p>
@@ -30,7 +30,7 @@ const Podcasting = () => {
           style={{ backgroundImage: "url(/img/podcasting.jpg)" }}
         ></div>
 
-        <section className="container" id="podcasting-equipment">
+        <section className="container main" id="podcasting-equipment">
           <h2>Equipment for Recording</h2>
 
           <p>
@@ -56,7 +56,7 @@ const Podcasting = () => {
           </ul>
         </section>
 
-        <section className="container" id="podcasting-latest">
+        <section className="container main" id="podcasting-latest">
           <h2>Working Draft</h2>
 
           <iframe
@@ -97,9 +97,10 @@ const Podcasting = () => {
               description=""
             />
           </ul>
+        </section>
 
-          <h3>A Special Episode</h3>
-
+        <div className="container">
+          <h3 className="main">A Special Episode</h3>
           <figure className="image image--block">
             <iframe
               width="928"
@@ -110,7 +111,7 @@ const Podcasting = () => {
               allowFullScreen
             ></iframe>
           </figure>
-        </section>
+        </div>
       </main>
     </Layout>
   );

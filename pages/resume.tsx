@@ -174,7 +174,7 @@ const Resume = () => (
         </p>
       </div>
 
-      <section className="container">
+      <section className="main container section--topped">
         Here you can find more information about my{" "}
         <Link href="/about/speaking">
           <a>Public Speaking</a>

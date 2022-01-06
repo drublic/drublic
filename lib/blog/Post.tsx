@@ -64,7 +64,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
         </article>
       </main>
 
-      <aside className="container">
+      <aside className="container main">
         <BlogMessage />
 
         <div className="post__crosslinks">

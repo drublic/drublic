@@ -12,14 +12,13 @@
   background-color: var(--color--background--light);
 }
 
-@media screen and (max-width: 48em) {
+@media (max-width: 48em) {
   .footer {
-    margin: 2rem;
     padding: 2rem 0 0;
   }
 }
 
-@media screen and (max-width: 24em) {
+@media (max-width: 24em) {
   .footer {
     padding: 1em;
   }
