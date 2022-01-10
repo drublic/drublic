@@ -24,12 +24,12 @@ const renderPosts = (posts: any[]) =>
     .map(
       ({ title, slug, date, abstract }) => `
 <entry>
-  <id>https://drublic.de/blog/${slug}/</id>
+  <id>https://drublic.de/blog/${slug}</id>
   <title>${title.replace(
     /[\u00A0-\u9999<>\&]/g,
     (i) => "&#" + i.charCodeAt(0) + ";"
   )}</title>
-  <link href="https://drublic.de/blog/${slug}/" />
+  <link href="https://drublic.de/blog/${slug}" />
   <content type="html">${abstract.replace(
     /[\u00A0-\u9999<>\&]/g,
     (i) => "&#" + i.charCodeAt(0) + ";"

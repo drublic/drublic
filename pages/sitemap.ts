@@ -14,7 +14,7 @@ const renderPosts = (posts: any[]) =>
     .map(
       ({ slug, date }) => `
   <url>
-    <loc>https://drublic.de/blog/${slug}/</loc>
+    <loc>https://drublic.de/blog/${slug}</loc>
     <lastmod>${getDate(date).toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
