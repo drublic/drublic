@@ -1,0 +1,9 @@
+{
+  "title": "How to Keep 1.6 Million Podcasts Up to Date",
+  "date": "10.01.2022",
+  "abstract": "The FYEO database held around 1.6 million podcasts on its peak. Each one of those podcasts does have quite a number of episodes which contain the real contents users are intested in: the audio track. And this is the stuff that every podcast platform wants to display to their customers. As soon as it comes out, is published. And as soon as people are searching for it.<br /><br />Let me take you on the journey of building the system that helped us make sure we have all the data in place to show the latest episodes to our customers.",
+  "meta-title": "How to Keep 1.6 Million Podcasts Up to Date",
+  "meta-description": "The FYEO database held around 1.6 million podcasts on its peak. Each one of those podcasts holds episodes which contain audio tracks. Here is how we kept them up to date.",
+  "link": false,
+  "hidden": false
+}
