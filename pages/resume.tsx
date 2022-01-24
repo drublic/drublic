@@ -72,8 +72,8 @@ const Resume = () => (
           <h3>Seven.One Entertainment Group GmbH</h3>
 
           <p>
-            <b>Vice President Engineering, Consumer Products</b>, October 2021 –
-            current
+            <b>Vice President Engineering, Streaming Platform</b>, October 2021
+            – current
             <br />
             <b>Director Technology &amp; Product, FYEO</b>, January – October
             2021
