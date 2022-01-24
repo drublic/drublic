@@ -50,7 +50,7 @@ const Resume = () => (
             web-applications using cutting edge technologies. I love creating
             solid systems in a high-performance environment. My passion is to
             build teams that strive for excellence. Enabling team members to
-            excellerate is what drives my daily work.
+            accelerate is what drives my daily work.
           </p>
         </section>
 
