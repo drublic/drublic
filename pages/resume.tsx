@@ -37,8 +37,8 @@ const Resume = () => (
           <h2>About</h2>
 
           <p>
-            I am a Software Architect and Certified Scrum Master working as Vice
-            President Engineering for{" "}
+            I am an Engineering Manager, Software Architect and Certified Scrum
+            Master working as Vice President Engineering for{" "}
             <a href="https://www.prosiebensat1.com/">
               Seven.One Entertainment Group
             </a>{" "}
