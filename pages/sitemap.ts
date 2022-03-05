@@ -1,5 +1,4 @@
 import fs from "fs";
-import path from "path";
 import { getDate, getPosts } from "./api/posts";
 
 const template = (content: string) =>
@@ -31,9 +30,7 @@ const renderPages = () => {
   }[process.env.NODE_ENV];
 
   const pagesDir =
-    process.env.NODE_ENV === "production"
-      ? path.join(process.cwd(), "pages")
-      : path.join(process.cwd(), "pages");
+    process.env.NODE_ENV === "production" ? "./.next/server/pages" : "./pages";
 
   const staticPages = fs
     .readdirSync(pagesDir)
