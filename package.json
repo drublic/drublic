@@ -12,16 +12,16 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
-    "next": "12.0.7",
+    "next": "12.1.0",
     "normalize.css": "^8.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rss-parser": "^3.12.0",
-    "showdown": "^1.9.1",
-    "swr": "^1.1.2"
+    "showdown": "^2.0.2",
+    "swr": "^1.2.2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.38",
-    "typescript": "^4.5.4"
+    "@types/react": "^17.0.39",
+    "typescript": "^4.6.2"
   }
 }
