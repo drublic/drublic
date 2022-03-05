@@ -36,7 +36,7 @@ const ArticleTeaser = ({
 
       <div className="posts__post__readmore clearfix">
         <Link href={`/blog/${slug}`}>
-          <a className="button">Read more</a>
+          <a className="button">Read this Article</a>
         </Link>
       </div>
     </article>
