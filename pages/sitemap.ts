@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import { getDate, getPosts } from "./api/posts";
 
 const template = (content: string) =>
@@ -29,8 +30,13 @@ const renderPages = () => {
     production: "https://drublic.de",
   }[process.env.NODE_ENV];
 
+  const pagesDir =
+    process.env.NODE_ENV === "production"
+      ? path.join(process.cwd(), "pages")
+      : path.join(process.cwd(), "pages");
+
   const staticPages = fs
-    .readdirSync("pages")
+    .readdirSync(pagesDir)
     .filter((staticPage) => {
       return ![
         "_app.tsx",
