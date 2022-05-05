@@ -34,7 +34,7 @@ const Resume = () => (
         </div>
 
         <section>
-          <h2>About</h2>
+          <h2>Summary</h2>
 
           <p>
             I am an Engineering Manager, Software Architect and Certified Scrum
@@ -42,15 +42,12 @@ const Resume = () => (
             <a href="https://www.prosiebensat1.com/">
               Seven.One Entertainment Group
             </a>{" "}
-            located in Cologne, Germany.
-          </p>
-          <p>
-            Agile development and Scrum have influenced my work since 2012. I
-            have more than ten years of experience in developing scalable
-            web-applications using cutting edge technologies. I love creating
-            solid systems in a high-performance environment. My passion is to
-            build teams that strive for excellence. Enabling team members to
-            accelerate is what drives my daily work.
+            (ProSiebenSat.1). Agile development and Scrum have influenced my
+            work since 2012. I have 13 years of experience in developing
+            scalable web-applications using cutting edge technologies. I love
+            creating solid systems in a high-performance environment. My passion
+            is to build teams that strive for excellence. Enabling team members
+            to accelerate is what drives my daily work.
           </p>
         </section>
 
@@ -74,22 +71,36 @@ const Resume = () => (
           <p>
             <b>Vice President Engineering, Streaming Platform</b>, October 2021
             – current
-            <br />
+          </p>
+
+          <p>
+            Within the Seven.One Entertainment Group the multi-tenant Video on
+            Demand Streaming Platform is the foundation for providing the
+            content of the ProSiebenSat.1 brands to multiple channels including
+            Web, iOS, Android and Smart TV.
+          </p>
+
+          <p>
             <b>Director Technology &amp; Product, FYEO</b>, January – October
             2021
             <br />
             <b>Director Technology, FYEO</b>, July 2020 – December 2020
           </p>
 
-          <h3>Freelance Software Architect &amp; Engineer</h3>
+          <p>
+            FYEO was a podcasting app which focused on delivering high quality
+            audio content next to established podcasting formats, with over 1.6
+            million formats and over 40 million episodes in its database.
+          </p>
+
+          <h3>
+            Freelance Software Architect &amp; Engineer, Engineering Manager
+          </h3>
 
           <p>April 2013 – July 2020</p>
 
           <ul>
-            <li>
-              Consulting for middle and large-scale web projects in the
-              front-end section
-            </li>
+            <li>Consulting for middle and large-scale web projects</li>
             <li>
               Analysis and improvement of new and existing software
               architectures
@@ -101,7 +112,7 @@ const Resume = () => (
               Working on client projects using, configuring and developing for
               FirstSpirit, TYPO3 CMS, Magento and Hybris
             </li>
-            <li>Scrum Master and project manager</li>
+            <li>Scrum Master, Project and Engineering Manager </li>
           </ul>
 
           <h3>Other</h3>
@@ -127,40 +138,55 @@ const Resume = () => (
       <div className="main container">
         <section>
           <h2>Open Source &amp; Community Engagement</h2>
+          <p>
+            <b>Mentor at The Mentoring Club</b>: The Mentoring Club is an open
+            community which aims at supporting people who are keen to learn,
+            grow and develop. I provide advice to mentees to advance in their
+            career by sharing my knowledge in the areas of Engineering,
+            Engineering Management &amp; Leadership, Agile Methodologies and
+            more.{" "}
+            <Link href="/blog/mentoring-club">
+              <a>More information here</a>
+            </Link>
+            .
+          </p>
 
           <p>
-            Co-host of Working Draft Podcast: Strong influence on the
+            <b>Co-host of Working Draft Podcast</b>: Strong influence on the
             German-speaking community while being a member of the weekly
             web-development and web-news podcast{" "}
-            <a href="https://workingdraft.de/">​Working Draft​</a> since 2011.
+            <a href="https://workingdraft.de/">Working Draft</a> since 2011.
           </p>
 
           <p>
-            Co-Organizer of the web development and design focused{" "}
-            <a href="https://nightlybuild.io">​NightlyBuild​ Conference</a> in
+            <b>NightlyBuild Conference</b>: Co-Organizer of the web development
+            and design focused{" "}
+            <a href="https://nightlybuild.io">NightlyBuild Conference</a> in
             Cologne from 2014 to 2017.
           </p>
-        </section>
 
-        <section>
-          <h2>Noteworthy</h2>
+          <p>
+            <b>Former Core Developer of HTML5 Boilerplate</b>: Ongoing
+            maintenance of HTML5 Boilerplate, a solid front-end template to
+            start projects with.
+          </p>
 
-          <ul>
-            <li>
-              Several speaking engagements at conferences in Europe (including
-              Front-Trends in Warsaw and Frontend Conference in Zürich)
-            </li>
-            <li>
-              Nomination as Young Developer Of The Year /
-              <a href="https://www.thenetawards.com/">.net-Awards 2013</a>
-            </li>
-            <li>Certified Scrum Master</li>
-            <li>
-              Former Core Developer of HTML5 Boilerplate: Ongoing maintenance of{" "}
-              <a href="https://html5boilerplate.com/">HTML5 Boilerplate</a>, a
-              solid front-end template to start projects with
-            </li>
-          </ul>
+          <p>
+            <b>Speaking engagements</b> at conferences across Europe (including
+            Front-Trends in Warsaw and Frontend Conference in Zürich).
+          </p>
+
+          <p>
+            Here you can find more information about my{" "}
+            <Link href="/about/speaking">
+              <a>Public Speaking</a>
+            </Link>{" "}
+            and{" "}
+            <Link href="/about/writings">
+              <a>Writings</a>
+            </Link>
+            .
+          </p>
         </section>
       </div>
 
@@ -173,18 +199,6 @@ const Resume = () => (
           <a href="https://twitter.com/stn1978">Stefan Nitzsche</a>
         </p>
       </div>
-
-      <section className="main container section--topped">
-        Here you can find more information about my{" "}
-        <Link href="/about/speaking">
-          <a>Public Speaking</a>
-        </Link>{" "}
-        and{" "}
-        <Link href="/about/writings">
-          <a>Writings</a>
-        </Link>
-        .
-      </section>
     </main>
   </Layout>
 );
