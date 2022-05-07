@@ -45,14 +45,19 @@ const Blog = ({ posts, tag, tags }) => {
             <div className="tags-list">
               <h3>Topics</h3>
               <p>
-                {tags?.map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/blog?tag=${encodeURIComponent(tag).toLowerCase()}`}
-                  >
-                    <a className="tag">{tag}</a>
-                  </Link>
-                ))}
+                {tags &&
+                  Object.entries(tags).map(([tag, count]) => (
+                    <Link
+                      key={tag}
+                      href={`/blog?tag=${encodeURIComponent(
+                        tag
+                      ).toLowerCase()}`}
+                    >
+                      <a className="tag">
+                        {tag} <span className="tag_count">{count}</span>
+                      </a>
+                    </Link>
+                  ))}
               </p>
             </div>
 
@@ -117,9 +122,10 @@ const Blog = ({ posts, tag, tags }) => {
 const matchTag = (matchingTag: string) => (tag: string) =>
   tag && tag.toLowerCase() === matchingTag;
 
-const onlyUnique = (value, index, self) => {
-  return self.indexOf(value) === index;
-};
+const occurrences = (input: string[]) =>
+  input.reduce((acc, curr) => {
+    return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc;
+  }, {});
 
 export const getServerSideProps = async ({ query }) => {
   const posts = await getPosts(!!query.preview);
@@ -130,14 +136,13 @@ export const getServerSideProps = async ({ query }) => {
   const matchingTag = matchingPosts[0].tags?.find(matchTag(query.tag));
   const tags = matchingPosts
     ?.flatMap((post) => (post.tags ? post.tags : []))
-    .filter(onlyUnique)
     .sort();
 
   return {
     props: {
       posts: matchingPosts,
       tag: matchingTag ?? null,
-      tags,
+      tags: occurrences(tags),
     },
   };
 };

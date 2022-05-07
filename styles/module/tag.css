@@ -24,6 +24,15 @@ a.tag:hover {
   transition: 0.25s;
 }
 
+.tag_count {
+  border-left: 1px solid var(--border-color-dark);
+  padding-left: 0.4rem;
+  margin: -0.2rem 0 0 0.2rem;
+}
+
+a.tag:hover .tag_count {
+  border-left-color: var(--color-dark);
+}
 
 @media (min-width: 32em) {
   .tags-list {
