@@ -4,5 +4,8 @@
   "abstract": "In browsers we do not have the ability to automatically hyphenate continuous text. This is an issue when you are using text-align: justify; for instance because the text may look really bad. I want to write about this topic because of the discussion that came up at the HTML5 Boilerpates issue-list and this blogpost at Fontdeck Blog. The specification says: Hyphenation means splitting words to improve the layout of paragraphs. CSS3 Properties CSS3 adds six properties to the list of useful thing. These are: The most important one is hyphens. More to this one later. You can add dictionary-files with hyphenate-resource",
   "meta-title": "",
   "meta-description": "In browsers we do not have the ability to automatically hyphenate continuous text. This could be resolved with the CSS3 property 'hyphen'.",
-  "link": false
+  "link": false,
+  "tags": [
+    "CSS"
+  ]
 }

@@ -4,5 +4,9 @@
   "abstract": "Nicolas lists up his principles of writing CSS-code. A very good summery of what should be everybody&#8217;s guidelines. This goes deeper then what I wrote about my HTML and CSS Coding Guidelines and it tries to help people collaborating on styles. You should read this awesome piece of work!</p",
   "meta-title": "",
   "meta-description": "",
-  "link": true
+  "link": true,
+  "tags": [
+    "CSS",
+    "Frontend"
+  ]
 }

@@ -4,5 +4,8 @@
   "abstract": "When I read this article by Henrik Eneroth about redesigning Safari&#8217;s interface I thought we as webdesigners somehow do this with websites and web-apps. While Apple misses to add different behavior for different browser-sizes it&#8217;s a kind of standard to build a website with a special mobile version that looks not like the website on a desktop computer but fulfills the need of someone who visits the mobile version of the website. In Vitaly Friedman&#8217;s (Smasing Magazine) presentation &#8220;Webdesigntrends 2011&#8243; I recognized this nice photo. Vitaly states that someone who visits your page with a mobile device may need other",
   "meta-title": "",
   "meta-description": "There are differences in designing a mobile specific version or a just a responsive version of a website. This not only affects websites but also apps.",
-  "link": false
+  "link": false,
+  "tags": [
+    "Frontend"
+  ]
 }

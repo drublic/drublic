@@ -4,5 +4,8 @@
   "abstract": "Some weeks ago Paul Irish published his article about TAFEE (Tiered, Adaptive Front-end Experiences) and shares Paul Boag&#8217;s booklet called &#8220;Where are my rounded corners?&#8221; which tries to describe why it is better to design for the future and modern browsers and not spending too much time trying to get the website&#8217;s design working in older browsers (namely Internet Explorer 7 and 8). The booklet was originally published in Paul Boag&#8217;s blog. Paul describes why he did this this: One of the biggest areas of confusion among our clients is progressive enhancement. They wonder why the beautiful design they signed off",
   "meta-title": "",
   "meta-description": "Paul Boag's booklet \"Where are my rounded corners?\" tries to describe why it is better to design for the future and modern browsers. A German translation.",
-  "link": false
+  "link": false,
+  "tags": [
+    "CSS"
+  ]
 }
