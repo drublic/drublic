@@ -5,5 +5,8 @@
   "meta-title": "Solving npm scripts problems in JavaScript projects",
   "meta-description": "How to solve three common problems with npm scripts: Concurrency, extensive build configuration, build environments",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "npm"
+  ]
 }

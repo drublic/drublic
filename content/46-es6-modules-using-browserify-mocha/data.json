@@ -5,5 +5,9 @@
   "meta-title": "Testing ES6 Modules with Mocha using Babel with Browserify",
   "meta-description": "",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Tooling",
+    "Testing"
+  ]
 }

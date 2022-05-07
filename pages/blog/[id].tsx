@@ -11,7 +11,7 @@ const existingPages = ["engineering-leads-podcasts"];
 const Article = () => {
   const router = useRouter();
 
-  const { data: posts, error: postsError } = useSWR("/api/posts", fetcher);
+  const { data: posts, error: postsError } = useSWR(`/api/posts`, fetcher);
   const { data: post, error } = useSWR(
     `/api/posts/${router.query.id}`,
     fetcher
@@ -42,12 +42,13 @@ const BlogPost = ({ fallback }) => {
 
 export const getStaticProps = async ({ params }) => {
   const posts = await getPosts();
+  const post = await getFullPost(posts, params.id);
 
   return {
     props: {
       fallback: {
         [`/api/posts`]: posts,
-        [`/api/posts/${params.id}`]: await getFullPost(posts, params.id),
+        [`/api/posts/${params.id}`]: post,
       },
     },
   };

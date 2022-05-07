@@ -5,6 +5,7 @@
   --color-dark: #29434e;
   --color-light: #819ca9;
   --border-color: #dce3ea;
+  --border-color-dark: var(--color-light);
   --color--background--light: #f3f2ff;
   --color--background--dark: #eee;
   --secondary-color: #6236ff;

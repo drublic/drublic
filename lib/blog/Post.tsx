@@ -58,6 +58,19 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
 
             <meta itemProp="datePublished" content={post.date} />
             <meta itemProp="description" content={post.abstract} />
+
+            {post.tags && (
+              <p>
+                {post.tags.map((tag) => (
+                  <Link
+                    key={tag}
+                    href={`/blog?tag=${encodeURIComponent(tag).toLowerCase()}`}
+                  >
+                    <a className="tag">{tag}</a>
+                  </Link>
+                ))}
+              </p>
+            )}
           </header>
 
           <div itemProp="articleBody">{children}</div>

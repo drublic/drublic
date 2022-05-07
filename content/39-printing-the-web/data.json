@@ -4,5 +4,8 @@
   "abstract": "While it is possible to consume nearly all means of content on your smartphone or tablet it seems like the dream of a paperless office comes true for a lot of web developers. But digital natives are not the only ones who are on the web. There are still some people that like to print web sites on paper. Once you are aware of that you might want to include a dedicated print stylesheet into web sites you build. Here is some advice on what you can do to get the best out of your page. Disclaimer: This article was",
   "meta-title": "",
   "meta-description": "The current state of printing web pages using the browsers' default method - for web developers and designers. Printing web sites using the latest CSS rules.",
-  "link": false
+  "link": false,
+  "tags": [
+    "Frontend"
+  ]
 }

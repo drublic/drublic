@@ -5,5 +5,8 @@
   "meta-title": "Sunsetting Warhol",
   "meta-description": "Today we are sad to announce the end of Warhol. We did not see the growth that we hoped for in the past few months and actually getting Warhol&#x27;s core idea to work proved way harder than we anticipated",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Warhol"
+  ]
 }

@@ -5,5 +5,9 @@
   "meta-title": "npm as a task-based build system for front-end projects",
   "meta-description": "How to use npm as a task-based build system for front-end projects by using different CLIs and npm’s scripts for JavaScript and CSS.",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "npm",
+    "Tooling"
+  ]
 }

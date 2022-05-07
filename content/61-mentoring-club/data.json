@@ -5,5 +5,8 @@
   "meta-title": "Member of The Mentoring Club",
   "meta-description": "I am honored to announce that I am a part of The Mentoring Club as a mentor.",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Engineering Leadership"
+  ]
 }

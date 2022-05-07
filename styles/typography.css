@@ -14,17 +14,22 @@ body {
 /* Headlines */
 h1,
 h2,
-h3 {
+h3,
+.typography--h1,
+.typography--h2,
+.typography--h3 {
   font-family: "Inter", sans-serif;
   font-weight: 900;
   line-height: 1.1;
 }
 
-h1 {
+h1,
+.typography--h1 {
   font-size: 4rem;
 }
 
-h2 {
+h2,
+.typography--h2 {
   font-size: 3rem;
   margin: 1em 0 0.5em;
 }
@@ -34,13 +39,15 @@ h1 + h2 {
 }
 
 h2 a,
-h3 a {
+h3 a,
+.typography--h2 a,
+.typography--h3 a {
   text-decoration: none;
 }
 
-h3 {
+h3,
+.typography--h3 {
   font-size: 1.4rem;
-
   margin: 1em 0 0.5em;
 }
 

@@ -6,5 +6,9 @@
   "meta-description": "A way to use Higher-Order Components with React Hooks to structure complex components. This can be described as an architectural pattern to give hooks a way to make them usable.",
   "link": false,
   "hidden": false,
-  "image": "/assets/conceptual-components-title.png"
+  "image": "/assets/conceptual-components-title.png",
+  "tags": [
+    "React",
+    "Components"
+  ]
 }

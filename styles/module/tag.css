@@ -1,0 +1,33 @@
+.tags-list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  display: inline-block !important;
+  background: var(--border-color);
+  color: var(--color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border-bottom: 0;
+}
+
+.tag:visited {
+  color: var(--color);
+}
+
+a.tag:hover {
+  background: var(--border-color-dark);
+  color: var(--color-dark);
+  transition: 0.25s;
+}
+
+
+@media (min-width: 32em) {
+  .tags-list {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}

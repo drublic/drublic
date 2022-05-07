@@ -5,5 +5,9 @@
   "meta-title": "Introducing Warhol",
   "meta-description": "",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Warhol",
+    "Testing"
+  ]
 }

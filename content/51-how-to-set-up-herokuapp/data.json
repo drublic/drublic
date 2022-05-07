@@ -5,5 +5,9 @@
   "meta-title": "",
   "meta-description": "Here are 6 simple steps how to quickly set up your Node.js application on Heroku.",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Heroku",
+    "Express.js"
+  ]
 }

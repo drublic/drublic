@@ -5,5 +5,10 @@
   "meta-title": "Starting with Deno - porting an existing Express application",
   "meta-description": "Here is how I port an existing Express application to Deno.",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "TypeScript",
+    "Deno",
+    "Express.js"
+  ]
 }

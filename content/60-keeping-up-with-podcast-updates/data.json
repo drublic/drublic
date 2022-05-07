@@ -5,5 +5,9 @@
   "meta-title": "How to Keep 1.6 Million Podcasts Up to Date",
   "meta-description": "The FYEO database held around 1.6 million podcasts on its peak. Each one of those podcasts holds episodes which contain audio tracks. Here is how we kept them up to date.",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Podcasts",
+    "Event Driven Architecture"
+  ]
 }

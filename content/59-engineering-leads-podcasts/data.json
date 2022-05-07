@@ -5,5 +5,8 @@
   "meta-title": "Podcast Recommendations for Tech Leads, Engineering Managers & Software Architects",
   "meta-description": "In the last years my career took a turn into the direcation of technical management. Here is a list of podcasts for engineering managers and tech leaders.",
   "link": false,
-  "hidden": false
+  "hidden": false,
+  "tags": [
+    "Engineering Leadership"
+  ]
 }
