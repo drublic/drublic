@@ -18,10 +18,6 @@ const Head = ({ title, description }) => (
       href="https://fonts.gstatic.com"
       crossOrigin="crossorigin"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;700&display=swap"
-      rel="stylesheet"
-    />
 
     <meta name="description" content={description} />
 
