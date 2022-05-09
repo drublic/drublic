@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import ArticleTeaserSmall from "../lib/components/ArticleTeaserSmall";
-import ArticleTeaser from "../lib/components/ArticleTeaser";
-import BlogMessage from "../lib/components/BlogMessage";
-import Layout from "../lib/components/Layout";
-import { getPosts } from "./api/posts";
+import ArticleTeaserSmall from "../../lib/components/ArticleTeaserSmall";
+import ArticleTeaser from "../../lib/components/ArticleTeaser";
+import BlogMessage from "../../lib/components/BlogMessage";
+import Layout from "../../lib/components/Layout";
+import { getPosts } from "../api/posts";
 
 const Blog = ({ posts, tag, tags }) => {
   return (
@@ -30,13 +30,14 @@ const Blog = ({ posts, tag, tags }) => {
           </>
         )}
 
-        {posts?.slice(0, 1).map(({ title, slug, date, abstract }) => (
+        {posts?.slice(0, 1).map(({ title, slug, date, abstract, tags }) => (
           <ArticleTeaser
             key={slug}
             title={title}
             date={date}
             slug={slug}
             abstract={abstract}
+            tags={tags}
           />
         ))}
 
@@ -65,13 +66,14 @@ const Blog = ({ posts, tag, tags }) => {
           </>
         )}
 
-        {posts?.slice(1, 5).map(({ title, slug, date, abstract }) => (
+        {posts?.slice(1, 5).map(({ title, slug, date, abstract, tags }) => (
           <ArticleTeaser
             key={slug}
             title={title}
             date={date}
             slug={slug}
             abstract={abstract}
+            tags={tags}
           />
         ))}
 

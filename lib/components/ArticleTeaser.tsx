@@ -6,6 +6,7 @@ const ArticleTeaser = ({
   slug,
   date,
   abstract,
+  tags,
   variant = "default",
 }) => {
   const Headline = (props) => {
@@ -30,6 +31,19 @@ const ArticleTeaser = ({
         </Headline>
 
         <time className="posts__date">Published on {date}</time>
+
+        {tags && (
+          <p>
+            {tags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/blog?tag=${encodeURIComponent(tag).toLowerCase()}`}
+              >
+                <a className="tag">{tag}</a>
+              </Link>
+            ))}
+          </p>
+        )}
       </header>
 
       <div dangerouslySetInnerHTML={{ __html: abstract }} />
