@@ -16,13 +16,14 @@ const IndexArticles = ({ posts }) => {
     <section className="container oss" id="oss">
       <h2>From the Blog</h2>
 
-      {posts?.slice(0, 1).map(({ title, slug, date, abstract }) => (
+      {posts?.slice(0, 1).map(({ title, slug, date, abstract, tags }) => (
         <ArticleTeaser
           key={slug}
           title={title}
           date={date}
           slug={slug}
           abstract={abstract}
+          tags={tags}
           variant="small"
         />
       ))}
