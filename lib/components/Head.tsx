@@ -28,15 +28,19 @@ const Head = ({ title, description }) => (
       href="/feed"
     />
 
+    <meta property="twitter:domain" content="drublic.de" />
+    <meta property="twitter:url" content="https://drublic.de/" />
     <meta name="twitter:site" content="@drublic" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="/img/logo.png" />
+    <meta name="twitter:image" content="https://drublic.de/img/logo.png" />
 
-    <meta name="og:title" content={title} />
-    <meta name="og:description" content={description} />
-    <meta name="og:image" content="/img/logo.png" />
+    <meta property="og:url" content="https://drublic.de/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://drublic.de/img/logo.png" />
 
     <link type="text/plain" rel="author" href="/humans.txt" />
     <meta name="author" content="Hans Christian Reinl" />
