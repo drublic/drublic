@@ -15,16 +15,16 @@ I want to give you my perspective on how you can advance in your career after yo
 
 ## What's Next in My Career?
 
-Throughout an engineering career as a software engineer, you usually advance through the roles of a junior, intermediate and senior engineer. It takes you years to learn more and more skills, you earn more, your influence on the technical topics grows.
-After you have reached that level, the next step often times is not as obvious as it has been. So what's next, you ask. Obviously, this is not the end of your work-life.
+Throughout an engineering career as a software engineer, you usually advance through the roles of a junior, intermediate and senior engineer. It takes you years to learn more and more skills, your salary goes up, your influence on technical topics grows.
+After you have reached that level, the next step often times is not as obvious as it has been before. So what's next, you ask. Obviously, this is not the end of your work-life.
 
-Let me share the three journeys that you can take as a next step:
+Let me share with you the three journeys that you can take as a next step:
 
 1. Stay as an individual contributor and become more advanced in the tasks that you take on
 2. Start to grow into a people management related position
 3. Move into a related discipline
 
-Let's look into each of these further.
+Let's look into each of these in more detail.
 
 ## Individual Contributor
 
@@ -32,11 +32,11 @@ In your role as a senior software engineer, you are usually the person who guide
 
 If you feel happy about being the technical go-to person, you can think about growing your career further as an individual contributor.
 
-In some companies, some of these tasks described before are taken on by a technical lead. A person who is responsible for driving the decision-making across multiple senior engineers. Often times this role requires more communication and good technical understanding of the domain.
+At some companies, a couple of the tasks described before are taken on by a technical lead. A person who is responsible for driving the decision-making across multiple senior engineers. Often times this role requires more communication and good technical understanding of the domain.
 
 Especially in larger organizations, you will find concepts, where you can then grow into a position as a staff engineer, being responsible on a domain level for several activities, e.g. aligning technical decisions between teams and driving system architecture.
 
-The next step after that, often times as a principal engineer that is responsible for aligning company-wide decision-making on a technical basis.
+The next step after that, often times a principal engineer who is responsible for aligning company-wide decision-making on a technical basis.
 
 These roles usually involve the work as a software architect, which in some companies is seen as a discipline on its own. If you want to learn more about  the role and responsibilities of a software architect, I recommend reading through [Nikolay Ashanin's series on the topic](https://medium.com/@nvashanin/the-path-to-becoming-a-software-architect-de53f1cb310a).
 
@@ -47,6 +47,8 @@ I like this concept since it takes away the obscurity of titles and turns it int
 
 Often times when I speak to senior engineers who want to advance their career, I hear them thinking about a role that is within management.
 While a management role and leading people might be tempting to pursue, you have to be careful in analyzing if this role is for you.
+
+There are also certain traits that you as a person need to grow into a leadership role. [Havard Business Review has published great research](https://hbr.org/2016/03/the-most-important-leadership-competencies-according-to-leaders-around-the-world) on this.
 
 Managing people requires skills that are new to what you have done before in a role of software engineering. Engineering evolves a lot around the technical decision-making. For a role in management you have to take care of all individuals of a team with their strengths and weaknesses, you have to make sure that everybody can develop in the way that they want to, and you have to make sure that people work well together.
 Your daily problems will be different from what they used to be. You will be sitting in much more meetings, talking to stakeholders, product managers and others. You will be responsible for removing obstacles, helping the team advance and reaching their goals.
@@ -74,12 +76,14 @@ To be an effective technical project manager, you must make sure that your commu
 
 ## Conclusion
 
-Often times when you consider growing in your personal career, you have to come to the conclusion that the current employer is not the right one to let this step happen. It is important to acknowledge this and then act accordingly. Great managers will support you in doing that step because it ultimately helps you and the company best.
+As we see there are multiple ways on how you can grow beyond a senior engineering position. Analyse carefully what is best for you in order to find the right way forward.
 
-If you are now wondering what would be best for you and would like to exchange some opinions and thoughts about it, I would love to speak to you. You can book an appointment through [The Mentoring Club](/blog/mentoring-club).
+Sometimes when you consider growing in your personal career, you have to come to the conclusion that the current employer is not the right one to let this step happen. It is important to acknowledge this and then act accordingly. Great managers will support you in doing that step because it ultimately helps you and the company best. Otherwise you will not be happy in your job which will reflect on your team and thus the company.
+
+If you are now wondering what would be best for you personally and would like to exchange some opinions and thoughts about it, I want to offer you my help. You can book an appointment with me through [The Mentoring Club](/blog/mentoring-club).
 
 ### Sources
 
-One of the sources that I like to refer to in order to look at a career path is [Engineering Ladders](http://www.engineeringladders.com/). The documentation they are guides you through the different requirements for the specific roles. What is the definition for specific roles might differ throughout companies, it gives a good guidance on what is required in order to advance to a possible the next level.
+One of the sources that I like to refer to in order to look at a career path is [Engineering Ladders](http://www.engineeringladders.com/). The documentation there guides you through the different requirements for the specific roles. What is the definition for specific roles might differ throughout companies. Engineering Ladders gives a fantastic guidance on what is required in order to advance to a possible the next level.
 
-A good source for comparing different levels of engineers throughout the industry is also [Levels](https://www.levels.fyi/).
+A great source for comparing different levels of engineers throughout the industry is also [Levels](https://www.levels.fyi/).
