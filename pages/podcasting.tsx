@@ -38,8 +38,17 @@ const Podcasting = () => {
             Working Draft. Here is a pretty simple list of my equipment:
           </p>
           <ul>
-            <li>Microphone: Auna MIC-900B with a Standard Boom</li>
-            <li>Headphones: OneOdio DJ Headphones</li>
+            <li>
+              Microphone:{" "}
+              <a href="https://www.amazon.de/gp/product/B00AE4T0Q2/">
+                Auna MIC-900B
+              </a>{" "}
+              with{" "}
+              <a href="https://www.amazon.de/gp/product/B078MLBGRM/">
+                Blue III radius broadcast arm
+              </a>
+            </li>
+            <li>Headphones: Apple Air Pods</li>
           </ul>
 
           <p>
@@ -57,7 +66,17 @@ const Podcasting = () => {
         </section>
 
         <section className="container main" id="podcasting-latest">
-          <h2>Working Draft</h2>
+          <h2>
+            <span className="oss--wd-logo">
+              <Image
+                src="/img/wd.svg"
+                alt="Working Draft Logo"
+                width={64}
+                height={64}
+              />
+            </span>
+            Working Draft
+          </h2>
 
           <iframe
             src="https://open.spotify.com/embed/show/78iH7cIFzu1ejoB6aQUsIh?utm_source=generator&amp;theme=0"
@@ -68,17 +87,7 @@ const Podcasting = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
 
-          <h3>
-            <span className="oss--wd-logo">
-              <Image
-                src="/img/wd.svg"
-                alt="Working Draft Logo"
-                width={32}
-                height={32}
-              />
-            </span>
-            Latest Episodes
-          </h3>
+          <h3>Latest Episodes</h3>
 
           <ul className="posts__list posts__list--no-divider posts__list--no-top">
             {wdPosts?.map(({ title, url, description, date }) => (
@@ -87,7 +96,6 @@ const Podcasting = () => {
                 title={title}
                 url={url}
                 date={date}
-                description={description}
               />
             ))}
 
@@ -100,11 +108,22 @@ const Podcasting = () => {
         </section>
 
         <div className="container">
-          <h3 className="main">A Special Episode</h3>
+          <h3>Some special episodes</h3>
+
           <figure className="image image--block">
             <iframe
-              width="928"
-              height="552"
+              width="470"
+              height="268"
+              src="https://www.youtube.com/embed/Mjk77icZ0Mk"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ marginRight: "1rem" }}
+            ></iframe>
+
+            <iframe
+              width="470"
+              height="268"
               src="https://www.youtube.com/embed/1Mz3JpGbjlk"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
