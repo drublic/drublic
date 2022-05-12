@@ -27,7 +27,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
           <>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={post.image} />
-            <meta name="og:image" content={post.image} />
+            <meta property="og:image" content={post.image} />
           </>
         )}
       </Head>
