@@ -29,12 +29,10 @@ const Head = ({ title, description, image }) => (
     />
 
     <meta property="twitter:domain" content="drublic.de" />
-    <meta property="twitter:url" content="https://drublic.de/" />
     <meta name="twitter:site" content="@drublic" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <meta property="og:url" content="https://drublic.de/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
