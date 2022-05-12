@@ -19,17 +19,16 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
     <Layout
       title={`${post["meta-title"]} | Blog`}
       description={post["meta-description"]}
+      image={post.image}
     >
       <Head>
         <meta name="article:author" content="Hans Christian Reinl" />
 
-        {post.image && (
-          <>
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content={post.image} />
-            <meta property="og:image" content={post.image} />
-          </>
-        )}
+        <meta
+          name="publish_date"
+          property="og:publish_date"
+          content={post.date}
+        />
       </Head>
 
       <main id="content" className="main container" role="main">

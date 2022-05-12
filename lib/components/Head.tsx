@@ -1,7 +1,7 @@
 import React from "react";
 import NextHead from "next/head";
 
-const Head = ({ title, description }) => (
+const Head = ({ title, description, image }) => (
   <NextHead>
     <meta charSet="utf-8" />
 
@@ -33,14 +33,24 @@ const Head = ({ title, description }) => (
     <meta name="twitter:site" content="@drublic" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="https://drublic.de/img/logo.png" />
 
     <meta property="og:url" content="https://drublic.de/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://drublic.de/img/logo.png" />
+    {image ? (
+      <>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={image} />
+        <meta property="og:image" content={image} />
+      </>
+    ) : (
+      <>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://drublic.de/img/logo.png" />
+        <meta property="og:image" content="https://drublic.de/img/logo.png" />
+      </>
+    )}
 
     <link type="text/plain" rel="author" href="/humans.txt" />
     <meta name="author" content="Hans Christian Reinl" />
