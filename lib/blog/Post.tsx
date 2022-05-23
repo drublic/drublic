@@ -17,7 +17,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
 
   return (
     <Layout
-      title={`${post["meta-title"]} | Blog`}
+      title={`${post["meta-title"] ? post["meta-title"] : post.title} | Blog`}
       description={post["meta-description"]}
       image={post.image}
     >
