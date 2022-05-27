@@ -74,6 +74,10 @@ There is a multitude of products where a tech-savvy Product Owner can contribute
 Especially in consultancies and agencies, I've seen roles for technical product managers. These require you to have a lot of interaction with customers by analyzing their needs and leading a team. You play a vital role in leading a project through the product life cycle: setup, planning, execution, monitoring, controlling and completion.
 To be an effective technical project manager, you must make sure that your communication skills are great, and you are able to manage the technical complexities throughout the duration of a project.
 
+### Other roles
+
+There are more roles that you might want to pursure, these include Sales Engineering, Solutions Architecure and Technical Account Manager.
+
 ## Conclusion
 
 As we see there are multiple ways on how you can grow beyond a senior engineering position. Analyse carefully what is best for you in order to find the right way forward.
