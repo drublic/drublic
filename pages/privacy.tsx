@@ -171,7 +171,7 @@ const Privacy = () => (
           __html: `
     <script src="//www.google-analytics.com/analytics.js"></script>
     <script>
-      var gaProperty = 'UA-52857433-1';
+      var gaProperty = 'G-XSLJDELHFG';
       var disableStr = 'ga-disable-' + gaProperty;
       if (document.cookie.indexOf(disableStr + '=true') > -1) {
         window[disableStr] = true;
