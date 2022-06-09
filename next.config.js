@@ -3,4 +3,7 @@ module.exports = {
     PROJECT_ROOT: __dirname,
   },
   experimental: { nftTracing: true },
+  images: {
+    domains: ["drublic.de"],
+  },
 };
