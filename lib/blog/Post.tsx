@@ -8,6 +8,7 @@ import Layout from "../components/Layout";
 interface Post {
   post: any;
   posts: any[];
+  children?: React.ReactNode;
 }
 
 const Post: FunctionComponent<Post> = ({ post, posts, children }) => {

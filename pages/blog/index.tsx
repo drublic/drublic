@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Link from "next/link";
 import ArticleTeaserSmall from "../../lib/components/ArticleTeaserSmall";
 import ArticleTeaser from "../../lib/components/ArticleTeaser";
@@ -6,7 +6,13 @@ import BlogMessage from "../../lib/components/BlogMessage";
 import Layout from "../../lib/components/Layout";
 import { getPosts } from "../api/posts";
 
-const Blog = ({ posts, tag, tags }) => {
+type Props = {
+  posts: any[];
+  tag?: string;
+  tags: Array<[string, number]>;
+};
+
+const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
   return (
     <Layout title="Blog">
       <main
