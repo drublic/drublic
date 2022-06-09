@@ -1,14 +1,16 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-const ArticleTeaser = ({
-  title,
-  slug,
-  date,
-  abstract,
-  tags,
-  variant = "default",
-}) => {
+const ArticleTeaser: FunctionComponent<{
+  title: string;
+  slug: string;
+  date: string;
+  abstract: string;
+  tags?: [];
+  image?: string;
+  variant?: "default" | "small";
+}> = ({ title, slug, date, abstract, tags, image, variant = "default" }) => {
   const Headline = (props) => {
     if (variant === "small") {
       return <h3 {...props} />;
