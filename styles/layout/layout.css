@@ -207,9 +207,19 @@ hr {
   }
 }
 
-/* Cookue Message */
-.cookieconsent-com---nb.termsfeed-com---palette-light .cc-nb-title {
-  font-size: 2.7rem;
+/* Cookie Message */
+.termsfeed-com---nb.termsfeed-com---palette-light {
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 70vh;
+  height: auto;
+}
+
+.termsfeed-com---nb.termsfeed-com---palette-light .cc-nb-title {
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
@@ -244,16 +254,26 @@ hr {
   color: #fff;
 }
 
-.cookieconsent-com---nb.cookieconsent-com---nb-headline .cc-nb-main-container {
-  padding: 1rem;
-  max-width: var(--width);
+.termsfeed-com---nb.termsfeed-com---nb-headline .cc-nb-main-container {
+  --padding: 1rem;
+  padding: var(--padding);
+  max-width: calc(var(--width) - var(--padding) * -2);
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 34em) {
-  .cookieconsent-com---nb.cookieconsent-com---nb-headline
+@media (min-width: 32em) {
+  .termsfeed-com---nb.termsfeed-com---palette-light {
+    position: fixed;
+    left: 0;
+  }
+
+  .termsfeed-com---nb.termsfeed-com---nb-headline
     .cc-nb-main-container {
-    padding: 3rem 0;
+      --padding: 3rem;
+  }
+
+  .termsfeed-com---nb.termsfeed-com---palette-light .cc-nb-title {
+    font-size: 2.7rem;
   }
 }
