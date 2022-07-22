@@ -77,7 +77,9 @@ const Resume = () => (
             Within the Seven.One Entertainment Group the multi-tenant Video on
             Demand Streaming Platform is the foundation for providing the
             content of the ProSiebenSat.1 brands to multiple channels including
-            Web, iOS, Android and Smart TV.
+            Web, iOS, Android and Smart TV. We deliver the experience of{" "}
+            <a href="https://video.prosieben.de/">video.prosieben.de</a>,{" "}
+            <a href="https://video.sat1.de/">video.sat1.de</a> and many more.
           </p>
 
           <p>
