@@ -36,16 +36,21 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
           </>
         )}
 
-        {posts?.slice(0, 1).map(({ title, slug, date, abstract, tags }) => (
-          <ArticleTeaser
-            key={slug}
-            title={title}
-            date={date}
-            slug={slug}
-            abstract={abstract}
-            tags={tags}
-          />
-        ))}
+        {posts
+          ?.slice(0, 1)
+          .map(({ title, slug, date, abstract, tags, image }) => (
+            <>
+              <ArticleTeaser
+                key={slug}
+                title={title}
+                date={date}
+                slug={slug}
+                abstract={abstract}
+                tags={tags}
+                image={image}
+              />
+            </>
+          ))}
 
         {!tag && (
           <>
@@ -72,16 +77,19 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
           </>
         )}
 
-        {posts?.slice(1, 5).map(({ title, slug, date, abstract, tags }) => (
-          <ArticleTeaser
-            key={slug}
-            title={title}
-            date={date}
-            slug={slug}
-            abstract={abstract}
-            tags={tags}
-          />
-        ))}
+        {posts
+          ?.slice(1, 5)
+          .map(({ title, slug, date, abstract, tags, image }) => (
+            <ArticleTeaser
+              key={slug}
+              title={title}
+              date={date}
+              slug={slug}
+              abstract={abstract}
+              tags={tags}
+              image={image}
+            />
+          ))}
 
         <ul className="posts__list">
           {posts?.slice(5, -1).map(({ title, slug, date }) => (

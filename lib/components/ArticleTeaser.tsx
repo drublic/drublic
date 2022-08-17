@@ -48,6 +48,14 @@ const ArticleTeaser: FunctionComponent<{
         )}
       </header>
 
+      <Link href={`/blog/${slug}`}>
+        <a>
+          <figure className="image image--block">
+            <img src={image} />
+          </figure>
+        </a>
+      </Link>
+
       <div dangerouslySetInnerHTML={{ __html: abstract }} />
 
       <div className="posts__post__readmore clearfix">
