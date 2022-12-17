@@ -102,12 +102,14 @@ strong {
 }
 
 /* Lists */
-ul {
+ul,
+ol {
   padding-left: 1.1em;
 }
 
 li {
   line-height: 1.5;
+  padding-bottom: 0.125rem;
 }
 
 /* Under 480px */
@@ -183,26 +185,48 @@ pre code {
 /**
  * Quotes
  */
+figure {
+  margin: 0;
+}
+
 blockquote {
   position: relative;
   padding-left: 3rem;
-  margin: 2rem;
+  margin: 4rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+
+figure + blockquote {
+  font-size: 1.75rem;
+  font-family: "Vollkorn", serif;
 }
 
 blockquote::before {
-  content: "“";
+  content: "";
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  margin-top: -0.165em;
-  font-size: 5rem;
-  font-family: Georgia, serif;
-  line-height: 0.9;
-  color: var(--color-light);
+  bottom: 0;
+  width: 0.25rem;
+  background-color: var(--color-light);
   opacity: 0.5;
   transition: opacity 0.2s;
 }
 
 blockquote:hover::before {
   opacity: 1;
+}
+
+blockquote + figcaption {
+  margin-left: 2rem;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+blockquote + figcaption::before {
+  content: "— ";
+  font-size: 1.5rem;
+  position: relative;
+  bottom: -0.25rem;
+  margin-right: 1rem;
 }
