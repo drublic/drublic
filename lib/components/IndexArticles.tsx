@@ -40,8 +40,8 @@ const IndexArticles = ({ posts }) => {
       </ul>
 
       <p className="text--centered text--padded">
-        <Link href="/blog/">
-          <a className="button">Read more on my Blog</a>
+        <Link href="/blog/" className="button">
+          Read more on my Blog
         </Link>
       </p>
 
@@ -88,8 +88,8 @@ const IndexArticles = ({ posts }) => {
       </ul>
 
       <p className="text--centered text--padded">
-        <Link href="/podcasting">
-          <a className="button">More about my Podcasting</a>
+        <Link href="/podcasting" className="button">
+          More about my Podcasting
         </Link>
       </p>
     </section>

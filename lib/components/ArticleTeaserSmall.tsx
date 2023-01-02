@@ -19,7 +19,7 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
 }) => (
   <li>
     <Link href={url ?? `${baseUrl ?? ""}/blog/${slug}/`}>
-      <a>
+      <>
         <span className="posts__teaser-title">{title}</span>
 
         {date && <time className="posts__date">{date}</time>}
@@ -30,7 +30,7 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
             dangerouslySetInnerHTML={{ __html: description }}
           />
         )}
-      </a>
+      </>
     </Link>
   </li>
 );

@@ -146,10 +146,7 @@ const Resume = () => (
             grow and develop. I provide advice to mentees to advance in their
             career by sharing my knowledge in the areas of Engineering,
             Engineering Management &amp; Leadership, Agile Methodologies and
-            more.{" "}
-            <Link href="/blog/mentoring-club">
-              <a>More information here</a>
-            </Link>
+            more. <Link href="/blog/mentoring-club">More information here</Link>
             .
           </p>
 
@@ -180,14 +177,8 @@ const Resume = () => (
 
           <p>
             Here you can find more information about my{" "}
-            <Link href="/about/speaking">
-              <a>Public Speaking</a>
-            </Link>{" "}
-            and{" "}
-            <Link href="/about/writings">
-              <a>Writings</a>
-            </Link>
-            .
+            <Link href="/about/speaking">Public Speaking</Link> and{" "}
+            <Link href="/about/writings">Writings</Link>.
           </p>
         </section>
       </div>

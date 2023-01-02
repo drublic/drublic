@@ -65,12 +65,12 @@ const Podcasting = () => {
         </p>
 
         <p>
-          <Link href="/resume">
-            <a className="button">My Résumé</a>
+          <Link href="/resume" className="button">
+            My Résumé
           </Link>
 
-          <Link href="/portfolio">
-            <a className="button">My Projects</a>
+          <Link href="/portfolio" className="button">
+            My Projects
           </Link>
         </p>
       </main>

@@ -23,12 +23,12 @@ const Footer = () => (
 
       <p>Made with love. {new Date().getFullYear()}. Cologne, Germany. </p>
       <p>
-        <Link href="/legal">
-          <a title="Who does this stuff?">Legal/Impressum</a>
+        <Link href="/legal" title="Who does this stuff?">
+          Legal/Impressum
         </Link>{" "}
         &bull;{" "}
-        <Link href="/privacy">
-          <a title="Privacy Protection Page">Privacy</a>
+        <Link href="/privacy" title="Privacy Protection Page">
+          Privacy
         </Link>
       </p>
 

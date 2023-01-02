@@ -27,9 +27,7 @@ const ArticleTeaser: FunctionComponent<{
         }`}
       >
         <Headline itemProp="title">
-          <Link href={`/blog/${slug}`}>
-            <a>{title}</a>
-          </Link>
+          <Link href={`/blog/${slug}`}>{title}</Link>
         </Headline>
 
         <time className="posts__date">Published on {date}</time>
@@ -40,8 +38,9 @@ const ArticleTeaser: FunctionComponent<{
               <Link
                 key={tag}
                 href={`/blog?tag=${encodeURIComponent(tag).toLowerCase()}`}
+                className="tag"
               >
-                <a className="tag">{tag}</a>
+                {tag}
               </Link>
             ))}
           </p>
@@ -49,18 +48,16 @@ const ArticleTeaser: FunctionComponent<{
       </header>
 
       <Link href={`/blog/${slug}`}>
-        <a>
-          <figure className="image image--block">
-            <img src={image} />
-          </figure>
-        </a>
+        <figure className="image image--block">
+          <img src={image} />
+        </figure>
       </Link>
 
       <div dangerouslySetInnerHTML={{ __html: abstract }} />
 
       <div className="posts__post__readmore clearfix">
-        <Link href={`/blog/${slug}`}>
-          <a className="button">Read this Article</a>
+        <Link href={`/blog/${slug}`} className="button">
+          Read this Article
         </Link>
       </div>
     </article>

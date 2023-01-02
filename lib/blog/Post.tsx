@@ -40,14 +40,13 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
         >
           <header className="post__header">
             <h1 itemProp="name">
-              <Link href={`/blog/${post.slug}/`}>
-                <a
-                  title={`Permalink to ${post.title}`}
-                  itemProp="url"
-                  rel="entry-title"
-                >
-                  {post.title}
-                </a>
+              <Link
+                href={`/blog/${post.slug}/`}
+                title={`Permalink to ${post.title}`}
+                itemProp="url"
+                rel="entry-title"
+              >
+                {post.title}
               </Link>
             </h1>
 
@@ -65,8 +64,9 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
                   <Link
                     key={tag}
                     href={`/blog?tag=${encodeURIComponent(tag).toLowerCase()}`}
+                    className="tag"
                   >
-                    <a className="tag">{tag}</a>
+                    {tag}
                   </Link>
                 ))}
               </p>
@@ -96,10 +96,8 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
         </div>
 
         <div className="post__navigation">
-          <Link href="/blog">
-            <a title="Back to blog overview" className="button">
-              View all posts
-            </a>
+          <Link href="/blog" title="Back to blog overview" className="button">
+            View all posts
           </Link>
         </div>
       </aside>

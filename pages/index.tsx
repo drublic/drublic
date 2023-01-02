@@ -24,17 +24,16 @@ const Index = ({ posts }) => {
             </div>
 
             <p>
-              <Link href="/resume">
-                <a
-                  className="button"
-                  title="My skills, my background"
-                  data-ga-category="Resume"
-                  data-ga-action="Resume"
-                  data-ga-label="Resume"
-                  style={{ marginTop: "1rem" }}
-                >
-                  More about me
-                </a>
+              <Link
+                href="/resume"
+                className="button"
+                title="My skills, my background"
+                data-ga-category="Resume"
+                data-ga-action="Resume"
+                data-ga-label="Resume"
+                style={{ marginTop: "1rem" }}
+              >
+                More about me
               </Link>
             </p>
           </div>

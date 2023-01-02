@@ -18,8 +18,8 @@ const Navigation = () => {
             "is-active": router.asPath === "/",
           })}
         >
-          <Link href="/">
-            <a title="drublic - Front-End Architecture">Home</a>
+          <Link href="/" title="drublic - Front-End Architecture">
+            Home
           </Link>
         </li>
         <li
@@ -27,8 +27,8 @@ const Navigation = () => {
             "is-active": router.asPath === "/resume",
           })}
         >
-          <Link href="/resume">
-            <a title="Read more about me">About</a>
+          <Link href="/resume" title="Read more about me">
+            About
           </Link>
         </li>
         <li
@@ -36,8 +36,11 @@ const Navigation = () => {
             "is-active": router.asPath === "/podcasting",
           })}
         >
-          <Link href="/podcasting">
-            <a title="Working Draft Podcast, latest equipment">Podcasting</a>
+          <Link
+            href="/podcasting"
+            title="Working Draft Podcast, latest equipment"
+          >
+            Podcasting
           </Link>
         </li>
 
@@ -46,8 +49,8 @@ const Navigation = () => {
             "is-active": router.asPath.startsWith("/blog"),
           })}
         >
-          <Link href="/blog">
-            <a title="Get some cutting edge goodness">Blog</a>
+          <Link href="/blog" title="Get some cutting edge goodness">
+            Blog
           </Link>
         </li>
         {/* <li

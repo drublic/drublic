@@ -64,10 +64,11 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
                       href={`/blog?tag=${encodeURIComponent(
                         tag
                       ).toLowerCase()}`}
+                      className="tag"
                     >
-                      <a className="tag">
+                      <>
                         {tag} <span className="tag_count">{count}</span>
-                      </a>
+                      </>
                     </Link>
                   ))}
               </p>
