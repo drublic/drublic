@@ -40,6 +40,10 @@ hr {
   margin-bottom: 4rem;
 }
 
+.container--large {
+  max-width: calc(var(--width) + 12rem);
+}
+
 .section__cta {
   margin-top: 3rem;
   text-align: center;
