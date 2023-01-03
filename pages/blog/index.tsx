@@ -107,7 +107,7 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
           <>
             <h3>On other websites</h3>
 
-            <ul className="posts__list posts__list--no-divider posts__list--no-top">
+            <ul className="posts__list posts__list--no-top">
               <ArticleTeaserSmall
                 title="CSS Naming Conventions: Less Rules, more Fun on Medium.com"
                 url="https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b"

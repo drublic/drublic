@@ -51,7 +51,8 @@ h3,
   margin: 1em 0 0.5em;
 }
 
-h4 {
+h4,
+.typography--h4 {
   font-size: 1.125rem;
   font-weight: normal;
 }
@@ -180,6 +181,17 @@ pre code {
  */
 .typography--light {
   color: var(--color-light);
+}
+
+.typography--colored {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    161.81deg,
+    var(--secondary-color--hover) 25%,
+    var(--secondary-color) 75%
+  );
 }
 
 /**

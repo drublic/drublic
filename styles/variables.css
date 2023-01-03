@@ -4,12 +4,15 @@
   --color: #546e7a;
   --color-dark: #29434e;
   --color-light: #819ca9;
+  --color-lightest: #f5f5f7;
   --border-color: #dce3ea;
   --border-color-dark: var(--color-light);
   --color--background--light: #f3f2ff;
   --color--background--dark: #eee;
   --secondary-color: #6236ff;
   --secondary-color--hover: #f474ff;
+
+  --footer-background: var(--color-lightest);
 
   --navigation-background: #607d8b;
 

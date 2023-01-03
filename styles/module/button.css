@@ -5,6 +5,7 @@
  */
 .button {
   position: relative;
+  z-index: 1;
   display: inline-block;
   padding: 1rem 1.5rem;
   text-decoration: none;
@@ -21,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 0.25rem;
+  height: 0.125rem;
   background-image: linear-gradient(
     161.81deg,
     var(--secondary-color--hover) 25%,
@@ -44,20 +45,46 @@
   height: 3.5rem;
 }
 
-.button--primary {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background: var(--secondary-color);
-  color: var(--text-color);
-  font-weight: bold;
+.button--outline {
+  font-weight: normal;
+  color: var(--secondary-color);
 }
 
-.button--primary:visited {
+.button--outline:visited {
+  color: var(--secondary-color);
+}
+
+.button--outline::before {
+  top: 0;
+  height: 100%;
+}
+
+.button--outline::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: var(--color-lightest);
+  top: 0.125rem;
+  left: 0.125rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  transition: 0.25s;
+}
+
+.button--outline:hover {
   color: var(--text-color);
 }
 
-.button--primary:hover {
-  background: var(--secondary-color--hover);
+.button--outline:hover::before {
+  height: 100%;
+}
+
+.button--outline:hover::after {
+  top: 0.25rem;
+  left: 0.25rem;
+  right: 0.25rem;
+  bottom: 0.25rem;
 }
 
 .button--margin-right {

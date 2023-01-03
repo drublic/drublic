@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
+import IndexWorkingDraft from "../lib/components/IndexWorkingDraft";
 import { getPosts } from "./api/posts";
 
 const Index = ({ posts }) => {
@@ -40,6 +41,29 @@ const Index = ({ posts }) => {
         </section>
 
         <IndexArticles posts={posts} />
+
+        <div className="layout--darkened">
+          <section className="container container--centered container--padded-bottom">
+            <h2 className="typography--colored">Connect on LinkedIn</h2>
+
+            <p className="typography--h4">
+              Receive regular updates of my thoughts and achievements unlocked
+              by my teams and me.
+            </p>
+
+            <p>
+              <a
+                href="https://www.linkedin.com/in/hreinl/"
+                title="LinkedIn"
+                className="button button--outline"
+              >
+                Connect on LinkedIn
+              </a>
+            </p>
+          </section>
+        </div>
+
+        <IndexWorkingDraft />
 
         <section className="container work" id="work">
           <h2>Companies I worked for</h2>

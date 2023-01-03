@@ -30,7 +30,7 @@ const Podcasting = () => {
         </p>
 
         <p>
-          <a href="/#hire-me" className="button button--primary">
+          <a href="/#hire-me" className="button">
             Contact me
           </a>
         </p>

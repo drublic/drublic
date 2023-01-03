@@ -16,6 +16,11 @@ hr {
   margin-bottom: 3rem;
 }
 
+.layout--darkened {
+  background-color: var(--color-lightest);
+  margin: 0 -1em;
+}
+
 /**
  * Main section
  */
@@ -29,8 +34,10 @@ hr {
   margin-top: 0;
 }
 
-.main--portfolio {
-  max-width: 80rem;
+.container--centered {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .section__cta {
@@ -58,6 +65,10 @@ hr {
 @media (min-width: 32em) {
   .container {
     padding: 2rem;
+  }
+
+  .container--padded-bottom {
+    padding-bottom: 4rem;
   }
 
   .section--fullsize {
@@ -123,6 +134,7 @@ hr {
  */
 .resume-header > h2 {
   line-height: 1.2;
+  margin-top: 0.75rem;
   margin-bottom: 0.25rem;
   border-bottom: 0;
 }
@@ -268,9 +280,8 @@ hr {
     left: 0;
   }
 
-  .termsfeed-com---nb.termsfeed-com---nb-headline
-    .cc-nb-main-container {
-      --padding: 3rem;
+  .termsfeed-com---nb.termsfeed-com---nb-headline .cc-nb-main-container {
+    --padding: 3rem;
   }
 
   .termsfeed-com---nb.termsfeed-com---palette-light .cc-nb-title {

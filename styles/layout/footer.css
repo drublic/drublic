@@ -2,14 +2,15 @@
  * Footer
  */
 .footer {
-  box-sizing: border-box;
-  margin: 2rem auto 0;
+  margin-top: 2rem;
   padding: 4rem 2rem 3rem;
-  max-width: calc(var(--width) + 12rem);
-
   text-align: center;
+  background-color: var(--footer-background);
+}
 
-  border-top: 4px solid var(--color--background--light);
+.footer__inner {
+  max-width: var(--width);
+  margin: 0 auto;
 }
 
 @media (max-width: 48em) {
