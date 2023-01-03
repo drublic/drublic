@@ -65,7 +65,7 @@ const Index = ({ posts }) => {
 
         <IndexWorkingDraft />
 
-        <section className="container work" id="work">
+        <section className="container container--large container--centered">
           <h2>Companies I worked for</h2>
 
           <div className="work__for">

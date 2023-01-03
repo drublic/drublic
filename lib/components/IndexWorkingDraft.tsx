@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import useSWR from "swr";
 import fetcher from "../utils/fetcher";
-import ArticleTeaser from "./ArticleTeaser";
 import ArticleTeaserSmall from "./ArticleTeaserSmall";
 
 const IndexWorkingDraft = () => {
@@ -13,7 +12,7 @@ const IndexWorkingDraft = () => {
   );
 
   return (
-    <section className="container">
+    <section className="container container--large">
       <h2>
         <span className="oss--wd-logo">
           <Image

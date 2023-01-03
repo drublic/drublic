@@ -77,28 +77,32 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
         </article>
       </main>
 
-      <aside className="container main">
-        <BlogMessage />
-
-        <div className="post__crosslinks">
-          <h3>Latest publications</h3>
-
-          <ul className="posts__list posts__list--bound posts__list--no-divider">
-            {posts?.slice(0, 5).map(({ title, slug, date }) => (
-              <ArticleTeaserSmall
-                key={slug}
-                title={title}
-                date={date}
-                slug={slug}
-              />
-            ))}
-          </ul>
+      <aside className="main">
+        <div className="container">
+          <BlogMessage />
         </div>
 
-        <div className="post__navigation">
-          <Link href="/blog" title="Back to blog overview" className="button">
-            View all posts
-          </Link>
+        <div className="container container--large">
+          <div className="post__crosslinks">
+            <h3>Latest publications</h3>
+
+            <ul className="posts__list posts__list--bound posts__list--no-divider">
+              {posts?.slice(0, 4).map(({ title, slug, date }) => (
+                <ArticleTeaserSmall
+                  key={slug}
+                  title={title}
+                  date={date}
+                  slug={slug}
+                />
+              ))}
+            </ul>
+          </div>
+
+          <div className="post__navigation">
+            <Link href="/blog" title="Back to blog overview" className="button">
+              View all posts
+            </Link>
+          </div>
         </div>
       </aside>
 
