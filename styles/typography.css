@@ -220,7 +220,7 @@ blockquote {
   padding: 0.5rem 0 0.5rem 2rem;
 }
 
-figure + blockquote {
+figure blockquote {
   font-size: 1.75rem;
   font-family: "Vollkorn", serif;
 }
