@@ -1,7 +1,7 @@
 {
   "title": "On Building Successful Engineering Teams",
   "date": "05.01.2023",
-  "abstract": "Every manager's ultimate task is to build successful teams. In my career, it has become apparent to me that as a manager, you have to monitor your teams closely in order to reach that goal. This will enable you as a manager to discover when a team is overwhelmed with their work.",
+  "abstract": "<p>Every manager's ultimate task is to build successful teams. In my career, it has become apparent to me that as a manager, you have to monitor your teams closely in order to reach that goal. This will enable you as a manager to discover when a team is overwhelmed with their work.</p>",
   "meta-title": "On Building Successful Engineering Teams",
   "meta-description": "Every manager's ultimate task is to build successful teams. Here is what you need to know in order to build a successful engineering team.",
   "link": false,
@@ -9,5 +9,6 @@
   "tags": [
     "People Management",
     "Engineering Leadership"
-  ]
+  ],
+  "image": "https://drublic.de/assets/successful-teams.jpg"
 }

@@ -2,6 +2,14 @@
 Every manager's ultimate task is to build successful teams. In my career, it has become apparent to me that as a manager, you have to monitor your teams closely in order to reach that goal. This will enable you as a manager to discover when a team is overwhelmed with their work.
 </div>
 
+<figure class="image image--block" markdown="1">
+  ![](/assets/successful-teams.jpg)
+
+<figcaption class="image__caption image__caption--no-border" markdown="1">
+  <span class="image__caption__copywrite">[Annie Spratt](https://unsplash.com/@anniespratt)</span>
+</figcaption>
+</figure>
+
 There are several reasons why engineering teams may become overwhelmed:
 
 __Insufficient staffing:__ If the team is understaffed relative to the amount of work they are expected to complete, they may become overwhelmed.
