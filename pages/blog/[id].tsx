@@ -4,16 +4,20 @@ import useSWR, { SWRConfig } from "swr";
 import Post from "../../lib/blog/Post";
 import fetcher from "../../lib/utils/fetcher";
 import { getPosts } from "../api/posts";
-import { getFullPost } from "../api/posts/[id]";
+import { findPost, getFullPost } from "../api/posts/[id]";
 
 const existingPages = ["engineering-leads-podcasts"];
 
 const Article = () => {
   const router = useRouter();
 
-  const { data: posts, error: postsError } = useSWR(`/api/posts`, fetcher);
+  const hasPreview = !!router.query.preview;
+  const { data: posts, error: postsError } = useSWR(
+    `/api/posts${hasPreview ? "?preview=true" : ""}`,
+    fetcher
+  );
   const { data: post, error } = useSWR(
-    `/api/posts/${router.query.id}`,
+    `/api/posts/${router.query.id}${hasPreview ? "?preview=true" : ""}`,
     fetcher
   );
 
@@ -41,8 +45,10 @@ const BlogPost = ({ fallback }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const posts = await getPosts();
-  const post = await getFullPost(posts, params.id);
+  const hasPreview = process.env.NODE_ENV === "development";
+  const posts = await getPosts(hasPreview);
+  const postData = findPost(posts, params.id);
+  const post = await getFullPost(postData);
 
   return {
     props: {
@@ -55,7 +61,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const posts = await getPosts();
+  const hasPreview = process.env.NODE_ENV === "development";
+  const posts = await getPosts(hasPreview);
 
   return {
     paths: posts
