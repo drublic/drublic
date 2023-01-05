@@ -47,11 +47,13 @@ const ArticleTeaser: FunctionComponent<{
         )}
       </header>
 
-      <Link href={`/blog/${slug}`}>
-        <figure className="image image--block">
-          <img src={image} />
-        </figure>
-      </Link>
+      {image && (
+        <Link href={`/blog/${slug}`}>
+          <figure className="image image--block">
+            <img src={image} />
+          </figure>
+        </Link>
+      )}
 
       <div dangerouslySetInnerHTML={{ __html: abstract }} />
 
