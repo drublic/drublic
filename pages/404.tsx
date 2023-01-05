@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../lib/components/Layout";
 
 const Error = () => (
-  <Layout title="Imprint">
+  <Layout title="Error">
     <main
       id="content"
       className="main container"
