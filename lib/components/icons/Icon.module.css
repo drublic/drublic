@@ -1,0 +1,10 @@
+.icon {
+  display: inline-block;
+  vertical-align: bottom;
+  fill: currentColor;
+}
+
+.icon > svg {
+  width: 100%;
+  height: 100%;
+}

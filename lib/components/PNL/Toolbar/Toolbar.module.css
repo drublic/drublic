@@ -1,0 +1,20 @@
+.toolbar {
+  padding: 1rem;
+  padding-top: 1rem;
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+}
+
+.saveButton {
+  --secondary-color--hover: var(--color-dark);
+  --secondary-color: var(--color-dark);
+
+  cursor: pointer;
+  padding: 0.75rem 3rem;
+}
+
+.saveButton::after {
+  background: var(--border-color);
+}

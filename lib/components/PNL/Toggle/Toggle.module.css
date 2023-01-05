@@ -1,0 +1,13 @@
+.toggle {
+  display: -webkit-box;
+  max-height: 6rem;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+}
+
+.toggleIsOpen {
+  -webkit-line-clamp: unset;
+  max-height: unset;
+}

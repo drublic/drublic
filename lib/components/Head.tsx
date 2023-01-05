@@ -1,7 +1,7 @@
 import React from "react";
 import NextHead from "next/head";
 
-const Head = ({ title, description, image }) => (
+const Head = ({ title, description, image, noIndex = false }) => (
   <NextHead>
     <meta charSet="utf-8" />
 
@@ -10,6 +10,7 @@ const Head = ({ title, description, image }) => (
     <link rel="dns-prefetch" href="//ajax.googleapis.com/" />
     <link rel="dns-prefetch" href="//www.google-analytics.com/" />
     <meta name="description" content={description} />
+    {noIndex && <meta name="robots" content="noindex" />}
 
     <link
       rel="alternate"

@@ -10,6 +10,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@toast-ui/editor": "^3.2.1",
+    "@toast-ui/react-editor": "^3.2.2",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "next": "13.1.1",

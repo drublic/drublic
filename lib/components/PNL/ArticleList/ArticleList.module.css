@@ -1,0 +1,49 @@
+.listWrapper {
+  overflow-y: scroll;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.listItem {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.listItemIsActive::before {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -1rem;
+  bottom: 0.25rem;
+  width: 0.25rem;
+  background-color: var(--color);
+}
+
+.listLink {
+  display: block;
+  border-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listLinkIcon {
+  float: right;
+}
+
+.listItemIsActive .listLink {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.listItemIsDraft .listLink {
+  color: var(--copy-light);
+}

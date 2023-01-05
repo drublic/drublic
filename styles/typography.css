@@ -61,6 +61,14 @@ h2 + h4 {
   margin-top: 0;
 }
 
+.typography--body1 {
+  font-size: 1rem;
+}
+
+.typography--body2 {
+  font-size: 0.9rem;
+}
+
 /* Links */
 a {
   color: inherit;
@@ -192,6 +200,10 @@ pre code {
     var(--secondary-color--hover) 25%,
     var(--secondary-color) 75%
   );
+}
+
+.typography--no-margin {
+  margin: 0;
 }
 
 /**

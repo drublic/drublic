@@ -4,9 +4,7 @@ import * as showdown from "showdown";
 import { POSTS_DIR, getPosts } from ".";
 
 const converter: showdown.Converter = new showdown.Converter();
-export const getFullPost = async (posts: any[], slug: string): Promise<any> => {
-  const postData = posts.find((post) => post.slug === slug);
-
+export const getFullPost = async (postData: any): Promise<any> => {
   if (!postData) {
     return {
       error: true,
@@ -30,6 +28,7 @@ export const getFullPost = async (posts: any[], slug: string): Promise<any> => {
     return {
       ...postData,
       entry: converter.makeHtml(entry),
+      rawEntry: process.env.NODE_ENV === "development" ? entry : null,
     };
   } catch (error) {
     console.error(error);
@@ -41,9 +40,40 @@ export const getFullPost = async (posts: any[], slug: string): Promise<any> => {
   }
 };
 
+const saveToFile = (postData: any, rawEntry: string): Promise<void> => {
+  const filePath: string = path.resolve(POSTS_DIR, postData.path, "article.md");
+
+  return fs.promises.writeFile(filePath, rawEntry);
+};
+
+const saveToJson = (
+  postData: any,
+  data: Record<string, any>
+): Promise<void> => {
+  const filePath: string = path.resolve(POSTS_DIR, postData.path, "data.json");
+
+  return fs.promises.writeFile(filePath, JSON.stringify(data, null, 2));
+};
+
+const readSlug = (url: string): string => url.split("/").pop().split("?")[0];
+
+export const findPost = (posts: any[], slug: string): any =>
+  posts.find((post) => post.slug === slug);
+
 export default async (req, res) => {
-  const posts = await getPosts();
-  const post = await getFullPost(posts, req.url.split("/").pop());
+  const hasPreview = !!req.query.preview;
+  const posts = await getPosts(hasPreview);
+  const postData = findPost(posts, readSlug(req.url));
+
+  if (process.env.NODE_ENV === "development" && req.method === "PATCH") {
+    const { rawEntry, entry, path, slug, ...rest } = JSON.parse(req.body);
+    await saveToFile(postData, rawEntry);
+    await saveToJson(postData, rest);
+
+    return res.status(200).json({ message: "ok" });
+  }
+
+  const post = await getFullPost(postData);
 
   return res.status(200).json(post);
 };

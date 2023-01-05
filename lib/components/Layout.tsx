@@ -8,6 +8,9 @@ const Layout = ({
   title = "drublic - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
   description = `Engineering Management & Software Architecture, Hans Christian Reinl - Working Draft, Node.js, React, CSS, JavaScript & Agile`,
   image = undefined,
+  noIndex = false,
+  noNavigation = false,
+  noFooter = false,
   children,
 }) => {
   return (
@@ -16,6 +19,7 @@ const Layout = ({
         title={`${title} - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne `}
         description={description}
         image={image}
+        noIndex={noIndex}
       />
 
       <div
@@ -32,12 +36,16 @@ const Layout = ({
         }}
       />
 
-      <Header />
+      <Header noNavigation={noNavigation} />
 
       {children}
 
-      <Footer />
-      <Cookiescript />
+      {!noFooter && (
+        <>
+          <Footer />
+          <Cookiescript />
+        </>
+      )}
     </>
   );
 };
