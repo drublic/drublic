@@ -7,13 +7,22 @@ import PublishedIcon from "../../icons/Published";
 
 import styles from "./ArticleList.module.css";
 
-const ArticleList = ({ posts = [], onArticleLoaded }) => {
+const ArticleList = ({ posts = [], onPostLoaded, onPostCreated }) => {
   const [activeSlug, setActiveSlug] = React.useState<string>(null);
   const loadFile = async (event: SyntheticEvent, slug: string) => {
     event.preventDefault();
     setActiveSlug(slug);
 
-    await fetcher(`/api/posts/${slug}?preview=true`, {}).then(onArticleLoaded);
+    await fetcher(`/api/posts/${slug}?preview=true`, {}).then(onPostLoaded);
+  };
+
+  const createPost = async (slug: string) => {
+    await fetcher(`/api/posts`, {
+      method: "POST",
+      body: JSON.stringify({
+        slug,
+      }),
+    }).then(onPostCreated);
   };
 
   return (
@@ -24,6 +33,15 @@ const ArticleList = ({ posts = [], onArticleLoaded }) => {
           {posts.filter(({ hidden }) => hidden !== true).length}
         </span>
       </h3>
+
+      <p style={{ marginBottom: "1rem" }}>
+        <button
+          className="button button--small"
+          onClick={() => createPost(new Date().toISOString())}
+        >
+          Create New Post
+        </button>
+      </p>
 
       <ul className={styles.list}>
         {posts?.map(({ title, slug, date, hidden }) => (

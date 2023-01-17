@@ -1,15 +1,13 @@
 import React, { useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 import Layout from "../../lib/components/Layout";
 import fetcher from "../../lib/utils/fetcher";
 import ArticleList from "../../lib/components/PNL/ArticleList";
 import { getPosts } from "../api/posts";
 import Toolbar from "../../lib/components/PNL/Toolbar";
-import Icon from "../../lib/components/icons/Icon";
-import PreviewIcon from "../../lib/components/icons/Preview";
-import FullscreenIcon from "../../lib/components/icons/Fullscreen";
 import classNames from "classnames";
-import CloseFullscreenIcon from "../../lib/components/icons/CloseFullscreen";
+import Topline from "../../lib/components/PNL/Topline";
 
 const MarkdownEditor = dynamic(
   () => import("../../lib/components/PNL/MarkdownEditor"),
@@ -20,6 +18,7 @@ const MarkdownEditor = dynamic(
 );
 
 const PNL = ({ posts }) => {
+  const router = useRouter();
   const editorRef = useRef<any>();
   const [currentPost, setCurrentPost] = useState({
     slug: undefined,
@@ -30,12 +29,19 @@ const PNL = ({ posts }) => {
   const [isSaving, setIsSaving] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
+  const handleTitleChange = (e) =>
+    setCurrentPost({ ...currentPost, title: e.target.value });
+
+  const refreshData = () => {
+    router.replace(router.asPath);
+  };
+
   const saveFile = async (slug: string) => {
     setIsSaving(true);
 
     await fetcher(`/api/posts/${slug}?preview=true`, {
       method: "PATCH",
-      body: JSON.stringify(currentPost),
+      body: JSON.stringify({ ...currentPost, slug }),
     });
 
     setIsSaving(false);
@@ -103,13 +109,11 @@ const PNL = ({ posts }) => {
               margin-right: 0.25rem;
             }
 
-            .button--fullscreen {
-              -webkit-appearance: none;
-              padding: 0;
-              margin-left: 1rem;
-              background-color: transparent;
-              border: 0;
-              cursor: pointer;
+            .button--icon {
+              background: none;
+               border: 0;
+               padding: 0.125rem;
+               cursor: pointer;
             }
 
             .input {
@@ -131,54 +135,21 @@ const PNL = ({ posts }) => {
           >
             <ArticleList
               posts={posts}
-              onArticleLoaded={(post) => {
+              onPostLoaded={(post) => {
                 editorRef.current?.getInstance()?.setMarkdown(post.rawEntry);
                 setCurrentPost(post);
               }}
+              onPostCreated={() => refreshData()}
             />
 
             <div className="content">
-              <div style={{ display: "flex", marginBottom: "2rem" }}>
-                <input
-                  type="text"
-                  value={currentPost.title}
-                  className="typography--h3 input"
-                  onChange={(e) =>
-                    setCurrentPost({ ...currentPost, title: e.target.value })
-                  }
-                />
-
-                <button
-                  className="button--fullscreen"
-                  onClick={() => setIsFullscreen(!isFullscreen)}
-                >
-                  <Icon width={48} height={48}>
-                    {isFullscreen ? (
-                      <CloseFullscreenIcon />
-                    ) : (
-                      <FullscreenIcon />
-                    )}
-                  </Icon>
-                </button>
-              </div>
-
-              <p className="typography--body2" style={{ marginBottom: "2rem" }}>
-                https://drublic.de/blog/
-                <code>{currentPost.slug ?? "..."}</code>
-                {currentPost.slug && (
-                  <a
-                    href={`/blog/${currentPost.slug}?preview=true`}
-                    target="drublic:preview"
-                    className="button button--small"
-                    style={{ float: "right", marginTop: "-0.5rem" }}
-                  >
-                    <Icon width={24} height={24}>
-                      <PreviewIcon />
-                    </Icon>
-                    Preview
-                  </a>
-                )}
-              </p>
+              <Topline
+                post={currentPost}
+                onTitleChange={handleTitleChange}
+                onSlugChange={saveFile}
+                isFullscreen={isFullscreen}
+                onFullscreenChange={() => setIsFullscreen(!isFullscreen)}
+              />
 
               <MarkdownEditor
                 forwardedRef={(element) => (editorRef.current = element)}

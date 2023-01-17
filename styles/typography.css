@@ -142,7 +142,9 @@ pre {
   border-left: 0.25rem solid var(--border-color);
 }
 
-code {
+code,
+.typography--code {
+  font-family: monospace;
   background: var(--border-color);
   padding: 0.2rem 0.4rem;
   border-radius: 0.2rem;

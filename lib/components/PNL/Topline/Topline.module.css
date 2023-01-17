@@ -1,0 +1,28 @@
+.title {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.buttonFullscreen {
+  -webkit-appearance: none;
+  padding: 0;
+  margin-left: 1rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.editButton {
+  transform: scaleX(0);
+}
+
+.withEditButton:hover .editButton {
+  transform: scaleX(1);
+}
+
+.urlInput {
+  padding: 0.275rem 0.5rem !important;
+  max-width: 30em !important;
+  border-radius: 0.25rem !important;
+  margin-right: 0.5rem;
+}

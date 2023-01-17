@@ -66,9 +66,47 @@ export const getPosts = async (hasPreview: boolean = false): Promise<any> => {
   return filteredPosts.filter((post) => post.hidden !== true);
 };
 
+const createPost = async (slug: string) => {
+  const folderName = `99-${slug}`;
+
+  const folderPath: string = path.resolve(POSTS_DIR, folderName);
+  await fs.promises.mkdir(folderPath);
+
+  const articlePath: string = path.resolve(POSTS_DIR, folderName, "article.md");
+  await fs.promises.writeFile(articlePath, "", "utf-8");
+
+  const dataPath: string = path.resolve(POSTS_DIR, folderName, "data.json");
+  await fs.promises.writeFile(
+    dataPath,
+    JSON.stringify({
+      title: slug,
+      date: new Date().toLocaleDateString("de-DE", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }),
+      abstract: "",
+      "meta-title": "",
+      "meta-description": "",
+      hidden: true,
+    }),
+    "utf-8"
+  );
+
+  return folderName;
+};
+
 export default async (req, res) => {
   const hasPreview = !!req.query.preview;
   const posts = await getPosts(hasPreview);
+
+  if (process.env.NODE_ENV === "development" && req.method === "POST") {
+    console.log("create post", req.body);
+    const { slug } = JSON.parse(req.body);
+    await createPost(slug);
+
+    return res.status(201).json({ created: "ok" });
+  }
 
   if (req.query.limit) {
     return res.status(200).json(posts.slice(0, req.query.limit));
