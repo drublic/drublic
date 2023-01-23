@@ -1,8 +1,9 @@
 # Hello hello, my name is [Hans](https://www.drublic.de/) 👋
 
-I am an Engineering Manager, Software Architect and Certified Scrum Master working as Vice President Engineering for [Seven.One Entertainment Group](https://www.prosiebensat1.com/) located in Cologne, Germany.
+As an experienced Engineering Leader and Software Architect, I currently serve as
+the Vice President of Engineering for [Seven.One Entertainment Group (ProSiebenSat.1)](https://www.prosiebensat1.com/).
 
-Agile development and Scrum have influenced my work since 2012. I have more than ten years of experience in developing scalable web-applications using cutting edge technologies. I love creating solid systems in a high-performance environment. My passion is to build teams that strive for excellence. Enabling team members to accelerate is what drives my daily work.
+I have been utilizing Agile development and methodologies for over a decade and have 13 years of professional experience developing scalable web-applications using cutting-edge technologies. I am passionate about creating robust systems in high-performance environments and building teams that strive for excellence. My primary focus is on empowering and accelerating the growth of my team members.
 
 ## Get in Contact
 
