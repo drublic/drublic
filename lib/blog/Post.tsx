@@ -33,6 +33,18 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
       </Head>
 
       <main id="content" className="main container" role="main">
+        <div className="breadcrumb">
+          <ol>
+            <li>
+              <Link href="/">drublic.de</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>{post.title}</li>
+          </ol>
+        </div>
+
         <article
           className="post"
           itemScope

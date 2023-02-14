@@ -23,6 +23,22 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
         itemType="http://schema.org/Blog"
       >
         <div className="container">
+          <div className="breadcrumb">
+            <ol>
+              <li>
+                <Link href="/">drublic.de</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              {tag && (
+                <li>
+                  <Link href="/blog">Tag: {tag}</Link>
+                </li>
+              )}
+            </ol>
+          </div>
+
           {tag && (
             <>
               <p className="typography--h2">

@@ -21,6 +21,7 @@
 @import "./module/navigation.css";
 @import "./module/oss.css";
 @import "./module/tag.css";
+@import "./module/breadcrumb.css";
 
 @import "./layout/header.css";
 @import "./layout/footer.css";
