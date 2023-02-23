@@ -224,6 +224,12 @@ hr {
 }
 
 /* Cookie Message */
+
+.termsfeed-com---nb.termsfeed-com---reset {
+  font: 16px "Roboto", sans-serif;
+  font-weight: 300;
+}
+
 .termsfeed-com---nb.termsfeed-com---palette-light {
   position: fixed;
   top: auto;
