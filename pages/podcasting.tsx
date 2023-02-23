@@ -7,7 +7,7 @@ import fetcher from "../lib/utils/fetcher";
 
 const Podcasting = () => {
   const { data: wdPosts, error: wdPostsError } = useSWR(
-    "/api/wd-posts",
+    "/api/wd-posts?limit=7",
     fetcher
   );
 
@@ -86,8 +86,10 @@ const Podcasting = () => {
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
+        </section>
 
-          <h3>Latest Episodes</h3>
+        <section className="container container--large">
+          <h3 className="container">Latest Episodes</h3>
 
           <ul className="posts__list posts__list--no-divider posts__list--no-top">
             {wdPosts?.map(({ title, url, description, date }) => (

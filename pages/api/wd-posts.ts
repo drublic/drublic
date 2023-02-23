@@ -6,7 +6,7 @@ export const getWdPosts = async (): Promise<any> => {
   try {
     const feed: any = await parser.parseURL("https://workingdraft.de/feed/");
 
-    return feed.items.splice(0, 5).map((item: any) => ({
+    return feed.items.map((item: any) => ({
       title: item.title,
       url: item.link,
       date: format(new Date(item.isoDate), "dd.MM.yyyy"),
@@ -26,5 +26,7 @@ export default async (req, res) => {
     postsStore = posts;
   }
 
-  res.status(200).json(postsStore);
+  const limit = parseInt(req.query.limit ?? 5, 10);
+
+  res.status(200).json(postsStore.slice(0, limit));
 };

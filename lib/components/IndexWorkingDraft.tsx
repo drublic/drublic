@@ -7,7 +7,7 @@ import ArticleTeaserSmall from "./ArticleTeaserSmall";
 
 const IndexWorkingDraft = () => {
   const { data: wdPosts, error: wdPostsError } = useSWR(
-    "/api/wd-posts",
+    "/api/wd-posts?limit=7",
     fetcher
   );
 
