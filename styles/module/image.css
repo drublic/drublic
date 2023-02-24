@@ -56,6 +56,10 @@
   padding-bottom: 1px;
 }
 
+.image--header {
+  margin: 0 -10rem 5rem;
+}
+
 @media screen and (max-width: 64em) {
   .image--block {
     margin-left: 0;
@@ -68,6 +72,10 @@
 
   .image--right {
     margin-right: -1rem;
+  }
+
+  .image--header {
+    margin: 0 -1rem 3rem;
   }
 }
 

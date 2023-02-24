@@ -86,6 +86,17 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
             )}
           </header>
 
+          {post.headerImage && (
+            <figure className="image image--block image--header">
+              <img
+                src={post.headerImage}
+                alt={post.title}
+                itemProp="image"
+                loading="lazy"
+              />
+            </figure>
+          )}
+
           {post.hasToc && <Toc entry={post.entry} />}
 
           <div itemProp="articleBody">{children}</div>
