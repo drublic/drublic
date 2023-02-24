@@ -4,6 +4,7 @@ import Head from "next/head";
 import ArticleTeaserSmall from "../components/ArticleTeaserSmall";
 import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
+import Toc from "./Toc";
 
 interface Post {
   post: any;
@@ -84,6 +85,8 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
               </p>
             )}
           </header>
+
+          {post.hasToc && <Toc entry={post.entry} />}
 
           <div itemProp="articleBody">{children}</div>
         </article>

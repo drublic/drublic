@@ -1,0 +1,25 @@
+.toc {
+  padding: 0 0 2rem;
+}
+
+@media (min-width: 40em) {
+  .toc {
+    float: right;
+    width: 15rem;
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width: 55em) {
+  .toc {
+    width: 17rem;
+    margin-right: -5rem;
+  }
+}
+
+@media (min-width: 66em) {
+  .toc {
+    width: 20rem;
+    margin-right: -10rem;
+  }
+}
