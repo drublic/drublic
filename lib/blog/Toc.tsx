@@ -1,37 +1,46 @@
 import Link from "next/link";
 
-const parse = (values = [], carriage = true) => {
-  if (!values.length) {
-    return [];
-  }
-
+const parse = (
+  values: Array<{ depth: number; title; link }> = [],
+  until: (depth: number, nextDepth: number) => boolean = () => true
+): Array<{ depth: number; title; link; headings }> => {
   const [
     { depth, title, link } = {
       depth: undefined,
       title: undefined,
       link: undefined,
     },
-    next = {},
+    next = {
+      depth: undefined,
+      title: undefined,
+      link: undefined,
+    },
     ...rest
   ] = values;
 
-  if (depth !== undefined && carriage) {
+  if (!values.length) {
+    return [];
+  }
+
+  if (depth !== undefined && until(depth, next.depth)) {
     return [
       {
         depth,
         headings: next.depth > depth ? parse([next, ...rest]) : [],
         title,
         link,
-        ...rest,
       },
-      ...(next.depth < depth
+      ...(depth > next.depth
         ? []
-        : parse([next, ...rest], next.depth === depth)),
+        : parse(
+            [next, ...rest],
+            (selfDepth, nextDepth) => selfDepth === depth
+          )),
     ];
   }
 
   if (depth !== undefined) {
-    return parse([next, ...rest], next.depth < depth);
+    return parse([next, ...rest], until);
   }
 
   return [];

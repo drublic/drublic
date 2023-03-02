@@ -2,6 +2,14 @@
   padding: 0 0 2rem;
 }
 
+.toc ol ol {
+  list-style-type: upper-roman;
+}
+
+.toc ol ol ol {
+  list-style-type: lower-roman;
+}
+
 @media (min-width: 40em) {
   .toc {
     float: right;
