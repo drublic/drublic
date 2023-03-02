@@ -19,6 +19,11 @@
   margin: 1rem 2rem 1.5rem -4rem;
 }
 
+.image--right--large,
+.image--left--large {
+  max-width: 70%;
+}
+
 .image--large,
 .image--large {
   max-width: 66.66%;
