@@ -10,22 +10,22 @@
     "start": "next start"
   },
   "dependencies": {
-    "@toast-ui/editor": "^3.2.1",
-    "@toast-ui/react-editor": "^3.2.2",
+    "@toast-ui/editor": "^3.2.2",
+    "@toast-ui/react-editor": "^3.2.3",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
-    "next": "13.1.1",
+    "next": "13.2.3",
     "node-fetch": "^3.3.0",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rss-parser": "^3.12.0",
     "showdown": "^2.1.0",
-    "swr": "^2.0.0"
+    "swr": "^2.0.4"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.26",
-    "typescript": "^4.9.4"
+    "@types/node": "^18.14.4",
+    "@types/react": "^18.0.28",
+    "typescript": "^4.9.5"
   }
 }
