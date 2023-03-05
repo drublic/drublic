@@ -16,12 +16,12 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 </div>
 
 <p>
-As we continue to embrace AI tools in programming, there are many questions that we must consider. For example, how will this impact the way we work? Will it change the nature of frontend development? What are the implications of this for businesses, developers, and end-users? How does the job of a frontend developmer transform through AI?  These are some of the critical questions that we'll explore as we delve into the future of frontend development with AI.
+As we continue to embrace AI tools in programming, there are many questions that we must consider. For example, how will this impact the way we work? Will it change the nature of frontend development? What are the implications of this for businesses, developers, and end-users? How does the job of a frontend developer transform through AI?  These are some of the critical questions that we'll explore as we delve into the future of frontend development with AI.
 </p>
 
 ## The Sigmoid Curve of AI
 
-In his video titled ["I tried using AI. It scared me."](https://www.youtube.com/watch?v=jPhJbKBuNnA), Tom Scott offers his perspective on the potential impact of AI in the coming years. He suggests that we may be at the beginning of a sigmoid curve for AI, which could disrupt industries similarly to how Napster disrupted the music industry in the early 2000s. It made the CD obsolete and made way for music streaming as we know it today. The disruption of AI has the potential to significantly alter the way we work, live, and interact with technology. Maybe it even will make parts of engineering onsolete.
+In his video titled ["I tried using AI. It scared me."](https://www.youtube.com/watch?v=jPhJbKBuNnA), Tom Scott offers his perspective on the potential impact of AI in the coming years. He suggests that we may be at the beginning of a sigmoid curve for AI, which could disrupt industries similarly to how Napster disrupted the music industry in the early 2000s. It made the CD obsolete and made way for music streaming as we know it today. The disruption of AI has the potential to significantly alter the way we work, live, and interact with technology. Maybe it even will make parts of engineering obsolete.
 
 As AI tools become more prevalent, we can expect to see a greater level of automation in engineering. This will include automating tasks such as page creation, component development, and much more. However, it's essential to note that the role of each individual working in the field of engineering will be to act as the gatekeeper of the output of these tools. Engineers will be responsible for utilizing and leveraging these tools to their fullest potential.
 
@@ -38,21 +38,21 @@ With this increased automation, the job of engineers will likely shift towards a
 Artificial intelligence as such as been used as a term for a multitude of tools and approaches to work.
 Generally, AI is broadly divided [into three stages](https://www.mygreatlearning.com/blog/what-is-artificial-intelligence/):
 
-1. **Artificial Narrow Intelligence (ANI):** The chess programm that can win against all human intelligence, think Siri, Alexa - fully available today.
-2. **Artificial General Intelligence (AGI):** The AI is capable to perform comparable to a human: converse fluently, make a coffee, get employed at a job and do it well. We are not there yet, scientents think we will need a couple of more decades to fully unlock this level, maybe 2070.
-3. **Artificial Super Intelligence (ASI):** At this level an AI will learn from itself and will become more intelligent than human life, think sci-fi - it's in the distant future.
+1. **Artificial Narrow Intelligence (ANI):** The chess program that can win against all human intelligence, think Siri, Alexa - fully available today.
+2. **Artificial General Intelligence (AGI):** The AI is capable of performing comparable to a human: conversing fluently, making a coffee, get employed at a job and doing it well. We are not there yet, scientists think we will need a couple of more decades to fully unlock this level, maybe 2070.
+3. **Artificial Super Intelligence (ASI):** At this level, an AI will learn from itself and will become more intelligent than human life, think sci-fi - it's in the distant future.
 
-In our Working Draft episode on ChatGPT and AI tooling, [Peter](https://www.peterkroener.de/), [Vanessa](https://vannsl.io/) and me formed a different set of layers AI tooling is capable of doing:
+In our Working Draft episode on ChatGPT and AI tooling, [Peter](https://www.peterkroener.de/), [Vanessa](https://vannsl.io/) and I formed a different set of layers AI tooling is capable of doing:
 
 1. **Optimizing Input (Recontextualize):** This layer involves optimizing input based on the model and requested prompt for a given context. For example, if a user provides a long text, an AI tool could be used to summarize it and extract the key information. Another example is translating a text into another language or turning a list of achievements into a text. This layer is useful for automating repetitive and time-consuming tasks, allowing engineers to focus on more complex challenges.
 2. **Reciting Information (Researching):** This layer involves reciting information that the model is trained with and putting it into a given context. An example is an excerpt of a historic event and comparing it to another event. In more engineering terms, this layer allows AI tooling to find similar cases from what it has learned and put them into context. For instance, an AI tool could help engineers write Unit Tests based on a given input by finding similar cases that have been tested before. Another example is getting an answer to what the RegEx for parsing an email address is, by searching for similar patterns that the AI model has learned.
-3. **Bringing Together Data (Synthesis):** This layer involves bringing together multiple data points and forming something new. For example, generating a music song based on the style of a genre of images - we know how to analyze images for their genres and could potentially build a song, bringing it together today is at least difficult. This layer is particularly useful for generating creative outputs, where AI can help augment human creativity by suggesting new ideas and combinations of ideas. However, this layer is also the most challenging since it requires a high level of understanding of different data types and how they can be combined effectively.
+3. **Bringing Together Data (Synthesis):** This layer involves bringing together multiple data points and forming something new. For example, generating a music song based on the style of a genre of images - we know how to analyze images for their genres and could potentially build a song, bringing it together today is at least difficult. This layer is particularly useful for generating creative outputs, where AI can help augment human creativity by suggesting new ideas and combinations of ideas. However, this layer is also the most challenging, since it requires a high level of understanding of different data types and how they can be combined effectively.
 
 Now let's see how these three layers can be put into action with frontend development.
 
 ## From Design to Implementation to the User
 
-A foundation for mostly any web site or application today is a design system in any form, at least describing a theme and re-usable components. Let's focus on building a design system using AI first.
+A foundation for almost any website or application today is a design system in any form, at least describing a theme and re-usable components. Let's focus on building a design system using AI first.
 
 Starting with a fresh design system, insights and recommendations for optimizing it can be gained by examining existing design systems and their construction.
 
@@ -78,9 +78,9 @@ Building a design system isn't complicated. Just ask ChatGPT. Florian tried to [
 
 #### Components
 
-Taking this as a foundation for a design system, adding some design to create the initial components, or even easier, ask a tool like [Midjourney](https://midjourney.com/home/?callbackUrl=%2Fapp%2F) to generate these, isn't a big step.
+Taking this as a foundation for a design system, adding some design to create the initial components, or even easier, asking a tool like [Midjourney](https://midjourney.com/home/?callbackUrl=%2Fapp%2F) to generate these, isn't a big step.
 
-While I have made it work to generate a decent output for a button component, this is just a matter of experience, crafting the right commands and the machine to get the right data input. Let's assume, in a first step you train your model on a bunch of existing design systems you can find via [Design Systems Repo](https://designsystemsrepo.com/design-systems/) or similar.
+While I have made it work to generate a decent output for a button component, this is just a matter of experience, crafting the right commands and the machine to get the right data input. Let's assume, in a first step, you train your model on a bunch of existing design systems you can find via [Design Systems Repo](https://designsystemsrepo.com/design-systems/) or similar.
 
 Then you craft the initial component, let's say a button, based on the style input generated by ChatGPT using the tool until you are at the level of what you want. Now you can use this button as an input for your next request, for example a card component.
 Generating any consecutive component will always match your design style. The AI does the heavy lifting.
@@ -93,14 +93,12 @@ To further streamline the frontend development process, engineers can use tools 
 
 Once the code is generated, engineers can focus on separating it into manageable components, ensuring that each piece is optimized for performance and meets the specific needs of the project. By using AI to automate the code generation process, engineers can save time and focus on the more complex aspects of development, ultimately resulting in faster and more efficient project delivery.
 
-One example of this efficiancy is the possibility to generate code for multiple platforms at once. A tool is capable of providing output as a Swift UI component as well as for React or another librabry for the web.
+One example of this efficiency is the possibility to generate code for multiple platforms at once. A tool is capable of providing output as a Swift UI component, as well as for React or another library for the web.
 
 ### Generating Web Pages
 
-On a web page you want to display some matching data. New page-types get automatically generated based on the data, we see this with fully auto-generated, personalised experiences done by recommendation engines today.
-Bringing this to the next level, an AI can generate endless pages with dynamic page types based on the input data your provide, for example user signals (analytics) and your businesses KPIs.
-
-<!--- tbd. --->
+On a web page, you want to display some matching data. New page-types get automatically generated based on the data, we see this with fully auto-generated, personalized experiences done by recommendation engines today.
+Bringing this to the next level, an AI can generate endless pages with dynamic page types based on the input data you provide, for example user signals (analytics) and your businesses KPIs.
 
 ## The Role of an Engineer with AI
 
@@ -112,9 +110,9 @@ Here is the gist of it:
 4. Custom solutions: Integrate AI
 5. Ethical responsibility: Ensure ethical AI use
 
-Let me explain this a in more depth.
+Let me explain this an in more depth.
 
-As AI continues to become more integrated into frontend development, the role of an engineer will shift towards a focus on collaboration and strategy. Engineers will need to be skilled at working with AI and crafting the right prompts to generate the desired output. However, it's essential to note that the output generated by machines will only be as good as the data it consumed. Therefore, engineers will also play a crucial role in controlling the output of these tools, ensuring that the generated output is tailored to the context it's used in and that it's helpful in achieving the desired outcome. Moreover as an engineer your role will move away from knowing specific frontend frameworks to knowing specific Machine Learning tools.
+As AI continues to become more integrated into frontend development, the role of an engineer will shift towards a focus on collaboration and strategy. Engineers will need to be skilled at working with AI and crafting the right prompts to generate the desired output. However, it's essential to note that the output generated by machines will only be as good as the data it consumed. Therefore, engineers will also play a crucial role in controlling the output of these tools, ensuring that the generated output is tailored to the context it's used in and that it's helpful in achieving the desired outcome. Moreover, as an engineer, your role will move away from knowing specific frontend frameworks to knowing specific Machine Learning tools.
 
 For example, consider the generated components for a design system. Engineers will need to evaluate the necessary variants of a button in a given context that the AI tool needs to generate. They will also need to assess whether the generated variants are useful in the context they are used in, and ensure that the actions triggered by the buttons are properly mapped to the interactions with them. In essence, engineers will act as the critical bridge between AI tools and the final product, leveraging the power of AI while also bringing their expertise and judgement to ensure the optimal outcome.
 
@@ -139,7 +137,7 @@ Firstly, it could **significantly enhance productivity and efficiency**. By auto
 </figure>
 
 
-Let's talk about the multi platform example from above again: Imagine you want to build a design system that can be used across multiple platforms, such as the web, iOS, and Android. Today, this would require writing code multiple times for each platform. However, with AI tooling, these adaptations can be done automatically. By building a design system once in a single language, engineers could export the code and let machines handle the task of transplanting it into several languages for different platforms. This would result in massive time and cost savings, allowing engineers to focus on more complex challenges and innovations.
+Let's talk about the multi-platform example from above again: Imagine you want to build a design system that can be used across multiple platforms, such as the web, iOS, and Android. Today, this would require writing code multiple times for each platform. However, with AI tooling, these adaptations can be done automatically. By building a design system once in a single language, engineers could export the code and let machines handle the task of transplanting it into several languages for different platforms. This would result in massive time and cost savings, allowing engineers to focus on more complex challenges and innovations.
 
 Secondly, it could help to **address the shortage of skilled talent** in the frontend development industry. With AI tools doing some of the heavy lifting, engineers could be trained to work more efficiently and effectively, allowing them to take on more complex challenges and develop a broader range of skills.
 
@@ -159,7 +157,7 @@ Ask the machine, it will give it to you.
 
 ## So What does it Mean for the Near Future?
 
-The future of frontend development is exciting and rapidly evolving, with AI technology poised to have a major impact on the industry. As Brad Frost has noted in his aforementioned article "Design Systems in the Time of AI", there are already examples of how AI is automating aspects of the job, such as removing backgrounds from images. As AI technology continues to advance, it's likely that more and more of the frontend engineering process will be automated. This will not only lead to greater efficiency but also a shift in the skill sets required for frontend developers. As such, developers who stay on top of the latest technology and continue to develop their skills will be best positioned to succeed in the industry.
+The future of frontend development is exciting and rapidly evolving, with AI technology poised to have a major impact on the industry. As Brad Frost has noted in his aforementioned article "Design Systems in the Time of AI", there are already examples of how AI is automating aspects of the job, such as removing backgrounds from images. As AI technology continues to advance, it's likely that more and more of the frontend engineering process will be automated. This will not only lead to greater efficiency, but also a shift in the skill sets required for frontend developers. As such, developers who stay on top of the latest technology and continue to develop their skills will be best positioned to succeed in the industry.
 
 While it's clear that AI will play a major role in the future of frontend development, there is still much to discover and explore. We can expect to see a variety of new tools and technologies emerge in the coming years, many of which will be built on AI principles. For example, ChatGPT and Midjourney are just two examples of how AI can be used to streamline frontend development processes. As more developers explore the potential of AI and incorporate it into their workflows, we will undoubtedly see a range of new innovations that will continue to shape the industry.
 
@@ -172,6 +170,6 @@ In conclusion, the future of frontend development is sure to be exciting and ful
 
 If you want to learn more about how ChatGPT works, read [this article](https://towardsdatascience.com/how-chatgpt-works-the-models-behind-the-bot-1ce5fca96286).
 
-Do you want to discuss the ideas I outline? Reach out via [Twitter](https://twitter.com/drublic). And if you enjoyed my thoughts, consider to share the article.
+Do you want to discuss the ideas I outlined? Reach out via [Twitter](https://twitter.com/drublic). And if you enjoyed my thoughts, consider sharing the article.
 
 Special thanks to [David](https://www.linkedin.com/in/davidyasli/) for helping review this article and providing constructive feedback.
