@@ -2,7 +2,7 @@
 The world of programming has been evolving at a rapid pace in recent years, and the integration of AI into the development process is one of the most exciting advancements. AI tools such as ChatGPT have made it easier than ever to outsource programming work, and this has significant implications for the future of frontend development. As a result, it's vital to explore how AI is impacting the programming field, specifically frontend engineering.
 </div>
 
-In a [recent episode of my podcast, Working Draft](https://workingdraft.de/555/) (unfortunately in German), we delved into the impact of AI on engineering and discussed the future of working in the engineering field with a particular focus on frontend development. During this discussion, I shared my vision of where we might be heading in the coming years. This led me to write this article, where I can expand on some of the ideas that have been floating around in my mind for quite some time.
+In a [recent episode of my podcast, Working Draft](https://workingdraft.de/555/) (in German), we delved into the impact of AI on engineering and discussed the future of working in the engineering field with a particular focus on frontend development. During this discussion, I shared my vision of where we might be heading in the coming years. This led me to write this article, where I can expand on some of the ideas that have been floating around in my mind for quite some time.
 
 <div style="padding: 2rem 0">
 <iframe
@@ -16,16 +16,16 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 </div>
 
 <p>
-As we continue to embrace AI tools in programming, there are many questions that we must consider. How will this impact the way we work? Will it change the nature of frontend development? What are the implications of this for businesses, developers, and end-users? These are some of the critical questions that we'll explore as we delve into the future of frontend development with AI.
+As we continue to embrace AI tools in programming, there are many questions that we must consider. For example, how will this impact the way we work? Will it change the nature of frontend development? What are the implications of this for businesses, developers, and end-users? How does the job of a frontend developmer transform through AI?  These are some of the critical questions that we'll explore as we delve into the future of frontend development with AI.
 </p>
 
 ## The Sigmoid Curve of AI
 
-In his video titled ["I tried using AI. It scared me."](https://www.youtube.com/watch?v=jPhJbKBuNnA), Tom Scott offers his perspective on the potential impact of AI in the coming years. He suggests that we may be at the beginning of a sigmoid curve for AI, which could disrupt industries similarly to how Napster disrupted the music industry in the early 2000s. This disruption has the potential to significantly alter the way we work, live, and interact with technology.
+In his video titled ["I tried using AI. It scared me."](https://www.youtube.com/watch?v=jPhJbKBuNnA), Tom Scott offers his perspective on the potential impact of AI in the coming years. He suggests that we may be at the beginning of a sigmoid curve for AI, which could disrupt industries similarly to how Napster disrupted the music industry in the early 2000s. It made the CD obsolete and made way for music streaming as we know it today. The disruption of AI has the potential to significantly alter the way we work, live, and interact with technology. Maybe it even will make parts of engineering onsolete.
 
 As AI tools become more prevalent, we can expect to see a greater level of automation in engineering. This will include automating tasks such as page creation, component development, and much more. However, it's essential to note that the role of each individual working in the field of engineering will be to act as the gatekeeper of the output of these tools. Engineers will be responsible for utilizing and leveraging these tools to their fullest potential.
 
-With this increased automation, the job of engineers will likely shift towards a more strategic focus, with a greater emphasis on problem-solving and decision-making. As a result, engineers will need to develop new skills to effectively collaborate with AI tools and incorporate them into their workflow. While this change may seem daunting, the potential benefits of working alongside AI tools are vast and could lead to significant advancements in the field of frontend development.
+With this increased automation, the job of engineers will likely shift towards a more strategic focus, with a greater emphasis on problem-solving and decision-making. As a result, engineers will need to develop new skills to effectively collaborate with AI tools and incorporate them into their workflow to create value even faster. While this change may seem daunting, the potential benefits of working alongside AI tools are vast and could lead to significant advancements in the field of frontend development.
 
 <figure>
 <blockquote>AI stands for Artificial Intelligence and refers to computer systems that can perform human-like tasks such as learning, problem-solving, pattern recognition, decision-making, and language understanding.</blockquote>
@@ -45,7 +45,7 @@ Generally, AI is broadly divided [into three stages](https://www.mygreatlearning
 In our Working Draft episode on ChatGPT and AI tooling, [Peter](https://www.peterkroener.de/), [Vanessa](https://vannsl.io/) and me formed a different set of layers AI tooling is capable of doing:
 
 1. **Optimizing Input (Recontextualize):** This layer involves optimizing input based on the model and requested prompt for a given context. For example, if a user provides a long text, an AI tool could be used to summarize it and extract the key information. Another example is translating a text into another language or turning a list of achievements into a text. This layer is useful for automating repetitive and time-consuming tasks, allowing engineers to focus on more complex challenges.
-2. **Reciting Information (Researching):** This layer involves reciting information that the model is aware of and putting it into a given context. An example is an excerpt of a historic event and comparing it to another event. In more engineering terms, this layer allows AI tooling to find similar cases from what it has learned and put them into context. For instance, an AI tool could help engineers write Unit Tests based on a given input by finding similar cases that have been tested before. Another example is getting an answer to what the RegEx for parsing an email address is, by searching for similar patterns that the AI model has learned.
+2. **Reciting Information (Researching):** This layer involves reciting information that the model is trained with and putting it into a given context. An example is an excerpt of a historic event and comparing it to another event. In more engineering terms, this layer allows AI tooling to find similar cases from what it has learned and put them into context. For instance, an AI tool could help engineers write Unit Tests based on a given input by finding similar cases that have been tested before. Another example is getting an answer to what the RegEx for parsing an email address is, by searching for similar patterns that the AI model has learned.
 3. **Bringing Together Data (Synthesis):** This layer involves bringing together multiple data points and forming something new. For example, generating a music song based on the style of a genre of images - we know how to analyze images for their genres and could potentially build a song, bringing it together today is at least difficult. This layer is particularly useful for generating creative outputs, where AI can help augment human creativity by suggesting new ideas and combinations of ideas. However, this layer is also the most challenging since it requires a high level of understanding of different data types and how they can be combined effectively.
 
 Now let's see how these three layers can be put into action with frontend development.
@@ -54,9 +54,9 @@ Now let's see how these three layers can be put into action with frontend develo
 
 A foundation for mostly any web site or application today is a design system in any form, at least describing a theme and re-usable components. Let's focus on building a design system using AI first.
 
-Most importantly to start of with a design system information about existing design systems and how they are build can be used to provide insights and recommendations on how to optimize the design system being generated.
+Starting with a fresh design system, insights and recommendations for optimizing it can be gained by examining existing design systems and their construction.
 
-AI tooling can be utilized to generate a design system by leveraging the synthesis layer to bring together multiple data points and generate something new. A potential tool could be fed with data on various design elements, such as color schemes, typography, and component interactions, as well as examples of existing design systems. The AI tooling would then use this input to generate a new, cohesive design system that adheres to the specific requirements and constraints provided. We will talk about it below.
+AI tooling can be utilized to generate a design system by leveraging the synthesis layer to bring together multiple data points and generate an enhanced version. A potential tool could be fed with data on various design elements, such as color schemes, typography, and component interactions, as well as examples of existing design systems. The AI tooling would then use this input to generate a new, cohesive design system that adheres to the specific requirements and constraints provided. We will talk about it below.
 
 A tool can be used to recontextualize the input based on the requested prompt, such as generating variants of a button based on different contexts, and ensuring that the output is tailored to the specific context it's used in.
 
@@ -80,7 +80,7 @@ Building a design system isn't complicated. Just ask ChatGPT. Florian tried to [
 
 Taking this as a foundation for a design system, adding some design to create the initial components, or even easier, ask a tool like [Midjourney](https://midjourney.com/home/?callbackUrl=%2Fapp%2F) to generate these, isn't a big step.
 
-While I have made it work to generate a decent output for a button component, this is just a matter of experience, crafting the right commands and the machine to get the right data input. Let's assume you train your model on a bunch of existing design systems you can find via [Design Systems Repo](https://designsystemsrepo.com/design-systems/) or similar.
+While I have made it work to generate a decent output for a button component, this is just a matter of experience, crafting the right commands and the machine to get the right data input. Let's assume, in a first step you train your model on a bunch of existing design systems you can find via [Design Systems Repo](https://designsystemsrepo.com/design-systems/) or similar.
 
 Then you craft the initial component, let's say a button, based on the style input generated by ChatGPT using the tool until you are at the level of what you want. Now you can use this button as an input for your next request, for example a card component.
 Generating any consecutive component will always match your design style. The AI does the heavy lifting.
@@ -114,11 +114,11 @@ Here is the gist of it:
 
 Let me explain this a in more depth.
 
-As AI continues to become more integrated into frontend development, the role of an engineer will shift towards a focus on collaboration and strategy. Engineers will need to be skilled at working with AI and crafting the right prompts to generate the desired output. However, it's essential to note that the output generated by machines will only be as good as the data it consumed. Therefore, engineers will also play a crucial role in controlling the output of these tools, ensuring that the generated output is tailored to the context it's used in and that it's helpful in achieving the desired outcome.
+As AI continues to become more integrated into frontend development, the role of an engineer will shift towards a focus on collaboration and strategy. Engineers will need to be skilled at working with AI and crafting the right prompts to generate the desired output. However, it's essential to note that the output generated by machines will only be as good as the data it consumed. Therefore, engineers will also play a crucial role in controlling the output of these tools, ensuring that the generated output is tailored to the context it's used in and that it's helpful in achieving the desired outcome. Moreover as an engineer your role will move away from knowing specific frontend frameworks to knowing specific Machine Learning tools.
 
 For example, consider the generated components for a design system. Engineers will need to evaluate the necessary variants of a button in a given context that the AI tool needs to generate. They will also need to assess whether the generated variants are useful in the context they are used in, and ensure that the actions triggered by the buttons are properly mapped to the interactions with them. In essence, engineers will act as the critical bridge between AI tools and the final product, leveraging the power of AI while also bringing their expertise and judgement to ensure the optimal outcome.
 
-In addition to collaborating with AI tools and controlling the output generated by them, engineers of the future will likely spend more time focusing on higher-level tasks that require critical thinking and decision-making. With the more mundane and repetitive tasks being automated, engineers will have the opportunity to focus on more complex challenges and use their skills and expertise to solve more significant problems.
+In addition to collaborating with AI tools and controlling the output generated by them, engineers of the future will likely spend more time focusing on higher-level tasks that require critical thinking and decision-making. With the more mundane and repetitive tasks being automated, engineers will have the opportunity to focus on more complex challenges and use their skills and expertise to solve more significant problems. This will lead to the fact that the role of User Experience Designers and Frontend Engineers will move closer together.
 
 This could include tasks such as designing complex systems, evaluating and selecting the most appropriate tools and technologies to use, and optimizing performance and scalability. Engineers will also need to understand how to integrate AI into these systems, evaluating the potential impact and benefits of different AI tools and techniques, and developing custom solutions to meet specific needs.
 
@@ -139,7 +139,7 @@ Firstly, it could **significantly enhance productivity and efficiency**. By auto
 </figure>
 
 
-Let me talk about the multi platform example from above again: Imagine you want to build a design system that can be used across multiple platforms, such as the web, iOS, and Android. Today, this would require writing code multiple times for each platform. However, with AI tooling, these adaptations can be done automatically. By building a design system once in a single language, engineers could export the code and let machines handle the task of transplanting it into several languages for different platforms. This would result in massive time and cost savings, allowing engineers to focus on more complex challenges and innovations.
+Let's talk about the multi platform example from above again: Imagine you want to build a design system that can be used across multiple platforms, such as the web, iOS, and Android. Today, this would require writing code multiple times for each platform. However, with AI tooling, these adaptations can be done automatically. By building a design system once in a single language, engineers could export the code and let machines handle the task of transplanting it into several languages for different platforms. This would result in massive time and cost savings, allowing engineers to focus on more complex challenges and innovations.
 
 Secondly, it could help to **address the shortage of skilled talent** in the frontend development industry. With AI tools doing some of the heavy lifting, engineers could be trained to work more efficiently and effectively, allowing them to take on more complex challenges and develop a broader range of skills.
 
@@ -165,7 +165,7 @@ While it's clear that AI will play a major role in the future of frontend develo
 
 However, it's important to note that the human element of frontend development will never be entirely replaced by machines. While AI can automate many tasks, it cannot replicate the creativity and ingenuity that comes from human designers and developers. As such, it's important for developers to embrace new technology while also staying true to their own unique creative vision.
 
-In conclusion, the future of frontend development is sure to be exciting and full of opportunities for innovation.
+In conclusion, the future of frontend development is sure to be exciting and full of opportunities for innovation. As is with so many other roles. Let's see how rapid we are pacing towards this exiting future.
 
 ---
 
@@ -173,3 +173,5 @@ In conclusion, the future of frontend development is sure to be exciting and ful
 If you want to learn more about how ChatGPT works, read [this article](https://towardsdatascience.com/how-chatgpt-works-the-models-behind-the-bot-1ce5fca96286).
 
 Do you want to discuss the ideas I outline? Reach out via [Twitter](https://twitter.com/drublic). And if you enjoyed my thoughts, consider to share the article.
+
+Special thanks to [David](https://www.linkedin.com/in/davidyasli/) for helping review this article and providing constructive feedback.
