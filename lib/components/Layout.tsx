@@ -16,7 +16,7 @@ const Layout = ({
   return (
     <>
       <Head
-        title={`${title} - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne `}
+        title={`${title} | Hans Reinl`}
         description={description}
         image={image}
         noIndex={noIndex}
