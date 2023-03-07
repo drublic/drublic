@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useEffect } from "react";
 import Head from "next/head";
 import ArticleTeaserSmall from "../components/ArticleTeaserSmall";
 import BlogMessage from "../components/BlogMessage";
@@ -13,6 +13,13 @@ interface Post {
 }
 
 const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    s.setAttribute("async", "true");
+    document.head.appendChild(s);
+  }, []);
+
   if (!post) {
     return null;
   }
@@ -148,8 +155,6 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
           </div>
         </div>
       </aside>
-
-      <script async src="//platform.twitter.com/widgets.js"></script>
     </Layout>
   );
 };
