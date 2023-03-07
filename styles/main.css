@@ -23,6 +23,7 @@
 @import "./module/tag.css";
 @import "./module/breadcrumb.css";
 @import "./module/toc.css";
+@import "./module/share.css";
 
 @import "./layout/header.css";
 @import "./layout/footer.css";

@@ -100,6 +100,23 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
           {post.hasToc && <Toc entry={post.entry} />}
 
           <div itemProp="articleBody">{children}</div>
+
+          <hr />
+
+          <p className="share">
+            Share this post on Twitter
+            <a
+              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+              className="twitter-share-button"
+              data-size="large"
+              data-via="drublic"
+              data-lang="en"
+              data-dnt="true"
+              data-show-count="false"
+            >
+              Tweet
+            </a>
+          </p>
         </article>
       </main>
 
