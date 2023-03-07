@@ -100,6 +100,12 @@ One example of this efficiency is the possibility to generate code for multiple 
 On a web page, you want to display some matching data. New page-types get automatically generated based on the data, we see this with fully auto-generated, personalized experiences done by recommendation engines today.
 Bringing this to the next level, an AI can generate endless pages with dynamic page types based on the input data you provide, for example user signals (analytics) and your businesses KPIs.
 
+<div class="message" style="margin: 3rem 0"><div class="message__content">
+
+Check out Keima Kai's in-depth analysis in his recent Smashing Magazine article, <a href="https://www.smashingmagazine.com/2022/12/future-design-human-powered-ai-driven/">"The Future of Design: Human-Powered or AI-Driven?"</a> where he explores how AI is impacting the design process. Learn about the capabilities of AI in design today and how they can be utilized to optimize the design process.
+
+</div></div>
+
 ## The Role of an Engineer with AI
 
 Here is the gist of it:
