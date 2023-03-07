@@ -9,7 +9,17 @@ const BlogMessage = () => (
         </a>{" "}
         and don’t miss any update
         <b className="message__divider">and</b>
-        <a href="https://twitter.com/drublic">follow on Twitter</a>.
+        <a href="https://twitter.com/drublic" title="Follow on Twitter">
+          follow on Twitter
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://www.linkedin.com/in/hreinl/"
+          title="Follow on LinkedIn"
+        >
+          LinkedIn
+        </a>
+        .
       </p>
     </div>
   </div>
