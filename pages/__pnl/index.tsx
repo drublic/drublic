@@ -8,6 +8,7 @@ import { getPosts } from "../api/posts";
 import Toolbar from "../../lib/components/PNL/Toolbar";
 import classNames from "classnames";
 import Topline from "../../lib/components/PNL/Topline";
+import Error from "../404";
 
 const MarkdownEditor = dynamic(
   () => import("../../lib/components/PNL/MarkdownEditor"),
@@ -17,7 +18,11 @@ const MarkdownEditor = dynamic(
   }
 );
 
-const PNL = ({ posts }) => {
+const PNL = ({ isDev, posts }) => {
+  if (!isDev) {
+    return <Error />;
+  }
+
   const router = useRouter();
   const editorRef = useRef<any>();
   const [currentPost, setCurrentPost] = useState({
@@ -181,6 +186,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       posts,
+      isDev: process.env.NODE_ENV === "development",
     },
   };
 };
