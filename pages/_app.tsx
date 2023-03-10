@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/main.css";
 
 type Props = {
@@ -7,7 +8,12 @@ type Props = {
 };
 
 const MyApp: FunctionComponent<Props> = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
 };
 
 export default MyApp;

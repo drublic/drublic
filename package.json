@@ -12,6 +12,7 @@
   "dependencies": {
     "@toast-ui/editor": "^3.2.2",
     "@toast-ui/react-editor": "^3.2.3",
+    "@vercel/analytics": "^0.1.11",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "next": "13.2.3",
