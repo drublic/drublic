@@ -67,6 +67,10 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
                 rel="entry-title"
               >
                 {post.title}
+
+                {post.subtitle && (
+                  <span className="post__subtitle">{post.subtitle}</span>
+                )}
               </Link>
             </h1>
 
