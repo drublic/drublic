@@ -24,9 +24,12 @@
   max-width: 70%;
 }
 
-.image--large,
 .image--large {
   max-width: 66.66%;
+}
+
+.image--small {
+  max-width: 20%;
 }
 
 .image__caption {
