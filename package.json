@@ -15,18 +15,18 @@
     "@vercel/analytics": "^0.1.11",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
-    "next": "13.2.3",
-    "node-fetch": "^3.3.0",
+    "next": "13.2.4",
+    "node-fetch": "^3.3.1",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rss-parser": "^3.12.0",
     "showdown": "^2.1.0",
-    "swr": "^2.0.4"
+    "swr": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^18.14.4",
+    "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.2"
   }
 }
