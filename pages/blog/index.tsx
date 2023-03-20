@@ -14,7 +14,7 @@ type Props = {
 
 const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
   return (
-    <Layout title="Blog">
+    <Layout title={tag ? `Tag: ${tag} | Blog` : "Blog"}>
       <main
         id="main"
         className="main"
