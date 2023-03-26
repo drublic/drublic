@@ -42,6 +42,7 @@ const Footer = () => (
     <button
       className="layout__scroll-top is-hidden"
       onClick={() => scrollTo(0, 0)}
+      title="Scroll to top"
     >
       <svg
         viewBox="0 0 24 24"

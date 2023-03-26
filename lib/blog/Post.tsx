@@ -5,6 +5,7 @@ import ArticleTeaserSmall from "../components/ArticleTeaserSmall";
 import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
 import Toc from "./Toc";
+import Image from "next/image";
 
 interface Post {
   post: any;
@@ -99,11 +100,13 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
 
           {post.headerImage && (
             <figure className="image image--block image--header">
-              <img
+              <Image
                 src={post.headerImage}
                 alt={post.title}
                 itemProp="image"
                 loading="lazy"
+                width={2000}
+                height={855}
               />
             </figure>
           )}

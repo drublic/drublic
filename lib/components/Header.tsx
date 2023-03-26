@@ -10,7 +10,12 @@ const Header = ({ noNavigation = false }) => (
     })}
   >
     <div className="header__inner">
-      <Link href="/" role="banner" className={"header__title"}>
+      <Link
+        href="/"
+        role="banner"
+        className="header__title"
+        title="Website of Hans Reinl - @drublic"
+      >
         <h1 className="header__title__line">Hans Reinl</h1>
       </Link>
 

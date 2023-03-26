@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { FunctionComponent } from "react";
 type Props = {
@@ -24,7 +25,12 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
       <>
         {image && (
           <figure className="image posts__teaser-image">
-            <img src={image} alt={`Image for ${title}`} />
+            <Image
+              src={image}
+              alt={`Image for ${title}`}
+              width={2000}
+              height={855}
+            />
           </figure>
         )}
 

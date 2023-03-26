@@ -50,7 +50,12 @@ const ArticleTeaser: FunctionComponent<{
       {image && (
         <Link href={`/blog/${slug}`}>
           <figure className="image image--block">
-            <img src={image} />
+            <Image
+              src={image}
+              alt={`Title Image: ${title}`}
+              width={2000}
+              height={855}
+            />
           </figure>
         </Link>
       )}

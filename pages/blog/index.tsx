@@ -56,17 +56,15 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
           {posts
             ?.slice(0, 1)
             .map(({ title, slug, date, abstract, tags, image }) => (
-              <>
-                <ArticleTeaser
-                  key={slug}
-                  title={title}
-                  date={date}
-                  slug={slug}
-                  abstract={abstract}
-                  tags={tags}
-                  image={image}
-                />
-              </>
+              <ArticleTeaser
+                key={slug}
+                title={title}
+                date={date}
+                slug={slug}
+                abstract={abstract}
+                tags={tags}
+                image={image}
+              />
             ))}
 
           {!tag && (
