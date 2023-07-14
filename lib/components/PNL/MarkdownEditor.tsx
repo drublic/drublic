@@ -31,6 +31,10 @@ const MarkdownEditor: FC<Props> = ({ forwardedRef, onChange }) => (
         .toastui-editor-defaultUI .toastui-editor-md-tab-container {
           display: none !important;
         }
+
+        .ProseMirror {
+          font-size: 0.9rem;
+        }
       `,
       }}
     />

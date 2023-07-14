@@ -32,6 +32,9 @@ const ArticleList = ({ posts = [], onPostLoaded, onPostCreated }) => {
         <span className="tag" style={{ marginLeft: "1rem" }}>
           {posts.filter(({ hidden }) => hidden !== true).length}
         </span>
+        <span className="tag tag--light">
+          {posts.filter(({ hidden }) => hidden).length}
+        </span>
       </h3>
 
       <p style={{ marginBottom: "1rem" }}>

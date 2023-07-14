@@ -18,6 +18,11 @@
   color: var(--color);
 }
 
+.tag--light {
+  background: var(--color--background--dark);
+  color: var(--color-light);
+}
+
 a.tag:hover {
   background: var(--border-color-dark);
   color: var(--color-dark);

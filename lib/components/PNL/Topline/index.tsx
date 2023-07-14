@@ -9,6 +9,9 @@ import EditIcon from "../../icons/Edit";
 import styles from "./Topline.module.css";
 import CancelIcon from "../../icons/Cancel";
 
+const countWords = (input: string) =>
+  input.split(" ").filter((n) => n != "").length;
+
 const Topline = ({
   post,
   onTitleChange,
@@ -110,6 +113,9 @@ const Topline = ({
         {post.slug && (
           <>
             <div style={{ flex: 1 }}></div>
+            <p className={styles.wordCount}>
+              {countWords(post.rawEntry)} Words
+            </p>
             <div>
               <a
                 href={`/blog/${post.slug}?preview=true`}
