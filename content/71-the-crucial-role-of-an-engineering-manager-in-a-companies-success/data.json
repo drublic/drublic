@@ -4,7 +4,7 @@
   "abstract": "<p>Engineering managers are the unsung heroes of tech, the driving force behind a company's technological achievements. They are not just managers; they are leaders, visionaries, and mentors who play a pivotal role in shaping a company's culture and steering it towards success.</p><p>In the ever-evolving landscape of technology, companies rely heavily on their engineering teams to drive innovation, deliver high-quality products, and maintain a competitive edge. However, engineering excellence doesn't happen in a vacuum. It's the result of careful planning, effective leadership, and a strong engineering culture.</p><p>As your company navigates the ever-changing tech landscape, remember the critical role of your engineering managers. They are the architects of your technological future, the ones who will guide your company towards innovation, growth, and success.</p>",
   "meta-title": "The Unsung Heroes of Tech: Unleashing Innovation with Engineering Managers",
   "meta-description": "Discover the pivotal role of engineering managers in shaping a company's technological trajectory. Learn how they foster innovation, cultivate a strong engineering culture, and drive success in the ever-changing tech landscape.",
-  "hidden": true,
+  "hidden": false,
   "image": "https://drublic.de/assets/engineering-manager-company-success.jpg",
   "tags": [
     "Engineering Leadership",
