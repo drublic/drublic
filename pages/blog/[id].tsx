@@ -14,11 +14,11 @@ const Article = () => {
   const hasPreview = !!router.query.preview;
   const { data: posts, error: postsError } = useSWR(
     `/api/posts${hasPreview ? "?preview=true" : ""}`,
-    fetcher
+    fetcher as any
   );
   const { data: post, error } = useSWR(
     `/api/posts/${router.query.id}${hasPreview ? "?preview=true" : ""}`,
-    fetcher
+    fetcher as any
   );
 
   if (!router.query.id) {

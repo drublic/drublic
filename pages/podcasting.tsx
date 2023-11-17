@@ -8,7 +8,7 @@ import fetcher from "../lib/utils/fetcher";
 const Podcasting = () => {
   const { data: wdPosts, error: wdPostsError } = useSWR(
     "/api/wd-posts?limit=7",
-    fetcher
+    fetcher as any
   );
 
   return (

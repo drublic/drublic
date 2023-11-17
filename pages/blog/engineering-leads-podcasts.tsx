@@ -96,8 +96,11 @@ const template = ({ link, image, title, author, comment, spotify, apple }) => `
     `;
 
 const BlogPost = ({ fallback }) => {
-  const { data: posts, error: postsError } = useSWR("/api/posts", fetcher);
-  const { data: post, error } = useSWR(`/api/posts/${SLUG}`, fetcher);
+  const { data: posts, error: postsError } = useSWR(
+    "/api/posts",
+    fetcher as any
+  );
+  const { data: post, error } = useSWR(`/api/posts/${SLUG}`, fetcher as any);
 
   if (!post) {
     return null;
