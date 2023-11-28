@@ -1,0 +1,14 @@
+{
+  "title": "How GenAI Transforms the Landscape of Front-End Development",
+  "date": "28.11.2023",
+  "abstract": "<p>Generative AI (GenAI) is revolutionizing front-end development, empowering developers to streamline workflows, enhance productivity, and unleash their creativity. This article explores the transformative potential of GenAI, delving into practical examples using ChatGPT, Bard, and v0. It highlights their capabilities in generating UI components, crafting user-friendly interfaces, and providing code generation assistance. While AI tools cannot replace human creativity, they serve as invaluable collaborators, fostering a symbiotic relationship between human ingenuity and machine intelligence. As GenAI continues to evolve, developers can anticipate even more sophisticated tools that further empower front-end development.</p>",
+  "meta-title": "Generative AI: Revolutionizing Front-End Development with Human-AI Collaboration",
+  "meta-description": "Discover how Generative AI is transforming front-end development, automating tasks, enhancing productivity, and enabling developers to create exceptional web experiences. Explore ChatGPT, Bard, and v0, powerful tools augmenting human creativity.",
+  "hidden": false,
+  "image": "https://drublic.de/assets/genai-transforms-landscape-frontend-development.jpg",
+  "tags": [
+    "GenAI",
+    "AI",
+    "Engineering"
+  ]
+}
