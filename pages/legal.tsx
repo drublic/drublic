@@ -27,8 +27,6 @@ const Legal = () => (
           Hans Christian Reinl
           <br />
           <a href="mailto:info@drublic.de">info@drublic.de</a>
-          <br />
-          +49 176 44508482
         </p>
 
         <p>
