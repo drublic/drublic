@@ -10,7 +10,17 @@ const ArticleTeaser: FunctionComponent<{
   tags?: [];
   image?: string;
   variant?: "default" | "small";
-}> = ({ title, slug, date, abstract, tags, image, variant = "default" }) => {
+  baseUrl?: string;
+}> = ({
+  title,
+  slug,
+  date,
+  abstract,
+  tags,
+  image,
+  variant = "default",
+  baseUrl = "/blog",
+}) => {
   const Headline = (props) => {
     if (variant === "small") {
       return <h3 {...props} />;
@@ -27,7 +37,7 @@ const ArticleTeaser: FunctionComponent<{
         }`}
       >
         <Headline itemProp="title">
-          <Link href={`/blog/${slug}`}>{title}</Link>
+          <Link href={`${baseUrl}/${slug}`}>{title}</Link>
         </Headline>
 
         <time className="posts__date">Published on {date}</time>
@@ -37,7 +47,7 @@ const ArticleTeaser: FunctionComponent<{
             {tags.map((tag) => (
               <Link
                 key={tag}
-                href={`/blog?tag=${encodeURIComponent(tag).toLowerCase()}`}
+                href={`${baseUrl}?tag=${encodeURIComponent(tag).toLowerCase()}`}
                 className="tag"
               >
                 {tag}
@@ -48,7 +58,7 @@ const ArticleTeaser: FunctionComponent<{
       </header>
 
       {image && (
-        <Link href={`/blog/${slug}`}>
+        <Link href={`${baseUrl}/${slug}`}>
           <figure className="image image--block">
             <Image
               src={image}
@@ -63,7 +73,7 @@ const ArticleTeaser: FunctionComponent<{
       <div dangerouslySetInnerHTML={{ __html: abstract }} />
 
       <div className="posts__post__readmore clearfix">
-        <Link href={`/blog/${slug}`} className="button">
+        <Link href={`${baseUrl}/${slug}`} className="button">
           Read this Article
         </Link>
       </div>
