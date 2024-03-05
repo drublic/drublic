@@ -1,5 +1,5 @@
 import fs from "fs";
-import { POSTS_DIR, getDate, getPosts } from "./api/posts";
+import { POSTS_AI_DIR, POSTS_DIR, getDate, getPosts } from "./api/posts";
 
 const template = (content: string) =>
   `
@@ -36,6 +36,7 @@ const renderPages = () => {
     .readdirSync(pagesDir)
     .filter((staticPage) => {
       return ![
+        "__pnl",
         "_app.tsx",
         "_document.tsx",
         "_error.tsx",
@@ -46,7 +47,17 @@ const renderPages = () => {
         "feed.xml.ts",
         "api",
         "blog",
+        "ai",
+        "ai.js",
         "about",
+        "sitemap.js",
+        "sitemap.xml.js",
+        "feed.js",
+        "blog.js",
+        "_error.js",
+        "404.js",
+        "_app.js",
+        "_document.js",
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
@@ -60,7 +71,7 @@ const renderPages = () => {
               <loc>${url}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
-              <priority>1.0</priority>
+              <priority>0.6</priority>
             </url>
           `;
     })
@@ -77,8 +88,11 @@ export const getServerSideProps = async (context) => {
   }
 
   const posts: any[] = await getPosts(false, POSTS_DIR);
+  const postsAi: any[] = await getPosts(false, POSTS_AI_DIR);
 
-  const feed = template([renderPages(), renderPosts(posts)].join(""));
+  const feed = template(
+    [renderPages(), renderPosts(posts), renderPosts(postsAi)].join("")
+  );
 
   res.setHeader("Content-Type", "text/xml");
   res.write(feed);
