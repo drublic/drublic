@@ -10,10 +10,16 @@ import Image from "next/image";
 interface Post {
   post: any;
   posts: any[];
+  category?: { name: string; slug: string };
   children?: React.ReactNode;
 }
 
-const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
+const Post: FunctionComponent<Post> = ({
+  post,
+  posts,
+  category = { name: "Blog", slug: "/blog" },
+  children,
+}) => {
   if (!post) {
     return null;
   }
@@ -41,7 +47,7 @@ const Post: FunctionComponent<Post> = ({ post, posts, children }) => {
               <Link href="/">drublic.de</Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href={category.slug}>{category.name}</Link>
             </li>
             <li>{post.title}</li>
           </ol>

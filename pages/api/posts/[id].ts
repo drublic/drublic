@@ -1,10 +1,13 @@
 import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
-import { POSTS_DIR, getPosts } from ".";
+import { POSTS_DIR, getPosts, getFolderPath } from ".";
 
 const converter: showdown.Converter = new showdown.Converter();
-export const getFullPost = async (postData: any): Promise<any> => {
+export const getFullPost = async (
+  postData: any,
+  folderPath: string
+): Promise<any> => {
   if (!postData) {
     return {
       error: true,
@@ -19,7 +22,7 @@ export const getFullPost = async (postData: any): Promise<any> => {
 
   try {
     const articlePath: string = path.resolve(
-      POSTS_DIR,
+      folderPath,
       postData.path,
       "article.md"
     );
@@ -62,7 +65,10 @@ export const findPost = (posts: any[], slug: string): any =>
 
 export default async (req, res) => {
   const hasPreview = !!req.query.preview;
-  const posts = await getPosts(hasPreview);
+  const folder = req.query.folder;
+
+  const folderPath = getFolderPath(folder);
+  const posts = await getPosts(hasPreview, folderPath);
   const postData = findPost(posts, readSlug(req.url));
 
   if (process.env.NODE_ENV === "development" && req.method === "PATCH") {
@@ -73,7 +79,7 @@ export default async (req, res) => {
     return res.status(200).json({ message: "ok" });
   }
 
-  const post = await getFullPost(postData);
+  const post = await getFullPost(postData, folderPath);
 
   return res.status(200).json(post);
 };

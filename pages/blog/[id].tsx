@@ -3,7 +3,7 @@ import React from "react";
 import useSWR, { SWRConfig } from "swr";
 import Post from "../../lib/blog/Post";
 import fetcher from "../../lib/utils/fetcher";
-import { getPosts } from "../api/posts";
+import { POSTS_DIR, getPosts } from "../api/posts";
 import { findPost, getFullPost } from "../api/posts/[id]";
 
 const existingPages = ["engineering-leads-podcasts"];
@@ -46,9 +46,9 @@ const BlogPost = ({ fallback }) => {
 
 export const getStaticProps = async ({ params }) => {
   const hasPreview = process.env.NODE_ENV === "development";
-  const posts = await getPosts(hasPreview);
+  const posts = await getPosts(hasPreview, POSTS_DIR);
   const postData = findPost(posts, params.id);
-  const post = await getFullPost(postData);
+  const post = await getFullPost(postData, POSTS_DIR);
 
   return {
     props: {
@@ -62,7 +62,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const hasPreview = process.env.NODE_ENV === "development";
-  const posts = await getPosts(hasPreview);
+  const posts = await getPosts(hasPreview, POSTS_DIR);
 
   return {
     paths: posts

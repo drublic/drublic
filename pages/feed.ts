@@ -1,4 +1,4 @@
-import { getDate, getPosts } from "./api/posts";
+import { POSTS_DIR, getDate, getPosts } from "./api/posts";
 
 const template = (content: string, lastBuildDate: Date) =>
   `
@@ -49,7 +49,7 @@ export const getServerSideProps = async (context) => {
     return;
   }
 
-  const posts: any[] = await getPosts();
+  const posts: any[] = await getPosts(false, POSTS_DIR);
 
   const feed = template(renderPosts(posts), getDate(posts[0].date));
 

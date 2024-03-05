@@ -2,28 +2,26 @@ import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
 
-export const POSTS_DIR =
-  process.env.NODE_ENV === "production"
-    ? path.join(process.cwd(), "content")
-    : path.join(process.cwd(), "content");
+export const POSTS_DIR = path.join(process.cwd(), "content");
+export const POSTS_AI_DIR = path.join(process.cwd(), "content-ai");
 
 const converter: showdown.Converter = new showdown.Converter();
 
-const getFolders = async (): Promise<string[]> => {
+const getFolders = async (folderPath: string): Promise<string[]> => {
   try {
-    const directory: any[] = await fs.promises.readdir(POSTS_DIR);
+    const directory: any[] = await fs.promises.readdir(folderPath);
 
     return directory
       .filter((folder) => !folder.startsWith("."))
       .sort()
       .reverse();
   } catch (error) {
-    console.error(`cannot load POSTS_DIR <${POSTS_DIR}>`, error);
+    console.error(`cannot load POSTS_DIR <${folderPath}>`, error);
   }
 };
 
-const getPost = async (postPath: string): Promise<any> => {
-  const postDataPath: string = path.resolve(POSTS_DIR, postPath, "data.json");
+const getPost = async (postPath: string, folderParam: string): Promise<any> => {
+  const postDataPath: string = path.resolve(folderParam, postPath, "data.json");
 
   try {
     const postData: string = await fs.promises.readFile(postDataPath, "utf-8");
@@ -48,10 +46,13 @@ export const getDate = (date: string) => {
   return new Date(`${splitted[1]}/${splitted[0]}/${splitted[2]}`);
 };
 
-export const getPosts = async (hasPreview: boolean = false): Promise<any> => {
-  const folders = await getFolders();
-
-  const postsPromises = folders?.map((folder) => getPost(folder)) ?? [];
+export const getPosts = async (
+  hasPreview: boolean = false,
+  folderName: string
+): Promise<any> => {
+  const folders = await getFolders(folderName);
+  const postsPromises =
+    folders?.map((folder) => getPost(folder, folderName)) ?? [];
   const posts = await Promise.all(postsPromises);
   const filteredPosts = posts
     .filter((post) => post !== null)
@@ -96,9 +97,20 @@ const createPost = async (slug: string) => {
   return folderName;
 };
 
+export const getFolderPath = (folderParam: string | null) => {
+  switch (folderParam) {
+    case "ai":
+      return POSTS_AI_DIR;
+    default:
+      return POSTS_DIR;
+  }
+};
+
 export default async (req, res) => {
   const hasPreview = !!req.query.preview;
-  const posts = await getPosts(hasPreview);
+  const folder = req.query.folder;
+  const folderPath = getFolderPath(folder);
+  const posts = await getPosts(hasPreview, folderPath);
 
   if (process.env.NODE_ENV === "development" && req.method === "POST") {
     console.log("create post", req.body);

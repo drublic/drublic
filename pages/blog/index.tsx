@@ -4,7 +4,7 @@ import ArticleTeaserSmall from "../../lib/components/ArticleTeaserSmall";
 import ArticleTeaser from "../../lib/components/ArticleTeaser";
 import BlogMessage from "../../lib/components/BlogMessage";
 import Layout from "../../lib/components/Layout";
-import { getPosts } from "../api/posts";
+import { POSTS_DIR, getPosts } from "../api/posts";
 
 type Props = {
   posts: any[];
@@ -164,7 +164,7 @@ const occurrences = (input: string[]) =>
   }, {});
 
 export const getServerSideProps = async ({ query }) => {
-  const posts = await getPosts(!!query.preview);
+  const posts = await getPosts(!!query.preview, POSTS_DIR);
 
   const matchingPosts = query.tag
     ? posts.filter((post) => post?.tags?.find(matchTag(query.tag)))

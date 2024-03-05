@@ -2,7 +2,7 @@ import React from "react";
 import useSWR, { SWRConfig } from "swr";
 import Post from "../../lib/blog/Post";
 import fetcher from "../../lib/utils/fetcher";
-import { getPosts } from "../api/posts";
+import { POSTS_DIR, getPosts } from "../api/posts";
 import { findPost, getFullPost } from "../api/posts/[id]";
 
 const SLUG = "engineering-leads-podcasts";
@@ -179,14 +179,14 @@ const BlogPost = ({ fallback }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const posts = await getPosts();
+  const posts = await getPosts(false, POSTS_DIR);
   const postData = findPost(posts, SLUG);
 
   return {
     props: {
       fallback: {
         [`/api/posts`]: posts,
-        [`/api/posts/${SLUG}`]: await getFullPost(postData),
+        [`/api/posts/${SLUG}`]: await getFullPost(postData, POSTS_DIR),
       },
     },
   };

@@ -3,7 +3,7 @@ import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
 import IndexWorkingDraft from "../lib/components/IndexWorkingDraft";
-import { getPosts } from "./api/posts";
+import { POSTS_DIR, getPosts } from "./api/posts";
 
 const Index = ({ posts }) => {
   return (
@@ -78,7 +78,7 @@ const Index = ({ posts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const posts = await getPosts();
+  const posts = await getPosts(false, POSTS_DIR);
 
   return {
     props: {
