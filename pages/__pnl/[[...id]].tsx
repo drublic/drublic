@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import Layout from "../../lib/components/Layout";
 import fetcher from "../../lib/utils/fetcher";
 import ArticleList from "../../lib/components/PNL/ArticleList";
-import { getPosts } from "../api/posts";
+import { POSTS_DIR, getPosts } from "../api/posts";
 import Toolbar from "../../lib/components/PNL/Toolbar";
 import classNames from "classnames";
 import Topline from "../../lib/components/PNL/Topline";
@@ -41,6 +41,16 @@ const PNL = ({ isDev, posts }) => {
     router.replace(router.asPath);
   };
 
+  const [activeSlug, setActiveSlug] = React.useState<string>(null);
+  const loadFile = async (slug: string) => {
+    setActiveSlug(slug);
+
+    await fetcher(`/api/posts/${slug}?preview=true`, {}).then((post) => {
+      editorRef.current?.getInstance()?.setMarkdown(post.rawEntry);
+      setCurrentPost(post);
+    });
+  };
+
   const saveFile = async (slug: string) => {
     setIsSaving(true);
 
@@ -51,6 +61,19 @@ const PNL = ({ isDev, posts }) => {
 
     setIsSaving(false);
   };
+
+  useEffect(() => {
+    if (router.query.id === activeSlug) {
+      return;
+    }
+
+    if (!router.query.id || router.query.id[0] === "__pnl") {
+      return;
+    }
+
+    loadFile(router.query.id[0]);
+    setActiveSlug(router.query.id[0]);
+  }, [router.query.id]);
 
   return (
     <Layout title="PNL" noIndex noNavigation noFooter>
@@ -140,10 +163,7 @@ const PNL = ({ isDev, posts }) => {
           >
             <ArticleList
               posts={posts}
-              onPostLoaded={(post) => {
-                editorRef.current?.getInstance()?.setMarkdown(post.rawEntry);
-                setCurrentPost(post);
-              }}
+              activeSlug={activeSlug}
               onPostCreated={() => refreshData()}
             />
 
@@ -181,7 +201,7 @@ const PNL = ({ isDev, posts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const posts = await getPosts(true);
+  const posts = await getPosts(true, POSTS_DIR);
 
   return {
     props: {
