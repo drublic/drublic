@@ -12,21 +12,22 @@
   "dependencies": {
     "@toast-ui/editor": "^3.2.2",
     "@toast-ui/react-editor": "^3.2.3",
-    "@vercel/analytics": "^1.1.2",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "classnames": "^2.5.1",
     "date-fns": "^3.3.1",
-    "next": "14.1.0",
+    "next": "14.1.2",
     "node-fetch": "^3.3.2",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rss-parser": "^3.13.0",
     "showdown": "^2.1.0",
-    "swr": "^2.2.4"
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "@types/node": "^20.11.13",
-    "@types/react": "^18.2.48",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.63",
     "typescript": "^5.3.3"
   }
 }

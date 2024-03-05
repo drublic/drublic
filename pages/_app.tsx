@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../styles/main.css";
 
 type Props = {
@@ -12,6 +13,7 @@ const MyApp: FunctionComponent<Props> = ({ Component, pageProps }) => {
     <>
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </>
   );
 };
