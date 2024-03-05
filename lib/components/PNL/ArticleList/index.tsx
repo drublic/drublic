@@ -1,21 +1,14 @@
 import classNames from "classnames";
-import React, { SyntheticEvent } from "react";
+import React from "react";
 import fetcher from "../../../utils/fetcher";
 import DraftIcon from "../../icons/Draft";
 import Icon from "../../icons/Icon";
 import PublishedIcon from "../../icons/Published";
 
 import styles from "./ArticleList.module.css";
+import Link from "next/link";
 
-const ArticleList = ({ posts = [], onPostLoaded, onPostCreated }) => {
-  const [activeSlug, setActiveSlug] = React.useState<string>(null);
-  const loadFile = async (event: SyntheticEvent, slug: string) => {
-    event.preventDefault();
-    setActiveSlug(slug);
-
-    await fetcher(`/api/posts/${slug}?preview=true`, {}).then(onPostLoaded);
-  };
-
+const ArticleList = ({ posts = [], activeSlug, onPostCreated }) => {
   const createPost = async (slug: string) => {
     await fetcher(`/api/posts`, {
       method: "POST",
@@ -55,10 +48,9 @@ const ArticleList = ({ posts = [], onPostLoaded, onPostCreated }) => {
               [styles.listItemIsDraft]: hidden,
             })}
           >
-            <a
-              href="/"
+            <Link
+              href={`/__pnl/${slug}`}
               title={title}
-              onClick={(event) => loadFile(event, slug)}
               className={styles.listLink}
             >
               <Icon width={24} height={24} className={styles.listLinkIcon}>
@@ -66,7 +58,7 @@ const ArticleList = ({ posts = [], onPostLoaded, onPostCreated }) => {
               </Icon>
 
               {title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
