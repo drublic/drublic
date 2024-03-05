@@ -9,12 +9,12 @@ const template = (content: string) =>
   </urlset>
 `.trim();
 
-const renderPosts = (posts: any[]) =>
+const renderPosts = (posts: any[], basePath = "/blog") =>
   posts
     .map(
       ({ slug, date }) => `
   <url>
-    <loc>https://drublic.de/blog/${slug}</loc>
+    <loc>https://drublic.de${basePath}/${slug}</loc>
     <lastmod>${getDate(date).toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -53,9 +53,12 @@ const renderPages = () => {
         "sitemap.js",
         "sitemap.xml.js",
         "feed.js",
+        "feed.xml.js",
+        "index.js",
         "blog.js",
         "_error.js",
         "404.js",
+        "404.html",
         "_app.js",
         "_document.js",
       ].includes(staticPage);
@@ -91,7 +94,7 @@ export const getServerSideProps = async (context) => {
   const postsAi: any[] = await getPosts(false, POSTS_AI_DIR);
 
   const feed = template(
-    [renderPages(), renderPosts(posts), renderPosts(postsAi)].join("")
+    [renderPages(), renderPosts(posts), renderPosts(postsAi, "/ai")].join("")
   );
 
   res.setHeader("Content-Type", "text/xml");
