@@ -61,7 +61,7 @@ const Post: FunctionComponent<Post> = ({
           <header className="post__header">
             <h1 itemProp="name">
               <Link
-                href={`/blog/${post.slug}/`}
+                href={`${category.slug}/${post.slug}/`}
                 title={`Permalink to ${post.title}`}
                 itemProp="url"
                 rel="entry-title"
@@ -132,13 +132,18 @@ const Post: FunctionComponent<Post> = ({
                   title={title}
                   date={date}
                   slug={slug}
+                  basePath={category.slug}
                 />
               ))}
             </ul>
           </div>
 
           <div className="post__navigation">
-            <Link href="/blog" title="Back to blog overview" className="button">
+            <Link
+              href={category.slug}
+              title="Back to overview"
+              className="button"
+            >
               View all posts
             </Link>
           </div>

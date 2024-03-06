@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { FunctionComponent } from "react";
 type Props = {
   baseUrl?: string;
+  basePath?: string;
   url?: string;
   slug?: string;
   title: string;
@@ -12,7 +13,8 @@ type Props = {
 };
 
 const ArticleTeaserSmall: FunctionComponent<Props> = ({
-  baseUrl,
+  baseUrl = "",
+  basePath = "/blog",
   url,
   slug,
   title,
@@ -21,7 +23,7 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
   image,
 }) => (
   <li className={image ? "post__item--with-image" : ""}>
-    <Link href={url ?? `${baseUrl ?? ""}/blog/${slug}/`}>
+    <Link href={url ?? `${baseUrl}${basePath}/${slug}/`}>
       <>
         {image && (
           <figure className="image posts__teaser-image">
