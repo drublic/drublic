@@ -13,6 +13,7 @@
   --secondary-color--hover: #f474ff;
 
   --footer-background: var(--color-lightest);
+  --footer-background-dark: var(--color--background--dark);
 
   --navigation-background: #607d8b;
 

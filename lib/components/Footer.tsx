@@ -2,6 +2,72 @@ import Link from "next/link";
 
 const Footer = () => (
   <>
+    <div className=" footer_links">
+      <div className="container container--large">
+        <h3>Content Pages</h3>
+        <div className="footer_lists">
+          <ul className="footer_list">
+            <li>
+              <Link href="/blog" title="Blog">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog?tag=ai" title="Blog posts related to AI">
+                AI & Generative AI
+              </Link>
+            </li>
+            <li>
+              <Link href="/ai" title="More blog posts related to AI">
+                More content on AI
+              </Link>
+            </li>
+          </ul>
+          <ul className="footer_list">
+            <li>
+              <Link
+                href="/blog?tag=engineering%20leadership"
+                title="Blog posts related to Engineering Leadership"
+              >
+                Engineering Leadership
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/leadership"
+                title="More blog posts related to Engineering Management"
+              >
+                More content on Engineering Management
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog?tag=people%20management"
+                title="Blog posts related to People Management"
+              >
+                People Management
+              </Link>
+            </li>
+          </ul>
+
+          <div style={{ flex: 1 }}></div>
+
+          <ul className="footer_list">
+            <li>
+              <Link href="/legal" title="Who does this stuff?">
+                Legal
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" title="Privacy Protection Page">
+                Privacy Note
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <footer className="footer">
       <div className="footer__inner">
         <ul className="social">
@@ -15,23 +81,9 @@ const Footer = () => (
               LinkedIn
             </a>
           </li>
-          <li className="social__link social__link--twitter">
-            <a href="https://twitter.com/drublic" title="Twitter: @drublic">
-              Twitter
-            </a>
-          </li>
         </ul>
 
         <p>Made with love. {new Date().getFullYear()}. Cologne, Germany. </p>
-        <p>
-          <Link href="/legal" title="Who does this stuff?">
-            Legal/Impressum
-          </Link>{" "}
-          &bull;{" "}
-          <Link href="/privacy" title="Privacy Protection Page">
-            Privacy
-          </Link>
-        </p>
 
         <a href="#" className="visuallyhidden">
           go back up to top

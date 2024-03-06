@@ -2,10 +2,9 @@
  * Footer
  */
 .footer {
-  margin-top: 2rem;
   padding: 4rem 2rem 3rem;
   text-align: center;
-  background-color: var(--footer-background);
+  background-color: var(--footer-background-dark);
 }
 
 .footer__inner {
@@ -13,9 +12,44 @@
   margin: 0 auto;
 }
 
+.footer_lists {
+  display: flex;
+  margin-bottom: 4rem;
+  gap: 4rem;
+}
+
+.footer_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer_list a,
+.footer_list a:visited {
+  border-bottom: 0;
+}
+
+.footer_links {
+  background-color: var(--footer-background);
+}
+
 @media (max-width: 48em) {
   .footer {
     padding: 2rem 0 0;
+  }
+
+  .footer_lists {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1rem;
+  }
+
+  .footer_list {
+    margin-top: 1rem;
+  }
+
+  .footer__inner {
+    padding-bottom: 2rem;
   }
 }
 

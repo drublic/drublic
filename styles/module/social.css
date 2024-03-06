@@ -32,10 +32,6 @@
   border-bottom: 0;
 }
 
-.social__link--twitter > a {
-  background-image: url(/img/twitter.svg);
-}
-
 .social__link--linkedin > a {
   background-image: url(/img/linkedin.svg);
 }
