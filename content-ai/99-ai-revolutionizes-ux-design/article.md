@@ -5,6 +5,7 @@ One of the most promising and exciting applications of artificial intelligence (
 ## Automation of UX Design Process through AI
 
 Historically, the domain of user experience (UX) design has been predominantly driven by human creativity and intuition. Yet, the advent and progression of artificial intelligence (AI) are fundamentally transforming the way we approach and execute UX design. AI has the potential to automate a wide array of tasks throughout the UX design process, ranging from the generation of innovative design ideas to the testing and validation of prototypes. This automation allows human designers to delegate more routine tasks to AI, thereby freeing up their time to concentrate on more complex, creative, and strategic aspects of design.
+You can also read more about this in my article [How AI is Revolutionizing User Experience Design](How AI is Revolutionizing User Experience Design).
 
 ## Enhancing Usability with AI
 
