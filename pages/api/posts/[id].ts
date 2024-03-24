@@ -11,12 +11,14 @@ export const getFullPost = async (
   if (!postData) {
     return {
       error: true,
+      message: "Post not found",
     };
   }
 
   if (postData.url) {
     return {
       error: true,
+      message: "URL not found",
     };
   }
 

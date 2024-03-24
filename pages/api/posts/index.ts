@@ -4,6 +4,10 @@ import * as showdown from "showdown";
 
 export const POSTS_DIR = path.join(process.cwd(), "content");
 export const POSTS_AI_DIR = path.join(process.cwd(), "content-ai");
+export const POSTS_LEADERSHIP_DIR = path.join(
+  process.cwd(),
+  "content-leadership"
+);
 
 const converter: showdown.Converter = new showdown.Converter();
 
@@ -101,6 +105,8 @@ export const getFolderPath = (folderParam: string | null) => {
   switch (folderParam) {
     case "ai":
       return POSTS_AI_DIR;
+    case "leadership":
+      return POSTS_LEADERSHIP_DIR;
     default:
       return POSTS_DIR;
   }
