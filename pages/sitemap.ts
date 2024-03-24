@@ -1,5 +1,11 @@
 import fs from "fs";
-import { POSTS_AI_DIR, POSTS_DIR, getDate, getPosts } from "./api/posts";
+import {
+  POSTS_AI_DIR,
+  POSTS_LEADERSHIP_DIR,
+  POSTS_DIR,
+  getDate,
+  getPosts,
+} from "./api/posts";
 
 const template = (content: string) =>
   `
@@ -92,9 +98,15 @@ export const getServerSideProps = async (context) => {
 
   const posts: any[] = await getPosts(false, POSTS_DIR);
   const postsAi: any[] = await getPosts(false, POSTS_AI_DIR);
+  const postsLeadership: any[] = await getPosts(false, POSTS_LEADERSHIP_DIR);
 
   const feed = template(
-    [renderPages(), renderPosts(posts), renderPosts(postsAi, "/ai")].join("")
+    [
+      renderPages(),
+      renderPosts(posts),
+      renderPosts(postsAi, "/ai"),
+      renderPosts(postsLeadership, "/leadership"),
+    ].join("")
   );
 
   res.setHeader("Content-Type", "text/xml");
