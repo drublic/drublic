@@ -1,4 +1,4 @@
-Generative AI (GenAI) is rapidly transforming the landscape of front-end development. This powerful technology has the potential to automate repetitive tasks, boost productivity, and unlock [new design possibilities](https://drublic.de/ai/ai-revolutionizes-ux-design).
+Generative AI (GenAI) is rapidly transforming the landscape of front-end development. This powerful technology has the potential to automate repetitive tasks, boost productivity, and unlock [new design possibilities](https://hansreinl.de/ai/ai-revolutionizes-ux-design).
 
 In this blog post, we'll delve into the exciting world of GenAI and explore its impact on front-end development. We'll discuss how GenAI can:
 

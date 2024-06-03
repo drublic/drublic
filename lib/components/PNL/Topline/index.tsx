@@ -53,7 +53,7 @@ const Topline = ({
             alignItems: "center",
           }}
         >
-          <p>https://drublic.de/blog/</p>
+          <p>https://hansreinl.de/blog/</p>
           {isEditUrl ? (
             <>
               <input

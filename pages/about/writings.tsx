@@ -57,7 +57,7 @@ const Resume = () => (
           <li>
             [de] <a href="//screengui.de/">SCREENGUIDE</a> – issue 15 – Neues
             für Webseitendrucker -
-            <a href="//drublic.de/blog/printing-the-web/">
+            <a href="//hansreinl.de/blog/printing-the-web/">
               Extended Version in English
             </a>
           </li>

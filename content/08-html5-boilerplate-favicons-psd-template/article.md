@@ -25,7 +25,7 @@ Friend and boss <a title="dnlhtz.de" href="http://dnlhtz.de/">Daniel</a>&nbsp;de
 
 He gives it away for free. So feel free to download and share. It would be pretty nice if you check out <a title="Daniel on Twitter" href="http://twitter.com/#!/dnlhtz">his Twitter-stream</a> and follow him.
 
-<a class="button" title="Preview PSD file with slices and guides" href="http://drublic.de/archive/wp-content/uploads/2012/11/HTML5-Boilerplate-Favicons_v3.1.png">Preview</a> &nbsp; <a class="button" title="Download the PSD template" href="http://drublic.de/archive/wp-content/uploads/2012/11/HTML5-Boilerplate-Favicons_v3.1.psd_.zip">Download PSD</a>
+<a class="button" title="Preview PSD file with slices and guides" href="https://hansreinl.de/archive/wp-content/uploads/2012/11/HTML5-Boilerplate-Favicons_v3.1.png">Preview</a> &nbsp; <a class="button" title="Download the PSD template" href="https://hansreinl.de/archive/wp-content/uploads/2012/11/HTML5-Boilerplate-Favicons_v3.1.psd_.zip">Download PSD</a>
 
 ### Additions
 

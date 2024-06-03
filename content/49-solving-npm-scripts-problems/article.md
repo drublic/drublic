@@ -1,5 +1,5 @@
 <p class="post__intro" markdown="1">
-In the past I have written about <a href="https://drublic.de/blog/npm-builds/">how I use npm scripts for my build tooling</a>.<br>
+In the past I have written about <a href="https://hansreinl.de/blog/npm-builds/">how I use npm scripts for my build tooling</a>.<br>
 With this article I want to write about some problems I had and how I solved them.</p>
 
 

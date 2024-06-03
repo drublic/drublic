@@ -20,7 +20,7 @@ const renderPosts = (posts: any[], basePath = "/blog") =>
     .map(
       ({ slug, date }) => `
   <url>
-    <loc>https://drublic.de${basePath}/${slug}</loc>
+    <loc>https://hansreinl.de${basePath}/${slug}</loc>
     <lastmod>${getDate(date).toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -32,7 +32,7 @@ const renderPosts = (posts: any[], basePath = "/blog") =>
 const renderPages = () => {
   const baseUrl = {
     development: "http://localhost:3000",
-    production: "https://drublic.de",
+    production: "https://hansreinl.de",
   }[process.env.NODE_ENV];
 
   const pagesDir =

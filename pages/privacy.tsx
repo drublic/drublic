@@ -14,7 +14,7 @@ const Privacy = () => (
 
       <p>
         Die nachfolgende Datenschutzerklärung gilt für die Nutzung der Webseite
-        https://drublic.de/ (nachfolgend „Website“).
+        https://hansreinl.de/ (nachfolgend „Website“).
       </p>
 
       <p>

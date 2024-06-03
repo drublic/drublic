@@ -74,7 +74,7 @@ const Toolbar = ({ posts, currentPost, isSaving, onSave }) => {
           className="image image--full"
           style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
         >
-          <img src={currentPost.image.replace("https://drublic.de/", "/")} />
+          <img src={currentPost.image.replace("https://hansreinl.de/", "/")} />
         </figure>
       ) : (
         <p>

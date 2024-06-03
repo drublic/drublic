@@ -42,7 +42,7 @@ You have to add some vendor-prefixes for support in browsers:
 There is <a title="Polyfill for hyphenation: Hyphanator.js" href="http://code.google.com/p/hyphenator/" target="_blank">a polyfill</a> for this. It’s working with JS and inserts the HTML special-char <code>&amp;shy;</code> where it fits. It supports <a title="Languages supported by Hyphenator.js" href="http://code.google.com/p/hyphenator/wiki/en_AddNewLanguage" target="_blank">many languages</a>. This polyfill also <a title="CSS3-usage in hyphenator" href="http://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation" target="_blank">uses the CSS-property where it is possible</a>.
 
 <strong>Edit:</strong><br>
-Thanks to <a href="http://drublic.de/archive/css3-auto-hyphenation-for-text-elements/#comment-16" title="View Ash's comment below">Ash</a> for letting me know about my mistake using <code>hyphen</code> instead of <code>hyphens</code>.
+Thanks to <a href="http://hansreinl.de/archive/css3-auto-hyphenation-for-text-elements/#comment-16" title="View Ash's comment below">Ash</a> for letting me know about my mistake using <code>hyphen</code> instead of <code>hyphens</code>.
 
 ## Update
 

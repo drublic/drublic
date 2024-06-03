@@ -40,7 +40,7 @@ const Info = () => (
 
       <h2>Links</h2>
       <p>
-        <strong>Website:</strong> <a href="//drublic.de/">drublic.de</a>
+        <strong>Website:</strong> <a href="//hansreinl.de/">hansreinl.de</a>
         <br />
         <strong>GitHub:</strong> <a href="//github.com/drublic">drublic</a>
         <br />

@@ -19,7 +19,7 @@ const Head = ({ title, description, image, noIndex = false }) => (
       href="/feed"
     />
 
-    <meta property="twitter:domain" content="drublic.de" />
+    <meta property="twitter:domain" content="hansreinl.de" />
     <meta name="twitter:site" content="@drublic" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -36,8 +36,11 @@ const Head = ({ title, description, image, noIndex = false }) => (
     ) : (
       <>
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="https://drublic.de/img/logo.png" />
-        <meta property="og:image" content="https://drublic.de/img/logo.png" />
+        <meta
+          name="twitter:image"
+          content="https://hansreinl.de/img/logo.png"
+        />
+        <meta property="og:image" content="https://hansreinl.de/img/logo.png" />
       </>
     )}
 

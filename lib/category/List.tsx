@@ -29,7 +29,7 @@ const List: FunctionComponent<Props> = ({
           <div className="breadcrumb">
             <ol>
               <li>
-                <Link href="/">drublic.de</Link>
+                <Link href="/">hansreinl.de</Link>
               </li>
               <li>
                 <Link href={category.link}>{category.name}</Link>

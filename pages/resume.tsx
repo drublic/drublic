@@ -27,7 +27,7 @@ const Resume = () => (
             <address>
               Cologne, Germany
               <br />
-              <a href="https://drublic.de/">drublic.de</a> &bull;{" "}
+              <a href="https://hansreinl.de/">hansreinl.de</a> &bull;{" "}
               <a href="mailto:info@drublic.de">info@drublic.de</a>
             </address>
           </header>

@@ -4,7 +4,7 @@ module.exports = {
   },
   experimental: { nftTracing: true },
   images: {
-    domains: ["drublic.de"],
+    domains: ["drublic.de", "hansreinl.de"],
   },
 
   async redirects() {

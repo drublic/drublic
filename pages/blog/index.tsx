@@ -26,7 +26,7 @@ const Blog: FunctionComponent<Props> = ({ posts, tag, tags }) => {
           <div className="breadcrumb">
             <ol>
               <li>
-                <Link href="/">drublic.de</Link>
+                <Link href="/">hansreinl.de</Link>
               </li>
               <li>
                 <Link href="/blog">Blog</Link>

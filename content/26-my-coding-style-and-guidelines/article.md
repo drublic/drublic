@@ -103,7 +103,7 @@ For all SASS-files I use a folder-structure which looks like this:
 In the element folder I include files with styles for styling native HTML elements. I’ve got a file named <code>typography</code> which contains definitions for the general copy-text, headlines, links, quotes aso. Another file contains all stylings that are connected to lists in the content (unordered-, ordered- and definition-lists). This folder also includes the styles for forms and tables.
 <h4>+ modules</h4>
 
-I mentioned the style-guide we defined for this project. This was a great help for me when dividing the CSS into parts because I was able to see which modules were needed for the page: boxes, a paginator, <a href="http://drublic.de/archive/how-to-build-accordion-using-css-and-jquery/">an accordion menu</a>, the navigation and some other stuff.<br>
+I mentioned the style-guide we defined for this project. This was a great help for me when dividing the CSS into parts because I was able to see which modules were needed for the page: boxes, a paginator, <a href="https://hansreinl.de/archive/how-to-build-accordion-using-css-and-jquery/">an accordion menu</a>, the navigation and some other stuff.<br>
 For each module I have an own file which contains the styles of only one modules. So when I need to change something that has to do with the paginator, I’ll head over to the according file and change the desired values. This saves me a lot of searching and scrolling through a file. Apart from that, Sublime Text’s “Find in files” (cmd + Shift + F) feature lets you search trough all files in a project which is pretty handy. Text Mate has something similar I think. And if your editor does not support it, fire up the console and <code>grep</code> for the things you want to find.
 <h4>+ page</h4>
 
@@ -133,7 +133,7 @@ One thing Harry mentions is that he does not use a lot of whitespace in his rule
 
 For vendor <strong>prefixes</strong> he indents every rule so he can use typing in columns. As I use SASS I don’t really have to care about this. But I like the way he does it. I’ve done it the same way when I used to write vanilla CSS.
 
-<strong>Indenting</strong> is somehow essential for <a href="http://drublic.de/archive/the-css-hierarchies-module-level-3/">the CSS nesting</a> in SASS. For rules where the nesting does not work I don’t indent though.
+<strong>Indenting</strong> is somehow essential for <a href="https://hansreinl.de/archive/the-css-hierarchies-module-level-3/">the CSS nesting</a> in SASS. For rules where the nesting does not work I don’t indent though.
 
 ## And A Lot More
 

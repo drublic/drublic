@@ -25,7 +25,7 @@ I’m not supporting IE in any way because I think most web-developer don’t us
 <ul>
 <li>Support more libraries such as Mootools, Dojo, Prototype, ExtJS and YUI</li>
 <li>Let users submit other CDN via a form</li>
-<li><del>Link buttons to their library</del><ins>Done with <a href="https://github.com/drublic/isMothereffinjQueryUp/commit/145a150854bde08ae651f0124b363a4120b7156b" target="_blank">this commit</a></ins> – <a href="http://drublic.de/archive/is-mothereffin-jquery-up/#comment-166">suggestion</a> by <a href="http://mathiasbynens.be/">Mathias</a></li>
+<li><del>Link buttons to their library</del><ins>Done with <a href="https://github.com/drublic/isMothereffinjQueryUp/commit/145a150854bde08ae651f0124b363a4120b7156b" target="_blank">this commit</a></ins> – <a href="https://hansreinl.de/archive/is-mothereffin-jquery-up/#comment-166">suggestion</a> by <a href="http://mathiasbynens.be/">Mathias</a></li>
 </ul>
 
 Let me know if you want some other features.

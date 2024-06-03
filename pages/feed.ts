@@ -5,10 +5,10 @@ const template = (content: string, lastBuildDate: Date) =>
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>drublic - Engineering Management &amp; Software Architecture - Hans Christian Reinl, Cologne</title>
-  <link href="https://drublic.de/blog/"/>
-  <link href="https://drublic.de/feed/" rel="self" />
+  <link href="https://hansreinl.de/blog/"/>
+  <link href="https://hansreinl.de/feed/" rel="self" />
   <updated>${lastBuildDate?.toISOString()}</updated>
-  <id>https://drublic.de/blog/</id>
+  <id>https://hansreinl.de/blog/</id>
 
   <author>
     <name>Hans Christian Reinl</name>
@@ -24,12 +24,12 @@ const renderPosts = (posts: any[]) =>
     .map(
       ({ title, slug, date, abstract }) => `
 <entry>
-  <id>https://drublic.de/blog/${slug}</id>
+  <id>https://hansreinl.de/blog/${slug}</id>
   <title>${title.replace(
     /[\u00A0-\u9999<>\&]/g,
     (i) => "&#" + i.charCodeAt(0) + ";"
   )}</title>
-  <link href="https://drublic.de/blog/${slug}" />
+  <link href="https://hansreinl.de/blog/${slug}" />
   <content type="html">${abstract.replace(
     /[\u00A0-\u9999<>\&]/g,
     (i) => "&#" + i.charCodeAt(0) + ";"

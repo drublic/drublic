@@ -2,7 +2,7 @@
 
 ---
 
-When I created <a href="http://drublic.de/archive/introducing-css-modal/">CSS Modal</a> I wanted it to be accessible for screen readers and people that only use the keyboard for navigation. Nicholas Zakas <a href="http://www.nczonline.net/blog/2013/02/12/making-an-accessible-dialog-box/">has a great post</a> that helped me a lot with making CSS Modal accessible without too much work.
+When I created <a href="https://hansreinl.de/archive/introducing-css-modal/">CSS Modal</a> I wanted it to be accessible for screen readers and people that only use the keyboard for navigation. Nicholas Zakas <a href="http://www.nczonline.net/blog/2013/02/12/making-an-accessible-dialog-box/">has a great post</a> that helped me a lot with making CSS Modal accessible without too much work.
 
 This posts explains a bit about aria roles, how to use `tabindex` and how you set focus to the element initially and bringing it back where it was before when the modal gets closed.
 

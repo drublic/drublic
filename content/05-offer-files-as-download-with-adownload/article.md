@@ -1,7 +1,7 @@
 
 So <a title="a@download in the spec" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#downloading-resources" target="_blank">the spec introduces</a> a new attribute on <code>a</code>-tags (so called “links” – this may be new to you ;-)) called <code>download</code> (short: a@download – this technique of connecting attributes with tags is <a title="HTML element + attribute notation" href="http://mathiasbynens.be/notes/element-attribute-notation" target="_blank">written up and documented by Mathias Bynens</a>).
 
-When you link to a file like&nbsp;<a title="An image displayed in a browser window" href="http://drublic.de/archive/wp-content/uploads/2011/08/blog-a@download.jpg" target="_blank">an image</a>&nbsp;or&nbsp;<a title="A PDF-document that opens within the browser" href="http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf" target="_blank">a PDF-document</a>&nbsp;it will be displayed within the browser normally. The <code>download</code>-attribute in links prevents this behavior and offers the file as a download in your browser.
+When you link to a file like&nbsp;<a title="An image displayed in a browser window" href="http://hansreinls.de/archive/wp-content/uploads/2011/08/blog-a@download.jpg" target="_blank">an image</a>&nbsp;or&nbsp;<a title="A PDF-document that opens within the browser" href="http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf" target="_blank">a PDF-document</a>&nbsp;it will be displayed within the browser normally. The <code>download</code>-attribute in links prevents this behavior and offers the file as a download in your browser.
 
 ## Definition
 
