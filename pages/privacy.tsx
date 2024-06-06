@@ -14,7 +14,7 @@ const Privacy = () => (
 
       <p>
         Die nachfolgende Datenschutzerklärung gilt für die Nutzung der Webseite
-        https://hansreinl.de/ (nachfolgend „Website“).
+        https://www.hansreinl.de/ (nachfolgend „Website“).
       </p>
 
       <p>

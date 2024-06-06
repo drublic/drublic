@@ -42,11 +42,11 @@ const Head = ({ title, description, image, noIndex = false }) => {
           <meta name="twitter:card" content="summary" />
           <meta
             name="twitter:image"
-            content="https://hansreinl.de/img/logo.png"
+            content="https://www.hansreinl.de/img/logo.png"
           />
           <meta
             property="og:image"
-            content="https://hansreinl.de/img/logo.png"
+            content="https://www.hansreinl.de/img/logo.png"
           />
         </>
       )}

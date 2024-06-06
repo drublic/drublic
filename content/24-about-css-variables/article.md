@@ -3,7 +3,7 @@
 Since a little bit more than a month (as of the time of writing) there is a <a title="CSS Variables Module Level 1" href="http://dev.w3.org/csswg/css-variables/">Editor’s Draft for a CSS Variables Module</a> by Google (<a href="http://www.xanthir.com/blog/">Tab Atkins</a> and Luke Macpherson) and <a href="http://glazman.org/weblog/">Daniel Glazman</a>. Just a few days ago the Working Draft was updated.<br>
 The <a href="http://disruptive-innovations.com/zoo/cssvariables/">first draft was written in 2008</a> by Daniel Glazman but was not added to the official specification. The new <abbr title="Working Draft">WD</abbr> extends this proposal by Glazman.
 
-<strong>Disclaimer:</strong> This article is part of a <a href="https://hansreinl.de/archive/category/css-wds/" title="A series of posts which describes new CSS specifications, working drafts and editor’s drafts.">small series</a> about the latest CSS working drafts. The first article in this series was about the <a title="About The CSS Hierarchies Module Level 3" href="https://hansreinl.de/archive/the-css-hierarchies-module-level-3/">CSS Hierarchies Module</a>.
+<strong>Disclaimer:</strong> This article is part of a <a href="https://www.hansreinl.de/archive/category/css-wds/" title="A series of posts which describes new CSS specifications, working drafts and editor’s drafts.">small series</a> about the latest CSS working drafts. The first article in this series was about the <a title="About The CSS Hierarchies Module Level 3" href="https://www.hansreinl.de/archive/the-css-hierarchies-module-level-3/">CSS Hierarchies Module</a>.
 
 ## CSS Variables
 
@@ -69,7 +69,7 @@ $main-<span style="color: #000000; font-weight: bold;">color</span><span style="
 
 ## Conclusion
 
-We can use variables with preprocessors today which is pretty rad. As with <a href="https://hansreinl.de/archive/the-css-hierarchies-module-level-3/">the CSS Hierarchies Module</a> CSS in the future may support ideas that come from implementations in preprocessors somehow.<br>
+We can use variables with preprocessors today which is pretty rad. As with <a href="https://www.hansreinl.de/archive/the-css-hierarchies-module-level-3/">the CSS Hierarchies Module</a> CSS in the future may support ideas that come from implementations in preprocessors somehow.<br>
 I think most developers are happy about these adoptions and will likely use it. But as it will take some time for all vendors to implement this feature – and <a href="http://paulirish.com/2011/browser-market-pollution-iex-is-the-new-ie6/" title="Paul Irish about problems with oldIE">even more time until browsers that don’t support such new features vanish</a> – we will have to use preprocessors to get variables in our CSS working.
 <hr>
 <h2 id="update2">Update <small>19.08.2012</small></h2>
@@ -90,7 +90,7 @@ While it still needs to be defined with the `var` prefix:
 <span style="color: #00AA00;">}</span></pre></div></div>
 
 
-As Tab Atkins <a href="http://www.xanthir.com/blog/b4KT0">describes in his blog</a> this is going to change back to the old syntax I wrote about in the first place as this causes problems with further implementations of CSS (like variables for selectors and the <a href="https://hansreinl.de/archive/the-css-hierarchies-module-level-3/">hierarchy model</a>).
+As Tab Atkins <a href="http://www.xanthir.com/blog/b4KT0">describes in his blog</a> this is going to change back to the old syntax I wrote about in the first place as this causes problems with further implementations of CSS (like variables for selectors and the <a href="https://www.hansreinl.de/archive/the-css-hierarchies-module-level-3/">hierarchy model</a>).
 <hr>
 <h2 id="update">Update <small>16.04.2012</small></h2>
 

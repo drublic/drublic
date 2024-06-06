@@ -68,7 +68,7 @@ As you may guess this is not implemented in any browser yet.
 
 As this spec is written by two Google-guys it’s likely that this will be implemented in Chrome in the near future. At the moment this is not working with Chrome 19 (Canary) or WebKit Nightly.<br>
 I’ve made <a title="Testing the CSS Hierarchies Module Level 3" href="http://dabblet.com/gist/1854033">this Dabblet</a>&nbsp;to check if the module is supported in a browser or not. caniuse.com does not provide any data for the Hierarchies Module yet.<br>
-<strong>Aside</strong>: Check my <a title="The Dabbles App for Google Chrome" href="https://hansreinl.de/archive/dabblet-chrome-app/">Dabblet Chrome App</a> to view all your latest dabblets if you’re a Chrome user.
+<strong>Aside</strong>: Check my <a title="The Dabbles App for Google Chrome" href="https://www.hansreinl.de/archive/dabblet-chrome-app/">Dabblet Chrome App</a> to view all your latest dabblets if you’re a Chrome user.
 
 Tab Atkins proposed another style for nesting. To reference the parent selector you use&nbsp;`@this`&nbsp;instead of the&nbsp;`&`-character. Peter Beverloo<a title="CSS Variables and mixins, Interactive Validation and pre-rendering" href="http://peter.sh/2011/01/css-variables-and-mixins-interactive-validation-and-prerendering/">&nbsp;wrote about this</a>&nbsp;a year ago. Also Tab Atkins&nbsp;<a title="CSSOM, Vars, Mixins, Nesting, and Modules" href="http://www.xanthir.com/blog/b49w0">has an article</a>&nbsp;about his further plans. This variant was not implement either and is replaced with the new draft for the specification. Anyway <a title="Using CSS nesting with @this" href="http://dabblet.com/gist/1853580">you could view</a> the dabblet I’ve made for this&nbsp;propose.
 

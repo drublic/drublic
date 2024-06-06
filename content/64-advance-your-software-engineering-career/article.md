@@ -27,7 +27,7 @@ __What's the logical next step for you?__
 
 Beware of your current position. Are you a great fit for it? Are you currently levelled correctly? If this is the case, identify what the next step in your career should be.
 
-Check out my article on [how to advance in your career](https://hansreinl.de/blog/career-path-engineering-roles). I describe possible ways for software engineers to move forward in their career.
+Check out my article on [how to advance in your career](https://www.hansreinl.de/blog/career-path-engineering-roles). I describe possible ways for software engineers to move forward in their career.
 
 ### Requirements
 __What is required to land the new role?__

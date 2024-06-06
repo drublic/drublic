@@ -45,9 +45,9 @@ This is also useful for the `abbr` element (for abbreviations) and its `title` a
 <span style="color: #00AA00;">}</span></pre></div></div>
 
 
-You can find a <a href="https://hansreinl.de/archive/pseudo-classes-in-print-styles-for-references-in-links/">more detailed post about this technique here</a>.
+You can find a <a href="https://www.hansreinl.de/archive/pseudo-classes-in-print-styles-for-references-in-links/">more detailed post about this technique here</a>.
 
-<strong>Edit:</strong> As <a href="https://hansreinl.de/archive/printing-the-web/#comment-1188">Tim suggests in the comments</a> it might be necessary to use `word-wrap: break-word;` on these elements as especially links can become pretty long and thus break you layout.
+<strong>Edit:</strong> As <a href="https://www.hansreinl.de/archive/printing-the-web/#comment-1188">Tim suggests in the comments</a> it might be necessary to use `word-wrap: break-word;` on these elements as especially links can become pretty long and thus break you layout.
 
 Remember that browsers normally display a header and footer line with some information about your site such as the URL it was printed from or the date. The user might have an option to remove those lines so you may want to include some link or a breadcrumb in the printed page so the reader can easily check back on the web if needed. Other methods outline embedding a QR code on the printed page. Adrian Roselli <a href="http://blog.adrianroselli.com/2013/03/calling-qr-in-print-css-only-when-needed.html">describes this method</a> further.
 
@@ -199,7 +199,7 @@ The `counter-increment` property is a bit special with the keyword `page` – it
 
 That rocks, right?! Totally want this in browsers now.
 
-<strong>Edit – 26.03.2013:</strong> Actually there is another possible implementation for fixed headers and footers using `position: fixed;` elements as <a href="http://clt.ag/">Robert Weber</a> <a href="https://hansreinl.de/archive/printing-the-web/#comment-1100">researched</a>. Unfortunately this only works in Firefox, Opera and Internet Explorer with several quirks. Please <a href="https://hansreinl.de/archive/printing-the-web/#comment-1100">read his comment</a>.
+<strong>Edit – 26.03.2013:</strong> Actually there is another possible implementation for fixed headers and footers using `position: fixed;` elements as <a href="http://clt.ag/">Robert Weber</a> <a href="https://www.hansreinl.de/archive/printing-the-web/#comment-1100">researched</a>. Unfortunately this only works in Firefox, Opera and Internet Explorer with several quirks. Please <a href="https://www.hansreinl.de/archive/printing-the-web/#comment-1100">read his comment</a>.
 <h3>A Word On Mobile</h3>
 
 These days it has become more and more popular to visit web pages from your smartphone or tablet but I have never seen anyone printing a web page from such a device.

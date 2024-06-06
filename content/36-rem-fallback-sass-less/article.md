@@ -78,5 +78,5 @@ I want to mention that I first saw this technique used by <a href="http://nimbup
 
 <strong>Addition:</strong> The <a href="https://github.com/ericam/susy">Susy framework</a> has <a href="https://github.com/ericam/susy/blob/master/sass/susy/_units.scss">a Sass mixin</a> which lets you easily convert units including the rem unit and a fallback as described here. (Head-tip <a href="https://twitter.com/fabianbeiner">Fabian Beiner</a>.)
 
-<strong>Addition 2:</strong> <a href="https://hansreinl.de/archive/rem-fallback-sass-less/#comment-957">Steffen</a> wrote <a href="https://gist.github.com/4530526">a Sass mixin</a> which lets you use the short notation of properties like `margin` or `padding`. Even mixing values as px and rem is working. Cheers!
+<strong>Addition 2:</strong> <a href="https://www.hansreinl.de/archive/rem-fallback-sass-less/#comment-957">Steffen</a> wrote <a href="https://gist.github.com/4530526">a Sass mixin</a> which lets you use the short notation of properties like `margin` or `padding`. Even mixing values as px and rem is working. Cheers!
 	</div>

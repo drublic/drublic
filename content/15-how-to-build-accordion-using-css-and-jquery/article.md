@@ -76,5 +76,5 @@ You will find more information about <code>:target</code> <a href="http://www.w3
 ## Download the files
 
 I’ve made a demo of this on jsFiddle. Play around a little bit or download the files, if you want to.<br>
-<a href="http://fiddle.jshell.net/drublic/j4wYw/" title="Demo" class="button">Demo</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://hansreinl.de/archive/wp-content/uploads/2011/10/accordion-menu-css.zip" title="Download" class="button">Download</a>
+<a href="http://fiddle.jshell.net/drublic/j4wYw/" title="Demo" class="button">Demo</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.hansreinl.de/archive/wp-content/uploads/2011/10/accordion-menu-css.zip" title="Download" class="button">Download</a>
 	</div>
