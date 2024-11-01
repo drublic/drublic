@@ -29,15 +29,6 @@ const Info = () => (
         <a href="http://workingdraft.de/">Working Draft</a>.
       </p>
 
-      <h2>Headshot</h2>
-      <p>
-        <a href="/headshot/hans-christian-reinl--full.jpg">High resolution</a>{" "}
-        <small>3744x3744px, 1Mb</small>
-        <br />
-        <a href="/headshot/hans-christian-reinl.jpg">Low resolution</a>{" "}
-        <small>475x475px, 29k</small>
-      </p>
-
       <h2>Links</h2>
       <p>
         <strong>Website:</strong> <a href="//hansreinl.de/">hansreinl.de</a>
