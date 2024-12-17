@@ -43,3 +43,25 @@
 .twitter-tweet {
   margin: 1rem auto !important;
 }
+
+.post table {
+  font-size: 0.9em;
+  border-spacing: 0;
+  margin: 2rem 0;
+}
+
+.post th {
+  text-align: left;
+  vertical-align: top;
+  background-color: var(--color-lightest);
+  padding: 0.5rem;
+}
+
+.post td {
+  vertical-align: top;
+  padding: 0.5rem;
+}
+
+.post tr:nth-child(2n) {
+  background-color: var(--color-lightest);
+}
