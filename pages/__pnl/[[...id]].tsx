@@ -24,7 +24,7 @@ const PNL = ({ isDev, posts }) => {
   }
 
   const router = useRouter();
-  const editorRef = useRef<any>();
+  const editorRef = useRef<any>(null);
   const [currentPost, setCurrentPost] = useState({
     slug: undefined,
     rawEntry: undefined,

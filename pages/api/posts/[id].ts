@@ -4,6 +4,8 @@ import * as showdown from "showdown";
 import { POSTS_DIR, getPosts, getFolderPath } from ".";
 
 const converter: showdown.Converter = new showdown.Converter();
+converter.setOption("tables", true);
+
 export const getFullPost = async (
   postData: any,
   folderPath: string
