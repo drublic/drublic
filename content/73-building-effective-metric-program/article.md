@@ -1,4 +1,14 @@
+<div class="post__intro" markdown="1">
 At [LeadingEng in Berlin](https://leaddev.com/leadingeng-berlin/) in November this year, I had the opportunity to lead a Table Talk on a topic that has been a significant focus of my work lately: building and implementing effective metric programs. It's a subject that sounds deceptively simple, but as I've discovered, it's a journey filled with complexities and invaluable lessons. This experience has resonated with my reflections on transitioning from engineering to management, as detailed in my blog post [From Engineering into Management](https://www.hansreinl.de/blog/from-engineering-into-management), where defining clear objectives and measuring progress are paramount for success. Just as in managing teams, managing metrics requires a strategic and thoughtful approach.
+</div>
+
+<figure class="image image--block" markdown="1">
+  ![](/assets/metric-program.jpg)
+
+<figcaption class="image__caption image__caption--no-border" markdown="1">
+  <span class="image__caption__copywrite">[Mikail ](https://unsplash.com/@mcverry)</span>
+</figcaption>
+</figure>
 
 Like many organizations, we initially treated "metrics" as a buzzword. We knew we wanted to be data-driven, but the practical application was hazy. Product teams had their metrics, but engineering felt like a different beast. Were we even measuring the right things?
 
