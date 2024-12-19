@@ -4,7 +4,7 @@ const template = (content: string, lastBuildDate: Date) =>
   `
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>drublic - Engineering Management &amp; Software Architecture - Hans Christian Reinl, Cologne</title>
+  <title>Hans Reinl – Engineering Management &amp; Software Architecture - drublic, Hans Christian Reinl, Cologne</title>
   <link href="https://www.hansreinl.de/blog/"/>
   <link href="https://www.hansreinl.de/feed/" rel="self" />
   <updated>${lastBuildDate?.toISOString()}</updated>
