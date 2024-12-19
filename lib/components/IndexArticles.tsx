@@ -4,9 +4,6 @@ import ArticleTeaser from "./ArticleTeaser";
 import ArticleTeaserSmall from "./ArticleTeaserSmall";
 
 const IndexArticles = ({ posts }) => {
-  const withImages = posts.slice(1, 7).filter(({ image }) => !!image);
-  const teaserLength = withImages.length % 2 === 0 ? 8 : 7;
-
   return (
     <section>
       <div className="container">
@@ -30,7 +27,7 @@ const IndexArticles = ({ posts }) => {
 
       <div className="container container--large">
         <ul className="posts__list posts__list--no-divider posts__list--no-top">
-          {posts?.slice(1, teaserLength).map(({ title, date, slug, image }) => (
+          {posts?.slice(1, 9).map(({ title, date, slug, image }) => (
             <ArticleTeaserSmall
               key={slug}
               title={title}

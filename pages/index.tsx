@@ -20,7 +20,8 @@ const Index = ({ posts }) => {
               <p>
                 Currently I work for{" "}
                 <a href="https://www.prosiebensat1.com/">ProSiebenSat.1</a> as
-                Vice President Engineering.
+                Vice President Engineering on{" "}
+                <a href="https://joyn.de/">Joyn</a>.
               </p>
             </div>
 

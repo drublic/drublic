@@ -43,7 +43,7 @@ const Resume = () => (
               Seven.One Entertainment Group
             </a>{" "}
             (ProSiebenSat.1). Agile development and Scrum have influenced my
-            work since 2012. I have 14 years of experience in developing
+            work since 2012. I have 15 years of experience in developing
             scalable web-applications using cutting edge technologies. I love
             creating solid systems in a high-performance environment. My passion
             is to build teams that strive for excellence. Enabling team members
