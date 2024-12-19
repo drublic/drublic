@@ -6,7 +6,7 @@ At [LeadingEng in Berlin](https://leaddev.com/leadingeng-berlin/) in November th
   ![](/assets/metric-program.jpg)
 
 <figcaption class="image__caption image__caption--no-border" markdown="1">
-  <span class="image__caption__copywrite">[Mikail ](https://unsplash.com/@mcverry)</span>
+  <span class="image__caption__copywrite">[Mikail McVerry](https://unsplash.com/@mcverry)</span>
 </figcaption>
 </figure>
 
