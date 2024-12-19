@@ -1,9 +1,9 @@
 {
-  "short_name": "drublic",
-  "name": "drublic – Software Architecture",
+  "short_name": "Hans Reinl",
+  "name": "Hans Reinl – Software Architecture",
   "icons": [
     {
-      "src":"/img/logo.png",
+      "src": "/img/logo.png",
       "sizes": "225x225",
       "type": "image/png"
     }
