@@ -72,12 +72,20 @@ const Footer = () => (
       <div className="footer__inner">
         <ul className="social">
           <li className="social__link social__link--github">
-            <a href="https://github.com/drublic" title="GitHub/drublic">
+            <a
+              href="https://github.com/drublic"
+              title="GitHub/drublic"
+              target="_blank"
+            >
               GitHub
             </a>
           </li>
           <li className="social__link social__link--linkedin">
-            <a href="https://www.linkedin.com/in/hreinl/" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/hreinl/"
+              title="LinkedIn"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </li>

@@ -57,6 +57,7 @@ const Index = ({ posts }) => {
                 href="https://www.linkedin.com/in/hreinl/"
                 title="LinkedIn"
                 className="button button--outline"
+                target="_blank"
               >
                 Connect on LinkedIn
               </a>
