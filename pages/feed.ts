@@ -12,7 +12,7 @@ const template = (content: string, lastBuildDate: Date) =>
 
   <author>
     <name>Hans Christian Reinl</name>
-    <email>info@drublic.de</email>
+    <email>hi@hansreinl.de</email>
   </author>
 
   ${content}

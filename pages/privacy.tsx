@@ -9,7 +9,7 @@ const Privacy = () => (
       <p>
         My Privacy Protection Page is in German since I am a German Business. If
         you have any question, please contact me via{" "}
-        <a href="mailto:info@drublic.de">info@drublic.de</a>.
+        <a href="mailto:hi@hansreinl.de">hi@hansreinl.de</a>.
       </p>
 
       <p>

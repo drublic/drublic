@@ -26,7 +26,7 @@ const Podcasting = () => {
           <br />
           Preferably in the Cologne, Düsseldorf area.
           <br />
-          Contact me via <a href="mailto:info@drublic.de">info@drublic.de</a>.
+          Contact me via <a href="mailto:hi@hansreinl.de">hi@hansreinl.de</a>.
         </p>
 
         <p>

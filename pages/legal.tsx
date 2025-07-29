@@ -26,7 +26,7 @@ const Legal = () => (
         <p>
           Hans Christian Reinl
           <br />
-          <a href="mailto:info@drublic.de">info@drublic.de</a>
+          <a href="mailto:hi@hansreinl.de">hi@hansreinl.de</a>
         </p>
 
         <p>

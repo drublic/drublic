@@ -84,7 +84,7 @@ const Resume = () => (
         </ul>
 
         <p>
-          Please <a href="mailto:info@drublic.de">send me a mail</a> if you want{" "}
+          Please <a href="mailto:hi@hansreinl.de">send me a mail</a> if you want{" "}
           me to write for you.
         </p>
       </section>
