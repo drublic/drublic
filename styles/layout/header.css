@@ -1,5 +1,5 @@
 .header__inner {
-  max-width: calc(var(--width) + 12rem);
+  max-width: var(--width);
   margin: 0 auto;
   padding: 2rem 1rem;
   text-align: center;

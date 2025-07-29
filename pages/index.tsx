@@ -13,15 +13,13 @@ const Index = ({ posts }) => {
           <div className="container">
             <div className="claim__desc">
               <p>
-                Working with and developing teams is what I am really passionate
-                about. Dealing with complex distributed mirco-service based
-                architectures is my daily business. And I love it.
+                I am a Vice President of Engineering working on{" "}
+                <a href="https://www.prosiebensat1.com/">ProSiebenSat.1's</a>{" "}
+                Streaming Platform <a href="https://joyn.de/">Joyn</a>.
               </p>
-              <p>
-                Currently I work for{" "}
-                <a href="https://www.prosiebensat1.com/">ProSiebenSat.1</a> as
-                Vice President Engineering on{" "}
-                <a href="https://joyn.de/">Joyn</a>.
+              <p className="claim__desc--small">
+                AI Engineering • Engineering Leadership • Software Architecture
+                • Mentor • Product Management
               </p>
             </div>
 
@@ -35,7 +33,7 @@ const Index = ({ posts }) => {
                 data-ga-label="Resume"
                 style={{ marginTop: "1rem" }}
               >
-                More about me
+                Learn more about me
               </Link>
             </p>
           </div>

@@ -2,12 +2,17 @@
  * About me
  */
 .claim {
-  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .claim__desc {
   line-height: 1.5em;
   font-size: 1.25rem;
+}
+
+.claim__desc--small {
+  font-size: 1rem;
 }
 
 .claim__me {
