@@ -19,10 +19,7 @@ const Resume = () => (
 
           <header className="resume-header">
             <h2>Hans Christian Reinl</h2>
-            <h4>
-              Vice President Engineering <br />
-              at Seven.One Entertainment Group
-            </h4>
+            <h4>Self-employed Engineering Leader</h4>
 
             <address>
               Cologne, Germany
@@ -37,17 +34,14 @@ const Resume = () => (
           <h2>Summary</h2>
 
           <p>
-            I am an Engineering Manager, Software Architect and Certified Scrum
-            Master working as Vice President Engineering for{" "}
-            <a href="https://www.prosiebensat1.com/">
-              Seven.One Entertainment Group
-            </a>{" "}
-            (ProSiebenSat.1). Agile development and Scrum have influenced my
-            work since 2012. I have 15 years of experience in developing
-            scalable web-applications using cutting edge technologies. I love
-            creating solid systems in a high-performance environment. My passion
-            is to build teams that strive for excellence. Enabling team members
-            to accelerate is what drives my daily work.
+            As an experienced Engineering Leader and Software Architect in
+            startups and corporates, I served my last role as Vice President of
+            Engineering for Seven.One Entertainment Group (ProSiebenSat.1) where
+            I led a team of 55 engineers, building Joyn, the Video Streaming
+            Platform. I have more than 15 years of experience developing
+            scalable web-applications using cutting-edge technologies by
+            utilizing agile development and methodologies. I am currently
+            looking for a new challenge.
           </p>
         </section>
 
@@ -66,11 +60,20 @@ const Resume = () => (
             More on <a href="/portfolio">my portfolio</a>.
           </p>
 
+          <h3>Engineering and Leadership Consultant, Self-employed</h3>
+          <p>July 2025 – current</p>
+
+          <p>
+            I am currently working as a consultant, helping companies to enhance
+            their engineering and leadership capabilities. A strong focus of
+            this work is the introduction of AI and ML technologies.
+          </p>
+
           <h3>Seven.One Entertainment Group GmbH</h3>
 
           <p>
             <b>Vice President Engineering, Streaming Platform</b>, October 2021
-            – current
+            – June 2025
           </p>
 
           <p>

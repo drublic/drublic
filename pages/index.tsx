@@ -13,9 +13,8 @@ const Index = ({ posts }) => {
           <div className="container">
             <div className="claim__desc">
               <p>
-                I am a Vice President of Engineering working on{" "}
-                <a href="https://www.prosiebensat1.com/">ProSiebenSat.1's</a>{" "}
-                Streaming Platform <a href="https://joyn.de/">Joyn</a>.
+                Hi, I'm Hans. I'm an Engineering Leader passionate about
+                building high-performing teams and driving technical excellence.
               </p>
               <p className="claim__desc--small">
                 AI Engineering • Engineering Leadership • Software Architecture
