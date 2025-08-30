@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import Link from "next/link";
 import React from "react";
+import { TransitionLink } from "./TransitionLink";
 import Navigation from "./Navigation";
 
 const Header = ({ noNavigation = false }) => (
@@ -10,7 +10,7 @@ const Header = ({ noNavigation = false }) => (
     })}
   >
     <div className="header__inner">
-      <Link
+      <TransitionLink
         href="/"
         role="banner"
         className="header__title"
@@ -19,7 +19,7 @@ const Header = ({ noNavigation = false }) => (
         <h1 className="header__title__line">
           Hans Reinl <span className="cursor">▁</span>
         </h1>
-      </Link>
+      </TransitionLink>
 
       <div className="header__spacer" />
 

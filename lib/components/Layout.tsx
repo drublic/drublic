@@ -3,6 +3,7 @@ import Head from "./Head";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cookiescript from "./Cookiescript";
+import { useRouter } from "next/router";
 
 const Layout = ({
   title = "Hans Reinl - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
@@ -13,6 +14,22 @@ const Layout = ({
   noFooter = false,
   children,
 }) => {
+  const router = useRouter();
+
+  // Get page type for view transitions
+  const getPageType = (path: string): string => {
+    if (path === "/") return "home";
+    if (path.startsWith("/blog")) return "blog";
+    if (path.startsWith("/ai")) return "ai";
+    if (path.startsWith("/leadership")) return "leadership";
+    if (path === "/resume") return "resume";
+    if (path === "/podcasting") return "podcasting";
+    if (path === "/portfolio") return "portfolio";
+    return "default";
+  };
+
+  const pageType = getPageType(router.asPath);
+
   return (
     <>
       <Head
@@ -38,7 +55,16 @@ const Layout = ({
 
       <Header noNavigation={noNavigation} />
 
-      {children}
+      <main
+        className="page-content"
+        style={
+          {
+            viewTransitionName: pageType,
+          } as React.CSSProperties & { viewTransitionName: string }
+        }
+      >
+        {children}
+      </main>
 
       {!noFooter && (
         <>

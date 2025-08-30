@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import classNames from "classnames";
-import Link from "next/link";
+import { TransitionLink } from "./TransitionLink";
 
 const Navigation = () => {
   const router = useRouter();
@@ -98,9 +98,9 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("start", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link href="/" title="Hans Reinl - Front-End Architecture">
+          <TransitionLink href="/" title="Hans Reinl - Front-End Architecture">
             Start
-          </Link>
+          </TransitionLink>
         </li>
         <li
           data-nav-item="me"
@@ -110,9 +110,9 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("me", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link href="/resume" title="Read more about me">
+          <TransitionLink href="/resume" title="Read more about me">
             Me
-          </Link>
+          </TransitionLink>
         </li>
         <li
           data-nav-item="podcasting"
@@ -122,12 +122,12 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("podcasting", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link
+          <TransitionLink
             href="/podcasting"
             title="Working Draft Podcast, latest equipment"
           >
             Podcasting
-          </Link>
+          </TransitionLink>
         </li>
 
         <li
@@ -138,9 +138,9 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("blog", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link href="/blog" title="Get some cutting edge goodness">
+          <TransitionLink href="/blog" title="Get some cutting edge goodness">
             Blog
-          </Link>
+          </TransitionLink>
         </li>
         {/* <li
           className={classNames("navigation__menu__hidden-mobile", {
