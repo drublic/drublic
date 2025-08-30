@@ -7,15 +7,15 @@
   --color: #445963;
   --color-dark: #29434e;
   --color-light: #617680;
-  --color-lightest: #f5f5f7;
+  --color-lightest: #e8e7ec;
   --border-color: #ecf2f7;
   --border-color-dark: var(--color-light);
   --color--background--light: #f3f2ff;
-  --color--background--dark: #eee;
+  --color--background--dark: #e8e7ec;
   --secondary-color: #6236ff;
   --secondary-color--hover: #f474ff;
 
-  --footer-background: var(--color-lightest);
+  --footer-background: var(--color--background--dark);
   --footer-background-dark: var(--color--background--dark);
 
   --navigation-background: #607d8b;
