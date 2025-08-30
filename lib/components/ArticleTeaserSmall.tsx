@@ -10,6 +10,7 @@ type Props = {
   date?: string;
   description?: string;
   image?: string;
+  tags?: string[];
 };
 
 const ArticleTeaserSmall: FunctionComponent<Props> = ({
@@ -21,6 +22,7 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
   date,
   description,
   image,
+  tags,
 }) => (
   <li className={image ? "post__item--with-image" : ""}>
     <Link href={url ?? `${baseUrl}${basePath}/${slug}/`}>
@@ -38,7 +40,21 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
 
         <span className="posts__teaser-title">{title}</span>
 
-        {date && <time className="posts__date">{date}</time>}
+        {date && (
+          <p className="posts__date">
+            Published on <time>{date}</time>
+          </p>
+        )}
+
+        {tags && (
+          <p className="posts__tags">
+            {tags.map((tag) => (
+              <span key={tag} className="tag tag--small">
+                {tag}
+              </span>
+            ))}
+          </p>
+        )}
 
         {description && (
           <span

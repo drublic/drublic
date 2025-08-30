@@ -24,6 +24,25 @@
 @import "./module/breadcrumb.css";
 @import "./module/toc.css";
 @import "./module/share.css";
+@import "./module/audio-player.css";
 
 @import "./layout/header.css";
 @import "./layout/footer.css";
+
+/* Animated blinking cursor */
+.cursor {
+  animation: blink 1.5s infinite;
+  font-weight: normal;
+  color: inherit;
+}
+
+@keyframes blink {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+  }
+}

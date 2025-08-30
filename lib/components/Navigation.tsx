@@ -18,8 +18,8 @@ const Navigation = () => {
             "is-active": router.asPath === "/",
           })}
         >
-          <Link href="/" title="drublic - Front-End Architecture">
-            Home
+          <Link href="/" title="Hans Reinl - Front-End Architecture">
+            Start
           </Link>
         </li>
         <li
@@ -28,7 +28,7 @@ const Navigation = () => {
           })}
         >
           <Link href="/resume" title="Read more about me">
-            About
+            Me
           </Link>
         </li>
         <li

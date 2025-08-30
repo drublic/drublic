@@ -16,7 +16,9 @@ const Header = ({ noNavigation = false }) => (
         className="header__title"
         title="Website of Hans Reinl - @drublic"
       >
-        <h1 className="header__title__line">Hans Reinl</h1>
+        <h1 className="header__title__line">
+          Hans Reinl <span className="cursor">▁</span>
+        </h1>
       </Link>
 
       <div className="header__spacer" />

@@ -7,15 +7,20 @@
   display: inline-block !important;
   background: var(--border-color);
   color: var(--color);
-  padding: 0.2rem 0.4rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 0.2rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-right: 0.5rem;
   border-bottom: 0;
 }
 
 .tag:visited {
   color: var(--color);
+}
+
+.tag--small {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .tag--light {

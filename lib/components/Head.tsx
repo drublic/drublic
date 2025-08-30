@@ -19,7 +19,7 @@ const Head = ({ title, description, image, noIndex = false }) => {
       <link
         rel="alternate"
         type="application/rss+xml"
-        title="drublic Blog"
+        title="Hans Reinl Blog"
         href="/feed"
       />
 
@@ -64,7 +64,7 @@ const Head = ({ title, description, image, noIndex = false }) => {
       <link
         rel="index"
         href="/"
-        title="drublic - State of the Art Webdesign - HTML, CSS, JavaScript - Hans Christian Reinl"
+        title="Hans Reinl - State of the Art Webdesign - HTML, CSS, JavaScript - Hans Christian Reinl"
       />
 
       <link rel="canonical" href={`https://hansreinl.de${pathname}`} />

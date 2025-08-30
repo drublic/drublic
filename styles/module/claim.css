@@ -2,8 +2,7 @@
  * About me
  */
 .claim {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .claim__desc {
@@ -48,10 +47,14 @@
   border-radius: 50%;
   width: calc(100% - 0.7rem);
   height: calc(100% - 0.7rem);
-  border: 0.35rem solid #fff;
+  border: 0.35rem solid var(--bg-color);
 }
 
 @media (min-width: 32em) {
+  .claim {
+    padding-top: 4rem;
+  }
+
   .claim-container {
     display: flex;
   }

@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Cookiescript from "./Cookiescript";
 
 const Layout = ({
-  title = "drublic - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
+  title = "Hans Reinl - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
   description = `Engineering Management & Software Architecture, Hans Christian Reinl - Working Draft, Node.js, React, CSS, JavaScript & Agile`,
   image = undefined,
   noIndex = false,

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "copy:assets": "cp -r content/**/*.{png,jpeg,jpg} public/assets",
     "copy:articles": "cp -r content .next/server/chunks",
     "build": "next build && yarn copy:articles && yarn copy:assets",
@@ -16,18 +16,18 @@
     "@vercel/speed-insights": "^1.2.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
-    "next": "15.4.4",
+    "next": "15.5.2",
     "node-fetch": "^3.3.2",
     "normalize.css": "^8.0.1",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "rss-parser": "^3.13.0",
     "showdown": "^2.1.0",
-    "swr": "^2.3.4"
+    "swr": "^2.3.6"
   },
   "devDependencies": {
-    "@types/node": "^24.1.0",
-    "@types/react": "^19.1.9",
-    "typescript": "^5.8.3"
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "typescript": "^5.9.2"
   }
 }

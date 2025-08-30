@@ -3,12 +3,17 @@ import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
 import IndexWorkingDraft from "../lib/components/IndexWorkingDraft";
+import AudioPlayer from "../lib/components/AudioPlayer";
 import { POSTS_DIR, getPosts } from "./api/posts";
 
 const Index = ({ posts }) => {
   return (
     <Layout>
       <main id="content" className="main" role="main">
+        <div className="container container--large">
+          <AudioPlayer src="/hi.wav" />
+        </div>
+
         <section className="claim">
           <div className="container">
             <div className="claim__desc">
@@ -17,8 +22,8 @@ const Index = ({ posts }) => {
                 building high-performing teams and driving technical excellence.
               </p>
               <p className="claim__desc--small">
-                AI Engineering • Engineering Leadership • Software Architecture
-                • Mentor • Product Management
+                AI Engineering __ Engineering Leadership __ Software
+                Architecture __ Mentor __ Product Management
               </p>
             </div>
 

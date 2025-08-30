@@ -27,13 +27,14 @@ const IndexArticles = ({ posts }) => {
 
       <div className="container container--large">
         <ul className="posts__list posts__list--no-divider posts__list--no-top">
-          {posts?.slice(1, 9).map(({ title, date, slug, image }) => (
+          {posts?.slice(1, 9).map(({ title, date, slug, image, tags }) => (
             <ArticleTeaserSmall
               key={slug}
               title={title}
               date={date}
               slug={slug}
               image={image}
+              tags={tags}
             />
           ))}
         </ul>

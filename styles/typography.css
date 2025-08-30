@@ -94,6 +94,7 @@ h2 a {
 /* Paragraph */
 p {
   margin: 0;
+  color: var(--text-color-light);
 }
 
 p + p,

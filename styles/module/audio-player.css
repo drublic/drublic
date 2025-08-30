@@ -1,0 +1,11 @@
+.audio-player {
+  --border-radius: 0.625rem;
+
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .audio-player {
+    margin-top: 3rem;
+  }
+}
