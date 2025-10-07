@@ -44,6 +44,10 @@ hr {
   max-width: calc(var(--width) + 12rem);
 }
 
+.container--small {
+  max-width: calc(var(--width) - 8rem);
+}
+
 .section__cta {
   margin-top: 3rem;
   text-align: center;

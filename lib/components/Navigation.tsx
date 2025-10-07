@@ -5,7 +5,6 @@ import { TransitionLink } from "./TransitionLink";
 
 const Navigation = () => {
   const router = useRouter();
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [underlineStyle, setUnderlineStyle] = useState({});
   const navRef = useRef<HTMLUListElement>(null);
 
@@ -65,12 +64,10 @@ const Navigation = () => {
     itemKey: string,
     event: React.MouseEvent<HTMLLIElement>
   ) => {
-    setHoveredItem(itemKey);
     updateUnderlinePosition(event.currentTarget);
   };
 
   const handleMouseLeave = () => {
-    setHoveredItem(null);
     // Return to active item position
     const activeItem = getActiveItem();
     if (activeItem && navRef.current) {

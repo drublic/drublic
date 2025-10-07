@@ -10,9 +10,11 @@
   --color-lightest: #e8e7ec;
   --border-color: #ecf2f7;
   --border-color-dark: var(--color-light);
+  --border-color-light: #c4dcef;
   --color--background--light: #f3f2ff;
   --color--background--dark: #e8e7ec;
   --secondary-color: #6236ff;
+  --secondary-color--light: #efebff;
   --secondary-color--hover: #f474ff;
 
   --footer-background: var(--color--background--dark);
@@ -27,4 +29,6 @@
   --copy-light: #aaa;
 
   --width: 50rem;
+
+  --border-radius: 0.5rem;
 }

@@ -30,7 +30,14 @@
 }
 
 .footer_links {
+  padding: 0 1rem;
   background-color: var(--footer-background);
+}
+
+@media (min-width: 32em) {
+  .footer_links {
+    padding: 0;
+  }
 }
 
 @media (max-width: 48em) {

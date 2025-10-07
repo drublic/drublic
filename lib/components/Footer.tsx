@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => (
   <>
-    <div className=" footer_links">
+    <div className="footer_links">
       <div className="container container--large">
         <h3>Content Pages</h3>
         <div className="footer_lists">

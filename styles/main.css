@@ -26,6 +26,8 @@
 @import "./module/share.css";
 @import "./module/audio-player.css";
 @import "./module/view-transitions.css";
+@import "./module/author.css";
+@import "./components.css";
 
 @import "./layout/header.css";
 @import "./layout/footer.css";

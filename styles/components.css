@@ -1,0 +1,254 @@
+/* Generic Component Styles */
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Card Component */
+.card {
+  padding: 1rem;
+  background-color: #fafafa;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0px 2px 15px 0px rgba(159, 159, 159, 0.15);
+}
+
+.card--default {
+  /* Default card styling */
+  position: relative;
+}
+
+.card--step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card--highlight {
+  background-color: #e7e3ff;
+  border: 1px solid #c4b5fd;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  display: inline-block;
+  background-color: var(--secondary-color--light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+}
+
+.card-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.card-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  background-color: var(--secondary-color--light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  min-width: 60px;
+  text-align: center;
+}
+
+.card-line {
+  height: 3px;
+  background-color: var(--secondary-color);
+  flex: 1;
+  border-radius: 2px;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.card-title {
+  margin-top: 1.5rem;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-icon + .card-title {
+  margin-top: 0.5rem;
+}
+
+.card-subtitle {
+  color: var(--text-color);
+  margin-top: 0;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.card-description {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.125rem;
+}
+
+.card-list li {
+  margin-bottom: 0.25rem;
+}
+
+.card-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Grid Component */
+.grid {
+  display: grid;
+}
+
+/* Grid Variants */
+.grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid--steps {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/* Flow Component */
+.process-flow-svg {
+  text-align: center;
+}
+
+/* Section Headers */
+.section-title {
+  color: #1a202c;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Process Flow Component */
+.process-flow-svg {
+  text-align: center;
+}
+
+.process-flow-svg .step path {
+  fill: var(--secondary-color);
+}
+
+.process-flow-road {
+  fill: var(--color-light);
+}
+
+.process-flow-road-line {
+  fill: var(--bg-color);
+}
+
+.process-flow-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+.process-flow-svg #step-1 {
+  animation: bounce 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.process-flow-svg #step-2 {
+  animation: bounce 2.1s 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.process-flow-svg #step-3 {
+  animation: bounce 2.4s 4s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.process-flow-svg #step-4 {
+  animation: bounce 1.8s 6s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
