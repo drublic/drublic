@@ -114,32 +114,7 @@ const Post: FunctionComponent<Post> = ({
 
           <div itemProp="articleBody">{children}</div>
         </article>
-        <style jsx>{`
-          .author {
-            display: flex;
-            margin-top: 3rem;
-            border-top: 2px solid var(--border-color);
-            padding-top: 3rem;
-            margin-bottom: 3rem;
-            text-align: left;
-          }
 
-          .author_headshot {
-            width: 6rem;
-            height: 6rem;
-            margin: 0 1rem 0 0;
-          }
-          .author_content {
-            flex: 1;
-          }
-          .author_headline {
-            font-weight: bold;
-          }
-          .author_description {
-            margin-top: 0.5rem;
-            color: var(--copy-color-light);
-          }
-        `}</style>
         <section
           className="claim author"
           itemScope
@@ -161,18 +136,22 @@ const Post: FunctionComponent<Post> = ({
               itemProp="description"
               className="author_description typography--body2"
             >
-              Hans is a VP of Engineering with a passion for technology and a
-              focus on leading and developing strong engineering teams.
-              Committed to delivering high-quality products and driving business
-              growth through technical excellence.
+              Hans is an Engineering and Leadership Consultant with a passion
+              for technology and a focus on leading and developing strong
+              engineering teams. Committed to delivering high-quality products
+              and driving business growth through technical excellence.
             </p>
           </div>
           <meta itemProp="name" content="Hans Reinl" />
-          <meta itemProp="jobTitle" content="VP Engineering" />
+          <meta
+            itemProp="jobTitle"
+            content="Engineering and Leadership Consultant"
+          />
           <meta itemProp="url" content="https://hansreinl.de" />
           <meta itemProp="image" content="/img/me.jpg" />
-          <meta itemProp="worksFor" content="ProSiebenSat.1" />
-          <meta itemProp="sameAs" content="https://twitter.com/hansreinl" />
+          <meta itemProp="worksFor" content="Self-employed" />
+          <meta itemProp="sameAs" content="https://x.com/hansreinl" />
+          <meta itemProp="sameAs" content="https://linkedin.com/in/hansreinl" />
           <meta itemProp="sameAs" content="https://github.com/hansreinl" />
           <meta
             itemProp="sameAs"

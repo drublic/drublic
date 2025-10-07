@@ -1,0 +1,29 @@
+.author {
+  margin-top: 3rem;
+  border-top: 2px solid var(--border-color);
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.author_headshot {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 1rem 0 0;
+}
+.author_content {
+  flex: 1;
+}
+.author_headline {
+  font-weight: bold;
+}
+.author_description {
+  margin-top: 0.5rem;
+  color: var(--copy-color-light);
+}
+
+@media (min-width: 32em) {
+  .author {
+    display: flex;
+  }
+}
