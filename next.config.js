@@ -1,10 +1,19 @@
 module.exports = {
-  serverRuntimeConfig: {
-    PROJECT_ROOT: __dirname,
-  },
-  experimental: { nftTracing: true },
   images: {
-    domains: ["drublic.de", "www.hansreinl.de", "hansreinl.de"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "drublic.de",
+      },
+      {
+        protocol: "https",
+        hostname: "www.hansreinl.de",
+      },
+      {
+        protocol: "https",
+        hostname: "hansreinl.de",
+      },
+    ],
   },
 
   async redirects() {
