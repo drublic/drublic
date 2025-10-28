@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitionProvider } from "../lib/components/ViewTransitionProvider";
 import "../styles/main.css";
+import "@toast-ui/editor/dist/toastui-editor.css";
 
 type Props = {
   Component: any;

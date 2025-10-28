@@ -44,6 +44,29 @@ a.tag:hover .tag_count {
   border-left-color: var(--color-dark);
 }
 
+/* Status-specific tags */
+.tag--published {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.tag--draft {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.tag--published:hover {
+  background: #c3e6cb;
+  color: #0f4416;
+}
+
+.tag--draft:hover {
+  background: #ffeaa7;
+  color: #6c5403;
+}
+
 @media (min-width: 32em) {
   .tags-list {
     margin-top: 5rem;

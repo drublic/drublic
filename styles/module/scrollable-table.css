@@ -1,0 +1,178 @@
+/* Scrollable Table Styles */
+.scrollable-table {
+  overflow: auto;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  margin: 2rem 0;
+}
+
+@media (min-width: 924px) {
+  .scrollable-table {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .scrollable-table {
+    margin-left: -5rem;
+    margin-right: -5rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  .scrollable-table {
+    margin-left: -10rem;
+    margin-right: -10rem;
+  }
+}
+
+.scrollable-table > table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  min-width: 600px; /* Ensure minimum width for horizontal scrolling */
+  margin: 0;
+}
+
+.scrollable-table > table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color--background--light);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.scrollable-table > table thead th {
+  position: sticky;
+  top: 0;
+  background-color: var(--color--background--light);
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
+  box-sizing: border-box;
+  /* Ensure sticky positioning works reliably */
+  position: -webkit-sticky;
+  position: sticky;
+  width: 200px;
+}
+
+.scrollable-table > table thead th:first-child {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  border-right: 1px solid var(--border-color-light);
+  /* Ensure sticky positioning works reliably */
+  position: -webkit-sticky;
+  position: sticky;
+  font-weight: bold;
+}
+
+.scrollable-table > table thead th:last-child {
+  border-right: none;
+}
+
+.scrollable-table > table tbody tr {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.scrollable-table > table tbody tr:nth-child(even) td {
+  background-color: #f8f8f8;
+}
+
+.scrollable-table > table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.scrollable-table > table tbody td {
+  padding: 0.75rem 1rem;
+  vertical-align: top;
+  border-right: 1px solid var(--border-color);
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.scrollable-table > table tbody td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 9;
+  background-color: #fff;
+  border-right: 1px solid var(--border-color-light);
+  font-weight: bold;
+}
+
+.scrollable-table > table tbody tr:hover td {
+  background-color: #eee;
+}
+
+.scrollable-table > table tbody td:last-child {
+  border-right: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scrollable-table {
+    max-height: 70vh;
+    font-size: 0.875rem;
+  }
+
+  .scrollable-table > table thead th,
+  .scrollable-table > table tbody td {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .scrollable-table > table {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollable-table {
+    max-height: 60vh;
+    font-size: 0.8rem;
+  }
+
+  .scrollable-table > table thead th,
+  .scrollable-table > table tbody td {
+    padding: 0.375rem 0.5rem;
+  }
+
+  .scrollable-table > table {
+    min-width: 400px;
+  }
+}
+
+/* Custom scrollbar styling */
+.scrollable-table::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollable-table::-webkit-scrollbar-track {
+  background: var(--color-lightest);
+  border-radius: 4px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+  background: var(--color-light);
+  border-radius: 4px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+  background: var(--color);
+}
+
+/* Firefox scrollbar styling */
+.scrollable-table {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-light) var(--color-lightest);
+}

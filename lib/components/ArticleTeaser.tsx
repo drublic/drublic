@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getDate } from "../utils/date";
 
 const ArticleTeaser: FunctionComponent<{
   title: string;
@@ -40,7 +41,14 @@ const ArticleTeaser: FunctionComponent<{
           <Link href={`${baseUrl}/${slug}`}>{title}</Link>
         </Headline>
 
-        <time className="posts__date">Published on {date}</time>
+        <time className="posts__date">
+          Published on{" "}
+          {getDate(date).toLocaleDateString("de-DE", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })}
+        </time>
 
         {tags && (
           <p>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { FunctionComponent } from "react";
+import { getDate } from "../utils/date";
 type Props = {
   baseUrl?: string;
   basePath?: string;
@@ -42,7 +43,14 @@ const ArticleTeaserSmall: FunctionComponent<Props> = ({
 
         {date && (
           <p className="posts__date">
-            Published on <time>{date}</time>
+            Published on{" "}
+            <time>
+              {getDate(date).toLocaleDateString("de-DE", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+              })}
+            </time>
           </p>
         )}
 

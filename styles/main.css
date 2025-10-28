@@ -27,6 +27,8 @@
 @import "./module/audio-player.css";
 @import "./module/view-transitions.css";
 @import "./module/author.css";
+@import "./module/scrollable-table.css";
+@import "./module/gallery.css";
 @import "./components.css";
 
 @import "./layout/header.css";

@@ -6,6 +6,8 @@ import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
 import Toc from "./Toc";
 import Image from "next/image";
+import { getDate } from "../utils/date";
+import * as showdown from "showdown";
 
 interface Post {
   post: any;
@@ -13,6 +15,8 @@ interface Post {
   category?: { name: string; slug: string };
   children?: React.ReactNode;
 }
+
+const converter: showdown.Converter = new showdown.Converter();
 
 const Post: FunctionComponent<Post> = ({
   post,
@@ -75,8 +79,15 @@ const Post: FunctionComponent<Post> = ({
             </h1>
 
             <div className="post__header__date">
-              <time>Published on {post.date}</time> by{" "}
-              <span itemProp="author">Hans Reinl</span>
+              <time>
+                Published on{" "}
+                {getDate(post.date).toLocaleDateString("de-DE", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                })}
+              </time>{" "}
+              by <span itemProp="author">Hans Reinl</span>
             </div>
 
             <meta itemProp="datePublished" content={post.date} />
@@ -107,6 +118,14 @@ const Post: FunctionComponent<Post> = ({
                 width={2000}
                 height={855}
               />
+              {post.headerImageCaption && (
+                <figcaption
+                  className="image__caption image__caption--no-border"
+                  dangerouslySetInnerHTML={{
+                    __html: converter.makeHtml(post.headerImageCaption),
+                  }}
+                />
+              )}
             </figure>
           )}
 

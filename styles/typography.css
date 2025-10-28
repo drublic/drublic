@@ -25,7 +25,7 @@ h3,
 
 h1,
 .typography--h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h2,
@@ -221,6 +221,10 @@ blockquote {
   padding-left: 3rem;
   margin: 4rem 0;
   padding: 0.5rem 0 0.5rem 2rem;
+}
+
+blockquote.blockquote-small {
+  margin: 2rem 0;
 }
 
 figure blockquote {

@@ -1,6 +1,10 @@
 import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
+import { getDate } from "../../../lib/utils/date";
+
+// Re-export getDate for backward compatibility
+export { getDate };
 
 export const POSTS_DIR = path.join(process.cwd(), "content");
 export const POSTS_AI_DIR = path.join(process.cwd(), "content-ai");
@@ -44,11 +48,6 @@ const getPost = async (postPath: string, folderParam: string): Promise<any> => {
   return null;
 };
 
-export const getDate = (date: string) => {
-  const splitted = date.split(".");
-
-  return new Date(`${splitted[1]}/${splitted[0]}/${splitted[2]}`);
-};
 
 export const getPosts = async (
   hasPreview: boolean = false,
