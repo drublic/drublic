@@ -15,7 +15,7 @@ As we have the same issues with customers that do not understand why they get di
 Thanks goes out to <a title="Boagworld" href="http://www.headscape.co.uk/" target="_blank">Paul Boag</a> for creating this, <a href="http://t3node.com/" target="_blank">Steffen</a> and <a href="http://dnlhtz.de/" target="_blank">Daniel</a> who helped me translating it, and <a title="/gebrüderheitz - TYPO3, WordPress" href="http://gebruederheitz.de/" target="_blank">/gebrüderheitz</a>&nbsp;(especially Daniel again) for the Design of the German version.
 
 If you find mistakes or have a suggestion for a better translation please share it in the comments.<br>
-If you are interested in translating it to another language, please let me know via the <a title="Contact me!" href="https://www.hansreinl.de/archive/contact/" target="_blank">contact-form</a> or an <a title="Write me an email" href="mailto:info@drublic.de" target="_blank">email</a>.
+If you are interested in translating it to another language, please let me know via the <a title="Contact me!" href="https://www.hansreinl.de/archive/contact/" target="_blank">contact-form</a> or an <a title="Write me an email" href="mailto:hi@hansreinl.de" target="_blank">email</a>.
 
 ## Download
 

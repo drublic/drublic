@@ -23,7 +23,7 @@ Thanks to everyone who proposed me to be nominated, this really means a lot to m
 ## Freelance Work
 
 A couple of months ago I decided to leave <a href="http://gebruederheitz.de/">/gebrüderheitz</a> and do freelance work exclusively for some time starting in April. I want to focus a bit more on Open Source projects and work on some side-projects. I am really excited about the projects that I’ll be working on and about the re-organisation of my life.<br>
-The pipeline of actual client projects is still kind of free, so drop me a mail to <a href="mailto:info@drublic.de">info@drublic.de</a> or use the <a href="https://www.hansreinl.de/#contact">contact form</a> if you are interested in working with me. Please see the <a href="https://www.hansreinl.de/#hire-me">“Hire me” section</a> on my website to get a quick overview of what I like to work on.
+The pipeline of actual client projects is still kind of free, so drop me a mail to <a href="mailto:hi@hansreinl.de">hi@hansreinl.de</a> or use the <a href="https://www.hansreinl.de/#contact">contact form</a> if you are interested in working with me. Please see the <a href="https://www.hansreinl.de/#hire-me">“Hire me” section</a> on my website to get a quick overview of what I like to work on.
 
 This all and some projects besides my normal work schedule keep me from updating my blog more often. I hope to write some more technical articles soon.<br>
 LOVE!
