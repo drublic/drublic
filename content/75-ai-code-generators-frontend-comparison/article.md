@@ -18,6 +18,8 @@ Well, here we are.
 
 With more tools on the rise that are able to provide user interfaces, that look well, perform great and are accessible, it is more likely that designers, business people and engineers jump to use these tools quickly without considering another engineer to build interfaces for them.
 
+This represents a fundamental shift in software development—what Andrej Karpathy recently termed **"vibe coding"**. Instead of manually writing code, developers describe their project to an AI, which generates code based on the prompt. The developer then evaluates results and requests improvements without manually reviewing the code. This approach emphasizes iterative experimentation over traditional code structure, allowing amateur programmers to produce software without extensive training, though it raises questions about understanding and accountability.
+
 This experiment focusses purely on Web. I am using a greenfield project and am not looking into complex long-term projects and maintainability. This is a test with one person, not looking at collaborative features.
 
 ## Structured approach
