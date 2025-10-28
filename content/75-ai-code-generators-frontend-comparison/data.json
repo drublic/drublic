@@ -1,0 +1,17 @@
+{
+  "title": "AI Frontend Generator Comparison: Claude Code vs v0 vs Cursor vs Replit",
+  "date": "29.10.2025",
+  "abstract": "<p>AI Frontend Generator tools are experiencing a significant surge in popularity and adoption across the industry, with what appears to be multiple new tools being released and announced each week. With the recent surge in attention around Claude Code and similar AI-powered development tools, now is the perfect time to examine these platforms in depth and understand how they truly compare.</p><p>I have taken the time to thoroughly examine and test several of these tools, including Lovable, Replit, Vercel v0, base44, Cursor, Github Copilot, and Claude Code, using a structured approach with objective and subjective metrics to evaluate their performance, code quality, export capabilities, cost, tech stack, and developer experience.</p>",
+  "meta-title": "AI Frontend Generator Comparison 2025: Claude Code vs v0 vs Lovable vs Replit",
+  "meta-description": "Comprehensive comparison of AI frontend generators including Claude Code, v0, Lovable, Replit, base44, Cursor, and Github Copilot. Detailed analysis of performance, code quality, developer experience, and feature completeness.",
+  "image": "https://www.hansreinl.de/assets/ai-frontend-generators-comparison.jpg",
+  "headerImage": "/assets/ai-frontend-generators-comparison.jpg",
+  "headerImageCaption": "Photo by [Luke Jones](https://unsplash.com/@lukejonesdesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-computer-circuit-board-tBvF46kmwBw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)",
+  "tags": [
+    "AI",
+    "Frontend",
+    "Generators"
+  ],
+  "hasToc": true,
+  "hidden": false
+}
