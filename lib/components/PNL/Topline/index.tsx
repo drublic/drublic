@@ -2,23 +2,16 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 import Icon from "../../icons/Icon";
 import PreviewIcon from "../../icons/Preview";
-import FullscreenIcon from "../../icons/Fullscreen";
-import CloseFullscreenIcon from "../../icons/CloseFullscreen";
 import EditIcon from "../../icons/Edit";
 
 import styles from "./Topline.module.css";
+import articleListStyles from "../ArticleList/ArticleList.module.css";
 import CancelIcon from "../../icons/Cancel";
 
 const countWords = (input: string) =>
   input.split(" ").filter((n) => n != "").length;
 
-const Topline = ({
-  post,
-  onTitleChange,
-  onSlugChange,
-  isFullscreen,
-  onFullscreenChange,
-}) => {
+const Topline = ({ post, onTitleChange, onSlugChange }) => {
   const [isEditUrl, setIsEditUrl] = useState<boolean>(false);
   const [slug, setSlug] = useState<string>(post.slug);
 
@@ -26,24 +19,6 @@ const Topline = ({
 
   return (
     <>
-      <div className={styles.title}>
-        <input
-          type="text"
-          value={post.title}
-          className="typography--h3 input"
-          onChange={onTitleChange}
-        />
-
-        <button
-          className={styles.buttonFullscreen}
-          onClick={onFullscreenChange}
-        >
-          <Icon width={48} height={48}>
-            {isFullscreen ? <CloseFullscreenIcon /> : <FullscreenIcon />}
-          </Icon>
-        </button>
-      </div>
-
       <div style={{ display: "flex" }}>
         <div
           className={classNames("typography--body2", styles.withEditButton)}
@@ -67,7 +42,7 @@ const Topline = ({
                 autoFocus
               />
               <button
-                className="button button--small"
+                className={`button button--small ${articleListStyles.editButton}`}
                 onClick={() => {
                   onSlugChange(slug);
                   setIsEditUrl(false);
@@ -120,7 +95,10 @@ const Topline = ({
               <a
                 href={`/blog/${post.slug}?preview=true`}
                 target="drublic:preview"
-                className={classNames("button button--small")}
+                className={classNames(
+                  "button button--small",
+                  articleListStyles.editButton
+                )}
               >
                 <Icon width={24} height={24}>
                   <PreviewIcon />

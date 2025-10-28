@@ -1,8 +1,6 @@
 import React, { FC, ForwardedRef, forwardRef } from "react";
 import { Editor } from "@toast-ui/react-editor";
 
-import "@toast-ui/editor/dist/toastui-editor.css";
-
 type Props = {
   onChange: () => void;
   height?: number;
@@ -40,7 +38,7 @@ const MarkdownEditor: FC<Props> = ({ forwardedRef, onChange }) => (
     />
     <Editor
       previewStyle="tab"
-      height="auto"
+      height="calc(100vh - 200px)"
       initialEditType="markdown"
       useCommandShortcut={true}
       usageStatistics={false}

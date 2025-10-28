@@ -3,15 +3,6 @@
   margin-bottom: 2rem;
 }
 
-.buttonFullscreen {
-  -webkit-appearance: none;
-  padding: 0;
-  margin-left: 1rem;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
 .editButton {
   transform: scaleX(0);
 }

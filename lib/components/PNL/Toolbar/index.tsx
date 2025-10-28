@@ -3,6 +3,7 @@ import LoadingIcon from "../../icons/Loading";
 import Icon from "../../icons/Icon";
 
 import styles from "./Toolbar.module.css";
+import articleListStyles from "../ArticleList/ArticleList.module.css";
 import Toggle from "../Toggle";
 import classNames from "classnames";
 
@@ -11,16 +12,35 @@ const occurrences = (input: string[]) =>
     return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc;
   }, {});
 
-const Toolbar = ({ posts, currentPost, isSaving, onSave }) => {
+interface ToolbarProps {
+  posts: any[];
+  currentPost: any;
+  isSaving: boolean;
+  onSave: (slug: string) => Promise<void>;
+  setCurrentPost: (post: any) => void;
+}
+
+const Toolbar = ({
+  posts,
+  currentPost,
+  isSaving,
+  onSave,
+  setCurrentPost,
+}: ToolbarProps) => {
   const [isTagsOpen, setIsTagsOpen] = useState<boolean>(false);
   const tags = posts.flatMap(({ tags }) => (tags ? tags : [])).sort();
 
   return (
     <div className={styles.toolbar}>
       <button
-        className={classNames("button button--outline", styles.saveButton, {
-          [styles.buttonDisabled]: isSaving,
-        })}
+        className={classNames(
+          "button button--outline",
+          styles.saveButton,
+          articleListStyles.editButton,
+          {
+            [styles.buttonDisabled]: isSaving,
+          }
+        )}
         type="button"
         onClick={() => onSave(currentPost.slug)}
       >
@@ -46,7 +66,7 @@ const Toolbar = ({ posts, currentPost, isSaving, onSave }) => {
         <>
           <p>
             <button
-              className="button button--small"
+              className={`button button--small ${articleListStyles.editButton}`}
               onClick={() => setIsTagsOpen(true)}
             >
               Add Tags
@@ -67,6 +87,24 @@ const Toolbar = ({ posts, currentPost, isSaving, onSave }) => {
 
       <h3>Publishing Date</h3>
       <p>{currentPost.date}</p>
+
+      <h3>Status</h3>
+      <p>
+        <span className={`tag ${currentPost.hidden ? "tag--light" : ""}`}>
+          {currentPost.hidden ? "Draft" : "Published"}
+        </span>
+        <button
+          className={`button button--small ${articleListStyles.editButton}`}
+          onClick={() => {
+            const updatedPost = { ...currentPost, hidden: !currentPost.hidden };
+            setCurrentPost(updatedPost);
+            onSave(currentPost.slug);
+          }}
+          style={{ marginLeft: "0.5rem" }}
+        >
+          {currentPost.hidden ? "Publish" : "Unpublish"}
+        </button>
+      </p>
 
       <h3>Image</h3>
       {currentPost.image ? (

@@ -1,7 +1,14 @@
 .listWrapper {
-  overflow-y: scroll;
+  height: 100vh;
+  overflow-y: auto;
   padding: 1rem;
   padding-top: 0;
+}
+
+.listWrapperOverview {
+  height: auto;
+  overflow-y: visible;
+  padding: 0;
 }
 
 .list {
@@ -28,11 +35,19 @@
 }
 
 .listLink {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border-bottom: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.listLink:visited {
+  color: inherit;
 }
 
 .listLinkIcon {
@@ -46,4 +61,318 @@
 
 .listItemIsDraft .listLink {
   color: var(--copy-light);
+}
+
+.listItemContent {
+  padding: 0.5rem;
+  display: flex;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Overview mode styles */
+.overviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.overviewHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.table {
+  width: 100%;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.table thead {
+  background-color: var(--color-lightest);
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table thead th,
+.tableHeaderCell {
+  padding: 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: left;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.table thead th:first-child {
+  width: 50%;
+}
+
+.table thead th:nth-child(2) {
+  width: 10%;
+}
+
+.table thead th:nth-child(3) {
+  width: 15%;
+}
+
+.table thead th:nth-child(4) {
+  width: 15%;
+}
+
+.table thead th:nth-child(5) {
+  width: 10%;
+}
+
+.table tbody tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td,
+.tableCell {
+  padding: 0.5rem 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.table tbody td:first-child,
+.tableCell:first-child {
+  width: 50%;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table tbody td:nth-child(2),
+.tableCell:nth-child(2) {
+  width: 10%;
+}
+
+.table tbody td:nth-child(3),
+.tableCell:nth-child(3) {
+  width: 15%;
+}
+
+.table tbody td:nth-child(4),
+.tableCell:nth-child(4) {
+  width: 15%;
+}
+
+.table tbody td:nth-child(5),
+.tableCell:nth-child(5) {
+  width: 10%;
+}
+
+.tableRowIsActive {
+  position: relative;
+}
+
+.tableRowIsActive::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0.25rem;
+  background-color: var(--color);
+}
+
+.tableRowIsDraft .listLink {
+  color: var(--copy-light);
+}
+
+.tableCell .listLink {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listItemHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.listItemTitle {
+  flex: 1;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.listItemDate {
+  font-size: 0.875rem;
+  color: var(--copy-light);
+  white-space: nowrap;
+}
+
+.listItemMeta {
+  margin-top: 0.5rem;
+}
+
+.listItemTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tableCell span {
+  margin-top: 0;
+}
+
+.listItemAbstract {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--copy-light);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.listLink .button {
+  pointer-events: auto;
+}
+
+.listLink .button:before {
+  display: none;
+}
+
+.listLink .tag {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+/* Table header styles */
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--copy-light);
+}
+
+.emptyState p {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+/* Small tag styles */
+.tag--small {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-lightest);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Edit button styles */
+.editButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #fff;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  min-width: 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.editButton::before {
+  display: none;
+}
+
+.editButton:hover {
+  color: var(--color-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+
+.editButton:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.95);
+}
+
+@media (max-width: 768px) {
+  .table {
+    display: block;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .table tbody td,
+  .tableCell {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .table tbody td::before,
+  .tableCell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    margin-right: 0.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .overviewHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
