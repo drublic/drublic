@@ -76,7 +76,7 @@ Here are the tools I looked at:
 
 Additionally I also used two editors to generate:
 - Cursor Editor
-- Github Copilot through VS Code
+- GitHub Copilot through VS Code
 
 Plus, and that’s mainly due to the late hype: Claude Code
 
@@ -95,7 +95,7 @@ _(scroll horizontally)_
               <th>Vercel v0</th>
               <th>base44</th>
               <th>Cursor</th>
-              <th>Github Copilot</th>
+              <th>GitHub Copilot</th>
               <th>Claude Code</th>
             </tr></thead><tbody>
             <tr>
@@ -205,7 +205,7 @@ _(scroll horizontally)_
             </tr>
             <tr>
               <td><strong>Export/Portability</strong></td>
-              <td>Each file individually, Download to Github</td>
+              <td>Each file individually, Download to GitHub</td>
               <td>Each file individually, Download as zip</td>
               <td>
                 Each file individually, Download as zip, CLI Download
@@ -259,7 +259,7 @@ _(scroll horizontally)_
               <td>
                 No, there seems to be a .git folder, but I have not found it
               </td>
-              <td>Yes, Github, 2-way sync</td>
+              <td>Yes, GitHub, 2-way sync</td>
               <td>
                 No, only in $50 Subscription Plan, not even starter
               </td>
@@ -560,7 +560,7 @@ For the given scenario, the page presentation was well executed and looked nice.
 <li><a target="_blank" href="/ai-generators/cursor/7.jpg"><img src="/ai-generators/cursor/small7.jpg" width="100" /></a></li>
 </ul>
 
-### Github Copilot
+### GitHub Copilot
 
 This is the result I expected from Cursor as well, to be honest. Copilot seems to excel at other tasks. The landing page was somewhat of a disaster. The functionality didn't come close to meeting the requirements, and the tool wasn't straightforward in telling me what to do with the code.
 
