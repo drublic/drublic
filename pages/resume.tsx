@@ -34,40 +34,54 @@ const Resume = () => (
           <h2>Summary</h2>
 
           <p>
-            As an experienced Engineering Leader and Software Architect in
-            startups and corporates, I served my last role as Vice President of
-            Engineering for Seven.One Entertainment Group (ProSiebenSat.1) where
-            I led a team of 55 engineers, building Joyn, the Video Streaming
-            Platform. I have more than 15 years of experience developing
-            scalable web-applications using cutting-edge technologies by
-            utilizing agile development and methodologies. I am currently
-            looking for a new challenge.
+            Highly influential Engineering Leader and Software Architect (15+
+            years) with deep expertise in web-application development,
+            cloud-native, and high-scale platforms (11M+ MAU).en ability to
+            define engineering vision, translate complex microservice and cloud
+            architectures into strategic business value, and scale technical
+            knowledge across large organizations. My experience extends beyond
+            in-house leadership; as a consultant and influential co-host of the
+            Working Draft Podcast, I excel at synthesizing complex engineering
+            concepts into accessible, actionable guidance for a broad technical
+            audience.
           </p>
         </section>
 
         <section>
           <h2>Work</h2>
 
-          <p>
-            In the past I worked on projects for clients such as{" "}
-            <a href="https://www.axa.de/">AXA</a>,{" "}
-            <a href="https://www.rewe-digital.com/">REWE digital</a>,{" "}
-            <a href="https://www.vaillant-group.com/">
-              Vaillant Group Business Services
-            </a>
-            , fashion retailer{" "}
-            <a href="https://www.fashionette.de/">Fashionette</a> and others.
-            More on <a href="/portfolio">my portfolio</a>.
-          </p>
-
           <h3>Engineering and Leadership Consultant, Self-employed</h3>
           <p>July 2025 – current</p>
 
           <p>
-            I am currently working as a consultant, helping companies to enhance
-            their engineering and leadership capabilities. A strong focus of
-            this work is the introduction of AI and ML technologies.
+            Leveraging 15+ years of high-scale platform architecture and
+            engineering leadership to consult with companies, focusing on
+            enhancing their engineering capabilities and accelerating adoption
+            of the AI-native web.
           </p>
+
+          <ul>
+            <li>
+              Platform & AI Workloads: Hands-on architecture and implementation
+              utilizing the Vercel AI SDK and Vercel AI Gateway, Next.js,
+              Supabase, and Serverless architectures to build novel,
+              production-ready AI applications.
+            </li>
+            <li>
+              Reference Architecture Development: Designed and implemented a
+              full-stack, conversational coach (
+              <a href="https://nplusone.app/">N+One</a>) based on Next.js and
+              the Vercel Edge Network for personalized training
+              (cycling/fitness), demonstrating expertise in performant, stateful
+              serverless applications.
+            </li>
+            <li>
+              Agentic Systems & Automation: Developed an agentic-led, low-code
+              crawling and indexing process to gather and structure fiber
+              internet network information, showcasing proficiency in complex
+              automation and LLM integration workflows.
+            </li>
+          </ul>
 
           <h3>Seven.One Entertainment Group GmbH</h3>
 
@@ -77,12 +91,11 @@ const Resume = () => (
           </p>
 
           <p>
-            Within the Seven.One Entertainment Group the multi-tenant Video on
-            Demand Streaming Platform is the foundation for providing the
-            content of the ProSiebenSat.1 brands to multiple channels including
-            Web, iOS, Android and Smart TV. We deliver the experience of{" "}
-            <a href="https://video.prosieben.de/">video.prosieben.de</a>,{" "}
-            <a href="https://video.sat1.de/">video.sat1.de</a> and many more.
+            As Vice President Engineering, I was responsible for the strategic
+            development and maintenance of the customer facing applications of
+            the multi-tenant Streaming Platform{" "}
+            <a href="https://joyn.de/">Joyn</a>. serving 11 million monthly
+            active users.
           </p>
 
           <p>
@@ -93,32 +106,54 @@ const Resume = () => (
           </p>
 
           <p>
-            FYEO was a podcasting app which focused on delivering high quality
-            audio content next to established podcasting formats, with over 1.6
-            million formats and over 40 million episodes in its database.
+            As Director of Technology & Product, I led the development and
+            maintenance of FYEO, a podcasting app with over 1.6 million formats
+            and 40 million episodes.
           </p>
 
-          <h3>
-            Freelance Software Architect &amp; Engineer, Engineering Manager
-          </h3>
+          <h3>Software Architect & Engineer, Engineering Manager</h3>
 
           <p>April 2013 – July 2020</p>
 
-          <ul>
-            <li>Consulting for middle and large-scale web projects</li>
-            <li>
-              Analysis and improvement of new and existing software
-              architectures
-            </li>
-            <li>
-              Workshops for agencies to coach their developers and designers
-            </li>
-            <li>
-              Working on client projects using, configuring and developing for
-              FirstSpirit, TYPO3 CMS, Magento and Hybris
-            </li>
-            <li>Scrum Master, Project and Engineering Manager </li>
-          </ul>
+          <p>
+            I worked on projects for clients such as AXA, REWE digital, Vaillant
+            Group and others where I served as Software Architect, Engineer and
+            Engineering Manager.
+          </p>
+
+          <div className="flex space-between mt-1">
+            <h4 className="mt-0 mb-0">
+              AXA Deutschland, Lead Software Engineer and Software Architect
+            </h4>
+            <p className="mb-0">July 2018 – September 2019</p>
+          </div>
+
+          <p className="mt-0">
+            Led the development and growth of an engineering team responsible
+            for building online insurance tariff calculators for AXA Deutschland
+            in a strongly regulated environment.
+          </p>
+
+          <div className="flex space-between mt-1">
+            <h4 className="mt-0 mb-0">REWE digital, Software Engineer</h4>
+            <p className="mb-0">July 2017 - June 2018</p>
+          </div>
+          <p className="mt-0">
+            Contributed to the development of platform services that enhanced
+            the web experience of REWE's online presence and online shop, one of
+            the biggest retail chains in Europe.
+          </p>
+
+          <div className="flex space-between mt-1">
+            <h4 className="mt-0 mb-0">
+              Fashionette, Engineering Manager and Software Architect
+            </h4>
+            <p className="mb-0">November 2015 – August 2016</p>
+          </div>
+          <p className="mt-0">
+            Spearheaded the transformation of the monolithic e-commerce platform
+            to a scalable microservice architecture.
+          </p>
 
           <h3>Other</h3>
 
