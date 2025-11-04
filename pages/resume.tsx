@@ -110,7 +110,28 @@ const Resume = () => (
             maintenance of FYEO, a podcasting app with over 1.6 million formats
             and 40 million episodes.
           </p>
+        </section>
+      </div>
 
+      <figure className="section--fullsize">
+        <Image
+          src="/img/discussions.jpg"
+          alt="Speaking and Discussions"
+          width={1866}
+          height={832}
+          className="w-full h-full object-cover mt-1"
+        />
+
+        <figcaption className="image__caption">
+          <span className="image__caption__copywrite">
+            Droidcon & Fluttercon at The Cube, Berlin, 24-26 September 2025;
+            www.tellingphotography.com
+          </span>
+        </figcaption>
+      </figure>
+
+      <div className="main container">
+        <section>
           <h3>Software Architect & Engineer, Engineering Manager</h3>
 
           <p>April 2013 – July 2020</p>
@@ -170,22 +191,34 @@ const Resume = () => (
         </section>
       </div>
 
-      <div
-        className="section--fullsize section--ratio"
-        style={{ backgroundImage: "url(/img/speaking.jpg)" }}
-      ></div>
-
       <div className="main container">
+        <figure className="image image--right">
+          <Image
+            src="/img/speaking-discussion.jpg"
+            alt="Speaking and Discussions"
+            width={1200}
+            height={1800}
+            className="w-full"
+          />
+
+          <figcaption className="image__caption">
+            <span className="image__caption__copywrite">
+              Droidcon & Fluttercon at The Cube, Berlin, 24-26 September 2025;
+              www.tellingphotography.com
+            </span>
+          </figcaption>
+        </figure>
+
         <section>
-          <h2>Open Source &amp; Community Engagement</h2>
+          <h2>Industry Influence &amp; Collaborative Initiatives</h2>
           <p>
-            <b>Mentor at The Mentoring Club</b>: The Mentoring Club is an open
-            community which aims at supporting people who are keen to learn,
-            grow and develop. I provide advice to mentees to advance in their
-            career by sharing my knowledge in the areas of Engineering,
-            Engineering Management &amp; Leadership, Agile Methodologies and
-            more. <Link href="/blog/mentoring-club">More information here</Link>
-            .
+            <b>Mentor at The Mentoring Club</b>:{" "}
+            <a href="https://www.mentoring-club.com/">The Mentoring Club</a> is
+            an open community which aims at supporting people who are keen to
+            learn, grow and develop. I provide advice to mentees to advance in
+            their career in the areas such as Engineering Management &amp;
+            Leadership, Career building, Agile Methodologies and more{" "}
+            <Link href="/blog/mentoring-club">More information here</Link>.
           </p>
 
           <p>
@@ -196,21 +229,10 @@ const Resume = () => (
           </p>
 
           <p>
-            <b>NightlyBuild Conference</b>: Co-Organizer of the web development
-            and design focused{" "}
-            <a href="https://nightlybuild.io">NightlyBuild Conference</a> in
-            Cologne from 2014 to 2017.
-          </p>
-
-          <p>
-            <b>Former Core Developer of HTML5 Boilerplate</b>: Ongoing
-            maintenance of HTML5 Boilerplate, a solid front-end template to
-            start projects with.
-          </p>
-
-          <p>
-            <b>Speaking engagements</b> at conferences across Europe (including
-            Front-Trends in Warsaw and Frontend Conference in Zürich).
+            <b>Speaking engagements at conferences and webinars</b>: topics
+            including Engineering Metrics, Design Systems and Component Based
+            Development (e.g. Lead Dev Berlin, Front-Trends in Warsaw and
+            Frontend Conference in Zürich).
           </p>
 
           <p>
@@ -219,16 +241,6 @@ const Resume = () => (
             <Link href="/about/writings">Writings</Link>.
           </p>
         </section>
-      </div>
-
-      <div
-        className="section--fullsize section--ratio"
-        style={{ backgroundImage: "url(/img/working.jpg)" }}
-      >
-        <p className="section__caption text--small">
-          &copy;
-          <a href="https://twitter.com/stn1978">Stefan Nitzsche</a>
-        </p>
       </div>
     </main>
   </Layout>

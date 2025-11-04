@@ -57,6 +57,7 @@ hr {
   position: absolute;
   bottom: 1rem;
   right: 2rem;
+  color: var(--color-lightest);
 }
 
 .section--fullsize {
@@ -105,7 +106,7 @@ hr {
 
 @media (min-width: 32em) {
   .section--ratio::after {
-    padding-top: 37.5%;
+    padding-top: 44.56%;
   }
 }
 
