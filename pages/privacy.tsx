@@ -41,12 +41,11 @@ const Privacy = () => (
       </p>
 
       <p>
-        Hans-Christian Reinl Internetdienstleistungen
-        <br /> Einzelunternehmer
-        <br /> Memelstr. 2
-        <br /> 35606 Solms
+        Hans-Christian Reinl
+        <br /> Freiberufler
+        <br /> Weißer Str. 9-11
+        <br /> 50996 Köln
         <br /> Germany
-        <br /> Inhaber: Hans-Christian Reinl
       </p>
 
       <p>

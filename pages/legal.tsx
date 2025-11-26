@@ -7,11 +7,12 @@ const Legal = () => (
       <h2 id="imprint-label">Imprint</h2>
 
       <div>
-        <h3>Hans-Christian Reinl Internetdienstleistungen</h3>
-        <p>Einzelunternehmer</p>
+        <h3>Hans-Christian Reinl</h3>
+        <p>Freiberufler</p>
         <p>
-          Memelstr. 2<br />
-          35606 Solms
+          Weißer Str. 9-11
+          <br />
+          50996 Köln
           <br />
           Germany
         </p>
@@ -30,7 +31,7 @@ const Legal = () => (
         </p>
 
         <p>
-          Finanzamt Wetzlar
+          Finanzamt Köln-Süd
           <br />
           Ust-IdNr.: DE288406427
         </p>
