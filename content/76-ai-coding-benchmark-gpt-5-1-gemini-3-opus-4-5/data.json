@@ -1,0 +1,20 @@
+{
+  "title": "Latest LLMs in the Test: GPT 5.1 Codex Max vs. Gemini Pro 3 vs. Opus 4.5",
+  "date": "07.12.2025",
+  "abstract": "<p>With the release of Claude Opus 4.5 and the hype surrounding \"engineering-grade\" models, I moved beyond frontend generation to test their capabilities as full-stack engineers.</p>\n<p>I took the three current heavyweights—GPT-5.1-Codex-Max, Gemini 3 Pro, and Claude Opus 4.5—and ran them through a rigorous MVP development cycle to build 'Speakit', a text-to-speech application, to see if benchmark numbers translate to shipping products.</p>",
+  "meta-title": "Gemini 3 Pro vs GPT-5.1 Codex-Max vs Claude Opus 4.5: AI Coding Benchmark",
+  "meta-description": "A deep dive comparison of Gemini 3 Pro, GPT-5.1-Codex-Max, and Claude Opus 4.5 building a full-stack MVP. Analysis of code quality, speed, and feature completeness.",
+  "image": "https://www.hansreinl.de/assets/ai-coding-benchmark-gemini-opus-gpt.jpg",
+  "headerImage": "/assets/ai-coding-benchmark-gemini-opus-gpt.jpg",
+  "headerImageCaption": "Photo by [Google DeepMind](https://unsplash.com/@googledeepmind?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/diagram-schematic-OFt3fSN2qV4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)",
+  "tags": [
+    "AI",
+    "LLM",
+    "Engineering",
+    "Comparison",
+    "Benchmark",
+    "Cursor"
+  ],
+  "hasToc": true,
+  "hidden": false
+}
