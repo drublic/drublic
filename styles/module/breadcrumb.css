@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
+  margin-top: 1rem;
 }
 
 .breadcrumb li {
@@ -21,4 +22,10 @@
 
 .breadcrumb li:last-child:after {
   display: none;
+}
+
+@media screen and (min-width: 32em) {
+  .breadcrumb ol {
+    margin-top: 0;
+  }
 }

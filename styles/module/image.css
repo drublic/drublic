@@ -29,6 +29,10 @@
   max-width: 66.66%;
 }
 
+.image--medium {
+  max-width: 35%;
+}
+
 .image--small {
   max-width: 20%;
 }

@@ -2,7 +2,9 @@
  * Typography
  */
 html {
-  font: 16px "Roboto", sans-serif;
+  font:
+    16px "Roboto",
+    sans-serif;
   font-weight: 300;
   color: var(--copy-color);
 }
@@ -54,7 +56,7 @@ h3,
 h4,
 .typography--h4 {
   font-size: 1.125rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h2 + h4 {
@@ -141,6 +143,9 @@ pre {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-left: 0.25rem solid var(--border-color);
+
+  max-width: 100%;
+  overflow: scroll;
 }
 
 code,
@@ -219,8 +224,10 @@ figure {
 blockquote {
   position: relative;
   padding-left: 3rem;
-  margin: 4rem 0;
+  margin: 3rem 0;
   padding: 0.5rem 0 0.5rem 2rem;
+  max-width: 100%;
+  font-size: 1.25rem;
 }
 
 blockquote.blockquote-small {

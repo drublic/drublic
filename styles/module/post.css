@@ -44,6 +44,10 @@
   margin: 1rem auto !important;
 }
 
+.post li {
+  color: var(--text-color-light);
+}
+
 .post table {
   font-size: 0.9em;
   border-spacing: 0;
