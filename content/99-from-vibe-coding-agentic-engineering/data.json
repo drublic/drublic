@@ -1,0 +1,18 @@
+{
+  "title": "From Vibe Coding to Agentic Engineering",
+  "date": "24.04.2026",
+  "abstract": "<p>I want to share my workflow for moving from vibe coding to agentic engineering. I will walk you through the process of defining a feature, exploring the UI in v0, integrating the code in Cursor, reviewing and refactoring the code, and testing, merging, and shipping the feature.</p>",
+  "meta-title": "From Vibe Coding to Agentic Engineering",
+  "meta-description": "I want to share my workflow for moving from vibe coding to agentic engineering. I will walk you through the process of defining a feature, exploring the UI in v0, integrating the code in Cursor, reviewing and refactoring the code, and testing, merging, and shipping the feature.",
+  "headerImage": "/assets/from-vibe-coding-agentic-engineering.jpg",
+  "headerImageCaption": "Photo by <a href=\"https://unsplash.com/@alesnesetril?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Ales Nesetril</a> on <a href=\"https://unsplash.com/photos/gray-and-black-laptop-computer-on-surface-Im7lZjxeLhg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>",
+  "hidden": false,
+  "tags": [
+    "Vibe Coding",
+    "Agentic Engineering",
+    "AI",
+    "Engineering",
+    "Productivity",
+    "Cursor"
+  ]
+}
