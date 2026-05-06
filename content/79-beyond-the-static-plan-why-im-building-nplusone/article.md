@@ -43,4 +43,4 @@ Our goal isn't to replace human coaches, but to make world-class coaching princi
 
 The future of training isn't a calendar. It's a conversation.
 
-If you're interested in the intersection of AI and human performance, check out [N+One]((https://nplusone.app/)) and join our waitlist for early access.
+If you're interested in the intersection of AI and human performance, check out [N+One](https://nplusone.app/) and join our waitlist for early access.
