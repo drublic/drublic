@@ -1,17 +1,17 @@
 {
   "title": "Beyond the Static Plan: Why I'm Building N+One",
   "date": "05.05.2026",
-  "abstract": "<p>Static training plans break when life happens. N+One is a conversational AI coach that adapts to readiness, constraints, and goals in real time to make elite coaching principles accessible to every athlete.</p>",
+  "abstract": "Static training plans break when life happens. N+One is a conversational AI coach that adapts to readiness, constraints, and goals in real time to make elite coaching principles accessible to every athlete.",
   "meta-title": "Beyond the Static Plan: Why I'm Building N+One",
-  "meta-description": "Static training plans break when life happens. N+One is a conversational AI coach that adapts to readiness, constraints, and goals in real time to make elite coaching principles accessible to every athlete.",
+  "meta-description": "N+One is a conversational AI coach that adapts to readiness, constraints, and goals in real time to make elite coaching principles accessible to every athlete.",
   "image": "https://www.hansreinl.de/assets/nplusone.jpg",
   "headerImage": "/assets/nplusone.jpg",
   "hidden": false,
   "tags": [
-    "AI",
-    "Agentic Engineering",
+    "Ai",
+    "Agentic engineering",
     "Cycling",
     "Coaching",
-    "N+One"
+    "N+one"
   ]
 }

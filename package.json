@@ -6,7 +6,12 @@
     "dev": "next dev --turbopack",
     "copy:assets": "cp -r content/**/*.{png,jpeg,jpg} public/assets",
     "copy:articles": "cp -r content .next/server/chunks",
-    "build": "next build && yarn copy:articles && yarn copy:assets",
+    "content:report": "node scripts/content/report-metadata.mjs",
+    "content:normalize": "node scripts/content/normalize-metadata.mjs",
+    "content:normalize:write": "node scripts/content/normalize-metadata.mjs --write",
+    "content:tune": "node scripts/content/tune-metadata-lengths.mjs",
+    "content:validate": "node scripts/content/validate-metadata.mjs",
+    "build": "yarn content:validate && next build && yarn copy:articles && yarn copy:assets",
     "start": "next start"
   },
   "dependencies": {

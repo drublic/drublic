@@ -1,0 +1,491 @@
+{
+  "generatedAt": "2026-05-08T09:19:41.905Z",
+  "summary": {
+    "totalPosts": 93,
+    "hiddenPosts": 9,
+    "parseErrors": 0,
+    "issueCount": 95,
+    "issueCounts": {
+      "missing_required_field": 87,
+      "short_meta_description": 7,
+      "short_abstract": 1
+    }
+  },
+  "issues": [
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/01-this-is-what-its-all-about/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/01-this-is-what-its-all-about/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/03-css3-auto-hyphenation-for-text-elements/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/04-mobile-design-is-not-only-responsive/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/06-style-syntax-in-comments/data.json"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/06-style-syntax-in-comments/data.json",
+      "details": "Length 65"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/07-pseudo-classes-in-print-styles-for-references-in-links/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/08-html5-boilerplate-favicons-psd-template/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/09-text-shadow-in-internet-explorer/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/10-touch-icons-for-android-devices-y-u-no-working/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/11-css3-rotate-images-on-click/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/12-where-are-my-rounded-corners/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/13-wo-sind-meine-abgerundeten-ecken/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/14-restrict-textareas-resize-css3/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/15-how-to-build-accordion-using-css-and-jquery/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/15-how-to-build-accordion-using-css-and-jquery/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/16-lea-verous-animatable/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/17-a-travel-through-time-and-back/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/19-is-mothereffin-jquery-up/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/20-effects-for-the-web/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/21-about-gits-cherry-picking/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/22-dabblet-chrome-app/data.json"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/22-dabblet-chrome-app/data.json",
+      "details": "Length 53"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/23-the-css-hierarchies-module-level-3/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/24-about-css-variables/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/25-twitter-recess-css-cleaning-tool-build-on-less/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/26-my-coding-style-and-guidelines/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/27-sass-vs-less/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/28-principles-of-writing-consistent-idiomatic-css/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/28-principles-of-writing-consistent-idiomatic-css/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/29-building-advanced-initial-boilerpalte/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/30-html5bp-v4-0-0/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/32-writing-awesome-code/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/32-writing-awesome-code/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/33-conference-test-the-web-forward/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/34-the-nitty-gritty-new-resource-for-web-devs/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/35-working-draft-100/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/36-rem-fallback-sass-less/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/37-takeoff-conference-talking-about-good-code/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/37-takeoff-conference-talking-about-good-code/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/38-speaking-engagements-net-awards-freelancing/data.json"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/38-speaking-engagements-net-awards-freelancing/data.json",
+      "details": "Length 71"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/39-printing-the-web/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/41-accessible-dialogs-modals/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/42-add-main-element-modernizr/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/44-learnings-from-using-sass-in-large-scale-projects/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/44-learnings-from-using-sass-in-large-scale-projects/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/46-es6-modules-using-browserify-mocha/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/50-contentful-to-algolia/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/51-how-to-set-up-herokuapp/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/52-i-got-the-keys-communication/data.json"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/52-i-got-the-keys-communication/data.json",
+      "details": "Length 65"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/53-cycle-of-development/data.json",
+      "details": "Length 77"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/56-introducing-warhol/data.json"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/57-starting-with-deno-porting-express-app/data.json",
+      "details": "Length 59"
+    },
+    {
+      "type": "short_meta_description",
+      "file": "content/61-mentoring-club/data.json",
+      "details": "Length 76"
+    },
+    {
+      "type": "short_abstract",
+      "file": "content/61-mentoring-club/data.json",
+      "details": "Length 76"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/77-essential-guide-to-becoming-an-engineering-manager/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/77-essential-guide-to-becoming-an-engineering-manager/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/77-essential-guide-to-becoming-an-engineering-manager/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-2023-03-08T20:10:12.582Z/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-2023-03-08T20:10:12.582Z/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-2023-03-08T20:10:12.582Z/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-2023-11-17T09:18:50.641Z/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-2023-11-17T09:18:50.641Z/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-2023-11-17T09:18:50.641Z/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-generativeai-learning-courses/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-generativeai-learning-courses/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-generativeai-learning-courses/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-leadership-lessons-integration-acquired-company-into-corporate/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-leadership-lessons-integration-acquired-company-into-corporate/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-leadership-lessons-integration-acquired-company-into-corporate/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-microdata-online-shop/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-microdata-online-shop/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-microdata-online-shop/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-reasons-why-career-is-stuck/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-reasons-why-career-is-stuck/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-reasons-why-career-is-stuck/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content/99-staffing-software-engineering-teams/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content/99-staffing-software-engineering-teams/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content/99-staffing-software-engineering-teams/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content-ai/99-ai-design-ethics-balancing-efficiency-human-touch/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content-ai/99-ai-design-ethics-balancing-efficiency-human-touch/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content-ai/99-ai-design-ethics-balancing-efficiency-human-touch/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content-ai/99-ai-generated-content-opportunities-and-risks-for-frontend-developers/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content-ai/99-ai-revolutionizes-ux-design/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content-ai/99-ai-revolutionizes-ux-design/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content-ai/99-ai-revolutionizes-ux-design/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content-ai/99-ai-revolutionizing-front-end-development/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content-ai/99-ai-revolutionizing-front-end-development/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content-ai/99-ai-revolutionizing-front-end-development/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "abstract",
+      "file": "content-ai/99-human-centered-design-ai-development/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content-ai/99-human-centered-design-ai-development/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-description",
+      "file": "content-ai/99-human-centered-design-ai-development/data.json"
+    },
+    {
+      "type": "missing_required_field",
+      "field": "meta-title",
+      "file": "content-leadership/99-software-engineer-to-engineering-leader-making-the-transition/data.json"
+    }
+  ]
+}

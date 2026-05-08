@@ -2,7 +2,7 @@
   "title": "Lea Verou's Animatable",
   "date": "30.10.2011",
   "abstract": "Lea Verou publishes some really great stuff. Her latest work is Animatable. A tool to showcase the variety of things you can do with CSS3 animations. And it's awesome. Some weeks ago I had this article about rotating images like I use in the footer of this page. There is an animation in Lea's demos that makes use of the same properties. You will find some nice cutting edge CSS3-techniques in the demos so make sure to check out the source-code on GitHub. You can also contribute and check in a pull request if you want to. Edit: And by",
-  "meta-title": "",
+  "meta-title": "Lea Verou's Animatable",
   "meta-description": "Lea Verou publishes some really great stuff. Her latest work is Animatable, a tool to showcase the variety of things you can do with CSS3 animations.",
   "link": true
 }
