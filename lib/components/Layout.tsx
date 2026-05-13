@@ -1,9 +1,22 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import Head from "./Head";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cookiescript from "./Cookiescript";
 import { useRouter } from "next/router";
+
+type LayoutProps = {
+  title?: string;
+  description?: string;
+  image?: string;
+  ogType?: string;
+  articlePublishedTime?: string;
+  articleAuthor?: string;
+  noIndex?: boolean;
+  noNavigation?: boolean;
+  noFooter?: boolean;
+  children: ReactNode;
+};
 
 const Layout = ({
   title = "Hans Reinl - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
@@ -16,7 +29,7 @@ const Layout = ({
   noNavigation = false,
   noFooter = false,
   children,
-}) => {
+}: LayoutProps) => {
   const router = useRouter();
 
   // Get page type for view transitions
