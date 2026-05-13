@@ -21,17 +21,17 @@
     "@vercel/speed-insights": "^2.0.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
-    "next": "16.2.4",
+    "next": "16.2.6",
     "node-fetch": "^3.3.2",
     "normalize.css": "^8.0.1",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
     "rss-parser": "^3.13.0",
     "showdown": "^2.1.0",
     "swr": "^2.4.1"
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.7.0",
     "@types/react": "^19.2.14",
     "typescript": "^6.0.3"
   }
