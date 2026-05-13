@@ -1,0 +1,20 @@
+{
+  "title": "AI in Production: Agentic Engineering Across the SDLC",
+  "date": "08.05.2026",
+  "abstract": "I map my AI-in-production workflow to the software development lifecycle, from discovery to operations, with clear handoffs between AI agents and human owners. The core idea: agentic engineering is not a coding trick but a delivery system for reliable software.",
+  "meta-title": "AI in Production: Agentic Engineering Mapped to the SDLC",
+  "meta-description": "A practical AI-in-production framework: map agentic engineering to each SDLC phase with clear ownership, quality gates, and repeatable delivery.",
+  "image": "https://www.hansreinl.de/assets/ai-in-production-agentic-sdlc.jpg",
+  "headerImage": "/assets/ai-in-production-agentic-sdlc.jpg",
+  "headerImageCaption": "Editorial-style header illustration for this article (AI-generated).",
+  "hidden": false,
+  "hasToc": true,
+  "tags": [
+    "Agentic engineering",
+    "SDLC",
+    "Ai",
+    "Engineering",
+    "Productivity",
+    "Cursor"
+  ]
+}
