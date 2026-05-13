@@ -38,3 +38,9 @@ The key for frontend developers is to strike a balance between leveraging the op
 ## Conclusion
 
 AI-generated content is redefining the role of frontend developers, presenting both exciting opportunities and significant risks. By understanding these aspects, developers can better navigate this new landscape, harnessing the power of AI to enhance efficiency and user experience, while also maintaining the authenticity and quality of their content.
+
+If you want practical tool comparisons for day-to-day frontend delivery, continue with:
+
+- [v0 vs Claude Code: Which One Helps Frontend Teams Ship Faster?](/ai/v0-vs-claude-code-frontend-workflows)
+- [Vercel v0 vs Claude Code: When to Use Which in Frontend Teams](/ai/vercel-v0-vs-claude-code-when-to-use-which)
+- [Replit vs Claude Code: Which Is Better for Building Web Products?](/ai/replit-vs-claude-code-for-building-web-products)

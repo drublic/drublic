@@ -8,3 +8,9 @@ Write code: While still in its early stages, GenAI is already capable of generat
 However, it's important to acknowledge the challenges associated with integrating AI-generated code into existing codebases. Additionally, GenAI can sometimes generate outdated code or struggle to integrate different AI-generated elements seamlessly.
 
 Despite these challenges, the potential benefits of GenAI are undeniable. As the technology continues to evolve, we can expect to see even more innovative applications of GenAI in front-end development.
+
+If you are evaluating AI coding workflows in practice, these comparisons may help:
+
+- [v0 vs Claude Code: Which One Helps Frontend Teams Ship Faster?](/ai/v0-vs-claude-code-frontend-workflows)
+- [Vercel v0 vs Claude Code: When to Use Which in Frontend Teams](/ai/vercel-v0-vs-claude-code-when-to-use-which)
+- [Cursor vs Claude Code for Frontend Teams: How to Choose](/ai/cursor-vs-claude-code-for-frontend-teams)
