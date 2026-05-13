@@ -9,6 +9,9 @@ const Layout = ({
   title = "Hans Reinl - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
   description = `Engineering Management & Software Architecture, Hans Christian Reinl - Working Draft, Node.js, React, CSS, JavaScript & Agile`,
   image = undefined,
+  ogType = "website",
+  articlePublishedTime,
+  articleAuthor,
   noIndex = false,
   noNavigation = false,
   noFooter = false,
@@ -36,6 +39,9 @@ const Layout = ({
         title={`${title} | Hans Reinl`}
         description={description}
         image={image}
+        ogType={ogType}
+        articlePublishedTime={articlePublishedTime}
+        articleAuthor={articleAuthor}
         noIndex={noIndex}
       />
 

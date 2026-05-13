@@ -1,12 +1,12 @@
 import Link from "next/link";
-import React, { FunctionComponent, useEffect } from "react";
-import Head from "next/head";
+import React, { FunctionComponent } from "react";
 import ArticleTeaserSmall from "../components/ArticleTeaserSmall";
 import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
 import Toc from "./Toc";
 import Image from "next/image";
 import { getDate } from "../utils/date";
+import { resolveSocialPreviewImage } from "../utils/socialImage";
 import * as showdown from "showdown";
 
 interface Post {
@@ -28,22 +28,17 @@ const Post: FunctionComponent<Post> = ({
     return null;
   }
 
+  const publishedAt = getDate(post.date);
+
   return (
     <Layout
       title={`${post["meta-title"] ? post["meta-title"] : post.title} | Blog`}
       description={post["meta-description"]}
-      image={post.image}
+      image={resolveSocialPreviewImage(post.image, post.headerImage)}
+      ogType="article"
+      articlePublishedTime={publishedAt.toISOString()}
+      articleAuthor="Hans Christian Reinl"
     >
-      <Head>
-        <meta name="article:author" content="Hans Christian Reinl" />
-
-        <meta
-          name="publish_date"
-          property="og:publish_date"
-          content={post.date}
-        />
-      </Head>
-
       <main id="content" className="main container" role="main">
         <div className="breadcrumb">
           <ol>

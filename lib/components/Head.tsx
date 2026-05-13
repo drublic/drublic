@@ -1,9 +1,22 @@
 import React from "react";
 import NextHead from "next/head";
 import { usePathname } from "next/navigation";
+import { toAbsoluteOgImageUrl } from "../utils/socialImage";
 
-const Head = ({ title, description, image, noIndex = false }) => {
+const Head = ({
+  title,
+  description,
+  image,
+  noIndex = false,
+  ogType = "website",
+  articlePublishedTime,
+  articleAuthor,
+}) => {
   const pathname = usePathname();
+  const resolvedImage =
+    image && String(image).trim()
+      ? toAbsoluteOgImageUrl(String(image).trim())
+      : undefined;
 
   return (
     <NextHead>
@@ -28,14 +41,23 @@ const Head = ({ title, description, image, noIndex = false }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
 
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image ? (
+      {ogType === "article" && articlePublishedTime ? (
+        <meta
+          property="article:published_time"
+          content={articlePublishedTime}
+        />
+      ) : null}
+      {ogType === "article" && articleAuthor ? (
+        <meta property="article:author" content={articleAuthor} />
+      ) : null}
+      {resolvedImage ? (
         <>
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={image} />
-          <meta property="og:image" content={image} />
+          <meta name="twitter:image" content={resolvedImage} />
+          <meta property="og:image" content={resolvedImage} />
         </>
       ) : (
         <>
