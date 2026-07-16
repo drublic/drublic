@@ -5,15 +5,28 @@ import Layout from "../lib/components/Layout";
 import Community from "../lib/components/portfolio/Community";
 import Projects from "../lib/components/portfolio/Projects";
 
-const Legal = () => (
-  <Layout title="Imprint">
+const Portfolio = () => (
+  <Layout
+    title="Portfolio"
+    description="Projects and clients by Hans Christian Reinl — including N+One, Warhol, Working Draft, and open source contributions."
+  >
     <main id="content" className="main" role="main">
       <section className="work container" id="work">
         <h1>Work I do</h1>
 
+        <p>
+          From AI-native product development to open source and community
+          building — here is a selection of projects I have built and
+          contributed to.
+        </p>
+
         <h2>Clients</h2>
 
-        <p>In the past I have worked for several clients small and large.</p>
+        <p>
+          Over 15 years I have worked with companies from startups to
+          enterprise, including AXA, REWE digital, Vaillant Group, Joyn, and
+          more.
+        </p>
 
         <div className="work__for">
           <Clients />
@@ -21,6 +34,35 @@ const Legal = () => (
 
         <div>
           <h2>My own projects</h2>
+
+          <div className="work__element">
+            <div className="work__element__content">
+              <h3>
+                <a href="https://nplusone.app/">N+One</a>
+              </h3>
+              <p>
+                AI-native coaching platform for cyclists. Analyzes training
+                load, recovery, and performance data to dynamically adapt
+                training plans, identify limiters, and optimize race
+                preparation.
+              </p>
+              <p className="work__element__date">Founder, since April 2026</p>
+            </div>
+          </div>
+
+          <div className="work__element">
+            <div className="work__element__content">
+              <h3>Fiberfone GmbH</h3>
+              <p>
+                Fractional CTO leading technical strategy and a 23M+ data point
+                infrastructure for automated location-based order management.
+                Architected agentic AI systems and low-code crawling processes.
+              </p>
+              <p className="work__element__date">
+                Fractional CTO, October 2023 – February 2026
+              </p>
+            </div>
+          </div>
 
           <div className="work__element">
             <a href="https://warhol.io/" className="work__element__image">
@@ -65,4 +107,4 @@ const Legal = () => (
   </Layout>
 );
 
-export default Legal;
+export default Portfolio;

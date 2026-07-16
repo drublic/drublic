@@ -74,6 +74,12 @@ const Head = ({
       )}
 
       <link type="text/plain" rel="author" href="/humans.txt" />
+      <link type="text/plain" href="/llms.txt" title="llms.txt" />
+      <link
+        type="text/plain"
+        href="/.well-known/llms.txt"
+        title="llms.txt (well-known)"
+      />
       <meta name="author" content="Hans Christian Reinl" />
 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -86,7 +92,7 @@ const Head = ({
       <link
         rel="index"
         href="/"
-        title="Hans Reinl - State of the Art Webdesign - HTML, CSS, JavaScript - Hans Christian Reinl"
+        title="Hans Reinl - AI-Native Systems Architect & Engineering Advisor"
       />
 
       <link rel="canonical" href={`https://hansreinl.de${pathname}`} />

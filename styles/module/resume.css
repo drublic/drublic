@@ -1,0 +1,198 @@
+/* Last content block sits flush against the footer otherwise —
+   .main's padding shorthand overrides .container's padding. */
+main > .main.container:last-child {
+  padding-bottom: 4rem;
+}
+
+/* Clip any residual overflow from transforms / full-bleed children. */
+main.resume {
+  overflow-x: hidden;
+}
+
+.resume-card {
+  position: relative;
+  perspective: 1200px;
+  margin: 1rem 0 3rem;
+}
+
+.resume-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--border-radius) * 1.5);
+  background: linear-gradient(
+    135deg,
+    rgba(244, 116, 255, 0.35),
+    rgba(98, 54, 255, 0.15) 50%,
+    rgba(98, 54, 255, 0.05)
+  );
+  opacity: 0.5;
+  z-index: 0;
+  filter: blur(12px);
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.resume-card:has(.resume-card__inner--hovered)::before {
+  opacity: 0.85;
+}
+
+.resume-card__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  background-image: none;
+  border-radius: calc(var(--border-radius) * 1.5);
+  border: 1px solid rgba(98, 54, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(98, 54, 255, 0.04),
+    0 4px 24px rgba(98, 54, 255, 0.1),
+    0 2px 8px rgba(17, 17, 17, 0.04);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.resume-card__inner--hovered {
+  box-shadow:
+    0 0 0 1px rgba(98, 54, 255, 0.12),
+    0 16px 48px rgba(98, 54, 255, 0.22),
+    0 8px 24px rgba(244, 116, 255, 0.12);
+}
+
+.resume-card__photo {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.resume-card__photo::after {
+  content: "";
+  position: absolute;
+  top: -0.15rem;
+  left: -0.15rem;
+  right: -0.15rem;
+  bottom: -0.15rem;
+  background-image: linear-gradient(
+    161.81deg,
+    var(--secondary-color--hover) 25%,
+    var(--secondary-color) 75%
+  );
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.resume-card__photo img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  border-radius: 50%;
+  width: calc(100% - 0.7rem);
+  height: calc(100% - 0.7rem);
+  border: 0.35rem solid #fff;
+  object-fit: cover;
+}
+
+.resume-card__content {
+  text-align: center;
+}
+
+.resume-card__name {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 1.75rem;
+  border-bottom: 0;
+}
+
+.resume-card__title {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.05rem;
+  color: var(--text-color-light);
+}
+
+.resume-card__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+}
+
+.resume-card__contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.resume-card__contact a {
+  border-bottom: 0;
+  color: var(--secondary-color);
+}
+
+.resume-card__contact a:hover {
+  color: var(--secondary-color--hover);
+}
+
+@media (min-width: 32em) {
+  .resume-card {
+    margin-top: 2rem;
+  }
+
+  .resume-card__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.25rem;
+  }
+
+  .resume-card__photo {
+    width: 9rem;
+    height: 9rem;
+    margin: 0;
+  }
+
+  .resume-card__content {
+    text-align: left;
+    flex: 1;
+  }
+
+  .resume-card__name {
+    font-size: 2rem;
+  }
+
+  .resume-card__contact-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-card::before,
+  .resume-card__inner {
+    transition: none;
+  }
+
+  .resume-card:has(.resume-card__inner--hovered)::before {
+    opacity: 0.5;
+  }
+
+  .resume-card__inner--hovered {
+    box-shadow:
+      0 0 0 1px rgba(98, 54, 255, 0.04),
+      0 4px 24px rgba(98, 54, 255, 0.1),
+      0 2px 8px rgba(17, 17, 17, 0.04);
+  }
+}

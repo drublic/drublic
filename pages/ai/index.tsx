@@ -10,6 +10,7 @@ const Blog: FunctionComponent<Props> = ({ posts }) => {
   return (
     <List
       title="AI"
+      description="Articles by Hans Christian Reinl on AI-native systems, agentic engineering, RAG, MCP, and building LLM-powered products."
       posts={posts}
       category={{ name: "AI", link: "/ai" }}
       baseUrl="/ai"

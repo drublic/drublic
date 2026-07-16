@@ -30,12 +30,14 @@ body {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: var(--secondary-color--light);
+  color: var(--text-color);
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: var(--secondary-color--light);
+  color: var(--text-color);
   text-shadow: none;
 }
 

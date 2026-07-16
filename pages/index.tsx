@@ -2,6 +2,7 @@ import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
 import IndexWorkingDraft from "../lib/components/IndexWorkingDraft";
+import AdvisoryCta from "../lib/components/AdvisoryCta";
 import AudioPlayer from "../lib/components/AudioPlayer";
 import { TransitionLink } from "../lib/components/TransitionLink";
 import { PageTransition } from "../lib/components/PageTransition";
@@ -9,7 +10,10 @@ import { POSTS_DIR, getPosts } from "./api/posts";
 
 const Index = ({ posts }) => {
   return (
-    <Layout>
+    <Layout
+      title="AI-Native Systems Architect & Engineering Advisor - Cologne"
+      description="Hans Christian Reinl — AI-Native Systems Architect & Engineering Advisor in Cologne. Building AI-native products, advising engineering organizations, speaking on RAG, MCP, and agentic engineering. Co-host of Working Draft."
+    >
       <main id="content" className="main" role="main">
         <PageTransition delay={100}>
           <div className="container container--large">
@@ -21,18 +25,31 @@ const Index = ({ posts }) => {
           <section className="claim">
             <div className="container">
               <div className="claim__desc">
+                <h1 className="visuallyhidden">
+                  Hans Reinl — AI-Native Systems Architect &amp; Engineering
+                  Advisor
+                </h1>
                 <p>
-                  Hi, I'm Hans. I'm an Engineering Leader passionate about
-                  building high-performing teams and driving technical
-                  excellence.
+                  Hi, I&apos;m Hans. I help engineering organizations transition
+                  from legacy architectures to AI-native products — bridging
+                  high-scale platform engineering with the agentic future.
                 </p>
-                <p className="claim__desc--small">
-                  AI Engineering __ Engineering Leadership __ Software
-                  Architecture __ Mentor __ Product Management
-                </p>
+                <div className="claim__tags">
+                  {[
+                    "AI-Native Systems",
+                    "Agentic Engineering",
+                    "Engineering Advisory",
+                    "Conference Speaking",
+                    "Engineering Leadership",
+                  ].map((label) => (
+                    <span key={label} className="tag">
+                      {label}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              <p>
+              <div className="button-group">
                 <TransitionLink
                   href="/resume"
                   className="button"
@@ -40,11 +57,17 @@ const Index = ({ posts }) => {
                   data-ga-category="Resume"
                   data-ga-action="Resume"
                   data-ga-label="Resume"
-                  style={{ marginTop: "1rem" }}
                 >
                   Learn more about me
                 </TransitionLink>
-              </p>
+                <a
+                  href="mailto:hi@hansreinl.de"
+                  className="button button--outline"
+                  title="Get in touch for consulting or speaking"
+                >
+                  Work with me
+                </a>
+              </div>
             </div>
           </section>
         </PageTransition>
@@ -54,27 +77,7 @@ const Index = ({ posts }) => {
         </PageTransition>
 
         <PageTransition delay={400}>
-          <div className="layout--darkened">
-            <section className="container container--centered container--padded-bottom">
-              <h2 className="typography--colored">Connect on LinkedIn</h2>
-
-              <p className="typography--h4">
-                Receive regular updates of my thoughts and achievements unlocked
-                by my teams and me.
-              </p>
-
-              <p>
-                <a
-                  href="https://www.linkedin.com/in/hreinl/"
-                  title="LinkedIn"
-                  className="button button--outline"
-                  target="_blank"
-                >
-                  Connect on LinkedIn
-                </a>
-              </p>
-            </section>
-          </div>
+          <AdvisoryCta />
         </PageTransition>
 
         <PageTransition delay={500}>

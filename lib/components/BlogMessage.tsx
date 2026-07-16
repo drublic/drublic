@@ -10,7 +10,7 @@ const BlogMessage = () => (
         and don’t miss any update
         <b className="message__divider">and</b>
         <a
-          href="https://www.linkedin.com/in/hreinl/"
+          href="https://www.linkedin.com/in/hansreinl/"
           title="Follow on LinkedIn"
         >
           follow on LinkedIn

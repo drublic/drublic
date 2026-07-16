@@ -271,9 +271,9 @@ const EngineeringMetricsProgram = () => (
               itemProp="description"
               className="author_description typography--body1"
             >
-              My name is Hans Reinl. I am an Engineering and Leadership
-              Consultant with a passion for technology and a focus on leading
-              and developing strong engineering teams.
+              My name is Hans Reinl. I am an AI-Native Systems Architect &amp;
+              Engineering Advisor with 15+ years of experience building
+              high-scale platforms and leading engineering organizations.
             </p>
             <p className="author_description typography--body1">
               I created this Engineering Metrics Program to help organizations
@@ -287,18 +287,16 @@ const EngineeringMetricsProgram = () => (
           <meta itemProp="name" content="Hans Reinl" />
           <meta
             itemProp="jobTitle"
-            content="Engineering and Leadership Consultant"
+            content="AI-Native Systems Architect & Engineering Advisor"
           />
           <meta itemProp="url" content="https://hansreinl.de" />
           <meta itemProp="image" content="/img/me.jpg" />
           <meta itemProp="worksFor" content="Self-employed" />
-          <meta itemProp="sameAs" content="https://x.com/hansreinl" />
-          <meta itemProp="sameAs" content="https://linkedin.com/in/hansreinl" />
-          <meta itemProp="sameAs" content="https://github.com/hansreinl" />
           <meta
             itemProp="sameAs"
             content="https://www.linkedin.com/in/hansreinl/"
           />
+          <meta itemProp="sameAs" content="https://github.com/drublic" />
         </section>
       </div>
     </main>

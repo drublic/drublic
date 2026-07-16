@@ -1,18 +1,16 @@
 # Check out humanstxt.org if you ask yourself what this is.
 
 # TEAM
-	Hans Christian Reinl
+	Hans Christian Reinl — AI-Native Systems Architect & Engineering Advisor
 	Site: hansreinl.de
-	Twitter: @drublic
+	Email: hi@hansreinl.de
+	LinkedIn: linkedin.com/in/hansreinl
 	Location: Cologne, Germany
 
 # THANKS
-	I would also like to thank the community that made HTML5 Boilerplate what it is today.
+	To the web development community, my podcast co-hosts Schepp and Christian Schaefer,
+	and everyone who keeps pushing the craft forward.
 
 # SITE
-	Standards: HTML5, CSS3
-	Components: Normalize.css, Modernizr
-	Software: Sublime Text 2 (Programming)
-
-
-
+	Stack: Next.js, React, TypeScript
+	Hosting: Vercel

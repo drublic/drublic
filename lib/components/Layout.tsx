@@ -3,6 +3,7 @@ import Head from "./Head";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cookiescript from "./Cookiescript";
+import JsonLd, { personJsonLd, websiteJsonLd } from "./JsonLd";
 import { useRouter } from "next/router";
 
 type LayoutProps = {
@@ -19,8 +20,8 @@ type LayoutProps = {
 };
 
 const Layout = ({
-  title = "Hans Reinl - Engineering Management & Software Architecture - Hans Christian Reinl, Cologne",
-  description = `Engineering Management & Software Architecture, Hans Christian Reinl - Working Draft, Node.js, React, CSS, JavaScript & Agile`,
+  title = "AI-Native Systems Architect & Engineering Advisor - Cologne",
+  description = `Hans Christian Reinl — AI-Native Systems Architect & Engineering Advisor in Cologne. Building AI-native products, advising engineering organizations, and co-hosting Working Draft. Next.js, TypeScript, Vercel AI SDK.`,
   image = undefined,
   ogType = "website",
   articlePublishedTime,
@@ -58,6 +59,8 @@ const Layout = ({
         noIndex={noIndex}
       />
 
+      <JsonLd data={[personJsonLd, websiteJsonLd]} />
+
       <div
         dangerouslySetInnerHTML={{
           __html: `
@@ -74,7 +77,8 @@ const Layout = ({
 
       <Header noNavigation={noNavigation} />
 
-      <main
+      {/* Page components own the <main> landmark to avoid nested mains */}
+      <div
         className="page-content"
         style={
           {
@@ -83,7 +87,7 @@ const Layout = ({
         }
       >
         {children}
-      </main>
+      </div>
 
       {!noFooter && (
         <>

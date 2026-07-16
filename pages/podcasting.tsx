@@ -12,16 +12,23 @@ const Podcasting = () => {
   );
 
   return (
-    <Layout title="Podcasting">
+    <Layout
+      title="Podcasting"
+      description="Hans Christian Reinl co-hosts Working Draft, the German-speaking web development podcast, together with Schepp and Christian Schaefer since 2011."
+    >
       <main id="content" role="main">
         <section className="container main">
           <h1>Podcasting</h1>
 
           <p>
-            Podcasting became a passion for me which I am happy to do since
-            2012. The{" "}
+            Since 2011, podcasting has been a passion of mine. The{" "}
             <a href="https://workingdraft.de/">Working Draft podcast</a> is my
-            home and I am happy to host it with my knowledgable co-hosts.
+            home — a weekly German-speaking show about web development and
+            engineering, which I co-host with{" "}
+            <a href="https://schepp.de/">Schepp</a> and{" "}
+            <a href="https://twitter.com/kaelig">Christian Schaefer</a>.
+            Together we educate and inform a broad technical audience on the
+            latest in our industry.
           </p>
         </section>
 

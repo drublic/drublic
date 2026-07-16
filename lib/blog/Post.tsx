@@ -3,6 +3,7 @@ import React, { FunctionComponent } from "react";
 import ArticleTeaserSmall from "../components/ArticleTeaserSmall";
 import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
+import JsonLd from "../components/JsonLd";
 import Toc from "./Toc";
 import Image from "next/image";
 import { getDate } from "../utils/date";
@@ -29,16 +30,51 @@ const Post: FunctionComponent<Post> = ({
   }
 
   const publishedAt = getDate(post.date);
+  const postUrl = `https://hansreinl.de${category.slug}/${post.slug}/`;
+  const socialImage = resolveSocialPreviewImage(post.image, post.headerImage);
+  const absoluteImage = socialImage
+    ? socialImage.startsWith("http")
+      ? socialImage
+      : `https://hansreinl.de${socialImage}`
+    : "https://hansreinl.de/img/me.jpg";
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post["meta-description"] || post.abstract,
+    image: absoluteImage,
+    datePublished: publishedAt.toISOString(),
+    dateModified: publishedAt.toISOString(),
+    author: {
+      "@type": "Person",
+      "@id": "https://hansreinl.de/#person",
+      name: "Hans Christian Reinl",
+      url: "https://hansreinl.de/",
+    },
+    publisher: {
+      "@type": "Person",
+      "@id": "https://hansreinl.de/#person",
+      name: "Hans Christian Reinl",
+      url: "https://hansreinl.de/",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    url: postUrl,
+  };
 
   return (
     <Layout
       title={`${post["meta-title"] ? post["meta-title"] : post.title} | Blog`}
       description={post["meta-description"]}
-      image={resolveSocialPreviewImage(post.image, post.headerImage)}
+      image={socialImage}
       ogType="article"
       articlePublishedTime={publishedAt.toISOString()}
       articleAuthor="Hans Christian Reinl"
     >
+      <JsonLd data={articleJsonLd} />
       <main id="content" className="main container" role="main">
         <div className="breadcrumb">
           <ol>
@@ -150,27 +186,26 @@ const Post: FunctionComponent<Post> = ({
               itemProp="description"
               className="author_description typography--body2"
             >
-              Hans is an Engineering and Leadership Consultant with a passion
-              for technology and a focus on leading and developing strong
-              engineering teams. Committed to delivering high-quality products
-              and driving business growth through technical excellence.
+              Hans is an AI-Native Systems Architect &amp; Engineering Advisor
+              with 15+ years of experience building high-scale platforms. He
+              helps organizations transition to AI-native products, speaks at
+              conferences, and co-hosts the Working Draft podcast. Based in
+              Cologne, Germany.
             </p>
           </div>
           <meta itemProp="name" content="Hans Reinl" />
           <meta
             itemProp="jobTitle"
-            content="Engineering and Leadership Consultant"
+            content="AI-Native Systems Architect & Engineering Advisor"
           />
           <meta itemProp="url" content="https://hansreinl.de" />
           <meta itemProp="image" content="/img/me.jpg" />
           <meta itemProp="worksFor" content="Self-employed" />
-          <meta itemProp="sameAs" content="https://x.com/hansreinl" />
-          <meta itemProp="sameAs" content="https://linkedin.com/in/hansreinl" />
-          <meta itemProp="sameAs" content="https://github.com/hansreinl" />
           <meta
             itemProp="sameAs"
             content="https://www.linkedin.com/in/hansreinl/"
           />
+          <meta itemProp="sameAs" content="https://github.com/drublic" />
         </section>
       </main>
 

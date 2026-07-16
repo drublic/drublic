@@ -2,9 +2,12 @@ import React from "react";
 import Layout from "../lib/components/Layout";
 
 const Legal = () => (
-  <Layout title="Imprint">
+  <Layout
+    title="Imprint / Legal notice"
+    description="Legal notice (Impressum) for hansreinl.de — Hans Christian Reinl, Cologne, Germany."
+  >
     <main id="content" className="main container" role="main">
-      <h2 id="imprint-label">Imprint</h2>
+      <h1 id="imprint-label">Imprint</h1>
 
       <div>
         <h3>Hans-Christian Reinl</h3>

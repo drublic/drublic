@@ -7,17 +7,19 @@ type Props = {
   posts: any[];
   category: { name: string; link: string };
   title: string;
+  description?: string;
   baseUrl: string;
 };
 
 const List: FunctionComponent<Props> = ({
   title,
+  description,
   posts,
   category,
   baseUrl,
 }) => {
   return (
-    <Layout title={title}>
+    <Layout title={title} description={description}>
       <main
         id="main"
         className="main"

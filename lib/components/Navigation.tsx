@@ -95,7 +95,7 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("start", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <TransitionLink href="/" title="Hans Reinl - Front-End Architecture">
+          <TransitionLink href="/" title="Hans Reinl - AI-Native Systems Architect">
             Start
           </TransitionLink>
         </li>

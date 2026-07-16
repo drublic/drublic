@@ -25,7 +25,10 @@ const IndexWorkingDraft = () => {
         Working Draft Podcast
       </h2>
 
-      <p>Listen to the latest episode of the Working Draft podcast.</p>
+      <p>
+        Co-hosted since 2011 with Schepp and Christian Schaefer — educating the
+        German-speaking web development community every week.
+      </p>
 
       <iframe
         src="https://open.spotify.com/embed/show/78iH7cIFzu1ejoB6aQUsIh?utm_source=generator&amp;theme=0"

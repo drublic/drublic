@@ -10,6 +10,7 @@ const Blog: FunctionComponent<Props> = ({ posts }) => {
   return (
     <List
       title="Engineering Leadership"
+      description="Writing by Hans Christian Reinl on engineering leadership, team scaling, metrics programs, and organizational design."
       posts={posts}
       category={{ name: "Engineering Leadership", link: "/leadership" }}
       baseUrl="/leadership"

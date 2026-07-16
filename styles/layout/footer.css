@@ -14,14 +14,33 @@
 
 .footer_lists {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 4rem;
-  gap: 4rem;
+  gap: 3rem 4rem;
+}
+
+.footer_column {
+  flex: 1 1 12rem;
+  min-width: 10rem;
+}
+
+.footer_column__title {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-color-light);
 }
 
 .footer_list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer_list li + li {
+  margin-top: 0.5rem;
 }
 
 .footer_list a,
@@ -47,12 +66,16 @@
 
   .footer_lists {
     flex-direction: column;
-    gap: 0;
+    gap: 2rem;
     margin-bottom: 1rem;
   }
 
+  .footer_column {
+    flex: 1 1 auto;
+  }
+
   .footer_list {
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   .footer__inner {

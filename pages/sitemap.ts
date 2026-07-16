@@ -15,6 +15,15 @@ const template = (content: string) =>
   </urlset>
 `.trim();
 
+const renderUrl = (loc: string, priority = "0.6", changefreq = "monthly") => `
+  <url>
+    <loc>${loc}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>
+`;
+
 const renderPosts = (posts: any[], basePath = "/blog") =>
   posts
     .map(
@@ -29,6 +38,32 @@ const renderPosts = (posts: any[], basePath = "/blog") =>
     )
     .join("");
 
+/** Explicit key routes that must always appear (filesystem scan misses dirs / index). */
+const KEY_PAGES = [
+  { path: "/", priority: "1.0" },
+  { path: "/resume", priority: "0.9" },
+  { path: "/what-i-want-to-do", priority: "0.9" },
+  { path: "/about/speaking", priority: "0.8" },
+  { path: "/about/writings", priority: "0.7" },
+  { path: "/podcasting", priority: "0.7" },
+  { path: "/blog", priority: "0.8" },
+  { path: "/ai", priority: "0.8" },
+  { path: "/leadership", priority: "0.8" },
+  { path: "/engineering-metrics-program", priority: "0.7" },
+  { path: "/info", priority: "0.7" },
+  { path: "/portfolio", priority: "0.7" },
+  { path: "/legal", priority: "0.3" },
+  { path: "/privacy", priority: "0.3" },
+  { path: "/llms.txt", priority: "0.5" },
+  { path: "/llms-full.txt", priority: "0.5" },
+  { path: "/.well-known/llms.txt", priority: "0.5" },
+];
+
+const renderKeyPages = () =>
+  KEY_PAGES.map(({ path, priority }) =>
+    renderUrl(`https://hansreinl.de${path === "/" ? "" : path}`, priority)
+  ).join("");
+
 const renderPages = () => {
   const baseUrl = {
     development: "http://localhost:3000",
@@ -37,6 +72,12 @@ const renderPages = () => {
 
   const pagesDir =
     process.env.NODE_ENV === "production" ? "./.next/server/pages" : "./pages";
+
+  const keyPaths = new Set(
+    KEY_PAGES.map(({ path }) =>
+      path === "/" ? `${baseUrl}` : `${baseUrl}${path}`
+    )
+  );
 
   const staticPages = fs
     .readdirSync(pagesDir)
@@ -70,20 +111,12 @@ const renderPages = () => {
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath.replace(".tsx", "")}`;
-    });
+      return `${baseUrl}/${staticPagePath.replace(".tsx", "").replace(".js", "")}`;
+    })
+    .filter((url) => !keyPaths.has(url));
 
   return staticPages
-    .map((url) => {
-      return `
-            <url>
-              <loc>${url}</loc>
-              <lastmod>${new Date().toISOString()}</lastmod>
-              <changefreq>monthly</changefreq>
-              <priority>0.6</priority>
-            </url>
-          `;
-    })
+    .map((url) => renderUrl(url, "0.6"))
     .join("");
 };
 
@@ -102,6 +135,7 @@ export const getServerSideProps = async (context) => {
 
   const feed = template(
     [
+      renderKeyPages(),
       renderPages(),
       renderPosts(posts),
       renderPosts(postsAi, "/ai"),

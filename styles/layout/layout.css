@@ -18,6 +18,11 @@ hr {
 
 .layout--darkened {
   background-color: var(--color-lightest);
+}
+
+/* Bleed to edges only when nested in a padded .main (e.g. homepage).
+   Without a padded parent, negative margins extend past the viewport. */
+.main .layout--darkened {
   margin: 0 -1em;
 }
 
@@ -232,7 +237,7 @@ hr {
 /* Cookie Message */
 
 .termsfeed-com---nb.termsfeed-com---reset {
-  font: 16px "Roboto", sans-serif;
+  font: 16px var(--font-body), "Roboto", sans-serif;
   font-weight: 300;
 }
 
@@ -252,7 +257,7 @@ hr {
 }
 
 .termsfeed-com---palette-light .cc-nb-main-container {
-  font: 16px Roboto, serif;
+  font: 16px var(--font-body), Roboto, sans-serif;
   color: var(--copy-color);
 }
 

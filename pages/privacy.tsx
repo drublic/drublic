@@ -2,9 +2,12 @@ import React from "react";
 import Layout from "../lib/components/Layout";
 
 const Privacy = () => (
-  <Layout title="Privacy Protection">
+  <Layout
+    title="Privacy policy"
+    description="Privacy policy (Datenschutz) for hansreinl.de — Hans Christian Reinl, Cologne, Germany."
+  >
     <main id="content" className="main container" role="main">
-      <h2>Privacy Protection</h2>
+      <h1>Privacy Protection</h1>
 
       <p>
         My Privacy Protection Page is in German since I am a German Business. If

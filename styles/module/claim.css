@@ -14,6 +14,26 @@
   font-size: 1rem;
 }
 
+.claim__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+
+.claim__tags .tag {
+  margin-top: 0;
+  margin-right: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 0.3rem 0.8rem;
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid rgba(98, 54, 255, 0.3);
+  border-radius: 999px;
+}
+
 .claim__me {
   position: relative;
   float: right;

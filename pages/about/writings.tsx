@@ -1,16 +1,21 @@
+import Link from "next/link";
 import React from "react";
 import Layout from "../../lib/components/Layout";
 
 const Resume = () => (
-  <Layout title="Public Speaking">
+  <Layout
+    title="Writings"
+    description="External articles and interviews by Hans Christian Reinl on web development, engineering leadership, and AI."
+  >
     <main id="content" className="main" role="main">
       <section className="container">
         <h1>Writings</h1>
 
-        <p>
-          I wrote some articles on the interwebz and offline. Here is a list.
-          Hopefully more to come.
-        </p>
+      <p>
+        I write about AI engineering, agentic workflows, and engineering
+        leadership on <Link href="/blog">my blog</Link>. Here is a list of
+        external articles and interviews. Hopefully more to come.
+      </p>
         <ul>
           <li>
             <a href="http://workspiration.org/hans-christian-reinl">

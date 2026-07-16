@@ -1,81 +1,57 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Layout from "../lib/components/Layout";
 
-const Podcasting = () => {
+const WorkWithMe = () => {
   return (
-    <Layout title="What I want to do">
+    <Layout
+      title="Work with me"
+      description="Hans Christian Reinl offers AI-native systems advisory, team workshops, and conference speaking. Get in touch for agentic engineering, platform architecture, and engineering leadership."
+    >
       <main id="content" className="main container" role="main">
-        <h1>What I want to do</h1>
+        <h1>Work with me</h1>
         <p>
-          I am currently searching a freelance role as a developer and architect
-          in an agile environment.
-          <br />
-          My preferred role would be to help you and your team{" "}
-          <b>
-            migrate a monolithic platform to a future-proof micro-service
-            oriented environment
-          </b>
-          . I got a track record in doing projects like this.
-          <br />I am strong in Frontend technologies, especially <b>
-            React
-          </b>{" "}
-          and worked a lot with <b>Node.js</b>.<br />
-          I am available as of mid of July 2018.
-          <br />
-          Preferably in the Cologne, Düsseldorf area.
-          <br />
-          Contact me via <a href="mailto:hi@hansreinl.de">hi@hansreinl.de</a>.
+          I am an AI-Native Systems Architect &amp; Engineering Advisor based in
+          Cologne, Germany. I help engineering teams and companies transition
+          from legacy architectures to AI-native product development.
         </p>
 
-        <p>
-          <a href="/#hire-me" className="button">
-            Contact me
+        <h2>What I offer</h2>
+        <ul>
+          <li>
+            <b>AI-Native Systems Advisory</b> — Strategy, architecture, and
+            hands-on implementation of production-ready AI applications with
+            Next.js, TypeScript, and the Vercel AI SDK.
+          </li>
+          <li>
+            <b>Workshops &amp; Team Training</b> — Hands-on sessions on RAG
+            implementation, MCP integration, agentic workflows, and modern AI
+            development practices.
+          </li>
+          <li>
+            <b>Conference Speaking</b> — Keynotes and talks on implementing
+            agentic engineering across the SDLC, RAG implementation, MCP,
+            AI-assisted development, engineering leadership, and platform
+            architecture.{" "}
+            <Link href="/about/speaking">See my speaking history</Link>.
+          </li>
+          <li>
+            <b>Engineering Leadership Advisory</b> — Metrics programs, team
+            scaling, and organizational design for engineering organizations.
+          </li>
+        </ul>
+
+        <div className="button-group">
+          <a href="mailto:hi@hansreinl.de" className="button">
+            Get in touch
           </a>
-        </p>
-
-        <figure className="image image--block">
-          <Image
-            src="/img/monolith-to-microservice.png"
-            alt="What you have vs. what you want"
-            width="813"
-            height="299"
-          />
-        </figure>
-
-        <h2>About me</h2>
-
-        <p>
-          I am a frontend architect and software engineer located in Cologne,
-          Germany.
-          <br />
-          Agile development and Scrum influence my daily work since 2012. I have
-          ten years of experience in developing scalable web applications using
-          cutting edge technologies based on Micro-Service Oriented Architecture
-          including HTML/CSS and object-oriented JavaScript (frontend and
-          backend), React is my Framework of choice. Within the last couple of
-          years I worked a lot with Node.js.
-        </p>
-
-        <p>
-          I love architecting systems in a high-performance environment with a
-          focus on frontend development. My passion in JavaScript and CSS is as
-          strong as my belief in agile methodologies.
-        </p>
-
-        <p>
-          <Link href="/resume" className="button">
+          <Link href="/resume" className="button button--outline">
             My Résumé
           </Link>
-
-          <Link href="/portfolio" className="button">
-            My Projects
-          </Link>
-        </p>
+        </div>
       </main>
     </Layout>
   );
 };
 
-export default Podcasting;
+export default WorkWithMe;

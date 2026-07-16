@@ -1,48 +1,46 @@
 .button {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  padding: 1rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
   border: none;
-  color: var(--text-color);
-  transition: 0.15s;
-  font-size: 1.125rem;
-  background-color: transparent;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.25rem;
-  background-image: linear-gradient(
-    161.81deg,
-    var(--secondary-color--hover) 25%,
-    var(--secondary-color) 75%
-  );
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
   background-color: var(--secondary-color);
-  transition: 0.15s;
-  border-radius: 2px;
+  background-image: linear-gradient(
+    135deg,
+    var(--secondary-color) 0%,
+    #7b5cff 100%
+  );
+  transition:
+    background-color 0.2s ease,
+    background-image 0.2s ease,
+    color 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .button:visited {
-  color: var(--text-color);
+  color: #fff;
 }
 
 .button:hover {
-  color: var(--text-color);
-}
-
-.button:hover::before {
-  height: 0.5rem;
+  color: #fff;
+  background-color: #7b5cff;
+  background-image: linear-gradient(
+    135deg,
+    #7b5cff 0%,
+    var(--secondary-color--hover) 100%
+  );
 }
 
 .button--outline {
-  font-weight: normal;
+  background: var(--secondary-color--light);
+  background-image: none;
   color: var(--secondary-color);
 }
 
@@ -50,39 +48,24 @@
   color: var(--secondary-color);
 }
 
-.button--outline::before {
-  top: 0;
-  height: 100%;
-}
-
-.button--outline::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  background: var(--color-lightest);
-  top: 0.125rem;
-  left: 0.125rem;
-  right: 0.125rem;
-  bottom: 0.125rem;
-  transition: 0.25s;
-}
-
 .button--outline:hover {
-  color: var(--text-color);
+  color: var(--secondary-color);
+  background-color: #e0d6ff;
+  background-image: none;
 }
 
-.button--outline:hover::before {
-  height: 100%;
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
-.button--outline:hover::after {
-  top: 0.25rem;
-  left: 0.25rem;
-  right: 0.25rem;
-  bottom: 0.25rem;
+.button-group--centered {
+  justify-content: center;
 }
 
 .button--margin-right {
-  margin-right: 1rem;
+  margin-right: 0;
 }

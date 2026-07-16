@@ -1,16 +1,64 @@
 import React from "react";
 import Layout from "../../lib/components/Layout";
 
-const Resume = () => (
-  <Layout title="Public Speaking">
+const Speaking = () => (
+  <Layout
+    title="Public Speaking — RAG, MCP, Agentic Engineering"
+    description="Hans Christian Reinl speaks at conferences (T3 Summit, Lead Dev Berlin, and more) on agentic engineering across the SDLC, RAG, MCP, AI-assisted development, and engineering leadership."
+  >
     <main id="content" className="main" role="main">
       <section className="container">
         <h1>Public Speaking</h1>
         <p>
-          I am very happy to be invited to any conference in our scene and
-          beyond.
+          I speak at conferences, meetups, and company events about AI
+          engineering, agentic workflows, engineering leadership, and building
+          high-scale platforms. I am available for keynotes, conference talks,
+          panel discussions, and team workshops.
         </p>
 
+        <p>
+          <a href="mailto:hi@hansreinl.de" className="button">
+            Invite me to speak
+          </a>
+        </p>
+
+        <h2>Recent Talks</h2>
+        <ul>
+          <li>
+            <a href="https://www.t3-summit.com/t3-berlin">T3 Summit</a> 2025;
+            Berlin, Germany — Panel discussions on mobile and platform
+            engineering
+          </li>
+          <li>
+            Lead Dev Berlin — Engineering Metrics and data-driven engineering
+            leadership
+          </li>
+        </ul>
+
+        <h2>Topics I Speak About</h2>
+        <ul>
+          <li>
+            Implementing agentic engineering across the SDLC — how teams map AI
+            agents to discovery, delivery, and operations with clear ownership
+            at each phase
+          </li>
+          <li>AI-assisted development workflows and production patterns</li>
+          <li>
+            RAG (Retrieval-Augmented Generation) implementation — from indexing
+            and retrieval strategies to production-ready applications;
+            workshops available
+          </li>
+          <li>
+            MCP (Model Context Protocol) — connecting LLMs to tools, data, and
+            external services; workshops available
+          </li>
+          <li>Building production-ready AI applications with Next.js and the Vercel AI SDK</li>
+          <li>Engineering leadership and scaling high-performing teams</li>
+          <li>Engineering metrics and data-driven decision making</li>
+          <li>Design systems and component-based development</li>
+        </ul>
+
+        <h2>Earlier Talks</h2>
         <ul>
           <li>
             <a href="http://2015.modxpo.eu/">MODXpo</a> 2015; Munich, Germany –
@@ -27,7 +75,7 @@ const Resume = () => (
             <a href="//2013.frontendconf.ch/">Frontend Conference</a> 2013;
             Zürich, Switzerland –{" "}
             <a href="//drublic.github.io/fec-styleguides/">
-              Be Friends With You Designer And Style Guides – Updated
+              Be Friends With You Designer And Style Guides – Updated
             </a>{" "}
             &bull; <a href="//www.ustream.tv/recorded/37954517">Video</a>
           </li>
@@ -78,4 +126,4 @@ const Resume = () => (
   </Layout>
 );
 
-export default Resume;
+export default Speaking;

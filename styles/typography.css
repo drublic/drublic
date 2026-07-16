@@ -2,15 +2,17 @@
  * Typography
  */
 html {
-  font:
-    16px "Roboto",
-    sans-serif;
-  font-weight: 300;
+  font-size: 16px;
   color: var(--copy-color);
 }
 
 body {
   line-height: 1.5;
+}
+
+.fonts-root {
+  font-family: var(--font-body), "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 /* Headlines */
@@ -20,8 +22,8 @@ h3,
 .typography--h1,
 .typography--h2,
 .typography--h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-weight: 800;
   line-height: 1.1;
 }
 
@@ -210,6 +212,16 @@ pre code {
   );
 }
 
+.typography--colored::-moz-selection,
+.typography--colored::selection {
+  color: var(--secondary-color);
+  -webkit-text-fill-color: var(--secondary-color);
+  background: var(--secondary-color--light);
+  background-image: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
 .typography--no-margin {
   margin: 0;
 }
@@ -236,7 +248,7 @@ blockquote.blockquote-small {
 
 figure blockquote {
   font-size: 1.75rem;
-  font-family: "Vollkorn", serif;
+  font-family: var(--font-quote), "Vollkorn", serif;
 }
 
 blockquote::before {
