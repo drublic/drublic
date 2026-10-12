@@ -11,6 +11,57 @@
   -webkit-overflow-scrolling: touch;
 }
 
+/* Side-by-side photos: same height, width by aspect ratio, row ≤ 100% */
+.gallery--thirds {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gallery--thirds li {
+  flex: 1 1 0;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Grow by intrinsic width → same display height, natural ratios */
+.gallery--thirds li:nth-child(1) {
+  flex-grow: 768;
+}
+
+.gallery--thirds li:nth-child(2),
+.gallery--thirds li:nth-child(3) {
+  flex-grow: 819;
+}
+
+.gallery--thirds li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery--thirds li:hover {
+  transform: none;
+}
+
+.gallery--thirds li img:hover {
+  transform: none;
+}
+
+@media screen and (max-width: 32em) {
+  .gallery--thirds {
+    flex-wrap: wrap;
+  }
+
+  .gallery--thirds li {
+    flex: 1 1 100%;
+  }
+}
+
 .gallery li {
   position: relative;
   overflow: hidden;

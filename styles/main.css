@@ -31,6 +31,7 @@
 @import "./module/author.css";
 @import "./module/scrollable-table.css";
 @import "./module/gallery.css";
+@import "./module/event-card.css";
 @import "./components.css";
 
 @import "./layout/header.css";
