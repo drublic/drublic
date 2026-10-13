@@ -3,13 +3,6 @@ import ArticleTeaserSmall from "./ArticleTeaserSmall";
 
 const reading = [
   {
-    slug: "spec-over-prompt-agentic-engineering",
-    title: "Spec over Prompt: Agentic Engineering That Survives Production",
-    date: "10.09.2026",
-    image: "/assets/spec-over-prompt-agentic-engineering.jpg",
-    tags: ["Agentic engineering", "OpenSpec", "Cursor"],
-  },
-  {
     slug: "ai-adoption-governance-roles-t3-cto-summit",
     title: "Beyond the Hype: AI Adoption, Governance, and Roles",
     date: "12.10.2026",

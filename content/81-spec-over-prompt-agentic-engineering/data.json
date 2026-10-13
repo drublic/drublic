@@ -7,7 +7,7 @@
   "image": "https://www.hansreinl.de/assets/spec-over-prompt-agentic-engineering.jpg",
   "headerImage": "/assets/spec-over-prompt-agentic-engineering.jpg",
   "headerImageCaption": "Editorial-style header illustration for this article (placeholder reuse; swap when a dedicated asset is ready).",
-  "hidden": false,
+  "hidden": true,
   "hasToc": true,
   "tags": [
     "Agentic engineering",

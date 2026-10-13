@@ -35,7 +35,7 @@ We started with writing versus review. Code got cheaper to produce; planning, re
 
 A few practices I had prepared, and that resonated in the room:
 
-**Spec before code.** A short specification first (intent, constraints, done-when), then implement. It cuts the “fast draft of the wrong thing” problem and gives reviewers something to check against, not only a diff. This is the same spine I have been writing about as [spec over prompt](/blog/spec-over-prompt-agentic-engineering).
+**Spec before code.** A short specification first (intent, constraints, done-when), then implement. It cuts the “fast draft of the wrong thing” problem and gives reviewers something to check against, not only a diff. This is the same spine as “spec over prompt.”
 
 **WIP limits for AI-assisted work.** The same idea as Scrum or Kanban caps, applied to AI-touched changes in flight, per person or per reviewer. Throughput stays honest. Seniors stop becoming an unbounded review queue.
 
