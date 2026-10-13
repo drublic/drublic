@@ -8,7 +8,7 @@
 	Location: Cologne, Germany
 
 # THANKS
-	To the web development community, my podcast co-hosts Schepp and Christian Schaefer,
+	To the web development community, my podcast co-hosts Schepp, Peter Kröner, Vanessa Otto and Stefan Baumgartner,
 	and everyone who keeps pushing the craft forward.
 
 # SITE

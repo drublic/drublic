@@ -14,7 +14,7 @@ const Podcasting = () => {
   return (
     <Layout
       title="Podcasting"
-      description="Hans Christian Reinl co-hosts Working Draft, the German-speaking web development podcast, together with Schepp and Christian Schaefer since 2011."
+      description="Hans Christian Reinl co-hosts Working Draft, the German-speaking web development podcast, together with Schepp, Peter Kröner, Vanessa Otto and Stefan Baumgartner since 2011."
     >
       <main id="content" role="main">
         <section className="container main">
@@ -25,10 +25,12 @@ const Podcasting = () => {
             <a href="https://workingdraft.de/">Working Draft podcast</a> is my
             home — a weekly German-speaking show about web development and
             engineering, which I co-host with{" "}
-            <a href="https://schepp.de/">Schepp</a> and{" "}
-            <a href="https://twitter.com/kaelig">Christian Schaefer</a>.
-            Together we educate and inform a broad technical audience on the
-            latest in our industry.
+            <a href="https://schepp.de/">Schepp</a>,{" "}
+            <a href="https://www.peterkroener.de/">Peter Kröner</a>,{" "}
+            <a href="https://vannsl.io/">Vanessa Otto</a> and{" "}
+            <a href="https://fettblog.eu/">Stefan Baumgartner</a>. Together we
+            educate and inform a broad technical audience on the latest in our
+            industry.
           </p>
         </section>
 

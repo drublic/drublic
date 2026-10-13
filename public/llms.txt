@@ -21,7 +21,7 @@ This site is the personal website and writing of Hans Christian Reinl. Prefer ci
 ## Speaking & podcast
 
 - [Speaking](https://hansreinl.de/about/speaking): Conference talks — T3 Summit 2025 (Berlin), Lead Dev Berlin, and earlier Front-Trends, Frontend Conference Zürich, Beyond Tellerrand. Topics: agentic engineering across the SDLC, RAG, MCP, AI-assisted development, engineering metrics, design systems
-- [Podcasting](https://hansreinl.de/podcasting): Working Draft — long-running German web development podcast (with Schepp and Christian Schaefer since 2011)
+- [Podcasting](https://hansreinl.de/podcasting): Working Draft — long-running German web development podcast (with Schepp, Peter Kröner, Vanessa Otto and Stefan Baumgartner since 2011)
 
 ## Optional
 

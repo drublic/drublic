@@ -26,8 +26,9 @@ const IndexWorkingDraft = () => {
       </h2>
 
       <p>
-        Co-hosted since 2011 with Schepp and Christian Schaefer — educating the
-        German-speaking web development community every week.
+        Co-hosted since 2011 with Schepp, Peter Kröner, Vanessa Otto and Stefan
+        Baumgartner — educating the German-speaking web development community
+        every week.
       </p>
 
       <iframe
