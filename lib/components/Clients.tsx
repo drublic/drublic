@@ -3,30 +3,32 @@ import React from "react";
 const Clients = () => (
   <ul className="work__clients">
     <li className="work__clients__client work__clients__client--large">
-      <a href="https://shop.rewe.de/">
-        <img src="/img/work/rewe.svg" alt="REWE digital" />
+      <a href="https://joyn.de/">
+        <img src="/img/work/joyn.svg" alt="Joyn" />
       </a>
     </li>
 
     <li className="work__clients__client work__clients__client--large">
-      <a href="https://www.hilti.com/">
-        <img
-          src="/img/work/hilti.svg"
-          title="in cooperation with FORK"
-          alt="Hilti AG"
-        />
+      <a href="https://www.prosiebensat1.com/">
+        <img src="/img/work/p7s1.png" alt="ProSiebenSat.1" />
       </a>
     </li>
 
     <li className="work__clients__client work__clients__client--large">
-      <a href="http://www.prosiebensat1.de/">
-        <img src="/img/work/prosiebensat1.jpg" alt="ProSiebenSat.1" />
+      <a href="https://fiberfone.de/">
+        <img src="/img/work/fiberfone.png" alt="Fiberfone" />
       </a>
     </li>
 
-    <li className="work__clients__client work__clients__client--large">
-      <a href="http://www.sapdatacenter.com/">
-        <img src="/img/work/sap.svg" alt="SAP AG" />
+    <li className="work__clients__client">
+      <a href="https://nplusone.app/">
+        <img src="/img/work/n-plus.svg" alt="N+One" />
+      </a>
+    </li>
+
+    <li className="work__clients__client">
+      <a href="https://school.digitale-leute.de/">
+        <img src="/img/work/dl-school.svg" alt="Digitale Leute School" />
       </a>
     </li>
 
@@ -41,20 +43,36 @@ const Clients = () => (
     </li>
 
     <li className="work__clients__client work__clients__client--large">
-      <a href="http://www.joyn.de/">
-        <img src="/img/work/joyn.svg" alt="Joyn" />
+      <a href="https://shop.rewe.de/">
+        <img src="/img/work/rewe.svg" alt="REWE digital" />
       </a>
     </li>
 
-    <li className="work__clients__client">
-      <a href="http://vaillant-group.com/">
-        <img src="/img/work/vaillant.png" alt="Vaillant Group" />
+    <li className="work__clients__client work__clients__client--large">
+      <a href="https://vaillant-group.com/">
+        <img src="/img/work/vaillant.svg" alt="Vaillant Group" />
       </a>
     </li>
 
     <li className="work__clients__client">
       <a href="https://www.fashionette.de/">
         <img src="/img/work/fashionette.svg" alt="Fashionette" />
+      </a>
+    </li>
+
+    <li className="work__clients__client work__clients__client--large">
+      <a href="https://www.hilti.com/">
+        <img
+          src="/img/work/hilti.svg"
+          title="in cooperation with FORK"
+          alt="Hilti AG"
+        />
+      </a>
+    </li>
+
+    <li className="work__clients__client work__clients__client--large">
+      <a href="https://www.sap.com/">
+        <img src="/img/work/sap.svg" alt="SAP AG" />
       </a>
     </li>
 

@@ -147,6 +147,15 @@ main.resume {
   color: var(--secondary-color--hover);
 }
 
+.resume-card__actions {
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.resume-card__actions .button {
+  border-bottom: 0;
+}
+
 @media (min-width: 32em) {
   .resume-card {
     margin-top: 2rem;
@@ -177,6 +186,10 @@ main.resume {
   .resume-card__contact-links {
     justify-content: flex-start;
   }
+
+  .resume-card__actions {
+    justify-content: flex-start;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -194,5 +207,202 @@ main.resume {
       0 0 0 1px rgba(98, 54, 255, 0.04),
       0 4px 24px rgba(98, 54, 255, 0.1),
       0 2px 8px rgba(17, 17, 17, 0.04);
+  }
+}
+
+/* ─── Career timeline (from workshops/me Stationen) ─── */
+.resume-timeline {
+  --dot-size: 0.875rem;
+  --dot-col: 1.125rem;
+  --line-w: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-timeline--compact .resume-timeline__item {
+  padding: 0.65rem 0;
+}
+
+.resume-timeline--compact .resume-timeline__title {
+  font-size: 0.98rem;
+}
+
+.resume-timeline--compact .resume-timeline__meta {
+  margin-bottom: 0;
+}
+
+.resume-work-detail {
+  display: block;
+  margin: 2.75rem 0 0.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-lightest);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.resume-timeline::before {
+  content: "";
+  position: absolute;
+  left: calc((var(--dot-col) - var(--line-w)) / 2);
+  top: 0.65rem;
+  bottom: 0.65rem;
+  width: var(--line-w);
+  background: var(--color-lightest);
+}
+
+.resume-timeline__item {
+  display: grid;
+  grid-template-columns: var(--dot-col) 1fr;
+  grid-template-areas:
+    "dot year"
+    "dot body"
+    "dot logos";
+  gap: 0.35rem 1rem;
+  align-items: start;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.resume-timeline__dot {
+  grid-area: dot;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--secondary-color);
+  margin-top: 0.25rem;
+  justify-self: center;
+  z-index: 1;
+}
+
+.resume-timeline__year {
+  grid-area: year;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  letter-spacing: -0.01em;
+}
+
+.resume-timeline__body {
+  grid-area: body;
+  min-width: 0;
+}
+
+.resume-timeline__logos {
+  grid-area: logos;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.resume-timeline__item:last-child .resume-timeline__dot {
+  background: var(--color-dark);
+  box-shadow: 0 0 0 2px var(--color-dark);
+}
+
+.resume-timeline__title {
+  display: block;
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.resume-timeline__meta {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  letter-spacing: 0.01em;
+}
+
+.resume-timeline__achieve {
+  display: block;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--color-light);
+}
+
+.resume-logo {
+  display: block;
+  height: 1.75rem;
+  width: auto;
+  max-width: 5.5rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.resume-logo--wide {
+  height: 1.4rem;
+  max-width: 6.5rem;
+}
+
+.resume-logo--mark {
+  height: 2rem;
+  max-width: 2rem;
+  border-radius: 0.4rem;
+}
+
+.resume-role__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.resume-work-detail + .resume-role__head {
+  margin-top: 1rem;
+}
+
+.resume-role__head h3 {
+  margin: 0;
+  flex: 1 1 14rem;
+}
+
+.resume-role__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.resume-role__date {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--text-color-light);
+}
+
+@media (min-width: 40em) {
+  .resume-timeline__item {
+    grid-template-columns: var(--dot-col) 5.5rem minmax(0, 1fr) minmax(8rem, 12rem);
+    grid-template-areas: "dot year body logos";
+    gap: 0.85rem 1.1rem;
+    align-items: center;
+  }
+
+  .resume-timeline__year {
+    padding-top: 0.1rem;
+  }
+
+  .resume-timeline__logos {
+    margin-top: 0;
+    justify-content: flex-end;
+    min-height: 2.5rem;
   }
 }

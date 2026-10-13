@@ -100,6 +100,23 @@ const Resume = () => {
                   <a href="tel:+4917644508482">+49 176 44508482</a>
                 </span>
               </address>
+
+              <div className="resume-card__actions button-group">
+                <Link
+                  href="/about/speaking"
+                  className="button"
+                  title="Speaking engagements"
+                >
+                  Speaking
+                </Link>
+                <Link
+                  href="/podcasting"
+                  className="button button--outline"
+                  title="Podcasting"
+                >
+                  Podcasting
+                </Link>
+              </div>
             </header>
           </div>
         </div>
@@ -108,26 +125,144 @@ const Resume = () => {
           <h2>Summary</h2>
 
           <p>
-            Highly influential Engineering Leader and Software Architect (15+
-            years) with deep expertise in Web-, Mobile- and SmartTV-application
-            development, cloud-native, and high-scale platforms (11M+ MAU). I
-            have the ability to define engineering vision, translate complex
-            microservice and cloud architectures into strategic business value,
-            and leading transformation initiatives in media and entertainment. I
-            excel at building and establishing technical departments while
-            fostering innovation and agile cultures. My experience extends
-            beyond in-house leadership; as a consultant and influential co-host
-            of the Working Draft Podcast, I excel at synthesizing complex
-            engineering concepts into accessible, actionable guidance for a broad
-            technical audience.
+            AI-Native Systems Architect &amp; Engineering Advisor with 15+ years
+            of experience building high-scale platforms (11M+ MAU). I help
+            engineering organisations transition from legacy architectures to
+            production-ready AI products, and advise on technical strategy at
+            scale. Hands-on with agentic engineering, cloud-native systems, and
+            modern web stacks; proven at defining engineering vision, leading
+            transformation, and turning complex architectures into business
+            value. As a consultant, coach, and co-host of the Working Draft
+            Podcast, I synthesise technical depth into clear, actionable
+            guidance.
           </p>
         </section>
 
-        <section>
-          <h2>Work</h2>
+        <section aria-labelledby="work-heading">
+          <h2 id="work-heading">Work</h2>
 
-          <h3>AI-Native Systems Architect &amp; Engineering Advisor</h3>
-          <p>July 2025 – Present &bull; Self-employed</p>
+          <ol className="resume-timeline resume-timeline--compact">
+            <li className="resume-timeline__item">
+              <span className="resume-timeline__dot" aria-hidden="true" />
+              <div className="resume-timeline__year">2013–20</div>
+              <div className="resume-timeline__body">
+                <strong className="resume-timeline__title">
+                  Software Architect &amp; Engineering Manager
+                </strong>
+                <span className="resume-timeline__meta">
+                  Self-employed · AXA, Vaillant, REWE digital
+                </span>
+              </div>
+              <div className="resume-timeline__logos" aria-label="Clients">
+                <img
+                  className="resume-logo resume-logo--mark"
+                  src="/img/work/axa.svg"
+                  alt="AXA"
+                />
+                <img
+                  className="resume-logo resume-logo--wide"
+                  src="/img/work/vaillant.svg"
+                  alt="Vaillant"
+                />
+                <img
+                  className="resume-logo resume-logo--wide"
+                  src="/img/work/rewe.svg"
+                  alt="REWE"
+                />
+              </div>
+            </li>
+
+            <li className="resume-timeline__item">
+              <span className="resume-timeline__dot" aria-hidden="true" />
+              <div className="resume-timeline__year">2020–21</div>
+              <div className="resume-timeline__body">
+                <strong className="resume-timeline__title">
+                  Director Technology &amp; Product · FYEO
+                </strong>
+                <span className="resume-timeline__meta">ProSiebenSat.1</span>
+              </div>
+              <div
+                className="resume-timeline__logos"
+                aria-label="ProSiebenSat.1"
+              >
+                <img
+                  className="resume-logo resume-logo--wide"
+                  src="/img/work/p7s1.png"
+                  alt="ProSiebenSat.1"
+                />
+              </div>
+            </li>
+
+            <li className="resume-timeline__item">
+              <span className="resume-timeline__dot" aria-hidden="true" />
+              <div className="resume-timeline__year">2021–25</div>
+              <div className="resume-timeline__body">
+                <strong className="resume-timeline__title">
+                  Vice President Engineering · Joyn
+                </strong>
+                <span className="resume-timeline__meta">
+                  ProSiebenSat.1 · 11M MAU
+                </span>
+              </div>
+              <div
+                className="resume-timeline__logos"
+                aria-label="Joyn and ProSiebenSat.1"
+              >
+                <img
+                  className="resume-logo resume-logo--wide"
+                  src="/img/work/joyn.svg"
+                  alt="Joyn"
+                />
+                <img
+                  className="resume-logo resume-logo--wide"
+                  src="/img/work/p7s1.png"
+                  alt="ProSiebenSat.1"
+                />
+              </div>
+            </li>
+
+            <li className="resume-timeline__item">
+              <span className="resume-timeline__dot" aria-hidden="true" />
+              <div className="resume-timeline__year">since 2025</div>
+              <div className="resume-timeline__body">
+                <strong className="resume-timeline__title">
+                  AI Advisor · Founder N+One · Teaching
+                </strong>
+                <span className="resume-timeline__meta">
+                  Fiberfone · N+One · Digitale Leute School
+                </span>
+              </div>
+              <div
+                className="resume-timeline__logos"
+                aria-label="Current stations"
+              >
+                <img
+                  className="resume-logo resume-logo--wide"
+                  src="/img/work/fiberfone.png"
+                  alt="Fiberfone"
+                />
+                <img
+                  className="resume-logo resume-logo--mark"
+                  src="/img/work/n-plus.svg"
+                  alt="N+One"
+                />
+                <img
+                  className="resume-logo resume-logo--mark"
+                  src="/img/work/dl-school.svg"
+                  alt="Digitale Leute School"
+                />
+              </div>
+            </li>
+          </ol>
+
+          <p className="resume-work-detail">Selected roles</p>
+
+          <div className="resume-role__head">
+            <h3>AI-Native Systems Architect &amp; Engineering Advisor</h3>
+          </div>
+          <p className="resume-role__date">
+            July 2025 – Present &bull; Self-employed
+          </p>
 
           <p>
             Helping engineering organizations transition from legacy
@@ -159,19 +294,61 @@ const Resume = () => {
             </li>
           </ul>
 
-          <h3>Founder at N+One</h3>
-          <p>April 2026 – Present</p>
+          <div className="resume-role__head">
+            <h3>Founder at N+One</h3>
+            <div className="resume-role__logos">
+              <img
+                className="resume-logo resume-logo--mark"
+                src="/img/work/n-plus.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p className="resume-role__date">April 2026 – Present</p>
 
           <p>
-            Building an AI-native coaching platform for cyclists. N+One analyzes
-            training load, recovery, and performance data to dynamically adapt
-            training plans, identify limiters, and optimize race preparation.
-            The goal: deliver the outcomes of a high-quality coach — at scale,
-            and accessible to every athlete.
+            Building an AI-native coaching platform for cyclists: a
+            conversational Dynamic Coach that turns training and recovery data
+            into the next session decision, available daily instead of a static
+            calendar. Designed and shipped a full-stack, chat-first coaching
+            experience on Next.js and the Vercel Edge Network, with agentic
+            workflows that adapt plans in real time to readiness, load, and life
+            constraints. Built integrations with Garmin, Strava, Whoop, and
+            intervals.icu so sleep, HRV, and ride data feed coaching
+            recommendations without manual data entry.
           </p>
 
-          <h3>Fractional CTO at Fiberfone GmbH</h3>
-          <p>October 2023 – February 2026</p>
+          <div className="resume-role__head">
+            <h3>Coach at Digitale Leute School</h3>
+            <div className="resume-role__logos">
+              <img
+                className="resume-logo resume-logo--mark"
+                src="/img/work/dl-school.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p className="resume-role__date">June 2026 – Present</p>
+
+          <p>
+            Coaching AI Software Engineering and Vibe Coding bootcamp
+            participants on production AI patterns: resilient RAG pipelines, MCP
+            integrations, vector stores, guardrails, and agentic engineering
+            across the software development lifecycle — including spec-driven
+            workflows with OpenSpec and Cursor.
+          </p>
+
+          <div className="resume-role__head">
+            <h3>Fractional CTO at Fiberfone GmbH</h3>
+            <div className="resume-role__logos">
+              <img
+                className="resume-logo resume-logo--wide"
+                src="/img/work/fiberfone.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <p className="resume-role__date">October 2023 – February 2026</p>
 
           <ul>
             <li>
@@ -189,8 +366,22 @@ const Resume = () => {
             </li>
           </ul>
 
-          <h3>Vice President Engineering at ProSiebenSat.1</h3>
-          <p>October 2021 – June 2025</p>
+          <div className="resume-role__head">
+            <h3>Vice President Engineering at ProSiebenSat.1</h3>
+            <div className="resume-role__logos">
+              <img
+                className="resume-logo resume-logo--wide"
+                src="/img/work/joyn.svg"
+                alt=""
+              />
+              <img
+                className="resume-logo resume-logo--wide"
+                src="/img/work/p7s1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <p className="resume-role__date">October 2021 – June 2025</p>
 
           <p>
             As Vice President Engineering, I was responsible for the strategic
@@ -228,8 +419,17 @@ const Resume = () => {
             </li>
           </ul>
 
-          <h3>Director Technology &amp; Product, FYEO at ProSiebenSat.1</h3>
-          <p>July 2020 – September 2021</p>
+          <div className="resume-role__head">
+            <h3>Director Technology &amp; Product, FYEO at ProSiebenSat.1</h3>
+            <div className="resume-role__logos">
+              <img
+                className="resume-logo resume-logo--wide"
+                src="/img/work/p7s1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <p className="resume-role__date">July 2020 – September 2021</p>
 
           <p>
             As Director of Technology &amp; Product, I led the development and
@@ -383,12 +583,11 @@ const Resume = () => {
           <h2>Industry Influence &amp; Collaborative Initiatives</h2>
 
           <p>
-            <b>Mentor at The Mentoring Club</b>:{" "}
+            <b>Former Mentor at The Mentoring Club</b>:{" "}
             <a href="https://www.mentoring-club.com/">The Mentoring Club</a> is
-            an open community which aims at supporting people who are keen to
-            learn, grow and develop. I provide advice to mentees to advance in
-            their career in the areas such as Engineering Management &amp;
-            Leadership, Career building, Agile Methodologies and more.{" "}
+            an open community supporting people keen to learn, grow and develop.
+            I advised mentees on Engineering Management &amp; Leadership, career
+            building, Agile methodologies and more.{" "}
             <Link href="/blog/mentoring-club">More information here</Link>.
           </p>
 
@@ -401,9 +600,11 @@ const Resume = () => {
 
           <p>
             <b>Speaking engagements at conferences and webinars</b>: topics
-            including Agentic Engineering across the SDLC, Engineering Metrics,
-            Design Systems and Component Based Development (e.g. Lead Dev
-            Berlin, Front-Trends in Warsaw and Frontend Conference in Zürich).{" "}
+            including Agentic Engineering, AI adoption and governance,
+            Engineering Metrics, Design Systems and Component Based Development
+            (e.g. code.talks Hamburg, Digitale Leute Summit AI Deep Dive Day,
+            t3 CTO Summit, LeadingEng Berlin, Front-Trends in Warsaw and Frontend
+            Conference in Zürich).{" "}
             <Link href="/about/speaking">More about my speaking</Link>.
           </p>
         </section>

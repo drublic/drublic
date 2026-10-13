@@ -2,7 +2,110 @@ import React from "react";
 
 const Projects = () => (
   <>
-    <h2>Projects</h2>
+    <h2>Selected client work</h2>
+
+    <div className="work__element">
+      <a href="https://joyn.de/" className="work__element__image">
+        <img src="/img/work/joyn.svg" alt="Joyn" />
+      </a>
+
+      <div className="work__element__content">
+        <h3>
+          Joyn <span>/ ProSiebenSat.1</span>
+        </h3>
+        <p>
+          As Vice President Engineering I owned the customer-facing
+          applications of the multi-tenant streaming platform{" "}
+          <a href="https://joyn.de/">Joyn</a> (11M+ MAU). Led six distributed
+          teams (~55 people), reference architectures, budget, and the Joyn /
+          ProSiebenSat.1 merger transformation — including early AI engineering
+          practices.
+        </p>
+        <p className="work__element__date">
+          Vice President Engineering, October 2021 – June 2025
+        </p>
+      </div>
+    </div>
+
+    <div className="work__element">
+      <a
+        href="https://www.prosiebensat1.com/"
+        className="work__element__image"
+      >
+        <img src="/img/work/p7s1.png" alt="ProSiebenSat.1" />
+      </a>
+
+      <div className="work__element__content">
+        <h3>
+          FYEO <span>at ProSiebenSat.1</span>
+        </h3>
+        <p>
+          As Director of Technology &amp; Product I led FYEO, a podcasting app
+          with over 1.6 million formats and 40 million episodes. Built an
+          internal team of 13, replaced an external agency, and aligned product
+          and engineering roadmap with business owners.
+        </p>
+        <p className="work__element__date">
+          Director Technology &amp; Product, July 2020 – September 2021
+        </p>
+      </div>
+    </div>
+
+    <div className="work__element">
+      <a href="https://axa.de/" className="work__element__image">
+        <img src="/img/work/axa.svg" alt="AXA Deutschland" />
+      </a>
+
+      <div className="work__element__content">
+        <h3>AXA Deutschland</h3>
+        <p>
+          Led engineering for online insurance tariff calculators in a strongly
+          regulated environment. Node.js and Java microservices, React /
+          TypeScript frontends, Kubernetes and Docker — raising annual
+          application delivery from 2 to 6 and growing the team from 4 to 14.
+        </p>
+        <p className="work__element__date">
+          Lead Software Engineer &amp; Architect, July 2018 – September 2019
+        </p>
+      </div>
+    </div>
+
+    <div className="work__element">
+      <a href="https://shop.rewe.de/" className="work__element__image">
+        <img src="/img/work/rewe.svg" alt="REWE digital" />
+      </a>
+
+      <div className="work__element__content">
+        <h3>REWE digital</h3>
+        <p>
+          Built Node.js microservices moving backend workloads from on-premise
+          to Google Cloud Platform with Kubernetes and Docker. Introduced Apache
+          Kafka for streaming and a React micro-frontend architecture.
+        </p>
+        <p className="work__element__date">
+          Software Engineer, July 2017 – June 2018
+        </p>
+      </div>
+    </div>
+
+    <div className="work__element">
+      <a href="https://vaillant-group.com/" className="work__element__image">
+        <img src="/img/work/vaillant.svg" alt="Vaillant Group" />
+      </a>
+
+      <div className="work__element__content">
+        <h3>Vaillant Group</h3>
+        <p>
+          Front-end architect for Vaillant Group and subsidiaries — shaping a
+          scalable, reusable front-end environment and pioneering agile
+          transformation while the organisation grew from seven to about 40
+          people in Scrum.
+        </p>
+        <p className="work__element__date">
+          Front-end Architect, October 2013 – January 2015
+        </p>
+      </div>
+    </div>
 
     <div className="work__element">
       <a href="https://www.croozer.com/" className="work__element__image">

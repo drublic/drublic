@@ -1,0 +1,17 @@
+.advisory-reading {
+  margin-bottom: 3rem;
+}
+
+.advisory-reading__list {
+  --column-count: 1;
+}
+
+@media (min-width: 48em) {
+  .advisory-reading__list {
+    --column-count: 3;
+  }
+
+  .advisory-reading__list .post__item--with-image {
+    grid-column-end: span 1;
+  }
+}

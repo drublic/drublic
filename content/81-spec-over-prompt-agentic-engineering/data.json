@@ -1,0 +1,22 @@
+{
+  "title": "Spec over Prompt: Agentic Engineering That Survives Production",
+  "date": "10.09.2026",
+  "abstract": "Vibe coding still fails the same way in real repos. This update adds OpenSpec as the missing spine: durable change artifacts, a Cursor /opsx loop you can run this week, and a hard rule that humans own merge risk.",
+  "meta-title": "Spec over Prompt: Agentic Engineering That Survives Production",
+  "meta-description": "Why vibe coding breaks in production, how agentic engineering maps to the SDLC, and the OpenSpec + Cursor loop that makes specs the source of truth.",
+  "image": "https://www.hansreinl.de/assets/spec-over-prompt-agentic-engineering.jpg",
+  "headerImage": "/assets/spec-over-prompt-agentic-engineering.jpg",
+  "headerImageCaption": "Editorial-style header illustration for this article (placeholder reuse; swap when a dedicated asset is ready).",
+  "hidden": false,
+  "hasToc": true,
+  "tags": [
+    "Agentic engineering",
+    "OpenSpec",
+    "Spec-driven",
+    "SDLC",
+    "Cursor",
+    "Ai",
+    "Engineering",
+    "Productivity"
+  ]
+}

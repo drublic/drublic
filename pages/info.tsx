@@ -62,11 +62,11 @@ const Info = () => (
               experience in web, mobile, and SmartTV application development at
               scale (11M+ MAU), he helps engineering organizations transition
               from legacy architectures to AI-native products. He is the
-              founder of N+One, an AI-native coaching platform for cyclists, and
-              former VP Engineering at ProSiebenSat.1 (Joyn). Hans speaks at
-              conferences on engineering leadership and AI engineering, mentors
-              through The Mentoring Club, and has co-hosted the German-speaking
-              web development podcast Working Draft since 2011.
+              founder of N+One, an AI-native coaching platform for cyclists,
+              coach at Digitale Leute School, and former VP Engineering at
+              ProSiebenSat.1 (Joyn). Hans speaks at conferences on engineering
+              leadership and AI engineering, and has co-hosted the
+              German-speaking web development podcast Working Draft since 2011.
             </p>
           </article>
         </div>

@@ -4,7 +4,7 @@ import Layout from "../../lib/components/Layout";
 const Speaking = () => (
   <Layout
     title="Public Speaking — RAG, MCP, Agentic Engineering"
-    description="Hans Christian Reinl speaks at conferences (T3 Summit, Lead Dev Berlin, and more) on agentic engineering across the SDLC, RAG, MCP, AI-assisted development, and engineering leadership."
+    description="Hans Christian Reinl speaks at conferences (t3 CTO Summit, LeadingEng Berlin, and more) on agentic engineering across the SDLC, RAG, MCP, AI-assisted development, and engineering leadership."
   >
     <main id="content" className="main" role="main">
       <section className="container">
@@ -22,16 +22,56 @@ const Speaking = () => (
           </a>
         </p>
 
+        <h2>Upcoming</h2>
+        <ul>
+          <li>
+            <a href="https://codetalks.com/">code.talks</a> 2026; Hamburg,
+            Germany (4–5 Nov) —{" "}
+            <em>
+              From Vibe Coding to Agentic Engineering: Designing the Modern SDLC
+            </em>
+            ; One developer&apos;s toolchain, from ticket to pull request (20
+            min)
+          </li>
+          <li>
+            <a href="https://www.digitale-leute.de/summit/26/">
+              Digitale Leute Summit
+            </a>{" "}
+            AI Deep Dive Day 2026; Cologne, Germany (Tue 17 Nov, 10:20, AI in
+            Engineering stage) —{" "}
+            <em>
+              From Vibe Coding to Agentic Engineering: Designing the Modern SDLC
+            </em>{" "}
+            (60-minute deep dive)
+          </li>
+        </ul>
+
         <h2>Recent Talks</h2>
         <ul>
           <li>
-            <a href="https://www.t3-summit.com/t3-berlin">T3 Summit</a> 2025;
-            Berlin, Germany — Panel discussions on mobile and platform
+            <a href="https://www.t3-summit.com/">t3 CTO Summit</a> 2026;
+            CityCube Berlin — Hosted roundtable{" "}
+            <em>
+              Beyond the Hype: Driving Pragmatic AI Adoption and Team Governance
+            </em>{" "}
+            (
+            <a href="/blog/ai-adoption-governance-roles-t3-cto-summit">notes</a>
+            )
+          </li>
+          <li>
+            Digitale Leute School, 2026 — Workshops on RAG, MCP, and spec-driven
+            agentic engineering (OpenSpec + Cursor)
+          </li>
+          <li>
+            <a href="https://www.t3-summit.com/t3-berlin">t3 CTO Summit</a>{" "}
+            2025; Berlin, Germany — Panel discussions on mobile and platform
             engineering
           </li>
           <li>
-            Lead Dev Berlin — Engineering Metrics and data-driven engineering
-            leadership
+            <a href="https://leaddev.com/leadingeng-berlin/">
+              LeadingEng Berlin
+            </a>{" "}
+            2024 — Engineering Metrics and data-driven engineering leadership
           </li>
         </ul>
 
@@ -42,17 +82,28 @@ const Speaking = () => (
             agents to discovery, delivery, and operations with clear ownership
             at each phase
           </li>
+          <li>
+            AI adoption, governance, and role design for engineering
+            organisations
+          </li>
+          <li>
+            Spec-driven agentic workflows (OpenSpec, Cursor) that survive
+            production review
+          </li>
           <li>AI-assisted development workflows and production patterns</li>
           <li>
             RAG (Retrieval-Augmented Generation) implementation — from indexing
-            and retrieval strategies to production-ready applications;
-            workshops available
+            and retrieval strategies to production-ready applications; workshops
+            available
           </li>
           <li>
             MCP (Model Context Protocol) — connecting LLMs to tools, data, and
             external services; workshops available
           </li>
-          <li>Building production-ready AI applications with Next.js and the Vercel AI SDK</li>
+          <li>
+            Building production-ready AI applications with Next.js and the
+            Vercel AI SDK
+          </li>
           <li>Engineering leadership and scaling high-performing teams</li>
           <li>Engineering metrics and data-driven decision making</li>
           <li>Design systems and component-based development</li>
