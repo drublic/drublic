@@ -237,7 +237,7 @@ hr {
 /* Cookie Message */
 
 .termsfeed-com---nb.termsfeed-com---reset {
-  font: 16px var(--font-body), "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -257,7 +257,7 @@ hr {
 }
 
 .termsfeed-com---palette-light .cc-nb-main-container {
-  font: 16px var(--font-body), Roboto, sans-serif;
+  font-size: 16px;
   color: var(--copy-color);
 }
 
