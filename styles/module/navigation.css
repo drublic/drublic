@@ -2,10 +2,42 @@
  * Navigation
  */
 .navigation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   line-height: 2;
   transition: 0.2s;
   text-align: left;
   position: relative;
+}
+
+.navigation__avatar {
+  flex-shrink: 0;
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  line-height: 0;
+  box-shadow: 0 0 0 2px var(--secondary-color);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.navigation__avatar:hover,
+.navigation__avatar:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 2px var(--secondary-color--hover);
+}
+
+.navigation__avatar-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .navigation__menu {
@@ -50,11 +82,20 @@
 }
 
 @media (min-width: 48em) {
+  .navigation {
+    gap: 0.75rem;
+  }
+
   .navigation__menu {
     display: flex;
   }
 
   .navigation__menu a {
     padding: 1.25rem 1.5rem 1rem;
+  }
+
+  .navigation__avatar {
+    width: 2.75rem;
+    height: 2.75rem;
   }
 }

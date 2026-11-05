@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import classNames from "classnames";
 import { TransitionLink } from "./TransitionLink";
@@ -156,6 +157,20 @@ const Navigation = () => {
 
       {/* Single animated underline */}
       <div className="navigation__underline" style={underlineStyle} />
+
+      <TransitionLink
+        href="/resume"
+        className="navigation__avatar"
+        title="About Hans Reinl"
+      >
+        <Image
+          src="/img/me.jpg"
+          alt="Hans Christian Reinl"
+          width={48}
+          height={48}
+          className="navigation__avatar-image"
+        />
+      </TransitionLink>
     </nav>
   );
 };
