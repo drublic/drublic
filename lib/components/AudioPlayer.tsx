@@ -89,8 +89,9 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src }) => {
       try {
         const response = await fetch(src);
         const arrayBuffer = await response.arrayBuffer();
-        const audioContext = new (window.AudioContext ||
-          (window as any).webkitAudioContext)();
+        // OfflineAudioContext decodes without opening the audio device,
+        // which would otherwise wake Bluetooth headphones on page load.
+        const audioContext = new OfflineAudioContext(1, 1, 44100);
         const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
 
         const audioDuration = audioBuffer.duration;
