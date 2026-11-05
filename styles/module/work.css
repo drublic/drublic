@@ -120,12 +120,6 @@
   margin: 0 auto;
 }
 
-.work__clients__client img[src*="fiberfone"] {
-  background: #111;
-  border-radius: 0.4rem;
-  padding: 0.5rem 0.65rem;
-}
-
 .work__element__date {
   color: var(--copy-light);
   font-style: italic;
