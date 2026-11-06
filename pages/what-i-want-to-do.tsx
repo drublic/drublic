@@ -70,7 +70,7 @@ const WorkWithMe = () => {
       description="Hans Christian Reinl offers AI Software Engineering coaching, AI-native systems advisory, team workshops, and conference speaking. Get in touch for agentic engineering, RAG, MCP, and engineering leadership."
     >
       <main id="content" className="main" role="main">
-        <div className="container">
+        <div className="container container--large">
           <PageTransition delay={80}>
             <header className="info-header">
               <p className="info-header__eyebrow">
@@ -105,10 +105,6 @@ const WorkWithMe = () => {
             >
               What I offer
             </h2>
-            <p className="info-section__intro">
-              Engagements for individuals, teams, and conferences — pick the
-              format that fits, or write and we&apos;ll shape one together.
-            </p>
 
             <ul className="work-with-me__offers">
               {offers.map((offer) => (
