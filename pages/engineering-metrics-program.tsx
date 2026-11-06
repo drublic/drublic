@@ -294,7 +294,7 @@ const EngineeringMetricsProgram = () => (
           <meta itemProp="worksFor" content="Self-employed" />
           <meta
             itemProp="sameAs"
-            content="https://www.linkedin.com/in/hansreinl/"
+            content="https://www.linkedin.com/in/hreinl/"
           />
           <meta itemProp="sameAs" content="https://github.com/drublic" />
         </section>

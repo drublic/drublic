@@ -149,7 +149,7 @@ const Footer = () => (
           </li>
           <li className="social__link social__link--linkedin">
             <a
-              href="https://www.linkedin.com/in/hansreinl/"
+              href="https://www.linkedin.com/in/hreinl/"
               title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"

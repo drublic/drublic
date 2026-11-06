@@ -6,7 +6,7 @@ const links = [
   { label: "GitHub", href: "https://github.com/drublic", value: "drublic" },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/hansreinl/",
+    href: "https://www.linkedin.com/in/hreinl/",
     value: "hansreinl",
   },
 ];

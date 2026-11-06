@@ -17,7 +17,7 @@ const JsonLd = ({ data }: JsonLdProps) => (
 export default JsonLd;
 
 export const PERSON_SAME_AS = [
-  "https://www.linkedin.com/in/hansreinl/",
+  "https://www.linkedin.com/in/hreinl/",
   "https://github.com/drublic",
   "https://nplusone.app/",
   "https://workingdraft.de/",

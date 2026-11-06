@@ -21,7 +21,7 @@ const AdvisoryCta = () => (
           Get in touch
         </a>
         <a
-          href="https://www.linkedin.com/in/hansreinl/"
+          href="https://www.linkedin.com/in/hreinl/"
           title="LinkedIn"
           className="button button--outline"
           target="_blank"

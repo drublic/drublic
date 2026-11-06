@@ -11,4 +11,4 @@ Co-host of [Working Draft](https://workingdraft.de/).
 ## Get in Contact
 
 [![Website](https://img.shields.io/badge/website-%23.svg?style=for-the-badge&logo=Google%20Chrome&color=black&logoColor=white)](https://www.hansreinl.de/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23.svg?style=for-the-badge&logo=linkedin&color=black&logoColor=white)](https://www.linkedin.com/in/hansreinl/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23.svg?style=for-the-badge&logo=linkedin&color=black&logoColor=white)](https://www.linkedin.com/in/hreinl/)

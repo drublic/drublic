@@ -38,15 +38,6 @@ type ArchiveTalk = {
 
 const upcoming: UpcomingTalk[] = [
   {
-    event: "code.talks",
-    eventHref: "https://codetalks.com/",
-    format: "Conference talk · 20 min",
-    meta: "4–5 Nov 2026 · Hamburg, Germany",
-    title: "From Vibe Coding to Agentic Engineering: Designing the Modern SDLC",
-    description:
-      "One developer’s toolchain, from ticket to pull request — how agentic workflows reshape the day-to-day SDLC.",
-  },
-  {
     event: "Digitale Leute Summit",
     eventHref: "https://www.digitale-leute.de/summit/26/",
     format: "Deep dive · 60 min",
@@ -58,6 +49,23 @@ const upcoming: UpcomingTalk[] = [
 ];
 
 const recent: RecentTalk[] = [
+  {
+    event: "code.talks",
+    eventHref: "https://codetalks.com/",
+    meta: "5 Nov 2026 · Kinopolis Hamburg · Stage 3 · 20 min",
+    title: "From Vibe Coding to Agentic Engineering: Designing the Modern SDLC",
+    links: [
+      {
+        label: "Notes",
+        href: "/blog/from-vibe-coding-agentic-engineering-code-talks",
+      },
+      {
+        label: "Talk page",
+        href: "https://codetalks.com/speaker/hans-reinl",
+        external: true,
+      },
+    ],
+  },
   {
     event: "t3 CTO Summit",
     eventHref: "https://www.t3-summit.com/",
@@ -271,7 +279,7 @@ const Speaking = () => (
               Speaker kit
             </Link>
             <a
-              href="https://www.linkedin.com/in/hansreinl/"
+              href="https://www.linkedin.com/in/hreinl/"
               className="button button--outline"
               target="_blank"
               rel="noopener noreferrer"
