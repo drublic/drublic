@@ -31,7 +31,7 @@ const Index = ({ posts }) => {
                 </h1>
                 <p>
                   Hi, I&apos;m Hans. I help engineering organizations transition
-                  from legacy architectures to AI-native products — and coach
+                  from legacy architectures to AI-native products and coach
                   teams on production AI patterns: RAG, MCP, guardrails, and
                   agentic engineering across the SDLC.
                 </p>

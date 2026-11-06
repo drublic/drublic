@@ -1,0 +1,94 @@
+/**
+ * Work with me — engagement menu.
+ * Stacked offers read like a consulting brief, not a feature-card grid.
+ */
+
+.work-with-me__actions {
+  margin-top: 1.5rem;
+}
+
+.work-with-me__offers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(98, 54, 255, 0.14);
+}
+
+.work-with-me__offer {
+  position: relative;
+  padding: 1.5rem 0 1.5rem 1.15rem;
+  border-bottom: 1px solid rgba(98, 54, 255, 0.14);
+}
+
+.work-with-me__offer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 3px;
+  border-radius: 2px;
+  background: rgba(98, 54, 255, 0.28);
+  transition: background-color 0.15s ease;
+}
+
+.work-with-me__offer:hover::before,
+.work-with-me__offer:focus-within::before {
+  background: var(--secondary-color);
+}
+
+.work-with-me__offer-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-color);
+  border-bottom: 0;
+}
+
+.work-with-me__offer-body {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--copy-color-light);
+}
+
+.work-with-me__offer-body a {
+  color: var(--secondary-color);
+  border-bottom: 0;
+  font-weight: 500;
+}
+
+.work-with-me__offer-body a:hover {
+  color: var(--secondary-color--hover);
+}
+
+.work-with-me__offer-body a:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+@media (min-width: 32em) {
+  .work-with-me__offer {
+    padding: 1.75rem 0 1.75rem 1.35rem;
+  }
+
+  .work-with-me__offer::before {
+    top: 1.75rem;
+    bottom: 1.75rem;
+  }
+
+  .work-with-me__offer-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-with-me__offer::before {
+    transition: none;
+  }
+}

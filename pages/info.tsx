@@ -58,19 +58,19 @@ const Info = () => (
           <article className="info-card info-card--wide">
             <h3 className="info-card__label">Long</h3>
             <p className="info-card__text">
-              Hans Christian Reinl is an AI-Native Systems Architect,
-              Engineering Advisor, and AI Software Engineering Coach based in
-              Cologne, Germany. With 15+ years of experience in web, mobile, and
-              SmartTV application development at scale (11M+ MAU), he helps
-              engineering organizations transition from legacy architectures to
-              AI-native products. He coaches AI Software Engineering and Vibe
-              Coding bootcamp participants at Digitale Leute School and
-              neuefische on production AI patterns (RAG, MCP, guardrails,
-              agentic engineering). He is the founder of N+One, an AI-native
-              coaching platform for cyclists, and former VP Engineering at
-              ProSiebenSat.1 (Joyn). Hans speaks at conferences on engineering
-              leadership and AI engineering, and has co-hosted the
-              German-speaking web development podcast Working Draft since 2011.
+              I am an AI-Native Systems Architect, Engineering Advisor, and AI
+              Software Engineering Coach based in Cologne, Germany. With 15+
+              years of experience in web, mobile, and SmartTV application
+              development at scale (11M+ MAU), I help engineering organizations
+              transition from legacy architectures to AI-native products. I
+              coach AI Software Engineering and Vibe Coding bootcamp
+              participants at Digitale Leute School and neuefische on production
+              AI patterns (RAG, MCP, guardrails, agentic engineering). I am the
+              founder of N+One, an AI-native coaching platform for cyclists, and
+              former VP Engineering at ProSiebenSat.1 (Joyn). I speak at
+              conferences on engineering leadership and AI engineering, and have
+              co-hosted the German-speaking web development podcast Working
+              Draft since 2011.
             </p>
           </article>
         </div>
