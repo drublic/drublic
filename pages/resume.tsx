@@ -67,7 +67,7 @@ const Resume = () => {
   return (
   <Layout
     title="Résumé — AI-Native Systems Architect & Engineering Advisor"
-    description="Résumé of Hans Christian Reinl — AI-Native Systems Architect & Engineering Advisor in Cologne. 15+ years building high-scale platforms (Joyn 11M+ MAU). Founder of N+One. Co-host of Working Draft."
+    description="Résumé of Hans Christian Reinl — AI-Native Systems Architect, Engineering Advisor, and AI Software Engineering Coach in Cologne. 15+ years building high-scale platforms (Joyn 11M+ MAU). Coach at Digitale Leute School and neuefische. Founder of N+One."
   >
     <main id="main" className="resume" role="main">
       <div className="main container">
@@ -226,10 +226,10 @@ const Resume = () => {
               <div className="resume-timeline__year">since 2025</div>
               <div className="resume-timeline__body">
                 <strong className="resume-timeline__title">
-                  AI Advisor · Founder N+One · Teaching
+                  AI Advisor · Founder N+One · Coaching
                 </strong>
                 <span className="resume-timeline__meta">
-                  Fiberfone · N+One · Digitale Leute School
+                  Fiberfone · N+One · Digitale Leute School · neuefische
                 </span>
               </div>
               <div
@@ -268,7 +268,8 @@ const Resume = () => {
             Helping engineering organizations transition from legacy
             architectures to AI-native products. I don&apos;t just consult; I
             bridge the gap between high-scale architecture and the agentic
-            future.
+            future. Ran in parallel with Fractional CTO at Fiberfone until
+            February 2026.
           </p>
 
           <ul>
@@ -319,7 +320,7 @@ const Resume = () => {
           </p>
 
           <div className="resume-role__head">
-            <h3>Coach at Digitale Leute School</h3>
+            <h3>Coach at Digitale Leute School &amp; neuefische</h3>
             <div className="resume-role__logos">
               <img
                 className="resume-logo resume-logo--mark"
@@ -328,14 +329,15 @@ const Resume = () => {
               />
             </div>
           </div>
-          <p className="resume-role__date">June 2026 – Present</p>
+          <p className="resume-role__date">March 2026 – Present</p>
 
           <p>
             Coaching AI Software Engineering and Vibe Coding bootcamp
-            participants on production AI patterns: resilient RAG pipelines, MCP
-            integrations, vector stores, guardrails, and agentic engineering
-            across the software development lifecycle — including spec-driven
-            workflows with OpenSpec and Cursor.
+            participants through 3-month courses in English and German on
+            production AI patterns: resilient RAG pipelines, MCP integrations,
+            vector stores, guardrails, and agentic engineering across the
+            software development lifecycle — including spec-driven workflows with
+            OpenSpec and Cursor.
           </p>
 
           <div className="resume-role__head">
@@ -596,6 +598,13 @@ const Resume = () => {
             German-speaking community while being a member of the weekly
             web-development and web-news podcast{" "}
             <a href="https://workingdraft.de/">Working Draft</a> since 2011.
+          </p>
+
+          <p>
+            <b>AI Software Engineering Coach</b>: Coaching bootcamp participants
+            at Digitale Leute School and neuefische on production AI patterns —
+            RAG, MCP, guardrails, and agentic engineering across the SDLC.{" "}
+            <Link href="/what-i-want-to-do">Work with me</Link>.
           </p>
 
           <p>

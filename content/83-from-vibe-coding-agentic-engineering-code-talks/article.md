@@ -75,14 +75,14 @@ The 20-minute cut from Stage 3:
   <div class="slide-deck__bar" role="toolbar" aria-label="Slide navigation">
     <button
       type="button"
-      class="slide-deck__nav"
+      class="button button--outline slide-deck__nav"
       aria-label="Previous slide"
       onclick="(function(){var f=document.getElementById('talk-slides-20');if(!f||!f.contentWindow)return;f.contentWindow.postMessage(JSON.stringify({method:'prev'}), '*');f.focus();})()"
     >
       <span aria-hidden="true">←</span> Previous
     </button>
     <a
-      class="slide-deck__open"
+      class="button slide-deck__open"
       href="https://drublic.github.io/talk-agentic-sdlc/20.html"
       target="_blank"
       rel="noopener noreferrer"
@@ -91,7 +91,7 @@ The 20-minute cut from Stage 3:
     </a>
     <button
       type="button"
-      class="slide-deck__nav"
+      class="button button--outline slide-deck__nav"
       aria-label="Next slide"
       onclick="(function(){var f=document.getElementById('talk-slides-20');if(!f||!f.contentWindow)return;f.contentWindow.postMessage(JSON.stringify({method:'next'}), '*');f.focus();})()"
     >

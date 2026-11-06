@@ -1,57 +1,86 @@
-.button {
+/**
+ * Buttons — media-control language shared with slide-deck + audio player.
+ * Primary: solid violet pill. Outline: paper pill with hairline.
+ */
+:root {
+  --button-ink: #14121c;
+  --button-paper: #f7f5f2;
+  --button-line: rgba(20, 18, 28, 0.12);
+  --button-radius: 999px;
+  --button-min-height: 2.125rem;
+  --button-pad-y: 0.35rem;
+  --button-pad-x: 1rem;
+  --button-font-size: 0.9rem;
+}
+
+.button,
+a.button {
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border: none;
-  border-radius: var(--border-radius);
+  gap: 0.4rem;
+  min-height: var(--button-min-height);
+  padding: var(--button-pad-y) var(--button-pad-x);
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
   color: #fff;
-  font-size: 1rem;
+  font: inherit;
+  font-size: var(--button-font-size);
   font-weight: 500;
-  line-height: 1.25;
-  background-color: var(--secondary-color);
-  background-image: linear-gradient(
-    135deg,
-    var(--secondary-color) 0%,
-    #7b5cff 100%
-  );
-  transition:
-    background-color 0.2s ease,
-    background-image 0.2s ease,
-    color 0.2s ease;
+  line-height: 1.2;
+  text-decoration: none;
+  background: var(--secondary-color);
   white-space: nowrap;
   cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
-.button:visited {
+.button:visited,
+a.button:visited {
   color: #fff;
+  border-color: transparent;
 }
 
-.button:hover {
+.button:hover,
+a.button:hover {
   color: #fff;
-  background-color: #7b5cff;
-  background-image: linear-gradient(
-    135deg,
-    #7b5cff 0%,
-    var(--secondary-color--hover) 100%
-  );
+  background: #7b5cff;
+  border-color: transparent;
 }
 
-.button--outline {
+.button:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.button--outline,
+a.button--outline {
+  background: var(--button-paper);
+  border-color: var(--button-line);
+  color: var(--button-ink);
+}
+
+.button--outline:visited,
+a.button--outline:visited {
+  color: var(--button-ink);
+  border-color: var(--button-line);
+}
+
+.button--outline:hover,
+a.button--outline:hover {
+  border-color: rgba(98, 54, 255, 0.35);
   background: var(--secondary-color--light);
-  background-image: none;
   color: var(--secondary-color);
 }
 
-.button--outline:visited {
-  color: var(--secondary-color);
-}
-
-.button--outline:hover {
-  color: var(--secondary-color);
-  background-color: #e0d6ff;
-  background-image: none;
+.button--outline:focus-visible,
+a.button--outline:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
 .button-group {
@@ -68,4 +97,10 @@
 
 .button--margin-right {
   margin-right: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
 }

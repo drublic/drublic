@@ -48,7 +48,8 @@ const Info = () => (
           <article className="info-card">
             <h3 className="info-card__label">Very short</h3>
             <p className="info-card__text">
-              AI-Native Systems Architect &amp; Engineering Advisor, founder of{" "}
+              AI-Native Systems Architect, Engineering Advisor, and AI Software
+              Engineering Coach. Founder of{" "}
               <a href="https://nplusone.app/">N+One</a>, co-host of{" "}
               <a href="https://workingdraft.de/">Working Draft</a>.
             </p>
@@ -57,13 +58,16 @@ const Info = () => (
           <article className="info-card info-card--wide">
             <h3 className="info-card__label">Long</h3>
             <p className="info-card__text">
-              Hans Christian Reinl is an AI-Native Systems Architect &amp;
-              Engineering Advisor based in Cologne, Germany. With 15+ years of
-              experience in web, mobile, and SmartTV application development at
-              scale (11M+ MAU), he helps engineering organizations transition
-              from legacy architectures to AI-native products. He is the
-              founder of N+One, an AI-native coaching platform for cyclists,
-              coach at Digitale Leute School, and former VP Engineering at
+              Hans Christian Reinl is an AI-Native Systems Architect,
+              Engineering Advisor, and AI Software Engineering Coach based in
+              Cologne, Germany. With 15+ years of experience in web, mobile, and
+              SmartTV application development at scale (11M+ MAU), he helps
+              engineering organizations transition from legacy architectures to
+              AI-native products. He coaches AI Software Engineering and Vibe
+              Coding bootcamp participants at Digitale Leute School and
+              neuefische on production AI patterns (RAG, MCP, guardrails,
+              agentic engineering). He is the founder of N+One, an AI-native
+              coaching platform for cyclists, and former VP Engineering at
               ProSiebenSat.1 (Joyn). Hans speaks at conferences on engineering
               leadership and AI engineering, and has co-hosted the
               German-speaking web development podcast Working Draft since 2011.

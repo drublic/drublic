@@ -12,11 +12,11 @@ const Index = ({ posts }) => {
   return (
     <Layout
       title="AI-Native Systems Architect & Engineering Advisor - Cologne"
-      description="Hans Christian Reinl — AI-Native Systems Architect & Engineering Advisor in Cologne. Building AI-native products, advising engineering organizations, speaking on RAG, MCP, and agentic engineering. Co-host of Working Draft."
+      description="Hans Christian Reinl — AI-Native Systems Architect, Engineering Advisor, and AI Software Engineering Coach in Cologne. Building AI-native products, coaching teams on RAG, MCP, and agentic engineering. Co-host of Working Draft."
     >
       <main id="content" className="main" role="main">
         <PageTransition delay={100}>
-          <div className="container container--large">
+          <div className="container container--large claim__audio">
             <AudioPlayer src="/hi.wav" />
           </div>
         </PageTransition>
@@ -31,16 +31,17 @@ const Index = ({ posts }) => {
                 </h1>
                 <p>
                   Hi, I&apos;m Hans. I help engineering organizations transition
-                  from legacy architectures to AI-native products — bridging
-                  high-scale platform engineering with the agentic future.
+                  from legacy architectures to AI-native products — and coach
+                  teams on production AI patterns: RAG, MCP, guardrails, and
+                  agentic engineering across the SDLC.
                 </p>
                 <div className="claim__tags">
                   {[
                     "AI-Native Systems",
+                    "AI Engineering Coaching",
                     "Agentic Engineering",
                     "Engineering Advisory",
                     "Conference Speaking",
-                    "Engineering Leadership",
                   ].map((label) => (
                     <span key={label} className="tag">
                       {label}
@@ -51,8 +52,18 @@ const Index = ({ posts }) => {
 
               <div className="button-group">
                 <TransitionLink
-                  href="/resume"
+                  href="/what-i-want-to-do"
                   className="button"
+                  title="Advisory, coaching, and speaking"
+                  data-ga-category="WorkWithMe"
+                  data-ga-action="WorkWithMe"
+                  data-ga-label="WorkWithMe"
+                >
+                  Work with me
+                </TransitionLink>
+                <TransitionLink
+                  href="/resume"
+                  className="button button--outline"
                   title="My skills, my background"
                   data-ga-category="Resume"
                   data-ga-action="Resume"
@@ -60,13 +71,6 @@ const Index = ({ posts }) => {
                 >
                   Learn more about me
                 </TransitionLink>
-                <a
-                  href="mailto:hi@hansreinl.de"
-                  className="button button--outline"
-                  title="Get in touch for consulting or speaking"
-                >
-                  Work with me
-                </a>
               </div>
             </div>
           </section>

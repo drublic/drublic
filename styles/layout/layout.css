@@ -264,27 +264,41 @@ hr {
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-okagree,
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject,
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-changep {
-  padding: 0.5rem 2.5rem;
-  line-height: 2;
-  font-size: 1em;
-  border-radius: 2rem;
-  transition: 0.15s;
-  font-weight: normal;
+  min-height: var(--button-min-height);
+  padding: var(--button-pad-y) var(--button-pad-x);
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  font-size: var(--button-font-size);
+  font-weight: 500;
+  line-height: 1.2;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-okagree {
-  background-image: linear-gradient(
-    161.81deg,
-    var(--secondary-color--hover) 25%,
-    var(--secondary-color) 75%
-  );
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
+  background-image: none;
   color: #fff;
 }
 
-.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject {
-  background-color: var(--color-light);
-  color: #fff;
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-okagree:hover {
+  background: #7b5cff;
+}
+
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject,
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-changep {
+  background: var(--button-paper);
+  border-color: var(--button-line);
+  color: var(--button-ink);
+}
+
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject:hover,
+.termsfeed-com---palette-light .cc-nb-main-container .cc-nb-changep:hover {
+  border-color: rgba(98, 54, 255, 0.35);
+  background: var(--secondary-color--light);
+  color: var(--secondary-color);
 }
 
 .termsfeed-com---nb.termsfeed-com---nb-headline .cc-nb-main-container {

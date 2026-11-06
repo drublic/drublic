@@ -84,9 +84,10 @@ const recent: RecentTalk[] = [
     ],
   },
   {
-    event: "Digitale Leute School",
-    meta: "2026 · Workshops",
-    title: "RAG, MCP, and spec-driven agentic engineering (OpenSpec + Cursor)",
+    event: "Digitale Leute School & neuefische",
+    meta: "since March 2026 · Coach · Bootcamps",
+    title:
+      "AI Software Engineering & Vibe Coding — RAG, MCP, guardrails, and agentic engineering",
   },
   {
     event: "t3 CTO Summit",
@@ -110,6 +111,10 @@ const themes = [
   {
     label: "AI adoption & governance",
     text: "Pragmatic rollout patterns, role design, and guidelines that protect the codebase without freezing teams.",
+  },
+  {
+    label: "AI engineering coaching",
+    text: "Bootcamp-style and team coaching on production AI patterns — resilient RAG, MCP integrations, vector stores, guardrails, and agentic workflows across the SDLC.",
   },
   {
     label: "RAG & MCP workshops",
@@ -268,12 +273,16 @@ const Speaking = () => (
     <main id="content" className="main" role="main">
       <div className="container">
         <header className="info-header">
-          <p className="info-header__eyebrow">Conferences, workshops &amp; panels</p>
+          <p className="info-header__eyebrow">
+            Conferences, coaching &amp; workshops
+          </p>
           <h1 className="info-header__title">Public Speaking</h1>
           <p className="info-header__lead">
             I speak about AI engineering, agentic workflows, engineering
-            leadership, and building high-scale platforms. Available for
-            keynotes, conference talks, panel discussions, and team workshops.
+            leadership, and building high-scale platforms. I also coach AI
+            Software Engineering bootcamps at Digitale Leute School and
+            neuefische. Available for keynotes, conference talks, panel
+            discussions, and team workshops.
           </p>
 
           <div className="button-group speaking-header__actions">

@@ -54,9 +54,9 @@
   position: relative;
   display: block;
   color: var(--text-color);
-  padding: 1.25rem 1rem 1rem;
+  padding: 1rem 0.9rem;
   text-decoration: none;
-  transition: 0.15s;
+  transition: color 0.15s ease;
   font-size: 1rem;
   border-bottom: 0;
 }
@@ -73,8 +73,8 @@
 /* Single animated underline */
 .navigation__underline {
   position: absolute;
-  bottom: 0;
-  height: 0.25rem;
+  bottom: 0.35rem;
+  height: 0.2rem;
   background-color: var(--secondary-color);
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,11 +91,21 @@
   }
 
   .navigation__menu a {
-    padding: 1.25rem 1.5rem 1rem;
+    padding: 1.1rem 1.35rem;
   }
 
   .navigation__avatar {
     width: 2.75rem;
     height: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation__underline {
+    transition: none;
+  }
+
+  .navigation__avatar {
+    transition: none;
   }
 }

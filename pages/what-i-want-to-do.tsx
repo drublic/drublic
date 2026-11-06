@@ -6,27 +6,37 @@ const WorkWithMe = () => {
   return (
     <Layout
       title="Work with me"
-      description="Hans Christian Reinl offers AI-native systems advisory, team workshops, and conference speaking. Get in touch for agentic engineering, platform architecture, and engineering leadership."
+      description="Hans Christian Reinl offers AI Software Engineering coaching, AI-native systems advisory, team workshops, and conference speaking. Get in touch for agentic engineering, RAG, MCP, and engineering leadership."
     >
       <main id="content" className="main container" role="main">
         <h1>Work with me</h1>
         <p>
-          I am an AI-Native Systems Architect &amp; Engineering Advisor based in
-          Cologne, Germany. I help engineering teams and companies transition
-          from legacy architectures to AI-native product development.
+          I am an AI-Native Systems Architect, Engineering Advisor, and AI
+          Software Engineering Coach based in Cologne, Germany. I help
+          engineering teams ship production-ready AI — and teach the patterns
+          that keep those systems reliable.
         </p>
 
         <h2>What I offer</h2>
         <ul>
+          <li>
+            <b>AI Software Engineering Coaching</b> — Hands-on coaching for
+            engineers and bootcamp participants on production AI patterns:
+            resilient RAG pipelines, MCP integrations, vector stores,
+            guardrails, and agentic engineering across the software development
+            lifecycle. I coach at Digitale Leute School and neuefische (English
+            and German), and run the same curriculum as team enablement inside
+            companies.
+          </li>
           <li>
             <b>AI-Native Systems Advisory</b> — Strategy, architecture, and
             hands-on implementation of production-ready AI applications with
             Next.js, TypeScript, and the Vercel AI SDK.
           </li>
           <li>
-            <b>Workshops &amp; Team Training</b> — Hands-on sessions on RAG
-            implementation, MCP integration, agentic workflows, and modern AI
-            development practices.
+            <b>Team Workshops</b> — Focused sessions on RAG implementation, MCP
+            integration, spec-driven agentic workflows, and modern AI
+            development practices for existing engineering teams.
           </li>
           <li>
             <b>Conference Speaking</b> — Keynotes and talks on implementing

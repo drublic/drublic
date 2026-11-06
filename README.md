@@ -1,12 +1,14 @@
 # Hello hello, my name is [Hans](https://www.hansreinl.de/) 👋
 
-AI-Native Systems Architect & Engineering Advisor based in Cologne, Germany.
-I help engineering organizations transition from legacy architectures to
-AI-native products and advise on engineering leadership at scale.
+AI-Native Systems Architect, Engineering Advisor, and AI Software Engineering
+Coach based in Cologne, Germany. I help engineering organizations transition
+from legacy architectures to AI-native products, coach teams on production AI
+patterns, and advise on engineering leadership at scale.
 
 Founder of [N+One](https://nplusone.app/) — an AI-native coaching platform
-for cyclists. Former VP Engineering at ProSiebenSat.1 (Joyn, 11M+ MAU).
-Co-host of [Working Draft](https://workingdraft.de/).
+for cyclists. Coach at Digitale Leute School and neuefische. Former VP
+Engineering at ProSiebenSat.1 (Joyn, 11M+ MAU). Co-host of
+[Working Draft](https://workingdraft.de/).
 
 ## Get in Contact
 

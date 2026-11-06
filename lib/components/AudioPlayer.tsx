@@ -265,19 +265,23 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src }) => {
 
       <button
         type="button"
-        className="audio-player__play"
+        className={
+          isPlaying
+            ? "button button--outline audio-player__play"
+            : "button audio-player__play"
+        }
         onClick={togglePlay}
         aria-pressed={isPlaying}
         aria-label={ariaLabel}
       >
         <span className="audio-player__play-icon" aria-hidden="true">
           {isPlaying ? (
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <svg viewBox="0 0 24 24" fill="currentColor">
               <rect x="6" y="5" width="4" height="14" rx="1" />
               <rect x="14" y="5" width="4" height="14" rx="1" />
             </svg>
           ) : (
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86a1 1 0 0 0-1.5.86z" />
             </svg>
           )}

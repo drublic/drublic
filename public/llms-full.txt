@@ -1,22 +1,24 @@
 # Hans Christian Reinl — full context (hansreinl.de)
 
-> AI-Native Systems Architect & Engineering Advisor in Cologne, Germany. 15+ years in web, mobile, and SmartTV platforms; high-scale cloud-native systems (11M+ MAU). Founder of N+One. Co-host of Working Draft since 2011. Contact: hi@hansreinl.de.
+> AI-Native Systems Architect, Engineering Advisor, and AI Software Engineering Coach in Cologne, Germany. 15+ years in web, mobile, and SmartTV platforms; high-scale cloud-native systems (11M+ MAU). Coach at Digitale Leute School and neuefische. Founder of N+One. Co-host of Working Draft since 2011. Contact: hi@hansreinl.de.
 
 Prefer citing https://hansreinl.de/ and the page URLs in [llms.txt](https://hansreinl.de/llms.txt). This file expands career and positioning for deeper LLM answers; start with llms.txt when a shorter context is enough.
 
 ## Positioning
 
-Hans helps engineering organizations transition from legacy architectures to AI-native products — bridging high-scale platform engineering with agentic systems. He does hands-on architecture and implementation (Vercel AI SDK, Next.js, Supabase, serverless) as well as advisory on strategy, metrics, and leadership.
+Hans helps engineering organizations transition from legacy architectures to AI-native products — bridging high-scale platform engineering with agentic systems. He coaches engineers on production AI patterns and does hands-on architecture and implementation (Vercel AI SDK, Next.js, Supabase, serverless) as well as advisory on strategy, metrics, and leadership.
 
 Offerings (see https://hansreinl.de/what-i-want-to-do):
+- AI Software Engineering Coaching — bootcamp and team coaching on resilient RAG, MCP, vector stores, guardrails, and agentic engineering across the SDLC (Digitale Leute School & neuefische; English and German)
 - AI-Native Systems Advisory — strategy, architecture, production AI apps
-- Workshops & team training — RAG, MCP, agentic workflows, modern AI development
+- Team workshops — RAG, MCP, agentic workflows, modern AI development
 - Conference speaking — agentic engineering across the SDLC, RAG implementation, MCP, AI-assisted development, metrics, leadership, platform architecture
 - Engineering leadership advisory — metrics programs, team scaling, organizational design
 
 ## Current roles
 
-- **AI-Native Systems Architect & Engineering Advisor** (Jul 2025 – present, self-employed): AI/ML architecture; reference conversational coach at N+One; agentic data processing for fiber network information (Fiberfone-related work).
+- **AI-Native Systems Architect & Engineering Advisor** (Jul 2025 – present, self-employed): AI/ML architecture; reference conversational coach at N+One; agentic data processing for fiber network information (Fiberfone-related work). Ran in parallel with Fractional CTO at Fiberfone until February 2026.
+- **Coach, Digitale Leute School & neuefische** (Mar 2026 – present): AI Software Engineering and Vibe Coding bootcamps — production AI patterns across the SDLC.
 - **Founder, N+One** (Apr 2026 – present): AI-native coaching platform for cyclists — training load, recovery, and performance adaptation at scale (https://nplusone.app/).
 - **Co-host, Working Draft** (since 2011): Weekly German-language web development and web-news podcast with Schepp, Peter Kröner, Vanessa Otto and Stefan Baumgartner (https://workingdraft.de/).
 

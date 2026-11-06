@@ -14,7 +14,7 @@ const Footer = () => (
             Hans Reinl <span className="cursor">▁</span>
           </TransitionLink>
           <p className="footer__tagline">
-            AI-native systems &amp; engineering advice from Cologne.
+            AI coaching, systems &amp; engineering advice from Cologne.
           </p>
           <a
             className="footer__mail"
@@ -35,7 +35,10 @@ const Footer = () => (
                 </Link>
               </li>
               <li>
-                <Link href="/what-i-want-to-do" title="Work with Hans">
+                <Link
+                  href="/what-i-want-to-do"
+                  title="AI coaching, advisory, and speaking"
+                >
                   Work with me
                 </Link>
               </li>

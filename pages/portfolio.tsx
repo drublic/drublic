@@ -8,7 +8,7 @@ import Projects from "../lib/components/portfolio/Projects";
 const Portfolio = () => (
   <Layout
     title="Portfolio"
-    description="Projects and clients by Hans Christian Reinl — including N+One, Fiberfone, Joyn, Digitale Leute School, Warhol, Working Draft, and open source contributions."
+    description="Projects and clients by Hans Christian Reinl — including N+One, Fiberfone, Joyn, Digitale Leute School, neuefische, Warhol, Working Draft, and open source contributions."
   >
     <main id="content" className="main" role="main">
       <section className="work container" id="work">
@@ -100,15 +100,17 @@ const Portfolio = () => (
               <h3>
                 <a href="https://school.digitale-leute.de/">
                   Digitale Leute School
-                </a>
+                </a>{" "}
+                &amp;{" "}
+                <a href="https://www.neuefische.de/">neuefische</a>
               </h3>
               <p>
-                Coach for AI Software Engineering and Vibe Coding bootcamps —
-                production AI patterns including resilient RAG pipelines, MCP
-                integrations, vector stores, guardrails, and spec-driven
-                agentic workflows with OpenSpec and Cursor.
+                Coach for AI Software Engineering and Vibe Coding bootcamps in
+                English and German — production AI patterns including resilient
+                RAG pipelines, MCP integrations, vector stores, guardrails, and
+                spec-driven agentic workflows with OpenSpec and Cursor.
               </p>
-              <p className="work__element__date">Coach, since June 2026</p>
+              <p className="work__element__date">Coach, since March 2026</p>
             </div>
           </div>
 

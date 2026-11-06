@@ -7,11 +7,14 @@
   display: inline-block !important;
   background: var(--border-color);
   color: var(--color);
-  padding: 0.4rem 0.75rem;
-  border-radius: 0.2rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
   margin-top: 1rem;
   margin-right: 0.5rem;
   border-bottom: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .tag:visited {
@@ -20,7 +23,7 @@
 
 .tag--small {
   font-size: 0.8rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.15rem 0.55rem;
 }
 
 .tag--light {

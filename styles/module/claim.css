@@ -1,13 +1,30 @@
 /**
- * About me
+ * Homepage claim — voice under the brand masthead.
+ * Audio leads; the paragraph carries the story; tags map the work.
  */
 .claim {
+  position: relative;
+  padding-top: 1.5rem;
   padding-bottom: 4rem;
 }
 
+.claim__audio {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.claim__audio .audio-player {
+  margin-top: 0;
+}
+
 .claim__desc {
-  line-height: 1.5em;
+  max-width: 40rem;
+  line-height: 1.55;
   font-size: 1.25rem;
+}
+
+.claim__desc p {
+  color: var(--copy-color-light);
 }
 
 .claim__desc--small {
@@ -32,6 +49,10 @@
   color: var(--secondary-color);
   border: 1px solid rgba(98, 54, 255, 0.3);
   border-radius: 999px;
+}
+
+.claim .button-group {
+  margin-top: 1.75rem;
 }
 
 .claim__me {
@@ -72,7 +93,7 @@
 
 @media (min-width: 32em) {
   .claim {
-    padding-top: 4rem;
+    padding-top: 2.5rem;
   }
 
   .claim-container {
@@ -80,7 +101,7 @@
   }
 
   .claim__desc {
-    line-height: 1.7em;
+    line-height: 1.7;
     font-size: 1.5rem;
   }
 
@@ -90,5 +111,11 @@
     height: 12rem;
     margin-left: 0;
     margin-right: 3rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .claim__audio .audio-player {
+    margin-top: 0.5rem;
   }
 }

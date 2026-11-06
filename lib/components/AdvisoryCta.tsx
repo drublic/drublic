@@ -2,14 +2,15 @@ const AdvisoryCta = () => (
   <div className="layout--darkened">
     <section className="container container--centered container--padded-bottom">
       <h2 className="typography--colored">
-        AI-Native Systems &amp; Engineering Advisory
+        AI Coaching, Systems &amp; Engineering Advisory
       </h2>
 
       <p className="typography--h4">
-        I work with engineering teams on AI strategy, hands-on implementation
-        with the Vercel AI SDK and Next.js, and advisory on engineering
-        leadership and platform architecture. Available for conference talks
-        and team workshops.
+        I coach engineers on production AI patterns — RAG, MCP, guardrails, and
+        agentic workflows — and work with teams on AI strategy, hands-on
+        implementation with the Vercel AI SDK and Next.js, and engineering
+        leadership. Available for bootcamp-style coaching, team workshops, and
+        conference talks.
       </p>
 
       <div className="button-group button-group--centered">

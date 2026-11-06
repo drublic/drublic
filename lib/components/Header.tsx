@@ -12,13 +12,12 @@ const Header = ({ noNavigation = false }) => (
     <div className="header__inner">
       <TransitionLink
         href="/"
-        role="banner"
         className="header__title"
         title="Website of Hans Reinl - @drublic"
       >
-        <h1 className="header__title__line">
+        <span className="header__title__line">
           Hans Reinl <span className="cursor">▁</span>
-        </h1>
+        </span>
       </TransitionLink>
 
       <div className="header__spacer" />
