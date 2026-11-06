@@ -53,9 +53,52 @@ Second, the interesting talks around me were not “look what the model can do.�
 
 Thanks to everyone who showed up at 10:45, to the code.talks crew for the stage, and to the people who made the two days in Hamburg worth the trip.
 
-Next stop for this talk is a longer cut: the [Digitale Leute Summit](https://www.digitale-leute.de/summit/26/schedule/from-vibe-coding-to-agentic-engineering-designing-the-modern-sdlc/) on 17 November in Cologne, sixty minutes instead of twenty. Slides will go live once I have a public build of the deck. Until then, come find me after the deep dive.
+Next stop for this talk is a longer cut: the [Digitale Leute Summit](https://www.digitale-leute.de/summit/26/schedule/from-vibe-coding-to-agentic-engineering-designing-the-modern-sdlc/) on 17 November in Cologne, sixty minutes instead of twenty. Come find me after the deep dive.
 
 What’s your rule for taking the keyboard back?
+
+## The Slides
+
+The 20-minute cut from Stage 3:
+
+<div class="slide-deck">
+  <figure class="slide-deck__stage image--has-frame">
+    <iframe
+      id="talk-slides-20"
+      class="slide-deck__frame"
+      src="https://drublic.github.io/talk-agentic-sdlc/20.html"
+      title="Slides: From Vibe Coding to Agentic Engineering (20 min cut)"
+      loading="lazy"
+      allowfullscreen
+    ></iframe>
+  </figure>
+  <div class="slide-deck__bar" role="toolbar" aria-label="Slide navigation">
+    <button
+      type="button"
+      class="slide-deck__nav"
+      aria-label="Previous slide"
+      onclick="(function(){var f=document.getElementById('talk-slides-20');if(!f||!f.contentWindow)return;f.contentWindow.postMessage(JSON.stringify({method:'prev'}), '*');f.focus();})()"
+    >
+      <span aria-hidden="true">←</span> Previous
+    </button>
+    <a
+      class="slide-deck__open"
+      href="https://drublic.github.io/talk-agentic-sdlc/20.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Open full screen
+    </a>
+    <button
+      type="button"
+      class="slide-deck__nav"
+      aria-label="Next slide"
+      onclick="(function(){var f=document.getElementById('talk-slides-20');if(!f||!f.contentWindow)return;f.contentWindow.postMessage(JSON.stringify({method:'next'}), '*');f.focus();})()"
+    >
+      Next <span aria-hidden="true">→</span>
+    </button>
+  </div>
+</div>
 
 <ul class="gallery gallery--thirds gallery--equal">
 <li><img src="/assets/code-talks-nico-martin-webai.jpg" alt="Nico Martin on stage at code.talks 2026, Hugging Face WebAI talk" /></li>

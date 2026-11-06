@@ -60,6 +60,11 @@ const recent: RecentTalk[] = [
         href: "/blog/from-vibe-coding-agentic-engineering-code-talks",
       },
       {
+        label: "Slides",
+        href: "https://drublic.github.io/talk-agentic-sdlc/20.html",
+        external: true,
+      },
+      {
         label: "Talk page",
         href: "https://codetalks.com/speaker/hans-reinl",
         external: true,
