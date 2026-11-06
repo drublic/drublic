@@ -38,6 +38,13 @@
   flex-grow: 819;
 }
 
+/* Equal aspect-ratio frames (e.g. all 3:4) */
+.gallery--thirds.gallery--equal li:nth-child(1),
+.gallery--thirds.gallery--equal li:nth-child(2),
+.gallery--thirds.gallery--equal li:nth-child(3) {
+  flex-grow: 1;
+}
+
 .gallery--thirds li img {
   width: 100%;
   height: auto;
