@@ -18,4 +18,4 @@ Volunteer for leadership opportunities: Look for opportunities to take on leader
 Network with other engineering leaders: Connect with other leaders in your field to learn from their experiences and build relationships.
 By actively developing the necessary skills and seeking out opportunities to grow, software engineers can successfully transition into fulfilling and impactful engineering leadership roles.
 
-Read [all my articles on engineering leadership](/blog?tag=engineering%20leadership) on this page.
+Read [all my articles on engineering leadership](/blog/tag/engineering%20leadership) on this page.

@@ -139,7 +139,7 @@ This property is part of the <a href="http://www.w3.org/TR/css3-gcpm/#page-marks
 
 <!--
 
-<figure class="alignright"><img src="http://www.w3.org/TR/css3-background/box-break.png" title="box-decoration-break: slice and clone" alt="box-decoration-break: slice and clone" width="400"></figure>
+<figure class="alignright"><img src="https://www.w3.org/TR/css3-background/box-break.png" title="box-decoration-break: slice and clone" alt="box-decoration-break: slice and clone" width="400"></figure>
 
 -->
 

@@ -11,7 +11,7 @@ On the project’s homepage you can find some features they are praising. Let’
 
 There are some things that steal your time when you work on a project. Yeoman is here to help you reduce the time you spent on these to focus more on the actual process of writing clean and lightweight code.
 
-<iframe width="675" height="380" src="http://www.youtube.com/embed/vFacaBinGZ0" frameborder="0" allowfullscreen=""></iframe><br>
+<iframe width="675" height="380" src="https://www.youtube.com/embed/vFacaBinGZ0" frameborder="0" allowfullscreen=""></iframe><br>
 <i>Addy Osmani explains the main features of Yeoman.</i>
 <h3>Starting Projects &amp; Maintaining Them</h3>
 

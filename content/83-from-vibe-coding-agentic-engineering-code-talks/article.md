@@ -43,6 +43,11 @@ And I caught [Bernd Strehl](https://codetalks.com/speaker/bernd-strehl) (Vercel)
 
 Between sessions I reconnected with people from Vercel and mittwald, and a lot of other folks who are building this stuff for real. That part of the conference is hard to overstate. I will say more about those conversations on LinkedIn.
 
+<figure class="image">
+  <img src="/assets/code-talks-sponsor-conversation.jpg" alt="Hans Christian Reinl talking with a sponsor on the show floor at code.talks in Hamburg" style="width:100%;height:auto" />
+  <figcaption class="image__caption image__caption--no-border">A sponsor conversation between sessions. Kinopolis Hamburg, 5 November 2026.<span class="image__caption__copywrite">code.talks</span></figcaption>
+</figure>
+
 ## What I’m Taking Away
 
 Two things stuck after my talk.
