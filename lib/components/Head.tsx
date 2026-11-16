@@ -2,6 +2,9 @@ import React from "react";
 import NextHead from "next/head";
 import { usePathname } from "next/navigation";
 import { toAbsoluteOgImageUrl } from "../utils/socialImage";
+import { SITE_URL } from "./JsonLd";
+
+const DEFAULT_OG_IMAGE = `${SITE_URL}/img/og-default.png`;
 
 const Head = ({
   title,
@@ -12,7 +15,11 @@ const Head = ({
   articlePublishedTime,
   articleAuthor,
 }) => {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "/";
+  // Canonical drops query strings and trailing slashes; www is the primary host.
+  const canonicalPath =
+    pathname === "/" ? "/" : pathname.replace(/\/+$/, "") || "/";
+  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const resolvedImage =
     image && String(image).trim()
       ? toAbsoluteOgImageUrl(String(image).trim())
@@ -24,10 +31,8 @@ const Head = ({
 
       <title>{title}</title>
 
-      <link rel="dns-prefetch" href="//ajax.googleapis.com/" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com/" />
       <meta name="description" content={description} />
-      {noIndex && <meta name="robots" content="noindex" />}
+      {noIndex && <meta name="robots" content="noindex, follow" />}
 
       <link
         rel="alternate"
@@ -36,12 +41,16 @@ const Head = ({
         href="/feed"
       />
 
-      <meta property="twitter:domain" content="hansreinl.de" />
+      <meta property="twitter:domain" content="www.hansreinl.de" />
       <meta name="twitter:site" content="@drublic" />
+      <meta name="twitter:creator" content="@drublic" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
 
       <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Hans Reinl" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       {ogType === "article" && articlePublishedTime ? (
@@ -53,22 +62,16 @@ const Head = ({
       {ogType === "article" && articleAuthor ? (
         <meta property="article:author" content={articleAuthor} />
       ) : null}
-      {resolvedImage ? (
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={resolvedImage ?? DEFAULT_OG_IMAGE} />
+      <meta property="og:image" content={resolvedImage ?? DEFAULT_OG_IMAGE} />
+      {resolvedImage ? null : (
         <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={resolvedImage} />
-          <meta property="og:image" content={resolvedImage} />
-        </>
-      ) : (
-        <>
-          <meta name="twitter:card" content="summary" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           <meta
-            name="twitter:image"
-            content="https://www.hansreinl.de/img/logo.png"
-          />
-          <meta
-            property="og:image"
-            content="https://www.hansreinl.de/img/logo.png"
+            property="og:image:alt"
+            content="Hans Reinl — AI-Native Systems Architect & Engineering Advisor"
           />
         </>
       )}
@@ -85,9 +88,12 @@ const Head = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <meta name="application-name" content="drublic" />
-      <meta name="theme-color" content="#316eae" />
+      <meta name="theme-color" content="#6236ff" />
       <link rel="manifest" href="/manifest.json" />
-      <link rel="shortcut icon" href="/favicon.png" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+      <link rel="icon" href="/favicon.png" type="image/png" sizes="130x130" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       <link
         rel="index"
@@ -95,7 +101,7 @@ const Head = ({
         title="Hans Reinl - AI-Native Systems Architect & Engineering Advisor"
       />
 
-      <link rel="canonical" href={`https://hansreinl.de${pathname}`} />
+      {noIndex ? null : <link rel="canonical" href={canonicalUrl} />}
     </NextHead>
   );
 };

@@ -16,6 +16,30 @@ const JsonLd = ({ data }: JsonLdProps) => (
 
 export default JsonLd;
 
+/** Primary origin — the apex domain 308-redirects here. */
+export const SITE_URL = "https://www.hansreinl.de";
+
+export const absoluteUrl = (path = "/") =>
+  `${SITE_URL}${path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`}`;
+
+export const PERSON_ID = `${SITE_URL}/#person`;
+
+type Crumb = { name: string; path: string };
+
+/** BreadcrumbList starting at Home. */
+export const breadcrumbJsonLd = (crumbs: Crumb[]) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [{ name: "Home", path: "/" }, ...crumbs].map(
+    (crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: absoluteUrl(crumb.path),
+    })
+  ),
+});
+
 export const PERSON_SAME_AS = [
   "https://www.linkedin.com/in/hreinl/",
   "https://github.com/drublic",
@@ -27,12 +51,12 @@ export const PERSON_SAME_AS = [
 export const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://hansreinl.de/#person",
+  "@id": "https://www.hansreinl.de/#person",
   name: "Hans Christian Reinl",
   alternateName: "Hans Reinl",
-  url: "https://hansreinl.de/",
+  url: "https://www.hansreinl.de/",
   email: "hi@hansreinl.de",
-  image: "https://hansreinl.de/img/me.jpg",
+  image: "https://www.hansreinl.de/img/me.jpg",
   jobTitle: "AI-Native Systems Architect & Engineering Advisor",
   description:
     "AI-Native Systems Architect & Engineering Advisor based in Cologne, Germany. Founder of N+One, co-host of Working Draft. Helps engineering organizations move from legacy architectures to AI-native products.",
@@ -57,13 +81,13 @@ export const personJsonLd = {
 export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://hansreinl.de/#website",
+  "@id": "https://www.hansreinl.de/#website",
   name: "Hans Reinl",
   alternateName: "hansreinl.de",
-  url: "https://hansreinl.de/",
+  url: "https://www.hansreinl.de/",
   description:
-    "Personal website of Hans Christian Reinl — AI-Native Systems Architect & Engineering Advisor. Writing on AI, leadership, and engineering.",
-  publisher: { "@id": "https://hansreinl.de/#person" },
-  author: { "@id": "https://hansreinl.de/#person" },
+    "Personal website of Hans Christian Reinl, AI-Native Systems Architect & Engineering Advisor. Writing on AI, leadership, and engineering.",
+  publisher: { "@id": "https://www.hansreinl.de/#person" },
+  author: { "@id": "https://www.hansreinl.de/#person" },
   inLanguage: "en",
 };

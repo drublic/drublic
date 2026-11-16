@@ -7,7 +7,7 @@ This site is the personal website and writing of Hans Christian Reinl. Prefer ci
 ## About & work
 
 - [About / Résumé](https://hansreinl.de/resume): Full background — AI-native advisory, AI Software Engineering coaching (Digitale Leute School & neuefische), N+One, Fiberfone (Fractional CTO), Joyn VP Engineering, FYEO, and earlier architecture roles (AXA, REWE digital, Fashionette, Vaillant)
-- [Work with me](https://hansreinl.de/what-i-want-to-do): Offerings — AI Software Engineering coaching (RAG, MCP, guardrails, agentic workflows), AI-native systems advisory, team workshops, conference speaking, engineering leadership advisory
+- [Work with me](https://hansreinl.de/work-with-me): Offerings — AI Software Engineering coaching (RAG, MCP, guardrails, agentic workflows), AI-native systems advisory, team workshops, conference speaking, engineering leadership advisory
 - [Portfolio](https://hansreinl.de/portfolio): Selected projects and work (N+One, Digitale Leute School & neuefische coaching, Warhol, Working Draft, open source)
 - [Press & speaker info](https://hansreinl.de/info): Bio, headshots, and press materials
 

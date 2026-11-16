@@ -19,7 +19,7 @@ const Cookiescript = () => (
                 "preferences_center_close_button_hide":false,
                 "website_name":"drublic",
                 "open_preferences_center_selector":"#privacy-preferences",
-                "website_privacy_policy_url":"https://vc-six.vercel.app/privacy"
+                "website_privacy_policy_url":"https://www.hansreinl.de/privacy"
               });
             } catch (error) {
               console.warn('Failed to initialize cookie consent:', error);

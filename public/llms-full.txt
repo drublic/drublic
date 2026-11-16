@@ -8,7 +8,7 @@ Prefer citing https://hansreinl.de/ and the page URLs in [llms.txt](https://hans
 
 Hans helps engineering organizations transition from legacy architectures to AI-native products — bridging high-scale platform engineering with agentic systems. He coaches engineers on production AI patterns and does hands-on architecture and implementation (Vercel AI SDK, Next.js, Supabase, serverless) as well as advisory on strategy, metrics, and leadership.
 
-Offerings (see https://hansreinl.de/what-i-want-to-do):
+Offerings (see https://hansreinl.de/work-with-me):
 - AI Software Engineering Coaching — bootcamp and team coaching on resilient RAG, MCP, vector stores, guardrails, and agentic engineering across the SDLC (Digitale Leute School & neuefische; English and German)
 - AI-Native Systems Advisory — strategy, architecture, production AI apps
 - Team workshops — RAG, MCP, agentic workflows, modern AI development
@@ -59,7 +59,7 @@ Also: Warhol (co-founder, 2019–2021); colored.by (co-founder); /gebrüderheitz
 ## Key site pages
 
 - Résumé: https://hansreinl.de/resume
-- Work with me: https://hansreinl.de/what-i-want-to-do
+- Work with me: https://hansreinl.de/work-with-me
 - Blog / AI / Leadership: https://hansreinl.de/blog · /ai · /leadership
 - Engineering Metrics Program: https://hansreinl.de/engineering-metrics-program
 - Portfolio: https://hansreinl.de/portfolio

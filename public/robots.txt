@@ -54,4 +54,4 @@ Allow: /
 # https://hansreinl.de/llms-full.txt
 # https://hansreinl.de/.well-known/llms.txt
 
-Sitemap: https://hansreinl.de/sitemap
+Sitemap: https://www.hansreinl.de/sitemap

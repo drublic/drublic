@@ -4,12 +4,19 @@
   "icons": [
     {
       "src": "/img/logo.png",
-      "sizes": "225x225",
-      "type": "image/png"
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#ffffff",
-  "theme_color": "#1b3b5d",
+  "theme_color": "#6236ff",
   "display": "standalone"
 }
