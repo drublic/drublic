@@ -33,7 +33,7 @@ const renderPosts = (posts: any[]) =>
   <content type="html">${abstract.replace(
     /[\u00A0-\u9999<>\&]/g,
     (i) => "&#" + i.charCodeAt(0) + ";"
-  )}></content>
+  )}</content>
   <updated>${getDate(date).toISOString()}</updated>
 </entry>
 `
@@ -53,7 +53,11 @@ export const getServerSideProps = async (context) => {
 
   const feed = template(renderPosts(posts), getDate(posts[0].date));
 
-  res.setHeader("Content-Type", "text/xml");
+  res.setHeader("Content-Type", "application/atom+xml; charset=utf-8");
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=86400"
+  );
   res.write(feed);
   res.end();
 

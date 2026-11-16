@@ -6,6 +6,9 @@ import { getDate } from "../../../lib/utils/date";
 // Re-export getDate for backward compatibility
 export { getDate };
 
+/** Hidden drafts are only ever served when running locally. */
+export const ALLOW_PREVIEW = process.env.NODE_ENV === "development";
+
 export const POSTS_DIR = path.join(process.cwd(), "content");
 export const POSTS_AI_DIR = path.join(process.cwd(), "content-ai");
 export const POSTS_LEADERSHIP_DIR = path.join(
@@ -112,13 +115,12 @@ export const getFolderPath = (folderParam: string | null) => {
 };
 
 export default async (req, res) => {
-  const hasPreview = !!req.query.preview;
+  const hasPreview = ALLOW_PREVIEW && !!req.query.preview;
   const folder = req.query.folder;
   const folderPath = getFolderPath(folder);
   const posts = await getPosts(hasPreview, folderPath);
 
-  if (process.env.NODE_ENV === "development" && req.method === "POST") {
-    console.log("create post", req.body);
+  if (ALLOW_PREVIEW && req.method === "POST") {
     const { slug } = JSON.parse(req.body);
     await createPost(slug);
 

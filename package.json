@@ -12,7 +12,9 @@
     "content:tune": "node scripts/content/tune-metadata-lengths.mjs",
     "content:validate": "node scripts/content/validate-metadata.mjs",
     "build": "yarn content:validate && next build && yarn copy:articles && yarn copy:assets",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "og:default": "node scripts/og/generate-default-og.mjs"
   },
   "dependencies": {
     "@toast-ui/editor": "^3.2.2",
@@ -22,7 +24,6 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "next": "16.2.6",
-    "node-fetch": "^3.3.2",
     "normalize.css": "^8.0.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",

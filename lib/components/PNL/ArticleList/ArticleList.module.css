@@ -113,7 +113,6 @@
   letter-spacing: 0.05em;
   text-align: left;
   font-weight: 600;
-  box-sizing: border-box;
 }
 
 .table thead th:first-child {
@@ -153,7 +152,6 @@
 .tableCell {
   padding: 0.5rem 1rem;
   vertical-align: top;
-  box-sizing: border-box;
 }
 
 .table tbody td:first-child,

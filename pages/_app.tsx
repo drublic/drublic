@@ -4,7 +4,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitionProvider } from "../lib/components/ViewTransitionProvider";
 import { roboto, sora, vollkorn } from "../lib/fonts";
 import "../styles/main.css";
-import "@toast-ui/editor/dist/toastui-editor.css";
 
 type Props = {
   Component: any;

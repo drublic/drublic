@@ -1,9 +1,23 @@
 import fs from "fs";
 import path from "path";
 import * as showdown from "showdown";
-import { POSTS_DIR, getPosts, getFolderPath } from ".";
+import { ALLOW_PREVIEW, POSTS_DIR, getPosts, getFolderPath } from ".";
+import { enhancePostImages } from "../../../lib/utils/postImages";
 
 const converter: showdown.Converter = new showdown.Converter();
+
+/** Minutes to read at ~220 words per minute (minimum 1). */
+const readingMinutes = (markdown: string): number => {
+  const words = markdown
+    .replace(/```[\s\S]*?```/g, " ") // code blocks are skimmed, not read
+    .replace(/\]\([^)]*\)/g, "] ") // link and image URLs
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[#>*_`~\[\]()!-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return Math.max(1, Math.round(words / 220));
+};
+
 converter.setOption("tables", true);
 
 export const getFullPost = async (
@@ -34,7 +48,11 @@ export const getFullPost = async (
 
     return {
       ...postData,
-      entry: converter.makeHtml(entry),
+      readingMinutes: readingMinutes(entry),
+      entry: enhancePostImages(
+        converter.makeHtml(entry),
+        path.resolve(folderPath, postData.path)
+      ),
       rawEntry: process.env.NODE_ENV === "development" ? entry : null,
     };
   } catch (error) {
@@ -68,19 +86,23 @@ export const findPost = (posts: any[], slug: string): any =>
   posts.find((post) => post.slug === slug);
 
 export default async (req, res) => {
-  const hasPreview = !!req.query.preview;
+  const hasPreview = ALLOW_PREVIEW && !!req.query.preview;
   const folder = req.query.folder;
 
   const folderPath = getFolderPath(folder);
   const posts = await getPosts(hasPreview, folderPath);
   const postData = findPost(posts, readSlug(req.url));
 
-  if (process.env.NODE_ENV === "development" && req.method === "PATCH") {
+  if (ALLOW_PREVIEW && req.method === "PATCH") {
     const { rawEntry, entry, path, slug, ...rest } = JSON.parse(req.body);
     await saveToFile(postData, rawEntry);
     await saveToJson(postData, rest);
 
     return res.status(200).json({ message: "ok" });
+  }
+
+  if (!postData) {
+    return res.status(404).json({ error: true, message: "Post not found" });
   }
 
   const post = await getFullPost(postData, folderPath);

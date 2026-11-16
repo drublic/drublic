@@ -294,6 +294,11 @@ const PNL = ({ isDev, posts }) => {
 };
 
 export const getServerSideProps = async () => {
+  // The editor exposes unpublished drafts — local development only.
+  if (process.env.NODE_ENV !== "development") {
+    return { notFound: true };
+  }
+
   const posts = await getPosts(true, POSTS_DIR);
 
   return {

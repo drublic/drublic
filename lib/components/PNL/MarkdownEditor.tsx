@@ -1,5 +1,7 @@
 import React, { FC, ForwardedRef, forwardRef } from "react";
 import { Editor } from "@toast-ui/react-editor";
+// Editor-only styles: loaded with this dynamically imported chunk, not site-wide.
+import "@toast-ui/editor/dist/toastui-editor.css";
 
 type Props = {
   onChange: () => void;
