@@ -1,114 +1,81 @@
 import Layout from "../lib/components/Layout";
 import Clients from "../lib/components/Clients";
 import IndexArticles from "../lib/components/IndexArticles";
-import IndexWorkingDraft from "../lib/components/IndexWorkingDraft";
+import IndexWorkingDraft, {
+  WD_HOME_LIMIT,
+} from "../lib/components/IndexWorkingDraft";
 import AdvisoryCta from "../lib/components/AdvisoryCta";
-import AudioPlayer from "../lib/components/AudioPlayer";
-import { TransitionLink } from "../lib/components/TransitionLink";
+import EngagementSteps from "../lib/components/EngagementSteps";
+import HomeHero from "../lib/components/HomeHero";
+import PathwayCards from "../lib/components/PathwayCards";
+import StoryModule from "../lib/components/StoryModule";
 import { PageTransition } from "../lib/components/PageTransition";
 import { POSTS_DIR, getPosts } from "./api/posts";
+import { getCachedWdPosts } from "./api/wd-posts";
 
-const Index = ({ posts }) => {
+const Index = ({ posts, wdPosts }) => {
   return (
     <Layout
       title="AI-Native Systems Architect & Engineering Advisor - Cologne"
-      description="Hans Christian Reinl — AI-Native Systems Architect, Engineering Advisor, and AI Software Engineering Coach in Cologne. Building AI-native products, coaching teams on RAG, MCP, and agentic engineering. Co-host of Working Draft."
+      description="Hans Christian Reinl, AI-Native Systems Architect, Engineering Advisor, and AI Software Engineering Coach in Cologne. Building AI-native products, coaching teams on RAG, MCP, and agentic engineering. Co-host of Working Draft."
     >
-      <main id="content" className="main" role="main">
+      <main id="content" className="main main--home" role="main">
+        <HomeHero />
+
         <PageTransition delay={100}>
-          <div className="container container--large claim__audio">
-            <AudioPlayer src="/hi.wav" />
+          <StoryModule />
+        </PageTransition>
+
+        <section
+          className="work__for-section work__for-section--compact"
+          aria-labelledby="companies-heading"
+        >
+          <h2 id="companies-heading">Companies I Worked For</h2>
+
+          <div className="work__for">
+            <Clients />
           </div>
+        </section>
+
+        <PageTransition delay={160}>
+          <PathwayCards />
         </PageTransition>
 
-        <PageTransition delay={200}>
-          <section className="claim">
-            <div className="container">
-              <div className="claim__desc">
-                <h1 className="visuallyhidden">
-                  Hans Reinl — AI-Native Systems Architect &amp; Engineering
-                  Advisor
-                </h1>
-                <p>
-                  Hi, I&apos;m Hans. I help engineering organizations transition
-                  from legacy architectures to AI-native products and coach
-                  teams on production AI patterns: RAG, MCP, guardrails, and
-                  agentic engineering across the SDLC.
-                </p>
-                <div className="claim__tags">
-                  {[
-                    "AI-Native Systems",
-                    "AI Engineering Coaching",
-                    "Agentic Engineering",
-                    "Engineering Advisory",
-                    "Conference Speaking",
-                  ].map((label) => (
-                    <span key={label} className="tag">
-                      {label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="button-group">
-                <TransitionLink
-                  href="/what-i-want-to-do"
-                  className="button"
-                  title="Advisory, coaching, and speaking"
-                  data-ga-category="WorkWithMe"
-                  data-ga-action="WorkWithMe"
-                  data-ga-label="WorkWithMe"
-                >
-                  Work with me
-                </TransitionLink>
-                <TransitionLink
-                  href="/resume"
-                  className="button button--outline"
-                  title="My skills, my background"
-                  data-ga-category="Resume"
-                  data-ga-action="Resume"
-                  data-ga-label="Resume"
-                >
-                  Learn more about me
-                </TransitionLink>
-              </div>
-            </div>
-          </section>
-        </PageTransition>
-
-        <PageTransition delay={300}>
+        <PageTransition delay={240}>
           <IndexArticles posts={posts} />
         </PageTransition>
 
-        <PageTransition delay={400}>
+        <PageTransition delay={320}>
           <AdvisoryCta />
         </PageTransition>
 
-        <PageTransition delay={500}>
-          <IndexWorkingDraft />
+        <PageTransition delay={380}>
+          <EngagementSteps />
         </PageTransition>
 
-        <PageTransition delay={600}>
-          <section className="container container--large container--centered">
-            <h2>Companies I worked for</h2>
-
-            <div className="work__for">
-              <Clients />
-            </div>
-          </section>
+        <PageTransition delay={440}>
+          <IndexWorkingDraft initialPosts={wdPosts} />
         </PageTransition>
+
       </main>
     </Layout>
   );
 };
 
-export const getServerSideProps = async () => {
-  const posts = await getPosts(false, POSTS_DIR);
+export const getStaticProps = async () => {
+  const [posts, wdPosts] = await Promise.all([
+    getPosts(false, POSTS_DIR),
+    getCachedWdPosts(),
+  ]);
 
   return {
     props: {
-      posts,
+      // Only the three teasers are rendered — keep the page payload small.
+      posts: posts.slice(0, 3),
+      wdPosts: wdPosts.slice(0, WD_HOME_LIMIT),
     },
+    // Hourly refresh picks up new podcast episodes without a redeploy.
+    revalidate: 3600,
   };
 };
 

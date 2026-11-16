@@ -1,15 +1,19 @@
 import React from "react";
 import Layout from "../lib/components/Layout";
+import PageHeader from "../lib/components/PageHeader";
+import PageShell from "../lib/components/PageShell";
+import CookieSettingsButton from "../lib/components/CookieSettingsButton";
 
 const Privacy = () => (
   <Layout
     title="Privacy policy"
     description="Privacy policy (Datenschutz) for hansreinl.de — Hans Christian Reinl, Cologne, Germany."
   >
-    <main id="content" className="main container" role="main">
-      <h1>Privacy Protection</h1>
+    <main id="content" className="main" role="main" lang="de">
+      <PageShell>
+      <PageHeader label="Datenschutz" title="Privacy Protection" />
 
-      <p>
+      <p lang="en">
         My Privacy Protection Page is in German since I am a German Business. If
         you have any question, please contact me via{" "}
         <a href="mailto:hi@hansreinl.de">hi@hansreinl.de</a>.
@@ -106,102 +110,91 @@ const Privacy = () => (
 
       <h3>2.2 E-Mail Kontakt</h3>
       <p>
-        Wenn Sie mit uns in Kontakt treten (z. B. per Kontaktformular oder
-        E-Mail), speichern wir Ihre Angaben zur Bearbeitung der Anfrage sowie
-        für den Fall, dass Anschlussfragen entstehen. Weitere personenbezogene
-        Daten speichern und nutzen wir nur, wenn Sie dazu einwilligen oder dies
-        ohne besondere Einwilligung gesetzlich zulässig ist.
+        Wenn Sie mit uns in Kontakt treten (z. B. per E-Mail), speichern wir
+        Ihre Angaben zur Bearbeitung der Anfrage sowie für den Fall, dass
+        Anschlussfragen entstehen. Weitere personenbezogene Daten speichern und
+        nutzen wir nur, wenn Sie dazu einwilligen oder dies ohne besondere
+        Einwilligung gesetzlich zulässig ist.
       </p>
 
-      <h3>2.3 Google Analytics</h3>
+      <h3>2.3 Google Analytics (nur mit Einwilligung)</h3>
       <p>
-        Wir benutzen Google Analytics, einen Webanalysedienst der Google Inc.
-        („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die
-        auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung
-        der Website durch Sie ermöglichen. Die durch den Cookie erzeugten
-        Informationen über Benutzung dieser Website durch die Seitenbesucher
-        werden in der Regel an einen Server von Google in den USA übertragen und
-        dort gespeichert.
-      </p>
-
-      <p>
-        Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird
-        Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der
-        Europäischen Union oder in anderen Vertragsstaaten des Abkommens über
-        den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen
-        wird die volle IP-Adresse an einen Server von Google in den USA
-        übertragen und dort gekürzt. Die IP-Anonymisierung ist auf dieser
-        Website aktiv. In unserem Auftrag wird Google diese Informationen
-        benutzen, um die Nutzung der Website durch Sie auszuwerten, um Reports
-        über die Websiteaktivitäten zusammenzustellen und um weitere mit der
-        Websitenutzung und der Internetnutzung verbundene Dienstleistungen uns
-        gegenüber zu erbringen.
+        Mit Ihrer Einwilligung nutzen wir Google Analytics 4, einen
+        Webanalysedienst der Google Ireland Limited, Gordon House, Barrow
+        Street, Dublin 4, Irland („Google“). Ohne Ihre Einwilligung wird Google
+        Analytics nicht geladen und es werden keine Analytics-Cookies gesetzt.
+        Die Abfrage erfolgt über unser Cookie-Banner.
       </p>
 
       <p>
-        Die im Rahmen von Google Analytics von Ihrem Browser übermittelte
-        IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie
-        können die Speicherung der Cookies durch eine entsprechende Einstellung
-        Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin,
-        dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser
-        Website vollumfänglich werden nutzen können.
+        Google Analytics verwendet Cookies und ähnliche Technologien, um die
+        Nutzung der Website auszuwerten (z. B. aufgerufene Seiten, Verweildauer,
+        Gerät und Browser, ungefährer Standort). IP-Adressen werden in Google
+        Analytics 4 nicht gespeichert. Die Informationen können an Server von
+        Google LLC in den USA übertragen werden; Google ist nach dem
+        EU-US Data Privacy Framework zertifiziert. Die Daten werden nach 14
+        Monaten gelöscht.
       </p>
 
       <p>
-        Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten
-        und auf ihre Nutzung der Website bezogenen Daten (inkl. Ihrer
-        IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google
-        verhindern, indem Sie das unter dem folgenden Link verfügbare
-        Browser-Plugin herunterladen und installieren:
-        http://tools.google.com/dlpage/gaoptout?hl=de.
+        Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO
+        und § 25 Abs. 1 TDDDG. Sie können Ihre Einwilligung jederzeit mit
+        Wirkung für die Zukunft widerrufen oder ändern:
+      </p>
+      <p>
+        <CookieSettingsButton className="button button--outline">
+          Cookie-Einstellungen öffnen
+        </CookieSettingsButton>
+      </p>
+
+      <h3>2.4 Hosting, Vercel Web Analytics und Speed Insights</h3>
+      <p>
+        Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina,
+        CA 91723, USA („Vercel“) gehostet. Beim Aufruf der Website verarbeitet
+        Vercel die unter 2.1 genannten Zugriffsdaten, um die Website
+        auszuliefern und abzusichern. Vercel ist nach dem EU-US Data Privacy
+        Framework zertifiziert; zusätzlich haben wir mit Vercel einen Vertrag
+        zur Auftragsverarbeitung geschlossen.
       </p>
 
       <p>
-        Alternativ zum Browser-Plugin oder innerhalb von Browsern auf mobilen
-        Geräten können Sie auf den folgenden Link klicken, um ein Opt-Out-Cookie
-        zu setzen, der die Erfassung durch Google Analytics innerhalb dieser
-        Website zukünftig verhindert (dieses Opt-Out-Cookie funktioniert nur in
-        diesem Browser und nur für diese Domain. Löschen Sie die Cookies in
-        Ihrem Browser, müssen Sie diesen Link erneut klicken):
-      </p>
-      <p>
-        <a href="javascript:gaOptout()">Google Analytics deaktivieren</a>
+        Zur Reichweitenmessung nutzen wir Vercel Web Analytics. Der Dienst
+        setzt keine Cookies und speichert keine IP-Adressen. Besucher werden
+        lediglich über einen Hash aus Anfragedaten unterschieden, der täglich
+        verworfen wird; eine Wiedererkennung über mehrere Tage oder Websites
+        hinweg ist nicht möglich. Erfasst werden aufgerufene Seiten, Referrer,
+        Land, Gerätetyp, Betriebssystem und Browser.
       </p>
 
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-    <script src="//www.google-analytics.com/analytics.js"></script>
-    <script>
-      var gaProperty = 'G-XSLJDELHFG';
-      var disableStr = 'ga-disable-' + gaProperty;
-      if (document.cookie.indexOf(disableStr + '=true') > -1) {
-        window[disableStr] = true;
-      }
-
-      function gaOptout() {
-        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-        window[disableStr] = true;
-      }
-    </script>
-  `,
-        }}
-      />
-
-      <h3>2.4 Rechtsgrundlagen und Speicherdauer</h3>
+      <p>
+        Mit Vercel Speed Insights messen wir die Ladegeschwindigkeit der Website
+        (Core Web Vitals wie Ladezeit und Layout-Stabilität). Dabei werden
+        keine Cookies gesetzt; übermittelt werden die gemessenen Werte zusammen
+        mit der aufgerufenen URL, Gerätetyp, Browser und Land.
+      </p>
 
       <p>
-        Rechtsgrundlage der Datenverarbeitung nach den vorstehenden Ziffern ist
-        Art 6 Abs. 1 Buchstabe f) DSGVO. Unsere Interessen an der
+        Rechtsgrundlage für Hosting, Web Analytics und Speed Insights ist Art.
+        6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der
+        sicheren und schnellen Auslieferung der Website sowie in einer
+        datensparsamen, anonymen Reichweitenmessung.
+      </p>
+
+      <h3>2.5 Rechtsgrundlagen und Speicherdauer</h3>
+
+      <p>
+        Soweit oben nicht anders angegeben, ist Rechtsgrundlage der
+        Datenverarbeitung Art. 6 Abs. 1 lit. f DSGVO. Unsere Interessen an der
         Datenverarbeitung sind insbesondere die Sicherstellung des Betriebs und
         der Sicherheit der Webseite, die Untersuchung der Art und Weise der
         Nutzung der Webseite durch Besucher, und die Vereinfachung der Nutzung
-        der Webseite.
+        der Webseite. Für Google Analytics ist Rechtsgrundlage Ihre
+        Einwilligung (siehe 2.3).
       </p>
 
       <p>
         Sofern nicht spezifisch angegeben speichern wir personenbezogene Daten
-        nur so lange, wie dies zur Erfüllung der verfolgten Zwecke notwendig
+        nur so lange, wie dies zur Erfüllung der verfolgten Zwecke notwendig
         ist.
       </p>
 
@@ -514,10 +507,11 @@ const Privacy = () => (
       </p>
 
       <p>
-        Eine Datenübertragung an Stellen oder Personen außerhalb der EU
-        außerhalb der in dieser Erklärung in Punkt 2.3 genannten Fällen findet
-        nicht statt und ist nicht geplant.
+        Eine Datenübertragung an Stellen oder Personen außerhalb der EU
+        außerhalb der in dieser Erklärung in den Punkten 2.3 und 2.4 genannten
+        Fälle findet nicht statt und ist nicht geplant.
       </p>
+      </PageShell>
     </main>
   </Layout>
 );

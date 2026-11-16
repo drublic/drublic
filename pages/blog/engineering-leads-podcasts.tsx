@@ -77,7 +77,7 @@ const data = [
 const template = ({ link, image, title, author, comment, spotify, apple }) => `
     <li class="article58-list-item">
       <div class="article58-content">
-        <a href=${link}><img src=${image} alt="" class="article58-cover"></a>
+        <a href="${link}"><img src="${image}" alt="${title} cover" class="article58-cover" loading="lazy" decoding="async"></a>
 
         <div>
           <a href="${link}">

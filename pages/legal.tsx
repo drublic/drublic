@@ -1,13 +1,18 @@
 import React from "react";
 import Layout from "../lib/components/Layout";
+import PageHeader from "../lib/components/PageHeader";
+import PageShell from "../lib/components/PageShell";
 
 const Legal = () => (
   <Layout
     title="Imprint / Legal notice"
     description="Legal notice (Impressum) for hansreinl.de — Hans Christian Reinl, Cologne, Germany."
   >
-    <main id="content" className="main container" role="main">
-      <h1 id="imprint-label">Imprint</h1>
+    <main id="content" className="main" role="main" lang="de">
+      <PageShell>
+      <div id="imprint-label">
+        <PageHeader label="Legal" title="Imprint" />
+      </div>
 
       <div>
         <h3>Hans-Christian Reinl</h3>
@@ -111,6 +116,7 @@ const Legal = () => (
           </a>
         </p>
       </div>
+      </PageShell>
     </main>
   </Layout>
 );

@@ -1,22 +1,33 @@
 import Link from "next/link";
 import React from "react";
 import Layout from "../../lib/components/Layout";
+import PageHeader from "../../lib/components/PageHeader";
+import PageShell from "../../lib/components/PageShell";
+import JsonLd, { breadcrumbJsonLd } from "../../lib/components/JsonLd";
 
-const Resume = () => (
+const Writings = () => (
   <Layout
     title="Writings"
     description="External articles and interviews by Hans Christian Reinl on web development, engineering leadership, and AI."
   >
+    <JsonLd
+      data={breadcrumbJsonLd([{ name: "External writings", path: "/about/writings" }])}
+    />
     <main id="content" className="main" role="main">
-      <section className="container">
-        <h1>Writings</h1>
+      <PageShell>
+        <PageHeader
+          label="External publishing"
+          title="Writings"
+          lead={
+            <p>
+              I write about AI engineering, agentic workflows, and engineering
+              leadership on <Link href="/blog">my blog</Link>. Here is a list of
+              external articles and interviews. Hopefully more to come.
+            </p>
+          }
+        />
 
-      <p>
-        I write about AI engineering, agentic workflows, and engineering
-        leadership on <Link href="/blog">my blog</Link>. Here is a list of
-        external articles and interviews. Hopefully more to come.
-      </p>
-        <ul>
+        <ul className="writings-list">
           <li>
             <a href="http://workspiration.org/hans-christian-reinl">
               Interview: Work inspiration with Hans Christian Reinl
@@ -61,7 +72,7 @@ const Resume = () => (
           </li>
           <li>
             [de] <a href="//screengui.de/">SCREENGUIDE</a> – issue 15 – Neues
-            für Webseitendrucker -
+            für Webseitendrucker -{" "}
             <a href="//hansreinl.de/blog/printing-the-web/">
               Extended Version in English
             </a>
@@ -89,10 +100,10 @@ const Resume = () => (
         </ul>
 
         <p>
-          Please <a href="mailto:hi@hansreinl.de">send me a mail</a> if you want{" "}
+          Please <a href="mailto:hi@hansreinl.de">send me a mail</a> if you want
           me to write for you.
         </p>
-      </section>
+      </PageShell>
 
       <div
         className="section--fullsize section--ratio"
@@ -102,4 +113,4 @@ const Resume = () => (
   </Layout>
 );
 
-export default Resume;
+export default Writings;

@@ -2,26 +2,39 @@ import React from "react";
 import Layout from "../lib/components/Layout";
 import Card from "../lib/components/Card";
 import Grid from "../lib/components/Grid";
+import PageHeader from "../lib/components/PageHeader";
+import PageShell from "../lib/components/PageShell";
 import ProcessFlow from "../lib/components/ProcessFlow";
 import Image from "next/image";
+import JsonLd, { breadcrumbJsonLd } from "../lib/components/JsonLd";
 
 const EngineeringMetricsProgram = () => (
   <Layout
     title="The Engineering Metrics Program for your Organisation"
     description="Establish a light, actionable Engineering Metrics Program that improves delivery flow and team health in 6 weeks."
   >
+    <JsonLd
+      data={breadcrumbJsonLd([
+        {
+          name: "Engineering Metrics Program",
+          path: "/engineering-metrics-program",
+        },
+      ])}
+    />
     <main id="content" className="main" role="main">
-      <div className="container">
-        <h1 className="hero-title">
-          The Engineering Metrics Program for your Organisation
-        </h1>
-
-        <p className="hero-subtitle">
-          Establish a light, actionable Engineering Metrics Program for
-          engineering leaders that improves delivery flow and team health in 6
-          weeks.
-        </p>
-      </div>
+      <PageShell>
+        <PageHeader
+          label="Program"
+          title="The Engineering Metrics Program for Your Organisation"
+          lead={
+            <p>
+              Establish a light, actionable Engineering Metrics Program for
+              engineering leaders that improves delivery flow and team health in
+              6 weeks.
+            </p>
+          }
+        />
+      </PageShell>
 
       <div className="container container--large">
         <ProcessFlow />
@@ -72,6 +85,8 @@ const EngineeringMetricsProgram = () => (
                 alt="Delivery"
                 width={48}
                 height={48}
+                loading="lazy"
+                decoding="async"
               />
             }
             title="Delivery"
@@ -87,6 +102,8 @@ const EngineeringMetricsProgram = () => (
                 alt="quality and stability"
                 width={48}
                 height={48}
+                loading="lazy"
+                decoding="async"
               />
             }
             title="Quality and stability"
@@ -99,7 +116,14 @@ const EngineeringMetricsProgram = () => (
         <Grid className="my-1">
           <Card
             icon={
-              <img src="/icons/flow.svg" alt="Flow" width={48} height={48} />
+              <img
+                src="/icons/flow.svg"
+                alt="Flow"
+                width={48}
+                height={48}
+                loading="lazy"
+                decoding="async"
+              />
             }
             title="Flow"
             items={[
@@ -113,6 +137,8 @@ const EngineeringMetricsProgram = () => (
                 alt="Team health"
                 width={48}
                 height={48}
+                loading="lazy"
+                decoding="async"
               />
             }
             title="Team health"

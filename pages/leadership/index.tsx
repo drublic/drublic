@@ -18,8 +18,9 @@ const Blog: FunctionComponent<Props> = ({ posts }) => {
   );
 };
 
-export const getServerSideProps = async ({ query }) => {
-  const posts = await getPosts(!!query.preview, POSTS_LEADERSHIP_DIR);
+export const getStaticProps = async () => {
+  // Hidden drafts are listed in local development only.
+  const posts = await getPosts(process.env.NODE_ENV === "development", POSTS_LEADERSHIP_DIR);
 
   return {
     props: {

@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import AdvisoryCta from "../../lib/components/AdvisoryCta";
+import JsonLd, {
+  PERSON_ID,
+  breadcrumbJsonLd,
+} from "../../lib/components/JsonLd";
 import Layout from "../../lib/components/Layout";
+import PageHeader from "../../lib/components/PageHeader";
+import PageShell from "../../lib/components/PageShell";
 
 type TalkLink = {
   label: string;
@@ -15,8 +21,16 @@ type UpcomingTalk = {
   eventHref: string;
   format: string;
   meta: string;
+  /** Shown in "Recent Talks" once the talk is over. */
+  recentMeta: string;
   title: string;
   description: string;
+  /** ISO 8601 with offset — drives upcoming/recent and Event structured data. */
+  startDate: string;
+  endDate: string;
+  venue: string;
+  locality: string;
+  links?: TalkLink[];
 };
 
 type RecentTalk = {
@@ -42,9 +56,14 @@ const upcoming: UpcomingTalk[] = [
     eventHref: "https://www.digitale-leute.de/summit/26/",
     format: "Deep dive · 60 min",
     meta: "Tue 17 Nov 2026, 10:20 · Cologne · AI in Engineering stage",
+    recentMeta: "17 Nov 2026 · Cologne · AI in Engineering stage · 60 min",
     title: "From Vibe Coding to Agentic Engineering: Designing the Modern SDLC",
     description:
       "Deep dive on mapping AI agents to discovery, delivery, and operations with clear ownership at each phase.",
+    startDate: "2026-11-17T10:20:00+01:00",
+    endDate: "2026-11-17T11:20:00+01:00",
+    venue: "Digitale Leute Summit",
+    locality: "Cologne",
   },
 ];
 
@@ -265,190 +284,286 @@ const TalkLinks = ({ links }: { links?: TalkLink[] }) => {
   );
 };
 
-const Speaking = () => (
-  <Layout
-    title="Public Speaking — RAG, MCP, Agentic Engineering"
-    description="Hans Christian Reinl speaks at conferences (t3 CTO Summit, LeadingEng Berlin, and more) on agentic engineering across the SDLC, RAG, MCP, AI-assisted development, and engineering leadership."
-  >
-    <main id="content" className="main" role="main">
-      <div className="container">
-        <header className="info-header">
-          <p className="info-header__eyebrow">
-            Conferences, coaching &amp; workshops
-          </p>
-          <h1 className="info-header__title">Public Speaking</h1>
-          <p className="info-header__lead">
-            I speak about AI engineering, agentic workflows, engineering
-            leadership, and building high-scale platforms. I also coach AI
-            Software Engineering bootcamps at Digitale Leute School and
-            neuefische. Available for keynotes, conference talks, panel
-            discussions, and team workshops.
-          </p>
+const eventJsonLd = (talk: UpcomingTalk) => ({
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: `${talk.title} — ${talk.event}`,
+  description: talk.description,
+  startDate: talk.startDate,
+  endDate: talk.endDate,
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  url: talk.eventHref,
+  location: {
+    "@type": "Place",
+    name: talk.venue,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: talk.locality,
+      addressCountry: "DE",
+    },
+  },
+  organizer: { "@type": "Organization", name: talk.event, url: talk.eventHref },
+  performer: { "@id": PERSON_ID },
+});
 
-          <div className="button-group speaking-header__actions">
-            <a href="mailto:hi@hansreinl.de" className="button">
-              Invite me to speak
-            </a>
-            <Link href="/info" className="button button--outline">
-              Speaker kit
-            </Link>
-            <a
-              href="https://www.linkedin.com/in/hreinl/"
-              className="button button--outline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </header>
+type SpeakingProps = {
+  /** Build/revalidation time; talks that ended before it move to "Recent". */
+  now: number;
+};
 
-        <section
-          className="info-section speaking-upcoming"
-          aria-labelledby="speaking-upcoming-heading"
-        >
-          <h2 id="speaking-upcoming-heading" className="info-section__title">
-            Upcoming
-          </h2>
+const Speaking = ({ now }: SpeakingProps) => {
+  const upcomingTalks = upcoming.filter(
+    (talk) => new Date(talk.endDate).getTime() > now,
+  );
+  const pastTalks: RecentTalk[] = upcoming
+    .filter((talk) => new Date(talk.endDate).getTime() <= now)
+    .map(({ event, eventHref, recentMeta, title, links }) => ({
+      event,
+      eventHref,
+      meta: recentMeta,
+      title,
+      links,
+    }));
+  const recentTalks = [...pastTalks, ...recent];
 
-          <div className="speaking-upcoming__grid">
-            {upcoming.map((talk) => (
-              <article key={`${talk.event}-${talk.meta}`} className="event-card">
-                <p className="event-card__eyebrow">{talk.format}</p>
-                <ExternalLink
-                  href={talk.eventHref}
-                  className="event-card__brand"
-                >
-                  <span>{talk.event}</span>
-                </ExternalLink>
-                <p className="event-card__meta">{talk.meta}</p>
-                <p className="event-card__title">{talk.title}</p>
-                <div className="event-card__desc">
-                  <p>{talk.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section
-          className="info-section"
-          aria-labelledby="speaking-recent-heading"
-        >
-          <h2 id="speaking-recent-heading" className="info-section__title">
-            Recent Talks
-          </h2>
-
-          <ul className="speaking-talk-list">
-            {recent.map((talk) => (
-              <li
-                key={`${talk.event}-${talk.meta}-${talk.title}`}
-                className="speaking-talk"
+  return (
+    <Layout
+      title="Public Speaking — RAG, MCP, Agentic Engineering"
+      description="Hans Christian Reinl speaks at conferences (t3 CTO Summit, LeadingEng Berlin, and more) on agentic engineering across the SDLC, RAG, MCP, AI-assisted development, and engineering leadership."
+    >
+      <JsonLd
+        data={[
+          ...upcoming.map(eventJsonLd),
+          breadcrumbJsonLd([{ name: "Speaking", path: "/about/speaking" }]),
+        ]}
+      />
+      <main id="content" className="main" role="main">
+        <PageShell>
+          <PageHeader
+            label="Conferences, coaching & workshops"
+            title="Public Speaking"
+            lead={
+              <p>
+                I speak about AI engineering, agentic workflows, engineering
+                leadership, and building high-scale platforms. I also coach AI
+                Software Engineering bootcamps at Digitale Leute School and
+                neuefische. Available for keynotes, conference talks, panel
+                discussions, and team workshops.
+              </p>
+            }
+          >
+            <div className="button-group speaking-header__actions">
+              <a href="mailto:hi@hansreinl.de" className="button button--large">
+                Invite me to speak
+              </a>
+              <Link
+                href="/info"
+                className="button button--large button--outline"
               >
-                <p className="speaking-talk__meta">
-                  {talk.eventHref ? (
-                    <ExternalLink href={talk.eventHref}>
-                      {talk.event}
-                    </ExternalLink>
-                  ) : (
-                    <span>{talk.event}</span>
-                  )}
-                  <span aria-hidden="true"> · </span>
-                  {talk.meta}
-                </p>
-                <p className="speaking-talk__title">{talk.title}</p>
-                <TalkLinks links={talk.links} />
-              </li>
-            ))}
-          </ul>
-        </section>
+                Speaker kit
+              </Link>
+              <a
+                href="https://www.linkedin.com/in/hreinl/"
+                className="button button--large button--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </PageHeader>
 
-        <section
-          className="info-section"
-          aria-labelledby="speaking-themes-heading"
-        >
-          <h2 id="speaking-themes-heading" className="info-section__title">
-            Topics I Speak About
-          </h2>
-          <p className="info-section__intro">
-            Flagship themes for keynotes, deep dives, and workshops. For bio and
-            press assets, see the{" "}
-            <Link href="/info">speaker information page</Link>.
-          </p>
+          {upcomingTalks.length > 0 ? (
+            <section
+              className="info-section speaking-upcoming"
+              aria-labelledby="speaking-upcoming-heading"
+            >
+              <h2
+                id="speaking-upcoming-heading"
+                className="info-section__title"
+              >
+                Upcoming Talks
+              </h2>
 
-          <div className="speaking-themes">
-            {themes.map((theme) => (
-              <article key={theme.label} className="info-card">
-                <h3 className="info-card__label">{theme.label}</h3>
-                <p className="info-card__text">{theme.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+              <div className="speaking-upcoming__list">
+                {upcomingTalks.map((talk) => {
+                  const start = new Date(talk.startDate);
+                  const part = (opts: Intl.DateTimeFormatOptions) =>
+                    new Intl.DateTimeFormat("en-GB", {
+                      timeZone: "Europe/Berlin",
+                      ...opts,
+                    }).format(start);
+                  const place = talk.meta.split(" · ").slice(1);
 
-        <figure className="speaking-photo">
-          <Image
-            src="/img/speaking-discussion.jpg"
-            alt="Hans Christian Reinl in discussion at Droidcon and Fluttercon, Berlin"
-            width={1200}
-            height={1800}
-            className="speaking-photo__image"
-            sizes="(min-width: 48em) 40rem, 100vw"
-          />
-          <figcaption className="image__caption image__caption--no-border">
-            Conversations between sessions — Droidcon &amp; Fluttercon at The
-            Cube, Berlin, 24–26 September 2025.
-            <span className="image__caption__copywrite">
-              www.tellingphotography.com
-            </span>
-          </figcaption>
-        </figure>
+                  return (
+                    <article
+                      key={`${talk.event}-${talk.meta}`}
+                      className="event-card"
+                    >
+                      <time
+                        className="event-card__date"
+                        dateTime={talk.startDate}
+                      >
+                        <span className="event-card__weekday">
+                          {part({ weekday: "long" })}
+                        </span>
+                        <span className="event-card__day">
+                          {part({ day: "numeric" })}
+                        </span>
+                        <span className="event-card__month">
+                          {part({ month: "long", year: "numeric" })}
+                        </span>
+                        <span className="event-card__time">
+                          {part({ hour: "2-digit", minute: "2-digit" })}
+                        </span>
+                      </time>
+                      <div className="event-card__body">
+                        <p className="event-card__where">
+                          <ExternalLink
+                            href={talk.eventHref}
+                            className="event-card__brand"
+                          >
+                            {talk.event}
+                          </ExternalLink>
+                          <span>{place.join(", ")}</span>
+                        </p>
+                        <h3 className="event-card__title">{talk.title}</h3>
+                        <p className="event-card__desc">{talk.description}</p>
+                        <p className="event-card__format">{talk.format}</p>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ) : null}
 
-        <section
-          className="info-section"
-          aria-labelledby="speaking-archive-heading"
-        >
-          <details className="speaking-archive">
-            <summary id="speaking-archive-heading">
-              Earlier talks (2012–2015)
-            </summary>
-            <p className="speaking-archive__intro">
-              Front-end tooling, style guides, and component-based development —
-              mostly with slides and video where available.
-            </p>
-            <ul className="speaking-talk-list speaking-talk-list--compact">
-              {archive.map((talk) => (
+          <section
+            className="info-section"
+            aria-labelledby="speaking-recent-heading"
+          >
+            <h2 id="speaking-recent-heading" className="info-section__title">
+              Recent Talks
+            </h2>
+
+            <ul className="speaking-talk-list">
+              {recentTalks.map((talk) => (
                 <li
                   key={`${talk.event}-${talk.meta}-${talk.title}`}
                   className="speaking-talk"
                 >
                   <p className="speaking-talk__meta">
-                    <ExternalLink href={talk.eventHref}>
-                      {talk.event}
-                    </ExternalLink>
+                    {talk.eventHref ? (
+                      <ExternalLink href={talk.eventHref}>
+                        {talk.event}
+                      </ExternalLink>
+                    ) : (
+                      <span>{talk.event}</span>
+                    )}
                     <span aria-hidden="true"> · </span>
                     {talk.meta}
                   </p>
-                  <p className="speaking-talk__title">
-                    {talk.titleHref ? (
-                      <ExternalLink href={talk.titleHref}>
-                        {talk.title}
-                      </ExternalLink>
-                    ) : (
-                      talk.title
-                    )}
-                  </p>
+                  <p className="speaking-talk__title">{talk.title}</p>
                   <TalkLinks links={talk.links} />
                 </li>
               ))}
             </ul>
-          </details>
-        </section>
-      </div>
+          </section>
 
-      <AdvisoryCta />
-    </main>
-  </Layout>
-);
+          <section
+            className="info-section"
+            aria-labelledby="speaking-themes-heading"
+          >
+            <h2 id="speaking-themes-heading" className="info-section__title">
+              Topics I Speak About
+            </h2>
+            <p className="info-section__intro">
+              Flagship themes for keynotes, deep dives, and workshops. For bio
+              and press assets, see the{" "}
+              <Link href="/info">speaker information page</Link>.
+            </p>
+
+            <div className="speaking-themes">
+              {themes.map((theme) => (
+                <article key={theme.label} className="info-card">
+                  <h3 className="info-card__label">{theme.label}</h3>
+                  <p className="info-card__text">{theme.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <figure className="speaking-photo">
+            <Image
+              src="/img/speaking-discussion.jpg"
+              alt="Hans Christian Reinl in discussion at Droidcon and Fluttercon, Berlin"
+              width={1200}
+              height={1800}
+              className="speaking-photo__image"
+              sizes="(min-width: 48em) 40rem, 100vw"
+            />
+            <figcaption className="image__caption image__caption--no-border">
+              Conversations between sessions — Droidcon &amp; Fluttercon at The
+              Cube, Berlin, 24–26 September 2025.
+              <span className="image__caption__copywrite">
+                www.tellingphotography.com
+              </span>
+            </figcaption>
+          </figure>
+
+          <section
+            className="info-section"
+            aria-labelledby="speaking-archive-heading"
+          >
+            <details className="speaking-archive">
+              <summary id="speaking-archive-heading">
+                Earlier talks (2012–2015)
+              </summary>
+              <p className="speaking-archive__intro">
+                Front-end tooling, style guides, and component-based development
+                — mostly with slides and video where available.
+              </p>
+              <ul className="speaking-talk-list speaking-talk-list--compact">
+                {archive.map((talk) => (
+                  <li
+                    key={`${talk.event}-${talk.meta}-${talk.title}`}
+                    className="speaking-talk"
+                  >
+                    <p className="speaking-talk__meta">
+                      <ExternalLink href={talk.eventHref}>
+                        {talk.event}
+                      </ExternalLink>
+                      <span aria-hidden="true"> · </span>
+                      {talk.meta}
+                    </p>
+                    <p className="speaking-talk__title">
+                      {talk.titleHref ? (
+                        <ExternalLink href={talk.titleHref}>
+                          {talk.title}
+                        </ExternalLink>
+                      ) : (
+                        talk.title
+                      )}
+                    </p>
+                    <TalkLinks links={talk.links} />
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </section>
+        </PageShell>
+
+        <AdvisoryCta />
+      </main>
+    </Layout>
+  );
+};
+
+export const getStaticProps = async () => ({
+  props: { now: Date.now() },
+  // Re-render hourly so finished talks move from "Upcoming" to "Recent".
+  revalidate: 3600,
+});
 
 export default Speaking;

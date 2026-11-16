@@ -2,25 +2,36 @@ import Image from "next/image";
 import React from "react";
 import Clients from "../lib/components/Clients";
 import Layout from "../lib/components/Layout";
+import PageHeader from "../lib/components/PageHeader";
+import PageShell from "../lib/components/PageShell";
 import Community from "../lib/components/portfolio/Community";
 import Projects from "../lib/components/portfolio/Projects";
+import JsonLd, { breadcrumbJsonLd } from "../lib/components/JsonLd";
 
 const Portfolio = () => (
   <Layout
     title="Portfolio"
     description="Projects and clients by Hans Christian Reinl — including N+One, Fiberfone, Joyn, Digitale Leute School, neuefische, Warhol, Working Draft, and open source contributions."
   >
+    <JsonLd
+      data={breadcrumbJsonLd([{ name: "Portfolio", path: "/portfolio" }])}
+    />
     <main id="content" className="main" role="main">
-      <section className="work container" id="work">
-        <h1>Work I do</h1>
+      <PageShell className="work">
+        <section id="work">
+          <PageHeader
+            label="Selected work"
+            title="Portfolio"
+            lead={
+              <p>
+                From AI-native product development to open source and community
+                building: here is a selection of projects I have built and
+                contributed to.
+              </p>
+            }
+          />
 
-        <p>
-          From AI-native product development to open source and community
-          building — here is a selection of projects I have built and
-          contributed to.
-        </p>
-
-        <h2>Companies I worked with</h2>
+          <h2>Companies I Worked With</h2>
 
         <p>
           Over 15 years with startups and enterprise — Joyn / ProSiebenSat.1,
@@ -32,7 +43,7 @@ const Portfolio = () => (
         </div>
 
         <div>
-          <h2>My own projects</h2>
+          <h2>My Own Projects</h2>
 
           <div className="work__element">
             <a href="https://nplusone.app/" className="work__element__image">
@@ -127,7 +138,7 @@ const Portfolio = () => (
             <div className="work__element__content">
               <h3>Warhol</h3>
               <p>
-                <a href="https://warhol.com/">Warhol</a> automates UI and web
+                <a href="https://warhol.com/">Warhol</a>{" "}automates UI and web
                 design testing with laser focus on speed, efficiency, and
                 developer productivity. Warhol&apos;s algorithms turn your
                 existing pattern library into tests that can verify component
@@ -138,7 +149,7 @@ const Portfolio = () => (
               <p>
                 Together with{" "}
                 <a href="https://www.peterkroener.de/">Peter Kröner</a> I worked
-                on this tool and we love to make web development more easy.
+                on this tool to make web development easier.
               </p>
               <p className="work__element__date">
                 Co-founder, January 2019 – July 2021
@@ -151,10 +162,11 @@ const Portfolio = () => (
           <Community />
         </div>
 
-        <div>
-          <Projects />
-        </div>
-      </section>
+          <div>
+            <Projects />
+          </div>
+        </section>
+      </PageShell>
     </main>
   </Layout>
 );
