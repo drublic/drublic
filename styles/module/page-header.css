@@ -1,0 +1,111 @@
+/**
+ * Shared page chrome — PageShell + PageHeader.
+ * Same top offset, gutters, and width on every inner page.
+ */
+.page-shell {
+  width: 100%;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 2rem;
+}
+
+.page-shell--large {
+  max-width: var(--width);
+}
+
+.page-header {
+  margin: 0 0 2.75rem;
+  padding-top: 0;
+}
+
+.page-header:last-child {
+  margin-bottom: 0;
+}
+
+.page-header .section-label {
+  margin-bottom: 1rem;
+}
+
+.page-header__title {
+  margin: 0 0 1rem;
+  border-bottom: 0;
+  max-width: 18ch;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--text-color);
+}
+
+.page-header__lead {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--copy-color-light);
+}
+
+.page-header__lead p {
+  margin: 0;
+}
+
+.page-header__lead a {
+  color: var(--secondary-color);
+  border-bottom: 0;
+}
+
+.page-header__actions {
+  margin-top: 1.5rem;
+}
+
+.page-header__media {
+  margin: 1.75rem 0 0;
+  min-width: 0;
+}
+
+@media (min-width: 56em) {
+  .page-header--with-media {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.9fr);
+    gap: 2rem 3rem;
+    align-items: center;
+  }
+
+  .page-header__media {
+    margin: 0;
+  }
+}
+
+.writings-list {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.writings-list li {
+  padding: 0.9rem 1.1rem;
+  background: #faf9f6;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  color: var(--copy-color-light);
+}
+
+.writings-list a {
+  color: var(--text-color);
+  border-bottom: 0;
+  font-weight: 600;
+}
+
+.writings-list a:hover {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 48em) {
+  .page-shell {
+    padding: 4.75rem 2rem 2.5rem;
+  }
+}

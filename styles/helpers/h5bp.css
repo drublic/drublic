@@ -10,6 +10,16 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+/*
+ * Include padding and border in the element's width and height.
+ * normalize.css does not set this.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 button,
 input,

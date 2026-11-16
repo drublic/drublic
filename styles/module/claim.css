@@ -1,11 +1,11 @@
 /**
- * Homepage claim — voice under the brand masthead.
- * Audio leads; the paragraph carries the story; tags map the work.
+ * Homepage claim — brand masthead stays primary;
+ * a short punchy line carries the hook (Multiverse confidence, own voice).
  */
 .claim {
   position: relative;
   padding-top: 1.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3.5rem;
 }
 
 .claim__audio {
@@ -18,13 +18,34 @@
 }
 
 .claim__desc {
-  max-width: 40rem;
-  line-height: 1.55;
-  font-size: 1.25rem;
+  max-width: 42rem;
 }
 
-.claim__desc p {
+.claim__headline {
+  margin: 0 0 1rem;
+  border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(1.85rem, 4.5vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  color: var(--text-color);
+}
+
+.claim__lead {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
   color: var(--copy-color-light);
+}
+
+.claim__tension {
+  margin: 1.25rem 0 0;
+  max-width: 36rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--copy-color);
 }
 
 .claim__desc--small {
@@ -41,13 +62,13 @@
 .claim__tags .tag {
   margin-top: 0;
   margin-right: 0;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.3;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.7rem;
   background: transparent;
-  color: var(--secondary-color);
-  border: 1px solid rgba(98, 54, 255, 0.3);
+  color: var(--text-color-light);
+  border: 1px solid rgba(68, 89, 99, 0.22);
   border-radius: 999px;
 }
 
@@ -94,15 +115,16 @@
 @media (min-width: 32em) {
   .claim {
     padding-top: 2.5rem;
+    padding-bottom: 4.5rem;
   }
 
   .claim-container {
     display: flex;
   }
 
-  .claim__desc {
-    line-height: 1.7;
-    font-size: 1.5rem;
+  .claim__lead {
+    font-size: 1.25rem;
+    line-height: 1.65;
   }
 
   .claim__me {
@@ -117,5 +139,22 @@
 @media (min-width: 48em) {
   .claim__audio .audio-player {
     margin-top: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .claim__headline {
+    animation: claim-in 0.7s ease both;
+  }
+}
+
+@keyframes claim-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

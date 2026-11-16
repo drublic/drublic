@@ -1,192 +1,59 @@
-@keyframes pageSlideIn {
-  0% {
+/*
+ * Page transitions: a quick fade-through. The outgoing page fades out, the
+ * incoming one fades in with a small rise. Header and footer live in the
+ * root snapshot and stay put, so only the page content appears to change.
+ */
+@keyframes pageOut {
+  to {
     opacity: 0;
-    transform: translateX(30px) scale(0.98);
-    filter: blur(2px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
   }
 }
 
-@keyframes pageSlideOut {
-  0% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
-  }
-  100% {
+@keyframes pageIn {
+  from {
     opacity: 0;
-    transform: translateX(-30px) scale(0.98);
-    filter: blur(2px);
+    transform: translateY(8px);
   }
 }
 
-@keyframes contentFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(15px) scale(0.98);
-    filter: blur(1px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes floatIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-    filter: blur(3px) brightness(0.7);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0) brightness(1);
-  }
-}
-
-/* View Transition Names */
-::view-transition-old(root) {
-  animation: 500ms ease-out both pageSlideOut;
-}
-
-::view-transition-new(root) {
-  animation: 500ms ease-out both pageSlideIn;
-}
-
-/* Page-specific transitions */
-::view-transition-old(home) {
-  animation: 450ms ease-out both pageSlideOut;
-}
-
-::view-transition-new(home) {
-  animation: 450ms ease-out both pageSlideIn;
-}
-
-::view-transition-old(blog) {
-  animation: 450ms ease-out both pageSlideOut;
-}
-
-::view-transition-new(blog) {
-  animation: 450ms ease-out both pageSlideIn;
-}
-
-::view-transition-old(ai) {
-  animation: 450ms ease-out both pageSlideOut;
-}
-
-::view-transition-new(ai) {
-  animation: 450ms ease-out both pageSlideIn;
-}
-
-::view-transition-old(leadership) {
-  animation: 450ms ease-out both pageSlideOut;
-}
-
-::view-transition-new(leadership) {
-  animation: 450ms ease-out both pageSlideIn;
-}
-
-/* Transition states */
-.page-transitioning {
-  pointer-events: none;
-}
-
-.page-transitioning * {
-  pointer-events: none;
-}
-
-/* Smooth transitions for all elements */
-* {
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Page content animations */
 .page-content {
-  animation: floatIn 0.3s ease-out both;
+  view-transition-name: page;
 }
 
-/* Staggered content animations */
-.page-content > * {
-  animation: contentFadeIn 0.5s ease-out both;
+::view-transition-group(root) {
+  animation-duration: 0s;
 }
 
-.page-content > *:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.page-content > *:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.page-content > *:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.page-content > *:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.page-content > *:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.page-content > *:nth-child(6) {
-  animation-delay: 0.6s;
+::view-transition-old(page) {
+  animation: 140ms cubic-bezier(0.4, 0, 1, 1) both pageOut;
 }
 
-/* PageTransition component styles */
-.page-transition-element {
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-  filter: blur(2px);
-  transition: all 0.7s ease-out;
+::view-transition-new(page) {
+  animation: 260ms cubic-bezier(0.16, 1, 0.3, 1) 90ms both pageIn;
 }
 
-.page-transition-element.animate-in {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-/* Loading state */
-.page-loading {
-  opacity: 0.7;
-  filter: blur(1px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Performance optimizations */
-.page-transitioning * {
-  will-change: transform, opacity, filter;
-}
+/* PageTransition: visible by default; the component hides below-fold
+   sections only once JS runs, then reveals them on scroll. */
 
-/* Fallback for browsers without view transitions */
-@supports not (view-transition-name: none) {
-  .page-content {
-    animation: floatIn 0.8s ease both;
+/* Respect reduced-motion: no page transitions or smooth scroll. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  .navigation__menu a:hover {
-    transform: translateY(-3px) scale(1.05);
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
-}
 
-/* Smooth page load */
-body {
-  opacity: 0;
-  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
+  .page-transition-element {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

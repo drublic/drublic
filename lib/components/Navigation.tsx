@@ -1,24 +1,57 @@
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import classNames from "classnames";
 import { TransitionLink } from "./TransitionLink";
 
-const Navigation = () => {
+type NavigationProps = {
+  variant?: "default" | "overlay";
+};
+
+const Navigation = ({ variant = "default" }: NavigationProps) => {
   const router = useRouter();
   const [underlineStyle, setUnderlineStyle] = useState({});
+  const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLUListElement>(null);
+  const rootRef = useRef<HTMLElement>(null);
 
-  // Get the current active item based on router path
   const getActiveItem = () => {
     if (router.asPath === "/") return "start";
+    if (router.asPath.startsWith("/work-with-me")) return "work";
     if (router.asPath === "/resume") return "me";
     if (router.asPath === "/podcasting") return "podcasting";
     if (router.asPath.startsWith("/blog")) return "blog";
     return null;
   };
 
-  // Update underline position when active item changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [router.asPath]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    const onPointerDown = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node | null;
+      if (rootRef.current && target && !rootRef.current.contains(target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("touchstart", onPointerDown);
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("touchstart", onPointerDown);
+    };
+  }, [menuOpen]);
+
   useEffect(() => {
     const activeItem = getActiveItem();
     if (activeItem && navRef.current) {
@@ -31,7 +64,6 @@ const Navigation = () => {
     }
   }, [router.asPath]);
 
-  // Set initial underline position
   useEffect(() => {
     const timer = setTimeout(() => {
       const activeItem = getActiveItem();
@@ -43,7 +75,7 @@ const Navigation = () => {
           updateUnderlinePosition(activeElement);
         }
       }
-    }, 100); // Small delay to ensure DOM is ready
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
@@ -62,14 +94,13 @@ const Navigation = () => {
   };
 
   const handleMouseEnter = (
-    itemKey: string,
+    _itemKey: string,
     event: React.MouseEvent<HTMLLIElement>
   ) => {
     updateUnderlinePosition(event.currentTarget);
   };
 
   const handleMouseLeave = () => {
-    // Return to active item position
     const activeItem = getActiveItem();
     if (activeItem && navRef.current) {
       const activeElement = navRef.current.querySelector(
@@ -82,10 +113,32 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="navigation js-navigation" id="menu" role="navigation">
+    <nav
+      ref={rootRef}
+      className={classNames("navigation js-navigation", {
+        "navigation--overlay": variant === "overlay",
+        "navigation--open": menuOpen,
+      })}
+      id="menu"
+      role="navigation"
+    >
       <a href="#content" className="visuallyhidden">
         Skip to Content
       </a>
+
+      <button
+        type="button"
+        className="navigation__toggle"
+        aria-expanded={menuOpen}
+        aria-controls="navigation"
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <span className="visuallyhidden">
+          {menuOpen ? "Close menu" : "Open menu"}
+        </span>
+        <span className="navigation__toggle-bar" aria-hidden="true" />
+        <span className="navigation__toggle-bar" aria-hidden="true" />
+      </button>
 
       <ul ref={navRef} id="navigation" className="navigation__menu">
         <li
@@ -96,8 +149,26 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("start", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <TransitionLink href="/" title="Hans Reinl - AI-Native Systems Architect">
+          <TransitionLink
+            href="/"
+            title="Home"
+          >
             Start
+          </TransitionLink>
+        </li>
+        <li
+          data-nav-item="work"
+          className={classNames({
+            "is-active": router.asPath.startsWith("/work-with-me"),
+          })}
+          onMouseEnter={(e) => handleMouseEnter("work", e)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <TransitionLink
+            href="/work-with-me"
+            title="Coaching, advisory and speaking"
+          >
+            Work
           </TransitionLink>
         </li>
         <li
@@ -108,7 +179,7 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("me", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <TransitionLink href="/resume" title="Read more about me">
+          <TransitionLink href="/resume" title="About Hans Reinl">
             Me
           </TransitionLink>
         </li>
@@ -122,12 +193,11 @@ const Navigation = () => {
         >
           <TransitionLink
             href="/podcasting"
-            title="Working Draft Podcast, latest equipment"
+            title="Working Draft podcast"
           >
             Podcasting
           </TransitionLink>
         </li>
-
         <li
           data-nav-item="blog"
           className={classNames({
@@ -136,41 +206,13 @@ const Navigation = () => {
           onMouseEnter={(e) => handleMouseEnter("blog", e)}
           onMouseLeave={handleMouseLeave}
         >
-          <TransitionLink href="/blog" title="Get some cutting edge goodness">
+          <TransitionLink href="/blog" title="Writing on AI, engineering and leadership">
             Blog
           </TransitionLink>
         </li>
-        {/* <li
-          className={classNames("navigation__menu__hidden-mobile", {
-            "is-active": router.asPath === "/portfolio",
-          })}
-        >
-          <Link href="/portfolio">
-            <a title="View some of the work I do">Portfolio</a>
-          </Link>
-        </li> */}
-
-        {/* <li className="navigation__menu__hidden-mobile">
-      <a href="/#hire-me" title="I do client work and propably would love to work with you">Hire me</a>
-</li> */}
       </ul>
 
-      {/* Single animated underline */}
       <div className="navigation__underline" style={underlineStyle} />
-
-      <TransitionLink
-        href="/resume"
-        className="navigation__avatar"
-        title="About Hans Reinl"
-      >
-        <Image
-          src="/img/me.jpg"
-          alt="Hans Christian Reinl"
-          width={48}
-          height={48}
-          className="navigation__avatar-image"
-        />
-      </TransitionLink>
     </nav>
   );
 };

@@ -56,7 +56,6 @@
   text-align: left;
   color: var(--text-color);
   border-right: 1px solid var(--border-color);
-  box-sizing: border-box;
   /* Ensure sticky positioning works reliably */
   position: -webkit-sticky;
   position: sticky;
@@ -96,7 +95,6 @@
   padding: 0.75rem 1rem;
   vertical-align: top;
   border-right: 1px solid var(--border-color);
-  box-sizing: border-box;
   background-color: #fff;
   overflow: hidden;
 }

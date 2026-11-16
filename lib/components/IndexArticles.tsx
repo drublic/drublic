@@ -1,51 +1,25 @@
 import Link from "next/link";
 import React from "react";
-import ArticleTeaser from "./ArticleTeaser";
-import ArticleTeaserSmall from "./ArticleTeaserSmall";
+import UpdatesArticleList from "./UpdatesArticleList";
+import RailSection from "./RailSection";
 
 const IndexArticles = ({ posts }) => {
+  const featured = posts?.slice(0, 3) ?? [];
+
   return (
-    <section>
-      <div className="container">
-        <h2>From the Blog</h2>
+    <RailSection
+      label="Blog"
+      heading="From the Blog"
+      headingId="updates-heading"
+    >
+      <UpdatesArticleList posts={featured} />
 
-        {posts
-          ?.slice(0, 1)
-          .map(({ title, slug, date, abstract, image, tags }) => (
-            <ArticleTeaser
-              key={slug}
-              title={title}
-              date={date}
-              slug={slug}
-              abstract={abstract}
-              tags={tags}
-              variant="small"
-              image={image}
-            />
-          ))}
-      </div>
-
-      <div className="container container--large">
-        <ul className="posts__list posts__list--no-divider posts__list--no-top">
-          {posts?.slice(1, 9).map(({ title, date, slug, image, tags }) => (
-            <ArticleTeaserSmall
-              key={slug}
-              title={title}
-              date={date}
-              slug={slug}
-              image={image}
-              tags={tags}
-            />
-          ))}
-        </ul>
-
-        <p className="text--centered text--padded">
-          <Link href="/blog/" className="button">
-            Read more on my Blog
-          </Link>
-        </p>
-      </div>
-    </section>
+      <p className="updates__footer">
+        <Link href="/blog/" className="button button--outline">
+          More on the blog
+        </Link>
+      </p>
+    </RailSection>
   );
 };
 

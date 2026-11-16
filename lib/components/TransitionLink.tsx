@@ -24,6 +24,19 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
   const router = useRouter();
 
   const handleClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Let the browser handle new-tab / new-window / download clicks.
+    if (
+      e.defaultPrevented ||
+      e.button !== 0 ||
+      e.metaKey ||
+      e.ctrlKey ||
+      e.shiftKey ||
+      e.altKey ||
+      (props.target && props.target !== "_self")
+    ) {
+      return;
+    }
+
     e.preventDefault();
 
     // Don't transition if it's the same page

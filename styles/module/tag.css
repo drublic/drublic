@@ -3,18 +3,188 @@
   margin-bottom: 2rem;
 }
 
+.tags-list .section-label {
+  margin-bottom: 0.75rem;
+}
+
+.tags-list h3 {
+  margin-top: 0;
+  border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/**
+ * Theme index — editorial directory for blog topics.
+ * Ranked rows with counts (not a pill cloud).
+ */
+.theme-index {
+  margin: 0 0 1.75rem;
+  padding: 1.35rem 1.25rem 1.15rem;
+  background: var(--cream);
+  border-radius: 0.75rem;
+}
+
+.theme-index .section-label {
+  margin-bottom: 0.75rem;
+}
+
+.theme-index__title {
+  margin: 0 0 0.5rem;
+  border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-color);
+}
+
+.theme-index__lead {
+  margin: 0 0 1.25rem;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--copy-color-light);
+}
+
+.theme-index__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(20, 18, 28, 0.1);
+}
+
+.theme-index__item {
+  margin: 0;
+  border-bottom: 1px solid rgba(20, 18, 28, 0.1);
+}
+
+.theme-index__link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0.15rem;
+  border-bottom: 0;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.theme-index__link:hover,
+.theme-index__link:focus-visible {
+  border-bottom: 0;
+  color: var(--secondary-color);
+}
+
+.theme-index__link:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+  border-radius: 0.2rem;
+}
+
+.theme-index__name {
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.theme-index__count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  color: var(--text-color-light);
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.theme-index__count-num {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.theme-index__link:hover .theme-index__count-num,
+.theme-index__link:focus-visible .theme-index__count-num {
+  color: var(--secondary-color);
+}
+
+.theme-index__count-label {
+  font-weight: 500;
+}
+
+.theme-index__more {
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem 0 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--text-color);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: color 0.15s ease, border-bottom-color 0.15s ease;
+}
+
+.theme-index__more:hover,
+.theme-index__more:focus-visible {
+  color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+.theme-index__more:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+@media (min-width: 40em) {
+  .theme-index {
+    padding: 1.6rem 1.5rem 1.35rem;
+  }
+
+  .theme-index__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+  }
+
+  .theme-index__name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-index__link,
+  .theme-index__more {
+    transition: none;
+  }
+}
+
 .tag {
   display: inline-block !important;
-  background: var(--border-color);
+  background: var(--cream);
   color: var(--color);
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.35rem;
   margin-top: 1rem;
   margin-right: 0.5rem;
   border-bottom: 0;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
   line-height: 1.3;
+  letter-spacing: 0.01em;
 }
 
 .tag:visited {
@@ -32,9 +202,9 @@
 }
 
 a.tag:hover {
-  background: var(--border-color-dark);
+  background: #e0ddd4;
   color: var(--color-dark);
-  transition: 0.25s;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .tag_count {
@@ -71,7 +241,7 @@ a.tag:hover .tag_count {
 }
 
 @media (min-width: 32em) {
-  .tags-list {
+  .tags-list:not(.tags-list--inline) {
     margin-top: 5rem;
     margin-bottom: 5rem;
   }

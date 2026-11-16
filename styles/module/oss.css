@@ -6,10 +6,8 @@
   vertical-align: bottom;
 }
 
-@media (min-width: 48em) {
-  .oss--wd-logo {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 1.5rem;
-  }
+.oss--wd-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

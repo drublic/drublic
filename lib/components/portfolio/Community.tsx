@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Community = () => (
@@ -6,7 +7,12 @@ const Community = () => (
 
     <div className="work__element">
       <a href="http://workingdraft.de/" className="work__element__image">
-        <img src="/img/work/wd.png" alt="Working Draft" />
+        <Image
+          src="/img/work/wd.png"
+          alt="Working Draft"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">
@@ -14,23 +20,26 @@ const Community = () => (
           Working <span>Draft</span>
         </h3>
         <p>
-          <a href="http://workingdraft.de/">Working Draft</a> is a wildly
-          recognized German weekly news podcast for web developers. I am a
-          co-hosts of the show.
+          <a href="https://workingdraft.de/">Working Draft</a> is a widely
+          recognized German weekly news podcast for web developers. I am one of
+          its co-hosts.
         </p>
         <p>
           Find out more about the Working Draft in the{" "}
           <a href="/podcasting">Podcasting</a> section
         </p>
-        <p className="work__element__date">
-          Co-host since 2012, podcast exists since 2011
-        </p>
+        <p className="work__element__date">Co-host since 2011</p>
       </div>
     </div>
 
     <div className="work__element">
       <a href="http://nightlybuild.io/" className="work__element__image">
-        <img src="/img/work/nightlybuild.png" alt="NightlyBuild" />
+        <Image
+          src="/img/work/nightlybuild.png"
+          alt="NightlyBuild"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">
@@ -53,7 +62,12 @@ const Community = () => (
 
     <div className="work__element">
       <a href="http://html5boilerplate.com/" className="work__element__image">
-        <img src="/img/work/html5bp.png" alt="HTML5 Boilerplate" />
+        <Image
+          src="/img/work/html5bp.png"
+          alt="HTML5 Boilerplate"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">
@@ -72,7 +86,7 @@ const Community = () => (
 
     {/* <div className="work__element">
       <a href="http://use-init.com/" className="work__element__image">
-        <img src="/img/work/init.png" alt="INIT" />
+        <Image src="/img/work/init.png" alt="INIT" width={400} height={240} />
       </a>
 
       <div className="work__element__content">
@@ -87,7 +101,12 @@ const Community = () => (
         href="http://drublic.github.io/css-modal/"
         className="work__element__image"
       >
-        <img src="/img/work/modal.png" alt="CSS Modal" />
+        <Image
+          src="/img/work/modal.png"
+          alt="CSS Modal"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">

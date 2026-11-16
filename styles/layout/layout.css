@@ -20,10 +20,9 @@ hr {
   background-color: var(--color-lightest);
 }
 
-/* Bleed to edges only when nested in a padded .main (e.g. homepage).
-   Without a padded parent, negative margins extend past the viewport. */
+/* Full-bleed within .main — gutters live on .container / .page-shell. */
 .main .layout--darkened {
-  margin: 0 -1em;
+  margin: 0;
 }
 
 /**
@@ -31,7 +30,7 @@ hr {
  */
 .container {
   max-width: var(--width);
-  padding: 2rem 0;
+  padding: 2rem 1.25rem;
   margin: 0 auto;
 }
 
@@ -46,7 +45,7 @@ hr {
 }
 
 .container--large {
-  max-width: calc(var(--width) + 12rem);
+  max-width: var(--width);
 }
 
 .container--small {
@@ -78,7 +77,7 @@ hr {
 
 @media (min-width: 32em) {
   .container {
-    padding: 2rem;
+    padding: 2rem 1.25rem;
   }
 
   .container--padded-bottom {
@@ -133,8 +132,35 @@ hr {
 }
 
 .main {
-  padding: 0 1em 1em;
+  /* Horizontal gutters come from .container / .page-shell — same as homepage. */
+  padding: 0 0 1em;
   background-color: var(--bg-color);
+}
+
+.main--home .container,
+.main--home .container--large {
+  max-width: var(--width);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Cream panels may widen their containers; content still uses --width inners */
+.main--home .pathway .container,
+.main--home .pathway .container--large,
+.main--home .advisory-cta .container,
+.main--home .advisory-cta .container--large,
+.main--home .working-draft .container,
+.main--home .working-draft .container--large {
+  max-width: min(92rem, 100%);
+}
+
+@media (min-width: 48em) {
+  .container,
+  .main--home .container,
+  .main--home .container--large {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 /**
  * Overlays
@@ -211,29 +237,6 @@ hr {
   }
 }
 
-/**
- * Scroller
- */
-.layout__scroll-top {
-  position: fixed;
-  right: 2rem;
-  bottom: 2rem;
-  border: 0;
-  background: none;
-  opacity: 1;
-  transition: 0.4s;
-}
-
-.layout__scroll-top.is-hidden {
-  opacity: 0;
-}
-
-@media screen and (max-width: 34em) {
-  .layout__scroll-top {
-    display: none;
-  }
-}
-
 /* Cookie Message */
 
 .termsfeed-com---nb.termsfeed-com---reset {
@@ -284,7 +287,7 @@ hr {
 }
 
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-okagree:hover {
-  background: #7b5cff;
+  background: var(--secondary-color--hover);
 }
 
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject,

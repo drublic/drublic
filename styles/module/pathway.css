@@ -1,0 +1,257 @@
+/**
+ * Destination grid — Multiverse-like cream panel over page gray,
+ * with lighter offer tiles on top (asymmetric feature columns).
+ *
+ * Desktop (64em+): explicit 3×2 — every cell filled once, no overlap.
+ *   Coaching   → col 1, rows 1–2
+ *   Systems    → col 2, row 1
+ *   Speaking   → col 2, row 2
+ *   Workshops  → col 3, rows 1–2
+ */
+.pathway {
+  padding: 3.5rem 0 2rem;
+}
+
+.main--home .pathway .container,
+.main--home .pathway .container--large,
+.pathway .container,
+.pathway .container--large {
+  max-width: min(92rem, 100%);
+}
+
+.pathway__panel {
+  overflow: hidden;
+  padding: 2.75rem 0 2.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--cream);
+  box-shadow: none;
+}
+
+.pathway__inner {
+  width: 100%;
+  max-width: var(--width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  min-width: 0;
+}
+
+.pathway__heading {
+  margin: 0 0 1rem;
+  border-bottom: 0;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.pathway__intro {
+  margin: 0 0 3rem;
+  max-width: 40rem;
+  color: var(--copy-color-light);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.pathway__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.pathway__item {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  position: static;
+}
+
+.pathway__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 9.25rem;
+  height: 100%;
+  padding: 1.65rem 1.5rem 1.4rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #faf9f6;
+  color: var(--text-color);
+  text-decoration: none;
+  box-shadow: none;
+  position: static;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.pathway__card:hover,
+.pathway__card:focus-visible {
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.pathway__card:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+.pathway__title {
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.pathway__body {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--copy-color-light);
+}
+
+.pathway__action {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+@media (min-width: 48em) {
+  .pathway__inner {
+    padding-inline: 2rem;
+  }
+}
+
+/* Tablet: 2 columns, stacked flow — no row-spans that can collide */
+@media (min-width: 40em) {
+  .pathway__panel {
+    padding: 3.25rem 0 3rem;
+  }
+
+  .pathway__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pathway__item--coaching {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .pathway__item--systems,
+  .pathway__item--workshops,
+  .pathway__item--speaking {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .pathway__item--leadership {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .pathway__item--coaching .pathway__card {
+    min-height: 9rem;
+    padding: 2rem 2rem 1.75rem;
+  }
+
+  .pathway__item--coaching .pathway__title {
+    font-size: 1.45rem;
+  }
+}
+
+/* Desktop: explicit 3×2 — every cell assigned once */
+@media (min-width: 64em) {
+  .pathway {
+    padding: 4.5rem 0 2.75rem;
+  }
+
+  .pathway__panel {
+    padding: 4rem 0 3.5rem;
+    border-radius: 0.85rem;
+  }
+
+  .pathway__heading {
+    margin-bottom: 1.15rem;
+  }
+
+  .pathway__intro {
+    margin-bottom: 3.5rem;
+  }
+
+  .pathway__grid {
+    grid-template-columns: 1.25fr minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(10.5rem, auto) minmax(10.5rem, auto);
+    gap: 1.75rem;
+    align-items: stretch;
+  }
+
+  .pathway__item--coaching {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .pathway__item--systems {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .pathway__item--speaking {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .pathway__item--workshops {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .pathway__item--coaching .pathway__card,
+  .pathway__item--workshops .pathway__card {
+    min-height: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 2.5rem 2.25rem 2.15rem;
+  }
+
+  .pathway__item--coaching .pathway__title,
+  .pathway__item--workshops .pathway__title {
+    font-size: 1.65rem;
+  }
+
+  .pathway__item--systems .pathway__card,
+  .pathway__item--speaking .pathway__card {
+    min-height: 10.5rem;
+    padding: 1.9rem 1.75rem 1.65rem;
+  }
+
+  .pathway__item--leadership {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .pathway__item--leadership .pathway__card {
+    min-height: 0;
+    padding: 1.9rem 2rem 1.7rem;
+    justify-content: center;
+  }
+
+  .pathway__item--leadership .pathway__title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathway__card {
+    transition: none;
+  }
+
+  .pathway__card:hover,
+  .pathway__card:focus-visible {
+    transform: none;
+  }
+}

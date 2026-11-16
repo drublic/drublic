@@ -3,6 +3,7 @@
   --text-color-light: #666;
 
   --bg-color: #f6f6f6;
+  --cream: #e8e5de;
 
   --color: #445963;
   --color-dark: #29434e;
@@ -13,12 +14,14 @@
   --border-color-light: #c4dcef;
   --color--background--light: #f3f2ff;
   --color--background--dark: #e8e7ec;
+
+  /* Brand accent — electric violet */
   --secondary-color: #6236ff;
   --secondary-color--light: #efebff;
-  --secondary-color--hover: #f474ff;
+  --secondary-color--hover: #7b5cff;
 
-  --footer-background: #1e333c;
-  --footer-background-dark: #16262d;
+  --footer-background: #0a0814;
+  --footer-background-dark: #04070a;
 
   --navigation-background: #607d8b;
 
@@ -28,7 +31,8 @@
   --copy-color-light: #444;
   --copy-light: #aaa;
 
-  --width: 54rem;
+  --width: 72rem;
+  --site-max: var(--width);
 
   --border-radius: 0.5rem;
 }

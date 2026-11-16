@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Projects = () => (
@@ -6,7 +7,14 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="https://joyn.de/" className="work__element__image">
-        <img src="/img/work/joyn.svg" alt="Joyn" />
+        <img
+          src="/img/work/joyn.svg"
+          alt="Joyn"
+          width={68}
+          height={30}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <div className="work__element__content">
@@ -14,8 +22,8 @@ const Projects = () => (
           Joyn <span>/ ProSiebenSat.1</span>
         </h3>
         <p>
-          As Vice President Engineering I owned the customer-facing
-          applications of the multi-tenant streaming platform{" "}
+          As Vice President Engineering I owned the customer-facing applications
+          of the multi-tenant streaming platform{" "}
           <a href="https://joyn.de/">Joyn</a> (11M+ MAU). Led six distributed
           teams (~55 people), reference architectures, budget, and the Joyn /
           ProSiebenSat.1 merger transformation — including early AI engineering
@@ -28,11 +36,13 @@ const Projects = () => (
     </div>
 
     <div className="work__element">
-      <a
-        href="https://www.prosiebensat1.com/"
-        className="work__element__image"
-      >
-        <img src="/img/work/p7s1.png" alt="ProSiebenSat.1" />
+      <a href="https://www.prosiebensat1.com/" className="work__element__image">
+        <Image
+          src="/img/work/p7s1.png"
+          alt="ProSiebenSat.1"
+          width={600}
+          height={120}
+        />
       </a>
 
       <div className="work__element__content">
@@ -53,7 +63,14 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="https://axa.de/" className="work__element__image">
-        <img src="/img/work/axa.svg" alt="AXA Deutschland" />
+        <img
+          src="/img/work/axa.svg"
+          alt="AXA Deutschland"
+          width={277}
+          height={277}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <div className="work__element__content">
@@ -72,7 +89,14 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="https://shop.rewe.de/" className="work__element__image">
-        <img src="/img/work/rewe.svg" alt="REWE digital" />
+        <img
+          src="/img/work/rewe.svg"
+          alt="REWE digital"
+          width={725}
+          height={235}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <div className="work__element__content">
@@ -90,7 +114,14 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="https://vaillant-group.com/" className="work__element__image">
-        <img src="/img/work/vaillant.svg" alt="Vaillant Group" />
+        <img
+          src="/img/work/vaillant.svg"
+          alt="Vaillant Group"
+          width={576}
+          height={164}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <div className="work__element__content">
@@ -109,7 +140,14 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="https://www.croozer.com/" className="work__element__image">
-        <img src="/img/work/croozer-portfolio.svg" alt="Croozer GmbH" />
+        <img
+          src="/img/work/croozer-portfolio.svg"
+          alt="Croozer GmbH"
+          width={400}
+          height={240}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <div className="work__element__content">
@@ -127,7 +165,14 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="https://www.fashionette.de/" className="work__element__image">
-        <img src="/img/work/fashionette-portfolio.svg" alt="Fashionette" />
+        <img
+          src="/img/work/fashionette-portfolio.svg"
+          alt="Fashionette"
+          width={400}
+          height={240}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <div className="work__element__content">
@@ -149,7 +194,12 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="http://siteeffect.io/" className="work__element__image">
-        <img src="/img/work/siteeffect.png" alt="Siteeffect" />
+        <Image
+          src="/img/work/siteeffect.png"
+          alt="Siteeffect"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">
@@ -169,7 +219,12 @@ const Projects = () => (
         href="https://www.shareacamper.co.nz/"
         className="work__element__image"
       >
-        <img src="/img/work/shareacamper.png" alt="Siteeffect" />
+        <Image
+          src="/img/work/shareacamper.png"
+          alt="Share A Camper"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">
@@ -177,7 +232,7 @@ const Projects = () => (
         <p>
           If you ever want to travel through New Zealand with a campervan check
           out <a href="https://www.shareacamper.co.nz/">Share A Camper</a>. They
-          realize private campervan hiring. I initally set up the architecture
+          realize private campervan hiring. I initially set up the architecture
           of the front-end with the team.
         </p>
         <p className="work__element__date">Year of development: 2015</p>
@@ -186,7 +241,7 @@ const Projects = () => (
 
     {/* <div className="work__element">
       <a href="http://www.kms-blackspace.com/" className="work__element__image">
-        <img src="/img/work/kms.png" alt="KMS Blackspace" />
+        <Image src="/img/work/kms.png" alt="KMS Blackspace" width={400} height={240} />
       </a>
 
       <div className="work__element__content">
@@ -198,7 +253,12 @@ const Projects = () => (
 
     <div className="work__element">
       <a href="http://www.sapdatacenter.com/" className="work__element__image">
-        <img src="/img/work/sap.png" alt="SAP Data Center" />
+        <Image
+          src="/img/work/sap.png"
+          alt="SAP Data Center"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">
@@ -216,7 +276,7 @@ const Projects = () => (
 
     {/* <div className="work__element">
       <a href="http://app-meister.com/" title="App Meister" className="work__element__image">
-        <img src="/img/work/appmeister.png" alt="App Meister" />
+        <Image src="/img/work/appmeister.png" alt="App Meister" width={400} height={240} />
       </a>
 
       <div className="work__element__content">
@@ -228,7 +288,12 @@ const Projects = () => (
 
     {/* <div className="work__element">
       <a href="http://www.dgu-online.de/" className="work__element__image">
-        <img src="/img/work/dgu.png" alt="" />
+        <Image
+          src="/img/work/dgu.png"
+          alt="DGU – Deutsche Gesellschaft für Unfallchirurgie"
+          width={400}
+          height={240}
+        />
       </a>
 
       <div className="work__element__content">

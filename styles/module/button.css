@@ -1,6 +1,6 @@
 /**
  * Buttons — media-control language shared with slide-deck + audio player.
- * Primary: solid violet pill. Outline: paper pill with hairline.
+ * Primary: solid electric violet pill. Outline: paper pill with hairline.
  */
 :root {
   --button-ink: #14121c;
@@ -11,6 +11,10 @@
   --button-pad-y: 0.35rem;
   --button-pad-x: 1rem;
   --button-font-size: 0.9rem;
+  --button-min-height-large: 3rem;
+  --button-pad-y-large: 0.7rem;
+  --button-pad-x-large: 1.35rem;
+  --button-font-size-large: 1rem;
 }
 
 .button,
@@ -48,13 +52,21 @@ a.button:visited {
 .button:hover,
 a.button:hover {
   color: #fff;
-  background: #7b5cff;
+  background: var(--secondary-color--hover);
   border-color: transparent;
 }
 
 .button:focus-visible {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
+}
+
+.button--large,
+a.button--large {
+  --button-min-height: var(--button-min-height-large);
+  --button-pad-y: var(--button-pad-y-large);
+  --button-pad-x: var(--button-pad-x-large);
+  --button-font-size: var(--button-font-size-large);
 }
 
 .button--outline,

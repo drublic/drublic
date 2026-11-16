@@ -1,0 +1,198 @@
+/**
+ * Hero — claim, lead, and CTAs on the atmospheric stage.
+ */
+.home-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #f4f2ef;
+  isolation: isolate;
+  background: var(--bg-color);
+}
+
+.home-hero__stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 78vh;
+  min-height: 78dvh;
+  height: 78vh;
+  height: 78dvh;
+  padding: 6.5rem 0 7.5rem;
+  overflow: hidden;
+  background: #04070a;
+}
+
+.home-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.home-hero__canvas {
+  position: absolute;
+  inset: -2%;
+  width: 104%;
+  height: 104%;
+  display: block;
+  image-rendering: auto;
+  filter: contrast(1.38) saturate(1.52) blur(11px);
+  transform: scale(1.08);
+}
+
+.home-hero__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 7, 10, 0.52) 0%,
+      rgba(4, 7, 10, 0.22) 40%,
+      rgba(4, 7, 10, 0.78) 100%
+    );
+  pointer-events: none;
+}
+
+.home-hero__stage-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.15rem;
+}
+
+.home-hero__headline {
+  margin: 0;
+  border-bottom: 0;
+  max-width: 16ch;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.home-hero__headline-anim {
+  display: inline;
+}
+
+.home-hero__word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.home-hero__space {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.home-hero__char {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(0.2em) scale(1.04);
+  letter-spacing: 0.28em;
+  margin-right: -0.28em;
+  animation: hero-letter-focus 1.15s cubic-bezier(0.16, 0.84, 0.3, 1)
+    calc(0.22s + var(--i) * 0.012s) forwards;
+}
+
+.home-hero__lead {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  opacity: 0;
+  animation: hero-fade-up 0.75s ease 1.05s forwards;
+}
+
+.home-hero__actions {
+  margin: 0.25rem 0 0;
+  opacity: 0;
+  animation: hero-fade-up 0.75s ease 1.2s forwards;
+}
+
+.home-hero__actions .button {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.home-hero__button-learn {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-hero__button-learn:hover,
+.home-hero__button-learn:focus-visible {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+@keyframes hero-letter-focus {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+    letter-spacing: -0.035em;
+    margin-right: 0;
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 48em) {
+  .home-hero__stage {
+    min-height: 97vh;
+    min-height: 97dvh;
+    height: 97vh;
+    height: 97dvh;
+    padding: 7.5rem 0 9rem;
+  }
+
+  .home-hero__stage-inner {
+    padding: 0 2rem;
+    gap: 1.35rem;
+  }
+
+  .home-hero__lead {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__canvas {
+    filter: none;
+    transform: none;
+  }
+
+  .home-hero__lead,
+  .home-hero__actions,
+  .home-hero__char {
+    animation: none;
+    opacity: 1;
+    filter: none;
+    transform: none;
+    letter-spacing: inherit;
+    margin-right: 0;
+  }
+}

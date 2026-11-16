@@ -1,0 +1,236 @@
+/**
+ * Production-gap story — atmosphere stage + floating checklist card.
+ */
+.story-module {
+  position: relative;
+  z-index: 2;
+  margin: -4.5rem 0 0;
+  padding: 4.5rem 0 2rem;
+  border-radius: 2rem 2rem 0 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.story-module__inner {
+  display: grid;
+  gap: 1.75rem;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.story-module__copy {
+  padding: 0.5rem 0.25rem 0.5rem 0;
+}
+
+.story-module__title {
+  max-width: 12ch;
+}
+
+.story-module__body {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--copy-color-light);
+}
+
+.story-module__visual {
+  min-height: 0;
+}
+
+.story-module__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  min-height: 16rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #04070a;
+  color: #f4f2ef;
+  isolation: isolate;
+}
+
+.story-module__canvas {
+  position: absolute;
+  inset: -2%;
+  width: 104%;
+  height: 104%;
+  display: block;
+  image-rendering: auto;
+  filter: contrast(1.34) saturate(1.48) blur(12px);
+  transform: scale(1.08);
+}
+
+.story-module__veil {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 55% 60% at 50% 48%,
+    rgba(4, 7, 10, 0.05) 0%,
+    rgba(4, 7, 10, 0.22) 55%,
+    rgba(4, 7, 10, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+.story-module__card {
+  position: relative;
+  z-index: 1;
+  width: min(86%, 18.5rem);
+  padding: 1.15rem 1.1rem 1rem;
+  border-radius: 1rem;
+  background: rgba(249, 248, 243, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 18px 48px rgba(0, 0, 0, 0.35),
+    0 4px 14px rgba(0, 0, 0, 0.18);
+  color: #1a1a1a;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.story-module__card-title {
+  margin: 0 0 0.35rem;
+  padding: 0 0.15rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(26, 26, 26, 0.5);
+  line-height: 1.2;
+}
+
+.story-module__checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.story-module__check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.15rem;
+}
+
+.story-module__check + .story-module__check {
+  border-top: 1px solid rgba(20, 18, 28, 0.08);
+}
+
+.story-module__check-label {
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  line-height: 1.25;
+}
+
+.story-module__check--pending .story-module__check-label {
+  color: rgba(26, 26, 26, 0.55);
+}
+
+.story-module__check-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.story-module__check--done .story-module__check-status {
+  border-radius: 50%;
+  background: #14121c;
+  color: #fff;
+}
+
+.story-module__check-open {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  border: 2px solid rgba(98, 54, 255, 0.35);
+  background: transparent;
+}
+
+@media (min-width: 48em) {
+  .story-module {
+    margin-top: -5.5rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+  }
+
+  .story-module__inner {
+    padding: 0 2rem;
+  }
+
+  .story-module__field {
+    min-height: 18rem;
+  }
+
+  .story-module__card {
+    width: min(76%, 20rem);
+    padding: 1.25rem 1.2rem 1.1rem;
+  }
+
+  .story-module__check-label {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 56em) {
+  .story-module {
+    padding: 5.5rem 0 2rem;
+  }
+
+  .story-module__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+
+  .story-module__copy {
+    padding: 0.25rem 0.5rem 0.25rem 0;
+  }
+
+  .story-module__body {
+    font-size: 1.125rem;
+  }
+
+  .story-module__field {
+    min-height: 0;
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .story-module__card {
+    animation: story-card-float 5.5s ease-in-out infinite;
+  }
+}
+
+@keyframes story-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.35rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-module__canvas {
+    filter: none;
+    transform: none;
+  }
+
+  .story-module__card {
+    animation: none;
+  }
+}

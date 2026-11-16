@@ -1,107 +1,61 @@
-/* Last content block sits flush against the footer otherwise —
-   .main's padding shorthand overrides .container's padding. */
-main > .main.container:last-child {
+/* Last content block sits flush against the footer otherwise. */
+main.resume > .container:last-of-type {
   padding-bottom: 4rem;
 }
 
-/* Clip any residual overflow from transforms / full-bleed children. */
+/* Clip full-bleed children. */
 main.resume {
   overflow-x: hidden;
 }
 
+/* Wide cream panel, same measure as pathway and the advisory CTA. */
+main.resume .page-shell--header {
+  padding-bottom: 0;
+}
+
+main.resume .page-shell--follow {
+  padding-top: 0;
+}
+
+.resume-card-band .container,
+.resume-card-band .container--large {
+  max-width: min(92rem, 100%);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .resume-card {
-  position: relative;
-  perspective: 1200px;
-  margin: 1rem 0 3rem;
-}
-
-.resume-card::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: calc(var(--border-radius) * 1.5);
-  background: linear-gradient(
-    135deg,
-    rgba(244, 116, 255, 0.35),
-    rgba(98, 54, 255, 0.15) 50%,
-    rgba(98, 54, 255, 0.05)
-  );
-  opacity: 0.5;
-  z-index: 0;
-  filter: blur(12px);
-  pointer-events: none;
-  transition: opacity 0.45s ease;
-}
-
-.resume-card:has(.resume-card__inner--hovered)::before {
-  opacity: 0.85;
+  width: 100%;
+  margin: 3.5rem 0 3rem;
+  background: var(--cream);
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: none;
 }
 
 .resume-card__inner {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 1.5rem;
-  background-color: #fff;
-  background-image: none;
-  border-radius: calc(var(--border-radius) * 1.5);
-  border: 1px solid rgba(98, 54, 255, 0.1);
-  box-shadow:
-    0 0 0 1px rgba(98, 54, 255, 0.04),
-    0 4px 24px rgba(98, 54, 255, 0.1),
-    0 2px 8px rgba(17, 17, 17, 0.04);
-  transform-style: preserve-3d;
-  transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.resume-card__inner--hovered {
-  box-shadow:
-    0 0 0 1px rgba(98, 54, 255, 0.12),
-    0 16px 48px rgba(98, 54, 255, 0.22),
-    0 8px 24px rgba(244, 116, 255, 0.12);
+  width: 100%;
+  max-width: var(--width);
+  margin-inline: auto;
+  padding: 1.5rem 1.25rem;
 }
 
 .resume-card__photo {
-  position: relative;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 7rem;
   height: 7rem;
   margin: 0 auto;
-  overflow: visible;
-}
-
-.resume-card__photo::after {
-  content: "";
-  position: absolute;
-  top: -0.15rem;
-  left: -0.15rem;
-  right: -0.15rem;
-  bottom: -0.15rem;
-  background-image: linear-gradient(
-    161.81deg,
-    var(--secondary-color--hover) 25%,
-    var(--secondary-color) 75%
-  );
-  background-color: var(--secondary-color);
-  border-radius: 50%;
-  z-index: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .resume-card__photo img {
-  position: relative;
-  z-index: 1;
   display: block;
-  border-radius: 50%;
-  width: calc(100% - 0.7rem);
-  height: calc(100% - 0.7rem);
-  border: 0.35rem solid #fff;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -157,26 +111,23 @@ main.resume {
 }
 
 @media (min-width: 32em) {
-  .resume-card {
-    margin-top: 2rem;
-  }
-
   .resume-card__inner {
     flex-direction: row;
     align-items: center;
     gap: 2rem;
-    padding: 2rem 2.25rem;
+    padding: 2rem 1.25rem;
   }
 
   .resume-card__photo {
-    width: 9rem;
-    height: 9rem;
+    width: 13.5rem;
+    height: 13.5rem;
     margin: 0;
   }
 
   .resume-card__content {
     text-align: left;
     flex: 1;
+    min-width: 0;
   }
 
   .resume-card__name {
@@ -189,24 +140,6 @@ main.resume {
 
   .resume-card__actions {
     justify-content: flex-start;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .resume-card::before,
-  .resume-card__inner {
-    transition: none;
-  }
-
-  .resume-card:has(.resume-card__inner--hovered)::before {
-    opacity: 0.5;
-  }
-
-  .resume-card__inner--hovered {
-    box-shadow:
-      0 0 0 1px rgba(98, 54, 255, 0.04),
-      0 4px 24px rgba(98, 54, 255, 0.1),
-      0 2px 8px rgba(17, 17, 17, 0.04);
   }
 }
 
@@ -274,7 +207,6 @@ main.resume {
   grid-area: dot;
   width: var(--dot-size);
   height: var(--dot-size);
-  box-sizing: border-box;
   border-radius: 50%;
   background: var(--secondary-color);
   border: 2px solid #fff;
@@ -390,7 +322,10 @@ main.resume {
 
 @media (min-width: 40em) {
   .resume-timeline__item {
-    grid-template-columns: var(--dot-col) 5.5rem minmax(0, 1fr) minmax(8rem, 12rem);
+    grid-template-columns: var(--dot-col) 5.5rem minmax(0, 1fr) minmax(
+        8rem,
+        12rem
+      );
     grid-template-areas: "dot year body logos";
     gap: 0.85rem 1.1rem;
     align-items: center;
@@ -405,4 +340,124 @@ main.resume {
     justify-content: flex-end;
     min-height: 2.5rem;
   }
+}
+
+/**
+ * Industry influence — same split as the production-gap story module:
+ * copy left, rounded visual field right. No cream panel.
+ */
+.resume-influence {
+  padding: 2.5rem 0 1.5rem;
+  background: transparent;
+}
+
+.resume-influence__inner {
+  display: grid;
+  gap: 1.75rem;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.resume-influence__copy {
+  padding: 0.5rem 0.25rem 0.5rem 0;
+  min-width: 0;
+}
+
+.resume-influence__title {
+  margin-bottom: 1.15rem;
+  max-width: 14ch;
+  font-family: var(--font-headline), "Sora", sans-serif;
+}
+
+.resume-influence__copy p {
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--copy-color-light);
+}
+
+.resume-influence__copy p b {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.resume-influence__copy p:last-child {
+  margin-bottom: 0;
+}
+
+.resume-influence__visual {
+  min-height: 0;
+}
+
+.resume-influence__field {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  min-height: 16rem;
+  border-radius: 0.75rem;
+  background: #04070a;
+}
+
+.resume-influence__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.resume-influence__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 2rem 0.85rem 0.7rem;
+  background: linear-gradient(to top, rgba(4, 7, 10, 0.75), transparent);
+  color: rgba(244, 242, 239, 0.88);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 48em) {
+  .resume-card__inner {
+    padding: 2rem;
+  }
+
+  .resume-influence__inner {
+    padding: 0 2rem;
+  }
+
+  .resume-influence__field {
+    min-height: 18rem;
+  }
+}
+
+@media (min-width: 56em) {
+  .resume-influence {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .resume-influence__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+
+  .resume-influence__copy {
+    padding: 0.25rem 0.5rem 0.25rem 0;
+  }
+
+  .resume-influence__field {
+    aspect-ratio: auto;
+    min-height: 0;
+    height: 100%;
+  }
+}
+
+.resume-discussions__image {
+  border-radius: var(--border-radius);
 }

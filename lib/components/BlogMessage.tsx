@@ -4,7 +4,7 @@ const BlogMessage = () => (
   <div className="message">
     <div className="message__content">
       <p>
-        <a href="/feed" target="_blank">
+        <a href="/feed">
           Subscribe to the feed now
         </a>{" "}
         and don’t miss any update

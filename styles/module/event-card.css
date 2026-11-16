@@ -1,85 +1,116 @@
+/* Upcoming talk: a dark "ticket" — date stub on the left, talk details right. */
 .event-card {
-  margin: 2rem 0;
-  padding: 1.5rem 1.5rem 1.35rem;
-  background: #fff;
-  border-radius: calc(var(--border-radius) * 1.5);
-  border: 1px solid rgba(98, 54, 255, 0.12);
-  box-shadow:
-    0 0 0 1px rgba(98, 54, 255, 0.04),
-    0 4px 20px rgba(98, 54, 255, 0.08),
-    0 2px 6px rgba(17, 17, 17, 0.03);
+  display: grid;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-color);
+  background: var(--secondary-color--light);
+  border-radius: 0.75rem;
 }
 
-.event-card__eyebrow {
-  margin: 0 0 0.85rem;
-  font-size: 0.75rem;
+.event-card__date {
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+  padding: 1.5rem 1.4rem 1.25rem;
+  color: #fff;
+  background: var(--secondary-color);
+  line-height: 1.15;
+}
+
+.event-card__weekday,
+.event-card__month {
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--secondary-color);
+}
+
+.event-card__day {
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.event-card__time {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+}
+
+.event-card__body {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.5rem 1.4rem;
+  max-width: 44rem;
+}
+
+.event-card__where {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.6rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-color-light);
 }
 
 .event-card__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 0 0 0.85rem;
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 1.125rem;
-  line-height: 1.3;
-  border-bottom: 0;
+  font-weight: 700;
+  border-bottom: 1px solid var(--secondary-color);
   text-decoration: none;
 }
 
-.event-card__brand:hover {
+.event-card__brand:hover,
+.event-card__brand:focus-visible {
   color: var(--secondary-color);
-}
-
-.event-card__logo {
-  display: block;
-  flex-shrink: 0;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 0.35rem;
-  overflow: hidden;
-  background: #000;
-}
-
-.event-card__logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.event-card__meta {
-  margin: 0 0 0.75rem;
-  font-size: 0.875rem;
-  color: var(--text-color-light);
-  line-height: 1.4;
+  border-bottom-color: var(--secondary-color);
 }
 
 .event-card__title {
-  margin: 0 0 0.75rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.35;
+  margin: 0;
   border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
   color: var(--text-color);
 }
 
 .event-card__desc {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--copy-color-light);
 }
 
-.event-card__desc p {
-  margin: 0 0 0.65rem;
+.event-card__format {
+  justify-self: start;
+  margin: 0.25rem 0 0;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  background: #fff;
+  border: 0;
+  border-radius: 999px;
 }
 
-.event-card__desc p:last-child {
-  margin-bottom: 0;
+@media (min-width: 40em) {
+  .event-card {
+    grid-template-columns: 12rem 1fr;
+  }
+
+  .event-card__date {
+    padding: 1.75rem 1.5rem;
+    /* perforation between stub and body */
+    border-right: 2px dashed rgb(255 255 255 / 0.55);
+  }
+
+  .event-card__body {
+    padding: 1.75rem 2rem;
+  }
 }

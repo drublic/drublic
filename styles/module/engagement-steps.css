@@ -1,0 +1,184 @@
+/**
+ * Upskilling strengths — sits on page background (no cream panel).
+ * Content aligned to --width via .container.
+ */
+.engagement-steps {
+  padding: 3.5rem 0 2rem;
+  background: transparent;
+}
+
+.engagement-steps__inner {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.engagement-steps__intro {
+  min-height: 100%;
+}
+
+.engagement-steps__title {
+  max-width: 16ch;
+}
+
+.engagement-steps__lede {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--copy-color-light);
+}
+
+.engagement-steps__list {
+  display: grid;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.engagement-steps__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.85rem;
+  row-gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.engagement-steps__index {
+  grid-row: 1 / span 2;
+  align-self: start;
+  padding-top: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--secondary-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.engagement-steps__step-title {
+  margin: 0;
+  border-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.engagement-steps__step-body {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--copy-color-light);
+}
+
+@media (min-width: 40em) {
+  .engagement-steps__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem 2rem;
+  }
+
+  .engagement-steps__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 0.55rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(17, 17, 17, 0.12);
+  }
+
+  .engagement-steps__index {
+    grid-row: auto;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 56em) {
+  .engagement-steps {
+    padding: 4.5rem 0 2.75rem;
+  }
+
+  .engagement-steps__inner {
+    gap: 3rem;
+  }
+
+  .engagement-steps__lede {
+    font-size: 1.125rem;
+  }
+
+  .engagement-steps__list {
+    gap: 2rem 2.5rem;
+  }
+
+  .engagement-steps__step-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .engagement-steps__item {
+    transition: none;
+  }
+}
+
+/* Photo beside the intro */
+.engagement-steps__head {
+  display: grid;
+  gap: 2rem;
+}
+
+.engagement-steps__photo {
+  margin: 0;
+}
+
+.engagement-steps__photo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: 50% 25%;
+  border-radius: var(--border-radius);
+}
+
+@media (min-width: 48em) {
+  .engagement-steps__head {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .engagement-steps__photo-image {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* Photo credit overlaid on the image */
+.engagement-steps__photo {
+  display: grid;
+}
+
+.engagement-steps__photo-image,
+.engagement-steps__photo-credit {
+  grid-area: 1 / 1;
+}
+
+.engagement-steps__photo-credit {
+  align-self: end;
+  justify-self: end;
+  margin: 0 0.6rem 0.5rem 0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  background: rgba(17, 17, 17, 0.55);
+  color: #fff;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.engagement-steps__photo-credit::before {
+  content: "\00a9\a0";
+}

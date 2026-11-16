@@ -1,0 +1,101 @@
+/**
+ * Advisory CTA — same cream panel language as pathway.
+ * Wide outer panel; inner content capped at --width.
+ */
+.advisory-cta {
+  padding: 3.5rem 0 2rem;
+}
+
+/* Wider than default site content; panel chrome may extend past --width */
+.main--home .advisory-cta .container,
+.main--home .advisory-cta .container--large,
+.advisory-cta .container,
+.advisory-cta .container--large {
+  max-width: min(92rem, 100%);
+}
+
+.advisory-cta__panel {
+  padding: 2.75rem 0 2.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--cream);
+  box-shadow: none;
+}
+
+.advisory-cta__inner {
+  display: grid;
+  gap: 1.75rem;
+  width: 100%;
+  max-width: var(--width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.advisory-cta__copy {
+  min-height: 100%;
+}
+
+.advisory-cta__title {
+  max-width: 14ch;
+}
+
+.advisory-cta__body {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--copy-color-light);
+}
+
+.advisory-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+}
+
+@media (min-width: 40em) {
+  .advisory-cta__panel {
+    padding: 3.25rem 0 3rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .advisory-cta__inner {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 56em) {
+  .advisory-cta {
+    padding: 4.5rem 0 2.75rem;
+  }
+
+  .advisory-cta__panel {
+    padding: 4rem 0 3.5rem;
+    border-radius: 0.85rem;
+  }
+
+  .advisory-cta__inner {
+    grid-template-columns: minmax(0, 1.4fr) minmax(14rem, 0.7fr);
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+
+  .advisory-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    align-self: end;
+  }
+
+  .advisory-cta__actions .button,
+  .advisory-cta__actions a.button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .advisory-cta__body {
+    font-size: 1.125rem;
+  }
+}

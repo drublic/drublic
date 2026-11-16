@@ -1,9 +1,11 @@
 .author {
   margin-top: 3rem;
-  border-top: 2px solid var(--border-color);
-  padding-top: 3rem;
   margin-bottom: 3rem;
+  padding: 1.5rem 1.35rem;
   text-align: left;
+  background: var(--cream);
+  border-radius: 0.5rem;
+  border-top: 0;
 }
 
 .author_headshot {

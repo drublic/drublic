@@ -1,31 +1,41 @@
 /**
- * Footer — signature close that echoes the header cursor.
+ * Footer — dark close that picks up the hero field (near-black + violet).
  */
 .footer {
-  --footer-ink: #e6eef2;
-  --footer-muted: #9aafb8;
-  --footer-line: rgba(230, 238, 242, 0.14);
-  --footer-surface: #1e333c;
+  --footer-ink: #ede9fe;
+  --footer-muted: #a39bb8;
+  --footer-line: rgba(167, 139, 250, 0.18);
+  --footer-surface: #0a0814;
 
   margin-top: 4rem;
-  padding: 3.5rem 1rem 2.5rem;
+  padding: 3.5rem 0 2.5rem;
   color: var(--footer-ink);
   background:
+    radial-gradient(
+      ellipse 80% 60% at 12% 0%,
+      rgba(98, 54, 255, 0.22) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 88% 100%,
+      rgba(255, 120, 70, 0.1) 0%,
+      transparent 50%
+    ),
     linear-gradient(
       165deg,
-      #29434e 0%,
-      var(--footer-surface) 48%,
-      #16262d 100%
+      #12101c 0%,
+      var(--footer-surface) 45%,
+      #04070a 100%
     );
 }
 
 .footer__inner {
   display: grid;
   gap: 2.75rem;
-  max-width: calc(var(--width) + 12rem);
+  width: 100%;
+  max-width: var(--width);
   margin: 0 auto;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-inline: 1.25rem;
 }
 
 .footer__mast {
@@ -70,7 +80,7 @@
 
 .footer a.footer__mail {
   color: var(--footer-ink);
-  border-bottom-color: rgba(244, 116, 255, 0.45);
+  border-bottom-color: rgba(123, 92, 255, 0.45);
   font-weight: 400;
 }
 
@@ -178,13 +188,39 @@
   outline-offset: 3px;
 }
 
+.footer__cookie-settings {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--footer-muted);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.footer__cookie-settings:hover {
+  color: #fff;
+}
+
+.footer__cookie-settings:focus-visible {
+  color: #fff;
+  outline: 2px solid var(--secondary-color--hover);
+  outline-offset: 3px;
+}
+
 @media (min-width: 40em) {
   .footer {
-    padding: 4rem 2rem 2.75rem;
+    padding: 4rem 0 2.75rem;
   }
 
   .footer__nav {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48em) {
+  .footer__inner {
+    padding-inline: 2rem;
   }
 }
 

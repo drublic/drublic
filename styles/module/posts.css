@@ -15,16 +15,26 @@
 
 .posts__post__header h2 {
   margin-top: 0;
+  border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .posts__post__header h3 {
   margin-top: 0;
   margin-bottom: 0;
+  border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .posts__post__header a {
   display: block;
   border-bottom: 0;
+  color: inherit;
 }
 
 .posts__post__header a:hover {
@@ -41,9 +51,9 @@
 
 .posts__list {
   --column-count: 1;
-  --tile-gap: 2rem;
+  --tile-gap: 0.5rem;
   --inner-padding: 1rem;
-  --border-radius: 0.625rem;
+  --border-radius: 0.5rem;
 
   display: grid;
   grid-gap: var(--tile-gap);
@@ -68,10 +78,10 @@
 }
 
 .posts__list li {
-  background-color: #fafafa;
+  background-color: #faf9f6;
   border-radius: var(--border-radius);
-  transition: background-color 0.2s ease-in-out;
-  box-shadow: 0px 2px 15px 0px rgba(159, 159, 159, 0.15);
+  transition: background-color 0.18s ease;
+  box-shadow: none;
 }
 
 .posts__list li:hover {
@@ -97,7 +107,10 @@
 }
 
 .posts__teaser-title {
-  font-size: 1.4rem;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
   overflow: hidden;
   flex: 1;
@@ -146,16 +159,21 @@
 }
 
 /**
- * Crosslinks
+ * Crosslinks — reuses updates-archive listing.
  */
 .post__crosslinks {
-  margin-top: 10rem;
+  margin-top: 4rem;
+}
+
+.post__crosslinks .updates-archive {
+  margin-top: 0;
 }
 
 @media (min-width: 48em) {
   .posts__list {
     --column-count: 4;
-    --inner-padding: 1.5rem;
+    --inner-padding: 1.25rem;
+    --tile-gap: 0.75rem;
   }
 
   .posts__list .post__item--with-image {

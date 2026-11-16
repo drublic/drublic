@@ -1,0 +1,280 @@
+/**
+ * Working Draft homepage block — cream panel language shared with pathway.
+ * Episode rows: compact editorial list on quiet light surfaces (not cards/pills).
+ * Wide outer panel; inner content capped at --width.
+ */
+.working-draft {
+  padding: 3.5rem 0 2rem;
+}
+
+.main--home .working-draft .container,
+.main--home .working-draft .container--large,
+.working-draft .container,
+.working-draft .container--large {
+  max-width: min(92rem, 100%);
+}
+
+.working-draft__panel {
+  padding: 2.75rem 0 2.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--cream);
+  box-shadow: none;
+}
+
+.working-draft__inner {
+  width: 100%;
+  max-width: var(--width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.working-draft__inner > .section-label {
+  margin-bottom: 1rem;
+}
+
+.working-draft__heading {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem;
+  border-bottom: 0;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.working-draft__intro {
+  margin: 0 0 2.5rem;
+  max-width: 40rem;
+  color: var(--copy-color-light);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.working-draft__embed {
+  display: block;
+  width: 100%;
+  margin: 0 0 2.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.working-draft__episodes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.working-draft__episode {
+  margin: 0;
+  border-radius: 0.5rem;
+  background: #faf9f6;
+  box-shadow: none;
+  transition: background-color 0.18s ease;
+}
+
+.working-draft__episode:hover,
+.working-draft__episode:focus-within {
+  background: #ffffff;
+}
+
+.working-draft__episode--more {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(20, 18, 28, 0.08);
+}
+
+.working-draft__episode--more:hover,
+.working-draft__episode--more:focus-within {
+  background: #faf9f6;
+  box-shadow: inset 0 0 0 1px rgba(98, 54, 255, 0.28);
+}
+
+.working-draft__episode-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+}
+
+.working-draft__episode-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.working-draft__episode-title {
+  margin: 0;
+  border-bottom: 0;
+  min-width: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.working-draft__episode-title a {
+  border-bottom: 0;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.working-draft__episode-title a:hover,
+.working-draft__episode-title a:focus-visible {
+  border-bottom: 0;
+  color: var(--secondary-color);
+}
+
+.working-draft__episode-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0;
+  color: var(--text-color-light);
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.working-draft__episode-date,
+.working-draft__episode-duration {
+  font-variant-numeric: tabular-nums;
+}
+
+.working-draft__episode-sep {
+  color: rgba(20, 18, 28, 0.28);
+}
+
+.working-draft__episode-button {
+  flex-shrink: 0;
+  min-height: 2.25rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.working-draft__cta {
+  margin: 2.5rem 0 0;
+  padding: 0;
+}
+
+@media (min-width: 40em) {
+  .working-draft__panel {
+    padding: 3.25rem 0 3rem;
+  }
+
+  .working-draft__episode-row {
+    padding: 0.7rem 1.05rem;
+  }
+
+  .working-draft__episode-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 48em) {
+  .working-draft__inner {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .working-draft {
+    padding: 4.5rem 0 2.75rem;
+  }
+
+  .working-draft__panel {
+    padding: 4rem 0 3.5rem;
+    border-radius: 0.85rem;
+  }
+
+  .working-draft__heading {
+    margin-bottom: 1.15rem;
+  }
+
+  .working-draft__intro {
+    margin-bottom: 3rem;
+  }
+
+  .working-draft__embed {
+    margin-bottom: 3rem;
+  }
+
+  .working-draft__episode-row {
+    padding: 0.75rem 1.15rem;
+  }
+
+  .working-draft__cta {
+    margin-top: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .working-draft__episode,
+  .working-draft__episode-title a {
+    transition: none;
+  }
+}
+
+/* Podcasting — favorite episodes */
+.podcast-favorites {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.podcast-favorites__intro {
+  max-width: 40rem;
+  color: var(--copy-color-light);
+}
+
+.podcast-favorites__list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48em) {
+  .podcast-favorites__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.podcast-favorites__item {
+  margin: 0;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: #fff;
+}
+
+.podcast-favorites__meta {
+  margin: 0;
+  color: var(--text-color-light);
+  font-size: 0.8rem;
+}
+
+.podcast-favorites__title {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.podcast-favorites__title a {
+  border-bottom: 0;
+}
+
+.podcast-favorites__note {
+  margin: 0;
+  color: var(--copy-color-light);
+  font-size: 0.95rem;
+}

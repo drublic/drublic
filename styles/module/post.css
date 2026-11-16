@@ -8,23 +8,92 @@
 }
 
 .post__header {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  padding-top: 0.25rem;
 }
 
+.post__header .section-label {
+  margin-bottom: 1rem;
+}
+
+.post__title,
 .post__header h1 {
-  margin-bottom: 0;
+  margin: 0;
+  border-bottom: 0;
+  max-width: 22ch;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
 .post__header a {
   display: block;
   border-bottom: 0;
+  color: inherit;
+}
+
+.post__header a:hover {
+  color: var(--secondary-color);
 }
 
 .post__header__date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.3rem;
   color: var(--color-light);
   font-size: 0.9rem;
   padding-top: 2px;
   margin-top: 1rem;
+}
+
+.post__share {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border-color-light);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--secondary-color);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.share-button:hover {
+  border-color: var(--secondary-color);
+  background: var(--secondary-color--light);
+}
+
+.share-button:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.share-button__status:empty {
+  display: none;
+}
+
+.share-button__status {
+  color: var(--color-light);
+  font-size: 0.8rem;
+}
+
+.post__tags {
+  margin: 1rem 0 0;
 }
 
 .post__navigation {
@@ -69,4 +138,10 @@
 
 .post tr:nth-child(2n) {
   background-color: var(--color-lightest);
+}
+
+/* Inline post images carry intrinsic width/height (no layout shift) — keep them fluid. */
+[itemprop="articleBody"] img {
+  max-width: 100%;
+  height: auto;
 }

@@ -1,8 +1,6 @@
 /**
- * Work with me — engagement menu.
- * Stacked offers read like a consulting brief, not a feature-card grid.
+ * Work with me — quiet editorial offer rows (homepage card language).
  */
-
 .work-with-me__actions {
   margin-top: 1.5rem;
 }
@@ -11,31 +9,33 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  gap: 0;
-  border-top: 1px solid rgba(98, 54, 255, 0.16);
-  border-left: 3px solid rgba(98, 54, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .work-with-me__offer {
-  padding: 1.4rem 0 1.4rem 1.15rem;
-  border-bottom: 1px solid rgba(98, 54, 255, 0.14);
+  padding: 1.25rem 1.2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #faf9f6;
+  box-shadow: none;
   transition: background-color 0.15s ease;
 }
 
 .work-with-me__offer:hover,
 .work-with-me__offer:focus-within {
-  background: rgba(98, 54, 255, 0.03);
+  background: #fff;
 }
 
 .work-with-me__offer-title {
   margin: 0 0 0.4rem;
+  border-bottom: 0;
   font-family: var(--font-headline), "Sora", sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.25;
   color: var(--text-color);
-  border-bottom: 0;
 }
 
 .work-with-me__offer-body {
@@ -63,16 +63,226 @@
 
 @media (min-width: 32em) {
   .work-with-me__offer {
-    padding: 1.65rem 1rem 1.65rem 1.5rem;
+    padding: 1.4rem 1.35rem;
   }
 
   .work-with-me__offer-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .work-with-me__offer {
+    transition: none;
+  }
+}
+
+/**
+ * In-depth offer details — editorial chapters, not cards.
+ * Stacked prose with hairline rules; outcomes as a side column on wide screens.
+ */
+.work-details {
+  padding: 1rem 0 3rem;
+}
+
+.work-details .section-label {
+  margin-bottom: 0.75rem;
+}
+
+.work-details__heading {
+  margin: 0 0 0.75rem;
+  border-bottom: 0;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.work-details__intro {
+  margin: 0 0 0.5rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--copy-color-light);
+}
+
+.work-details__stack {
+  margin: 0;
+  padding: 0;
+}
+
+.work-details__offer {
+  scroll-margin-top: 5.5rem;
+  margin: 0;
+  padding: 2.25rem 0 2rem;
+  border-top: 1px solid rgba(20, 18, 28, 0.12);
+  background: transparent;
+}
+
+.work-details__offer:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.work-details__title {
+  margin: 0 0 0.55rem;
+  border-bottom: 0;
+  max-width: 22ch;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-color);
+}
+
+.work-details__for {
+  margin: 0 0 1.35rem;
+  max-width: 40rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--copy-color-light);
+}
+
+.work-details__for-label {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.work-details__columns {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.work-details__body {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--copy-color);
+}
+
+.work-with-me__photo {
+  margin: 0;
+}
+
+.work-with-me__photo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.work-with-me__photo-caption {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.work-details__body a {
+  color: var(--secondary-color);
+  border-bottom: 0;
+  font-weight: 500;
+}
+
+.work-details__body a:hover {
+  color: var(--secondary-color--hover);
+}
+
+.work-details__outcomes {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.work-details__outcomes-label {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-color);
+}
+
+.work-details__outcomes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--copy-color);
+  line-height: 1.5;
+}
+
+.work-details__outcomes li {
+  position: relative;
+  padding-left: 0.95rem;
+  max-width: 28rem;
+  font-size: 0.95rem;
+  color: var(--copy-color-light);
+}
+
+.work-details__outcomes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--secondary-color);
+}
+
+.work-details__outcomes li + li {
+  margin-top: 0.45rem;
+}
+
+.work-details__cta {
+  margin: 1.35rem 0 0;
+}
+
+.work-details__contact {
+  display: inline;
+  border-bottom: 1px solid currentColor;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease, border-bottom-color 0.15s ease;
+}
+
+.work-details__contact:hover,
+.work-details__contact:focus-visible {
+  color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+.work-details__contact:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+@media (min-width: 48em) {
+  .work-details {
+    padding: 1.5rem 0 4rem;
+  }
+
+  .work-details__offer {
+    padding: 2.75rem 0 2.35rem;
+  }
+
+  .work-details__columns {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    column-gap: 3rem;
+    align-items: start;
+  }
+
+  .work-details__outcomes {
+    padding-top: 0.15rem;
+    border-left: 1px solid rgba(20, 18, 28, 0.12);
+    padding-left: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-details__contact {
     transition: none;
   }
 }
