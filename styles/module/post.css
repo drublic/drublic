@@ -73,6 +73,25 @@
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
+.share-button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .post__share {
+    flex: 0 0 100%;
+    margin-left: 0;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .share-button {
+    padding: 0.6rem 1rem;
+    min-height: 44px;
+  }
+}
+
 .share-button:hover {
   border-color: var(--secondary-color);
   background: var(--secondary-color--light);
