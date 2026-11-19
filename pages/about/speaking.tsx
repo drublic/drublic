@@ -50,24 +50,31 @@ type ArchiveTalk = {
   links?: TalkLink[];
 };
 
-const upcoming: UpcomingTalk[] = [
+const upcoming: UpcomingTalk[] = [];
+
+const recent: RecentTalk[] = [
   {
     event: "Digitale Leute Summit",
     eventHref: "https://www.digitale-leute.de/summit/26/",
-    format: "Deep dive · 60 min",
-    meta: "Tue 17 Nov 2026, 10:20 · Cologne · AI in Engineering stage",
-    recentMeta: "17 Nov 2026 · Cologne · AI in Engineering stage · 60 min",
+    meta: "17 Nov 2026 · Cologne · AI Deep Dive Day · 60 min",
     title: "From Vibe Coding to Agentic Engineering: Designing the Modern SDLC",
-    description:
-      "Deep dive on mapping AI agents to discovery, delivery, and operations with clear ownership at each phase.",
-    startDate: "2026-11-17T10:20:00+01:00",
-    endDate: "2026-11-17T11:20:00+01:00",
-    venue: "Digitale Leute Summit",
-    locality: "Cologne",
+    links: [
+      {
+        label: "Notes",
+        href: "/blog/factory-factory-factory-digitale-leute-summit",
+      },
+      {
+        label: "Slides",
+        href: "https://drublic.github.io/talk-agentic-sdlc/60.html",
+        external: true,
+      },
+      {
+        label: "Talk page",
+        href: "https://www.digitale-leute.de/summit/26/schedule/from-vibe-coding-to-agentic-engineering-designing-the-modern-sdlc/",
+        external: true,
+      },
+    ],
   },
-];
-
-const recent: RecentTalk[] = [
   {
     event: "code.talks",
     eventHref: "https://codetalks.com/",
