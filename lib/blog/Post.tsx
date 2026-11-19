@@ -211,7 +211,7 @@ const Post: FunctionComponent<Post> = ({
             itemScope
             itemType="http://schema.org/Person"
           >
-            <figure className="claim__me author_headshot">
+            <figure className="author_headshot">
               <Image
                 src="/img/me.jpg"
                 alt="Hans Reinl"
