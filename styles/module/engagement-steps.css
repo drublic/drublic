@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
+  align-content: start;
   column-gap: 0.85rem;
   row-gap: 0.4rem;
   margin: 0;
