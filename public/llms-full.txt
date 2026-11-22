@@ -41,7 +41,7 @@ Also: Warhol (co-founder, 2019–2021); colored.by (co-founder); /gebrüderheitz
 ## Community & speaking
 
 - Mentor at The Mentoring Club (engineering management, leadership, career, agile)
-- Recent: T3 Summit 2025 (Berlin) — panel discussions on mobile and platform engineering; Lead Dev Berlin — engineering metrics and data-driven leadership
+- Recent: t3 CTO Summit 2025 (Berlin) — panel on engineering metrics and how to bring them into organizations; Lead Dev Berlin — engineering metrics and data-driven leadership
 - Earlier conferences: Front-Trends Warsaw, Frontend Conference Zürich, Beyond Tellerrand, Fronteers, and others — design systems, component-based development, frontend tooling
 - Speaking topics today: agentic engineering across the SDLC, RAG, MCP, AI-assisted development, engineering metrics, platform architecture
 - Details: https://hansreinl.de/about/speaking · Press kit: https://hansreinl.de/info

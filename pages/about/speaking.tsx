@@ -119,7 +119,7 @@ const recent: RecentTalk[] = [
     event: "t3 CTO Summit",
     eventHref: "https://www.t3-summit.com/t3-berlin",
     meta: "2025 · Berlin · Panels",
-    title: "Mobile and platform engineering",
+    title: "Engineering metrics — how to bring them into your organization",
   },
   {
     event: "LeadingEng Berlin",
