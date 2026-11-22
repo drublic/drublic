@@ -359,6 +359,26 @@ const Speaking = ({ now }: SpeakingProps) => {
                 discussions, and team workshops.
               </p>
             }
+            media={
+              <figure className="speaking-hero">
+                <Image
+                  src="/assets/digitale-leute-summit-2026-audience.jpg"
+                  alt="Hans Christian Reinl presenting “Why Vibe Breaks in a Real Project” to a full room at the Digitale Leute Summit in Cologne"
+                  width={1600}
+                  height={1066}
+                  className="speaking-hero__image"
+                  sizes="(min-width: 56em) 28rem, 100vw"
+                  priority
+                />
+                <figcaption className="image__caption image__caption--no-border speaking-hero__caption">
+                  AI Deep Dive Day at the Digitale Leute Summit, Cologne, 17
+                  November 2026.
+                  <span className="image__caption__copywrite">
+                    Marius, Digitale Leute
+                  </span>
+                </figcaption>
+              </figure>
+            }
           >
             <div className="button-group speaking-header__actions">
               <a href="mailto:hi@hansreinl.de" className="button button--large">
@@ -503,19 +523,20 @@ const Speaking = ({ now }: SpeakingProps) => {
 
           <figure className="speaking-photo">
             <Image
-              src="/img/speaking-discussion.jpg"
-              alt="Hans Christian Reinl in discussion at Droidcon and Fluttercon, Berlin"
-              width={1200}
-              height={1800}
+              src="/assets/t3-cto-summit-2026-roundtable-discussion.jpg"
+              alt="Hans Christian Reinl talking with engineering leaders during his roundtable at the t3 CTO Summit, Berlin"
+              width={1600}
+              height={1067}
               className="speaking-photo__image"
               sizes="(min-width: 48em) 40rem, 100vw"
             />
             <figcaption className="image__caption image__caption--no-border">
-              Conversations between sessions — Droidcon &amp; Fluttercon at The
-              Cube, Berlin, 24–26 September 2025.
-              <span className="image__caption__copywrite">
-                www.tellingphotography.com
-              </span>
+              Hosting the AI adoption and governance roundtable — t3 CTO Summit,
+              CityCube Berlin, 9 October 2026.{" "}
+              <Link href="/blog/ai-adoption-governance-roles-t3-cto-summit">
+                Notes from the roundtable
+              </Link>
+              <span className="image__caption__copywrite">t3 CTO Summit</span>
             </figcaption>
           </figure>
 

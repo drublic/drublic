@@ -248,3 +248,29 @@
 .info-portrait__caption a:hover {
   color: var(--secondary-color--hover);
 }
+
+.info-stage {
+  display: grid;
+  gap: 1rem;
+}
+
+.info-stage__photo {
+  margin: 0;
+}
+
+.info-stage__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.info-stage__caption {
+  padding: 0.4rem 0 0;
+}
+
+@media (min-width: 40em) {
+  .info-stage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

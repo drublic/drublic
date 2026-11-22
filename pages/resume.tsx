@@ -632,15 +632,16 @@ const Resume = () => {
             <div className="resume-influence__visual">
               <figure className="resume-influence__field">
                 <Image
-                  src="/img/speaking-discussion.jpg"
-                  alt="Speaking and discussion at Droidcon and Fluttercon Berlin"
-                  width={1200}
-                  height={1800}
+                  src="/assets/digitale-leute-summit-2026-stage.jpg"
+                  alt="Hans Christian Reinl speaking on stage at the Digitale Leute Summit AI Deep Dive Day, Cologne"
+                  width={1600}
+                  height={1066}
                   className="resume-influence__image"
+                  sizes="(min-width: 56em) 24rem, 100vw"
                 />
                 <figcaption className="resume-influence__caption">
-                  Droidcon &amp; Fluttercon at The Cube, Berlin, 24–26 September
-                  2025; www.tellingphotography.com
+                  Digitale Leute Summit AI Deep Dive Day, Cologne, 17 November
+                  2026; © Marius, Digitale Leute
                 </figcaption>
               </figure>
             </div>

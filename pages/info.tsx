@@ -27,6 +27,17 @@ const miscFacts: Array<{ label: string; value: string; href?: string }> = [
   { label: "T-shirt size", value: "Large" },
 ];
 
+const stagePhotos = [
+  {
+    src: "/assets/digitale-leute-summit-2026-stage-gesture.jpg",
+    alt: "Hans Christian Reinl explaining a point next to the projection screen at the Digitale Leute Summit",
+  },
+  {
+    src: "/assets/digitale-leute-summit-2026-stage.jpg",
+    alt: "Hans Christian Reinl speaking on stage at the Digitale Leute Summit, laptops on a lectern beside him",
+  },
+];
+
 const Info = () => (
   <Layout
     title="Press & speaker information"
@@ -143,6 +154,36 @@ const Info = () => (
                 </p>
               </article>
             </div>
+          </div>
+        </section>
+
+        <section className="info-section" aria-labelledby="info-stage-heading">
+          <h2 id="info-stage-heading" className="info-section__title">
+            On Stage
+          </h2>
+          <p className="info-section__intro">
+            “From Vibe Coding to Agentic Engineering” at the Digitale Leute
+            Summit AI Deep Dive Day, Cologne, 17 November 2026.
+          </p>
+
+          <div className="info-stage">
+            {stagePhotos.map(({ src, alt }) => (
+              <figure key={src} className="info-stage__photo">
+                <Image
+                  className="info-stage__img"
+                  src={src}
+                  alt={alt}
+                  width={1600}
+                  height={1066}
+                  sizes="(min-width: 40em) 50vw, 100vw"
+                />
+                <figcaption className="image__caption image__caption--no-border info-stage__caption">
+                  <span className="image__caption__copywrite">
+                    Marius, Digitale Leute
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 

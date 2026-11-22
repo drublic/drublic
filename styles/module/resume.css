@@ -395,7 +395,8 @@ main.resume .page-shell--follow {
   display: block;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
+  /* Close to the 3:2 photos it holds, so object-fit barely upscales them. */
+  aspect-ratio: 1 / 1;
   min-height: 16rem;
   border-radius: 0.75rem;
   background: #04070a;
@@ -451,10 +452,12 @@ main.resume .page-shell--follow {
     padding: 0.25rem 0.5rem 0.25rem 0;
   }
 
+  .resume-influence__visual {
+    align-self: center;
+  }
+
   .resume-influence__field {
-    aspect-ratio: auto;
     min-height: 0;
-    height: 100%;
   }
 }
 

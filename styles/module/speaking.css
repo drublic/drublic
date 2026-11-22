@@ -100,7 +100,7 @@
 
 .speaking-photo {
   margin: 0 auto 2.5rem;
-  max-width: 26rem;
+  max-width: 40rem;
 }
 
 .speaking-photo__image {
@@ -171,14 +171,24 @@
   }
 }
 
-@media (min-width: 48em) {
-  .speaking-photo {
-    max-width: 28rem;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .speaking-talk {
     transition: none;
   }
+}
+
+.speaking-hero {
+  margin: 0;
+}
+
+.speaking-hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.speaking-hero__caption {
+  padding-left: 0;
+  padding-right: 0;
 }
