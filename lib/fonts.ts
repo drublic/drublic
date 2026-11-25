@@ -1,4 +1,4 @@
-import { Roboto, Sora, Vollkorn } from "next/font/google";
+import { Bricolage_Grotesque, Roboto, Sora, Vollkorn } from "next/font/google";
 
 export const sora = Sora({
   subsets: ["latin", "latin-ext"],
@@ -19,5 +19,12 @@ export const vollkorn = Vollkorn({
   weight: ["400"],
   style: ["italic"],
   variable: "--font-quote",
+  display: "swap",
+});
+
+export const bricolage = Bricolage_Grotesque({
+  subsets: ["latin", "latin-ext"],
+  weight: ["700"],
+  variable: "--font-display",
   display: "swap",
 });

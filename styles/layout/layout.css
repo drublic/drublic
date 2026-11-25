@@ -154,6 +154,20 @@ hr {
   max-width: min(92rem, 100%);
 }
 
+/*
+ * Small screens: section panels go edge-to-edge instead of sitting inset
+ * inside the container gutter. Their inner content keeps its own 1.25rem gutter.
+ */
+@media (max-width: 47.99em) {
+  .container .pathway__panel,
+  .container .advisory-cta__panel,
+  .container .working-draft__panel,
+  .container .updates-archive {
+    margin-inline: -1.25rem;
+    border-radius: 0;
+  }
+}
+
 @media (min-width: 48em) {
   .container,
   .main--home .container,
@@ -254,9 +268,18 @@ hr {
   height: auto;
 }
 
+/* Tinted violet surface so the banner stands apart from the light page */
+.termsfeed-com---reset.termsfeed-com---nb.termsfeed-com---palette-light {
+  background: var(--secondary-color--light);
+  border-top: 3px solid var(--secondary-color);
+  box-shadow: 0 -8px 24px rgba(41, 67, 78, 0.12);
+}
+
 .termsfeed-com---nb.termsfeed-com---palette-light .cc-nb-title {
   font-size: 1.5rem;
-  font-weight: normal;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-color);
 }
 
 .termsfeed-com---palette-light .cc-nb-main-container {
@@ -292,7 +315,7 @@ hr {
 
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject,
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-changep {
-  background: var(--button-paper);
+  background: #fff;
   border-color: var(--button-line);
   color: var(--button-ink);
 }
@@ -300,7 +323,7 @@ hr {
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-reject:hover,
 .termsfeed-com---palette-light .cc-nb-main-container .cc-nb-changep:hover {
   border-color: rgba(98, 54, 255, 0.35);
-  background: var(--secondary-color--light);
+  background: #fff;
   color: var(--secondary-color);
 }
 
