@@ -83,7 +83,10 @@ hr {
   .container--padded-bottom {
     padding-bottom: 4rem;
   }
+}
 
+/* Edge to edge on mobile and tablet; a small inset only on desktop */
+@media (min-width: 64em) {
   .section--fullsize {
     margin-left: 1rem;
     margin-right: 1rem;
