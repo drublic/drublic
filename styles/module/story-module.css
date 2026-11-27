@@ -168,8 +168,16 @@
     padding: 0 2rem;
   }
 
+  /* Room for the headline to sit on two balanced lines */
+  .story-module__title {
+    max-width: 24ch;
+    text-wrap: balance;
+  }
+
+  /* Single column on tablet: a wide band instead of a full-width square */
   .story-module__field {
     min-height: 18rem;
+    aspect-ratio: 16 / 9;
   }
 
   .story-module__card {
@@ -202,6 +210,7 @@
   }
 
   .story-module__field {
+    aspect-ratio: 1;
     min-height: 0;
     height: auto;
   }
