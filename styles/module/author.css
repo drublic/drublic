@@ -1,6 +1,6 @@
 .author {
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
   padding: 1.5rem 1.35rem;
   text-align: left;
   background: var(--cream);
@@ -36,4 +36,11 @@
   .author {
     display: flex;
   }
+}
+
+.author_actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
 }

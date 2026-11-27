@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { FunctionComponent } from "react";
-import BlogMessage from "../components/BlogMessage";
 import Layout from "../components/Layout";
 import JsonLd, {
   PERSON_ID,
@@ -233,6 +232,19 @@ const Post: FunctionComponent<Post> = ({
                 conferences, and co-hosts the Working Draft podcast. Based in
                 Cologne, Germany.
               </p>
+
+              <div className="author_actions">
+                <a
+                  href="https://www.linkedin.com/in/hreinl/"
+                  className="button"
+                  title="Follow Hans on LinkedIn"
+                >
+                  Follow on LinkedIn
+                </a>
+                <a href="/feed" className="button button--outline">
+                  Subscribe via RSS
+                </a>
+              </div>
             </div>
             <meta itemProp="name" content="Hans Reinl" />
             <meta
@@ -252,10 +264,6 @@ const Post: FunctionComponent<Post> = ({
       </main>
 
       <aside className="main">
-        <div className="container">
-          <BlogMessage />
-        </div>
-
         <div className="container container--large">
           <div className="post__crosslinks">
             <UpdatesArticleList
