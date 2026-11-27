@@ -1,0 +1,40 @@
+/**
+ * Short summary box at the top of a post.
+ */
+.tldr {
+  /* Box sticks out of the column; its content lines up with the body text */
+  --tldr-out: min(2rem, var(--breakout-room));
+  margin: 0 calc(-1 * var(--tldr-out)) 2.5rem;
+  padding: 1.25rem max(1.25rem, var(--tldr-out)) 1.1rem;
+  background: var(--cream);
+  border-radius: 0.5rem;
+}
+
+.post .tldr ul {
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Own bullets so the dots sit on the body text's left edge */
+.post .tldr li {
+  position: relative;
+  margin: 0 0 0.4rem;
+  padding-left: 1.1rem;
+  line-height: 1.5;
+}
+
+.post .tldr li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.post .tldr li:last-child {
+  margin-bottom: 0;
+}

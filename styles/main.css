@@ -41,6 +41,9 @@
 @import "./module/scrollable-table.css";
 @import "./module/gallery.css";
 @import "./module/event-card.css";
+@import "./module/timeline.css";
+@import "./module/tldr.css";
+@import "./module/lessons.css";
 @import "./module/speaking.css";
 @import "./module/work-with-me.css";
 @import "./components.css";

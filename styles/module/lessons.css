@@ -1,0 +1,83 @@
+/**
+ * Takeaway grid in posts — cream panel with lighter tiles,
+ * same language as the homepage pathway block.
+ */
+.lessons {
+  /* Panel breaks out of the column; heading and tiles keep the text width */
+  --lessons-out: min(8rem, var(--breakout-room));
+  clear: both;
+  margin: 8rem calc(-1 * var(--lessons-out));
+  padding: 2rem max(1.25rem, var(--lessons-out)) 1.5rem;
+  background: var(--cream);
+  border-radius: 0.75rem;
+}
+
+.post .lessons__heading {
+  margin: 0 0 1.5rem;
+  border-bottom: 0;
+}
+
+.post .lessons__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post .lessons__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 1.5rem 1.4rem 1.4rem;
+  border-radius: 0.5rem;
+  background: #faf9f6;
+}
+
+.lessons__index {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.lessons__title {
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.lessons__body {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--copy-color-light);
+}
+
+@media (min-width: 40em) {
+  .lessons {
+    padding-top: 2.75rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .post .lessons__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .post .lessons__item {
+    padding: 1.75rem 1.6rem 1.6rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .lessons {
+    padding-top: 3.5rem;
+    padding-bottom: 3.25rem;
+  }
+}

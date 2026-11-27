@@ -1,0 +1,303 @@
+/**
+ * Event timeline for posts — cream panel, cards alternating above and
+ * below a horizontal rail (desktop), stacked vertical rail (mobile).
+ *
+ * Markup:
+ * <figure class="timeline">
+ *   <figcaption class="timeline__head">…legend + stat…</figcaption>
+ *   <ol class="timeline__list">
+ *     <li class="timeline__event timeline__event--me|--agent|--review">…</li>
+ *   </ol>
+ *   <p class="timeline__note">…</p>
+ * </figure>
+ */
+.timeline {
+  --tl-bg: var(--cream);
+  --tl-card: #faf9f6;
+  --tl-line: rgba(20, 18, 28, 0.14);
+  --tl-ink: var(--text-color);
+  --tl-muted: var(--copy-color-light);
+  --tl-faint: var(--text-color-light);
+  --tl-accent: var(--secondary-color);
+  --tl-neutral: #8d8a94;
+  --tl-rail: 3rem;
+
+  clear: both;
+  margin: 7rem calc(-1 * min(8rem, var(--breakout-room))) 8rem;
+  padding: 1.75rem 1.25rem 1.5rem;
+  background: var(--tl-bg);
+  color: var(--tl-ink);
+  border-radius: 0.75rem;
+}
+
+/* Head: legend left, stat right */
+.timeline__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  text-align: left;
+  font-style: normal;
+  border: 0;
+}
+
+.timeline__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--tl-muted);
+}
+
+.post .timeline__legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.timeline__stat {
+  margin: 0;
+  text-align: left;
+}
+
+.timeline__stat-label,
+.timeline__stat-sub {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--tl-muted);
+}
+
+.timeline__stat-value {
+  display: block;
+  font-family: var(--font-headline), "Sora", sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0.45rem 0 0.5rem;
+  color: var(--tl-ink);
+}
+
+/* Markers (legend + rail) */
+.timeline__dot {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.timeline__dot--agent {
+  background: var(--tl-accent);
+  box-shadow: 0 0 0 3px rgba(98, 54, 255, 0.2);
+}
+
+.timeline__dot--review {
+  background: var(--tl-neutral);
+}
+
+.timeline__dot--review::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 0.25rem;
+  height: 0.45rem;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.timeline__dot--me {
+  background: var(--tl-card);
+  border: 2px solid var(--tl-neutral);
+}
+
+/* List — mobile first: vertical rail on the left */
+.post .timeline__list {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  list-style: none;
+}
+
+.timeline__list::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  width: 1px;
+  background: var(--tl-line);
+}
+
+.post .timeline__event {
+  position: relative;
+  margin: 0;
+  padding: 0.9rem 1rem 1rem;
+  background: var(--tl-card);
+  border: 1px solid var(--tl-line);
+  border-radius: var(--border-radius);
+}
+
+.timeline__event > .timeline__dot {
+  position: absolute;
+  left: calc(-2rem + 0.5rem - 0.5rem);
+  top: 1.1rem;
+}
+
+.timeline__date {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--tl-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline__title {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: var(--tl-ink);
+}
+
+.timeline__desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--tl-muted);
+}
+
+.timeline__meta {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--tl-faint);
+}
+
+.post .timeline__note {
+  margin: 1.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--tl-faint);
+}
+
+/* Desktop: cards alternate above / below a horizontal rail */
+@media (min-width: 56em) {
+  .timeline {
+    padding: 2.25rem 2rem 1.75rem;
+  }
+
+  .timeline__stat {
+    text-align: right;
+  }
+
+  .post .timeline__list {
+    --tl-cols: 9;
+    grid-template-columns: repeat(var(--tl-cols), minmax(0, 1fr));
+    grid-template-rows: auto var(--tl-rail) auto;
+    column-gap: 0.6rem;
+    row-gap: 0;
+    padding: 0;
+  }
+
+  .timeline__list::before {
+    top: auto;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 1px;
+    /* Middle of the rail row */
+    grid-row: 2;
+    grid-column: 1 / -1;
+    position: relative;
+    align-self: center;
+  }
+
+  /* Odd events above the rail, even events below; each spans two columns
+     and starts one column after the previous event. */
+  .post .timeline__event {
+    grid-column: var(--tl-start) / span 2;
+    align-self: end;
+  }
+
+  .post .timeline__event:nth-child(odd) {
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .post .timeline__event:nth-child(even) {
+    grid-row: 3;
+    align-self: start;
+  }
+
+  .timeline__event:nth-child(1) { --tl-start: 1; }
+  .timeline__event:nth-child(2) { --tl-start: 2; }
+  .timeline__event:nth-child(3) { --tl-start: 3; }
+  .timeline__event:nth-child(4) { --tl-start: 4; }
+  .timeline__event:nth-child(5) { --tl-start: 5; }
+  .timeline__event:nth-child(6) { --tl-start: 6; }
+  .timeline__event:nth-child(7) { --tl-start: 7; }
+  .timeline__event:nth-child(8) { --tl-start: 8; }
+
+  /* Stem from card to the rail, dot sits on the rail */
+  .timeline__event::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    width: 1px;
+    height: calc(var(--tl-rail) / 2);
+    background: var(--tl-line);
+  }
+
+  .timeline__event:nth-child(odd)::before {
+    top: 100%;
+  }
+
+  .timeline__event:nth-child(even)::before {
+    bottom: 100%;
+  }
+
+  .timeline__event > .timeline__dot {
+    left: calc(1.25rem - 0.5rem + 0.5px);
+  }
+
+  .timeline__event:nth-child(odd) > .timeline__dot {
+    top: calc(100% + var(--tl-rail) / 2 - 0.5rem + 1px);
+  }
+
+  .timeline__event:nth-child(even) > .timeline__dot {
+    top: auto;
+    bottom: calc(100% + var(--tl-rail) / 2 - 0.5rem);
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .timeline {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media print {
+  .timeline {
+    background: none;
+    color: inherit;
+  }
+}
