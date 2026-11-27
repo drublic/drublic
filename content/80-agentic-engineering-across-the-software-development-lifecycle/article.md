@@ -239,3 +239,5 @@ Agentic engineering works when each phase has:
 If you map agents to lifecycle phases instead of tasks in isolation, you get compounding leverage over time.
 
 That is the path from impressive output to reliable software delivery.
+
+For a concrete run through this loop, I followed [one ticket from a live demo on stage to production](/blog/from-stage-demo-to-production-nplusone): ticket, spec, build, review and the parts that didn't go cleanly.

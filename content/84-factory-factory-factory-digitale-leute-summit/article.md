@@ -30,6 +30,8 @@ In my 60-minute edition of the talk on agentic SDLC, the most used word was prob
 
 I wrote up the shorter 20-minute cut of this talk after [code.talks in Hamburg](/blog/from-vibe-coding-agentic-engineering-code-talks), including the best question from that crowd: when do you take the keyboard back?
 
+The live demo from this talk didn't stay a demo. The weather ticket I wrote on stage has since shipped to N+One riders. Here is [how it went from stage demo to production](/blog/from-stage-demo-to-production-nplusone), including the parts that didn't go cleanly.
+
 <ul class="gallery gallery--thirds gallery--equal">
 <li><img src="/assets/digitale-leute-summit-2026-jonathan-evens.jpg" alt="Jonathan Evens presenting on the main stage at Digitale Leute Summit, with a large portrait on the screen above" /></li>
 <li><img src="/assets/digitale-leute-summit-2026-dark-factory-talk.jpg" alt="A speaker presenting a slide about development as the bottleneck at Digitale Leute Summit" /></li>
