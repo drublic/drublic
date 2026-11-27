@@ -34,5 +34,13 @@
   --width: 72rem;
   --site-max: var(--width);
 
+  /*
+   * Room beside the text column, minus a 1rem edge gutter. Unregistered, so the
+   * % resolves where it is used (a margin => the containing block's width).
+   * Breakouts use calc(-1 * min(<wanted>, var(--breakout-room))) so they never
+   * push past the viewport.
+   */
+  --breakout-room: max(0px, (100vw - 100%) / 2 - 1rem);
+
   --border-radius: 0.5rem;
 }

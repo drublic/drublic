@@ -8,22 +8,22 @@
 
 @media (min-width: 924px) {
   .scrollable-table {
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
+    margin-left: calc(-1 * min(2.5rem, var(--breakout-room)));
+    margin-right: calc(-1 * min(2.5rem, var(--breakout-room)));
   }
 }
 
 @media (min-width: 1000px) {
   .scrollable-table {
-    margin-left: -5rem;
-    margin-right: -5rem;
+    margin-left: calc(-1 * min(5rem, var(--breakout-room)));
+    margin-right: calc(-1 * min(5rem, var(--breakout-room)));
   }
 }
 
 @media (min-width: 1150px) {
   .scrollable-table {
-    margin-left: -10rem;
-    margin-right: -10rem;
+    margin-left: calc(-1 * min(10rem, var(--breakout-room)));
+    margin-right: calc(-1 * min(10rem, var(--breakout-room)));
   }
 }
 
